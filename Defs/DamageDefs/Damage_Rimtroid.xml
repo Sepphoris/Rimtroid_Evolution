@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef ParentName="Bite">
+		<defName>Rimtroid_Bite</defName>
+		<label>bite</label>
+		<hediff>ChemicalBurn</hediff>
+	</DamageDef>
+	
+    <DamageDef>
+        <defName>RT_Lifedrain</defName>
+        <label>life drain</label>
+            <hediff>Bite</hediff>
+
+        <additionalHediffs>
+            <li>
+                <hediff>RT_LifeDrainSickness</hediff>
+                <severityPerDamageDealt>0.02</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>true</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} was drained of life.</deathMessage>
+        <armorCategory>Heat</armorCategory>
+        <minDamageToFragment>15</minDamageToFragment>
+        <defaultDamage>10</defaultDamage>
+        <defaultArmorPenetration>0</defaultArmorPenetration>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    </DamageDef>
+	
+    <DamageDef>
+        <defName>RT_LifedrainBantee</defName>
+        <label>life drain</label>
+            <hediff>Bite</hediff>
+
+        <additionalHediffs>
+            <li>
+                <hediff>RT_LifeDrainSickness</hediff>
+                <severityPerDamageDealt>0.04</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>true</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} was drained of life.</deathMessage>
+        <armorCategory>Heat</armorCategory>
+        <minDamageToFragment>15</minDamageToFragment>
+        <defaultDamage>7</defaultDamage>
+        <defaultArmorPenetration>0</defaultArmorPenetration>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    </DamageDef>
+	
+	<DamageDef Name="Scratch">
+		<defName>RT_BanteeScratch</defName>
+		<label>scratch</label>
+		<workerClass>DamageWorker_Scratch</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been scratched to death.</deathMessage>
+		<defaultDamage>2</defaultDamage>
+		<hediff>Scratch</hediff>
+		<hediffSkin>Shredded</hediffSkin>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+	</DamageDef>
+</Defs>

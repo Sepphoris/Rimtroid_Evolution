@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <bodyPartGroupDef>
+    <defName>RT_Tail</defName>
+    <label>tail</label>
+  </bodyPartGroupDef>
+  
+  <bodyPartGroupDef>
+    <defName>Claws</defName>
+    <label>claws</label>
+  </bodyPartGroupDef>
+
+</Defs>

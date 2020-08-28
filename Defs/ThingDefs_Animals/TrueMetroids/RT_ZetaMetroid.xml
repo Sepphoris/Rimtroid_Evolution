@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+
+	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_ZetaMetroid</defName>
+		<label>Zeta Metroid</label>
+
+		<description>Due to it's many, MANY unique characteristics, the Gamma Metroid can be considered the "catch-all" Metroid. Their limbs have now grown into fast, spindly legs, allowing them to both walk and fly without issue. It's size, strength, and resilience has increased considerably, and it's plasma-based defenses have become even more flexible, able to be used more quickly and in more situations. However, the most appealing attribute of a Gamma Metroid is it's resource production; while all Metroids produce an organic, resin-like substance, the Gamma Metroid is the only one that produces it frequenty enough to be worth the trouble. This makes it a very dangerous - but profitable - farm animal, sometimes seen as a rare occurance amongst the farmers and traders of the rim.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
+		<statBases>
+		
+	<!-- Internal Stats -->
+		  <ToxicSensitivity>0</ToxicSensitivity>
+		  <PsychicSensitivity>0</PsychicSensitivity>
+		  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+		  <ArmorRating_Heat>0.8</ArmorRating_Heat>
+		  <MoveSpeed>2</MoveSpeed>
+		  <MarketValue>800</MarketValue>
+		  <ComfyTemperatureMin>3</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
+		  <MeatAmount>60</MeatAmount>
+		<PainShockThreshold>0.95</PainShockThreshold>
+		</statBases>
+		<uiIconScale>1.35</uiIconScale>
+		
+	<!-- Attacks -->
+		<tools>
+			<li>
+				<label>ram</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>bite</label>
+				<capacities>
+					<li>Stab</li>
+					<li>RT_Lifedrain</li>
+				</capacities>
+				<power>14</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<comps>
+			<!--<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_LowRest</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_FasterRegen</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li> -->
+		</comps>
+		
+	<!-- Race stats -->
+		
+		<race>
+		  <bloodDef>Filth_BloodInsect</bloodDef>
+		  <herdAnimal>true</herdAnimal>
+		  <body>RT_ZetaBody</body>
+		  <baseBodySize>2</baseBodySize>
+		  <baseHealthScale>1.6</baseHealthScale>
+		  <baseHungerRate>1</baseHungerRate>
+		  <hasGenders>false</hasGenders>
+			<hediffGiverSets Inherit="false">
+				<li>RT_Rimtroid_EvolutionGrowth</li>
+				<li>OrganicAgeless</li>
+				<!-- <li>RT_FeralStage</li> -->
+			</hediffGiverSets>
+		  <foodType>Kibble</foodType>
+		  <leatherDef>RT_MetroidChitin</leatherDef>
+		  <trainability>Advanced</trainability>
+		  <maxPreyBodySize>4</maxPreyBodySize>
+		  <gestationPeriodDays>30</gestationPeriodDays>
+		  <predator>true</predator>
+		  <!-- <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 1.7)</li>
+			  <li>(2.5, 0.7)</li>
+			  <li>(3, 0)</li>
+			</points>
+		  </litterSizeCurve> -->
+		  <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.80</manhunterOnTameFailChance>
+		  <wildness>10</wildness>
+		  <lifeExpectancy>3400</lifeExpectancy>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.25</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.5</minAge>
+				<soundWounded>Pawn_Rodent_Wounded</soundWounded>
+				<soundDeath>Pawn_Rodent_Death</soundDeath>
+				<soundCall>Pawn_Rodent_Call</soundCall>
+				<soundAngry>Pawn_Rodent_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<ageGenerationCurve>
+			<points>
+				<li>(350,0)</li>
+				<li>(351,1)</li>
+				<li>(440,10)</li>
+				<li>(520,15)</li>
+				<li>(600,5)</li>
+				<li>(690,2)</li>
+				<li>(750,0)</li>
+			</points>
+      </ageGenerationCurve>
+			<wildBiomes>
+			<BorealForest>0.2</BorealForest>
+			<Tundra>0.02</Tundra>
+			<ColdBog>0.02</ColdBog>
+			<TemperateSwamp>0.5</TemperateSwamp>
+			<TropicalSwamp>0.4</TropicalSwamp>
+			<TemperateForest>0.5</TemperateForest>
+			<AridShrubland>0.25</AridShrubland>
+			<Desert>0.2</Desert>
+            <TropicalRainforest>0.3</TropicalRainforest>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+		  <li>AnimalExotic</li>
+		  <li>AnimalInsectSpace</li>
+		</tradeTags>
+	<modExtensions>
+      <li Class="RT_Rimtroid.RT_DesiccatorExt">
+        <!--desicatedDef>huskdefnamehere</desicatedDef-->
+      </li>
+    </modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_ZetaMetroid</defName>
+		<label>Zeta metroid</label>
+		<race>RT_ZetaMetroid</race>
+		<combatPower>650</combatPower>
+		<ecoSystemWeight>3.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>3</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>zeta metroid</label>
+			<labelPlural>zeta metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/ZetaMetroid/RT_ZetaMetroid</texPath>
+			  <drawSize>3</drawSize>
+			  <shadowData>
+				<volume>(0.2, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.55)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+			  <drawSize>3.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+		  	<label>zeta metroid</label>
+			<labelPlural>zeta metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/ZetaMetroid/RT_ZetaMetroid</texPath>
+			  <drawSize>3.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+			  <drawSize>3.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>zeta metroid</label>
+			<labelPlural>zeta metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/ZetaMetroid/RT_ZetaMetroid</texPath>
+			  <drawSize>3.5</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+			  <drawSize>3.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+  
+  	<!-- Stunted Zeta Metroid, which simply exists for consistency. -->
+
+</Defs>

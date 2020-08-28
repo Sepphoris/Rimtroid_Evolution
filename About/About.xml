@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RimTroid - Core</name>
+	<packageId>Senpai_Muffin.RimTroid.Core</packageId>
+	<author>Senpai Muffin</author>
+	<supportedVersions>
+    	<li>1.1</li>
+		<li>1.2</li>
+	</supportedVersions>
+	<description>Adds the iconic Metroid from the "Metroid" game series, an ancient bioweapon capable of destroying entire economies. It's up to you to decide whether they are used as war animals, left in peace, or exterminated completely.
+	
+	This mod only adds in the stages from the Metroid Egg to the Metroid Larvae, and contains the core defs and files needed for any future expansions. Other variants and evolutions will be included in later mods that rely on this as a dependency.
+
+	\n\nCredits:
+	\n	- Based on the "Metroid" and "Metroid Prime" game series, created by Nintendo.
+	
+	</description>
+	
+	<modDependenciesByVersion>
+	</modDependenciesByVersion>
+	<loadAfter>
+	</loadAfter>
+	<incompatibleWith>
+      <li></li>
+      <li></li>
+    </incompatibleWith>
+</ModMetaData>
