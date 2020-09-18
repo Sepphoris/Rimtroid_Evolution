@@ -5,9 +5,12 @@
 	<ManeuverDef>
 		<defName>RT_Lifedrain</defName>
 		<requiredCapacity>RT_Lifedrain</requiredCapacity>
-		<verb>
+			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
 			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
+				<ageDaysAmount>5</ageDaysAmount>
+  				<absorbAmount>0.02</absorbAmount>
+  				<stopFeedingAt>0.8</stopFeedingAt>
 		</verb>
 		<logEntryDef>MeleeAttack</logEntryDef>
 		<combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
@@ -19,9 +22,12 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainBantee</defName>
 		<requiredCapacity>RT_LifedrainBantee</requiredCapacity>
-		<verb>
+			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
 			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_LifedrainBantee</meleeDamageDef>
+				<ageDaysAmount>5</ageDaysAmount>
+  				<absorbAmount>0.02</absorbAmount>
+  				<stopFeedingAt>0.8</stopFeedingAt>
 		</verb>
 		<logEntryDef>MeleeAttack</logEntryDef>
 		<combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
