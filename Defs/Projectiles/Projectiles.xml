@@ -27,7 +27,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaAcid</defName>
-		<thingClass>Bullet</thingClass>
+		<thingClass>DD.AnimalProjectile</thingClass>
 		<label>Acidic Glob</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
