@@ -25,15 +25,17 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef>
+	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/GammaBolt</li>
+		</textures>
+	</ThingDef>  
+	
+	<ThingDef ParentName="RT_Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>
-		<thingClass>Rimlaser.LaserBeamGraphic</thingClass>
+		<thingClass>Rimlaser.LaserBeam</thingClass>
 		<label>Electic Bolt</label>
-		<category>Projectile</category>
-		<tickerType>Normal</tickerType>
-		<altitudeLayer>Projectile</altitudeLayer>
-		<useHitPoints>False</useHitPoints>
-		<neverMultiSelect>True</neverMultiSelect>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
 			<texPath>AnimalProjectile/GammaBolt</texPath>
@@ -48,5 +50,5 @@
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
 	</ThingDef>
-	
+
 </Defs>
