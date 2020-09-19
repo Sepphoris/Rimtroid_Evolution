@@ -232,7 +232,7 @@
 				<showAbilityGizmos>true</showAbilityGizmos>
 			</li>
 			<li Class="DD.GainAbilityExtension">
-				<abilityDef>RT_ZetaFireball</abilityDef>
+				<abilityDef>DragonBreath</abilityDef>
 				<minLifeStage>AnimalBaby</minLifeStage>
 				<minAge>0</minAge>
 			</li>
