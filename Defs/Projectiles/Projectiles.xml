@@ -3,7 +3,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaFireball</defName>
-		<thingClass>Bullet</thingClass>
+		<thingClass>DD.AnimalProjectile</thingClass>
 		<label>Fireball</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -34,7 +34,7 @@
 	
 	<ThingDef ParentName="RT_Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>
-		<thingClass>Rimlaser.LaserBeam</thingClass>
+		<thingClass>RT_Rimtroid.AnimalLaserProjectile</thingClass>
 		<label>Electic Bolt</label>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>

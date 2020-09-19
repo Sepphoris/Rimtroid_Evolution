@@ -40,6 +40,10 @@
       <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Rimlaser, Version=1.0.345.849, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies\Rimlaser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -306,6 +310,8 @@
     <Compile Include="CorpseDesiccation.cs" />
     <Compile Include="DisableTaming.cs" />
     <Compile Include="Flight.cs" />
+    <Compile Include="AnimalLaserProjectile.cs" />
+    <Compile Include="FW2\AnimalProjectile.cs" />
     <Compile Include="FW2\HediffCompProperties_BaseRegen.cs" />
     <Compile Include="FW2\RegenHediffModExtension.cs" />
     <Compile Include="FW2\VerbSettingExtension.cs" />
