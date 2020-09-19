@@ -187,17 +187,6 @@
 		<impulse>6</impulse>
 	</ThingDef>
 	
-	<ThingDef ParentName="Bullet_LaserDeathRay" Class="Rimlaser.LaserBeamDef">
-		<defName>RT_ZetaFireball</defName>
-		<label>fire ball</label>
-		<projectile>
-			<damageAmountBase>100</damageAmountBase>
-			<stoppingPower>10</stoppingPower>
-		</projectile>
-		<beamWidth>1.5</beamWidth>
-		<lifetime>120</lifetime>
-		<impulse>6</impulse>
-	</ThingDef>
 
 	<ThingDef ParentName="Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
 		<defName>RT_GammaElectricBolt</defName>
