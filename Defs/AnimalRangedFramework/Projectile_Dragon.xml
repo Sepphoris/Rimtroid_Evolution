@@ -9,7 +9,6 @@
 		<altitudeLayer>Projectile</altitudeLayer>
 		<useHitPoints>False</useHitPoints>
 		<neverMultiSelect>True</neverMultiSelect>
-		<thingClass>DD.Projectile_Explode</thingClass>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
 			<texPath>AnimalProjectile/DragonFire</texPath>
