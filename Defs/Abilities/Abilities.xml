@@ -6,10 +6,10 @@
   <AbilityDef>
 	<defName>RT_GammaElectricBolt</defName>
 	<label>Electric bolt</label>
-	<description>Lob balls of fire at a target</description>
+	<description>Fire an electric bolt at a target</description>
 	<abilityClass>DD.Ability_AutoCastableVerb</abilityClass>
 	<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-	<cooldownTicksRange>1000~1200</cooldownTicksRange>
+	<cooldownTicksRange>1000~1400</cooldownTicksRange>
 	<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 	<verbProperties>
@@ -22,21 +22,21 @@
 		<defaultProjectile>RT_GammaElectricBolt</defaultProjectile>
 		<warmupTime>0.5</warmupTime>
 		<range>35</range>
-		<burstShotCount>20</burstShotCount>
+		<burstShotCount>1</burstShotCount>
 		<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 		<minRange>1</minRange>
-		<soundCast>DragonBreathShot</soundCast>
+		<soundCast>ElectricBoltShot</soundCast>
 		<muzzleFlashScale>1</muzzleFlashScale>
 	</verbProperties>
 	<comps>
 		<li Class="DD.AbilityCompProperties_AttackVerb">
 			<compClass>DD.AbilityComp_AttackVerb</compClass>
 			<autoUse>true</autoUse>
-			<gizmoOnText>Breath Enabled</gizmoOnText>
-			<gizmoOffText>Breath Disabled</gizmoOffText>
-			<gizmoOnIconPath>AnimalProjectile/DragonFire</gizmoOnIconPath>
-			<gizmoOffIconPath>AnimalProjectile/DragonFire</gizmoOffIconPath>
-			<gizmoDesc>Toggle Dragon Breath Usage</gizmoDesc>
+			<gizmoOnText>Electric Bolt Enabled</gizmoOnText>
+			<gizmoOffText>Electric Bolt Disabled</gizmoOffText>
+			<gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
+			<gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
+			<gizmoDesc>Toggle Electric Bolt Usage (Ranged)</gizmoDesc>
 		</li>
 	</comps>
  </AbilityDef>
@@ -60,12 +60,12 @@
 		<accuracyLong>0.30</accuracyLong>
 		<hasStandardCommand>true</hasStandardCommand>
 		<defaultProjectile>RT_ZetaFireball</defaultProjectile>
-		<warmupTime>0.5</warmupTime>
-		<range>35</range>
-		<burstShotCount>5</burstShotCount>
-		<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+		<warmupTime>0.7</warmupTime>
+		<range>28</range>
+		<burstShotCount>3</burstShotCount>
+		<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 		<minRange>1</minRange>
-		<soundCast>SoundFireball</soundCast>
+		<soundCast>FireballShot</soundCast>
 		<muzzleFlashScale>1</muzzleFlashScale>
 	</verbProperties>
 	<comps>

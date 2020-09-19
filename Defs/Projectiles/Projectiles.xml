@@ -3,6 +3,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaFireball</defName>
+		<thingClass>Bullet</thingClass>
 		<label>Fireball</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -16,11 +17,35 @@
 		</graphicData>
 		<projectile>
 			<flyOverhead>false</flyOverhead>
-			<speed>32</speed>
+			<speed>28</speed>
 			<damageDef>Flame</damageDef>
-			<explosionRadius>2.3</explosionRadius>
+			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>2</damageAmountBase>
 			<soundExplode>SoundFireball</soundExplode>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RT_GammaBolt</defName>
+		<thingClass>Rimlaser.LaserBeamGraphic</thingClass>
+		<label>Electic Bolt</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/GammaBolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>2</damageAmountBase>
+			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
 	</ThingDef>
 	
