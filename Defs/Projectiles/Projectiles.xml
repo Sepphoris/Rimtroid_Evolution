@@ -25,6 +25,30 @@
 		</projectile>
 	</ThingDef>
 
+ 	<ThingDef>
+		<defName>RT_ZetaAcid</defName>
+		<thingClass>Bullet</thingClass>
+		<label>Acidic Glob</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Acidbolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>28</speed>
+			<damageDef>Toxic</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>2</damageAmountBase>
+			<soundExplode>SoundAcid</soundExplode>
+		</projectile>
+	</ThingDef>
+
 	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="Bullet_LaserGeneric">
 		<seam>0.25</seam>
 		<textures>
@@ -49,6 +73,8 @@
 			<damageAmountBase>2</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
+        <beamWidth>4.5</beamWidth>
+        <lifetime>16</lifetime>
 	</ThingDef>
 
 </Defs>
