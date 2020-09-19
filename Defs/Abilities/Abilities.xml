@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+ <AbilityDef>
+	<defName>RT_ZetaFireball</defName>
+	<label>Fireball</label>
+	<description>Lob balls of fire at a target</description>
+	<abilityClass>DD.Ability_AutoCastableVerb</abilityClass>
+	<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+	<cooldownTicksRange>1000~1200</cooldownTicksRange>
+	<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<verbProperties>
+		<verbClass>DD.Verb_Shoot_Ability</verbClass>
+		<accuracyTouch>0.95</accuracyTouch>
+		<accuracyShort>0.60</accuracyShort>
+		<accuracyMedium>0.50</accuracyMedium>
+		<accuracyLong>0.30</accuracyLong>
+		<hasStandardCommand>false</hasStandardCommand>
+		<defaultProjectile>RT_ZetaFireball</defaultProjectile>
+		<warmupTime>0.5</warmupTime>
+		<range>35</range>
+		<burstShotCount>20</burstShotCount>
+		<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+		<minRange>1</minRange>
+		<soundCast>DragonBreathShot</soundCast>
+		<muzzleFlashScale>1</muzzleFlashScale>
+	</verbProperties>
+	<comps>
+		<li Class="DD.AbilityCompProperties_AttackVerb">
+			<compClass>DD.AbilityComp_AttackVerb</compClass>
+			<autoUse>true</autoUse>
+			<gizmoOnText>Breath Enabled</gizmoOnText>
+			<gizmoOffText>Breath Disabled</gizmoOffText>
+			<gizmoOnIconPath>AnimalProjectile/DragonFire</gizmoOnIconPath>
+			<gizmoOffIconPath>AnimalProjectile/DragonFire</gizmoOffIconPath>
+			<gizmoDesc>Toggle Dragon Breath Usage</gizmoDesc>
+		</li>
+	</comps>
+ </AbilityDef>
+ 
+ 
+  <AbilityDef>
+	<defName>RT_GammaElectricBolt</defName>
+	<label>Electric bolt</label>
+	<description>Lob balls of fire at a target</description>
+	<abilityClass>DD.Ability_AutoCastableVerb</abilityClass>
+	<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+	<cooldownTicksRange>1000~1200</cooldownTicksRange>
+	<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<verbProperties>
+		<verbClass>DD.Verb_Shoot_Ability</verbClass>
+		<accuracyTouch>0.95</accuracyTouch>
+		<accuracyShort>0.60</accuracyShort>
+		<accuracyMedium>0.50</accuracyMedium>
+		<accuracyLong>0.30</accuracyLong>
+		<hasStandardCommand>false</hasStandardCommand>
+		<defaultProjectile>RT_GammaElectricBolt</defaultProjectile>
+		<warmupTime>0.5</warmupTime>
+		<range>35</range>
+		<burstShotCount>20</burstShotCount>
+		<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+		<minRange>1</minRange>
+		<soundCast>DragonBreathShot</soundCast>
+		<muzzleFlashScale>1</muzzleFlashScale>
+	</verbProperties>
+	<comps>
+		<li Class="DD.AbilityCompProperties_AttackVerb">
+			<compClass>DD.AbilityComp_AttackVerb</compClass>
+			<autoUse>true</autoUse>
+			<gizmoOnText>Breath Enabled</gizmoOnText>
+			<gizmoOffText>Breath Disabled</gizmoOffText>
+			<gizmoOnIconPath>AnimalProjectile/DragonFire</gizmoOnIconPath>
+			<gizmoOffIconPath>AnimalProjectile/DragonFire</gizmoOffIconPath>
+			<gizmoDesc>Toggle Dragon Breath Usage</gizmoDesc>
+		</li>
+	</comps>
+ </AbilityDef>
+ 
+</Defs>
