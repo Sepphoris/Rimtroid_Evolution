@@ -1,6 +1,6 @@
-C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Assemblies\Metroid.dll
-C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Assemblies\Metroid.pdb
 C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Source\obj\Debug\Metroid.csprojAssemblyReference.cache
 C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Source\obj\Debug\Metroid.csproj.CoreCompileInputs.cache
-C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Source\obj\Debug\Metroid.dll
-C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Source\obj\Debug\Metroid.pdb
+C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Assemblies\Rimtroid_Evolution.dll
+C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Assemblies\Rimtroid_Evolution.pdb
+C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Source\obj\Debug\Rimtroid_Evolution.dll
+C:\GAMES\Rimworld\Mods\Rimtroid_Evolution\Source\obj\Debug\Rimtroid_Evolution.pdb
