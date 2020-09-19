@@ -226,6 +226,17 @@
 			</dessicatedBodyGraphicData>
 		  </li>
 		</lifeStages>
+		<modExtensions>
+			<li Class="DD.VerbSettingExtension">
+				<verbControl>true</verbControl>
+				<showAbilityGizmos>true</showAbilityGizmos>
+			</li>
+			<li Class="DD.GainAbilityExtension">
+				<abilityDef>RT_GammaElectricBolt</abilityDef>
+				<minLifeStage>AnimalBaby</minLifeStage>
+				<minAge>0</minAge>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
   
   	<!-- Stunted Gamma Metroid, which simply exists for consistency. -->
