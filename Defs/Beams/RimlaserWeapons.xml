@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
 	<ThingDef>
 		<defName>RimlaserBeamGraphic</defName>
-		<thingClass>Rimlaser.LaserBeamGraphic</thingClass>
+		<thingClass>RT_Rimtroid.LaserBeamGraphic</thingClass>
 		<drawOffscreen>true</drawOffscreen>
 		<label>laser beam</label>
 
@@ -15,7 +15,7 @@
 	</ThingDef>
 
 	<ThingDef Abstract="True" Name="Bullet_LaserGeneric" ParentName="BaseBullet">
-		<thingClass>Rimlaser.LaserBeam</thingClass>
+		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
 		<drawOffscreen>true</drawOffscreen>
 		<beamGraphic>RimlaserBeamGraphic</beamGraphic>
 
@@ -90,7 +90,7 @@
 
 	<!-- Gamma Electric Bolt -->
 
-	<ThingDef ParentName="Bullet_LaserGeneric" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserGeneric" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>Bullet_Tesla</defName>
 		<label>bolt of lightning</label>
 
@@ -110,7 +110,7 @@
 	
 		<!-- LASER RIFLE -->
 
-	<ThingDef ParentName="Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>Bullet_LaserRifle</defName>
 		<label>laser rifle beam</label>
 		<projectile>
@@ -118,7 +118,7 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef ParentName="Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>Bullet_LaserPistol</defName>
 		<label>laser pistol beam</label>
 
@@ -131,7 +131,7 @@
 
 	<!-- HEAVY LASER -->
 
-	<ThingDef ParentName="Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>Bullet_LaserHeavy</defName>
 		<label>heavy laser beam</label>
 
@@ -145,7 +145,7 @@
 	</ThingDef>
 
 
-	<ThingDef ParentName="Bullet_LaserInc" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserInc" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>Bullet_LaserIncendiary</defName>
 		<label>incendiary laser beam</label>
 
@@ -160,7 +160,7 @@
 
 
 
-	<ThingDef ParentName="Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 
 		<defName>Bullet_LaserMinigun</defName>
 		<label>minigun laser beam</label>
@@ -175,7 +175,7 @@
 
 	<!-- DEATH RAY -->
 
-	<ThingDef ParentName="Bullet_LaserDeathRay" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserDeathRay" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>Bullet_DeathRay</defName>
 		<label>death ray</label>
 		<projectile>
@@ -188,7 +188,7 @@
 	</ThingDef>
 	
 
-	<ThingDef ParentName="Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_GammaElectricBolt</defName>
 		<label>gamma electric bolt</label>
 		<projectile>

@@ -56,9 +56,9 @@
 		</textures>
 	</ThingDef>  
 	
-	<ThingDef ParentName="RT_Bullet_LaserColored" Class="Rimlaser.LaserBeamDef">
+	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>
-		<thingClass>RT_Rimtroid.AnimalLaserProjectile</thingClass>
+		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
 		<label>Electic Bolt</label>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>

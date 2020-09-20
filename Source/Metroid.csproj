@@ -310,7 +310,6 @@
     <Compile Include="CorpseDesiccation.cs" />
     <Compile Include="DisableTaming.cs" />
     <Compile Include="Flight.cs" />
-    <Compile Include="AnimalLaserProjectile.cs" />
     <Compile Include="FW2\AnimalProjectile.cs" />
     <Compile Include="FW2\HediffCompProperties_BaseRegen.cs" />
     <Compile Include="FW2\RegenHediffModExtension.cs" />
@@ -344,6 +343,28 @@
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Metamorphosis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RimLaser\Building_LaserGun.cs" />
+    <Compile Include="RimLaser\Building_LaserGunDef.cs" />
+    <Compile Include="RimLaser\IBeamColorThing.cs" />
+    <Compile Include="RimLaser\IDrawnWeaponWithRotation.cs" />
+    <Compile Include="RimLaser\JobDefOf.cs" />
+    <Compile Include="RimLaser\JobDriver_ChangeLaserColor.cs" />
+    <Compile Include="RimLaser\LaserBeam.cs" />
+    <Compile Include="RimLaser\LaserBeamColoring.cs" />
+    <Compile Include="RimLaser\LaserBeamDef.cs" />
+    <Compile Include="RimLaser\LaserBeamGraphic.cs" />
+    <Compile Include="RimLaser\LaserGun.cs" />
+    <Compile Include="RimLaser\LaserGunDef.cs" />
+    <Compile Include="RimLaser\MeshMakerLaser.cs" />
+    <Compile Include="RimLaser\MoteLaserDectoration.cs" />
+    <Compile Include="RimLaser\PatchGunDrawing.cs" />
+    <Compile Include="RimLaser\PatchTuretTopDrawTurret.cs" />
+    <Compile Include="RimLaser\SpinningLaserGun.cs" />
+    <Compile Include="RimLaser\SpinningLaserGunBase.cs" />
+    <Compile Include="RimLaser\SpinningLaserGunDef.cs" />
+    <Compile Include="RimLaser\SpinningLaserGunTurret.cs" />
+    <Compile Include="RimLaser\ThingDefOf.cs" />
+    <Compile Include="RimLaser\ThingExtensions.cs" />
     <Compile Include="Training.cs" />
     <Compile Include="Verb_AbsorbNeed.cs" />
   </ItemGroup>

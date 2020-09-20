@@ -16,7 +16,7 @@
 
   <ThingDef ParentName="MoteBase" Name="Rimlaser_Mote_LaserDecoration">
     <defName>Rimlaser_Mote_LaserDecorationYellow</defName>
-    <thingClass>Rimlaser.MoteLaserDectoration</thingClass>
+    <thingClass>RT_Rimtroid.MoteLaserDectoration</thingClass>
     <graphicData>
       <texPath>Rimlaser/Effects/LaserDecorationYellow</texPath>
       <shaderType>TransparentPostLight</shaderType>
