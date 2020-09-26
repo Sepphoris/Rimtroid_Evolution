@@ -98,6 +98,7 @@
         <beamWidth>4.5</beamWidth>
 		<fireWidth>1.4</fireWidth>
 		<spawnFire>true</spawnFire>
+		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>1</fireDistanceFromCaster>
         <lifetime>300</lifetime>
 	</ThingDef>

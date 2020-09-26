@@ -114,6 +114,10 @@ namespace RT_Rimtroid
             {
                 foreach (var c in MakeLine(origin.ToIntVec3(), destination.ToIntVec3(), pawn.Map))
                 {
+                    if (c == pawn.Position && def.dontSpawnFireOnCaster)
+                    {
+                        continue;
+                    }
                     Fire obj = (Fire)ThingMaker.MakeThing(ThingDefOf.Fire);
                     obj.fireSize = 1f;
                     var grass = ThingMaker.MakeThing(ThingDef.Named("RT_Dummy_Grass"));
