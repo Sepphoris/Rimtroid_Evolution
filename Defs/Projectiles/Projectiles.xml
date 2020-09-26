@@ -54,7 +54,14 @@
 		<textures>
 			<li>AnimalProjectile/GammaBolt</li>
 		</textures>
-	</ThingDef>  
+	</ThingDef>
+
+		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/FireBeam1</li>
+		</textures>
+	</ThingDef>   
 	
 	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>
@@ -78,13 +85,13 @@
 	</ThingDef>
 	
 	
-	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>RT_QueenBolt</defName>
+	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
+		<defName>RT_OmegaBeam</defName>
 		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
-		<label>Electic Bolt</label>
+		<label>Firebeam</label>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
-			<texPath>AnimalProjectile/GammaBolt</texPath>
+			<texPath>AnimalProjectile/Firebeam1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
@@ -95,12 +102,12 @@
 			<damageAmountBase>2</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
-        <beamWidth>4.5</beamWidth>
-		<fireWidth>1.4</fireWidth>
+        <beamWidth>3</beamWidth>
+		<fireWidth>0</fireWidth>
 		<spawnFire>true</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>1</fireDistanceFromCaster>
-        <lifetime>300</lifetime>
+        <lifetime>150</lifetime>
 	</ThingDef>
 
 </Defs>

@@ -119,9 +119,47 @@
 		</li>
 	</comps>
  </AbilityDef>
+
+    <AbilityDef>
+	<defName>RT_OmegaBeam</defName>
+	<label>Omega Fire Beam</label>
+	<description>Create a beam of fire that ignites the ground below it.</description>
+	<abilityClass>DD.Ability_AutoCastableVerb</abilityClass>
+	<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+	<cooldownTicksRange>16~2000</cooldownTicksRange>
+	<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+	<verbProperties>
+		<verbClass>DD.Verb_Shoot_Ability</verbClass>
+		<accuracyTouch>0.95</accuracyTouch>
+		<accuracyShort>0.60</accuracyShort>
+		<accuracyMedium>0.50</accuracyMedium>
+		<accuracyLong>0.30</accuracyLong>
+		<hasStandardCommand>false</hasStandardCommand>
+		<defaultProjectile>RT_OmegaBeam</defaultProjectile>
+		<warmupTime>0.5</warmupTime>
+		<range>30</range>
+		<burstShotCount>1</burstShotCount>
+		<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+		<minRange>1</minRange>
+		<soundCast>FireBeamShot</soundCast>
+		<muzzleFlashScale>1</muzzleFlashScale>
+	</verbProperties>
+	<comps>
+		<li Class="DD.AbilityCompProperties_AttackVerb">
+			<compClass>DD.AbilityComp_AttackVerb</compClass>
+			<autoUse>true</autoUse>
+			<gizmoOnText>Fire Beam Enabled</gizmoOnText>
+			<gizmoOffText>Fire Beam Disabled</gizmoOffText>
+			<gizmoOnIconPath>AnimalProjectile/FireBeam1</gizmoOnIconPath>
+			<gizmoOffIconPath>AnimalProjectile/FireBeam1</gizmoOffIconPath>
+			<gizmoDesc>Toggle Fire Beam Usage (Ranged)</gizmoDesc>
+		</li>
+	</comps>
+ </AbilityDef>
  
    <AbilityDef>
-	<defName>RT_QueenBolt</defName>
+	<defName>RT_QueenBeam</defName>
 	<label>Queen Bolt</label>
 	<description>Fire an arc of electricity at a target</description>
 	<abilityClass>DD.Ability_AutoCastableVerb</abilityClass>
