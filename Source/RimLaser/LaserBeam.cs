@@ -65,7 +65,7 @@ namespace RT_Rimtroid
                 var adjs = GenAdj.CellsAdjacent8Way(new TargetInfo(current, map));
                 foreach (var c in adjs)
                 {
-                    if (c.DistanceTo(current) <= def.fireWidth)
+                    if (c.DistanceTo(current) <= def.fireWidth && c.DistanceTo(end) < start.DistanceTo(end))
                     {
                         Positions.Add(c);
                     }
