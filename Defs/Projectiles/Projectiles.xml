@@ -76,5 +76,30 @@
         <beamWidth>4.5</beamWidth>
         <lifetime>16</lifetime>
 	</ThingDef>
+	
+	
+	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
+		<defName>RT_QueenBolt</defName>
+		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
+		<label>Electic Bolt</label>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/GammaBolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>2</damageAmountBase>
+			<soundExplode>SoundBolt</soundExplode>
+		</projectile>
+        <beamWidth>4.5</beamWidth>
+		<fireWidth>1.4</fireWidth>
+		<spawnFire>true</spawnFire>
+		<fireDistanceFromCaster>1</fireDistanceFromCaster>
+        <lifetime>300</lifetime>
+	</ThingDef>
 
 </Defs>

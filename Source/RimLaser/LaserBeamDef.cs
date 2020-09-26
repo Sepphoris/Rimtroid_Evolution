@@ -27,6 +27,9 @@ namespace RT_Rimtroid
         public float impulse = 4.0f;
 
         public float beamWidth = 1.0f;
+        public float fireWidth = 1.0f;
+        public float fireDistanceFromCaster = 1f;
+        public bool spawnFire = false;
         public float shieldDamageMultiplier = 0.5f;
         public float seam = -1f;
 
@@ -38,6 +41,7 @@ namespace RT_Rimtroid
 
         public List<string> textures;
         private List<Material> materials = new List<Material> ();
+
 
         void CreateGraphics()
         {

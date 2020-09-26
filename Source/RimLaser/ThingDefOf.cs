@@ -8,9 +8,9 @@ using Verse;
 namespace RT_Rimtroid
 {
     [DefOf]
-    public static class ThingDefOf
+    public static class RimDefOf
     {
-        static ThingDefOf()
+        static RimDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
         }

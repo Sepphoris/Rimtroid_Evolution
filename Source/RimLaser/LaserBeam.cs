@@ -5,6 +5,7 @@ using RimWorld;
 using Verse;
 using System.Collections.Generic;
 using Verse.Sound;
+using System.Linq;
 
 namespace RT_Rimtroid
 {
@@ -54,6 +55,26 @@ namespace RT_Rimtroid
             }
         }
 
+        public HashSet<IntVec3> MakeLine(IntVec3 start, IntVec3 end, Map map)
+        {
+            var resultingLine = new ShootLine(start, end);
+            HashSet<IntVec3> Positions = new HashSet<IntVec3>();
+            foreach (var current in resultingLine.Points())
+            {
+                Positions.Add(current);
+                var adjs = GenAdj.CellsAdjacent8Way(new TargetInfo(current, map));
+                foreach (var c in adjs)
+                {
+                    if (c.DistanceTo(current) <= def.fireWidth)
+                    {
+                        Positions.Add(c);
+                    }
+                }
+            }
+
+            return Positions.Where(x => x.DistanceTo(start) > def.fireDistanceFromCaster).ToHashSet();
+        }
+
         protected override void Impact(Thing hitThing)
         {
             bool shielded = hitThing.IsShielded() && def.IsWeakToShields;
@@ -83,14 +104,22 @@ namespace RT_Rimtroid
                 b.z += Rand.Range(-0.5f, 0.5f);
             }
 
-
             a.y = b.y = def.Altitude;
-
 
             SpawnBeam(a, b);
 
-
             Pawn pawn = launcher as Pawn;
+            if (def.spawnFire)
+            {
+                foreach (var c in MakeLine(origin.ToIntVec3(), destination.ToIntVec3(), pawn.Map))
+                {
+                    Fire obj = (Fire)ThingMaker.MakeThing(ThingDefOf.Fire);
+                    obj.fireSize = 1f;
+                    var grass = ThingMaker.MakeThing(ThingDef.Named("RT_Dummy_Grass"));
+                    GenSpawn.Spawn(grass, c, pawn.Map, Rot4.North);
+                    GenSpawn.Spawn(obj, c, pawn.Map, Rot4.North);
+                }
+            }
             IDrawnWeaponWithRotation weapon = null;
             if (pawn != null && pawn.equipment != null) weapon = pawn.equipment.Primary as IDrawnWeaponWithRotation;
             if (weapon == null)
@@ -134,16 +163,6 @@ namespace RT_Rimtroid
                 if (hitPawn != null && hitPawn.stances != null && hitPawn.BodySize <= this.def.projectile.StoppingPower + 0.001f)
                 {
                     hitPawn.stances.StaggerFor(95);
-                }
-            }
-            else
-            {
-                Map map = base.Map;
-                SoundDefOf.BulletImpact_Ground.PlayOneShot(new TargetInfo(base.Position, map, false));
-                MoteMaker.MakeStaticMote(this.ExactPosition, map, RimWorld.ThingDefOf.Mote_ShotHit_Dirt, 1f);
-                if (base.Position.GetTerrain(map).takeSplashes)
-                {
-                    MoteMaker.MakeWaterSplash(this.ExactPosition, map, Mathf.Sqrt((float)base.DamageAmount) * 1f, 4f);
                 }
             }
         }
