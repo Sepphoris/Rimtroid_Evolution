@@ -59,13 +59,14 @@ namespace RT_Rimtroid
         {
             var resultingLine = new ShootLine(start, end);
             HashSet<IntVec3> Positions = new HashSet<IntVec3>();
-            foreach (var current in resultingLine.Points())
+            var points = resultingLine.Points().ToList();
+            foreach (var current in points)
             {
                 Positions.Add(current);
                 var adjs = GenAdj.CellsAdjacent8Way(new TargetInfo(current, map));
                 foreach (var c in adjs)
                 {
-                    if (c.DistanceTo(current) <= def.fireWidth && c.DistanceTo(end) < start.DistanceTo(end))
+                    if (c.DistanceTo(current) <= def.fireWidth && c.DistanceTo(end) < points[0].DistanceTo(end))
                     {
                         Positions.Add(c);
                     }
