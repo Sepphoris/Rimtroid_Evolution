@@ -9,7 +9,7 @@
 
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>Projectile</altitudeLayer>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<useHitPoints>False</useHitPoints>
 		<neverMultiSelect>True</neverMultiSelect>
 	</ThingDef>
@@ -18,7 +18,7 @@
 		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
 		<drawOffscreen>true</drawOffscreen>
 		<beamGraphic>RimlaserBeamGraphic</beamGraphic>
-
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
 			<texPath>Rimlaser/Effects/LaserRed</texPath>
@@ -35,166 +35,6 @@
 		</projectile>
 
 		<seam>0.25</seam>
-	</ThingDef>
-
-	<ThingDef Abstract="True" Name="Bullet_LaserColored" ParentName="Bullet_LaserGeneric">
-		<seam>0.25</seam>
-		<textures>
-			<li>Rimlaser/Effects/LaserAwful</li>
-			<li>Rimlaser/Effects/LaserPoor</li>
-			<li>Rimlaser/Effects/LaserNormal</li>
-			<li>Rimlaser/Effects/LaserGood</li>
-			<li>Rimlaser/Effects/LaserExcellent</li>
-			<li>Rimlaser/Effects/LaserMasterwork</li>
-			<li>Rimlaser/Effects/LaserLegendary</li>
-		</textures>
-	</ThingDef>  
-
-	<ThingDef Abstract="True" Name="Bullet_LaserInc" ParentName="Bullet_LaserGeneric">
-		<textures>
-			<li>Rimlaser/Effects/LaserIncAwful</li>
-			<li>Rimlaser/Effects/LaserIncPoor</li>
-			<li>Rimlaser/Effects/LaserIncNormal</li>
-			<li>Rimlaser/Effects/LaserIncGood</li>
-			<li>Rimlaser/Effects/LaserIncExcellent</li>
-			<li>Rimlaser/Effects/LaserIncMasterwork</li>
-			<li>Rimlaser/Effects/LaserIncLegendary</li>
-		</textures>
-		<seam>0.02083333333</seam>
-	</ThingDef>  
-
-	<ThingDef Abstract="True" Name="Bullet_LaserDeathRay" ParentName="Bullet_LaserGeneric">
-		<textures>
-			<li>Rimlaser/Effects/LaserDeathRay</li>
-		</textures>
-
-		<decorations>
-			<li>
-				<mote>Rimlaser_Mote_LaserDecorationYellow</mote>
-				<spacing>0.8</spacing>
-				<initialOffset>-0.1</initialOffset>
-				<speed>1.0</speed>
-				<speedJitter>0.55</speedJitter>
-				<speedJitterOffset>90</speedJitterOffset>
-			</li>
-			<li>
-				<mote>Rimlaser_Mote_LaserDecorationPurple</mote>
-				<spacing>0.8</spacing>
-				<initialOffset>0.3</initialOffset>
-				<speed>1.0</speed>
-				<speedJitter>0.45</speedJitter>
-				<speedJitterOffset>90</speedJitterOffset>
-			</li>
-		</decorations>
-	</ThingDef>
-
-	<!-- Gamma Electric Bolt -->
-
-	<ThingDef ParentName="Bullet_LaserGeneric" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>Bullet_Tesla</defName>
-		<label>bolt of lightning</label>
-
-		<textures>
-			<li>Rimlaser/Effects/Lightning</li>
-		</textures>
-		<seam>0</seam>
-
-		<projectile>
-			<damageAmountBase>8</damageAmountBase>
-			<stoppingPower>12</stoppingPower>
-		</projectile>
-
-		<beamWidth>1.0</beamWidth>
-		<shieldDamageMultiplier>100</shieldDamageMultiplier>
-	</ThingDef>
-	
-		<!-- LASER RIFLE -->
-
-	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>Bullet_LaserRifle</defName>
-		<label>laser rifle beam</label>
-		<projectile>
-			<damageAmountBase>16</damageAmountBase>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>Bullet_LaserPistol</defName>
-		<label>laser pistol beam</label>
-
-		<projectile>
-			<damageAmountBase>16</damageAmountBase>
-		</projectile>
-
-		<beamWidth>0.6</beamWidth>
-	</ThingDef>
-
-	<!-- HEAVY LASER -->
-
-	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>Bullet_LaserHeavy</defName>
-		<label>heavy laser beam</label>
-
-		<projectile>
-			<damageAmountBase>48</damageAmountBase>
-		</projectile>
-
-		<beamWidth>1.8</beamWidth>
-		<lifetime>120</lifetime>
-		<impulse>6</impulse>
-	</ThingDef>
-
-
-	<ThingDef ParentName="Bullet_LaserInc" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>Bullet_LaserIncendiary</defName>
-		<label>incendiary laser beam</label>
-
-		<projectile>
-			<damageDef>Flame</damageDef>
-			<damageAmountBase>16</damageAmountBase>
-		</projectile>
-
-		<beamWidth>1.4</beamWidth>
-	</ThingDef>
-
-
-
-
-	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-
-		<defName>Bullet_LaserMinigun</defName>
-		<label>minigun laser beam</label>
-
-		<projectile>
-			<damageAmountBase>12</damageAmountBase>
-		</projectile>
-
-		<beamWidth>0.4</beamWidth>
-		<lifetime>16</lifetime>
-	</ThingDef>
-
-	<!-- DEATH RAY -->
-
-	<ThingDef ParentName="Bullet_LaserDeathRay" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>Bullet_DeathRay</defName>
-		<label>death ray</label>
-		<projectile>
-			<damageAmountBase>100</damageAmountBase>
-			<stoppingPower>10</stoppingPower>
-		</projectile>
-		<beamWidth>1.5</beamWidth>
-		<lifetime>120</lifetime>
-		<impulse>6</impulse>
-	</ThingDef>
-	
-
-	<ThingDef ParentName="Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>RT_GammaElectricBolt</defName>
-		<label>gamma electric bolt</label>
-		<projectile>
-			<damageAmountBase>32</damageAmountBase>
-		</projectile>
-		<beamWidth>0.9</beamWidth>
 	</ThingDef>
 
 </Defs>

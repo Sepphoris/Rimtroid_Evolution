@@ -7,7 +7,7 @@
 		<label>Fireball</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>Projectile</altitudeLayer>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<useHitPoints>False</useHitPoints>
 		<neverMultiSelect>True</neverMultiSelect>
 		<graphicData>
@@ -31,7 +31,7 @@
 		<label>Acidic Glob</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
-		<altitudeLayer>Projectile</altitudeLayer>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<useHitPoints>False</useHitPoints>
 		<neverMultiSelect>True</neverMultiSelect>
 		<graphicData>
@@ -89,6 +89,7 @@
 		<defName>RT_OmegaBeam</defName>
 		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
 		<label>Firebeam</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
 			<texPath>AnimalProjectile/Firebeam1</texPath>

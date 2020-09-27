@@ -20,7 +20,7 @@
 		<accuracyMedium>0.50</accuracyMedium>
 		<accuracyLong>0.30</accuracyLong>
 		<hasStandardCommand>false</hasStandardCommand>
-		<defaultProjectile>RT_GammaElectricBolt</defaultProjectile>
+		<defaultProjectile>RT_GammaBolt</defaultProjectile>
 		<warmupTime>0.5</warmupTime>
 		<range>35</range>
 		<burstShotCount>1</burstShotCount>
