@@ -148,6 +148,16 @@
 			<li>MovingLimbCore</li>
 		</tags>
 	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_QueenMainBody</defName>
+		<label>body</label>
+		<hitPoints>500</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
 	
   <BodyPartDef>
 		<defName>RT_Tail</defName>
@@ -169,6 +179,14 @@
 		<tags>
 			<li>ManipulationLimbCore</li>
 		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_Ovipositor</defName>
+		<label>ovipositor</label>
+		<hitPoints>60</hitPoints>
+		<skinCovered>false</skinCovered>
+		<bleedRate>0.5</bleedRate>
 	</BodyPartDef>
 	
 	<BodyPartDef>

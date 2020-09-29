@@ -11,4 +11,9 @@
     <label>claws</label>
   </bodyPartGroupDef>
 
+  <bodyPartGroupDef>
+    <defName>RT_Ovipositor</defName>
+    <label>ovipositors</label>
+  </bodyPartGroupDef>
+
 </Defs>

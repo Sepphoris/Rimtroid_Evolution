@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+
+	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_QueenMetroid</defName>
+		<label>Zeta Metroid</label>
+
+		<description>Sometimes considered extinct, Queen Metroids are remarkably rare, often taking generations before another is spotted. It is believed they were even rarer, down to the point where only one existed within the entire galaxy. Genetic expiriments and clonings have made them slightly more common universally, but it still may take generations between individual sightings. Little is publicly known about the Queen Metroid biology, and most information has been gathered from satellite observation; they are near-immortal, guarded by entire legions of lesser Metroids, and can easily form global infestations within weeks due to the seemingly unlimited ability to produce offspring without a mate. None have ever been captured alive, and it is unknown how exactly a Queen Metroid comes to evolve. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet. Due to the extreme conditions needed for a Queen to appear, these can never be obtained naturally.</description>
+		<statBases>
+
+
+	<!-- Internal Stats -->
+		  <ToxicSensitivity>0</ToxicSensitivity>
+		  <PsychicSensitivity>0</PsychicSensitivity>
+		  <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+		  <ArmorRating_Heat>0.9</ArmorRating_Heat>
+		  <MoveSpeed>5</MoveSpeed>
+		  <MarketValue>800</MarketValue>
+		  <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>200</ComfyTemperatureMax>
+		  <MeatAmount>320</MeatAmount>
+		<PainShockThreshold>1</PainShockThreshold>
+		</statBases>
+		<uiIconScale>1.35</uiIconScale>
+
+
+	<!-- Attacks -->
+		<tools>
+			<li>
+				<label>ram</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<armorPenetration>0.7</armorPenetration>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>bite</label>
+				<capacities>
+					<li>Stab</li>
+					<li>RT_Lifedrain</li>
+				</capacities>
+				<power>12</power>
+				<armorPenetration>0.7</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>16</power>
+				<armorPenetration>0.9</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>16</power>
+				<armorPenetration>0.9</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			 <li>
+				<label>tail</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>14</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>3.5</cooldownTime>
+				<linkedBodyPartsGroup>RT_Tail</linkedBodyPartsGroup>
+				<!-- <surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>25</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack> -->
+			</li>
+		</tools>
+		<comps>
+			<!--<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_LowRest</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_FasterRegen</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li> -->
+		</comps>
+
+	
+	<!-- Race stats -->
+		
+		<race>
+		  <bloodDef>Filth_BloodInsect</bloodDef>
+		  <herdAnimal>true</herdAnimal>
+		  <body>RT_QueenBody</body>
+		  <baseBodySize>6</baseBodySize>
+		  <baseHealthScale>3</baseHealthScale>
+		  <baseHungerRate>2.5</baseHungerRate>
+		  <hasGenders>false</hasGenders>
+			<hediffGiverSets Inherit="false">
+				<li>RT_Rimtroid_EvolutionGrowth</li>
+				<li>OrganicAgeless</li>
+				<!-- <li>RT_FeralStage</li> -->
+			</hediffGiverSets>
+		  <foodType>Kibble</foodType>
+		  <leatherDef>RT_MetroidChitin</leatherDef>
+		  <trainability>Advanced</trainability>
+		  <maxPreyBodySize>10</maxPreyBodySize>
+		  <gestationPeriodDays>30</gestationPeriodDays>
+		  <predator>true</predator>
+		  <!-- <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 1.7)</li>
+			  <li>(2.5, 0.7)</li>
+			  <li>(3, 0)</li>
+			</points>
+		  </litterSizeCurve> -->
+		  <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+		  <wildness>10</wildness>
+		  <lifeExpectancy>64000</lifeExpectancy>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.25</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.5</minAge>
+				<soundWounded>Pawn_Rodent_Wounded</soundWounded>
+				<soundDeath>Pawn_Rodent_Death</soundDeath>
+				<soundCall>Pawn_Rodent_Call</soundCall>
+				<soundAngry>Pawn_Rodent_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<ageGenerationCurve>
+			<points>
+				<li>(5000,0)</li>
+				<li>(7055,1)</li>
+				<li>(9570,3)</li>
+				<li>(10500,4)</li>
+				<li>(20750,10)</li>
+				<li>(34000,15)</li>
+				<li>(40800,5)</li>
+				<li>(55575,3)</li>
+				<li>(62000,0)</li>
+			</points>
+      </ageGenerationCurve>
+			<wildBiomes>
+			<BorealForest>0.2</BorealForest>
+			<Tundra>0.02</Tundra>
+			<ColdBog>0.02</ColdBog>
+			<TemperateSwamp>0.5</TemperateSwamp>
+			<TropicalSwamp>0.4</TropicalSwamp>
+			<TemperateForest>0.5</TemperateForest>
+			<AridShrubland>0.25</AridShrubland>
+			<Desert>0.2</Desert>
+            <TropicalRainforest>0.3</TropicalRainforest>
+			</wildBiomes>
+		</race>
+		<tradeTags>
+		  <li>AnimalExotic</li>
+		  <li>AnimalInsectSpace</li>
+		</tradeTags>
+	<modExtensions>
+      <li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>
+	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
+        <!--desicatedDef>huskdefnamehere</desicatedDef-->
+    </modExtensions>
+	</ThingDef>
+
+
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_QueenMetroid</defName>
+		<label>queen metroid</label>
+		<race>RT_QueenMetroid</race>
+		<combatPower>2400</combatPower>
+		<ecoSystemWeight>120</ecoSystemWeight>
+		<wildGroupSize>
+			<min>0</min>
+			<max>0</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>queen metroid</label>
+			<labelPlural>queen metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+			  <drawSize>14</drawSize>
+			  <shadowData>
+				<volume>(0.2, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.55)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
+			  <drawSize>14</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+		  	<label>queen metroid</label>
+			<labelPlural>queen metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+			  <drawSize>14</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+			  <drawSize>14</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<label>queen metroid</label>
+			<labelPlural>queen metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+			  <drawSize>14</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
+			  <drawSize>14</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+		<modExtensions>
+			<li Class="DD.VerbSettingExtension">
+				<verbControl>true</verbControl>
+				<showAbilityGizmos>true</showAbilityGizmos>
+			</li>
+			<li Class="DD.GainAbilityExtension">
+				<abilityDef>RT_QueenBeam</abilityDef>
+				<minLifeStage>AnimalBaby</minLifeStage>
+				<minAge>0</minAge>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+  
+  	<!-- Stunted Queen Metroid, which simply exists for consistency. -->
+
+</Defs>

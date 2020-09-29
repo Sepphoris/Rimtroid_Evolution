@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+
  <!-- Gamma Abilities -->
 
-	
   <AbilityDef>
 	<defName>RT_GammaElectricBolt</defName>
 	<label>Electric Bolt</label>
@@ -41,6 +41,7 @@
 		</li>
 	</comps>
  </AbilityDef>
+
 
 <!-- Zeta Abilities -->
 
@@ -82,6 +83,7 @@
 	</comps>
  </AbilityDef>
 
+
 <AbilityDef>
 	<defName>RT_ZetaAcidSpit</defName>
 	<label>Acid Spit</label>
@@ -120,6 +122,9 @@
 	</comps>
  </AbilityDef>
 
+
+<!-- Omega Abilities-->
+
     <AbilityDef>
 	<defName>RT_OmegaBeam</defName>
 	<label>Omega Fire Beam</label>
@@ -157,14 +162,17 @@
 		</li>
 	</comps>
  </AbilityDef>
+
+
+ <!-- Queen Abilities-->
  
    <AbilityDef>
 	<defName>RT_QueenBeam</defName>
-	<label>Queen Bolt</label>
-	<description>Fire an arc of electricity at a target</description>
+	<label>Queen Beam</label>
+	<description>Unleash a devastating beam of fire on a target</description>
 	<abilityClass>DD.Ability_AutoCastableVerb</abilityClass>
 	<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-	<cooldownTicksRange>1000~1400</cooldownTicksRange>
+	<cooldownTicksRange>1600~1800</cooldownTicksRange>
 	<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 	<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 	<verbProperties>
@@ -174,24 +182,24 @@
 		<accuracyMedium>0.50</accuracyMedium>
 		<accuracyLong>0.30</accuracyLong>
 		<hasStandardCommand>false</hasStandardCommand>
-		<defaultProjectile>RT_QueenBolt</defaultProjectile>
-		<warmupTime>0.5</warmupTime>
-		<range>35</range>
+		<defaultProjectile>RT_QueenBeam</defaultProjectile>
+		<warmupTime>2</warmupTime>
+		<range>45</range>
 		<burstShotCount>1</burstShotCount>
 		<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-		<minRange>1</minRange>
-		<soundCast>ElectricBoltShot</soundCast>
+		<minRange>3</minRange>
+		<soundCast>FireBeamShot</soundCast>
 		<muzzleFlashScale>1</muzzleFlashScale>
 	</verbProperties>
 	<comps>
 		<li Class="DD.AbilityCompProperties_AttackVerb">
 			<compClass>DD.AbilityComp_AttackVerb</compClass>
 			<autoUse>true</autoUse>
-			<gizmoOnText>Electric Bolt Enabled</gizmoOnText>
-			<gizmoOffText>Electric Bolt Disabled</gizmoOffText>
-			<gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
-			<gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
-			<gizmoDesc>Toggle Electric Bolt Usage (Ranged)</gizmoDesc>
+			<gizmoOnText>Fire Beam Enabled</gizmoOnText>
+			<gizmoOffText>Fire Beam Disabled</gizmoOffText>
+			<gizmoOnIconPath>AnimalProjectile/FireBeam1</gizmoOnIconPath>
+			<gizmoOffIconPath>AnimalProjectile/FireBeam1</gizmoOffIconPath>
+			<gizmoDesc>Toggle Fire Beam Usage (Ranged)</gizmoDesc>
 		</li>
 	</comps>
  </AbilityDef>

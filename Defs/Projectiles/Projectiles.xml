@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+	<!-- Parent classes for beam projectiles to work properly-->
+
+	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/GammaBolt</li>
+		</textures>
+	</ThingDef>
+
+		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/FireBeam1</li>
+		</textures>
+	</ThingDef>
+
+
+	<!--Gamma Beam Abilities-->
+
+	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
+		<defName>RT_GammaBolt</defName>
+		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
+		<label>Electic Bolt</label>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/GammaBolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>2</damageAmountBase>
+			<soundExplode>SoundBolt</soundExplode>
+		</projectile>
+        <beamWidth>4.5</beamWidth>
+        <lifetime>16</lifetime>
+	</ThingDef>
+
+
+	<!-- Zeta Beam Abilities -->
+
  	<ThingDef>
 		<defName>RT_ZetaFireball</defName>
 		<thingClass>DD.AnimalProjectile</thingClass>
@@ -24,6 +67,7 @@
 			<soundExplode>SoundFireball</soundExplode>
 		</projectile>
 	</ThingDef>
+
 
  	<ThingDef>
 		<defName>RT_ZetaAcid</defName>
@@ -49,41 +93,8 @@
 		</projectile>
 	</ThingDef>
 
-	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="Bullet_LaserGeneric">
-		<seam>0.25</seam>
-		<textures>
-			<li>AnimalProjectile/GammaBolt</li>
-		</textures>
-	</ThingDef>
 
-		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="Bullet_LaserGeneric">
-		<seam>0.25</seam>
-		<textures>
-			<li>AnimalProjectile/FireBeam1</li>
-		</textures>
-	</ThingDef>   
-	
-	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
-		<defName>RT_GammaBolt</defName>
-		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
-		<label>Electic Bolt</label>
-		<graphicData>
-			<shaderType>TransparentPostLight</shaderType>
-			<texPath>AnimalProjectile/GammaBolt</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<flyOverhead>false</flyOverhead>
-			<speed>10000</speed>
-			<damageDef>Flame</damageDef>
-			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>2</damageAmountBase>
-			<soundExplode>SoundBolt</soundExplode>
-		</projectile>
-        <beamWidth>4.5</beamWidth>
-        <lifetime>16</lifetime>
-	</ThingDef>
-	
+	<!-- Omega Beam Abilities -->
 	
 	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_OmegaBeam</defName>
@@ -107,8 +118,37 @@
 		<fireWidth>0</fireWidth>
 		<spawnFire>true</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
-		<fireDistanceFromCaster>1</fireDistanceFromCaster>
+		<fireDistanceFromCaster>2</fireDistanceFromCaster>
         <lifetime>150</lifetime>
+	</ThingDef>
+
+
+	<!-- Queen Beam Abilities-->
+
+	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
+		<defName>RT_QueenBeam</defName>
+		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
+		<label>Firebeam</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>4</damageAmountBase>
+			<soundExplode>SoundBolt</soundExplode>
+		</projectile>
+        <beamWidth>4</beamWidth>
+		<fireWidth>3</fireWidth>
+		<spawnFire>true</spawnFire>
+		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>2</fireDistanceFromCaster>
+        <lifetime>360</lifetime>
 	</ThingDef>
 
 </Defs>
