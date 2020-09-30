@@ -27,4 +27,34 @@
       <wildOrder>1</wildOrder>
     </plant>
   </ThingDef>
+  
+    <ThingDef ParentName="TrapIEDBase">
+    <defName>RT_TrapIED_Smoke</defName>
+    <label>IED Smoke trap</label>
+    <description>A pair of smoke shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDSmoke</texPath>
+    </graphicData>
+    <costList>
+      <Shell_Smoke>2</Shell_Smoke>
+    </costList>
+    <designationHotKey>Misc10</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>8.6</explosiveRadius>
+        <explosiveDamageType>Smoke</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+    <specialDisplayRadius>8.6</specialDisplayRadius>
+  </ThingDef>
 </Defs>

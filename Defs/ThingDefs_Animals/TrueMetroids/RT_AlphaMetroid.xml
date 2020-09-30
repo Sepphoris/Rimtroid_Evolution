@@ -3,30 +3,30 @@
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
 	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
-	
+
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_AlphaMetroid</defName>
 		<label>Alpha Metroid</label>
 
 		<description>The Alpha Metroid, although being inferior to nearly any other stage (including the larvae stage), is considerably the most drastic step in a Metroid's lifespan. The extreme changes now have it resemble an arthropod, rather than the jellyfish-like form it appeared as in previous stages. Alpha Metroids are quite frail and slow, making them relatively easy to deal with; however their weakness for colder temperatures has decreased significantly; and, rather than only physical attacks, it is now capable of plasma-based offenses that can prove to be life-threatening. Furthermore, any chance of domestication has long passed, making this - and all future stages - simply too wild to tame.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		<statBases>
-		
-	<!-- Internal Stats -->
-		  <ToxicSensitivity>0</ToxicSensitivity>
-		  <PsychicSensitivity>0</PsychicSensitivity>
-		  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-		  <ArmorRating_Heat>0.8</ArmorRating_Heat>
-		  <MoveSpeed>2</MoveSpeed>
-		  <MarketValue>800</MarketValue>
-		  <ComfyTemperatureMin>6</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
-		  <MeatAmount>20</MeatAmount>
-		<PainShockThreshold>0.85</PainShockThreshold>
+
+			<!-- Internal Stats -->
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.8</ArmorRating_Heat>
+			<MoveSpeed>2</MoveSpeed>
+			<MarketValue>800</MarketValue>
+			<ComfyTemperatureMin>6</ComfyTemperatureMin>
+			<ComfyTemperatureMax>160</ComfyTemperatureMax>
+			<MeatAmount>20</MeatAmount>
+			<PainShockThreshold>0.85</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
-		
-	<!-- Attacks -->
+
+		<!-- Attacks -->
 		<tools>
 			<li>
 				<label>ram</label>
@@ -67,6 +67,14 @@
 			</li>
 		</tools>
 		<comps>
+			<li Class="RT_Rimtroid.CompProperties_SpawnerAdv">
+				<thingToSpawn>RT_TrapIED_Smoke</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30~60</spawnIntervalRange>
+				<maxThingCount>8</maxThingCount>
+				<saveKeysPrefix>larvae</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -76,29 +84,29 @@
 				<hediffseverity>1</hediffseverity>
 			</li> -->
 		</comps>
-		
-	<!-- Race stats -->
-		
+
+		<!-- Race stats -->
+
 		<race>
-		  <bloodDef>Filth_BloodInsect</bloodDef>
-		  <herdAnimal>true</herdAnimal>
-		  <body>RT_AlphaBody</body>
-		  <baseBodySize>1</baseBodySize>
-		  <baseHealthScale>1.2</baseHealthScale>
-		  <baseHungerRate>1</baseHungerRate>
-		  <hasGenders>false</hasGenders>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<herdAnimal>true</herdAnimal>
+			<body>RT_AlphaBody</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1.2</baseHealthScale>
+			<baseHungerRate>1</baseHungerRate>
+			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
 				<li>RT_Rimtroid_EvolutionGrowth</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
-		  <foodType>Kibble</foodType>
-		  <leatherDef>RT_MetroidChitin</leatherDef>
-		  <trainability>Advanced</trainability>
-		  <maxPreyBodySize>3.9</maxPreyBodySize>
-		  <gestationPeriodDays>30</gestationPeriodDays>
-		  <predator>true</predator>
-		  <!-- <litterSizeCurve>
+			<foodType>Kibble</foodType>
+			<leatherDef>RT_MetroidChitin</leatherDef>
+			<trainability>Advanced</trainability>
+			<maxPreyBodySize>3.9</maxPreyBodySize>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<predator>true</predator>
+			<!-- <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
@@ -107,63 +115,63 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
-		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-		  <wildness>10</wildness>
-		  <lifeExpectancy>950</lifeExpectancy>
-		  <lifeStageAges>
-			<li>
-			  <def>AnimalBaby</def>
-			  <minAge>0</minAge>
-			</li>
-			<li>
-			  <def>AnimalJuvenile</def>
-			  <minAge>0.25</minAge>
-			</li>
-			<li>
-			  <def>AnimalAdult</def>
-			  <minAge>0.5</minAge>
-				<soundWounded>Pawn_Rodent_Wounded</soundWounded>
-				<soundDeath>Pawn_Rodent_Death</soundDeath>
-				<soundCall>Pawn_Rodent_Call</soundCall>
-				<soundAngry>Pawn_Rodent_Angry</soundAngry>
-			</li>
-		  </lifeStageAges>
-		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-		<ageGenerationCurve>
-			<points>
-				<li>(80,0)</li>
-				<li>(81,5)</li>
-				<li>(105,10)</li>
-				<li>(130,15)</li>
-				<li>(155,5)</li>
-				<li>(165,2)</li>
-				<li>(170,0)</li>
-			</points>
-      </ageGenerationCurve>
+			<manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+			<wildness>10</wildness>
+			<lifeExpectancy>950</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.5</minAge>
+					<soundWounded>Pawn_Rodent_Wounded</soundWounded>
+					<soundDeath>Pawn_Rodent_Death</soundDeath>
+					<soundCall>Pawn_Rodent_Call</soundCall>
+					<soundAngry>Pawn_Rodent_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<ageGenerationCurve>
+				<points>
+					<li>(80,0)</li>
+					<li>(81,5)</li>
+					<li>(105,10)</li>
+					<li>(130,15)</li>
+					<li>(155,5)</li>
+					<li>(165,2)</li>
+					<li>(170,0)</li>
+				</points>
+			</ageGenerationCurve>
 			<wildBiomes>
-			<BorealForest>0.2</BorealForest>
-			<Tundra>0.02</Tundra>
-			<ColdBog>0.02</ColdBog>
-			<TemperateSwamp>0.5</TemperateSwamp>
-			<TropicalSwamp>0.4</TropicalSwamp>
-			<TemperateForest>0.5</TemperateForest>
-			<AridShrubland>0.25</AridShrubland>
-			<Desert>0.2</Desert>
-            <TropicalRainforest>0.3</TropicalRainforest>
+				<BorealForest>0.2</BorealForest>
+				<Tundra>0.02</Tundra>
+				<ColdBog>0.02</ColdBog>
+				<TemperateSwamp>0.5</TemperateSwamp>
+				<TropicalSwamp>0.4</TropicalSwamp>
+				<TemperateForest>0.5</TemperateForest>
+				<AridShrubland>0.25</AridShrubland>
+				<Desert>0.2</Desert>
+				<TropicalRainforest>0.3</TropicalRainforest>
 			</wildBiomes>
 		</race>
 		<tradeTags>
-		  <li>AnimalExotic</li>
-		  <li>AnimalInsectSpace</li>
+			<li>AnimalExotic</li>
+			<li>AnimalInsectSpace</li>
 		</tradeTags>
-	<modExtensions>
-      <li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>
-	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
-        <!--desicatedDef>huskdefnamehere</desicatedDef-->
-    </modExtensions>
+		<modExtensions>
+			<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>
+			<li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
+			<!--desicatedDef>huskdefnamehere</desicatedDef-->
+		</modExtensions>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">
@@ -177,57 +185,57 @@
 			<max>4</max>
 		</wildGroupSize>
 		<lifeStages>
-		  <li>
-			<label>alpha metroid</label>
-			<labelPlural>alpha metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.2, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.55)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
-			  <drawSize>1.2</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-		  	<label>alpha metroid</label>
-			<labelPlural>alpha metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>alpha metroid</label>
-			<labelPlural>alpha metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
-			  <drawSize>1.4</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
-			  <drawSize>1.4</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
+			<li>
+				<label>alpha metroid</label>
+				<labelPlural>alpha metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.55)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>alpha metroid</label>
+				<labelPlural>alpha metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>alpha metroid</label>
+				<labelPlural>alpha metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
-  
-  	<!-- Stunted Alpha Metroid, which simply exists for consistency. -->
+
+	<!-- Stunted Alpha Metroid, which simply exists for consistency. -->
 
 </Defs>

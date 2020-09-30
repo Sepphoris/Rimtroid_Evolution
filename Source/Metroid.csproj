@@ -306,6 +306,7 @@
     <Compile Include="AgeTools.cs" />
     <Compile Include="CompFloating.cs" />
     <Compile Include="CompProperties_Floating.cs" />
+    <Compile Include="CompSpawnerAdv.cs" />
     <Compile Include="CorpseAvoidance.cs" />
     <Compile Include="CorpseDesiccation.cs" />
     <Compile Include="DisableTaming.cs" />
