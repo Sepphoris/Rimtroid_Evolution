@@ -70,8 +70,8 @@
 			<li Class="RT_Rimtroid.CompProperties_SpawnerAdv">
 				<thingToSpawn>RT_TrapIED_Smoke</thingToSpawn>
 				<spawnCount>1</spawnCount>
-				<spawnIntervalRange>30~60</spawnIntervalRange>
-				<maxThingCount>8</maxThingCount>
+				<spawnIntervalRange>460~600</spawnIntervalRange>
+				<maxThingCount>3</maxThingCount>
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
 			</li>

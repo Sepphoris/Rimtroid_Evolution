@@ -94,7 +94,7 @@
 			<li Class="RT_Rimtroid.CompProperties_SpawnerAdv">
 				<pawnKindToSpawn>RT_MetroidLarvae</pawnKindToSpawn>
 				<spawnCount>2</spawnCount>
-				<spawnIntervalRange>30~60</spawnIntervalRange>
+				<spawnIntervalRange>900~1500</spawnIntervalRange>
 				<maxPawnCount>8</maxPawnCount>
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
