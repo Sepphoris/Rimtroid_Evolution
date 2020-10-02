@@ -23,6 +23,61 @@ namespace RT_Rimtroid
         public ThingDef RT_DesiccatedDef;
     }
 
+
+    [HarmonyPatch(typeof(MentalStateHandler), "TryStartMentalState")]
+    public static class RT_TryStartMentalState_Patch
+    {
+        public static void Postfix(Pawn ___pawn, bool __result, MentalStateDef stateDef, string reason = null, bool forceWake = false, bool causedByMood = false, Pawn otherPawn = null, bool transitionSilently = false)
+        {
+            if (__result && ___pawn is Queen queen && stateDef.IsAggro)
+            {
+                foreach (var pawn in queen.Map.mapPawns.AllPawns)
+                {
+                    if (pawn.Faction != Faction.OfPlayer && !pawn.InAggroMentalState && pawn.IsMetroid())
+                    {
+                        pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, otherPawn: otherPawn, forceWake: true);
+                    }
+                }
+            }
+        }
+    }
+
+
+    [HarmonyPatch(typeof(Need_Food), "NeedInterval")]
+    public static class RT_NeedInterval_Patch
+    {
+        public static void Postfix(Need_Food __instance, Pawn ___pawn)
+        {
+            var options = ___pawn.kindDef.GetModExtension<HungerBerserkOptions>();
+            if (options != null)
+            {
+                var key = options.hungerBerserkChanges.Keys.MaxBy(x => x >= __instance.CurLevel);
+                var berserkChance = options.hungerBerserkChanges[key];
+                if (berserkChance > 0)
+                {
+                    Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevel, true);
+                    if (!___pawn.InMentalState && Rand.Chance(berserkChance))
+                    {
+                        Log.Message(___pawn + " gets berserk state", true);
+                        if (___pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forceWake: true))
+                        {
+                            if (___pawn.Faction == Faction.OfPlayer && Rand.Chance(options.chanceToBecomeWildIfBerserkAndTamed))
+                            {
+                                ___pawn.SetFaction(null);
+                            }
+                        }
+                    }
+                }
+                else if (___pawn.mindState.mentalStateHandler.CurStateDef == MentalStateDefOf.Berserk)
+                {
+                    Log.Message(___pawn + " recovers from berserk state", true);
+                    ___pawn.MentalState.RecoverFromState();
+                }
+                Log.Message(___pawn + " - " + __instance.CurLevel + " - " + key, true);
+            }
+        }
+    }
+
     [HarmonyPatch(typeof(Pawn), "Kill")]
     public static class RT_Desiccator_Pawn_Kill_Patch
     {

@@ -1,60 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="PlantBase">
-    <defName>RT_Dummy_Grass</defName>
-    <label>grass</label>
-    <description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
-    <statBases>
-      <MaxHitPoints>85</MaxHitPoints>
-      <Flammability>1.3</Flammability>
-      <Nutrition>0.25</Nutrition>
-    </statBases>
-    <graphicData>
-      <texPath>Things/Plant/Grass</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
-    </graphicData>
-    <hideAtSnowDepth>0.5</hideAtSnowDepth>
-    <ingestible />
-    <plant>
-      <fertilityMin>0.05</fertilityMin>
-      <fertilitySensitivity>0.3</fertilitySensitivity>
-      <growDays>2.5</growDays>
-      <leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath>
-      <harvestWork>40</harvestWork>
-      <maxMeshCount>9</maxMeshCount>
-      <visualSizeRange>0~0</visualSizeRange>
-      <topWindExposure>0</topWindExposure>
-      <wildOrder>1</wildOrder>
-    </plant>
-  </ThingDef>
-  
-    <ThingDef ParentName="TrapIEDBase">
-    <defName>RT_TrapIED_Smoke</defName>
-    <label>IED Smoke trap</label>
-    <description>A pair of smoke shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
-    <graphicData>
-      <texPath>Things/Building/Security/IEDSmoke</texPath>
-    </graphicData>
-    <costList>
-      <Shell_Smoke>2</Shell_Smoke>
-    </costList>
-    <designationHotKey>Misc10</designationHotKey>
-    <comps>
-      <li Class="CompProperties_Explosive">
-        <explosiveRadius>8.6</explosiveRadius>
-        <explosiveDamageType>Smoke</explosiveDamageType>
-        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
-        <postExplosionSpawnThingDef>Gas_Smoke</postExplosionSpawnThingDef>
-        <postExplosionSpawnChance>1</postExplosionSpawnChance>
-        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
-        <wickTicks>15</wickTicks>
-        <startWickOnDamageTaken>
-          <li>Bullet</li>
-          <li>Arrow</li>
-          <li>ArrowHighVelocity</li>
-        </startWickOnDamageTaken>
-      </li>
-    </comps>
-    <specialDisplayRadius>8.6</specialDisplayRadius>
-  </ThingDef>
+	<ThingDef ParentName="PlantBase">
+		<defName>RT_Dummy_Grass</defName>
+		<label>grass</label>
+		<description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Flammability>1.3</Flammability>
+			<Nutrition>0.25</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/Grass</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<hideAtSnowDepth>0.5</hideAtSnowDepth>
+		<ingestible />
+		<plant>
+			<fertilityMin>0.05</fertilityMin>
+			<fertilitySensitivity>0.3</fertilitySensitivity>
+			<growDays>2.5</growDays>
+			<leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath>
+			<harvestWork>40</harvestWork>
+			<maxMeshCount>9</maxMeshCount>
+			<visualSizeRange>0~0</visualSizeRange>
+			<topWindExposure>0</topWindExposure>
+			<wildOrder>1</wildOrder>
+		</plant>
+	</ThingDef>
+
+	<ThingDef Name="RT_Traps" ParentName="BuildingBase" Abstract="True">
+	    <thingClass>RT_Rimtroid.Alpha_ProximityTrap</thingClass>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0.1,0,0.8,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconOffset>(0,-0.14)</uiIconOffset>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawerType>RealtimeOnly</drawerType>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<Mass>2</Mass>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>1400</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Beauty>-4</Beauty>
+			<TrapSpringChance>1.0</TrapSpringChance>
+		</statBases>
+		<building>
+			<isTrap>true</isTrap>
+			<trapPeacefulWildAnimalsSpringChanceFactor>0.25</trapPeacefulWildAnimalsSpringChanceFactor>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RT_Traps">
+		<defName>RT_Alpha_ProximityTrap</defName>
+		<label>Alpha trap</label>
+		<description>A pair of smoke shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/AlphaBomb</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>11</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>15</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+		</comps>
+		<specialDisplayRadius>10</specialDisplayRadius>
+		<modExtensions>
+			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
+				<explosionTimeout>6000</explosionTimeout>
+				<!-- ticks -->
+				<proximityRange>5</proximityRange> 
+			</li>
+		</modExtensions>
+	</ThingDef>
 </Defs>

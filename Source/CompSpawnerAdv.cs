@@ -8,6 +8,8 @@ namespace RT_Rimtroid
 	{
 		public ThingDef thingToSpawn;
 
+		public bool spawnInPlace;
+
 		public PawnKindDef pawnKindToSpawn;
 
 		public int maxPawnCount;
@@ -93,7 +95,6 @@ namespace RT_Rimtroid
 
 		private void CheckShouldSpawn()
 		{
-			Log.Message("ticksUntilSpawn: " + ticksUntilSpawn, true);
 			if (ticksUntilSpawn <= 0)
 			{
 				TryDoSpawn();
@@ -176,39 +177,49 @@ namespace RT_Rimtroid
 					return true;
 				}
 			}
-			else if (PropsSpawner.thingToSpawn != null && TryFindSpawnCell(parent, PropsSpawner.thingToSpawn, PropsSpawner.spawnCount, out IntVec3 result))
+			else if (PropsSpawner.thingToSpawn != null)
             {
-				if (PropsSpawner.maxThingCount > 0 && !(this.SpawnedThings >= PropsSpawner.maxThingCount) || PropsSpawner.maxThingCount == 0)
-				{
-					Thing thing = ThingMaker.MakeThing(PropsSpawner.thingToSpawn);
-					thing.stackCount = PropsSpawner.spawnCount;
-					if (thing == null)
+				IntVec3 result = IntVec3.Invalid;
+				if (PropsSpawner.spawnInPlace)
+                {
+					result = this.parent.Position;
+                }
+				else
+                {
+					TryFindSpawnCell(parent, PropsSpawner.thingToSpawn, PropsSpawner.spawnCount, out result);
+				}
+				if (result.IsValid)
+                {
+					if (PropsSpawner.maxThingCount > 0 && !(this.SpawnedThings >= PropsSpawner.maxThingCount) || PropsSpawner.maxThingCount == 0)
 					{
-						Log.Error("Could not spawn anything for " + parent);
-					}
-					if (PropsSpawner.inheritFaction && thing.Faction != parent.Faction)
-					{
-						thing.SetFaction(parent.Faction);
-					}
-					GenPlace.TryPlaceThing(thing, result, parent.Map, ThingPlaceMode.Direct, out Thing lastResultingThing);
-					if (PropsSpawner.spawnForbidden)
-					{
-						lastResultingThing.SetForbidden(value: true);
-					}
-					if (PropsSpawner.showMessageIfOwned && parent.Faction == Faction.OfPlayer)
-					{
-						Messages.Message("MessageCompSpawnerSpawnedItem".Translate(PropsSpawner.thingToSpawn.LabelCap), thing, MessageTypeDefOf.PositiveEvent);
-					}
-					if (PropsSpawner.maxThingCount > 0)
-					{
-						if (this.spawnedThings == null)
-							this.spawnedThings = new List<Thing>();
-						this.spawnedThings.Add(thing);
+						Thing thing = ThingMaker.MakeThing(PropsSpawner.thingToSpawn);
+						thing.stackCount = PropsSpawner.spawnCount;
+						if (thing == null)
+						{
+							Log.Error("Could not spawn anything for " + parent);
+						}
+						if (PropsSpawner.inheritFaction && thing.Faction != parent.Faction)
+						{
+							thing.SetFaction(parent.Faction);
+						}
+						GenPlace.TryPlaceThing(thing, result, parent.Map, ThingPlaceMode.Direct, out Thing lastResultingThing);
+						if (PropsSpawner.spawnForbidden)
+						{
+							lastResultingThing.SetForbidden(value: true);
+						}
+						if (PropsSpawner.showMessageIfOwned && parent.Faction == Faction.OfPlayer)
+						{
+							Messages.Message("MessageCompSpawnerSpawnedItem".Translate(PropsSpawner.thingToSpawn.LabelCap), thing, MessageTypeDefOf.PositiveEvent);
+						}
+						if (PropsSpawner.maxThingCount > 0)
+						{
+							if (this.spawnedThings == null)
+								this.spawnedThings = new List<Thing>();
+							this.spawnedThings.Add(thing);
+						}
 					}
 					return true;
 				}
-
-
 			}
 			return false;
 		}

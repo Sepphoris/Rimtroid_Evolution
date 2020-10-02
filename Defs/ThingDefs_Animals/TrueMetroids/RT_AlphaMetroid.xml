@@ -68,9 +68,10 @@
 		</tools>
 		<comps>
 			<li Class="RT_Rimtroid.CompProperties_SpawnerAdv">
-				<thingToSpawn>RT_TrapIED_Smoke</thingToSpawn>
+				<thingToSpawn>RT_Alpha_ProximityTrap</thingToSpawn>
+				<spawnInPlace>true</spawnInPlace>
 				<spawnCount>1</spawnCount>
-				<spawnIntervalRange>30~60</spawnIntervalRange>
+				<spawnIntervalRange>300~600</spawnIntervalRange>
 				<maxThingCount>8</maxThingCount>
 				<saveKeysPrefix>trap_smoke</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
@@ -234,6 +235,34 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
+		<modExtensions>
+			<li Class="RT_RimTroid.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.25</key>
+						<value>0.2</value>
+					</li>
+					<li>
+						<key>0.40</key>
+						<value>0.15</value>
+					</li>
+					<li>
+						<key>0.50</key>
+						<value>0.1</value>
+					</li>
+					<li>
+						<key>0.60</key>
+						<value>0.05</value>
+					</li>
+					<li>
+						<key>0.75</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>0.5</chanceToBecomeWildIfBerserkAndTamed>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 
 	<!-- Stunted Alpha Metroid, which simply exists for consistency. -->

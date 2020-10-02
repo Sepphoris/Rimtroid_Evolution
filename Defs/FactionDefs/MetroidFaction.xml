@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef>
+		<defName>Genny</defName>
+		<label>Alien creatures</label>
+		<description>Alien lairs 2.</description>
+		<pawnsPlural>gennies</pawnsPlural>
+		<pawnSingular>genny</pawnSingular>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<permanentEnemy>true</permanentEnemy>
+		<settlementGenerationWeight>0.3</settlementGenerationWeight>
+		<settlementNameMaker>NamerFactionBaseAliens</settlementNameMaker>
+		<maxCountAtGameStart>5</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>false</canSiege>
+		<fixedName>Alien creatures</fixedName>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 0)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>false</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>false</canUseAvoidGrid>
+		<techLevel>Spacer</techLevel>
+		<factionIconPath>WorldIcons/Site/AlienLairs</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<!--
+		<colorSpectrum>
+			<li>(150,150,150)</li>
+		</colorSpectrum>
+		-->
+
+		<!-- for mutants only -->
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Outlander</li>
+				</categories>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFilters>
+		<geneticVariance>0.8</geneticVariance>
+		<hairTags>
+			<li>Rural</li>
+		</hairTags>
+		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<Drifter>10</Drifter>
+					<Thrasher>3</Thrasher>
+					<Scavenger>10</Scavenger>
+					<Pirate>10</Pirate>
+					<Grenadier_EMP>0.25</Grenadier_EMP>
+					<Grenadier_Smoke>0.25</Grenadier_Smoke>
+					<Grenadier_Destructive>2</Grenadier_Destructive>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Heavy>6</Mercenary_Heavy>
+					<Mercenary_Slasher>3</Mercenary_Slasher>
+					<Mercenary_Sniper>7</Mercenary_Sniper>
+					<Mercenary_Elite>10</Mercenary_Elite>
+					<PirateBoss>5</PirateBoss>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, melee-only -->
+				<kindDef>Combat</kindDef>
+				<commonality>30</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<Thrasher>10</Thrasher>
+					<Mercenary_Slasher>10</Mercenary_Slasher>
+					<PirateBoss>5</PirateBoss>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged only -->
+				<kindDef>Combat</kindDef>
+				<commonality>20</commonality>
+				<options>
+					<Scavenger>10</Scavenger>
+					<Pirate>10</Pirate>
+					<Grenadier_EMP>0.25</Grenadier_EMP>
+					<Grenadier_Smoke>0.25</Grenadier_Smoke>
+					<Grenadier_Destructive>2</Grenadier_Destructive>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Heavy>6</Mercenary_Heavy>
+					<Mercenary_Sniper>7</Mercenary_Sniper>
+					<Mercenary_Elite>10</Mercenary_Elite>
+					<PirateBoss>5</PirateBoss>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, explosives with ranged mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<Grenadier_EMP>0.5</Grenadier_EMP>
+					<Grenadier_Smoke>0.5</Grenadier_Smoke>
+					<Grenadier_Destructive>10</Grenadier_Destructive>
+					<Mercenary_Gunner>1</Mercenary_Gunner>
+					<Mercenary_Heavy>10</Mercenary_Heavy>
+					<Mercenary_Elite>1</Mercenary_Elite>
+					<PirateBoss>1</PirateBoss>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, snipers only -->
+				<kindDef>Combat</kindDef>
+				<commonality>10</commonality>
+				<options>
+					<Mercenary_Sniper>10</Mercenary_Sniper>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, drifters only (very rare) -->
+				<kindDef>Combat</kindDef>
+				<commonality>2.5</commonality>
+				<maxTotalPoints>1000</maxTotalPoints>
+				<options>
+					<Drifter>10</Drifter>
+				</options>
+			</li>
+			<li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+				<options>
+					<Thrasher>3</Thrasher>
+					<Pirate>10</Pirate>
+					<Grenadier_Destructive>2</Grenadier_Destructive>
+					<Mercenary_Slasher>3</Mercenary_Slasher>
+					<Mercenary_Sniper>10</Mercenary_Sniper>
+					<Mercenary_Gunner>10</Mercenary_Gunner>
+					<Mercenary_Elite>10</Mercenary_Elite>
+					<PirateBoss>10</PirateBoss>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef> 
+</Defs>

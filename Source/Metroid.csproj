@@ -304,8 +304,12 @@
   <ItemGroup>
     <Compile Include="AgeStage.cs" />
     <Compile Include="AgeTools.cs" />
+    <Compile Include="Queen.cs" />
+    <Compile Include="HungerBerserkOptions.cs" />
+    <Compile Include="Alpha_ProximityTrapProperties.cs" />
     <Compile Include="CompFloating.cs" />
     <Compile Include="CompProperties_Floating.cs" />
+    <Compile Include="Alpha_ProximityTrap.cs" />
     <Compile Include="CompSpawnerAdv.cs" />
     <Compile Include="CorpseAvoidance.cs" />
     <Compile Include="CorpseDesiccation.cs" />
@@ -342,6 +346,8 @@
     <Compile Include="FW\Verb\Verb_Shoot_Cooldown.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
     <Compile Include="Harmony\Patches.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="RT_DefOf.cs" />
     <Compile Include="Metamorphosis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RimLaser\Building_LaserGun.cs" />

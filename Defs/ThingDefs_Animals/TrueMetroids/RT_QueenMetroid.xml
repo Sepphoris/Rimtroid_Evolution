@@ -7,7 +7,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_QueenMetroid</defName>
 		<label>Zeta Metroid</label>
-
+		<thingClass>RT_Rimtroid.Queen</thingClass>
 		<description>Sometimes considered extinct, Queen Metroids are remarkably rare, often taking generations before another is spotted. It is believed they were even rarer, down to the point where only one existed within the entire galaxy. Genetic expiriments and clonings have made them slightly more common universally, but it still may take generations between individual sightings. Little is publicly known about the Queen Metroid biology, and most information has been gathered from satellite observation; they are near-immortal, guarded by entire legions of lesser Metroids, and can easily form global infestations within weeks due to the seemingly unlimited ability to produce offspring without a mate. None have ever been captured alive, and it is unknown how exactly a Queen Metroid comes to evolve. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet. Due to the extreme conditions needed for a Queen to appear, these can never be obtained naturally.</description>
 		<statBases>
 
@@ -272,6 +272,32 @@
 				<abilityDef>RT_QueenBeam</abilityDef>
 				<minLifeStage>AnimalBaby</minLifeStage>
 				<minAge>0</minAge>
+			</li>
+			<li Class="RT_RimTroid.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.25</key>
+						<value>0.2</value>
+					</li>
+					<li>
+						<key>0.40</key>
+						<value>0.15</value>
+					</li>
+					<li>
+						<key>0.50</key>
+						<value>0.1</value>
+					</li>
+					<li>
+						<key>0.60</key>
+						<value>0.05</value>
+					</li>
+					<li>
+						<key>0.75</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>0.5</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
