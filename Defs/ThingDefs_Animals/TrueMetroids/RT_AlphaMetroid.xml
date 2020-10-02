@@ -73,7 +73,7 @@
 				<spawnCount>1</spawnCount>
 				<spawnIntervalRange>300~600</spawnIntervalRange>
 				<maxThingCount>8</maxThingCount>
-				<saveKeysPrefix>trap_smoke</saveKeysPrefix>
+				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
