@@ -72,7 +72,7 @@
 				<spawnInPlace>true</spawnInPlace>
 				<spawnCount>1</spawnCount>
 				<spawnIntervalRange>300~600</spawnIntervalRange>
-				<maxThingCount>8</maxThingCount>
+				<maxThingCount>3</maxThingCount>
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
 			</li>

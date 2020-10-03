@@ -289,11 +289,11 @@
 						<value>0.1</value>
 					</li>
 					<li>
-						<key>0.40</key>
+						<key>0.30</key>
 						<value>0.05</value>
 					</li>
 					<li>
-						<key>0.50</key>
+						<key>0.40</key>
 						<value>0</value>
 					</li>
 				</hungerBerserkChanges>
