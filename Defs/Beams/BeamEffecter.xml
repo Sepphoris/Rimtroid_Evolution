@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <EffecterDef Name="RTBeamImpact">
+    <defName>RTBeamImpact</defName>
+    <offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
+    <positionRadius>0.01</positionRadius>
+  </EffecterDef>
+  
+  <EffecterDef Name="RTBeamLivingImpact">
+    <defName>RTBeamLivingImpact</defName>
+    <offsetTowardsTarget><min>0.0</min><max>0.0</max></offsetTowardsTarget>
+    <positionRadius>0.3</positionRadius>
+  </EffecterDef>
+
+</Defs>

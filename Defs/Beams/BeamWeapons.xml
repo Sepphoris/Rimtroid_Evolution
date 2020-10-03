@@ -26,8 +26,8 @@
 			<drawSize>1.5</drawSize>
 		</graphicData>
 
-		<explosionEffect>RimlaserLaserImpact</explosionEffect>
-		<hitLivingEffect>RimlaserLaserLivingImpact</hitLivingEffect>
+		<explosionEffect>RTBeamImpact</explosionEffect>
+		<hitLivingEffect>RTBeamLivingImpact</hitLivingEffect>
 
 		<projectile>
 			<damageDef>Bomb</damageDef>

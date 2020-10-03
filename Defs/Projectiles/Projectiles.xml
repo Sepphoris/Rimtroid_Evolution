@@ -103,7 +103,7 @@
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
-			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<texPath>AnimalProjectile/FireBeam1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
@@ -132,7 +132,7 @@
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
-			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<texPath>AnimalProjectile/FireBeam1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
