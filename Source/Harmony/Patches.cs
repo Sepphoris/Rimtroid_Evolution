@@ -51,11 +51,11 @@ namespace RT_Rimtroid
             var options = ___pawn.kindDef.GetModExtension<HungerBerserkOptions>();
             if (options != null)
             {
-                var key = options.hungerBerserkChanges.Keys.MaxBy(x => x >= __instance.CurInstantLevelPercentage);
+                var key = options.hungerBerserkChanges.Keys.MaxBy(x => x >= __instance.CurLevelPercentage);
                 var berserkChance = options.hungerBerserkChanges[key];
                 if (berserkChance > 0)
                 {
-                    Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurInstantLevelPercentage, true);
+                    Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevelPercentage, true);
                     if (!___pawn.InMentalState && Rand.Chance(berserkChance))
                     {
                         Log.Message(___pawn + " gets berserk state", true);
@@ -73,7 +73,7 @@ namespace RT_Rimtroid
                     Log.Message(___pawn + " recovers from berserk state", true);
                     ___pawn.MentalState.RecoverFromState();
                 }
-                Log.Message(___pawn + " - " + __instance.CurInstantLevelPercentage + " - " + key, true);
+                Log.Message(___pawn + " - " + __instance.CurLevelPercentage + " - " + key, true);
             }
         }
     }
