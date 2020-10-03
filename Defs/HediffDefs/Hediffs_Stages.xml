@@ -59,7 +59,7 @@
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>81</Age>
+				<Age>80</Age>
 				<Kind>RT_AlphaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -110,7 +110,7 @@
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>181</Age>
+				<Age>200</Age>
 				<Kind>RT_GammaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -161,7 +161,7 @@
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>351</Age>
+				<Age>450</Age>
 				<Kind>RT_ZetaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -212,7 +212,7 @@
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>751</Age>
+				<Age>900</Age>
 				<Kind>RT_OmegaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -236,7 +236,7 @@
     <defName>RT_OmegaState</defName>
     <label>Evolution (Omega)</label>
     <labelNoun>an Omega Metroid</labelNoun>
-    <description>The final stage for all "True" Metroids, save for the extreme few that become Queens. The back legs of the Metroid are now strong enough to hold it upright, allowing it to use it's forward limbs as powerful arms for manipulation and attacking. Be wary of an Omega in combat; they tend to use their fiery attacks quite often, and don't care much about collateral damage.</description>
+    <description>The final stage for all "True" Metroids, save for the extreme few that become Queens. The back legs of the Metroid are easily strong enough to hold it upright, allowing it to use it's forward limbs as powerful arms for manipulation and attacking. Be wary of an Omega in combat; they tend to use their fiery attacks quite often, and don't care much about collateral damage.</description>
     <stages>
       <li>
 		<hungerRateFactorOffset>0.6</hungerRateFactorOffset>
@@ -263,60 +263,42 @@
     </stages>
 </HediffDef>
 
-	<!-- <HediffDef ParentName="RT_MetroidStagesBad">
-		<defName>RT_FeralStageBase</defName>
-		<label>Feral</label>
-		<labelNoun>Feral</labelNoun>
-		<description>A Metroid that has lost any possibility of external imprinting, and thus cannot be tamed in any way.</description>
-		<hediffClass>HediffWithComps</hediffClass>
-		<initialSeverity>1</initialSeverity>
-		<minSeverity>1</minSeverity>
-		<comps>
-			<li>
-				<compClass>RT_Rimtroid.DisableTaming</compClass>
-			</li>
-		</comps>
-	</HediffDef> -->
-	<!-- <comps>
-      <li Class="HediffCompProperties_VerbGiver">
-		<tools>
-			<li>
-				<label>life drain</label>
-				<capacities>
-					<li>RT_LifedrainBantee</li>
-				</capacities>
-				<power>5</power>
-				<cooldownTime>3</cooldownTime>
-				<chanceFactor>0.4</chanceFactor>
-			</li>
-			<li>
-				<label>ram</label>
-				<capacities>
-					<li>RT_BanteeHeadbutt</li>
-				</capacities>
-				<power>2</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-			<li>
-				<label>scratch</label>
-				<capacities>
-					<li>RT_BanteeScratch</li>
-				</capacities>
-				<power>2</power>
-				<cooldownTime>2</cooldownTime>
-			</li>
-		</tools>
+
+<!--===============Queen Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_QueenState</defName>
+    <label>Evolution (Queen)</label>
+    <labelNoun>a Queen Metroid</labelNoun>
+    <description>A creature of remarkable rarity, Queen Metroids are the heart of any swarm. Due to their mass, they have reverted back to their quadpedal stance. Several small chambers are located on the back of the shell, used for the care of metroid larvae. While Queens are never seen in combat, their towering height, thick armor, and devastating inferno attacks, their lethality is easily leagues above (almost) any other metroids in existance.</description>
+    <stages>
+      <li>
+		<hungerRateFactorOffset>1</hungerRateFactorOffset>
+		<restFallFactorOffset>0.8</restFallFactorOffset>
+			<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.5</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.5</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.4</offset>
+				</li>
+			</capMods>
       </li>
-    </comps>
-  </HediffDef> -->
- 
+    </stages>
+</HediffDef>
  
 <li Class="HediffGiver_Birthday">
 	<hediff>RT_BanteeState</hediff>
 		<ageFractionChanceCurve>
 		<points>
 			<li>(0, 1)</li>
-			<li>(0.26, 0)</li>
+			<li>(0.24, 0)</li>
 		</points>
 		</ageFractionChanceCurve>
 </li>

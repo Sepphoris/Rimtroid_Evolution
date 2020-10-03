@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
+<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
+
 <HediffGiverSetDef>
   <defName>RT_Rimtroid_EvolutionGrowth</defName>
   <hediffGivers>
@@ -18,7 +21,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>7~80</targetAgeRange> <!-- in years -->
+		<targetAgeRange>7~79</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
@@ -26,7 +29,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>81~170</targetAgeRange> <!-- in years -->
+		<targetAgeRange>80~199</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
@@ -34,7 +37,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>171~350</targetAgeRange> <!-- in years -->
+		<targetAgeRange>200~449</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
@@ -42,7 +45,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>351~750</targetAgeRange> <!-- in years -->
+		<targetAgeRange>450~899</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
@@ -50,21 +53,21 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>751~1894</targetAgeRange> <!-- in years -->
+		<targetAgeRange>900~4999</targetAgeRange> <!-- in years -->
+    </li>
+    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <hediff>RT_QueenState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>5000~20000</targetAgeRange> <!-- in years -->
     </li>
   </hediffGivers>
 </HediffGiverSetDef>
 
-<!--<HediffGiverSetDef>
-  <defName>RT_FeralStage</defName>
-  <hediffGivers>
-	<li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-		<hediff>RT_FeralStageBase</hediff>
-		<targetAgeRange>10~70</targetAgeRange>
-	</li>
-	</hediffGivers>
-</HediffGiverSetDef> -->
 
+<!--Misc hediffs given-->
 
 	<HediffGiverSetDef>
     <defName>OrganicAgeless</defName>

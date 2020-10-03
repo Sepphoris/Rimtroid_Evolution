@@ -84,7 +84,7 @@
  </AbilityDef>
 
 
-<AbilityDef>
+<!-- <AbilityDef>
 	<defName>RT_ZetaAcidSpit</defName>
 	<label>Acid Spit</label>
 	<description>Fire an acidic glob at a target</description>
@@ -120,7 +120,7 @@
 			<gizmoDesc>Toggle Acid Spit Usage (Ranged)</gizmoDesc>
 		</li>
 	</comps>
- </AbilityDef>
+ </AbilityDef> -->
 
 
 <!-- Omega Abilities-->

@@ -132,7 +132,7 @@
 		  <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 		  <wildness>10</wildness>
-		  <lifeExpectancy>8000</lifeExpectancy>
+		  <lifeExpectancy>1986</lifeExpectancy>
 		  <lifeStageAges>
 			<li>
 			  <def>AnimalBaby</def>
@@ -156,13 +156,12 @@
 		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		<ageGenerationCurve>
 			<points>
-				<li>(750,0)</li>
-				<li>(751,3)</li>
-				<li>(820,10)</li>
-				<li>(1200,20)</li>
+				<li>(900,0)</li>
+				<li>(990,3)</li>
+				<li>(1200,10)</li>
+				<li>(1450,20)</li>
 				<li>(1650,5)</li>
-				<li>(1900,1)</li>
-				<li>(1985,0)</li>
+				<li>(1850,0)</li>
 			</points>
       </ageGenerationCurve>
 			<wildBiomes>
@@ -257,6 +256,32 @@
 				<abilityDef>RT_OmegaBeam</abilityDef>
 				<minLifeStage>AnimalBaby</minLifeStage>
 				<minAge>0</minAge>
+			</li>
+			<li Class="RT_RimTroid.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.0</key>
+						<value>0.3</value>
+					</li>
+					<li>
+						<key>0.05</key>
+						<value>0.15</value>
+					</li>
+					<li>
+						<key>0.1</key>
+						<value>0.06</value>
+					</li>
+					<li>
+						<key>0.2</key>
+						<value>0.03</value>
+					</li>
+					<li>
+						<key>0.4</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>0.5</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
 		</modExtensions>
 	</PawnKindDef>

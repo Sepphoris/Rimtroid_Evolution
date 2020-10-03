@@ -110,7 +110,7 @@
 		  <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.80</manhunterOnTameFailChance>
 		  <wildness>10</wildness>
-		  <lifeExpectancy>3400</lifeExpectancy>
+		  <lifeExpectancy>1200</lifeExpectancy>
 		  <lifeStageAges>
 			<li>
 			  <def>AnimalBaby</def>
@@ -134,9 +134,9 @@
 		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		<ageGenerationCurve>
 			<points>
-				<li>(350,0)</li>
-				<li>(351,1)</li>
-				<li>(440,10)</li>
+				<li>(450,0)</li>
+				<li>(465,1)</li>
+				<li>(480,10)</li>
 				<li>(520,15)</li>
 				<li>(600,5)</li>
 				<li>(690,2)</li>
@@ -170,7 +170,7 @@
 		<defName>RT_ZetaMetroid</defName>
 		<label>Zeta metroid</label>
 		<race>RT_ZetaMetroid</race>
-		<combatPower>650</combatPower>
+		<combatPower>100</combatPower>
 		<ecoSystemWeight>3.2</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>
@@ -235,6 +235,32 @@
 				<abilityDef>RT_ZetaFireball</abilityDef>
 				<minLifeStage>AnimalBaby</minLifeStage>
 				<minAge>0</minAge>
+			</li>
+			<li Class="RT_RimTroid.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.0</key>
+						<value>0.25</value>
+					</li>
+					<li>
+						<key>0.1</key>
+						<value>0.15</value>
+					</li>
+					<li>
+						<key>0.2</key>
+						<value>0.06</value>
+					</li>
+					<li>
+						<key>0.3</key>
+						<value>0.03</value>
+					</li>
+					<li>
+						<key>0.4</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>0.4</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
