@@ -277,19 +277,19 @@
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>
-						<key>0.25</key>
-						<value>0.2</value>
+						<key>0.0</key>
+						<value>0.4</value>
 					</li>
 					<li>
-						<key>0.40</key>
+						<key>0.10</key>
 						<value>0.15</value>
 					</li>
 					<li>
-						<key>0.50</key>
+						<key>0.20</key>
 						<value>0.1</value>
 					</li>
 					<li>
-						<key>0.60</key>
+						<key>0.40</key>
 						<value>0.05</value>
 					</li>
 					<li>
