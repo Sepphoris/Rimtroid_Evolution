@@ -4,6 +4,7 @@ using Verse.AI;
 using HarmonyLib;
 using System.Reflection;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace RT_Rimtroid
 {
@@ -31,11 +32,11 @@ namespace RT_Rimtroid
         {
             if (__result && ___pawn is Queen queen && stateDef.IsAggro)
             {
-                foreach (var pawn in queen.Map.mapPawns.AllPawns)
+                for (int num = queen.Map.mapPawns.AllPawns.Count - 1; num >= 0; num--)
                 {
-                    if (pawn.Faction != Faction.OfPlayer && !pawn.InAggroMentalState && pawn.IsMetroid())
+                    if (queen.Map.mapPawns.AllPawns[num].Faction != Faction.OfPlayer && !queen.Map.mapPawns.AllPawns[num].InAggroMentalState && queen.Map.mapPawns.AllPawns[num].IsMetroid())
                     {
-                        pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, otherPawn: otherPawn, forceWake: true);
+                        queen.Map.mapPawns.AllPawns[num].mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, otherPawn: otherPawn, forceWake: true);
                     }
                 }
             }
@@ -46,16 +47,28 @@ namespace RT_Rimtroid
     [HarmonyPatch(typeof(Need_Food), "NeedInterval")]
     public static class RT_NeedInterval_Patch
     {
+        public static float GetBerserkChance(float curFoodLevel, Dictionary<float, float> hungerValues)
+        {
+            var keys = hungerValues.Keys.OrderByDescending(x => x);
+            float result = 0;
+            foreach (var key in keys)
+            {
+                if (key >= curFoodLevel)
+                {
+                    result = hungerValues[key];
+                }
+            }
+            return result;
+        }
         public static void Postfix(Need_Food __instance, Pawn ___pawn)
         {
             var options = ___pawn.kindDef.GetModExtension<HungerBerserkOptions>();
             if (options != null)
             {
-                var key = options.hungerBerserkChanges.Keys.MaxBy(x => x >= __instance.CurLevelPercentage);
-                var berserkChance = options.hungerBerserkChanges[key];
+                var berserkChance = GetBerserkChance(__instance.CurLevelPercentage, options.hungerBerserkChanges);
+                Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevelPercentage, true);
                 if (berserkChance > 0)
                 {
-                    Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevelPercentage, true);
                     if (!___pawn.InMentalState && Rand.Chance(berserkChance))
                     {
                         Log.Message(___pawn + " gets berserk state", true);
@@ -73,7 +86,6 @@ namespace RT_Rimtroid
                     Log.Message(___pawn + " recovers from berserk state", true);
                     ___pawn.MentalState.RecoverFromState();
                 }
-                Log.Message(___pawn + " - " + __instance.CurLevelPercentage + " - " + key, true);
             }
         }
     }
