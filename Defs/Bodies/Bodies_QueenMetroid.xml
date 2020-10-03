@@ -194,7 +194,7 @@
 				<li>
                     <def>RT_Tail</def>
                     <customLabel>tail</customLabel>
-                    <coverage>0.20</coverage>
+                    <coverage>0.10</coverage>
                     <groups>
 						<li>Torso</li>
 						<li>RT_Tail</li>							

@@ -71,7 +71,7 @@
 				<thingToSpawn>RT_Alpha_ProximityTrap</thingToSpawn>
 				<spawnInPlace>true</spawnInPlace>
 				<spawnCount>1</spawnCount>
-				<spawnIntervalRange>300~600</spawnIntervalRange>
+				<spawnIntervalRange>600~1200</spawnIntervalRange>
 				<maxThingCount>3</maxThingCount>
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>

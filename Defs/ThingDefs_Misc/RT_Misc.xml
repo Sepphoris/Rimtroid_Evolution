@@ -68,7 +68,7 @@
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_Explosive">
-				<explosiveRadius>5</explosiveRadius>
+				<explosiveRadius>3</explosiveRadius>
 				<explosiveDamageType>Flame</explosiveDamageType>
 				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
 				<wickTicks>15</wickTicks>
@@ -79,7 +79,7 @@
 				</startWickOnDamageTaken>
 			</li>
 		</comps>
-		<specialDisplayRadius>10</specialDisplayRadius>
+		<specialDisplayRadius>3</specialDisplayRadius>
 		<modExtensions>
 			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
 				<explosionTimeout>6000</explosionTimeout>
