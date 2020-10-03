@@ -69,7 +69,7 @@
 	</ThingDef>
 
 
- 	<ThingDef>
+ 	<!--<ThingDef>
 		<defName>RT_ZetaAcid</defName>
 		<thingClass>DD.AnimalProjectile</thingClass>
 		<label>Acidic Glob</label>
@@ -91,7 +91,7 @@
 			<damageAmountBase>2</damageAmountBase>
 			<soundExplode>SoundAcid</soundExplode>
 		</projectile>
-	</ThingDef>
+	</ThingDef>-->
 
 
 	<!-- Omega Beam Abilities -->
