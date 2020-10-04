@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef ParentName="MoteBase">
-    <defName>Rimlaser_Mote_BloodPuff</defName>
+    <defName>RT_Rimlaser_Mote_BloodPuff</defName>
     <graphicData>
       <texPath>Rimlaser/Effects/BloodPuff</texPath>
     </graphicData>
@@ -14,8 +14,8 @@
     </mote>
   </ThingDef>
 
-  <ThingDef ParentName="MoteBase" Name="Rimlaser_Mote_LaserDecoration">
-    <defName>Rimlaser_Mote_LaserDecorationYellow</defName>
+  <ThingDef ParentName="MoteBase" Name="RT_Rimlaser_Mote_LaserDecoration">
+    <defName>RT_Rimlaser_Mote_LaserDecorationYellow</defName>
     <thingClass>RT_Rimtroid.MoteLaserDectoration</thingClass>
     <graphicData>
       <texPath>Rimlaser/Effects/LaserDecorationYellow</texPath>
@@ -29,8 +29,8 @@
     </mote>
   </ThingDef>
 
-  <ThingDef ParentName="Rimlaser_Mote_LaserDecoration">
-    <defName>Rimlaser_Mote_LaserDecorationPurple</defName>
+  <ThingDef ParentName="RT_Rimlaser_Mote_LaserDecoration">
+    <defName>RT_Rimlaser_Mote_LaserDecorationPurple</defName>
     <graphicData>
       <texPath>Rimlaser/Effects/LaserDecorationPurple</texPath>
       <shaderType>TransparentPostLight</shaderType>
@@ -38,8 +38,8 @@
   </ThingDef>
 
 
-  <EffecterDef Name="RimlaserLaserImpact">
-    <defName>RimlaserLaserImpact</defName>
+  <EffecterDef Name="RT_RimlaserLaserImpact">
+    <defName>RT_RimlaserLaserImpact</defName>
     <children>
       <li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -129,8 +129,8 @@
     <positionRadius>0.01</positionRadius>
   </EffecterDef>
   
-  <EffecterDef Name="RimlaserLaserLivingImpact">
-    <defName>RimlaserLaserLivingImpact</defName>
+  <EffecterDef Name="RT_RimlaserLaserLivingImpact">
+    <defName>RT_RimlaserLaserLivingImpact</defName>
     <children>
       <li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
@@ -153,7 +153,7 @@
       <li>
         <subEffecterClass>SubEffecter_SprayerTriggered</subEffecterClass>
         <positionRadius>0.05</positionRadius>
-        <moteDef>Rimlaser_Mote_BloodPuff</moteDef>
+        <moteDef>RT_Rimlaser_Mote_BloodPuff</moteDef>
         <burstCount>
           <min>4</min>
           <max>7</max>

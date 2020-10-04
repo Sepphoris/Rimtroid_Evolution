@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <JobDef>
-    <defName>ChangeLaserColor</defName>
+    <defName>RT_ChangeLaserColor</defName>
     <driverClass>RT_Rimtroid.JobDriver_ChangeLaserColor</driverClass>
     <reportString>changing laser color.</reportString>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>

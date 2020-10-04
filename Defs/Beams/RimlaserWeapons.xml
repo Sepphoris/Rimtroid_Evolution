@@ -2,7 +2,7 @@
 <Defs>
 
 	<ThingDef>
-		<defName>RimlaserBeamGraphic</defName>
+		<defName>RT_RimlaserBeamGraphic</defName>
 		<thingClass>RT_Rimtroid.LaserBeamGraphic</thingClass>
 		<drawOffscreen>true</drawOffscreen>
 		<label>laser beam</label>
@@ -14,10 +14,10 @@
 		<neverMultiSelect>True</neverMultiSelect>
 	</ThingDef>
 
-	<ThingDef Abstract="True" Name="Bullet_LaserGeneric" ParentName="BaseBullet">
+	<ThingDef Abstract="True" Name="RT_Bullet_LaserGeneric" ParentName="BaseBullet">
 		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
 		<drawOffscreen>true</drawOffscreen>
-		<beamGraphic>RimlaserBeamGraphic</beamGraphic>
+		<beamGraphic>RT_RimlaserBeamGraphic</beamGraphic>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -26,8 +26,8 @@
 			<drawSize>1.5</drawSize>
 		</graphicData>
 
-		<explosionEffect>RimlaserLaserImpact</explosionEffect>
-		<hitLivingEffect>RimlaserLaserLivingImpact</hitLivingEffect>
+		<explosionEffect>RT_RimlaserLaserImpact</explosionEffect>
+		<hitLivingEffect>RT_RimlaserLaserLivingImpact</hitLivingEffect>
 
 		<projectile>
 			<damageDef>Bomb</damageDef>

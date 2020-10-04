@@ -10,6 +10,6 @@ namespace RT_Rimtroid
     [DefOf]
     public static class LaserDefOf
     {
-        public static JobDef ChangeLaserColor;
+        public static JobDef RT_ChangeLaserColor;
     }
 }
