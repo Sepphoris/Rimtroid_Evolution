@@ -3,14 +3,14 @@
 
 	<!-- Parent classes for beam projectiles to work properly-->
 
-	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="Bullet_LaserGeneric">
+	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="RT_Bullet_LaserGeneric">
 		<seam>0.25</seam>
 		<textures>
 			<li>AnimalProjectile/GammaBolt</li>
 		</textures>
 	</ThingDef>
 
-		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="Bullet_LaserGeneric">
+		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="RT_Bullet_LaserGeneric">
 		<seam>0.25</seam>
 		<textures>
 			<li>AnimalProjectile/FireBeam1</li>

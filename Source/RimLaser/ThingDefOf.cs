@@ -15,7 +15,7 @@ namespace RT_Rimtroid
             DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
         }
 
-        public static ThingDef RimlaserPrism;
+        public static ThingDef RT_RimlaserPrism;
     }
 
 }
