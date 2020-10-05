@@ -6,7 +6,7 @@ using Verse;
 
 namespace RT_Rimtroid
 {
-    class MoteLaserDectoration : MoteThrown
+    class MoteLaserDecoration : MoteThrown
     {
         public LaserBeamGraphic beam;
         public float baseSpeed;

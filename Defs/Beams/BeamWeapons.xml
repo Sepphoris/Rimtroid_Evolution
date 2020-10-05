@@ -21,7 +21,7 @@
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
-			<texPath>Rimlaser/Effects/LaserRed</texPath>
+			<texPath>AnimalProjectiles/FireBeam1</texPath>
 			<shaderType>TransparentPostLight</shaderType>
 			<drawSize>1.5</drawSize>
 		</graphicData>

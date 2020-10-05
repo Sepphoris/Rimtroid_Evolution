@@ -106,7 +106,7 @@ namespace RT_Rimtroid
                 int i = 0;
                 while (length > 0)
                 {
-                    MoteLaserDectoration moteThrown = ThingMaker.MakeThing(decoration.mote, null) as MoteLaserDectoration;
+                    MoteLaserDecoration moteThrown = ThingMaker.MakeThing(decoration.mote, null) as MoteLaserDecoration;
                     if (moteThrown == null) break;
 
                     moteThrown.beam = this;

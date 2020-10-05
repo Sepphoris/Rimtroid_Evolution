@@ -78,7 +78,6 @@ namespace RT_Rimtroid
 
         protected override void Impact(Thing hitThing)
         {
-            bool shielded = hitThing.IsShielded() && def.IsWeakToShields;
 
             LaserGunDef defWeapon = equipmentDef as LaserGunDef;
             Vector3 dir = (destination - origin).normalized;
@@ -89,10 +88,6 @@ namespace RT_Rimtroid
             if (hitThing == null)
             {
                 b = destination;
-            }
-            else if (shielded)
-            {
-                b = hitThing.TrueCenter() - dir.RotatedBy(Rand.Range(-22.5f, 22.5f)) * 0.8f;
             }
             else if ((destination - hitThing.TrueCenter()).magnitude < 1)
             {
@@ -127,26 +122,12 @@ namespace RT_Rimtroid
             }
             IDrawnWeaponWithRotation weapon = null;
             if (pawn != null && pawn.equipment != null) weapon = pawn.equipment.Primary as IDrawnWeaponWithRotation;
-            if (weapon == null)
-            {
-                Building_LaserGun turret = launcher as Building_LaserGun;
-                if (turret != null)
-                {
-                    weapon = turret.gun as IDrawnWeaponWithRotation;
-                }
-            }
             if (weapon != null)
             {
                 float angle = (b - a).AngleFlat() - (intendedTarget.CenterVector3 - a).AngleFlat();
                 weapon.RotationOffset = (angle + 180) % 360 - 180;
             }
 
-            if (hitThing is Pawn && shielded)
-            {
-                weaponDamageMultiplier *= def.shieldDamageMultiplier;
-
-                SpawnBeamReflections(a, b, 5);
-            }
             TriggerEffect(def.explosionEffect, b);
 
             base.Impact(hitThing);
