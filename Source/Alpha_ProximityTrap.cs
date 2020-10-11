@@ -58,7 +58,7 @@ namespace RT_Rimtroid
 							{
 								Pawn pawn = thingList[i] as Pawn;
 								if (pawn != null && (this.Faction != null && pawn.Faction != this.Faction || this.Faction == null) && !pawn.IsMetroid()
-									&& pawn.HostileTo(Faction.OfPlayer) && !touchingPawns.Contains(pawn))
+									&& (pawn.HostileTo(Faction.OfPlayer) || pawn.Faction == null) && !touchingPawns.Contains(pawn))
 								{
 									touchingPawns.Add(pawn);
 									CheckSpring(pawn);
