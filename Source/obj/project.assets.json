@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "Lib.Harmony/2.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.InteropServices.RuntimeInformation"
+        ],
+        "compile": {
+          "lib/net472/0Harmony.dll": {}
+        },
+        "runtime": {
+          "lib/net472/0Harmony.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "Lib.Harmony/2.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.InteropServices.RuntimeInformation"
+        ],
+        "compile": {
+          "lib/net472/0Harmony.dll": {}
+        },
+        "runtime": {
+          "lib/net472/0Harmony.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "Lib.Harmony/2.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.InteropServices.RuntimeInformation"
+        ],
+        "compile": {
+          "lib/net472/0Harmony.dll": {}
+        },
+        "runtime": {
+          "lib/net472/0Harmony.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "Lib.Harmony/2.0.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Runtime.InteropServices.RuntimeInformation"
+        ],
+        "compile": {
+          "lib/net472/0Harmony.dll": {}
+        },
+        "runtime": {
+          "lib/net472/0Harmony.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Lib.Harmony/2.0.2": {
+      "sha512": "QzJnBhb8TiM0cYlxh82rHJMdhZNTmi9HNQQJ15qNyjMvdeDYF9V2aljmrnGafQ+bh6Af/L0iWHxuYlNrHck0nQ==",
+      "type": "package",
+      "path": "lib.harmony/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "HarmonyLogo.png",
+        "LICENSE",
+        "lib.harmony.2.0.2.nupkg.sha512",
+        "lib.harmony.nuspec",
+        "lib/net35/0Harmony.dll",
+        "lib/net35/0Harmony.xml",
+        "lib/net45/0Harmony.dll",
+        "lib/net45/0Harmony.xml",
+        "lib/net472/0Harmony.dll",
+        "lib/net472/0Harmony.xml",
+        "lib/net48/0Harmony.dll",
+        "lib/net48/0Harmony.xml",
+        "lib/netcoreapp3.0/0Harmony.dll",
+        "lib/netcoreapp3.0/0Harmony.xml",
+        "lib/netcoreapp3.1/0Harmony.dll",
+        "lib/netcoreapp3.1/0Harmony.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "Lib.Harmony >= 2.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Vova\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\GAMES\\Rimworld\\Mods\\Rimtroid_Evolution\\Source\\Metroid.csproj",
+      "projectName": "Metroid",
+      "projectPath": "C:\\GAMES\\Rimworld\\Mods\\Rimtroid_Evolution\\Source\\Metroid.csproj",
+      "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
+      "outputPath": "C:\\GAMES\\Rimworld\\Mods\\Rimtroid_Evolution\\Source\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Lib.Harmony": {
+            "target": "Package",
+            "version": "[2.0.2, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

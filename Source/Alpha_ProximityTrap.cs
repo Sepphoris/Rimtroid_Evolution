@@ -6,9 +6,9 @@ using Verse;
 
 namespace RT_Rimtroid
 {
-    public class Alpha_ProximityTrap : Building
+    public class Alpha_ProximityTrap : Building_Trap
     {
-		protected void SpringSub(Pawn p)
+		protected override void SpringSub(Pawn p)
 		{
 			Log.Message(p + " - SpringSub", true);
 			base.GetComp<CompExplosive>().StartWick(null);
@@ -57,7 +57,8 @@ namespace RT_Rimtroid
 							for (int i = 0; i < thingList.Count; i++)
 							{
 								Pawn pawn = thingList[i] as Pawn;
-								if (pawn != null && pawn.def != RT_DefOf.RT_AlphaMetroid && !touchingPawns.Contains(pawn))
+								if (pawn != null && (this.Faction != null && pawn.Faction != this.Faction || this.Faction == null) && !pawn.IsMetroid()
+									&& pawn.HostileTo(Faction.OfPlayer) && !touchingPawns.Contains(pawn))
 								{
 									touchingPawns.Add(pawn);
 									CheckSpring(pawn);
@@ -76,7 +77,15 @@ namespace RT_Rimtroid
 					}
 				}
 			}
-			base.Tick();
+
+			if (AllComps != null)
+			{
+				int i = 0;
+				for (int count = AllComps.Count; i < count; i++)
+				{
+					AllComps[i].CompTick();
+				}
+			}
 		}
 
 		private void CheckSpring(Pawn p)
@@ -91,22 +100,7 @@ namespace RT_Rimtroid
 				}
 			}
 		}
-
-		public void Spring(Pawn p)
-		{
-			bool spawned = base.Spawned;
-			Map map = base.Map;
-			SpringSub(p);
-			if (def.building.trapDestroyOnSpring)
-			{
-				if (!base.Destroyed)
-				{
-					Destroy();
-				}
-			}
-		}
-
-		protected float SpringChance(Pawn p)
+		protected override float SpringChance(Pawn p)
 		{
 			float num = 1f;
 			if (KnowsOfTrap(p))
