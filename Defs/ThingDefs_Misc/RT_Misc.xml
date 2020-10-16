@@ -82,7 +82,7 @@
 		<specialDisplayRadius>3</specialDisplayRadius>
 		<modExtensions>
 			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
-				<explosionTimeout>6000</explosionTimeout>
+				<explosionTimeout>120000</explosionTimeout>
 				<!-- ticks -->
 				<proximityRange>2</proximityRange> 
 			</li>

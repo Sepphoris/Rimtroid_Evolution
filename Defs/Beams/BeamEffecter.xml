@@ -18,7 +18,7 @@
     <defName>RT_Rimlaser_Mote_LaserDecorationYellow</defName>
     <thingClass>RT_Rimtroid.MoteLaserDecoration</thingClass>
     <graphicData>
-      <texPath>Rimlaser/Effects/LaserDecorationYellow</texPath>
+      <texPath>Textures/Motes/DecorYellow</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -32,7 +32,7 @@
   <ThingDef ParentName="RT_Rimlaser_Mote_LaserDecoration">
     <defName>RT_Rimlaser_Mote_LaserDecorationPurple</defName>
     <graphicData>
-      <texPath>Motes/LaserDecorationPurple</texPath>
+      <texPath>Motes/DecorPurple</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
   </ThingDef>
