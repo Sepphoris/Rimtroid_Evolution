@@ -61,7 +61,7 @@
 
 	<BodyPartDef>
 		<defName>RT_LarvaeMainBody</defName>
-		<label>membrane</label>
+		<label>body</label>
 		<hitPoints>60</hitPoints>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>

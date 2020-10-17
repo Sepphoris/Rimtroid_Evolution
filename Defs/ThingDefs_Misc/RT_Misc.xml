@@ -62,7 +62,7 @@
 	<ThingDef ParentName="RT_Traps">
 		<defName>RT_Alpha_ProximityTrap</defName>
 		<label>Alpha trap</label>
-		<description>A pair of smoke shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+		<description>A bomb of contained energy, created by an Alpha Metroid. Animals can sense these when calm.</description>
 		<graphicData>
 			<texPath>Things/Building/Security/AlphaBomb</texPath>
 		</graphicData>

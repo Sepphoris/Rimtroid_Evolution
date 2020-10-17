@@ -2,7 +2,7 @@
 <Defs>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
-	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
+	<!-- Rimworld Queen Metroid -->
 
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_QueenMetroid</defName>
@@ -174,17 +174,6 @@
 					<li>(9020,0)</li>
 				</points>
 			</ageGenerationCurve>
-			<wildBiomes>
-				<BorealForest>0.2</BorealForest>
-				<Tundra>0.02</Tundra>
-				<ColdBog>0.02</ColdBog>
-				<TemperateSwamp>0.5</TemperateSwamp>
-				<TropicalSwamp>0.4</TropicalSwamp>
-				<TemperateForest>0.5</TemperateForest>
-				<AridShrubland>0.25</AridShrubland>
-				<Desert>0.2</Desert>
-				<TropicalRainforest>0.3</TropicalRainforest>
-			</wildBiomes>
 		</race>
 		<tradeTags>
 			<li>AnimalExotic</li>
@@ -206,8 +195,8 @@
 		<combatPower>2400</combatPower>
 		<ecoSystemWeight>120</ecoSystemWeight>
 		<wildGroupSize>
-			<min>0</min>
-			<max>0</max>
+			<min>1</min>
+			<max>1</max>
 		</wildGroupSize>
 		<lifeStages>
 			<li>

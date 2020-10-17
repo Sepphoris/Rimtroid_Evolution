@@ -40,7 +40,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<RT_Inertia>1</RT_Inertia>
+			<RT_InertiaDrug>1</RT_InertiaDrug>
 		</products>
 		<skillRequirements>
 			<Intellectual>8</Intellectual>
@@ -87,7 +87,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<RT_Inertia>4</RT_Inertia>
+			<RT_InertiaDrug>4</RT_InertiaDrug>
 		</products>
 		<skillRequirements>
 			<Intellectual>8</Intellectual>

@@ -225,7 +225,7 @@
 		  <li>
 			<bodyGraphicData>
 			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
-			  <drawSize>0.85</drawSize>
+			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.6)</offset>
@@ -233,13 +233,13 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
-			  <drawSize>0.85</drawSize>
+			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
 			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
-			  <drawSize>0.9</drawSize>
+			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.6)</offset>
@@ -247,7 +247,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
-			  <drawSize>0.9</drawSize>
+			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		</lifeStages>

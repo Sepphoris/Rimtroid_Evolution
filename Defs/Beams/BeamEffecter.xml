@@ -18,7 +18,7 @@
     <defName>RT_Rimlaser_Mote_LaserDecorationYellow</defName>
     <thingClass>RT_Rimtroid.MoteLaserDecoration</thingClass>
     <graphicData>
-      <texPath>Textures/Motes/DecorYellow</texPath>
+      <texPath>Motes/DecorYellow</texPath>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <altitudeLayer>MoteOverhead</altitudeLayer>
