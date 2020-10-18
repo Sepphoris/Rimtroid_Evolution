@@ -42,13 +42,20 @@
 			<ingestCommandString>Inject {0}</ingestCommandString>
 			<ingestReportString>Injecting {0}.</ingestReportString>
 			<chairSearchRadius>0</chairSearchRadius>
-			<outcomeDoers>
+      <outcomeDoers>
+				<li Class="RT_Rimtroid.Ingestion_MultipleHediffs">
+					<hediffDef_Metroid>RT_StuntedGrowth</hediffDef_Metroid>
+					<hediffDef_LivingPawn>RT_InertiaPoisoning</hediffDef_LivingPawn>
+					<severity>0.8</severity>
+				</li>
+      </outcomeDoers>
+		</ingestible>
+			<!--<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>RT_InertiaPoisoning</hediffDef>
 					<severity>0.8</severity>
 				</li>
-			</outcomeDoers>
-		</ingestible>
+			</outcomeDoers> -->
 		<!-- <recipeMaker>
 			<productCount>1</productCount>
 			<recipeUsers>

@@ -6,15 +6,14 @@
   <!--=====================================================================-->
 
 
-  <!-- Rattlesnake -->
+  <!-- Larvae Egg -->
   
   <ThingDef ParentName="EggUnfertBase">
-    <defName>Rimtroid_MetroidEggUnfertilized</defName>
+    <defName>Rimtroid_EggUnfert</defName>
     <label>metroid egg (unfert.)</label>
     <description>An unfertilized metroid egg. It can be eaten raw, but it's much, much better cooked.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
-      <color>(155,121,112)</color>
+      <texPath>Things/AnimalProduct/EggOval</texPath>
     </graphicData>
     <statBases>
       <MarketValue>30.0</MarketValue>
@@ -26,8 +25,7 @@
     <label>metroid egg (fert.)</label>
     <description>A fertilized metroid egg. If all goes well, it will hatch into a metroid larvae. It can be eaten raw, but it's much better cooked.</description>
    <graphicData>
-      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
-      <color>(245,245,245)</color>
+      <texPath>Things/AnimalProduct/RT_MetroidEgg1</texPath>
     </graphicData>
     <statBases>
       <MarketValue>60.0</MarketValue>

@@ -8,7 +8,7 @@
   <defName>RT_Rimtroid_EvolutionGrowth</defName>
   <hediffGivers>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_BanteeState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>
@@ -16,7 +16,7 @@
 		<targetAgeRange>0.00001~6</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_LarvaeState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>
@@ -24,7 +24,7 @@
 		<targetAgeRange>7~79</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_AlphaState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>
@@ -32,7 +32,7 @@
 		<targetAgeRange>80~199</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_GammaState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>
@@ -40,7 +40,7 @@
 		<targetAgeRange>200~449</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_ZetaState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>
@@ -48,7 +48,7 @@
 		<targetAgeRange>450~899</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_OmegaState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>
@@ -56,7 +56,7 @@
 		<targetAgeRange>900~4999</targetAgeRange> <!-- in years -->
     </li>
     <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
-      <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_QueenState</hediff>
 			<partsToAffect>
               <li>RT_Mitosis</li>

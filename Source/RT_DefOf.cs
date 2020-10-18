@@ -10,6 +10,8 @@ namespace RT_Rimtroid
     [DefOf]
     public static class RT_DefOf
     {
+		public static ThingDef RT_BanteeMetroid;
+		public static ThingDef RT_MetroidLarvae;
         public static ThingDef RT_AlphaMetroid;
 		public static ThingDef RT_GammaMetroid;
 		public static ThingDef RT_OmegaMetroid;
