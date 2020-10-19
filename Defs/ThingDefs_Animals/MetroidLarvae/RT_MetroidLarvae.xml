@@ -8,7 +8,7 @@
 		<defName>RT_MetroidLarvae</defName>
 		<label>Metroid</label>
 
-		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war. \n\nThese specific Metroids are not "true" Metroids, but rather a local strain; over time they have adapted a darker color, and their nomadic life style has given them untapped mutation potential.</description>
+		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		<statBases>
 		
 	<!-- Internal Stats -->
@@ -97,7 +97,7 @@
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
 		  <foodType>Kibble</foodType>
-		  <leatherDef>RT_MetroidGel</leatherDef>
+		  <leatherDef>RT_MetroidChitin</leatherDef>
 		  <trainability>Advanced</trainability>
 		  <maxPreyBodySize>3.9</maxPreyBodySize>
 		  <gestationPeriodDays>30</gestationPeriodDays>
@@ -158,6 +158,9 @@
             <TropicalRainforest>0.3</TropicalRainforest>
 			</wildBiomes>
 		</race>
+    <butcherProducts>
+			<RT_MetroidGel>10</RT_MetroidGel>
+		</butcherProducts>
 		<tradeTags>
 		  <li>AnimalExotic</li>
 		  <li>AnimalInsectSpace</li>

@@ -55,11 +55,11 @@
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
-	    <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>80~199</Age>
+				<Age>80</Age>
 				<Kind>RT_AlphaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -106,11 +106,11 @@
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
-	    <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>200~449</Age>
+				<Age>200</Age>
 				<Kind>RT_GammaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -157,11 +157,11 @@
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
-	    <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>450~899</Age>
+				<Age>450</Age>
 				<Kind>RT_ZetaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>
@@ -208,11 +208,11 @@
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
-	    <stuntedHediffDef>RT_StuntedGrowth</stuntedHediffDef>
+	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>900~4999</Age>
+				<Age>900</Age>
 				<Kind>RT_OmegaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>

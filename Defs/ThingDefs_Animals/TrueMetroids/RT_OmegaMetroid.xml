@@ -21,7 +21,7 @@
 		  <MarketValue>600</MarketValue>
 		  <ComfyTemperatureMin>0</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
-		  <MeatAmount>200</MeatAmount>
+		  <MeatAmount>0</MeatAmount>
 		<PainShockThreshold>0.95</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
@@ -176,6 +176,9 @@
             <TropicalRainforest>0.3</TropicalRainforest>
 			</wildBiomes>
 		</race>
+      <butcherProducts>
+			  <RT_MetroidGel>180</RT_MetroidGel>
+		  </butcherProducts>
 		<tradeTags>
 		  <li>AnimalExotic</li>
 		  <li>AnimalInsectSpace</li>

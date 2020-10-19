@@ -44,7 +44,7 @@
 			<chairSearchRadius>0</chairSearchRadius>
       <outcomeDoers>
 				<li Class="RT_Rimtroid.Ingestion_MultipleHediffs">
-					<hediffDef_Metroid>RT_StuntedGrowth</hediffDef_Metroid>
+					<hediffDef_Metroid>RT_StuntedGrowthBad</hediffDef_Metroid>
 					<hediffDef_LivingPawn>RT_InertiaPoisoning</hediffDef_LivingPawn>
 					<severity>0.8</severity>
 				</li>
@@ -128,7 +128,7 @@
 	<ThoughtDeF>
 		<defName>RT_InertiaThought</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>RT_InertiaPoisoningf</hediff>
+		<hediff>RT_InertiaPoisoning</hediff>
 		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>

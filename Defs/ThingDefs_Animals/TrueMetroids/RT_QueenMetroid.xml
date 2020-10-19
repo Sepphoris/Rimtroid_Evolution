@@ -6,7 +6,7 @@
 
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_QueenMetroid</defName>
-		<label>Zeta Metroid</label>
+		<label>Queen Metroid</label>
 		<thingClass>RT_Rimtroid.Queen</thingClass>
 		<description>Sometimes considered extinct, Queen Metroids are remarkably rare, often taking generations before another is spotted. It is believed they were even rarer, down to the point where only one existed within the entire galaxy. Genetic expiriments and clonings have made them slightly more common universally, but it still may take generations between individual sightings. Little is publicly known about the Queen Metroid biology, and most information has been gathered from satellite observation; they are near-immortal, guarded by entire legions of lesser Metroids, and can easily form global infestations within weeks due to the seemingly unlimited ability to produce offspring without a mate. None have ever been captured alive, and it is unknown how exactly a Queen Metroid comes to evolve. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet. Due to the extreme conditions needed for a Queen to appear, these can never be obtained naturally.</description>
 		<statBases>
@@ -22,7 +22,7 @@
 			<MarketValue>800</MarketValue>
 			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 			<ComfyTemperatureMax>200</ComfyTemperatureMax>
-			<MeatAmount>320</MeatAmount>
+			<MeatAmount>0</MeatAmount>
 			<PainShockThreshold>1</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
@@ -175,6 +175,9 @@
 				</points>
 			</ageGenerationCurve>
 		</race>
+      <butcherProducts>
+			  <RT_MetroidGel>320</RT_MetroidGel>
+		  </butcherProducts>
 		<tradeTags>
 			<li>AnimalExotic</li>
 			<li>AnimalInsectSpace</li>
