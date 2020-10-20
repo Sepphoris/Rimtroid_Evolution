@@ -10,17 +10,35 @@ using Verse.AI;
 
 namespace DD
 {
-    public class AbilityComp_AttackVerb : CompAbilityEffect
+    public class AbilityComp_AbilityControl : AbilityComp_Base
     {
-        public bool status = true;
+        private bool status = true;
         private Command gizmo;
         private Texture2D iconOn, iconOff;
 
-        public AbilityCompProperties_AttackVerb VProps => props as AbilityCompProperties_AttackVerb;
+        public AbilityCompProperties_AbilityControl VProps => props as AbilityCompProperties_AbilityControl;
+
+        public bool AutoUse => VProps.autoUse;
+
+        public override bool CanCast => Status;
 
         public bool Status
         {
-            get => status;
+            get
+            {
+                Pawn pawn = parent.pawn;
+
+                if (pawn.Faction == null || !pawn.Faction.IsPlayer)
+                {
+                    return true;
+                }
+
+                if (pawn.InMentalState)
+                {
+                    return true;
+                }
+                return status;
+            }
             set
             {
                 if (status != value)
@@ -31,7 +49,7 @@ namespace DD
             }
         }
 
-        public Command Gizmo
+        public override Command Gizmo
         {
             get
             {
@@ -90,6 +108,33 @@ namespace DD
                     verb.Ability = parent;
                 }
             }
+        }
+
+        public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            if (base.CanApplyOn(target, dest))
+            {
+                if (VProps.targetParms != null)
+                {
+                    Map map = parent.pawn.Map;
+                    if (!VProps.targetParms.CanTarget(target.ToTargetInfo(map)) && !VProps.targetParms.CanTarget(target.ToTargetInfo(map)))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public override bool CanActivateOn(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            return CanApplyOn(target, dest);
+        }
+
+        public override void PostExposeData()
+        {
+            Scribe_Values.Look(ref status, "status", defaultValue: true);
         }
     }
 }

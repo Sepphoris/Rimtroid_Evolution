@@ -88,6 +88,7 @@
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
+        <li>RT_GrantAbilities</li>
 				<li>RT_Rimtroid_EvolutionGrowth</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
@@ -230,15 +231,13 @@
 		  </li>
 		</lifeStages>
 		<modExtensions>
-			<li Class="DD.VerbSettingExtension">
-				<verbControl>true</verbControl>
-				<showAbilityGizmos>true</showAbilityGizmos>
-			</li>
-			<li Class="DD.GainAbilityExtension">
-				<abilityDef>RT_ZetaFireball</abilityDef>
-				<minLifeStage>AnimalBaby</minLifeStage>
-				<minAge>0</minAge>
-			</li>
+      <li Class="DD.VerbSettingExtension">
+			  <useExtendedVerbs>true</useExtendedVerbs>
+		  </li>
+		  <li Class="DD.GainAbilityExtension">
+			  <abilityDef>RT_ZetaFireball</abilityDef>
+			  <minAge>-1</minAge>
+		  </li>
 			<li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->

@@ -13,25 +13,30 @@ namespace DD
     public class GainAbilityExtension : DefModExtension
     {
         public AbilityDef abilityDef;
-        public LifeStageDef minLifeStage;
         public float minAge;
 
         public bool CanGainAbility(Pawn pawn)
         {
-            //Not destoyed or null, can gain abilities, has a ThingDef, has RaceProps, has LifeStageAges(ThingDef), has the minLifeStage in its LifeStageAges list. (Blocks access to irrelevant/misconfigured pawns)
-            return !pawn.DestroyedOrNull() && pawn.abilities != null && pawn.def != null && pawn.def.race != null && !pawn.def.race.lifeStageAges.NullOrEmpty() && pawn.def.race.lifeStageAges.Any(lifestage => lifestage.def == minLifeStage);
+            if (abilityDef == null)
+            {
+                Log.Error("GainAbilityExtension: AbilityDef not set");
+                return false;
+            }
+
+            //Pawn not destoyed or null, can gain abilities, has a ThingDef, has RaceProps. (Skips over irrelevant/misconfigured pawns)
+            return !pawn.DestroyedOrNull() && pawn.abilities != null && pawn.def != null && pawn.def.race != null && pawn.ageTracker != null;
         }
 
         public bool ShouldGainAbility(Pawn pawn)
         {
             //Can gain abilities and if the minLifeStage is what the pawn is currently at, or the minLifeStage was passed. (Get growing pains)
-            return CanGainAbility(pawn) && pawn.def.race.lifeStageAges.FirstIndexOf(lifestage => lifestage.def == minLifeStage) <= pawn.ageTracker.CurLifeStageIndex;
+            return CanGainAbility(pawn) && pawn.ageTracker.AgeBiologicalYears >= minAge;
         }
 
         public bool ShouldHaveAbility(Pawn pawn)
         {
             //Should gain the ability and is older than the 'growth pains' range. (Instantly gain the ability)
-            return ShouldGainAbility(pawn) && pawn.ageTracker.AgeBiologicalYearsFloat >= minAge;
+            return ShouldGainAbility(pawn) && Mathf.Floor(pawn.ageTracker.AgeBiologicalYearsFloat) > minAge;
         }
     }
 }
