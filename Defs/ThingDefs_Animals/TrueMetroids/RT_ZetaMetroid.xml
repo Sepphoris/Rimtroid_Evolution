@@ -238,6 +238,10 @@
 			  <abilityDef>RT_ZetaFireball</abilityDef>
 			  <minAge>-1</minAge>
 		  </li>
+      <li Class="DD.GainAbilityExtension">
+        <abilityDef>RT_ZetaAcitSpit</abilityDef>
+			  <minAge>-1</minAge>
+		  </li>
 			<li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->

@@ -6,7 +6,7 @@
 		<description>Soft, almost tasteless gel that is surprisingly nutritious. Alongside forming the metroid nucleus, it also forms most of the covered body innards. The proteins within it allow it to be used as an alternative to meat.</description>
 		<graphicData>
 			<texPath>Things/AnimalProduct/RT_MetroidGel</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
       <Nutrition>0.07</Nutrition>
