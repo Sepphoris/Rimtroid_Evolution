@@ -84,6 +84,10 @@
 	<!-- Race stats -->
 		
 		<race>
+    <!-- Overriding animal think tree -->
+        <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+        <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+
 		  <bloodDef>Filth_BloodInsect</bloodDef>
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_LarvaeBody</body>
@@ -166,10 +170,10 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	<modExtensions>
-      <li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>
+    <li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>
 	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
-			<li Class="RT_RimTroid.HungerBerserkOptions">
+		  <li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>

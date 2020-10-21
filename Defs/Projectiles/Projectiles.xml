@@ -13,7 +13,7 @@
 		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="RT_Bullet_LaserGeneric">
 		<seam>0.25</seam>
 		<textures>
-			<li>AnimalProjectile/FireBeam1</li>
+			<li>AnimalProjectile/Firebeam1</li>
 		</textures>
 	</ThingDef>
 
@@ -86,7 +86,7 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<speed>28</speed>
-			<damageDef>Toxic</damageDef>
+			<damageDef>Bullet</damageDef>
 			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>2</damageAmountBase>
 			<soundExplode>SoundAcid</soundExplode>

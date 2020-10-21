@@ -189,7 +189,7 @@
         
         <!-- Satisfy basic needs -->
         <li Class="ThinkNode_Subtree">
-          <treeDef>RT_SatisfyBasicNeeds</treeDef>
+          <treeDef>SatisfyBasicNeeds</treeDef>
         </li>
 
         <!-- Tame animal: do useful things for the colony-->

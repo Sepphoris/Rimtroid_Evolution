@@ -67,6 +67,33 @@
 			</li>
 		</tools>
 		<comps>
+    	<li Class="DD.CompProperties_HostileResponse">
+			<compClass>DD.CompHostileResponse</compClass>
+			<initialHostility>Aggressive</initialHostility>
+			<options>
+				<li>
+					<type>Aggressive</type>
+					<label>Aggro</label>
+					<description>Really mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+				</li>
+				<li>
+					<type>Defensive</type>
+					<label>Defo</label>
+					<description>Not that mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Defensive and disabled.</disableMessage>
+				</li>
+				<li>
+					<type>Passive</type>
+					<label>Passivo</label>
+					<description>Too forgiving.</description>
+					<iconPath></iconPath>
+					<disableMessage>Passive and disabled.</disableMessage>
+				</li>
+			</options>
+		  </li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -77,9 +104,11 @@
 			</li> -->
 		</comps>
 		
-	<!-- Race stats -->
-		
+	<!-- Race stats -->		
 		<race>
+      <!-- Overriding animal think tree -->
+    <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+    <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 		  <bloodDef>Filth_BloodInsect</bloodDef>
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_ZetaBody</body>
@@ -245,7 +274,11 @@
 			<li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
-					<li>
+          <li>
+						<key>0.0</key>
+						<value>0.0</value>
+					</li>
+					<!--li>
 						<key>0.0</key>
 						<value>0.25</value>
 					</li>
@@ -264,7 +297,7 @@
 					<li>
 						<key>0.4</key>
 						<value>0</value>
-					</li>
+					</li>-->
 				</hungerBerserkChanges>
 				<chanceToBecomeWildIfBerserkAndTamed>0.4</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
