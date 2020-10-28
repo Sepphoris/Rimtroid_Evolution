@@ -56,13 +56,7 @@ namespace RT_Rimtroid
 			{
 				return null;
 			}
-			bool allowCorpse = false;
-			bool desperate = false;
-
-			if (!FoodUtility.TryFindBestFoodSourceFor(pawn, pawn, desperate, out Thing foodSource, out ThingDef foodDef, canRefillDispenser: true, canUseInventory: true, allowForbidden: false, allowCorpse, allowSociallyImproper: false, pawn.IsWildMan(), forceScanWholeMap))
-			{
-				return null;
-			}
+			Thing foodSource = FoodMethod.FindPawnTarget(pawn, 50f);
 			Pawn pawn2 = foodSource as Pawn;
 			if (pawn2 != null)
 			{
@@ -71,33 +65,7 @@ namespace RT_Rimtroid
 				job.killIncappedTarget = false;
 				return job;
 			}
-			if (foodSource is Plant && foodSource.def.plant.harvestedThingDef == foodDef)
-			{
-				return JobMaker.MakeJob(JobDefOf.Harvest, foodSource);
-			}
-			Building_NutrientPasteDispenser building_NutrientPasteDispenser = foodSource as Building_NutrientPasteDispenser;
-			if (building_NutrientPasteDispenser != null && !building_NutrientPasteDispenser.HasEnoughFeedstockInHoppers())
-			{
-				Building building = building_NutrientPasteDispenser.AdjacentReachableHopper(pawn);
-				if (building != null)
-				{
-					ISlotGroupParent hopperSgp = building as ISlotGroupParent;
-					Job job2 = WorkGiver_CookFillHopper.HopperFillFoodJob(pawn, hopperSgp);
-					if (job2 != null)
-					{
-						return job2;
-					}
-				}
-				foodSource = FoodUtility.BestFoodSourceOnMap(pawn, pawn, desperate, out foodDef, FoodPreferability.MealLavish, allowPlant: false, !pawn.IsTeetotaler(), allowCorpse: false, allowDispenserFull: false, allowDispenserEmpty: false, allowForbidden: false, allowSociallyImproper: false, allowHarvest: false, forceScanWholeMap);
-				if (foodSource == null)
-				{
-					return null;
-				}
-			}
-			float nutrition = FoodUtility.GetNutrition(foodSource, foodDef);
-			Job job3 = JobMaker.MakeJob(JobDefOf.Ingest, foodSource);
-			job3.count = FoodUtility.WillIngestStackCountOf(pawn, foodDef, nutrition);
-			return job3;
+			return null;
 		}
 	}
 }

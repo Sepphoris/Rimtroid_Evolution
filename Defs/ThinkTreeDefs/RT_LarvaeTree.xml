@@ -34,6 +34,8 @@
         <!-- Do a queued job -->
         <li Class="ThinkNode_QueuedJob" />
 
+		<li Class="RT_Rimtroid.JobGiver_GetLiveFood"/>
+
         <!-- Wild animals dig out if no path to map edge and starving -->
         <li Class="ThinkNode_ConditionalHasFaction">
           <invert>true</invert>
