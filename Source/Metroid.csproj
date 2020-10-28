@@ -299,6 +299,8 @@
   <ItemGroup>
     <Compile Include="AgeStage.cs" />
     <Compile Include="AgeTools.cs" />
+    <Compile Include="CorpseDesiccation.cs" />
+    <Compile Include="FoodMethod.cs" />
     <Compile Include="FW\Abilities\AbilityCompProperties_AbilityControl.cs" />
     <Compile Include="FW\Abilities\AbilityCompProperties_CastVerb.cs" />
     <Compile Include="FW\Abilities\AbilityComp_AbilityControl.cs" />
@@ -324,7 +326,6 @@
     <Compile Include="Alpha_ProximityTrap.cs" />
     <Compile Include="CompSpawnerAdv.cs" />
     <Compile Include="CorpseAvoidance.cs" />
-    <Compile Include="CorpseDesiccation.cs" />
     <Compile Include="DisableTaming.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="FW2\AnimalProjectile.cs" />
