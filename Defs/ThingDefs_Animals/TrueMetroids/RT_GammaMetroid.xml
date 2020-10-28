@@ -164,7 +164,7 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	<modExtensions>
-      <li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>
+      <!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li> -->
 	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
     </modExtensions>

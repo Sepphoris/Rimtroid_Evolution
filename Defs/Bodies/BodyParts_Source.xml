@@ -10,10 +10,7 @@
     <conceptual>true</conceptual>
 		<defName>RT_Mitosis</defName>
 		<label>Mitosis</label>
-		<hitPoints>20</hitPoints>
-		<bleedRate>0</bleedRate>
 		<skinCovered>true</skinCovered>
-		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
 		<tags>
 			<li>MetabolismSource</li>
 		</tags>

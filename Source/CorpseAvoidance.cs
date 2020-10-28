@@ -61,7 +61,7 @@ namespace RT_Rimtroid
 			if (pawn2 != null)
 			{
 				Log.Message("Predator hunting.");
-				Job job = JobMaker.MakeJob(JobDefOf.PredatorHunt, pawn2);
+				Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, pawn2);
 				job.killIncappedTarget = false;
 				return job;
 			}
