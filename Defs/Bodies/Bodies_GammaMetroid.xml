@@ -146,7 +146,7 @@
 						</li>
                         <li>
                             <def>RT_Mitosis</def>
-                            <coverage>0</coverage>
+                            <coverage>0.0000001</coverage>
                             <depth>Inside</depth>
                             <groups>
 								<li>Torso</li>
