@@ -9,6 +9,7 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
+        <!--Larvae head is not conceptual due to no eyes-->
 				<li>
 					<def>Head</def>
 					<customLabel>membrane</customLabel>
@@ -45,6 +46,13 @@
 						<def>RT_LarvaeNucleus</def>
 						<customLabel>right nucleus</customLabel>
 						<coverage>0.03</coverage>
+						<depth>Inside</depth>
+					</li>
+          <!--Nucleus that are used for sight-->
+          <li>
+						<def>RT_LarvaeSight</def>
+						<customLabel>Echolocation</customLabel>
+						<coverage>0</coverage>
 						<depth>Inside</depth>
 					</li>
 					<li>

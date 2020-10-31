@@ -5,9 +5,18 @@
 
 
 	<!-- Shared Parts -->
-	
-	<BodyPartDef>
+  <BodyPartDef>
+    <!--Head is conceptual since if it wasn't, decapitated metroids would exist-->
     <conceptual>true</conceptual>
+    <defName>RT_Head</defName>
+    <label>head</label>
+    <hitPoints>120</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+
+	<BodyPartDef>
+    <!--<conceptual>true</conceptual> -->
 		<defName>RT_Mitosis</defName>
 		<label>Mitosis</label>
 		<hitPoints>20</hitPoints>
@@ -22,7 +31,7 @@
 	<BodyPartDef>
 		<defName>RT_Membrane</defName>
 		<label>membrane</label>
-		<hitPoints>120</hitPoints>
+		<hitPoints>140</hitPoints>
 		<bleedRate>0</bleedRate>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>
@@ -63,7 +72,7 @@
 	<BodyPartDef>
 		<defName>RT_LarvaeMainBody</defName>
 		<label>body</label>
-		<hitPoints>60</hitPoints>
+		<hitPoints>150</hitPoints>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>
 	</BodyPartDef>
@@ -71,7 +80,7 @@
 	<BodyPartDef>
 		<defName>RT_LarvaeProtoplasm</defName>
 		<label>protoplasm</label>
-		<hitPoints>30</hitPoints>
+		<hitPoints>60</hitPoints>
 		<bleedRate>1</bleedRate>
 		<frostbiteVulnerability>5</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
@@ -87,21 +96,33 @@
 	<BodyPartDef>
 		<defName>RT_LarvaeNucleus</defName>
 		<label>nuclei</label>
-		<hitPoints>30</hitPoints>
+		<hitPoints>60</hitPoints>
+		<bleedRate>0</bleedRate>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>ConsciousnessSource</li>
+			<li>BreathingSource</li>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+
+  	<BodyPartDef>
+    <!--Exists so larvae cannot be temporarily blinded by particles such as sand or dirt-->
+    <conceptual>true</conceptual>
+		<defName>RT_LarvaeSight</defName>
+		<label>nuclei</label>
+		<hitPoints>60</hitPoints>
 		<bleedRate>0</bleedRate>
 		<skinCovered>true</skinCovered>
 		<tags>
 			<li>SightSource</li>
-			<li>ConsciousnessSource</li>
-			<li>BreathingSource</li>
-			<li>MetabolismSource</li>
 		</tags>
 	</BodyPartDef>
 		
 	<BodyPartDef>
 		<defName>RT_LarvaeTeeth</defName>
 		<label>mouth</label>
-		<hitPoints>14</hitPoints>
+		<hitPoints>65</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>EatingSource</li>
@@ -113,7 +134,7 @@
 	<BodyPartDef>
 		<defName>RT_AlphaMainBody</defName>
 		<label>body</label>
-		<hitPoints>120</hitPoints>
+		<hitPoints>400</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -123,7 +144,7 @@
 	<BodyPartDef>
 		<defName>RT_GammaMainBody</defName>
 		<label>body</label>
-		<hitPoints>120</hitPoints>
+		<hitPoints>1100</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -133,7 +154,7 @@
 	<BodyPartDef>
 		<defName>RT_ZetaMainBody</defName>
 		<label>body</label>
-		<hitPoints>120</hitPoints>
+		<hitPoints>1600</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -143,7 +164,7 @@
 	<BodyPartDef>
 		<defName>RT_OmegaMainBody</defName>
 		<label>body</label>
-		<hitPoints>200</hitPoints>
+		<hitPoints>1800</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -153,7 +174,7 @@
 	<BodyPartDef>
 		<defName>RT_QueenMainBody</defName>
 		<label>body</label>
-		<hitPoints>500</hitPoints>
+		<hitPoints>3000</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -161,9 +182,9 @@
 	</BodyPartDef>
 	
   <BodyPartDef>
-		<defName>RT_Tail</defName>
+		<defName>Tail</defName>
 		<label>tail</label>
-		<hitPoints>40</hitPoints>
+		<hitPoints>150</hitPoints>
 		<frostbiteVulnerability>4</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
 		<tags>
@@ -174,7 +195,7 @@
 	<BodyPartDef>
 		<defName>RT_OmegaArm</defName>
 		<label>arm</label>
-		<hitPoints>60</hitPoints>
+		<hitPoints>550</hitPoints>
 		<bleedRate>0.5</bleedRate>
 		<skinCovered>true</skinCovered>
 		<tags>
@@ -185,15 +206,15 @@
 	<BodyPartDef>
 		<defName>RT_Ovipositor</defName>
 		<label>ovipositor</label>
-		<hitPoints>60</hitPoints>
+		<hitPoints>220</hitPoints>
 		<skinCovered>false</skinCovered>
 		<bleedRate>0.5</bleedRate>
 	</BodyPartDef>
 	
 	<BodyPartDef>
-		<defName>RT_Shell</defName>
+		<defName>Shell</defName>
 		<label>shell</label>
-		<hitPoints>200</hitPoints>
+		<hitPoints>375</hitPoints>
 		<skinCovered>false</skinCovered>
 		<bleedRate>0</bleedRate>
 	</BodyPartDef>

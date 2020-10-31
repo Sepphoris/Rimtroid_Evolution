@@ -197,7 +197,7 @@
 						<value>0</value>
 					</li>
 				</hungerBerserkChanges>
-				<chanceToBecomeWildIfBerserkAndTamed>0.5</chanceToBecomeWildIfBerserkAndTamed>
+				<chanceToBecomeWildIfBerserkAndTamed>0.1</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
     </modExtensions>
 	</ThingDef>
@@ -259,7 +259,4 @@
 		  </li>
 		</lifeStages>
 	</PawnKindDef>
-  
-  	<!-- Stunted Metroid Larvae, which will not evolve. -->
-
 </Defs>

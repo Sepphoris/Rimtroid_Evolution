@@ -67,6 +67,33 @@
 			</li>
 		</tools>
 		<comps>
+    	<li Class="DD.CompProperties_HostileResponse">
+			<compClass>DD.CompHostileResponse</compClass>
+			<initialHostility>Aggressive</initialHostility>
+			<options>
+				<li>
+					<type>Aggressive</type>
+					<label>Aggro</label>
+					<description>Really mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+				</li>
+				<li>
+					<type>Defensive</type>
+					<label>Defo</label>
+					<description>Not that mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Defensive and disabled.</disableMessage>
+				</li>
+				<li>
+					<type>Passive</type>
+					<label>Passive</label>
+					<description>Too forgiving.</description>
+					<iconPath></iconPath>
+					<disableMessage>Passive and disabled.</disableMessage>
+				</li>
+			</options>
+		  </li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -186,7 +213,7 @@
 			<labelPlural>gamma metroid</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Animals/GammaMetroid/RT_GammaMetroid</texPath>
-			  <drawSize>2.4</drawSize>
+			  <drawSize>2.2</drawSize>
 			  <shadowData>
 				<volume>(0.2, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.55)</offset>
@@ -194,7 +221,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/GammaMetroid/RT_Desiccated_GammaMetroid</texPath>
-			  <drawSize>2.4</drawSize>
+			  <drawSize>2.2</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
@@ -202,7 +229,7 @@
 			<labelPlural>gamma metroid</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Animals/GammaMetroid/RT_GammaMetroid</texPath>
-			  <drawSize>2.4</drawSize>
+			  <drawSize>2.2</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.6)</offset>
@@ -210,7 +237,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/GammaMetroid/RT_Desiccated_GammaMetroid</texPath>
-			  <drawSize>2.4</drawSize>
+			  <drawSize>2.2</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
@@ -218,7 +245,7 @@
 			<labelPlural>gamma metroid</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Animals/GammaMetroid/RT_GammaMetroid</texPath>
-			  <drawSize>2.4</drawSize>
+			  <drawSize>2.2</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.6)</offset>
@@ -266,7 +293,4 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
-  
-  	<!-- Stunted Gamma Metroid, which simply exists for consistency. -->
-
 </Defs>

@@ -87,7 +87,7 @@
 				</li>
 				<li>
 					<type>Passive</type>
-					<label>Passivo</label>
+					<label>Passive</label>
 					<description>Too forgiving.</description>
 					<iconPath></iconPath>
 					<disableMessage>Passive and disabled.</disableMessage>
@@ -274,11 +274,7 @@
 			<li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
-          <li>
-						<key>0.0</key>
-						<value>0.0</value>
-					</li>
-					<!--li>
+					<li>
 						<key>0.0</key>
 						<value>0.25</value>
 					</li>
@@ -303,7 +299,4 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
-  
-  	<!-- Stunted Zeta Metroid, which simply exists for consistency. -->
-
 </Defs>

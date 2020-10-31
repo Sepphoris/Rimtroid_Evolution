@@ -77,7 +77,7 @@
 				<power>25</power>
 				<armorPenetration>0.5</armorPenetration>
 				<cooldownTime>3.5</cooldownTime>
-				<linkedBodyPartsGroup>RT_Tail</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
 				<!-- <surpriseAttack>
 					<extraMeleeDamages>
 						<li>
@@ -89,6 +89,33 @@
 			</li>
 		</tools>
 		<comps>
+    	<li Class="DD.CompProperties_HostileResponse">
+			<compClass>DD.CompHostileResponse</compClass>
+			<initialHostility>Aggressive</initialHostility>
+			<options>
+				<li>
+					<type>Aggressive</type>
+					<label>Aggro</label>
+					<description>Really mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+				</li>
+				<li>
+					<type>Defensive</type>
+					<label>Defo</label>
+					<description>Not that mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Defensive and disabled.</disableMessage>
+				</li>
+				<li>
+					<type>Passive</type>
+					<label>Passive</label>
+					<description>Too forgiving.</description>
+					<iconPath></iconPath>
+					<disableMessage>Passive and disabled.</disableMessage>
+				</li>
+			</options>
+		  </li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -207,7 +234,7 @@
 			<labelPlural>omega metroid</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Animals/OmegaMetroid/RT_OmegaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
+			  <drawSize>3.2</drawSize>
 			  <shadowData>
 				<volume>(0.2, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.55)</offset>
@@ -215,7 +242,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/OmegaMetroid/RT_Desiccated_OmegaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
+			  <drawSize>3.2</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
@@ -223,7 +250,7 @@
 			<labelPlural>omega metroid</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Animals/OmegaMetroid/RT_OmegaMetroid</texPath>
-			  <drawSize>3</drawSize>
+			  <drawSize>3.2</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.6)</offset>
@@ -231,7 +258,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/OmegaMetroid/RT_Desiccated_OmegaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
+			  <drawSize>3.2</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
@@ -239,7 +266,7 @@
 			<labelPlural>omega metroid</labelPlural>
 			<bodyGraphicData>
 			  <texPath>Animals/OmegaMetroid/RT_OmegaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
+			  <drawSize>3.2</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
 				<offset>(0, 0, -0.6)</offset>
@@ -247,7 +274,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Animals/OmegaMetroid/RT_Desiccated_OmegaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
+			  <drawSize>3.2</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		</lifeStages>
@@ -287,7 +314,4 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
-  
-  	<!-- Stunted Omega Metroid, which simply exists for consistency. -->
-
 </Defs>

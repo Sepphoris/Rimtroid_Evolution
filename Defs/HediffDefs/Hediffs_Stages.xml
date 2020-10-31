@@ -273,7 +273,7 @@
     <description>A creature of remarkable rarity, Queen Metroids are the heart of any swarm. Due to their mass, they have reverted back to their quadpedal stance. Several small chambers are located on the back of the shell, used for the care of metroid larvae. While Queens are never seen in combat, their towering height, thick armor, and devastating inferno attacks, their lethality is easily leagues above (almost) any other metroids in existance.</description>
     <stages>
       <li>
-		<hungerRateFactorOffset>1</hungerRateFactorOffset>
+		<hungerRateFactorOffset>1.4</hungerRateFactorOffset>
 		<restFallFactorOffset>0.8</restFallFactorOffset>
 			<capMods>
 				<li>

@@ -10,10 +10,11 @@
             <depth>Outside</depth>
             <parts>
                 <!-- Head, and the corresponding parts -->
+                <!--Head is separate from the eyes and mouth parts, since it is conceptual-->
                 <li>
-                    <def>Head</def>
+                    <def>RT_Head</def>
                     <customLabel>head</customLabel>
-                    <coverage>0.25</coverage>
+                    <coverage>0</coverage>
                     <groups>
                         <li>UpperHead</li>
                         <li>FullHead</li>
@@ -135,7 +136,7 @@
                 </li>
                 <!-- Misc Parts-->
                 <li>
-                    <def>RT_Shell</def>
+                    <def>Shell</def>
                     <customLabel>shell</customLabel>
                     <coverage>0.30</coverage>
                     <groups>

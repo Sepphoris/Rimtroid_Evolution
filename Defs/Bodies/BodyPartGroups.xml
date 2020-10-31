@@ -2,7 +2,7 @@
 <Defs>
 
   <bodyPartGroupDef>
-    <defName>RT_Tail</defName>
+    <defName>Tail</defName>
     <label>tail</label>
   </bodyPartGroupDef>
   

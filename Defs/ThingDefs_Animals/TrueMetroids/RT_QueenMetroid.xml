@@ -25,7 +25,7 @@
 			<MeatAmount>0</MeatAmount>
 			<PainShockThreshold>1</PainShockThreshold>
 		</statBases>
-		<uiIconScale>1.35</uiIconScale>
+		  <uiIconScale>1.35</uiIconScale>
 
 
 		<!-- Attacks -->
@@ -35,7 +35,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>10</power>
+				<power>25</power>
 				<armorPenetration>0.7</armorPenetration>
 				<cooldownTime>3</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
@@ -46,7 +46,7 @@
 					<li>Stab</li>
 					<li>RT_Lifedrain</li>
 				</capacities>
-				<power>12</power>
+				<power>30</power>
 				<armorPenetration>0.7</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -56,7 +56,7 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>16</power>
+				<power>20</power>
 				<armorPenetration>0.9</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
@@ -66,7 +66,7 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>16</power>
+				<power>20</power>
 				<armorPenetration>0.9</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
@@ -76,10 +76,10 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>14</power>
+				<power>15</power>
 				<armorPenetration>0.5</armorPenetration>
 				<cooldownTime>3.5</cooldownTime>
-				<linkedBodyPartsGroup>RT_Tail</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>
 				<!-- <surpriseAttack>
 					<extraMeleeDamages>
 						<li>
@@ -94,11 +94,38 @@
 			<li Class="RT_Rimtroid.CompProperties_SpawnerAdv">
 				<pawnKindToSpawn>RT_MetroidLarvae</pawnKindToSpawn>
 				<spawnCount>2</spawnCount>
-				<spawnIntervalRange>900~1500</spawnIntervalRange>
+				<spawnIntervalRange>1500~1800</spawnIntervalRange>
 				<maxPawnCount>8</maxPawnCount>
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
 			</li>
+    	<li Class="DD.CompProperties_HostileResponse">
+			<compClass>DD.CompHostileResponse</compClass>
+			<initialHostility>Aggressive</initialHostility>
+			<options>
+				<li>
+					<type>Aggressive</type>
+					<label>Aggro</label>
+					<description>Really mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+				</li>
+				<li>
+					<type>Defensive</type>
+					<label>Defo</label>
+					<description>Not that mean.</description>
+					<iconPath></iconPath>
+					<disableMessage>Defensive and disabled.</disableMessage>
+				</li>
+				<li>
+					<type>Passive</type>
+					<label>Passive</label>
+					<description>Too forgiving.</description>
+					<iconPath></iconPath>
+					<disableMessage>Passive and disabled.</disableMessage>
+				</li>
+			</options>
+		  </li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -117,7 +144,7 @@
 			<herdAnimal>true</herdAnimal>
 			<body>RT_QueenBody</body>
 			<baseBodySize>6</baseBodySize>
-			<baseHealthScale>3</baseHealthScale>
+			<baseHealthScale>6</baseHealthScale>
 			<baseHungerRate>2.5</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
@@ -208,7 +235,7 @@
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>14</drawSize>
+					<drawSize>10</drawSize>
 					<shadowData>
 						<volume>(0.2, 0.2, 0.2)</volume>
 						<offset>(0, 0, -0.55)</offset>
@@ -216,7 +243,7 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
-					<drawSize>14</drawSize>
+					<drawSize>10</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 			<li>
@@ -224,7 +251,7 @@
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>14</drawSize>
+					<drawSize>10</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
 						<offset>(0, 0, -0.6)</offset>
@@ -232,7 +259,7 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>14</drawSize>
+					<drawSize>10</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 			<li>
@@ -240,7 +267,7 @@
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>14</drawSize>
+					<drawSize>10</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
 						<offset>(0, 0, -0.6)</offset>
@@ -248,7 +275,7 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
-					<drawSize>14</drawSize>
+					<drawSize>10</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
@@ -288,7 +315,4 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
-
-	<!-- Stunted Queen Metroid, which simply exists for consistency. -->
-
 </Defs>
