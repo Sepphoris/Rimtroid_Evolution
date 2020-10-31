@@ -8,15 +8,16 @@
 		<defName>RT_MetroidLarvae</defName>
 		<label>Metroid</label>
 
-		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
+		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		<statBases>
 		
 	<!-- Internal Stats -->
 		  <ToxicSensitivity>0</ToxicSensitivity>
 		  <PsychicSensitivity>0</PsychicSensitivity>
-		  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <Flammability>0</Flammability>
+		  <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-		  <ArmorRating_Heat>0.8</ArmorRating_Heat>
+		  <ArmorRating_Heat>1</ArmorRating_Heat>
 		  <MoveSpeed>2</MoveSpeed>
 		  <MarketValue>120</MarketValue>
 		  <ComfyTemperatureMin>12</ComfyTemperatureMin>
@@ -31,10 +32,9 @@
 				<label>ram</label>
 				<capacities>
 				  <li>Blunt</li>
-				  <li>RT_Lifedrain</li>
 				</capacities>
-				<power>2</power>
-				<cooldownTime>2.5</cooldownTime>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -43,7 +43,7 @@
 					<li>Scratch</li>
 					<li>RT_Lifedrain</li>
 				</capacities>
-				<power>2</power>
+				<power>5</power>
 				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>

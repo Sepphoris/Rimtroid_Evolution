@@ -14,15 +14,16 @@
 	<!-- Internal Stats -->
 		  <ToxicSensitivity>0</ToxicSensitivity>
 		  <PsychicSensitivity>0</PsychicSensitivity>
-		  <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-		  <ArmorRating_Heat>0.8</ArmorRating_Heat>
+      <Flammability>0</Flammability>
+		  <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+		  <ArmorRating_Heat>2</ArmorRating_Heat>
 		  <MoveSpeed>2</MoveSpeed>
 		  <MarketValue>600</MarketValue>
 		  <ComfyTemperatureMin>0</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
 		  <MeatAmount>0</MeatAmount>
-		<PainShockThreshold>0.95</PainShockThreshold>
+		<PainShockThreshold>1</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
 		
@@ -33,7 +34,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>10</power>
+				<power>15</power>
 				<armorPenetration>0.7</armorPenetration>
 				<cooldownTime>3</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
@@ -44,7 +45,7 @@
 					<li>Stab</li>
 					<li>RT_Lifedrain</li>
 				</capacities>
-				<power>12</power>
+				<power>20</power>
 				<armorPenetration>0.7</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
@@ -54,7 +55,7 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>16</power>
+				<power>18</power>
 				<armorPenetration>0.9</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
@@ -64,7 +65,7 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>16</power>
+				<power>18</power>
 				<armorPenetration>0.9</armorPenetration>
 				<cooldownTime>2.5</cooldownTime>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
@@ -74,7 +75,7 @@
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>25</power>
+				<power>18</power>
 				<armorPenetration>0.5</armorPenetration>
 				<cooldownTime>3.5</cooldownTime>
 				<linkedBodyPartsGroup>Tail</linkedBodyPartsGroup>

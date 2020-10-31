@@ -14,9 +14,10 @@
 	<!-- Internal Stats -->
 		  <ToxicSensitivity>0</ToxicSensitivity>
 		  <PsychicSensitivity>0</PsychicSensitivity>
-		  <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
-		  <ArmorRating_Heat>0.8</ArmorRating_Heat>
+      <Flammability>0</Flammability>
+		  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+		  <ArmorRating_Heat>2</ArmorRating_Heat>
 		  <MoveSpeed>2</MoveSpeed>
 		  <MarketValue>800</MarketValue>
 		  <ComfyTemperatureMin>3</ComfyTemperatureMin>
@@ -43,8 +44,8 @@
 					<li>Stab</li>
 					<li>RT_Lifedrain</li>
 				</capacities>
-				<power>14</power>
-				<cooldownTime>3</cooldownTime>
+				<power>18</power>
+				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -52,8 +53,9 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>10</power>
-				<cooldownTime>1.5</cooldownTime>
+				<power>12</power>
+				<cooldownTime>1</cooldownTime>
+        <chanceFactor>1.3</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -61,8 +63,9 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>10</power>
-				<cooldownTime>1.5</cooldownTime>
+				<power>12</power>
+				<cooldownTime>1</cooldownTime>
+        <chanceFactor>1.3</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 		</tools>
