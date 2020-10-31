@@ -3,7 +3,7 @@
 	<ThingDef ParentName="OrganicProductBase">
 		<defName>RT_MetroidGel</defName>
 		<label>metroid gel</label>
-		<description>Soft, almost tasteless gel that is surprisingly nutritious. Alongside forming the metroid nucleus, it also forms most of the covered body innards. The proteins within it allow it to be used as an alternative to meat.</description>
+		<description>Slimy, disgusting, tasteless gel, harvested from the metroid nucleus. Despite it being an extremely unappetizing food source, the proteins within it allow it to be used as an alternative to meat.</description>
 		<graphicData>
 			<texPath>Things/AnimalProduct/RT_MetroidGel</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -18,7 +18,8 @@
 		<ingestible>
       <foodType>Meat</foodType>
       <preferability>DesperateOnly</preferability>
-      <specialThoughtDirect>AteRawFood</specialThoughtDirect>
+	    <tasteThought>RT_AteRawGel</tasteThought>
+	    <specialThoughtAsIngredient>RT_AteGelMeal</specialThoughtAsIngredient>	
 		</ingestible>
 		<thingCategories>
 			<li>MeatRaw</li>

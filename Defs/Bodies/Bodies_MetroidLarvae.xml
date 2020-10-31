@@ -9,7 +9,7 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-        <!--Larvae head is not conceptual due to no eyes-->
+        <!--Larvae head is not conceptual due to no exerior eyes-->
 				<li>
 					<def>Head</def>
 					<customLabel>membrane</customLabel>
@@ -29,32 +29,44 @@
 						<customLabel>front nucleus</customLabel>
 						<coverage>0.03</coverage>
 						<depth>Inside</depth>
-						</li>
+            <groups>
+							<li>Torso</li>
+            </groups>
+          </li>
 					<li>
 						<def>RT_LarvaeNucleus</def>
 						<customLabel>back nucleus</customLabel>
 						<coverage>0.03</coverage>
 						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
 					</li>
 					<li>
 						<def>RT_LarvaeNucleus</def>
 						<customLabel>left nucleus</customLabel>
 						<coverage>0.03</coverage>
 						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
 					</li>
 					<li>
 						<def>RT_LarvaeNucleus</def>
 						<customLabel>right nucleus</customLabel>
 						<coverage>0.03</coverage>
 						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
 					</li>
           <!--Nucleus that are used for sight-->
-          <li>
+          <!-- <li>
 						<def>RT_LarvaeSight</def>
 						<customLabel>Echolocation</customLabel>
 						<coverage>0</coverage>
 						<depth>Inside</depth>
-					</li>
+					</li> -->
 					<li>
 						<def>RT_LarvaeProtoplasm</def>
 						<customLabel>Protoplasm</customLabel>

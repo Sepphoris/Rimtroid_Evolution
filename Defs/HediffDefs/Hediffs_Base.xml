@@ -18,13 +18,27 @@
 	<makesSickThought>false</makesSickThought>
 	</HediffDef>
 
+  <!--===============Stunted Metroid Overview===============-->
+    <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_StuntedGrowthOverview</defName>
+    <label>Stunted</label>
+    <labelNoun>a stunted Metroid</labelNoun>
+    <description>Stunted metroids are metroids that are 'locked' into their current form, and prevented from growing into further stages. This is generally used for taking advantage of the unique properties a metroid stage may have, such as the ease of care for a Bantee, or the profitability of a Gamma. However, stunting can also occur as a health defect in the wild./n/nA stunted metroid may have a significant increase in value - or vice versa - depending on the metroid stage.</description>
+    <stages>
+      <li>
+	  		<becomeVisible>true</becomeVisible>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		  </li>
+    </stages>
+</HediffDef>
+
 	<!--===============Stunted Devalued Metroid - Larvae and Alpha===============-->
 
   <HediffDef ParentName="RT_MetroidStagesBad">
     <defName>RT_StuntedGrowthBad</defName>
     <label>Stunted</label>
     <labelNoun>a stunted Metroid</labelNoun>
-    <description>A Metroid that is incapable of evolving into further forms. While this is often done intentionally to 'lock' a metroid into a desired lifestage, stunting may also occur as a genetic defect. Stunted metroids have a decreased appetite (as they no longer need to grow), but eventual long-term genetic complications significantly decrease their overall life expectancy./n/n This metroid's value has decreased signiicantly, due to being locked out of more useful potential mutations.</description>
+    <description>A Metroid that is incapable of evolving into further forms. While this is often done intentionally to 'lock' a metroid into a desired lifestage, stunting may also occur as a genetic defect. Stunted metroids have a decreased appetite (as they no longer need to grow), but eventual long-term genetic complications significantly decrease their overall life expectancy./n/nThis metroid's value has decreased signiicantly, due to being locked out of more useful potential mutations.</description>
     <stages>
       <li>
 	  		<becomeVisible>true</becomeVisible>

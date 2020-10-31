@@ -100,6 +100,7 @@
 		<bleedRate>0</bleedRate>
 		<skinCovered>true</skinCovered>
 		<tags>
+      <li>SightSource</li>
 			<li>ConsciousnessSource</li>
 			<li>BreathingSource</li>
 			<li>MetabolismSource</li>
@@ -107,7 +108,7 @@
 	</BodyPartDef>
 
   	<BodyPartDef>
-    <!--Exists so larvae cannot be temporarily blinded by particles such as sand or dirt-->
+    <!--Exists so larvae cannot be blinded-->
     <conceptual>true</conceptual>
 		<defName>RT_LarvaeSight</defName>
 		<label>nuclei</label>

@@ -15,6 +15,7 @@
 		<description>Inertia, known scientifically as as 'S070-H', is an injected drug specifically designed to interfere with the unique, cell-like body structure that all metroids possess. This drug halts the adaptive growth of metroids, and permanently supresses the mutation potential metroids are known for, isolating them into their current form. \n\nInertia is essentially a poison to anything else; non-lethal, but it will compromise immune systems for a short period of time.</description>
 		<descriptionHyperlinks>
 			<HediffDef>RT_InertiaPoisoning</HediffDef>
+      <HediffDef>RT_StuntedGrowthOverview</HediffDef>
 		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Drugs/Inertia</texPath>
@@ -24,7 +25,7 @@
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<rotatable>false</rotatable>
 		<statBases>
-			<WorkToMake>400</WorkToMake>
+			<WorkToMake>350</WorkToMake>
 			<MarketValue>28</MarketValue>
 			<Mass>0.02</Mass>
 		</statBases>
@@ -36,7 +37,7 @@
 			<ingestSound>Ingest_Inject</ingestSound>
 			<ingestHoldOffsetStanding>
 				<northDefault>
-					<offset>(0.18,0,0)</offset>
+					<offset>(0,0,0)</offset>
 				</northDefault>
 			</ingestHoldOffsetStanding>
 			<ingestCommandString>Inject {0}</ingestCommandString>
@@ -50,27 +51,29 @@
 				</li>
       </outcomeDoers>
 		</ingestible>
-			<!--<outcomeDoers>
-				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>RT_InertiaPoisoning</hediffDef>
-					<severity>0.8</severity>
-				</li>
-			</outcomeDoers> -->
-		<!-- <recipeMaker>
-			<productCount>1</productCount>
-			<recipeUsers>
-				<li>DrugLab</li>
-			</recipeUsers>
-		</recipeMaker>
 		<costList>
 			<Steel>3</Steel>
 			<Uranium>1</Uranium>
-		</costList> -->
+      <RT_MetroidGel>4</RT_MetroidGel>
+		</costList>
+		<recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <workAmount>350</workAmount>
+			<productCount>1</productCount>
+			<targetCountAdjustment>2</targetCountAdjustment>
+			<bulkRecipeCount>4</bulkRecipeCount>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_CookMeal</soundWorking>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Intellectual>8</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
 		<comps>
 			<li Class="CompProperties_Drug">
-				<chemical>RT_InertiaDrug</chemical>
-				<addictiveness>0</addictiveness>
-				<needLevelOffset>0</needLevelOffset>
 				<listOrder>40</listOrder>
 			</li>
 		</comps>
@@ -79,15 +82,13 @@
 		</tradeTags>
 	</ThingDef>
 
-
-
 	<!-- Inertia HediffDef -->
 
 	<HediffDef>
     	<defName>RT_InertiaPoisoning</defName>
     	<hediffClass>HediffWithComps</hediffClass>
     	<label>Inertia Poisoning</label>
-    	<description>Interia was specifically enginered to attack, alter, and halt the growth patterns of a metroid. If this was used on a Metroid, all should be well. If not....</description>
+    	<description>Interia was specifically enginered to attack, alter, and halt the growth patterns of a metroid. However, when used on any other life form, it's results in nothing but agony for the next several hours.</description>
     	<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     	<scenarioCanAdd>false</scenarioCanAdd>
     	<maxSeverity>1.0</maxSeverity>

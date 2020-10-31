@@ -13,7 +13,7 @@
     <label>metroid egg (unfert.)</label>
     <description>An unfertilized metroid egg. It can be eaten raw, but it's much, much better cooked.</description>
     <graphicData>
-      <texPath>Things/AnimalProduct/EggOval</texPath>
+      <texPath>Things/AnimalProduct/RT_MetroidEgg</texPath>
     </graphicData>
     <statBases>
       <MarketValue>30.0</MarketValue>
@@ -25,7 +25,7 @@
     <label>metroid egg (fert.)</label>
     <description>A fertilized metroid egg. If all goes well, it will hatch into a metroid larvae. It can be eaten raw, but it's much better cooked.</description>
    <graphicData>
-      <texPath>Things/AnimalProduct/RT_MetroidEgg1</texPath>
+      <texPath>Things/AnimalProduct/RT_MetroidEgg</texPath>
     </graphicData>
     <statBases>
       <MarketValue>60.0</MarketValue>
