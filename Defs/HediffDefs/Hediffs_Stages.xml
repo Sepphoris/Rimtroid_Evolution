@@ -15,15 +15,16 @@
     <defName>RT_BanteeState</defName>
     <label>Evolution (Bantee)</label>
     <labelNoun>a Bantee Metroid</labelNoun>
-    <description>A Metroid that has recently hatched from an untouched Metroid egg, also known as a 'Bantee Metroid'. Their affinity for attacking and draining life forms is still present, but Bantee Metroids are relatively much weaker, and much more impressionable.</description>
+    <description>A Metroid that has recently hatched from an untouched Metroid egg, also known as a 'Bantee Metroid'. Their affinity for attacking and draining life forms is still present, but Bantee Metroids are relatively much weaker, and much more impressionable./n/nBantees are very fragile, as their body functions haven't had (relatively) much time to develop.</description>
     <stages>
       <li>
-	  <hungerRateFactorOffset>-0.6</hungerRateFactorOffset>
-	  <restFallFactorOffset>0.8</restFallFactorOffset>
+	      <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.8</restFallFactorOffset>
+        <naturalHealingFactor>0</naturalHealingFactor>
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.2</offset>
+            <offset>-0.3</offset>
           </li>
         </capMods>
       </li>
@@ -36,20 +37,33 @@
     <defName>RT_LarvaeState</defName>
     <label>Evolution (Larva)</label>
     <labelNoun>a Metroid Larva</labelNoun>
-    <description>The third stage of a Metroid's growth. Many Metroids stagnate for a long time within this stage, making it the most common to see. Metroid Larvae are - by far - the most resource demanding, but also have the most mutation potential out of all other stages.</description>
+    <description>The third stage of a Metroid's growth. Many Metroids stagnate for a long time within this stage, making it the most common to see. Metroid Larvae are - by far - the most resource demanding, but also have the most mutation potential out of all other stages./n/nLarvae are not fully grown, making some of their bodily functions slightly suffer.</description>
     <stages>
       <li>
-	  <hungerRateFactorOffset>-0.3</hungerRateFactorOffset>
-	  <restFallFactorOffset>0.3</restFallFactorOffset>
+	      <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>0</naturalHealingFactor>
 	    <capMods>
 				<li>
 					<capacity>Eating</capacity>
-					<offset>-0.4</offset>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
 				</li>
 				<li>
 					<capacity>Metabolism</capacity>
 					<offset>-0.2</offset>
 				</li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.4</offset>
+          </li>
 		</capMods>
       </li>
     </stages>
@@ -83,18 +97,31 @@
     <defName>RT_AlphaState</defName>
     <label>Evolution (Alpha)</label>
     <labelNoun>an Alpha Metroid</labelNoun>
-    <description>The fourth stage of a Metroid's growth, and arguably the most dramatic. Metroids are arguably at their weakest within this stage, but is required before the truly dangerous stages can be presented./n/This stage, and the stages that follow, are considered "True" Metroids; as their appearance and design is a perfect replication of how they evolve on their homeworld. Larvae do not evolve into this stage - or past it - while outside their native environment, making artificial habitats essential in order to continue growing them.</description>
+    <description>The fourth stage of a Metroid's growth, and arguably the most dramatic. Metroids are arguably at their weakest within this stage, but is required before the truly dangerous stages can be presented./n/By this stage, metroids have had sufficient time for their health to develop, and will continue to evolve as time goes on.</description>
     <stages>
       <li>
-	  <hungerRateFactorOffset>-0.1</hungerRateFactorOffset>
+	  <hungerRateFactorOffset>0.1</hungerRateFactorOffset>
 	  <restFallFactorOffset>0.2</restFallFactorOffset>
+    <naturalHealingFactor>1</naturalHealingFactor>
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
 					<offset>0</offset>
 				</li>
+      	<li>
+					<capacity>Eating</capacity>
+					<offset>0</offset>
+				</li>
 				<li>
 					<capacity>Sight</capacity>
+					<offset>0.1</offset>
+				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
 					<offset>0.1</offset>
 				</li>
 				<li>
@@ -137,19 +164,36 @@
     <description>The fifth stage of a Metroid's growth. The Gamma Metroid is incredibly vertisile, being able to both walk and fly, hit hard, take punishment, and - most importantly - the only Metroid that can be utilized as a farm animal. A few of these can create a steady trade income, as long as they were properly trained during the infant stage./n/nLike the Alpha Metroid before it, this is a "True" Metroid, and will not evolve unless within an artificial ecosystem that mirrors it's homeworld.</description>
     <stages>
       <li>
-	  <hungerRateFactorOffset>0</hungerRateFactorOffset>
+	  <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
 	  <restFallFactorOffset>0</restFallFactorOffset>
+    <naturalHealingFactor>1.5</naturalHealingFactor>
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0.4</offset>
+					<offset>0.2</offset>
+				</li>
+      	<li>
+					<capacity>Eating</capacity>
+					<offset>0.1</offset>
 				</li>
 				<li>
 					<capacity>Sight</capacity>
 					<offset>0.3</offset>
 				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
 				<li>
 					<capacity>Metabolism</capacity>
+					<offset>0.2</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
 					<offset>0.2</offset>
 				</li>
 		</capMods>
@@ -190,18 +234,39 @@
       <li>
 	  <hungerRateFactorOffset>0.4</hungerRateFactorOffset>
 	  <restFallFactorOffset>0.1</restFallFactorOffset>
+    <naturalHealingFactor>1.5</naturalHealingFactor>
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
 					<offset>0.8</offset>
 				</li>
+      	<li>
+					<capacity>Eating</capacity>
+					<offset>0.3</offset>
+				</li>
 				<li>
 					<capacity>Sight</capacity>
 					<offset>0.4</offset>
 				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.2</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.3</offset>
+				</li>
 				<li>
 					<capacity>Metabolism</capacity>
-					<offset>0.2</offset>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>0.3</offset>
 				</li>
 		</capMods>
       </li>
@@ -239,24 +304,41 @@
     <description>The final stage for all "True" Metroids, save for the extreme few that become Queens. The back legs of the Metroid are easily strong enough to hold it upright, allowing it to use it's forward limbs as powerful arms for manipulation and attacking. Be wary of an Omega in combat; they tend to use their fiery attacks quite often, and don't care much about collateral damage.</description>
     <stages>
       <li>
-		<hungerRateFactorOffset>0.6</hungerRateFactorOffset>
+		<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
 		<restFallFactorOffset>0.2</restFallFactorOffset>
+    <naturalHealingFactor>1.5</naturalHealingFactor>
 			<capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0.2</offset>
+					<offset>0.5</offset>
+				</li>
+      	<li>
+					<capacity>Eating</capacity>
+					<offset>0.4</offset>
 				</li>
 				<li>
 					<capacity>Sight</capacity>
 					<offset>0.5</offset>
 				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>0.2</offset>
+				</li>
 				<li>
 					<capacity>Manipulation</capacity>
+					<offset>0.5</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.6</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
 					<offset>0.2</offset>
 				</li>
 				<li>
 					<capacity>Metabolism</capacity>
-					<offset>0.2</offset>
+					<offset>0.4</offset>
 				</li>
 			</capMods>
       </li>
@@ -273,20 +355,37 @@
     <description>A creature of remarkable rarity, Queen Metroids are the heart of any swarm. Due to their mass, they have reverted back to their quadpedal stance. Several small chambers are located on the back of the shell, used for the care of metroid larvae. While Queens are never seen in combat, their towering height, thick armor, and devastating inferno attacks, their lethality is easily leagues above (almost) any other metroids in existance.</description>
     <stages>
       <li>
-		<hungerRateFactorOffset>1.4</hungerRateFactorOffset>
+		<hungerRateFactorOffset>0.8</hungerRateFactorOffset>
 		<restFallFactorOffset>0.8</restFallFactorOffset>
+    <naturalHealingFactor>2</naturalHealingFactor>
 			<capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0.5</offset>
+					<offset>2</offset>
+				</li>
+      	<li>
+					<capacity>Eating</capacity>
+					<offset>0.8</offset>
 				</li>
 				<li>
 					<capacity>Sight</capacity>
+					<offset>1</offset>
+				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>0.5</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.8</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
 					<offset>0.5</offset>
 				</li>
 				<li>
 					<capacity>Metabolism</capacity>
-					<offset>0.4</offset>
+					<offset>0.5</offset>
 				</li>
 			</capMods>
       </li>

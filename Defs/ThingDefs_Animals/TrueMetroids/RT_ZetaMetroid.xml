@@ -107,8 +107,8 @@
 	<!-- Race stats -->		
 		<race>
       <!-- Overriding animal think tree -->
-    <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
-    <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+      <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+      <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 		  <bloodDef>Filth_BloodInsect</bloodDef>
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_ZetaBody</body>
@@ -293,7 +293,7 @@
 					<li>
 						<key>0.4</key>
 						<value>0</value>
-					</li>-->
+					</li>
 				</hungerBerserkChanges>
 				<chanceToBecomeWildIfBerserkAndTamed>0.4</chanceToBecomeWildIfBerserkAndTamed>
 			</li>

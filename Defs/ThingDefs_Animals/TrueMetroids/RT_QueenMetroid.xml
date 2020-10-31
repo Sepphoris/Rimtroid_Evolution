@@ -18,7 +18,7 @@
 			<ArmorRating_Blunt>0.9</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 			<ArmorRating_Heat>0.9</ArmorRating_Heat>
-			<MoveSpeed>5</MoveSpeed>
+			<MoveSpeed>2</MoveSpeed>
 			<MarketValue>800</MarketValue>
 			<ComfyTemperatureMin>-20</ComfyTemperatureMin>
 			<ComfyTemperatureMax>200</ComfyTemperatureMax>
@@ -140,12 +140,15 @@
 		<!-- Race stats -->
 
 		<race>
+      <!-- Overriding animal think tree -->
+      <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+      <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 			<bloodDef>Filth_BloodInsect</bloodDef>
 			<herdAnimal>true</herdAnimal>
 			<body>RT_QueenBody</body>
 			<baseBodySize>6</baseBodySize>
 			<baseHealthScale>6</baseHealthScale>
-			<baseHungerRate>2.5</baseHungerRate>
+			<baseHungerRate>1</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
         <li>RT_GrantAbilities</li>
