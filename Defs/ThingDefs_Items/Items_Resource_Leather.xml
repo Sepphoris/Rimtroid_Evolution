@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  	<ThingDef ParentName="LeatherBase">
+  	<ThingDef ParentName="ResourceBase">
 		<defName>RT_MetroidChitin</defName>
 		<label>metroid chitin</label>
 		<description>Plates of thick, durable, and exceptionally heavy chitin, used by most metroid stages. The sheer weight is believed to be the reason why all Metroids eventually stop flying.</description>
@@ -11,16 +11,16 @@
     </graphicData>
 		<statBases>
 			<MarketValue>12</MarketValue>
-      <Mass>0.75</Mass>
+      <Mass>0.1</Mass>
       <Flammability>0</Flammability>
       <StuffPower_Armor_Sharp>0.48</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.92</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>1.40</StuffPower_Armor_Heat>
+      <StuffPower_Armor_Heat>1.8</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>90</StuffPower_Insulation_Heat>
 		</statBases>
     <thingCategories>
-        <li>Textiles</li>
+        <li>ResourcesRaw</li>
     </thingCategories>
 		<stuffProps>
 			<commonality>0.04</commonality>
@@ -29,4 +29,38 @@
 			</statFactors>
 		</stuffProps>
 	</ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>RT_BioSilk</defName>
+    <label>biosilk</label>
+    <description>Green, slightly transparent silk, made from refining the resinous substance that most metroids produce. It is provides exceptional heat insulation, but is more often used as a symbol of wealth than anything else. The refining process produces a faint hexagonal pattern, but isn't generally visible when weaved into objects.</description>
+		<graphicData>
+			<texPath>Things/Resource/RT_BioSilk</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>4</DeteriorationRate>
+      <Mass>0.1</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>42.0</MarketValue>
+      <StuffPower_Armor_Heat>1.4</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Heat>180</StuffPower_Insulation_Heat>
+    </statBases>
+    <thingCategories>
+      <li>Leathers</li>
+      <li>Textiles</li>
+    </thingCategories>
+    <stuffProps>
+      <color>(140,170,135)</color>
+      <commonality>0.0025</commonality>
+      <statOffsets>
+        <Beauty>20</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.5</MaxHitPoints>
+        <Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
 </Defs>

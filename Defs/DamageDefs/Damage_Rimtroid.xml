@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<DamageDef ParentName="Bite">
-		<defName>Rimtroid_Bite</defName>
-		<label>bite</label>
-		<hediff>ChemicalBurn</hediff>
+  <!--===============Ability defs===============-->
+
+  <!--Zeta Acid Spit-->
+	<DamageDef>
+		<defName>RT_AcidSpit</defName>
+		<label>acid spit</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been corroded to death.</deathMessage>
+		<hediff>RT_AcidBurn</hediff>
+		<additionalHediffs>
+			<li>
+				<hediff>RT_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+
+	<DamageDef>
+		<defName>RT_SecondaryAcidBurn</defName>
+		<label>acid burn</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been corroded to death.</deathMessage>
+		<hediff>RT_AcidBurn</hediff>
+
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
 	</DamageDef>
+
+  <!--===============Life Draining; applies the damage, alongside the hediff===============-->
 	
     <DamageDef>
         <defName>RT_Lifedrain</defName>
@@ -31,6 +54,8 @@
         <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
     </DamageDef>
 	
+<!--===============Life Draining; same as above, but for Bantee===============-->
+
     <DamageDef>
         <defName>RT_LifedrainBantee</defName>
         <label>life drain</label>
@@ -39,7 +64,7 @@
         <additionalHediffs>
             <li>
                 <hediff>RT_LifeDrainSickness</hediff>
-                <severityPerDamageDealt>0.04</severityPerDamageDealt>
+                <severityPerDamageDealt>0.02</severityPerDamageDealt>
             </li>
         </additionalHediffs>
         <workerClass>DamageWorker_AddInjury</workerClass>
@@ -55,6 +80,8 @@
         <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
     </DamageDef>
 	
+<!--===============Misc damage defs===============-->
+
 	<DamageDef Name="Scratch">
 		<defName>RT_BanteeScratch</defName>
 		<label>scratch</label>
