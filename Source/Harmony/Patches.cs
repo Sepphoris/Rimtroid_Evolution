@@ -66,12 +66,12 @@ namespace RT_Rimtroid
             if (options != null)
             {
                 var berserkChance = GetBerserkChance(__instance.CurLevelPercentage, options.hungerBerserkChanges);
-                Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevelPercentage, true);
+                //Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevelPercentage, true);
                 if (berserkChance > 0)
                 {
                     if (!___pawn.InMentalState && Rand.Chance(berserkChance))
                     {
-                        Log.Message(___pawn + " gets berserk state", true);
+                        //Log.Message(___pawn + " gets berserk state", true);
                         if (___pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forceWake: true))
                         {
                             if (___pawn.Faction == Faction.OfPlayer && Rand.Chance(options.chanceToBecomeWildIfBerserkAndTamed))
@@ -83,7 +83,7 @@ namespace RT_Rimtroid
                 }
                 else if (___pawn.mindState.mentalStateHandler.CurStateDef == MentalStateDefOf.Berserk)
                 {
-                    Log.Message(___pawn + " recovers from berserk state", true);
+                    //Log.Message(___pawn + " recovers from berserk state", true);
                     ___pawn.MentalState.RecoverFromState();
                 }
             }

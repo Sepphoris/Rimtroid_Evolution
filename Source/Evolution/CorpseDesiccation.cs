@@ -16,27 +16,27 @@ namespace RT_Rimtroid
         {
             if (dinfo.HasValue)
             {
-                Log.Message("dinfo.HasValue (fifth check)");
+                //Log.Message("dinfo.HasValue (fifth check)");
                 if (dinfo.Value.Instigator != null)
                 {
-                    Log.Message("dinfo.Value.Instigator (sixth check)");
+                    //Log.Message("dinfo.Value.Instigator (sixth check)");
                     Thing inst = dinfo.Value.Instigator;
                     RT_DesiccatorExt desiccator = inst.def.GetModExtension<RT_DesiccatorExt>();
                     if (desiccator != null)
                     {
-                        Log.Message("desiccator = null (seventh check)");
+                        //Log.Message("desiccator = null (seventh check)");
                         if (desiccator.RT_DesiccatedDef != null)
                         {
                             FieldInfo corpse = typeof(Pawn).GetField("Corpse", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.GetField);
                             Traverse.Create(__instance);
                             corpse.SetValue(__instance, ThingMaker.MakeThing(desiccator.RT_DesiccatedDef));
-                            Log.Message("corpse.setvalue (eighth check)");
+                            //Log.Message("corpse.setvalue (eighth check)");
                         }
                         else
                         {
                             CompRottable compRottable = __instance.Corpse.TryGetComp<CompRottable>();
                             compRottable.RotImmediately();
-                            Log.Message("Rotted (Third statement)");
+                            Log.Message("Corpse Rotted");
                         }
                     }
                 }

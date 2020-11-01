@@ -60,7 +60,7 @@ namespace RT_Rimtroid
 			Pawn pawn2 = foodSource as Pawn;
 			if (pawn2 != null)
 			{
-				Log.Message("Predator hunting.");
+				Log.Message("Metroid is hunting.");
 				Job job = JobMaker.MakeJob(JobDefOf.AttackMelee, pawn2);
 				job.killIncappedTarget = false;
 				return job;
