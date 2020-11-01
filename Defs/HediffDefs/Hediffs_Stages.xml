@@ -8,6 +8,16 @@
     <HediffDef Name="RT_MetroidStagesBad" ParentName="RT_BadHediff" Abstract="True">
     <chronic>true</chronic>
   </HediffDef>
+<!--===============
+Quick notes:
+Under <PossibleEvolutionPaths>, make surethe <Age> tag is one year ABOVE the maximum
+age range defined in HediffGivers.xml. Also make sure that age ranges match in the
+proper race defs. If the ages cross over, a pawn will have wrong graphics, the
+wrong hediff/previous hediff, or both.
+
+The <whitelists> tag within <comps> allows certain hediffs to occur. Patches need
+to be made to allow hediff effects from other mods.
+===============-->
   
 <!--===============Bantee Metroid===============-->
 
@@ -137,7 +147,7 @@
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>200</Age>
+				<Age>200</Age> <!--Make sure age matches in HediffGivers and in Race defs-->
 				<Kind>RT_GammaMetroid</Kind>
 			</li>
 		</PossibleEvolutionPaths>

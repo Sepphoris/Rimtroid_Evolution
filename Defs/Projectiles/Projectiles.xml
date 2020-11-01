@@ -63,7 +63,7 @@
 			<speed>28</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>2</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<soundExplode>SoundFireball</soundExplode>
 		</projectile>
 	</ThingDef>
@@ -72,7 +72,7 @@
  	<ThingDef>
 		<defName>RT_ZetaAcid</defName>
 		<thingClass>DD.AnimalProjectile</thingClass>
-		<label>Acidic Glob</label>
+		<label>acidic spit</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>MoteOverhead</altitudeLayer>

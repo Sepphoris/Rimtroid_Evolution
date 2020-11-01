@@ -112,7 +112,7 @@
         <description>Fire an acidic glob at a target</description>
         <abilityClass>DD.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-        <cooldownTicksRange>1000~1200</cooldownTicksRange>
+        <cooldownTicksRange>1200~1600</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <verbProperties>

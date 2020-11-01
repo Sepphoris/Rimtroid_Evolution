@@ -20,6 +20,7 @@
 		<isRanged>true</isRanged>
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<armorCategory>Heat</armorCategory>
+    <defaultArmorPenetration>0.5</defaultArmorPenetration>
 	</DamageDef>
 
 	<DamageDef>
@@ -32,6 +33,7 @@
 
 		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 		<armorCategory>Heat</armorCategory>
+    <defaultArmorPenetration>0.5</defaultArmorPenetration>
 	</DamageDef>
 
   <!--===============Life Draining; applies the damage, alongside the hediff===============-->

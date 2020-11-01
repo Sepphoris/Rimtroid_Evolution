@@ -17,7 +17,7 @@
       <Flammability>0</Flammability>
 		  <ArmorRating_Blunt>1.2</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
-		  <ArmorRating_Heat>2</ArmorRating_Heat>
+		  <ArmorRating_Heat>1.5</ArmorRating_Heat>
 		  <MoveSpeed>2</MoveSpeed>
 		  <MarketValue>600</MarketValue>
 		  <ComfyTemperatureMin>0</ComfyTemperatureMin>
