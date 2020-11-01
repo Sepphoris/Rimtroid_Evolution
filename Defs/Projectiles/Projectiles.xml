@@ -86,7 +86,7 @@
 		<projectile>
 			<flyOverhead>false</flyOverhead>
 			<speed>28</speed>
-			<damageDef>Bullet</damageDef>
+			<damageDef>RT_AcidSpit</damageDef>
 			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>2</damageAmountBase>
 			<soundExplode>SoundAcid</soundExplode>

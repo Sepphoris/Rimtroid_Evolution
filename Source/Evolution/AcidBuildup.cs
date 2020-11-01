@@ -29,7 +29,7 @@ namespace RT_Rimtroid
                 }
                 else
                 {
-                    pawn.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed("AA_SecondaryAcidBurn"), 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+                    pawn.TakeDamage(new DamageInfo(DefDatabase<DamageDef>.GetNamed("RT_SecondaryAcidBurn"), 1f, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
                     tickCounter = 0;
 
                 }

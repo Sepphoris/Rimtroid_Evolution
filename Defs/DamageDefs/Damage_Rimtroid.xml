@@ -15,6 +15,12 @@
 			<li>
 				<hediff>RT_AcidBuildup</hediff>
 				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+		<isRanged>true</isRanged>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+	</DamageDef>
 
 	<DamageDef>
 		<defName>RT_SecondaryAcidBurn</defName>

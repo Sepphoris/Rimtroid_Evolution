@@ -1,0 +1,21 @@
+ANIMAL DEFNAMES
+
+<defName>RT_MetroidLarvae</defName> - Standard Metroid Larvae
+
+
+DAMAGEDEF
+
+<defName>Rimtroid_Bite</defName> - standard metroid larvae bite
+<defName>Rimtroid_Siphon</defName> - metroid larvae life drain
+<defName>Rimtroid_PhazonDamage</defName> - damage done from phazon
+
+
+ADDITIONAL HEDIFFS
+
+<hediff>Rimtroid_DrainBuildup</hediff> - Pawn buildup from life drain
+<hediff>Rimtroid_PhazonSickness</hediff> - damage buildup from phazon attacks
+
+
+LINKS:
+https://discord.com/channels/214523379766525963/632790371256238120/772489460548894720
+	-Potential solution for making metals that only function as armor, and not be used as buildables.
