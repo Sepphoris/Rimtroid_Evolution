@@ -209,6 +209,9 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	<modExtensions>
+		<li Class="DD.LegacyModExtension">
+			<hasAbilities>true</hasAbilities>
+    </li>
     <!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>-->
 	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
@@ -276,9 +279,6 @@
 		  </li>
 		</lifeStages>
 		<modExtensions>
-		  <li Class="DD.LegacyModExtension">
-			  <hasAbilities>true</hasAbilities>
-      </li>
       <li Class="DD.VerbSettingExtension">
 			  <useExtendedVerbs>true</useExtendedVerbs>
 		  </li>

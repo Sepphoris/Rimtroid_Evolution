@@ -297,9 +297,6 @@
 			</li>
 		</lifeStages>
 		<modExtensions>
-		  <li Class="DD.LegacyModExtension">
-			  <hasAbilities>true</hasAbilities>
-		  </li>
       <li Class="DD.VerbSettingExtension">
 			  <useExtendedVerbs>true</useExtendedVerbs>
 		  </li>
