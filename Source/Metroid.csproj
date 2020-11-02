@@ -298,6 +298,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\LegacyModExtension.cs" />
+    <Compile Include="Core\Patch_DD_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />
     <Compile Include="Evolution\AcidCompProperties.cs" />
     <Compile Include="Evolution\AcidImmunityComp.cs" />
     <Compile Include="Core\AgeStage.cs" />

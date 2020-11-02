@@ -18,7 +18,7 @@
 	</ThingDef>
 
 
-	<!--Gamma Beam Abilities-->
+	<!--Gamma Abilities-->
 
 	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>
@@ -34,7 +34,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>2</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>4.5</beamWidth>
@@ -42,7 +42,7 @@
 	</ThingDef>
 
 
-	<!-- Zeta Beam Abilities -->
+	<!-- Zeta Abilities -->
 
  	<ThingDef>
 		<defName>RT_ZetaFireball</defName>
@@ -63,7 +63,7 @@
 			<speed>28</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>3</damageAmountBase>
+			<damageAmountBase>4</damageAmountBase>
 			<soundExplode>SoundFireball</soundExplode>
 		</projectile>
 	</ThingDef>
@@ -94,7 +94,7 @@
 	</ThingDef>
 
 
-	<!-- Omega Beam Abilities -->
+	<!-- Omega Abilities -->
 	
 	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_OmegaBeam</defName>
@@ -111,7 +111,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>2</damageAmountBase>
+			<damageAmountBase>6</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>3</beamWidth>
@@ -123,7 +123,7 @@
 	</ThingDef>
 
 
-	<!-- Queen Beam Abilities-->
+	<!-- Queen Abilities-->
 
 	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
 		<defName>RT_QueenBeam</defName>
@@ -140,7 +140,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>4</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>4</beamWidth>

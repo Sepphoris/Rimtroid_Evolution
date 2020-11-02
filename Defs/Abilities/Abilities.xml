@@ -13,7 +13,7 @@
       <cooldownTicksRange>1000~1200</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-      <iconPath>AnimalProjectile/DragonFire</iconPath>
+      <iconPath>AnimalProjectile/GammaBolt</iconPath>
       <verbProperties>
 <!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
         <verbClass>DD.Verb_CastAbility_Base</verbClass>
@@ -82,7 +82,7 @@
         <cooldownTicksRange>1000~1200</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <iconPath>AnimalProjectile/Firebolt</iconPath>
         <verbProperties>
 <!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
             <verbClass>DD.Verb_CastAbility_Base</verbClass>
@@ -125,8 +125,8 @@
 			      <li Class="DD.AbilityCompProperties_Cooldown">
               <compClass>DD.AbilityComp_Cooldown</compClass>
 				      <cooldownPool>ZetaAbilityPool</cooldownPool>
-				      <independent>false</independent>
-				      <resetsTimer>true</resetsTimer>
+				      <independent>true</independent>
+				      <resetsTimer>false</resetsTimer>
 			      </li>
           </comps>
       </AbilityDef>
@@ -140,7 +140,7 @@
         <cooldownTicksRange>1200~1600</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <iconPath>AnimalProjectile/Acidbolt</iconPath>
         <verbProperties>
           <verbClass>DD.Verb_CastAbility_Base</verbClass>
           <range>28</range>
@@ -182,8 +182,8 @@
 			      <li Class="DD.AbilityCompProperties_Cooldown">
               <compClass>DD.AbilityComp_Cooldown</compClass>
 				      <cooldownPool>ZetaAbilityPool</cooldownPool>
-				      <independent>false</independent>
-				      <resetsTimer>true</resetsTimer>
+				      <independent>true</independent>
+				      <resetsTimer>false</resetsTimer>
 			      </li>
         </comps>
       </AbilityDef>
@@ -199,7 +199,7 @@
         <cooldownTicksRange>1600~1200</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <iconPath>AnimalProjectile/Firebeam1</iconPath>
         <verbProperties>
           <verbClass>DD.Verb_CastAbility_Base</verbClass>
           <range>30</range>
@@ -228,8 +228,8 @@
                 <accuracyLong>0.30</accuracyLong>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_OmegaBeam</defaultProjectile>
-                <warmupTime>1</warmupTime>
-                <range>30</range>
+                <warmupTime>2.5</warmupTime>
+                <range>35</range>
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -258,7 +258,7 @@
         <cooldownTicksRange>1600~2000</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-        <iconPath>AnimalProjectile/DragonFire</iconPath>
+        <iconPath>AnimalProjectile/Firebeam1</iconPath>
         <verbProperties>
           <verbClass>DD.Verb_CastAbility_Base</verbClass>
           <range>45</range>
@@ -288,7 +288,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_QueenBeam</defaultProjectile>
                 <warmupTime>2.5</warmupTime>
-                <range>45</range>
+                <range>50</range>
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
