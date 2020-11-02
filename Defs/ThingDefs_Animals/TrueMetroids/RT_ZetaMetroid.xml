@@ -73,38 +73,52 @@
     	<li Class="DD.CompProperties_HostileResponse">
 			<compClass>DD.CompHostileResponse</compClass>
 			<initialHostility>Aggressive</initialHostility>
+      <controllableGizmo>false</controllableGizmo>
+      <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
 			<options>
 				<li>
 					<type>Aggressive</type>
-					<label>Aggro</label>
-					<description>Really mean.</description>
-					<iconPath></iconPath>
+					<label>Aggressive</label>
+					<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+					<iconPath>UI/AI/Attack</iconPath>
 					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
 				</li>
 				<li>
 					<type>Defensive</type>
-					<label>Defo</label>
-					<description>Not that mean.</description>
-					<iconPath></iconPath>
+					<label>Defensive</label>
+					<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+					<iconPath>UI/AI/Defense</iconPath>
 					<disableMessage>Defensive and disabled.</disableMessage>
 				</li>
 				<li>
 					<type>Passive</type>
-					<label>Passive</label>
-					<description>Too forgiving.</description>
-					<iconPath></iconPath>
+					<label>Pacifist</label>
+					<description>Flees from any hostile actions made against it, even by friendlies.</description>
+					<iconPath>UI/AI/Passive</iconPath>
 					<disableMessage>Passive and disabled.</disableMessage>
 				</li>
 			</options>
 		  </li>
-			<!--<li Class="CompProperties_UseEffect.cs">
+<!-- Defines the conditions for when to give the pawn an ability -->
+		  <li Class="DD.CompProperties_AbilityDefinition">
+			  <compClass>DD.CompAbilityDefinition</compClass>
+			  <abilities>
+			  	<li>
+					  <abilityDef>RT_ZetaFireball</abilityDef>
+          </li>
+				  <li>
+					  <abilityDef>RT_ZetaAcidSpit</abilityDef>
+				  </li>
+			  <!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
-			</li>
-			<li Class="CompProperties_UseEffect.cs">
+			  </li>
+			  <li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_FasterRegen</hediffname>
 				<hediffseverity>1</hediffseverity>
-			</li> -->
+			  </li> -->
+  			</abilities>
+      </li>
 		</comps>
 		
 	<!-- Race stats -->		
@@ -120,7 +134,6 @@
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
-        <li>RT_GrantAbilities</li>
 				<li>RT_Rimtroid_EvolutionGrowth</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
@@ -263,16 +276,11 @@
 		  </li>
 		</lifeStages>
 		<modExtensions>
+		  <li Class="DD.LegacyModExtension">
+			  <hasAbilities>true</hasAbilities>
+      </li>
       <li Class="DD.VerbSettingExtension">
 			  <useExtendedVerbs>true</useExtendedVerbs>
-		  </li>
-		  <li Class="DD.GainAbilityExtension">
-			  <abilityDef>RT_ZetaFireball</abilityDef>
-			  <minAge>-1</minAge>
-		  </li>
-      <li Class="DD.GainAbilityExtension">
-        <abilityDef>RT_ZetaAcitSpit</abilityDef>
-			  <minAge>-1</minAge>
 		  </li>
 			<li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>

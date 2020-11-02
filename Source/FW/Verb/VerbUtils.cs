@@ -94,6 +94,17 @@ namespace DD
             }
         }
 
+        public static float CalculateCommonality(this Verb verb, Pawn source, Thing target)
+        {
+            if(source.IsAdjacentToCardinalOrInside(target))
+            {
+                return verb.verbProps.commonality;
+            } else
+            {
+                return verb.verbProps.commonality + verb.verbProps.EffectiveMinRange(target, source) + verb.verbProps.range;
+            }
+        }
+
         //private static float CalculatePreference(Verb verb)
         //{
         //    VerbProperties props = verb.verbProps;

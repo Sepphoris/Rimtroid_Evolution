@@ -7,10 +7,9 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_GammaMetroid</defName>
 		<label>Gamma Metroid</label>
-
-		<description>Due to it's many, MANY unique characteristics, the Gamma Metroid can be considered the "catch-all" Metroid. Their limbs have now grown into fast, spindly legs, allowing them to both walk and fly without issue. It's size, strength, and resilience has increased considerably, and it's plasma-based defenses have become even more flexible, able to be used more quickly and in more situations. However, the most appealing attribute of a Gamma Metroid is it's resource production; while all Metroids produce an organic, resin-like substance, the Gamma Metroid is the only one that produces it frequenty enough to be worth the trouble. This makes it a very dangerous - but profitable - farm animal, sometimes seen as a rare occurance amongst the farmers and traders of the rim.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
-		<statBases>
+    <description>Due to it's many, MANY unique characteristics, the Gamma Metroid can be considered the "catch-all" Metroid. Their limbs have now grown into fast, spindly legs, allowing them to both walk and fly without issue. It's size, strength, and resilience has increased considerably, and it's plasma-based defenses have become even more flexible, able to be used more quickly and in more situations. However, the most appealing attribute of a Gamma Metroid is it's resource production; while all Metroids produce an organic, resin-like substance, the Gamma Metroid is the only one that produces it frequenty enough to be worth the trouble. This makes it a very dangerous - but profitable - farm animal, sometimes seen as a rare occurance amongst the farmers and traders of the rim.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		
+    <statBases>		
 	<!-- Internal Stats -->
 		  <ToxicSensitivity>0</ToxicSensitivity>
 		  <PsychicSensitivity>0</PsychicSensitivity>
@@ -23,7 +22,7 @@
 		  <ComfyTemperatureMin>3</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
 		  <MeatAmount>0</MeatAmount>
-		<PainShockThreshold>0.90</PainShockThreshold>
+		  <PainShockThreshold>0.90</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
 		
@@ -69,32 +68,43 @@
 		</tools>
 		<comps>
     	<li Class="DD.CompProperties_HostileResponse">
-			<compClass>DD.CompHostileResponse</compClass>
-			<initialHostility>Aggressive</initialHostility>
-			<options>
-				<li>
-					<type>Aggressive</type>
-					<label>Aggro</label>
-					<description>Really mean.</description>
-					<iconPath></iconPath>
-					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
-				</li>
-				<li>
-					<type>Defensive</type>
-					<label>Defo</label>
-					<description>Not that mean.</description>
-					<iconPath></iconPath>
-					<disableMessage>Defensive and disabled.</disableMessage>
-				</li>
-				<li>
-					<type>Passive</type>
-					<label>Passive</label>
-					<description>Too forgiving.</description>
-					<iconPath></iconPath>
-					<disableMessage>Passive and disabled.</disableMessage>
-				</li>
-			</options>
+			  <compClass>DD.CompHostileResponse</compClass>
+			  <initialHostility>Aggressive</initialHostility>
+        <controllableGizmo>false</controllableGizmo>
+       <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
+			  <options>
+				  <li>
+					  <type>Aggressive</type>
+					  <label>Aggressive</label>
+					  <description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+					  <iconPath>UI/AI/Attack</iconPath>
+					  <disableMessage>Aggressive, and you better get used to it.</disableMessage>
+				  </li>
+				  <li>
+					  <type>Defensive</type>
+					  <label>Defensive</label>
+					  <description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+					  <iconPath>UI/AI/Defense</iconPath>
+					  <disableMessage>Defensive and disabled.</disableMessage>
+				  </li>
+				  <li>
+					  <type>Passive</type>
+					  <label>Pacifist</label>
+					  <description>Flees from any hostile actions made against it, even by friendlies.</description>
+					  <iconPath>UI/AI/Passive</iconPath>
+					  <disableMessage>Passive and disabled.</disableMessage>
+				  </li>
+			  </options>
 		  </li>
+<!-- Defines the conditions for when to give the pawn an ability -->
+		  <li Class="DD.CompProperties_AbilityDefinition">
+			  <compClass>DD.CompAbilityDefinition</compClass>
+			  <abilities>
+			  	<li>
+					  <abilityDef>RT_GammaElectricBolt</abilityDef>
+         </li>
+			  </abilities>
+      </li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -119,7 +129,6 @@
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
-        <li>RT_GrantAbilities</li>
 				<li>RT_Rimtroid_EvolutionGrowth</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
@@ -194,9 +203,12 @@
 		  <li>AnimalExotic</li>
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
-	<modExtensions>
+	  <modExtensions>
+		  <li Class="DD.LegacyModExtension">
+			  <hasAbilities>true</hasAbilities>
+      </li>
       <!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li> -->
-	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
+	    <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
     </modExtensions>
 	</ThingDef>
@@ -264,11 +276,7 @@
 		<modExtensions>
       <li Class="DD.VerbSettingExtension">
 			  <useExtendedVerbs>true</useExtendedVerbs>
-		  </li>
-		  <li Class="DD.GainAbilityExtension">
-			  <abilityDef>RT_GammaElectricBolt</abilityDef>
-			  <minAge>-1</minAge>
-		  </li>
+      </li>
 			<li Class="RT_RimTroid.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->

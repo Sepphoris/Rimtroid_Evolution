@@ -16,6 +16,11 @@ namespace DD
     {
         protected override Job TryGiveJob(Pawn pawn)
         {
+            if (pawn.DestroyedOrNull())
+            {
+                return null;
+            }
+
             CompHostileResponse comp = pawn.GetComp<CompHostileResponse>();
 
             if (comp == null)
@@ -24,9 +29,14 @@ namespace DD
                 return null;
             }
 
-            if (comp.Targets.EnumerableNullOrEmpty())
+            if(comp.Type == HostilityResponseType.Passive)
             {
-                //No targets.
+                return null;
+            }
+
+            if (!pawn.Awake() || pawn.IsBurning() || pawn.Drafted || pawn.Downed || pawn.Dead)
+            {
+                //Disabled for inactive, burning, drafted, downed or dead.
                 return null;
             }
 
@@ -36,40 +46,43 @@ namespace DD
                 return null;
             }
 
-            if (pawn.IsFighting() || !pawn.jobs.IsCurrentJobPlayerInterruptible())
+            if (pawn.jobs.startingNewJob)
             {
-                //Is fighting, or is doing an uninterruptable job.
                 return null;
             }
 
-            if (PawnUtility.PlayerForcedJobNowOrSoon(pawn))
+            if (pawn.IsFighting() || pawn.stances.FullBodyBusy)
             {
-                //Job is uninterruptable or pawn is on fire.
+                //Is fighting, or is busy.
                 return null;
             }
 
-            return TryGetAttackNearbyEnemyJob(pawn);
-        }
-
-        private Job TryGetAttackNearbyEnemyJob(Pawn pawn)
-        {
-            CompHostileResponse comp = pawn.GetComp<CompHostileResponse>();
-
-            //Get a list of verbs that can hit any of our targets.
-            IEnumerable<Verb> verbs = VerbUtils.GetPossibleVerbs(pawn).Where(v => comp.Targets.Any(t => v.CanHitTarget(t.Thing) || (v.IsMeleeAttack && pawn.CanReachImmediate(t.Thing, PathEndMode.Touch))));
-
-            //Pick the first target that we can hit.
-            IAttackTarget target = comp.TargetsPreferredOrder.FirstOrFallback(t => verbs.Any(v => v.CanHitTarget(t.Thing)));
-            if (target == null)
+            if(!PawnUtility.EnemiesAreNearby(pawn))
             {
-                //No verbs can hurt any of the pawn in the list.
+                //Needs enemies nearby.
                 return null;
             }
 
-            Verb verb = verbs.RandomElementByWeightWithFallback(v => v.verbProps.commonality);
+            if (PawnUtility.PlayerForcedJobNowOrSoon(pawn) || !pawn.jobs.IsCurrentJobPlayerInterruptible())
+            {
+                //Job is uninterruptable or uninterruptable.
+                return null;
+            }
+
+            IAttackTarget target = comp.PreferredTarget;
+
+            if(target == null || target.Thing == null)
+            {
+                //No targets.
+                return null;
+            }
+
+            Thing thing = target.Thing;
+
+            Verb verb = pawn.TryGetAttackVerb(thing);
             if (verb == null)
             {
-                //Can't pick a verb?
+                //Can't pick a verb??? We should've been able to...
                 return null;
             }
 
@@ -77,20 +90,21 @@ namespace DD
 
             if (verb.IsMeleeAttack)
             {
-                job = JobMaker.MakeJob(JobDefOf.AttackMelee, target.Thing);
+                job = JobMaker.MakeJob(JobDefOf.AttackMelee, thing);
                 job.maxNumMeleeAttacks = 1;
             }
             else
             {
-                job = JobMaker.MakeJob(JobDefOf.AttackStatic, target.Thing);
+                job = JobMaker.MakeJob(JobDefOf.AttackStatic, thing);
                 job.maxNumStaticAttacks = 1;
-                job.endIfCantShootInMelee = verb.verbProps.EffectiveMinRange(target.Thing, pawn) > 1.0f;
+                job.endIfCantShootInMelee = verb.verbProps.EffectiveMinRange(thing, pawn) > 1.0f;
             }
 
             job.verbToUse = verb;
             job.expireRequiresEnemiesNearby = true;
             job.killIncappedTarget = comp.Type == HostilityResponseType.Aggressive;
             job.playerForced = true;
+            job.expiryInterval = GenTicks.TickLongInterval;
 
             return job;
         }

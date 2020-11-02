@@ -26,6 +26,11 @@ namespace DD
                 return;
             }
 
+            if(comp.Type == HostilityResponseType.Passive)
+            {
+                return;
+            }
+
             //If it knows an enemy.
             __result = !comp.Targets.EnumerableNullOrEmpty();
         }

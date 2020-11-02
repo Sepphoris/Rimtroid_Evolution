@@ -14,37 +14,39 @@ namespace DD
     {
         public int ticks;
 
+        public AbilityDef abilityDef;
+
         public HediffCompProperties_GrowthSeverityScaling Props => (HediffCompProperties_GrowthSeverityScaling)props;
 
         //If no longer in range or unable to gain abilities, if grant ability was set, check if already has the ability.
-        public override bool CompShouldRemove => !SeverityInRange || parent.pawn.abilities == null || (Props.AbilityOnCompletion != null && parent.pawn.abilities.GetAbility(Props.AbilityOnCompletion) != null);
+        public override bool CompShouldRemove => !SeverityInRange || parent.pawn.abilities == null || (abilityDef != null && parent.pawn.abilities.GetAbility(abilityDef) != null);
 
         public bool SeverityInRange => Props.severityRange.TrueMin < parent.Severity && parent.Severity < Props.severityRange.TrueMax;
 
         public override void CompExposeData()
         {
             Scribe_Values.Look(ref ticks, "ticks", 0);
+            Scribe_Defs.Look(ref abilityDef, "abilityDef");
         }
 
         public override void CompPostPostRemoved()
         {
             base.CompPostPostRemoved();
-            if (Props.AbilityOnCompletion != null && !SeverityInRange)
+            if (abilityDef != null && !SeverityInRange)
             {
                 //Fanfare: Prolly message?
-                Messages.Message("{DRAGON} has gained the ability of breath.".Translate(parent.pawn.Named("DRAGON")), parent.pawn, MessageTypeDefOf.PositiveEvent);
-                parent.pawn.abilities.GainAbility(Props.AbilityOnCompletion);
+                parent.pawn.abilities.GainAbility(abilityDef);
+                Messages.Message("AbilityGainHediffMessage".Translate(parent.pawn.Named("PAWN"), abilityDef.LabelCap.Named("ABILITY")), parent.pawn, MessageTypeDefOf.PositiveEvent);
             }
         }
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-            //severityAdjustment = Props.severityRange.LerpThroughRange((float)ticks / (float)Props.GetTicksAt(Props.severityRange.TrueMax));
             ticks++;
             severityAdjustment = Props.GetSeverityAt(ticks) - parent.Severity;
         }
 
-        public override string CompLabelInBracketsExtra => base.CompLabelInBracketsExtra + "(" + (Props.GetTicksAt(Props.severityRange.TrueMax) - ticks).ToStringTicksToPeriodVague(false) + ")";
-        public override string CompDebugString() => "ticks=" + ticks + "/" + Props.GetTicksAt(Props.severityRange.TrueMax) + (Props.AbilityOnCompletion != null ? "\nApply on Completion: " + Props.AbilityOnCompletion.defName : "");
+        public override string CompLabelInBracketsExtra => base.CompLabelInBracketsExtra + "(" + abilityDef + " " + (Props.GetTicksAt(Props.severityRange.TrueMax) - ticks).ToStringTicksToPeriodVague(false) + ")";
+        public override string CompDebugString() => "ticks=" + ticks + "/" + Props.GetTicksAt(Props.severityRange.TrueMax) + (abilityDef != null ? "\nApply on Completion: " + abilityDef.defName : "");
     }
 }

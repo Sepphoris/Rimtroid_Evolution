@@ -15,8 +15,6 @@ namespace DD
         public SimpleCurve interval;
         public FloatRange severityRange;
 
-        public AbilityDef AbilityOnCompletion { get; set; }
-
         public float MaximumTicks => interval.Points.Max(pt => pt.y);
 
         public HediffCompProperties_GrowthSeverityScaling()

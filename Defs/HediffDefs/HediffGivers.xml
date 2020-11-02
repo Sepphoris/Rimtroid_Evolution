@@ -70,13 +70,6 @@
 <!--Misc hediffs given-->
 
   <!--Hediff to give abilities-->
-  <HediffGiverSetDef>
-    <defName>RT_GrantAbilities</defName>
-      <hediffGivers>
-        <li Class="DD.HediffGiver_GrantAbility">
-        </li>
-      </hediffGivers>
-  </HediffGiverSetDef>
 
 	<HediffGiverSetDef>
     <defName>OrganicAgeless</defName>

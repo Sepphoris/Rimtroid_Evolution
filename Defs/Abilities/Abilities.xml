@@ -2,7 +2,7 @@
 <Defs>
 
 
- <!-- Gamma Abilities -->
+<!-- Gamma Abilities -->
 
      <AbilityDef>
       <defName>RT_GammaElectricBolt</defName>
@@ -13,16 +13,21 @@
       <cooldownTicksRange>1000~1200</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+      <iconPath>AnimalProjectile/DragonFire</iconPath>
       <verbProperties>
+<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
         <verbClass>DD.Verb_CastAbility_Base</verbClass>
         <range>35</range>
         <minRange>1</minRange>
+<!-- Projectile defined here just for the targeting when you click the gizmo, the CastVerb's projectile is the actual one that will cause damage -->
 			  <defaultProjectile>RT_GammaBolt</defaultProjectile>
+<!-- Controls how likely the ability will get picked. -->
 			  <commonality>2</commonality>
       </verbProperties>
       <comps>
         <li Class="DD.AbilityCompProperties_AbilityControl">
           <compClass>DD.AbilityComp_AbilityControl</compClass>
+<!-- Allows the ability.verb to be picked up by Pawn.TryGetAttackVerb -->
           <autoUse>true</autoUse>
           <gizmoOnText>Electric Bolt Enabled</gizmoOnText>
           <gizmoOffText>Electric Bolt Disabled</gizmoOffText>
@@ -32,6 +37,7 @@
         </li>
         <li Class="DD.AbilityCompProperties_CastVerb">
           <compClass>DD.AbilityComp_CastVerb</compClass>
+<!-- Verbs defined here will be actually triggered when the ability activates. -->
           <verbProperties>
             <li>
               <verbClass>Verb_Shoot</verbClass>
@@ -43,14 +49,25 @@
               <defaultProjectile>RT_GammaBolt</defaultProjectile>
               <warmupTime>0.5</warmupTime>
               <range>35</range>
+              <minRange>1</minRange>
               <burstShotCount>1</burstShotCount>
               <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-              <minRange>1</minRange>
               <soundCast>ElectricBoltshot</soundCast>
                <muzzleFlashScale>1</muzzleFlashScale>
-              </li>
+            </li>
           </verbProperties>
         </li>
+			  <li Class="DD.AbilityCompProperties_Cooldown">
+          <compClass>DD.AbilityComp_Cooldown</compClass>
+<!-- Ability cooldown pool -->
+				  <cooldownPool>GammaAbilityPool</cooldownPool>
+<!-- Cooldown ticks range (omit to use each verb's default <cooldownTicksRange>) -->
+				  <!--<cooldownTicksRange>1200</cooldownTicksRange>-->
+<!-- Unaffected by other abilities cooling down in the same pool -->
+				  <independent>false</independent>
+<!-- Resets the other cooldowns in the pool even if they're already cooling down -->
+				  <resetsTimer>true</resetsTimer>
+			  </li>
       </comps>
     </AbilityDef>
 
@@ -65,7 +82,9 @@
         <cooldownTicksRange>1000~1200</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
         <verbProperties>
+<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
             <verbClass>DD.Verb_CastAbility_Base</verbClass>
             <range>28</range>
             <minRange>1</minRange>
@@ -94,20 +113,26 @@
                   <hasStandardCommand>true</hasStandardCommand>
                   <defaultProjectile>RT_ZetaFireball</defaultProjectile>
                   <warmupTime>0.5</warmupTime>
-                  <range>35</range>
+                  <range>28</range>
+                  <minRange>1</minRange>
                   <burstShotCount>3</burstShotCount>
                   <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                  <minRange>1</minRange>
                   <soundCast>FireboltShot</soundCast>
                   <muzzleFlashScale>1</muzzleFlashScale>
                 </li>
               </verbProperties>
             </li>
+			      <li Class="DD.AbilityCompProperties_Cooldown">
+              <compClass>DD.AbilityComp_Cooldown</compClass>
+				      <cooldownPool>ZetaAbilityPool</cooldownPool>
+				      <independent>false</independent>
+				      <resetsTimer>true</resetsTimer>
+			      </li>
           </comps>
       </AbilityDef>
 
       <AbilityDef>
-        <defName>RT_ZetaAcitSpit</defName>
+        <defName>RT_ZetaAcidSpit</defName>
         <label>Acid Spit</label>
         <description>Fire an acidic glob at a target</description>
         <abilityClass>DD.Ability_Base</abilityClass>
@@ -115,6 +140,7 @@
         <cooldownTicksRange>1200~1600</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
         <verbProperties>
           <verbClass>DD.Verb_CastAbility_Base</verbClass>
           <range>28</range>
@@ -145,14 +171,20 @@
                 <defaultProjectile>RT_ZetaAcid</defaultProjectile>
                 <warmupTime>0.7</warmupTime>
                 <range>28</range>
+                <minRange>1</minRange>
                 <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
-                <minRange>1</minRange>
                 <soundCast>AcidShot</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
           </li>
+			      <li Class="DD.AbilityCompProperties_Cooldown">
+              <compClass>DD.AbilityComp_Cooldown</compClass>
+				      <cooldownPool>ZetaAbilityPool</cooldownPool>
+				      <independent>false</independent>
+				      <resetsTimer>true</resetsTimer>
+			      </li>
         </comps>
       </AbilityDef>
 
@@ -167,10 +199,11 @@
         <cooldownTicksRange>1600~1200</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
         <verbProperties>
           <verbClass>DD.Verb_CastAbility_Base</verbClass>
-          <range>28</range>
-          <minRange>1</minRange>
+          <range>30</range>
+          <minRange>3</minRange>
 			    <defaultProjectile>RT_OmegaBeam</defaultProjectile>
 			    <commonality>2</commonality>
         </verbProperties>
@@ -197,14 +230,20 @@
                 <defaultProjectile>RT_OmegaBeam</defaultProjectile>
                 <warmupTime>1</warmupTime>
                 <range>30</range>
+                <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <minRange>3</minRange>
                 <soundCast>FireBeamShot</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
           </li>
+			      <li Class="DD.AbilityCompProperties_Cooldown">
+              <compClass>DD.AbilityComp_Cooldown</compClass>
+				      <cooldownPool>OmegaAbilityPool</cooldownPool>
+				      <independent>false</independent>
+				      <resetsTimer>true</resetsTimer>
+			      </li>
         </comps>
       </AbilityDef>
 
@@ -219,6 +258,7 @@
         <cooldownTicksRange>1600~2000</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>AnimalProjectile/DragonFire</iconPath>
         <verbProperties>
           <verbClass>DD.Verb_CastAbility_Base</verbClass>
           <range>45</range>
@@ -249,14 +289,20 @@
                 <defaultProjectile>RT_QueenBeam</defaultProjectile>
                 <warmupTime>2.5</warmupTime>
                 <range>45</range>
+                <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <minRange>3</minRange>
                 <soundCast>FireBeamShot</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
           </li>
+			      <li Class="DD.AbilityCompProperties_Cooldown">
+              <compClass>DD.AbilityComp_Cooldown</compClass>
+				      <cooldownPool>QueenAbilityPool</cooldownPool>
+				      <independent>false</independent>
+				      <resetsTimer>true</resetsTimer>
+			      </li>
         </comps>
       </AbilityDef>
 </Defs>

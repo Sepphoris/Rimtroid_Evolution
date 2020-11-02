@@ -297,6 +297,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\LegacyModExtension.cs" />
     <Compile Include="Evolution\AcidCompProperties.cs" />
     <Compile Include="Evolution\AcidImmunityComp.cs" />
     <Compile Include="Core\AgeStage.cs" />
@@ -306,10 +307,19 @@
     <Compile Include="Core\FoodMethod.cs" />
     <Compile Include="FW\Abilities\AbilityCompProperties_AbilityControl.cs" />
     <Compile Include="FW\Abilities\AbilityCompProperties_CastVerb.cs" />
+    <Compile Include="FW\Abilities\AbilityCompProperties_Cooldown.cs" />
     <Compile Include="FW\Abilities\AbilityComp_AbilityControl.cs" />
     <Compile Include="FW\Abilities\AbilityComp_Base.cs" />
     <Compile Include="FW\Abilities\AbilityComp_CastVerb.cs" />
+    <Compile Include="FW\Abilities\AbilityComp_Cooldown.cs" />
     <Compile Include="FW\Abilities\Ability_Base.cs" />
+    <Compile Include="FW\Abilities\Comp\AbilityGainEntry.cs" />
+    <Compile Include="FW\Abilities\Comp\CompAbilityDefinition.cs" />
+    <Compile Include="FW\Abilities\Comp\CompProperties_AbilityDefinition.cs" />
+    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainAgeCondition.cs" />
+    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainCondition.cs" />
+    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainDamageCondition.cs" />
+    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainKillCondition.cs" />
     <Compile Include="FW\Abilities\Verb_CastAbility_Base.cs" />
     <Compile Include="FW\HostileResponse\CompHostileResponse.cs" />
     <Compile Include="FW\HostileResponse\CompProperties_HostileResponse.cs" />
@@ -336,10 +346,8 @@
     <Compile Include="FW2\RegenHediffModExtension.cs" />
     <Compile Include="FW2\VerbSettingExtension.cs" />
     <Compile Include="FW2\VerbUsageExtension.cs" />
-    <Compile Include="FW\Abilities\Extensions\GainAbilityExtension.cs" />
     <Compile Include="FW\Abilities\Hediffs\HediffCompProperties_GrowthSeverityScaling.cs" />
     <Compile Include="FW\Abilities\Hediffs\HediffComp_GrowthSeverityScaling.cs" />
-    <Compile Include="FW\Abilities\Hediffs\HediffGiver_GrantAbility.cs" />
     <Compile Include="FW\Abilities\IAttackVerb.cs" />
     <Compile Include="FW\Abilities\Patch_DD_Pawn_TryGetAttackVerb.cs" />
     <Compile Include="FW\Abilities\Verb_Ability_Shoot.cs" />

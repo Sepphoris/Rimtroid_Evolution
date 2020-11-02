@@ -23,6 +23,25 @@ namespace DD
             }
         }
 
-        protected override bool TryCastShot() => ability.CanCast ? base.TryCastShot() : false;
+        protected override bool TryCastShot()
+        {
+            if (ability is Ability_Base ba)
+            {
+                if (!ba.CanApplyOn(CurrentTarget) && !ba.CanApplyOn(CurrentDestination))
+                {
+                    //Should be applicable on either the target or the destination.
+                    return false;
+                }
+            }
+
+            if (ability.CanCast)
+            {
+                return base.TryCastShot();
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

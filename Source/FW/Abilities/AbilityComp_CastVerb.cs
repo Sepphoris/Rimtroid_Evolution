@@ -64,6 +64,11 @@ namespace DD
             return !VerbTracker.AllVerbs.NullOrEmpty() && VerbTracker.AllVerbs.Any(v => v.Available() && v.IsUsableOn(target.Thing));
         }
 
+        public override bool CanApplyOn(LocalTargetInfo target, LocalTargetInfo dest)
+        {
+            return base.CanApplyOn(target, dest) && CanActivateOn(target, dest);
+        }
+
         public override void PostTick()
         {
             VerbTracker.VerbsTick();

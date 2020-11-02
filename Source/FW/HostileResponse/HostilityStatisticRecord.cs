@@ -13,11 +13,10 @@ namespace DD
     {
         private IAttackTarget target;
         private int lastTickAttacked;
-        private int sightings, intendedHits, unintendedHits;
+        private int intendedHits, unintendedHits;
         private float damageTotal;
 
         public IAttackTarget Target => target;
-        public int SightingCount => sightings;
         public int IntendedHitCount => intendedHits;
         public int UnintendedHitCount => unintendedHits;
         public float DamageTotal => damageTotal;
@@ -25,14 +24,17 @@ namespace DD
         public bool IsRecent => TicksSinceAttack < GenTicks.TickRareInterval;
         public bool IsOld => TicksSinceAttack > GenTicks.TickLongInterval;
 
-        public HostilityStatisticRecord(IAttackTarget target)
+        public HostilityStatisticRecord()
         {
-            this.target = target;
             lastTickAttacked = 0;
-            sightings = 0;
             intendedHits = 0;
             unintendedHits = 0;
             damageTotal = 0;
+        }
+
+        public HostilityStatisticRecord(IAttackTarget target) : this()
+        {
+            this.target = target;
         }
 
         public void ProcessAttack(float damage, bool isIntended)
@@ -50,17 +52,11 @@ namespace DD
             }
         }
 
-        public void ProcessSighting()
-        {
-            sightings++;
-        }
-
         public float DamagePoints
         {
             get
             {
-                //Points = Damage + (Damage * Log10(7*AttackedTick / CurrentTick))
-                float points = DamageTotal + DamageTotal * Mathf.Log10((lastTickAttacked * 7) / GenTicks.TicksGame);
+                float points = DamageTotal / Mathf.Log10(TicksSinceAttack);
                 return float.IsNaN(points) ? 0 : points;
             }
         }
@@ -72,13 +68,10 @@ namespace DD
             switch (type)
             {
                 case HostilityResponseType.Aggressive:
-                    points *= IntendedHitCount + UnintendedHitCount + SightingCount;
+                    points *= IntendedHitCount + UnintendedHitCount;
                     break;
                 case HostilityResponseType.Defensive:
                     points *= IntendedHitCount + (UnintendedHitCount / 2);
-                    break;
-                case HostilityResponseType.Passive:
-                    points *= IntendedHitCount;
                     break;
             }
 
@@ -90,7 +83,6 @@ namespace DD
         public void ExposeData()
         {
             Scribe_References.Look(ref target, "target");
-            Scribe_Values.Look(ref sightings, "sightingCount");
             Scribe_Values.Look(ref lastTickAttacked, "lastTickAttacked");
             Scribe_Values.Look(ref damageTotal, "damageTaken");
             Scribe_Values.Look(ref intendedHits, "intendedHits");

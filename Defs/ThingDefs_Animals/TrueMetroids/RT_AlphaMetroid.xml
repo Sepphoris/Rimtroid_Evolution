@@ -80,26 +80,28 @@
     	<li Class="DD.CompProperties_HostileResponse">
 			<compClass>DD.CompHostileResponse</compClass>
 			<initialHostility>Aggressive</initialHostility>
+      <controllableGizmo>false</controllableGizmo>
+      <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
 			<options>
 				<li>
 					<type>Aggressive</type>
-					<label>Aggro</label>
-					<description>Really mean.</description>
-					<iconPath></iconPath>
+					<label>Aggressive</label>
+					<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+					<iconPath>UI/AI/Attack</iconPath>
 					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
 				</li>
 				<li>
 					<type>Defensive</type>
-					<label>Defo</label>
-					<description>Not that mean.</description>
-					<iconPath></iconPath>
+					<label>Defensive</label>
+					<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+					<iconPath>UI/AI/Defense</iconPath>
 					<disableMessage>Defensive and disabled.</disableMessage>
 				</li>
 				<li>
 					<type>Passive</type>
-					<label>Passive</label>
-					<description>Too forgiving.</description>
-					<iconPath></iconPath>
+					<label>Pacifist</label>
+					<description>Flees from any hostile actions made against it, even by friendlies.</description>
+					<iconPath>UI/AI/Passive</iconPath>
 					<disableMessage>Passive and disabled.</disableMessage>
 				</li>
 			</options>
