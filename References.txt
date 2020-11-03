@@ -19,3 +19,7 @@ ADDITIONAL HEDIFFS
 LINKS:
 https://discord.com/channels/214523379766525963/632790371256238120/772489460548894720
 	-Potential solution for making metals that only function as armor, and not be used as buildables.
+	
+	
+https://discord.com/channels/214523379766525963/215496692047413249/772899600964386827
+	-How to turn a pawn invisible (vanilla)

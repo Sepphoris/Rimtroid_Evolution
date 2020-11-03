@@ -6,26 +6,26 @@ using Verse;
 namespace Metamorphosis
 {
     // Token: 0x02000241 RID: 577
-    public class HediffCompProperties_MetroidEvolution : HediffCompProperties
+    public class HediffCompProperties_RimtroidEvolution : HediffCompProperties
     {
-        public HediffCompProperties_MetroidEvolution()
+        public HediffCompProperties_RimtroidEvolution()
         {
-            this.compClass = typeof(HediffComp_MetroidEvolution);
+            this.compClass = typeof(HediffComp_RimtroidEvolution);
         }
 
         public List<MetroidWhitelistDef> whitelists = new List<MetroidWhitelistDef>();
         public ThingDef huskDef = null;
-        public List<MetroidEvolutionPath> PossibleEvolutionPaths = new List<MetroidEvolutionPath>();
+        public List<RimtroidEvolutionPath> PossibleEvolutionPaths = new List<RimtroidEvolutionPath>();
         public HediffDef stuntedHediffDef; //Hediff which if it exists, the pawn shouldn't transform.
     }
 
-    public class HediffComp_MetroidEvolution : HediffComp
+    public class HediffComp_RimtroidEvolution : HediffComp
     {
-        public HediffCompProperties_MetroidEvolution Props
+        public HediffCompProperties_RimtroidEvolution Props
         {
             get
             {
-                return (HediffCompProperties_MetroidEvolution)this.props;
+                return (HediffCompProperties_RimtroidEvolution)this.props;
             }
         }
 
@@ -50,6 +50,19 @@ namespace Metamorphosis
                 Pawn.ageTracker = new Pawn_AgeTracker(Pawn);
                 Pawn.ageTracker.AgeBiologicalTicks = ageB;
                 Pawn.ageTracker.AgeChronologicalTicks = ageC;
+
+                foreach (AbilityDef def in Pawn.abilities.abilities.OfType<DD.Ability_Base>().Select(ability => ability.def).ToList())
+                {
+                    //Remove all framework abilities.
+                    Log.Message(def.defName)
+                    Pawn.abilities.RemoveAbility(def);
+                }
+                DD.CompAbilityDefinition comp = Pawn.TryGetComp<DD.CompAbilityDefinition>();
+                if (comp != null)
+                {
+                    //Ticks the comp to force it to process/add abilities.
+                    comp.CompTickRare();
+                }
 
             }
             RegionListersUpdater.RegisterInRegions(parent.pawn, map);
@@ -92,7 +105,7 @@ namespace Metamorphosis
             }
 
             //save the pawn
-            parent.pawn.ExposeData();
+            //parent.pawn.ExposeData();
             if (parent.pawn.Faction != faction)
             {
                 parent.pawn.SetFaction(faction);
@@ -116,7 +129,7 @@ namespace Metamorphosis
                 return;
             }
 
-            MetroidEvolutionPath path = null;
+            RimtroidEvolutionPath path = null;
             if (Props.PossibleEvolutionPaths.Any(x => x.triggerDef != null && Pawn.health.hediffSet.HasHediff(x.triggerDef)))
             {
                 path = Props.PossibleEvolutionPaths.First(x => x.triggerDef != null && Pawn.health.hediffSet.HasHediff(x.triggerDef));
@@ -147,7 +160,7 @@ namespace Metamorphosis
         public int ticksToDisappear = 60;
     }
 
-    public class MetroidEvolutionPath
+    public class RimtroidEvolutionPath
     {
         public HediffDef triggerDef;
         public float Age = 0f;

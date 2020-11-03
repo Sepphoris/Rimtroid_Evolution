@@ -78,7 +78,7 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
+      <li Class="Metamorphosis.HediffCompProperties_RimtroidEvolution">
 	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
@@ -142,7 +142,7 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
+      <li Class="Metamorphosis.HediffCompProperties_RimtroidEvolution">
 	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
@@ -210,7 +210,7 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
+      <li Class="Metamorphosis.HediffCompProperties_RimtroidEvolution">
 	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
@@ -282,7 +282,7 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_MetroidEvolution">
+      <li Class="Metamorphosis.HediffCompProperties_RimtroidEvolution">
 	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
