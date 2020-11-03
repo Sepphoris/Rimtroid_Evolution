@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using DD;
+using RimWorld;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -103,6 +104,13 @@ namespace Metamorphosis
                 GenSpawn.Spawn(ThingMaker.MakeThing(Props.huskDef), parent.pawn.Position, parent.pawn.Map);
             }
 
+            var comp = Pawn.TryGetComp<CompAbilityDefinition>();
+            Pawn.AllComps.Remove(comp);
+
+            var newComp = new CompAbilityDefinition();
+            newComp.Initialize(new CompProperties_AbilityDefinition());
+            newComp.parent = Pawn;
+            Pawn.AllComps.Add(comp);
         }
 
         public override void CompPostPostRemoved()
