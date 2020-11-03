@@ -1,5 +1,5 @@
-﻿using DD;
-using RimWorld;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
@@ -52,20 +52,47 @@ namespace Metamorphosis
                 Pawn.ageTracker.AgeBiologicalTicks = ageB;
                 Pawn.ageTracker.AgeChronologicalTicks = ageC;
 
+                //Remove all framework abilities.
                 foreach (AbilityDef def in Pawn.abilities.abilities.OfType<DD.Ability_Base>().Select(ability => ability.def).ToList())
                 {
-                    //Remove all framework abilities.
-                    Log.Message(def.defName)
                     Pawn.abilities.RemoveAbility(def);
                 }
+
                 DD.CompAbilityDefinition comp = Pawn.TryGetComp<DD.CompAbilityDefinition>();
                 if (comp != null)
                 {
-                    //Ticks the comp to force it to process/add abilities.
-                    comp.CompTickRare();
+                    //Remove the old comp
+                    Pawn.AllComps.Remove(comp);
                 }
 
+                //Try loading CompProperties from the def.
+                CompProperties props = kindDef.race.CompDefFor<DD.CompAbilityDefinition>();
+                DD.CompAbilityDefinition newComp = null;
+
+                if (props != null)
+                {
+                    //CompProperties found, so should gain the comp.
+                    newComp = (DD.CompAbilityDefinition)Activator.CreateInstance(props.compClass); //Create ThingComp from the loaded CompProperties.
+                    newComp.parent = Pawn; //Set Comp parent.
+                    Pawn.AllComps.Add(newComp); //Add to pawn's comp list.
+                    newComp.Initialize(props); //Initialize it.
+                }
+
+                if (newComp != null)
+                {
+                    //Optionally, carry the data over.
+                    if (comp != null)
+                    {
+                        //[NOTE] To carry over the values, make sure you change both damageTotal and killCounter from private to public in CompAbilityDefinition.
+                        //newComp.damageTotal = comp.damageTotal;
+                        //newComp.killCounter = comp.killCounter;
+                    }
+
+                    //Tick the comp to force it to process/add abilities.
+                    newComp.CompTickRare();
+                }
             }
+
             RegionListersUpdater.RegisterInRegions(parent.pawn, map);
             map.mapPawns.UpdateRegistryForPawn(parent.pawn);
 
@@ -117,13 +144,6 @@ namespace Metamorphosis
                 GenSpawn.Spawn(ThingMaker.MakeThing(Props.huskDef), parent.pawn.Position, parent.pawn.Map);
             }
 
-            var comp = Pawn.TryGetComp<CompAbilityDefinition>();
-            Pawn.AllComps.Remove(comp);
-
-            var newComp = new CompAbilityDefinition();
-            newComp.Initialize(new CompProperties_AbilityDefinition());
-            newComp.parent = Pawn;
-            Pawn.AllComps.Add(comp);
         }
 
         public override void CompPostPostRemoved()

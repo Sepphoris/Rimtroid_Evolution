@@ -305,6 +305,7 @@ to be made to allow hediff effects from other mods.
         </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
+
 <!--===============Omega Metroid===============-->
 
   <HediffDef ParentName="RT_MetroidStages">
