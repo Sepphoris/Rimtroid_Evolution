@@ -297,13 +297,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\AnimalResource\JobDriver_AnimalResource.cs" />
     <Compile Include="Core\LegacyModExtension.cs" />
     <Compile Include="Core\Patch_DD_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />
+    <Compile Include="Core\AnimalResource\WorkGiver_AnimalResource.cs" />
     <Compile Include="Evolution\AcidCompProperties.cs" />
     <Compile Include="Evolution\AcidImmunityComp.cs" />
     <Compile Include="Core\AgeStage.cs" />
     <Compile Include="Core\AgeTools.cs" />
     <Compile Include="Evolution\AcidBuildup.cs" />
+    <Compile Include="Core\AnimalResource\AnimalProduct.cs" />
+    <Compile Include="Core\AnimalResource\CompAnimalProduct.cs" />
     <Compile Include="Evolution\CorpseDesiccation.cs" />
     <Compile Include="Core\FoodMethod.cs" />
     <Compile Include="FW\Abilities\AbilityCompProperties_AbilityControl.cs" />

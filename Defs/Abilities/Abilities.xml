@@ -2,8 +2,9 @@
 <Defs>
 
 
-<!-- Gamma Abilities -->
+<!--=============== Gamma Abilities ===============-->
 
+    <!--Gamma Electric Bolt -->
      <AbilityDef>
       <defName>RT_GammaElectricBolt</defName>
       <label>Electric Bolt</label>
@@ -64,14 +65,72 @@
 <!-- Cooldown ticks range (omit to use each verb's default <cooldownTicksRange>) -->
 				  <!--<cooldownTicksRange>1200</cooldownTicksRange>-->
 <!-- Unaffected by other abilities cooling down in the same pool -->
-				  <independent>false</independent>
+				  <independent>true</independent>
 <!-- Resets the other cooldowns in the pool even if they're already cooling down -->
-				  <resetsTimer>true</resetsTimer>
+				  <resetsTimer>false</resetsTimer>
 			  </li>
       </comps>
     </AbilityDef>
 
-<!-- Zeta Abilities -->
+    <!--Gamma Shockwave -->
+     <!--<AbilityDef>
+      <defName>RT_GammaShockwave</defName>
+      <label>Shockwave</label>
+      <description>Unleash a burst or electricity in a short surrounding radius</description>
+      <abilityClass>DD.Ability_Base</abilityClass>
+      <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+      <cooldownTicksRange>1400~1600</cooldownTicksRange>
+      <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+      <iconPath>AnimalProjectile/GammaBolt</iconPath>
+      <verbProperties>
+        <verbClass>DD.Verb_CastAbility_Base</verbClass>
+        <range>1</range>
+        <minRange>1</minRange>
+			  <defaultProjectile>RT_GammaWave</defaultProjectile>
+			  <commonality>2</commonality>
+      </verbProperties>
+      <comps>
+        <li Class="DD.AbilityCompProperties_AbilityControl">
+          <compClass>DD.AbilityComp_AbilityControl</compClass>
+          <autoUse>true</autoUse>
+          <gizmoOnText>Shockwave Enabled</gizmoOnText>
+          <gizmoOffText>Shockwave Disabled</gizmoOffText>
+          <gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
+          <gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
+          <gizmoDesc>Toggle Shackwave Usage</gizmoDesc>
+        </li>
+        <li Class="DD.AbilityCompProperties_CastVerb">
+          <compClass>DD.AbilityComp_CastVerb</compClass>
+          <verbProperties>
+            <li>
+              <verbClass>Verb_Shoot</verbClass>
+              <accuracyTouch>0.95</accuracyTouch>
+              <accuracyShort>0.60</accuracyShort>
+              <accuracyMedium>0.50</accuracyMedium>
+              <accuracyLong>0.30</accuracyLong>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>RT_GammaBolt</defaultProjectile>
+              <warmupTime>1.5</warmupTime>
+              <range>1</range>
+              <minRange>1</minRange>
+              <burstShotCount>1</burstShotCount>
+              <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+              <soundCast>ElectricBoltshot</soundCast>
+               <muzzleFlashScale>1</muzzleFlashScale>
+            </li>
+          </verbProperties>
+        </li>
+			  <li Class="DD.AbilityCompProperties_Cooldown">
+          <compClass>DD.AbilityComp_Cooldown</compClass>
+				  <cooldownPool>GammaAbilityPool</cooldownPool>
+				  <independent>true</independent>
+				  <resetsTimer>false</resetsTimer>
+			  </li>
+      </comps>
+    </AbilityDef>-->
+
+<!--=============== Zeta Abilities ===============-->
 
       <AbilityDef>
         <defName>RT_ZetaFireball</defName>
@@ -188,7 +247,7 @@
         </comps>
       </AbilityDef>
 
-<!-- Omega Abilities-->
+<!--=============== Omega Abilities ===============-->
 
       <AbilityDef>
         <defName>RT_OmegaBeam</defName>
@@ -247,7 +306,7 @@
         </comps>
       </AbilityDef>
 
- <!-- Queen Abilities-->
+ <!--=============== Queen Abilities ===============-->
  
       <AbilityDef>
         <defName>RT_QueenBeam</defName>

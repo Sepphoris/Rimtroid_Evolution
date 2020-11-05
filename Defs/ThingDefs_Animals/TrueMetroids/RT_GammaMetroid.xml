@@ -105,6 +105,12 @@
          </li>
 			  </abilities>
       </li>
+      <li Class="RT_Rimtroid.CompProperties_AnimalProduct">
+				<resourceDef>RT_BioResin</resourceDef>
+				<gatheringIntervalDays>8</gatheringIntervalDays>
+				<resourceAmount>4</resourceAmount>
+				<customResourceString>RT_BioResinDesc</customResourceString>
+			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>

@@ -119,4 +119,26 @@
 			</li>
 		</stages>
 	</HediffDef>
+
+  <!--===============Misc Metroid Defs===============-->
+
+	<HediffDef>
+		<defName>RT_GatheredResource</defName>
+		<description>This colonist has recently gathered an animal resource.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>gathered animal resource</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-12</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>				
+			</li>
+		</stages>
+	</HediffDef>
+
 </Defs>
