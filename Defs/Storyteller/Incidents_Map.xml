@@ -14,5 +14,18 @@
     <minRefireDays>16</minRefireDays>
   </IncidentDef>
   
+  <IncidentDef>
+    <defName>RT_Incident_LarvaePack</defName>
+    <label>Metroid Larvae Pack</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+	  <category>Misc</category>
+    <workerClass>RT_Rimtroid.Event_LarvaePack</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <pointsScaleable>true</pointsScaleable> 
+		<earliestDay>15</earliestDay>
 
+  </IncidentDef>
 </Defs>

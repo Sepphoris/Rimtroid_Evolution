@@ -4,7 +4,11 @@
 
 	<!-- Events -->
 	<LetterLabelLostBantee>Lost Bantee Wanders In</LetterLabelLostBantee>
-	<LetterLostBantee>A lost Bantee Metroid has wandered into the area. You can try to tame it, or you can leave it be, but betware; without a maturnal figure, it will not survive for long.</LetterLostBantee>
+	<LetterLostBantee>A lone Bantee Metroid has wandered into the area. You can try to tame it, or you can leave it be, but betware; without a maturnal figure, it will not survive for long.</LetterLostBantee>
+
+
+  <LetterLabelLarvaePack>Metroid Larvae Pack</LetterLabelLarvaePack>
+	<LetterLarvaePack>A pack of Metroid Larvae has wandered into the area, searching for food. You can hunt them down, tame them, or choose to let them be, but beware; they will only leave once the area is completely void of life.</LetterLarvaePack>
 
 
 </LanguageData>
