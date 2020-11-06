@@ -8,7 +8,7 @@
 		<defName>RT_BanteeMetroid</defName>
 		<label>Bantee Metroid</label>
 
-		<description>Bantee Metroids, also known as Metroid Hatchlings, are freshly-hatched metroids that are still developing a majority of their body structure. While Bantees can fly right out of the egg, they are lacking in all other departments; their teeth are nothing more than small stubs, their entire body is soft and easy to puncutre, and their otherwise hardy immune system is severely vulnerable. Most Bantees stay near a Queen until the larvae stage; if lost in the wild, they have very little chance of surviving long enough to develop into a larvae.\n\nDue to significant underdevelopment, their natural, primal senses are almost entirely absent; they are very easy to tame and make bonds with, and Bantees will only berserk in the most dire of hunger situations. This, coupled with their minimal threat state, makes them quite valuable and affectionate house pets.</description>
+		<description>Bantee Metroids, also known as Metroid Hatchlings, are freshly-hatched metroids that are still developing a majority of their body structure. Most Bantees stay near a Queen until the larvae stage; if lost in the wild, they have very little chance of surviving long enough to develop into a larvae.\n\nDue to significant underdevelopment, their natural, primal senses are almost entirely absent; they are very easy to tame and make bonds with, and Bantees will only berserk in the most dire of hunger situations. This, coupled with their minimal threat state, makes them quite valuable and affectionate house pets.</description>
 		<statBases>
 		
 	<!-- Internal Stats -->
@@ -105,7 +105,7 @@
 		  <trainability>Advanced</trainability>
 		  <maxPreyBodySize>3.9</maxPreyBodySize>
 		  <gestationPeriodDays>30</gestationPeriodDays>
-		  <predator>true</predator>
+		  <predator>false</predator>
 		  <!-- <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
