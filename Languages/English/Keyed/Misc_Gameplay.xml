@@ -2,27 +2,14 @@
 <LanguageData>
 
 
-	<!-- Incidents -->
-	<LetterLabelLostBantee>Lost Bantee Wanders In</LetterLabelLostBantee>
-	<LetterLostBantee>A lost Bantee Metroid has wandered into the area. You can try to tame it, or you can leave it be, but betware; without a maturnal figure, it will not survive for long.</LetterLostBantee>
-
-
 	<!-- Animal Products -->
-	<RT_BioResinDesc>Bioresin Production</RT_BioResinDesc>
+	<RT_BioResinDesc>Resin Production</RT_BioResinDesc>
 
 
 	<!-- Misc -->
   <RT_MetroidFission>{0} has cloned itself.</RT_MetroidFission>
-	<RT_TimeToMetamorphosis>Time to next stage: {0}</AA_TimeToMetamorphosis>	
+	<RT_TimeToMetamorphosis>Time to next stage: {0}</RT_TimeToMetamorphosis>	
 	<RT_NotTameable>This creature is untameable</RT_NotTameable>
-
-
-	<!-- Mod Settings -->
-	<allowMapSpawning>Allow Metroids to spawn on map entry</allowMapSpawning>
-	<allowBerserking>Allow Metroids to berserk</allowBerserking>
-	<allowQueenCapture>Allow Metroid Queens to be forcibly captured</allowQueenCapture>
-	<allowBerserkUntaming>Allow tamed Metroids to untame when berserking</allowBerserkUntaming>
-
 
 	<!--Animal toggles -->
 

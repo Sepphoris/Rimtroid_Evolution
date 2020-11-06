@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <Settings_RimtroidEvolution>Rimtroid: Evolution</Settings_RimtroidEvolution>
+  
+  <Setting_Select>Select All</Setting_Select>
+  <Setting_Deselect>Deselect All</Setting_Deselect>
+  <Setting_Reset>Reset All</Setting_Reset>
+
+  <Setting_WildMetroidEntry>Map Generation Spawning</Setting_WildMetroidEntry>
+  <Setting_WildMetroidentry_Title>Spawn Metroids upon map entry</Setting_WildMetroidEntry_Title>
+  <Setting_WildMetroidEntry_Description>Allow Metroids to spawn within a newly generated map.</Setting_WildMetroidEntry_Description>
+  
+  <Setting_MetroidBerserking>Metroid Berserking</Setting_MetroidBerserking>
+  <Setting_MetroidBerserking_Title>Allow Metroids to berserk</Setting_MetroidBerserking_Title>
+  <Setting_MetroidBerserking_Description>Determine if Metroids have a chance to berserk upon reaching a certain food value.</Setting_MetroidBerserking_Description>
+
+  <Setting_MetroidBerserkUntame>Metroid Berserk Untaming</Setting_MetroidBerserUntame>
+  <Setting_MetroidBerserkUntame_Title>Berserking Metroids can untame</Setting_MetroidBerserkUntame_Title>
+  <Setting_MetroidBerserkUntame_Description>Determine if Metroids that berserk will have a chance of untaming, and permanently returning to the wild.</Setting_MetroidBerserkUntame_Description>
+
+  <Setting_AllowQueenCapture>Metroid Queen Control</Setting_AllowQueenCapture>
+  <Setting_AllowQueenCapture_Title>Allow Queen Metroids to be controlled</Setting_AllowQueenCapture_Title>
+  <Setting_AllowQueenCapture_Description>A failsafe is coded to prevent Queens from falling into player control. This overrides that, allowing Queens to be forcibly tamed.</Setting_AllowQueenCapture_Description>
+  <Setting_AllowQueenCapture_Warning>Warning: Queens are currently not intended for player use. This only exists for player freedom; fixing issues relating to tamed queens are a low priority.</Setting_AllowQueenCapture_Warning>
+  
+</LanguageData>

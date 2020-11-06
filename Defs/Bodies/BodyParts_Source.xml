@@ -67,7 +67,47 @@
 	</BodyPartDef>
 
 
-	<!-- Metroid Larvae Parts -->
+  <!-- Bantee Metroid Parts-->
+
+	<BodyPartDef>
+		<defName>RT_BanteeMainBody</defName>
+		<label>body</label>
+		<hitPoints>90</hitPoints>
+		<frostbiteVulnerability>10</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RT_BanteeProtoplasm</defName>
+		<label>protoplasm</label>
+		<hitPoints>40</hitPoints>
+		<bleedRate>1</bleedRate>
+		<frostbiteVulnerability>6</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_BanteeNucleus</defName>
+		<label>nuclei</label>
+		<hitPoints>40</hitPoints>
+		<bleedRate>0</bleedRate>
+		<skinCovered>true</skinCovered>
+		<tags>
+      <li>SightSource</li>
+			<li>ConsciousnessSource</li>
+			<li>BreathingSource</li>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<!-- Metroid Larvae Parts; same as Bantee, but slightly stronger -->
 
 	<BodyPartDef>
 		<defName>RT_LarvaeMainBody</defName>

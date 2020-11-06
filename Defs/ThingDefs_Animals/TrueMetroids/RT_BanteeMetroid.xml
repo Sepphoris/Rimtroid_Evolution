@@ -5,24 +5,24 @@
 	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
 	
 	<ThingDef ParentName="AnimalThingBase">
-		<defName>RT_MetroidLarvae</defName>
-		<label>Metroid</label>
+		<defName>RT_BanteeMetroid</defName>
+		<label>Bantee Metroid</label>
 
-		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
+		<description>Bantee Metroids, also known as Metroid Hatchlings, are freshly-hatched metroids that are still developing a majority of their body structure. While Bantees can fly right out of the egg, they are lacking in all other departments; their teeth are nothing more than small stubs, their entire body is soft and easy to puncutre, and their otherwise hardy immune system is severely vulnerable. Most Bantees stay near a Queen until the larvae stage; if lost in the wild, they have very little chance of surviving long enough to develop into a larvae.\n\nDue to significant underdevelopment, their natural, primal senses are almost entirely absent; they are very easy to tame and make bonds with, and Bantees will only berserk in the most dire of hunger situations. This, coupled with their minimal threat state, makes them quite valuable and affectionate house pets.</description>
 		<statBases>
 		
 	<!-- Internal Stats -->
 		  <ToxicSensitivity>0</ToxicSensitivity>
 		  <PsychicSensitivity>0</PsychicSensitivity>
       <Flammability>0</Flammability>
-		  <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+		  <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
 		  <ArmorRating_Heat>1</ArmorRating_Heat>
 		  <MoveSpeed>2</MoveSpeed>
-		  <MarketValue>120</MarketValue>
-		  <ComfyTemperatureMin>12</ComfyTemperatureMin>
+		  <MarketValue>160</MarketValue>
+		  <ComfyTemperatureMin>14</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
-		  <MeatAmount>10</MeatAmount>
+		  <MeatAmount>8</MeatAmount>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
 		
@@ -33,7 +33,7 @@
 				<capacities>
 				  <li>Blunt</li>
 				</capacities>
-				<power>6</power>
+				<power>2</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
@@ -43,23 +43,23 @@
 					<li>Scratch</li>
 					<li>RT_Lifedrain</li>
 				</capacities>
-				<power>5</power>
+				<power>3</power>
 				<cooldownTime>1.5</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>
 			<li>
                 <label>life drain</label>
                 <capacities>
-                    <li>RT_Lifedrain</li>
+                    <li>RT_LifedrainBantee</li>
                 </capacities>
-                <power>8</power>
+                <power>7</power>
                 <cooldownTime>3</cooldownTime>
                 <chanceFactor>0.8</chanceFactor>
 				<surpriseAttack>
 					<extraMeleeDamages>
 					<li>
 						<def>Stun</def>
-						<amount>8</amount>
+						<amount>6</amount>
 					</li>
 					</extraMeleeDamages>
 				</surpriseAttack>
@@ -89,10 +89,10 @@
         <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 
 		  <bloodDef>Filth_BloodInsect</bloodDef>
-		  <herdAnimal>true</herdAnimal>
-		  <body>RT_LarvaeBody</body>
-		  <baseBodySize>0.4</baseBodySize>
-		  <baseHealthScale>1.2</baseHealthScale>
+		  <herdAnimal>false</herdAnimal>
+		  <body>RT_BanteeBody</body>
+		  <baseBodySize>0.3</baseBodySize>
+		  <baseHealthScale>1</baseHealthScale>
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>
@@ -115,9 +115,9 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
-		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-		  <wildness>0.9</wildness>
+		  <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+		  <wildness>0.7</wildness>
 		  <lifeExpectancy>200</lifeExpectancy>
 		  <lifeStageAges>
 			<li>
@@ -142,27 +142,28 @@
 		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		<ageGenerationCurve>
 			<points>
-				<li>(15,0)</li>
-				<li>(20,3)</li>
-				<li>(30,10)</li>
-				<li>(50,5)</li>
-				<li>(70,0)</li>
+				<li>(0,0)</li>
+				<li>(1,3)</li>
+				<li>(3,5)</li>
+				<li>(6,10)</li>
+				<li>(9,3)</li>
+				<li>(14,0)</li>
 			</points>
     </ageGenerationCurve>
 			<wildBiomes>
-			  <BorealForest>0.2</BorealForest>
-			  <Tundra>0.02</Tundra>
-			  <ColdBog>0.02</ColdBog>
-			  <TemperateSwamp>0.5</TemperateSwamp>
-			  <TropicalSwamp>0.4</TropicalSwamp>
-			  <TemperateForest>0.5</TemperateForest>
-			  <AridShrubland>0.2</AridShrubland>
-			  <Desert>0.2</Desert>
-        <TropicalRainforest>0.3</TropicalRainforest>
+			  <BorealForest>0.1</BorealForest>
+			  <Tundra>0.01</Tundra>
+			  <ColdBog>0.01</ColdBog>
+			  <TemperateSwamp>0.25</TemperateSwamp>
+			  <TropicalSwamp>0.2</TropicalSwamp>
+			  <TemperateForest>0.25</TemperateForest>
+			  <AridShrubland>0.1</AridShrubland>
+			  <Desert>0.1</Desert>
+        <TropicalRainforest>0.25</TropicalRainforest>
 			</wildBiomes>
 		</race>
     <butcherProducts>
-			<RT_MetroidGel>10</RT_MetroidGel>
+			<RT_MetroidGel>8</RT_MetroidGel>
 		</butcherProducts>
 		<tradeTags>
 		  <li>AnimalExotic</li>
@@ -177,60 +178,60 @@
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>
 						<key>0.0</key>
-						<value>0.25</value>
+						<value>0.01</value>
 					</li>
 					<li>
 						<key>0.05</key>
-						<value>0.15</value>
+						<value>0</value>
 					</li>
 					<li>
 						<key>0.1</key>
-						<value>0.06</value>
+						<value>0</value>
 					</li>
 					<li>
 						<key>0.2</key>
-						<value>0.03</value>
+						<value>0</value>
 					</li>
 					<li>
 						<key>0.3</key>
 						<value>0</value>
 					</li>
 				</hungerBerserkChanges>
-				<chanceToBecomeWildIfBerserkAndTamed>0.1</chanceToBecomeWildIfBerserkAndTamed>
+				<chanceToBecomeWildIfBerserkAndTamed>0</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
     </modExtensions>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">
-		<defName>RT_MetroidLarvae</defName>
-		<label>metroid</label>
-		<race>RT_MetroidLarvae</race>
-		<combatPower>300</combatPower>
-		<ecoSystemWeight>2</ecoSystemWeight>
+		<defName>RT_BanteeMetroid</defName>
+		<label>bantee metroid</label>
+		<race>RT_BanteeMetroid</race>
+		<combatPower>100</combatPower>
+		<ecoSystemWeight>1</ecoSystemWeight>
 		<wildGroupSize>
-			<min>3</min>
-			<max>6</max>
+			<min>1</min>
+			<max>3</max>
 		</wildGroupSize>
 		<lifeStages>
 		  <li>
 			<label>bantee metroid</label>
 			<labelPlural>bantee metroid</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <texPath>Animals/BanteeMetroid/RT_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
+				<volume>(0.2, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.55)</offset>
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <texPath>Animals/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <texPath>Animals/BanteeMetroid/RT_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -238,13 +239,13 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <texPath>Animals/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <texPath>Animals/BanteeMetroid/RT_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -252,7 +253,7 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <texPath>Animals/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>

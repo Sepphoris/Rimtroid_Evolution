@@ -32,6 +32,22 @@ to be made to allow hediff effects from other mods.
 	      <restFallFactorOffset>0.8</restFallFactorOffset>
         <naturalHealingFactor>0.8</naturalHealingFactor>
         <capMods>
+				  <li>
+				  	<capacity>Eating</capacity>
+				  	<offset>-0.2</offset>
+				  </li>
+				  <li>
+					  <capacity>Sight</capacity>
+					  <offset>-0.05</offset>
+				  </li>
+				  <li>
+					  <capacity>BloodFiltration</capacity>
+					  <offset>0</offset>
+				  </li>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.2</offset>
+				  </li>
           <li>
             <capacity>Moving</capacity>
             <offset>-0.3</offset>
@@ -39,7 +55,29 @@ to be made to allow hediff effects from other mods.
         </capMods>
       </li>
     </stages>
-</HediffDef>
+    <comps>
+      <li Class="Metamorphosis.HediffCompProperties_RimtroidEvolution">
+	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+        <PossibleEvolutionPaths>
+			    <li>
+				    <!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
+				    <Age>14</Age>
+				    <Kind>RT_MetroidLarvae</Kind>
+			    </li>
+		    </PossibleEvolutionPaths>
+        <whitelists>
+			    <li>RT_BanteeStateWhitelist</li>
+		    </whitelists>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <Metamorphosis.MetroidWhitelistDef>
+    <defName>RT_BanteeStateWhitelist</defName>
+      <whitelist>
+		    <!--li>RT_BanteeState</li-->
+      </whitelist>
+  </Metamorphosis.MetroidWhitelistDef>
 
 <!--===============Metroid Larvae===============-->
 
@@ -94,7 +132,7 @@ to be made to allow hediff effects from other mods.
     </comps>
   </HediffDef>
 
- <Metamorphosis.MetroidWhitelistDef>
+  <Metamorphosis.MetroidWhitelistDef>
     <defName>RT_LarvaeStateWhitelist</defName>
         <whitelist>
 			<!--li>RT_LarvaeState</li-->
