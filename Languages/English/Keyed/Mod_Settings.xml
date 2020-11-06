@@ -8,14 +8,14 @@
   <Setting_Reset>Reset All</Setting_Reset>
 
   <Setting_WildMetroidEntry>Map Generation Spawning</Setting_WildMetroidEntry>
-  <Setting_WildMetroidentry_Title>Spawn Metroids upon map entry</Setting_WildMetroidEntry_Title>
+  <Setting_WildMetroidEntry_Title>Spawn Metroids upon map entry</Setting_WildMetroidEntry_Title>
   <Setting_WildMetroidEntry_Description>Allow Metroids to spawn within a newly generated map.</Setting_WildMetroidEntry_Description>
   
   <Setting_MetroidBerserking>Metroid Berserking</Setting_MetroidBerserking>
   <Setting_MetroidBerserking_Title>Allow Metroids to berserk</Setting_MetroidBerserking_Title>
   <Setting_MetroidBerserking_Description>Determine if Metroids have a chance to berserk upon reaching a certain food value.</Setting_MetroidBerserking_Description>
 
-  <Setting_MetroidBerserkUntame>Metroid Berserk Untaming</Setting_MetroidBerserUntame>
+  <Setting_MetroidBerserkUntame>Metroid Berserk Untaming</Setting_MetroidBerserkUntame>
   <Setting_MetroidBerserkUntame_Title>Berserking Metroids can untame</Setting_MetroidBerserkUntame_Title>
   <Setting_MetroidBerserkUntame_Description>Determine if Metroids that berserk will have a chance of untaming, and permanently returning to the wild.</Setting_MetroidBerserkUntame_Description>
 

@@ -106,7 +106,7 @@
 			  </abilities>
       </li>
       <li Class="RT_Rimtroid.CompProperties_AnimalProduct">
-				<resourceDef>RT_BioResin</resourceDef>
+				<resourceDef>RT_Bioresin</resourceDef>
 				<gatheringIntervalDays>8</gatheringIntervalDays>
 				<resourceAmount>4</resourceAmount>
 				<customResourceString>RT_BioResinDesc</customResourceString>
