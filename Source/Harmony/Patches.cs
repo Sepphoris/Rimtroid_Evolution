@@ -13,8 +13,15 @@ namespace RT_Rimtroid
     {
         static Main()
         {
-            var harmony = new Harmony("com.symphoniess.rimworld.mod.RimtroidEvolution");
+            var harmony = new Harmony("com.drazzii.rimworld.mod.RimtroidEvolution");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
+            DefDatabase<ThingDef>.GetNamed("RT_BanteeMetroid").race.predator = true;
+            DefDatabase<ThingDef>.GetNamed("RT_MetroidLarvae").race.predator = true;
+            DefDatabase<ThingDef>.GetNamed("RT_AlphaMetroid").race.predator = true;
+            DefDatabase<ThingDef>.GetNamed("RT_GammaMetroid").race.predator = true;
+            DefDatabase<ThingDef>.GetNamed("RT_ZetaMetroid").race.predator = true;
+            DefDatabase<ThingDef>.GetNamed("RT_OmegaMetroid").race.predator = true;
+            DefDatabase<ThingDef>.GetNamed("RT_QueenMetroid").race.predator = true;
         }
     }
 
