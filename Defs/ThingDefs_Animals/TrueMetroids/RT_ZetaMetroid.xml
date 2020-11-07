@@ -42,7 +42,7 @@
 				<label>bite</label>
 				<capacities>
 					<li>Stab</li>
-					<li>RT_Lifedrain</li>
+					<li>RT_LifedrainZeta</li>
 				</capacities>
 				<power>18</power>
 				<cooldownTime>1.5</cooldownTime>

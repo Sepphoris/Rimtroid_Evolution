@@ -36,13 +36,14 @@
 				</capacities>
 				<power>10</power>
 				<cooldownTime>2.5</cooldownTime>
+        <chanceFactor>0.8</chanceFactor>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
 			<li>
 				<label>bite</label>
 				<capacities>
 					<li>Stab</li>
-					<li>RT_Lifedrain</li>
+					<li>RT_LifedrainAlpha</li>
 				</capacities>
 				<power>12</power>
 				<cooldownTime>3</cooldownTime>
@@ -55,6 +56,7 @@
 				</capacities>
 				<power>10</power>
 				<cooldownTime>2</cooldownTime>
+        <chanceFactor>0.8</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -64,6 +66,7 @@
 				</capacities>
 				<power>10</power>
 				<cooldownTime>2</cooldownTime>
+        <chanceFactor>0.8</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 		</tools>

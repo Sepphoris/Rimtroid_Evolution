@@ -60,7 +60,7 @@ namespace RT_Rimtroid
             caster.ageTracker.AgeBiologicalTicks += ageDays * GenDate.TicksPerDay; // age 5 days, check GenDate for other TicksPerX options
         }
 
-        public void AbsorbNeed(Need casterFood, Need targetFood, float absorbtionRate = 0.01f)
+        public void AbsorbNeed(Need casterFood, Need targetFood, float absorbtionRate = 0.03f)
         {
             float amountAbsorbed = Mathf.Min(targetFood.MaxLevel * absorbtionRate, targetFood.CurLevel);
             targetFood.CurLevel -= amountAbsorbed;

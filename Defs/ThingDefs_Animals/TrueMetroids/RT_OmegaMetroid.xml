@@ -43,7 +43,7 @@
 				<label>bite</label>
 				<capacities>
 					<li>Stab</li>
-					<li>RT_Lifedrain</li>
+					<li>RT_LifedrainOmega</li>
 				</capacities>
 				<power>20</power>
 				<armorPenetration>0.7</armorPenetration>
