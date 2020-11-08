@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class Verb_Shoot_Ability : Verb_Shoot, IAttackVerb
     {

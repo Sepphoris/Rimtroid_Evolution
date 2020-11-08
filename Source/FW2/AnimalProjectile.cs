@@ -4,7 +4,7 @@ using Verse;
 using Verse.Sound;
 using RimWorld;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class AnimalProjectile : Projectile
     {

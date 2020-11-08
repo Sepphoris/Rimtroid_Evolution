@@ -6,7 +6,7 @@ using Verse.AI;
 using System.Reflection;
 using System.Linq;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class Verb_Shoot_Cooldown : Verb_Shoot
     {

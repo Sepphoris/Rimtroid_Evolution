@@ -46,7 +46,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaFireball</defName>
-		<thingClass>DD.AnimalProjectile</thingClass>
+		<thingClass>RT_Rimtroid.AnimalProjectile</thingClass>
 		<label>Fireball</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -71,7 +71,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaAcid</defName>
-		<thingClass>DD.AnimalProjectile</thingClass>
+		<thingClass>RT_Rimtroid.AnimalProjectile</thingClass>
 		<label>acidic spit</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>

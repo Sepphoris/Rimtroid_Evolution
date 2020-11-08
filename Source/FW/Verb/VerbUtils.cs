@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Linq;
 using UnityEngine;
 
-namespace DD
+namespace RT_Rimtroid
 {
 
     public static class VerbUtils

@@ -80,8 +80,8 @@
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
 			</li>
-    	<li Class="DD.CompProperties_HostileResponse">
-			<compClass>DD.CompHostileResponse</compClass>
+    	<li Class="RT_Rimtroid.CompProperties_HostileResponse">
+			<compClass>RT_Rimtroid.CompHostileResponse</compClass>
 			<initialHostility>Aggressive</initialHostility>
       <controllableGizmo>false</controllableGizmo>
       <friendlyFireMentalState>Manhunter</friendlyFireMentalState>

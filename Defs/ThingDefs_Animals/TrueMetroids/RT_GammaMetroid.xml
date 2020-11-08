@@ -67,8 +67,8 @@
 			</li>
 		</tools>
 		<comps>
-    	<li Class="DD.CompProperties_HostileResponse">
-			  <compClass>DD.CompHostileResponse</compClass>
+    	<li Class="RT_Rimtroid.CompProperties_HostileResponse">
+			  <compClass>RT_Rimtroid.CompHostileResponse</compClass>
 			  <initialHostility>Aggressive</initialHostility>
         <controllableGizmo>false</controllableGizmo>
        <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
@@ -97,8 +97,8 @@
 			  </options>
 		  </li>
 <!-- Defines the conditions for when to give the pawn an ability -->
-		  <li Class="DD.CompProperties_AbilityDefinition">
-			  <compClass>DD.CompAbilityDefinition</compClass>
+		  <li Class="RT_Rimtroid.CompProperties_AbilityDefinition">
+			  <compClass>RT_Rimtroid.CompAbilityDefinition</compClass>
 			  <abilities>
 			  	<li>
 					  <abilityDef>RT_GammaElectricBolt</abilityDef>
@@ -210,7 +210,7 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	  <modExtensions>
-		  <li Class="DD.LegacyModExtension">
+		  <li Class="RT_Rimtroid.LegacyModExtension">
 			  <hasAbilities>true</hasAbilities>
       </li>
       <!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li> -->
@@ -280,7 +280,7 @@
 		  </li>
 		</lifeStages>
 		<modExtensions>
-      <li Class="DD.VerbSettingExtension">
+      <li Class="RT_Rimtroid.VerbSettingExtension">
 			  <useExtendedVerbs>true</useExtendedVerbs>
       </li>
 			<li Class="RT_RimTroid.HungerBerserkOptions">

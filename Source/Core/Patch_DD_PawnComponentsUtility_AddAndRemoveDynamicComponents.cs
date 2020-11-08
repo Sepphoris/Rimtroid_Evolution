@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
-namespace DD
+namespace RT_Rimtroid
 {
     [HarmonyPatch(typeof(PawnComponentsUtility), "AddAndRemoveDynamicComponents")]
     public static class DD_PawnComponentsUtility_AddAndRemoveDynamicComponents

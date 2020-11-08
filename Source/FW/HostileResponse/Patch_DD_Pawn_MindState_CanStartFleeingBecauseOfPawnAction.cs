@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
-namespace DD
+namespace RT_Rimtroid
 {
     [HarmonyPatch(typeof(Pawn_MindState), "CanStartFleeingBecauseOfPawnAction")]
     public class Patch_DD_Pawn_MindState_CanStartFleeingBecauseOfPawnAction

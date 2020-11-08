@@ -8,7 +8,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class AbilityCompProperties_Cooldown : CompProperties_AbilityEffect
     {

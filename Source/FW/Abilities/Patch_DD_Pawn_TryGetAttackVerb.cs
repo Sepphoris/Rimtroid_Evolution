@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
-namespace DD
+namespace RT_Rimtroid
 {
     [HarmonyPatch(typeof(Pawn), "TryGetAttackVerb")]
-    public static class DD_Pawn_TryGetAttackVerb
+    public static class RT_Pawn_TryGetAttackVerb
     {
         public static void Postfix(Pawn __instance, ref Verb __result, Thing target, bool allowManualCastWeapons)
         {

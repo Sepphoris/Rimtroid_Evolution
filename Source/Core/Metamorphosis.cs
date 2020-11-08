@@ -53,12 +53,12 @@ namespace Metamorphosis
                 Pawn.ageTracker.AgeChronologicalTicks = ageC;
 
                 //Remove all framework abilities.
-                foreach (AbilityDef def in Pawn.abilities.abilities.OfType<DD.Ability_Base>().Select(ability => ability.def).ToList())
+                foreach (AbilityDef def in Pawn.abilities.abilities.OfType<RT_Rimtroid.Ability_Base>().Select(ability => ability.def).ToList())
                 {
                     Pawn.abilities.RemoveAbility(def);
                 }
 
-                DD.CompAbilityDefinition comp = Pawn.TryGetComp<DD.CompAbilityDefinition>();
+                RT_Rimtroid.CompAbilityDefinition comp = Pawn.TryGetComp<RT_Rimtroid.CompAbilityDefinition>();
                 if (comp != null)
                 {
                     //Remove the old comp
@@ -66,13 +66,13 @@ namespace Metamorphosis
                 }
 
                 //Try loading CompProperties from the def.
-                CompProperties props = kindDef.race.CompDefFor<DD.CompAbilityDefinition>();
-                DD.CompAbilityDefinition newComp = null;
+                CompProperties props = kindDef.race.CompDefFor<RT_Rimtroid.CompAbilityDefinition>();
+                RT_Rimtroid.CompAbilityDefinition newComp = null;
 
                 if (props != null)
                 {
                     //CompProperties found, so should gain the comp.
-                    newComp = (DD.CompAbilityDefinition)Activator.CreateInstance(props.compClass); //Create ThingComp from the loaded CompProperties.
+                    newComp = (RT_Rimtroid.CompAbilityDefinition)Activator.CreateInstance(props.compClass); //Create ThingComp from the loaded CompProperties.
                     newComp.parent = Pawn; //Set Comp parent.
                     Pawn.AllComps.Add(newComp); //Add to pawn's comp list.
                     newComp.Initialize(props); //Initialize it.

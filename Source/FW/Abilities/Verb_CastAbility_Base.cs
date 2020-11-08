@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class Verb_CastAbility_Base : Verb_CastAbility
     {

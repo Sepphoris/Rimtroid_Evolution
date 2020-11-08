@@ -9,7 +9,7 @@
       <defName>RT_GammaElectricBolt</defName>
       <label>Electric Bolt</label>
       <description>Fire an arc of electricity at a target</description>
-      <abilityClass>DD.Ability_Base</abilityClass>
+      <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
       <cooldownTicksRange>1000~1200</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -17,7 +17,7 @@
       <iconPath>AnimalProjectile/GammaBolt</iconPath>
       <verbProperties>
 <!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
-        <verbClass>DD.Verb_CastAbility_Base</verbClass>
+        <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
         <range>35</range>
         <minRange>1</minRange>
 <!-- Projectile defined here just for the targeting when you click the gizmo, the CastVerb's projectile is the actual one that will cause damage -->
@@ -26,8 +26,8 @@
 			  <commonality>2</commonality>
       </verbProperties>
       <comps>
-        <li Class="DD.AbilityCompProperties_AbilityControl">
-          <compClass>DD.AbilityComp_AbilityControl</compClass>
+        <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+          <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
 <!-- Allows the ability.verb to be picked up by Pawn.TryGetAttackVerb -->
           <autoUse>true</autoUse>
           <gizmoOnText>Electric Bolt Enabled</gizmoOnText>
@@ -36,8 +36,8 @@
           <gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
           <gizmoDesc>Toggle Electric Bolt Usage</gizmoDesc>
         </li>
-        <li Class="DD.AbilityCompProperties_CastVerb">
-          <compClass>DD.AbilityComp_CastVerb</compClass>
+        <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
+          <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
 <!-- Verbs defined here will be actually triggered when the ability activates. -->
           <verbProperties>
             <li>
@@ -58,8 +58,8 @@
             </li>
           </verbProperties>
         </li>
-			  <li Class="DD.AbilityCompProperties_Cooldown">
-          <compClass>DD.AbilityComp_Cooldown</compClass>
+			  <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+          <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
 <!-- Ability cooldown pool -->
 				  <cooldownPool>GammaAbilityPool</cooldownPool>
 <!-- Cooldown ticks range (omit to use each verb's default <cooldownTicksRange>) -->
@@ -77,22 +77,22 @@
       <defName>RT_GammaShockwave</defName>
       <label>Shockwave</label>
       <description>Unleash a burst or electricity in a short surrounding radius</description>
-      <abilityClass>DD.Ability_Base</abilityClass>
+      <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
       <cooldownTicksRange>1400~1600</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
       <iconPath>AnimalProjectile/GammaBolt</iconPath>
       <verbProperties>
-        <verbClass>DD.Verb_CastAbility_Base</verbClass>
+        <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
         <range>1</range>
         <minRange>1</minRange>
 			  <defaultProjectile>RT_GammaWave</defaultProjectile>
 			  <commonality>2</commonality>
       </verbProperties>
       <comps>
-        <li Class="DD.AbilityCompProperties_AbilityControl">
-          <compClass>DD.AbilityComp_AbilityControl</compClass>
+        <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+          <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
           <autoUse>true</autoUse>
           <gizmoOnText>Shockwave Enabled</gizmoOnText>
           <gizmoOffText>Shockwave Disabled</gizmoOffText>
@@ -100,8 +100,8 @@
           <gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
           <gizmoDesc>Toggle Shackwave Usage</gizmoDesc>
         </li>
-        <li Class="DD.AbilityCompProperties_CastVerb">
-          <compClass>DD.AbilityComp_CastVerb</compClass>
+        <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
+          <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
           <verbProperties>
             <li>
               <verbClass>Verb_Shoot</verbClass>
@@ -121,8 +121,8 @@
             </li>
           </verbProperties>
         </li>
-			  <li Class="DD.AbilityCompProperties_Cooldown">
-          <compClass>DD.AbilityComp_Cooldown</compClass>
+			  <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+          <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
 				  <cooldownPool>GammaAbilityPool</cooldownPool>
 				  <independent>true</independent>
 				  <resetsTimer>false</resetsTimer>
@@ -136,7 +136,7 @@
         <defName>RT_ZetaFireball</defName>
         <label>Fireball</label>
         <description>Lob balls of fire at a target</description>
-        <abilityClass>DD.Ability_Base</abilityClass>
+        <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
         <cooldownTicksRange>1000~1200</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
@@ -144,15 +144,15 @@
         <iconPath>AnimalProjectile/Firebolt</iconPath>
         <verbProperties>
 <!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
-            <verbClass>DD.Verb_CastAbility_Base</verbClass>
+            <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
             <range>28</range>
             <minRange>1</minRange>
 			    <defaultProjectile>RT_ZetaFireball</defaultProjectile>
 			    <commonality>2</commonality>
         </verbProperties>
         <comps>
-            <li Class="DD.AbilityCompProperties_AbilityControl">
-              <compClass>DD.AbilityComp_AbilityControl</compClass>
+            <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+              <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
               <autoUse>true</autoUse>
               <gizmoOnText>Firebolt Enabled</gizmoOnText>
               <gizmoOffText>Firebolt Disabled</gizmoOffText>
@@ -160,8 +160,8 @@
               <gizmoOffIconPath>AnimalProjectile/Firebolt</gizmoOffIconPath>
               <gizmoDesc>Toggle Firebolt Usage</gizmoDesc>
             </li>
-            <li Class="DD.AbilityCompProperties_CastVerb">
-              <compClass>DD.AbilityComp_CastVerb</compClass>
+            <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
+              <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
               <verbProperties>
                 <li>
                   <verbClass>Verb_Shoot</verbClass>
@@ -181,8 +181,8 @@
                 </li>
               </verbProperties>
             </li>
-			      <li Class="DD.AbilityCompProperties_Cooldown">
-              <compClass>DD.AbilityComp_Cooldown</compClass>
+			      <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+              <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
 				      <cooldownPool>ZetaAbilityPool</cooldownPool>
 				      <independent>true</independent>
 				      <resetsTimer>false</resetsTimer>
@@ -194,22 +194,22 @@
         <defName>RT_ZetaAcidSpit</defName>
         <label>Acid Spit</label>
         <description>Fire an acidic glob at a target</description>
-        <abilityClass>DD.Ability_Base</abilityClass>
+        <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
         <cooldownTicksRange>1200~1600</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <iconPath>AnimalProjectile/Acidbolt</iconPath>
         <verbProperties>
-          <verbClass>DD.Verb_CastAbility_Base</verbClass>
+          <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
           <range>28</range>
           <minRange>1</minRange>
 			    <defaultProjectile>RT_ZetaAcid</defaultProjectile>
 			    <commonality>2</commonality>
         </verbProperties>
         <comps>
-          <li Class="DD.AbilityCompProperties_AbilityControl">
-            <compClass>DD.AbilityComp_AbilityControl</compClass>
+          <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+            <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
             <autoUse>true</autoUse>
             <gizmoOnText>Acid Spit Enabled</gizmoOnText>
             <gizmoOffText>Acid Spit Disabled</gizmoOffText>
@@ -217,8 +217,8 @@
             <gizmoOffIconPath>AnimalProjectile/Acidbolt</gizmoOffIconPath>
             <gizmoDesc>Toggle Acid Spit Usage</gizmoDesc>
           </li>
-          <li Class="DD.AbilityCompProperties_CastVerb">
-            <compClass>DD.AbilityComp_CastVerb</compClass>
+          <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
+            <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -238,8 +238,8 @@
               </li>
             </verbProperties>
           </li>
-			      <li Class="DD.AbilityCompProperties_Cooldown">
-              <compClass>DD.AbilityComp_Cooldown</compClass>
+			      <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+              <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
 				      <cooldownPool>ZetaAbilityPool</cooldownPool>
 				      <independent>true</independent>
 				      <resetsTimer>false</resetsTimer>
@@ -253,22 +253,22 @@
         <defName>RT_OmegaBeam</defName>
         <label>Omega Fire Beam</label>
         <description>Create a beam of fire that ignites the ground below it.</description>
-        <abilityClass>DD.Ability_Base</abilityClass>
+        <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
         <cooldownTicksRange>1600~1200</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <iconPath>AnimalProjectile/Firebeam1</iconPath>
         <verbProperties>
-          <verbClass>DD.Verb_CastAbility_Base</verbClass>
+          <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
           <range>30</range>
           <minRange>3</minRange>
 			    <defaultProjectile>RT_OmegaBeam</defaultProjectile>
 			    <commonality>2</commonality>
         </verbProperties>
         <comps>
-          <li Class="DD.AbilityCompProperties_AbilityControl">
-            <compClass>DD.AbilityComp_AbilityControl</compClass>
+          <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+            <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
             <autoUse>true</autoUse>
             <gizmoOnText>Firebeam Enabled</gizmoOnText>
             <gizmoOffText>Firebeam Disabled</gizmoOffText>
@@ -276,8 +276,8 @@
             <gizmoOffIconPath>AnimalProjectile/Firebeam1</gizmoOffIconPath>
             <gizmoDesc>Toggle Firebeam Usage</gizmoDesc>
           </li>
-          <li Class="DD.AbilityCompProperties_CastVerb">
-            <compClass>DD.AbilityComp_CastVerb</compClass>
+          <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
+            <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -297,8 +297,8 @@
               </li>
             </verbProperties>
           </li>
-			      <li Class="DD.AbilityCompProperties_Cooldown">
-              <compClass>DD.AbilityComp_Cooldown</compClass>
+			      <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+              <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
 				      <cooldownPool>OmegaAbilityPool</cooldownPool>
 				      <independent>false</independent>
 				      <resetsTimer>true</resetsTimer>
@@ -312,22 +312,22 @@
         <defName>RT_QueenBeam</defName>
         <label>Queen Fire Beam</label>
         <description>Unleash a devastating beam of fire on a target</description>
-        <abilityClass>DD.Ability_Base</abilityClass>
+        <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
         <cooldownTicksRange>1600~2000</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <iconPath>AnimalProjectile/Firebeam1</iconPath>
         <verbProperties>
-          <verbClass>DD.Verb_CastAbility_Base</verbClass>
+          <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
           <range>45</range>
           <minRange>3</minRange>
 			    <defaultProjectile>RT_QueenBeam</defaultProjectile>
 			    <commonality>2</commonality>
         </verbProperties>
         <comps>
-          <li Class="DD.AbilityCompProperties_AbilityControl">
-            <compClass>DD.AbilityComp_AbilityControl</compClass>
+          <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+            <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
             <autoUse>true</autoUse>
             <gizmoOnText>Firebeam Enabled</gizmoOnText>
             <gizmoOffText>Firebeam Disabled</gizmoOffText>
@@ -335,8 +335,8 @@
             <gizmoOffIconPath>AnimalProjectile/Firebeam1</gizmoOffIconPath>
             <gizmoDesc>Toggle Firebeam Usage</gizmoDesc>
           </li>
-          <li Class="DD.AbilityCompProperties_CastVerb">
-            <compClass>DD.AbilityComp_CastVerb</compClass>
+          <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
+            <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -356,8 +356,8 @@
               </li>
             </verbProperties>
           </li>
-			      <li Class="DD.AbilityCompProperties_Cooldown">
-              <compClass>DD.AbilityComp_Cooldown</compClass>
+			      <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+              <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
 				      <cooldownPool>QueenAbilityPool</cooldownPool>
 				      <independent>false</independent>
 				      <resetsTimer>true</resetsTimer>

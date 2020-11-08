@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class VerbSettingExtension : DefModExtension
     {

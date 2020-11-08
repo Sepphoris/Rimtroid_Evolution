@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Verse;
 using Verse.AI;
 
-namespace DD
+namespace RT_Rimtroid
 {
     [HarmonyPatch(typeof(Pawn), "GetGizmos")]
     public static class DD_Pawn_GetGizmos

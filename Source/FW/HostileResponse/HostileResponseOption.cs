@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class HostileResponseOption
     {

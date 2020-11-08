@@ -10,7 +10,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace DD
+namespace RT_Rimtroid
 {
     public class JobGiver_Manhunter_AnyVerb : JobGiver_Manhunter
     {
