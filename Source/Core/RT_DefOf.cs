@@ -19,5 +19,7 @@ namespace RT_Rimtroid
 		public static ThingDef RT_ZetaMetroid;
 
 		public static FactionDef RT_Metroids;
+
+		public static ThingDef RT_GammaShockwave;
 	}
 }
