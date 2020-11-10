@@ -129,7 +129,7 @@
 			<herdAnimal>true</herdAnimal>
 			<body>RT_AlphaBody</body>
 			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>1.2</baseHealthScale>
+			<baseHealthScale>4</baseHealthScale>
 			<baseHungerRate>1</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
@@ -152,7 +152,7 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-			<manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+			<manhunterOnDamageChance>0.80</manhunterOnDamageChance>
 			<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 			<wildness>10</wildness>
 			<lifeExpectancy>450</lifeExpectancy>

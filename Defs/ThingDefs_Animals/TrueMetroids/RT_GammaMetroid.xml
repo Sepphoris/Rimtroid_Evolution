@@ -103,6 +103,9 @@
 			  	<li>
 					  <abilityDef>RT_GammaElectricBolt</abilityDef>
          </li>
+         <!--<li>
+          <abilityDef>RT_GammaShockwave</abilityDef>
+            <li>-->
 			  </abilities>
       </li>
       <li Class="RT_Rimtroid.CompProperties_AnimalProduct">
@@ -131,7 +134,7 @@
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_GammaBody</body>
 		  <baseBodySize>1.5</baseBodySize>
-		  <baseHealthScale>1.4</baseHealthScale>
+		  <baseHealthScale>6</baseHealthScale>
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
@@ -154,7 +157,7 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 		  <wildness>10</wildness>
 		  <lifeExpectancy>750</lifeExpectancy>

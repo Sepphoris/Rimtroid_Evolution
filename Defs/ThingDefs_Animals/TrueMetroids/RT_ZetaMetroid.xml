@@ -130,7 +130,7 @@
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_ZetaBody</body>
 		  <baseBodySize>2</baseBodySize>
-		  <baseHealthScale>1.6</baseHealthScale>
+		  <baseHealthScale>10</baseHealthScale>
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
@@ -153,7 +153,7 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.60</manhunterOnDamageChance>
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.80</manhunterOnTameFailChance>
 		  <wildness>10</wildness>
 		  <lifeExpectancy>1200</lifeExpectancy>

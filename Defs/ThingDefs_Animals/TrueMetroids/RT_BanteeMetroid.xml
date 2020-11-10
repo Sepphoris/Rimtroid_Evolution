@@ -92,7 +92,7 @@
 		  <herdAnimal>false</herdAnimal>
 		  <body>RT_BanteeBody</body>
 		  <baseBodySize>0.3</baseBodySize>
-		  <baseHealthScale>1</baseHealthScale>
+		  <baseHealthScale>1.5</baseHealthScale>
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>

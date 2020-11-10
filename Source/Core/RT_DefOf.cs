@@ -20,6 +20,6 @@ namespace RT_Rimtroid
 
 		public static FactionDef RT_Metroids;
 
-		public static ThingDef RT_GammaShockwave;
+		public static ThingDef RT_GammaShockwaveMote;
 	}
 }

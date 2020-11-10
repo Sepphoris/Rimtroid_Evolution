@@ -92,7 +92,7 @@
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_LarvaeBody</body>
 		  <baseBodySize>0.4</baseBodySize>
-		  <baseHealthScale>1.2</baseHealthScale>
+		  <baseHealthScale>3</baseHealthScale>
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>
@@ -115,7 +115,7 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.40</manhunterOnDamageChance>
+		  <manhunterOnDamageChance>0.80</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 		  <wildness>0.9</wildness>
 		  <lifeExpectancy>200</lifeExpectancy>

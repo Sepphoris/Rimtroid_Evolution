@@ -72,63 +72,41 @@
       </comps>
     </AbilityDef>
 
-    <!--Gamma Shockwave -->
-     <!--<AbilityDef>
-      <defName>RT_GammaShockwave</defName>
-      <label>Shockwave</label>
-      <description>Unleash a burst or electricity in a short surrounding radius</description>
-      <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
-      <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-      <cooldownTicksRange>1400~1600</cooldownTicksRange>
-      <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-      <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-      <iconPath>AnimalProjectile/GammaBolt</iconPath>
-      <verbProperties>
-        <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
-        <range>1</range>
-        <minRange>1</minRange>
-			  <defaultProjectile>RT_GammaWave</defaultProjectile>
-			  <commonality>2</commonality>
-      </verbProperties>
-      <comps>
-        <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
-          <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
-          <autoUse>true</autoUse>
-          <gizmoOnText>Shockwave Enabled</gizmoOnText>
-          <gizmoOffText>Shockwave Disabled</gizmoOffText>
-          <gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
-          <gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
-          <gizmoDesc>Toggle Shackwave Usage</gizmoDesc>
-        </li>
-        <li Class="RT_Rimtroid.AbilityCompProperties_CastVerb">
-          <compClass>RT_Rimtroid.AbilityComp_CastVerb</compClass>
-          <verbProperties>
-            <li>
-              <verbClass>Verb_Shoot</verbClass>
-              <accuracyTouch>0.95</accuracyTouch>
-              <accuracyShort>0.60</accuracyShort>
-              <accuracyMedium>0.50</accuracyMedium>
-              <accuracyLong>0.30</accuracyLong>
-              <hasStandardCommand>true</hasStandardCommand>
-              <defaultProjectile>RT_GammaBolt</defaultProjectile>
-              <warmupTime>1.5</warmupTime>
-              <range>1</range>
-              <minRange>1</minRange>
-              <burstShotCount>1</burstShotCount>
-              <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-              <soundCast>ElectricBoltshot</soundCast>
-               <muzzleFlashScale>1</muzzleFlashScale>
-            </li>
-          </verbProperties>
-        </li>
-			  <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
-          <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
-				  <cooldownPool>GammaAbilityPool</cooldownPool>
-				  <independent>true</independent>
-				  <resetsTimer>false</resetsTimer>
-			  </li>
-      </comps>
-    </AbilityDef>-->
+    <!--Gamma Shockwave
+      <AbilityDef>
+        <defName>RT_GammaShockwave</defName>
+        <label>Shockwave</label>
+        <description>Generates an electric pulse that hits anything nearby</description>
+        <abilityClass>RT_Rimtroid.Ability_Base</abilityClass>
+        <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+        <cooldownTicksRange>1600~1800</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>AnimalProjectile/Firebeam1</iconPath>
+        <verbProperties>
+          <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
+          <range>-1</range>
+          <minRange>-1</minRange>
+			    <commonality>0.4</commonality>
+        </verbProperties>
+        <comps>
+          <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
+            <compClass>RT_Rimtroid.AbilityComp_AbilityControl</compClass>
+            <autoUse>true</autoUse>
+            <gizmoOnText>Shockwave Enabled</gizmoOnText>
+            <gizmoOffText>Shockwave Disabled</gizmoOffText>
+            <gizmoOnIconPath>AnimalProjectile/Firebeam1</gizmoOnIconPath>
+            <gizmoOffIconPath>AnimalProjectile/Firebeam1</gizmoOffIconPath>
+            <gizmoDesc>Toggle Shockwave Usage</gizmoDesc>
+          </li>
+			      <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
+              <compClass>RT_Rimtroid.AbilityComp_Cooldown</compClass>
+				      <cooldownPool>GammaAbilityPool</cooldownPool>
+				      <independent>false</independent>
+				      <resetsTimer>true</resetsTimer>
+			      </li>
+        </comps>
+      </AbilityDef> -->
 
 <!--=============== Zeta Abilities ===============-->
 

@@ -115,7 +115,7 @@
                 <li>
                     <def>RT_Membrane</def>
                     <customLabel>membrane</customLabel>
-                    <coverage>0.20</coverage>
+                    <coverage>0.10</coverage>
                     <groups>
                             <li>Torso</li>
                     </groups>
@@ -130,7 +130,7 @@
                         </li>
                         <li>
                             <def>RT_Nucleus</def>
-                            <coverage>0.01</coverage>
+                            <coverage>0.005</coverage>
                             <depth>Inside</depth>
                             <groups>
 								<li>Torso</li>
@@ -159,7 +159,7 @@
                 <li>
                     <def>Shell</def>
                     <customLabel>shell</customLabel>
-                    <coverage>0.25</coverage>
+                    <coverage>0.35</coverage>
                     <groups>
                         <li>Torso</li>
                     </groups>

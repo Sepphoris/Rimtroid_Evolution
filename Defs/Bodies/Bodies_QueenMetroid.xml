@@ -46,53 +46,53 @@
                 <li>
                     <def>Eye</def>
                     <customLabel>left center eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>left second eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>left third eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>left fourth eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>left fifth eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <!-- Right eyes -->
                 <li>
                     <def>Eye</def>
                     <customLabel>right center eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>right second eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>right third eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>right fourth eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>right fifth eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <!-- Legs -->
                 <li>
@@ -187,7 +187,7 @@
                 <li>
                     <def>Shell</def>
                     <customLabel>shell</customLabel>
-                    <coverage>0.30</coverage>
+                    <coverage>0.40</coverage>
                     <groups>
                         <li>Torso</li>
                     </groups>

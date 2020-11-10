@@ -46,49 +46,49 @@
                 <li>
                     <def>Eye</def>
                     <customLabel>front left eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>back left eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>upper left eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>lower left eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <!-- Right eyes -->
                 <li>
                     <def>Eye</def>
                     <customLabel>front right eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>back right eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>upper right eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <li>
                     <def>Eye</def>
                     <customLabel>lower right eye</customLabel>
-                    <coverage>0.01</coverage>
+                    <coverage>0.005</coverage>
                 </li>
                 <!-- Legs -->
 				<li>
 					<def>Leg</def>
 					<customLabel>left front leg</customLabel>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<groups>
 						<li>HeadClaw</li>
 					</groups>
@@ -97,7 +97,7 @@
 				<li>
 					<def>Leg</def>
 					<customLabel>right front leg</customLabel>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<groups>
 						<li>HeadClaw</li>
 					</groups>
@@ -106,7 +106,7 @@
 				<li>
 					<def>Leg</def>
 					<customLabel>left back leg</customLabel>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<groups>
 						<li>HeadClaw</li>
 					</groups>
@@ -115,7 +115,7 @@
 				<li>
 					<def>Leg</def>
 					<customLabel>right back leg</customLabel>
-					<coverage>0.04</coverage>
+					<coverage>0.03</coverage>
 					<groups>
 						<li>HeadClaw</li>
 					</groups>
@@ -140,7 +140,7 @@
                         </li>
                         <li>
                             <def>RT_Nucleus</def>
-                            <coverage>0.01</coverage>
+                            <coverage>0.005</coverage>
                             <depth>Inside</depth>
                             <groups>
 								<li>Torso</li>
@@ -169,18 +169,18 @@
                 <li>
                     <def>Shell</def>
                     <customLabel>shell</customLabel>
-                    <coverage>0.30</coverage>
+                    <coverage>0.45</coverage>
                     <groups>
                         <li>Torso</li>
                     </groups>
                 </li>
-				<li>
+				        <li>
                     <def>Tail</def>
                     <customLabel>tail</customLabel>
-                    <coverage>0.20</coverage>
+                    <coverage>0.15</coverage>
                     <groups>
-						<li>Torso</li>
-						<li>Tail</li>							
+						          <li>Torso</li>
+						          <li>Tail</li>							
                     </groups>
 					<height>Bottom</height>
                 </li>

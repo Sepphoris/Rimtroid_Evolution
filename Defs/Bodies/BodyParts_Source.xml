@@ -19,7 +19,7 @@
     <!--<conceptual>true</conceptual> -->
 		<defName>RT_Mitosis</defName>
 		<label>Mitosis</label>
-		<hitPoints>20</hitPoints>
+		<hitPoints>15</hitPoints>
 		<bleedRate>0</bleedRate>
 		<skinCovered>true</skinCovered>
 		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
@@ -31,7 +31,7 @@
 	<BodyPartDef>
 		<defName>RT_Membrane</defName>
 		<label>membrane</label>
-		<hitPoints>140</hitPoints>
+		<hitPoints>80</hitPoints>
 		<bleedRate>0</bleedRate>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>
@@ -55,7 +55,7 @@
 	<BodyPartDef>
 		<defName>RT_Nucleus</defName>
 		<label>nucleus</label>
-		<hitPoints>10</hitPoints>
+		<hitPoints>15</hitPoints>
 		<bleedRate>0</bleedRate>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
@@ -72,7 +72,7 @@
 	<BodyPartDef>
 		<defName>RT_BanteeMainBody</defName>
 		<label>body</label>
-		<hitPoints>90</hitPoints>
+		<hitPoints>60</hitPoints>
 		<frostbiteVulnerability>10</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>
 	</BodyPartDef>
@@ -112,7 +112,7 @@
 	<BodyPartDef>
 		<defName>RT_LarvaeMainBody</defName>
 		<label>body</label>
-		<hitPoints>150</hitPoints>
+		<hitPoints>60</hitPoints>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>
 	</BodyPartDef>
@@ -175,7 +175,7 @@
 	<BodyPartDef>
 		<defName>RT_AlphaMainBody</defName>
 		<label>body</label>
-		<hitPoints>400</hitPoints>
+		<hitPoints>80</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -185,7 +185,7 @@
 	<BodyPartDef>
 		<defName>RT_GammaMainBody</defName>
 		<label>body</label>
-		<hitPoints>1100</hitPoints>
+		<hitPoints>80</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -195,7 +195,7 @@
 	<BodyPartDef>
 		<defName>RT_ZetaMainBody</defName>
 		<label>body</label>
-		<hitPoints>1600</hitPoints>
+		<hitPoints>80</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -205,7 +205,7 @@
 	<BodyPartDef>
 		<defName>RT_OmegaMainBody</defName>
 		<label>body</label>
-		<hitPoints>1800</hitPoints>
+		<hitPoints>100</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -215,7 +215,7 @@
 	<BodyPartDef>
 		<defName>RT_QueenMainBody</defName>
 		<label>body</label>
-		<hitPoints>3000</hitPoints>
+		<hitPoints>160</hitPoints>
 		<skinCovered>false</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
@@ -225,29 +225,18 @@
   <BodyPartDef>
 		<defName>Tail</defName>
 		<label>tail</label>
-		<hitPoints>150</hitPoints>
+		<hitPoints>60</hitPoints>
 		<frostbiteVulnerability>4</frostbiteVulnerability>
 		<skinCovered>true</skinCovered>
 		<tags>
 			<li>MovingLimbCore</li>
 		</tags>
   </BodyPartDef>
-	
-	<BodyPartDef>
-		<defName>RT_OmegaArm</defName>
-		<label>arm</label>
-		<hitPoints>550</hitPoints>
-		<bleedRate>0.5</bleedRate>
-		<skinCovered>true</skinCovered>
-		<tags>
-			<li>ManipulationLimbCore</li>
-		</tags>
-	</BodyPartDef>
 
 	<BodyPartDef>
 		<defName>RT_Ovipositor</defName>
 		<label>ovipositor</label>
-		<hitPoints>220</hitPoints>
+		<hitPoints>40</hitPoints>
 		<skinCovered>false</skinCovered>
 		<bleedRate>0.5</bleedRate>
 	</BodyPartDef>
@@ -255,7 +244,7 @@
 	<BodyPartDef>
 		<defName>Shell</defName>
 		<label>shell</label>
-		<hitPoints>375</hitPoints>
+		<hitPoints>180</hitPoints>
 		<skinCovered>false</skinCovered>
 		<bleedRate>0</bleedRate>
 	</BodyPartDef>

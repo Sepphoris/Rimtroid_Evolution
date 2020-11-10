@@ -4,7 +4,7 @@
   <!--=============== Bases ==============-->
 
   <ThingDef ParentName="MoteBase">
-    <defName>RT_GammaShockwave</defName>
+    <defName>RT_GammaShockwaveMote</defName>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <mote>
       <solidTime>0.05</solidTime>
