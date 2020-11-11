@@ -175,7 +175,7 @@
         <li>
           <def>Shell</def>
           <customLabel>shell</customLabel>
-          <coverage>0.60</coverage>
+          <coverage>0.55</coverage>
           <groups>
             <li>Torso</li>
           </groups>

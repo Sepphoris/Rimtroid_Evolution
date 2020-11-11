@@ -34,7 +34,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>3</damageAmountBase>
+			<damageAmountBase>4</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>4.5</beamWidth>
@@ -63,7 +63,7 @@
 			<speed>28</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>4</damageAmountBase>
+			<damageAmountBase>6</damageAmountBase>
 			<soundExplode>SoundFireball</soundExplode>
 		</projectile>
 	</ThingDef>
@@ -88,7 +88,7 @@
 			<speed>28</speed>
 			<damageDef>RT_AcidSpit</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>2</damageAmountBase>
+			<damageAmountBase>3</damageAmountBase>
 			<soundExplode>SoundAcid</soundExplode>
 		</projectile>
 	</ThingDef>
@@ -111,7 +111,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>6</damageAmountBase>
+			<damageAmountBase>12</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>3</beamWidth>
@@ -140,7 +140,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>10</damageAmountBase>
+			<damageAmountBase>18</damageAmountBase>
 			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>4</beamWidth>

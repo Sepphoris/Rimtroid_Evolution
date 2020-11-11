@@ -365,7 +365,7 @@
     <Compile Include="FW\Verb\Verb_MeleeAttackDamage_Resetting.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Cooldown.cs" />
     <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
-    <Compile Include="Evolution\GammaShockwave.cs" />
+    <Compile Include="Evolution\Ability_Shockwave.cs" />
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Core\Utils.cs" />
     <Compile Include="Core\RT_DefOf.cs" />
