@@ -4,6 +4,7 @@ using System.Linq;
 using Verse;
 using RimWorld;
 using UnityEngine;
+using Verse.AI;
 
 namespace RT_Rimtroid
 {
@@ -21,19 +22,12 @@ namespace RT_Rimtroid
         {
             MoteMaker.MakeStaticMote(pawn.Position, pawn.Map, ThingDefOf.Mote_LineEMP, 5);
 
-            foreach (IntVec3 pos in GenRadial.RadialCellsAround(pawn.Position, def.verbProperties.range, true).Where(p => p.InBounds(pawn.Map) && GenSight.LineOfSight(pawn.Position, p, pawn.Map)))
+            foreach (Thing thing in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, def.verbProperties.range, true).Where(t => t != pawn && pawn.CanSee(t)))
             {
-                List<Thing> thingsInRange = pos.GetThingList(pawn.Map).ToList();
-                if (!thingsInRange.NullOrEmpty())
+                thing.TakeDamage(new DamageInfo(def.verbProperties.meleeDamageDef, 6f, instigator: this.pawn));
+                if (thing is Pawn pawn && Rand.Chance(0.3f))
                 {
-                    foreach (Thing thing in thingsInRange.Where(thing => thing != pawn))
-                    {
-                        thing.TakeDamage(new DamageInfo(def.verbProperties.meleeDamageDef, 6f, instigator: this.pawn));
-                        if (thing is Pawn pawn && Rand.Chance(0.3f))
-                        {
-                            pawn?.stances?.stunner?.StunFor(150, pawn);
-                        }
-                    }
+                    pawn?.stances?.stunner?.StunFor_NewTmp(150, pawn);
                 }
             }
 

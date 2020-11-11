@@ -35,7 +35,6 @@
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>4</damageAmountBase>
-			<soundExplode>SoundBolt</soundExplode>
 		</projectile>
         <beamWidth>4.5</beamWidth>
         <lifetime>16</lifetime>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Verse;
 
 namespace RT_Rimtroid
 {
@@ -21,6 +22,11 @@ namespace RT_Rimtroid
             {
                 ab.Reset();
             }
+        }
+
+        public override bool CanHitTargetFrom(IntVec3 root, LocalTargetInfo targ)
+        {
+            return targ == Caster || base.CanHitTargetFrom(root, targ);
         }
 
         protected override bool TryCastShot()

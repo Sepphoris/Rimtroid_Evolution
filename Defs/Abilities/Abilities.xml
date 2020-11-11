@@ -53,7 +53,7 @@
               <minRange>1</minRange>
               <burstShotCount>1</burstShotCount>
               <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-              <soundCast>ElectricBoltshot</soundCast>
+              <soundCast>RT_ElectricBoltSound</soundCast>
                <muzzleFlashScale>1</muzzleFlashScale>
             </li>
           </verbProperties>
@@ -82,12 +82,13 @@
       <cooldownTicksRange>1200~1400</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-      <iconPath>AnimalProjectile/GammaBolt</iconPath>
+      <iconPath>UI/Abilities/Shockwave</iconPath>
       <verbProperties>
         <verbClass>RT_Rimtroid.Verb_CastAbility_Base</verbClass>
-        <!--<warmupTime>1</warmupTime>-->
+        <warmupTime>1</warmupTime>
         <range>5</range>
         <meleeDamageDef>Burn</meleeDamageDef>
+        <soundCast>RT_ShockwaveSound</soundCast>
       </verbProperties>
       <comps>
         <li Class="RT_Rimtroid.AbilityCompProperties_AbilityControl">
@@ -95,8 +96,8 @@
           <autoUse>true</autoUse>
           <gizmoOnText>Shockwave Enabled</gizmoOnText>
           <gizmoOffText>Shockwave Disabled</gizmoOffText>
-          <gizmoOnIconPath>AnimalProjectile/Firebeam1</gizmoOnIconPath>
-          <gizmoOffIconPath>AnimalProjectile/Firebeam1</gizmoOffIconPath>
+          <gizmoOnIconPath>UI/Abilities/Shockwave</gizmoOnIconPath>
+          <gizmoOffIconPath>UI/Abilities/Shockwave</gizmoOffIconPath>
           <gizmoDesc>Toggle Shockwave Usage</gizmoDesc>
         </li>
 			  <li Class="RT_Rimtroid.AbilityCompProperties_Cooldown">
@@ -154,7 +155,7 @@
                   <minRange>1</minRange>
                   <burstShotCount>3</burstShotCount>
                   <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                  <soundCast>FireboltShot</soundCast>
+                  <soundCast>RT_FireboltSound</soundCast>
                   <muzzleFlashScale>1</muzzleFlashScale>
                 </li>
               </verbProperties>
@@ -211,7 +212,7 @@
                 <minRange>1</minRange>
                 <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
-                <soundCast>AcidShot</soundCast>
+                <soundCast>RT_AcidboltSound</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
@@ -270,7 +271,7 @@
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <soundCast>FireBeamShot</soundCast>
+                <soundCast>RT_FireBeamSound</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
@@ -329,7 +330,7 @@
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <soundCast>FireBeamShot</soundCast>
+                <soundCast>RT_FireBeamSound</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
