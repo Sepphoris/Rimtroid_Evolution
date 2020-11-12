@@ -5,8 +5,8 @@
   	<ManeuverDef>
 		<defName>RT_Lifedrain</defName> <!--The name of this specific maneuver-->
 		<requiredCapacity>RT_Lifedrain</requiredCapacity> <!-- Toolcapacity needed for this to proc. Defined in ToolCapacity.xml -->
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef> <!--Definition used in the melee attacks. Def found in Damage_Rimtroid.xml-->
 				<ageDaysAmount>5</ageDaysAmount><!--How many days a metroid gains when an attack lands-->
   				<absorbAmount>0.05</absorbAmount><!--Value of food gained per hit. 1 is 100% food-->
@@ -24,8 +24,8 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainBantee</defName>
 		<requiredCapacity>RT_LifedrainBantee</requiredCapacity>
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_LifedrainBantee</meleeDamageDef>
 				<ageDaysAmount>5</ageDaysAmount>
   				<absorbAmount>0.18</absorbAmount>
@@ -43,8 +43,8 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainLarvae</defName>
 		<requiredCapacity>RT_LifedrainLarvae</requiredCapacity>
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
 				<ageDaysAmount>7</ageDaysAmount>
   				<absorbAmount>0.11</absorbAmount>
@@ -62,8 +62,8 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainAlpha</defName>
 		<requiredCapacity>RT_LifedrainAlpha</requiredCapacity>
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
 				<ageDaysAmount>8</ageDaysAmount>
   				<absorbAmount>0.14</absorbAmount>
@@ -81,8 +81,8 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainGamma</defName>
 		<requiredCapacity>RT_LifedrainGamma</requiredCapacity>
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
 				<ageDaysAmount>12</ageDaysAmount>
   				<absorbAmount>0.16</absorbAmount>
@@ -100,8 +100,8 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainZeta</defName>
 		<requiredCapacity>RT_LifedrainZeta</requiredCapacity>
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
 				<ageDaysAmount>18</ageDaysAmount>
   				<absorbAmount>0.16</absorbAmount>
@@ -119,8 +119,8 @@
 	<ManeuverDef>
 		<defName>RT_LifedrainOmega</defName>
 		<requiredCapacity>RT_LifedrainOmega</requiredCapacity>
-			<verb Class="RT_Rimtroid.VerbProperties_AbsorbNeed">
-			<verbClass>RT_Rimtroid.Verb_AbsorbNeed</verbClass>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
 			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
 				<ageDaysAmount>28</ageDaysAmount>
   				<absorbAmount>0.16</absorbAmount>

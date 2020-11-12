@@ -66,7 +66,7 @@
             </li>
 		</tools>
 		<comps>
-			<li Class="RT_Rimtroid.RT_FloatingComp">
+			<li Class="RT_Core.RT_FloatingComp">
 
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
@@ -169,10 +169,10 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	<modExtensions>
-    <!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>-->
-	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
+    <!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
+	  <li Class="RT_Core.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
-		  <li Class="RT_RimTroid.HungerBerserkOptions">
+		  <li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>

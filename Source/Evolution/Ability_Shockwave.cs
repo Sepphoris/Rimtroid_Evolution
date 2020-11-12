@@ -8,7 +8,7 @@ using Verse.AI;
 
 namespace RT_Rimtroid
 {
-    public class Ability_Shockwave : Ability_Base
+    public class Ability_Shockwave : RT_Core.Ability_Base
     {
         public Ability_Shockwave(Pawn pawn) : base(pawn)
         {

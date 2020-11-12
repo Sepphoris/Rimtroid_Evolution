@@ -8,7 +8,7 @@
         <li Class="ThinkNode_Priority">
           <subNodes>
             <!-- Hostility response -->
-            <li Class="RT_Rimtroid.JobGiver_HostilityResponse" />
+            <li Class="RT_Core.JobGiver_HostilityResponse" />
           </subNodes>
 		</li>
         <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
@@ -40,7 +40,7 @@
       <subNodes>
         <li Class="ThinkNode_PrioritySorter">
           <subNodes>
-            <li Class="RT_Rimtroid.JobGiver_GetLiveFood"/>
+            <li Class="RT_Core.JobGiver_GetLiveFood"/>
             <li Class="JobGiver_GetRest"/>
             <li Class="JobGiver_SatisfyChemicalNeed"/>
           </subNodes>
@@ -56,7 +56,7 @@
       <subNodes>
         <li Class="ThinkNode_PrioritySorter">
           <subNodes>
-            <li Class="RT_Rimtroid.JobGiver_GetLiveFood">
+            <li Class="RT_Core.JobGiver_GetLiveFood">
               <minCategory>UrgentlyHungry</minCategory>
             </li>
             <li Class="JobGiver_GetRest">

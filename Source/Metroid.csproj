@@ -39,6 +39,9 @@
       <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="RT_Core">
+      <HintPath>..\..\Rimtroid_Core\Assemblies\RT_Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -297,79 +300,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\AnimalResource\JobDriver_AnimalResource.cs" />
-    <Compile Include="Core\LegacyModExtension.cs" />
-    <Compile Include="Core\Patch_DD_PawnComponentsUtility_AddAndRemoveDynamicComponents.cs" />
-    <Compile Include="Core\AnimalResource\WorkGiver_AnimalResource.cs" />
+    <Compile Include="Core\Utils.cs" />
     <Compile Include="Evolution\Events\Event_LarvaePack.cs" />
     <Compile Include="Evolution\Events\Event_LoneBantee.cs" />
     <Compile Include="Evolution\AcidCompProperties.cs" />
     <Compile Include="Evolution\AcidImmunityComp.cs" />
-    <Compile Include="Core\AgeStage.cs" />
-    <Compile Include="Core\AgeTools.cs" />
     <Compile Include="Evolution\AcidBuildup.cs" />
-    <Compile Include="Core\AnimalResource\AnimalProduct.cs" />
-    <Compile Include="Core\AnimalResource\CompAnimalProduct.cs" />
     <Compile Include="Evolution\CorpseDesiccation.cs" />
-    <Compile Include="Core\FoodMethod.cs" />
-    <Compile Include="FW\Abilities\AbilityCompProperties_AbilityControl.cs" />
-    <Compile Include="FW\Abilities\AbilityCompProperties_CastVerb.cs" />
-    <Compile Include="FW\Abilities\AbilityCompProperties_Cooldown.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_AbilityControl.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_Base.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_CastVerb.cs" />
-    <Compile Include="FW\Abilities\AbilityComp_Cooldown.cs" />
-    <Compile Include="FW\Abilities\Ability_Base.cs" />
-    <Compile Include="FW\Abilities\Comp\AbilityGainEntry.cs" />
-    <Compile Include="FW\Abilities\Comp\CompAbilityDefinition.cs" />
-    <Compile Include="FW\Abilities\Comp\CompProperties_AbilityDefinition.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainAgeCondition.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainCondition.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainDamageCondition.cs" />
-    <Compile Include="FW\Abilities\Comp\Conditions\AbilityGainKillCondition.cs" />
-    <Compile Include="FW\Abilities\Verb_CastAbility_Base.cs" />
-    <Compile Include="FW\HostileResponse\CompHostileResponse.cs" />
-    <Compile Include="FW\HostileResponse\CompProperties_HostileResponse.cs" />
-    <Compile Include="FW\HostileResponse\HostileResponseOption.cs" />
-    <Compile Include="FW\HostileResponse\HostilityResponseType.cs" />
-    <Compile Include="FW\HostileResponse\HostilityStatisticRecord.cs" />
-    <Compile Include="FW\HostileResponse\JobGiver_HostilityResponse.cs" />
-    <Compile Include="FW\HostileResponse\Patch_DD_Pawn_MindState_CanStartFleeingBecauseOfPawnAction.cs" />
-    <Compile Include="FW\Patch_DD_Pawn_GetGizmos.cs" />
-    <Compile Include="FW\Verb\JobGiver_Manhunter_AnyVerb.cs" />
-    <Compile Include="Core\Ingestion_MultipleHediffs.cs" />
     <Compile Include="Evolution\Queen.cs" />
-    <Compile Include="Core\HungerBerserkOptions.cs" />
     <Compile Include="Evolution\Alpha_ProximityTrapProperties.cs" />
-    <Compile Include="Core\CompFloating.cs" />
-    <Compile Include="Core\CompProperties_Floating.cs" />
     <Compile Include="Evolution\Alpha_ProximityTrap.cs" />
-    <Compile Include="Evolution\CompSpawnerAdv.cs" />
-    <Compile Include="Core\CorpseAvoidance.cs" />
-    <Compile Include="Core\DisableTaming.cs" />
-    <Compile Include="Core\Flight.cs" />
-    <Compile Include="FW2\AnimalProjectile.cs" />
-    <Compile Include="FW2\HediffCompProperties_BaseRegen.cs" />
-    <Compile Include="FW2\RegenHediffModExtension.cs" />
-    <Compile Include="FW2\VerbSettingExtension.cs" />
-    <Compile Include="FW2\VerbUsageExtension.cs" />
-    <Compile Include="FW\Abilities\Hediffs\HediffCompProperties_GrowthSeverityScaling.cs" />
-    <Compile Include="FW\Abilities\Hediffs\HediffComp_GrowthSeverityScaling.cs" />
-    <Compile Include="FW\Abilities\IAttackVerb.cs" />
-    <Compile Include="FW\Abilities\Patch_DD_Pawn_TryGetAttackVerb.cs" />
-    <Compile Include="FW\Abilities\Verb_Ability_Shoot.cs" />
-    <Compile Include="FW\Verb\Patch_DD_JobGiver_GetFood_TryGiveJob.cs" />
-    <Compile Include="FW\Verb\TimeUtils.cs" />
-    <Compile Include="FW\Verb\VerbProperties_Cooldown.cs" />
-    <Compile Include="FW\Verb\VerbUtils.cs" />
-    <Compile Include="FW\Verb\Verb_MeleeAttackDamage_Resetting.cs" />
-    <Compile Include="FW\Verb\Verb_Shoot_Cooldown.cs" />
-    <Compile Include="FW\Verb\Verb_Shoot_Limited.cs" />
     <Compile Include="Evolution\Ability_Shockwave.cs" />
     <Compile Include="Harmony\Patches.cs" />
-    <Compile Include="Core\Utils.cs" />
     <Compile Include="Core\RT_DefOf.cs" />
-    <Compile Include="Core\Metamorphosis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RimLaser\IBeamColorThing.cs" />
     <Compile Include="RimLaser\IDrawnWeaponWithRotation.cs" />
@@ -379,8 +322,6 @@
     <Compile Include="RimLaser\LaserGunDef.cs" />
     <Compile Include="RimLaser\MeshMakerLaser.cs" />
     <Compile Include="RimLaser\MoteLaserDecoration.cs" />
-    <Compile Include="Core\Training.cs" />
-    <Compile Include="Core\Verb_AbsorbNeed.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

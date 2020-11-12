@@ -70,8 +70,8 @@
 			</li>
 		</tools>
 		<comps>
-    	<li Class="RT_Rimtroid.CompProperties_HostileResponse">
-			<compClass>RT_Rimtroid.CompHostileResponse</compClass>
+    	<li Class="RT_Core.CompProperties_HostileResponse">
+			<compClass>RT_Core.CompHostileResponse</compClass>
 			<initialHostility>Aggressive</initialHostility>
       <controllableGizmo>false</controllableGizmo>
       <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
@@ -100,8 +100,8 @@
 			</options>
 		  </li>
 <!-- Defines the conditions for when to give the pawn an ability -->
-		  <li Class="RT_Rimtroid.CompProperties_AbilityDefinition">
-			  <compClass>RT_Rimtroid.CompAbilityDefinition</compClass>
+		  <li Class="RT_Core.CompProperties_AbilityDefinition">
+			  <compClass>RT_Core.CompAbilityDefinition</compClass>
 			  <abilities>
 			  	<li>
 					  <abilityDef>RT_ZetaFireball</abilityDef>
@@ -209,11 +209,11 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	<modExtensions>
-		<li Class="RT_Rimtroid.LegacyModExtension">
+		<li Class="RT_Core.LegacyModExtension">
 			<hasAbilities>true</hasAbilities>
     </li>
-    <!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li>-->
-	  <li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
+    <!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
+	  <li Class="RT_Core.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
     </modExtensions>
 	</ThingDef>
@@ -279,10 +279,10 @@
 		  </li>
 		</lifeStages>
 		<modExtensions>
-      <li Class="RT_Rimtroid.VerbSettingExtension">
+      <li Class="RT_Core.VerbSettingExtension">
 			  <useExtendedVerbs>true</useExtendedVerbs>
 		  </li>
-			<li Class="RT_RimTroid.HungerBerserkOptions">
+			<li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>

@@ -20,9 +20,9 @@
 
 	<!--Gamma Abilities-->
 
-	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Rimtroid.LaserBeamDef">
+	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Core.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>
-		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
+		<thingClass>RT_Core.LaserBeam</thingClass>
 		<label>Electic Bolt</label>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
@@ -45,7 +45,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaFireball</defName>
-		<thingClass>RT_Rimtroid.AnimalProjectile</thingClass>
+		<thingClass>RT_Core.AnimalProjectile</thingClass>
 		<label>Fireball</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -70,7 +70,7 @@
 
  	<ThingDef>
 		<defName>RT_ZetaAcid</defName>
-		<thingClass>RT_Rimtroid.AnimalProjectile</thingClass>
+		<thingClass>RT_Core.AnimalProjectile</thingClass>
 		<label>acidic spit</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
@@ -95,9 +95,9 @@
 
 	<!-- Omega Abilities -->
 	
-	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
+	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Core.LaserBeamDef">
 		<defName>RT_OmegaBeam</defName>
-		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
+		<thingClass>RT_Core.LaserBeam</thingClass>
 		<label>Firebeam</label>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
@@ -124,9 +124,9 @@
 
 	<!-- Queen Abilities-->
 
-	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Rimtroid.LaserBeamDef">
+	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Core.LaserBeamDef">
 		<defName>RT_QueenBeam</defName>
-		<thingClass>RT_Rimtroid.LaserBeam</thingClass>
+		<thingClass>RT_Core.LaserBeam</thingClass>
 		<label>Firebeam</label>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>

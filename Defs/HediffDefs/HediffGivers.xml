@@ -7,7 +7,7 @@
 <HediffGiverSetDef>
   <defName>RT_Rimtroid_EvolutionGrowth</defName>
   <hediffGivers>
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_BanteeState</hediff>
 			<partsToAffect>
@@ -16,7 +16,7 @@
 		<targetAgeRange>0.00001~13.99999</targetAgeRange> <!-- in years -->
     </li>
 
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_LarvaeState</hediff>
 			<partsToAffect>
@@ -25,7 +25,7 @@
 		<targetAgeRange>14~79.99999</targetAgeRange> <!-- in years -->
     </li>
 
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_AlphaState</hediff>
 			<partsToAffect>
@@ -34,7 +34,7 @@
 		<targetAgeRange>80~199.99999</targetAgeRange> <!-- in years -->
     </li>
 
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_GammaState</hediff>
 			<partsToAffect>
@@ -43,7 +43,7 @@
 		<targetAgeRange>200~449.99999</targetAgeRange> <!-- in years -->
     </li>
 
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_ZetaState</hediff>
 			<partsToAffect>
@@ -52,7 +52,7 @@
 		<targetAgeRange>450~899.99999</targetAgeRange> <!-- in years -->
     </li>
 
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_OmegaState</hediff>
 			<partsToAffect>
@@ -61,7 +61,7 @@
 		<targetAgeRange>900~4999.99999</targetAgeRange> <!-- in years -->
     </li>
 
-    <li Class="RT_Rimtroid.HediffGiver_AfterPeriod">
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_QueenState</hediff>
 			<partsToAffect>

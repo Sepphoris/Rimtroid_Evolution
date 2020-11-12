@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="PlantBase">
+	<!--<ThingDef ParentName="PlantBase">
 		<defName>RT_Dummy_Grass</defName>
 		<label>grass</label>
 		<description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
@@ -26,7 +26,7 @@
 			<topWindExposure>0</topWindExposure>
 			<wildOrder>1</wildOrder>
 		</plant>
-	</ThingDef>
+	</ThingDef>-->
 
 	<ThingDef Name="RT_Traps" ParentName="BuildingBase" Abstract="True">
 	    <thingClass>RT_Rimtroid.Alpha_ProximityTrap</thingClass>

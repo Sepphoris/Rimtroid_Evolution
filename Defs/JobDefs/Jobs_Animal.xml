@@ -3,7 +3,7 @@
 
   <JobDef>
     <defName>RT_AnimalResource</defName>
-    <driverClass>RT_Rimtroid.JobDriver_AnimalResource</driverClass>
+    <driverClass>RT_Core.JobDriver_AnimalResource</driverClass>
     <reportString>gathering animal resource from TargetA.</reportString>
   </JobDef>  
 </Defs>

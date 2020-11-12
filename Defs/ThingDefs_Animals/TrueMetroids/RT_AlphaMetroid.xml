@@ -71,7 +71,7 @@
 			</li>
 		</tools>
 		<comps>
-			<li Class="RT_Rimtroid.CompProperties_SpawnerAdv">
+			<li Class="RT_Core.CompProperties_SpawnerAdv">
 				<thingToSpawn>RT_Alpha_ProximityTrap</thingToSpawn>
 				<spawnInPlace>true</spawnInPlace>
 				<spawnCount>1</spawnCount>
@@ -80,8 +80,8 @@
 				<saveKeysPrefix>larvae</saveKeysPrefix>
 				<inheritFaction>true</inheritFaction>
 			</li>
-    	<li Class="RT_Rimtroid.CompProperties_HostileResponse">
-			<compClass>RT_Rimtroid.CompHostileResponse</compClass>
+    	<li Class="RT_Core.CompProperties_HostileResponse">
+			<compClass>RT_Core.CompHostileResponse</compClass>
 			<initialHostility>Aggressive</initialHostility>
       <controllableGizmo>false</controllableGizmo>
       <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
@@ -208,8 +208,8 @@
 			<li>AnimalInsectSpace</li>
 		</tradeTags>
 		<modExtensions>
-			<!--<li Class="RT_Rimtroid.RT_DesiccatorExt"> </li> -->
-			<li Class="RT_RimTroid.DisableTrainingDegredation"> </li>
+			<!--<li Class="RT_Core.RT_DesiccatorExt"> </li> -->
+			<li Class="RT_Core.DisableTrainingDegredation"> </li>
 			<!--desicatedDef>huskdefnamehere</desicatedDef-->
 		</modExtensions>
 	</ThingDef>
@@ -275,7 +275,7 @@
 			</li>
 		</lifeStages>
 		<modExtensions>
-			<li Class="RT_RimTroid.HungerBerserkOptions">
+			<li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>

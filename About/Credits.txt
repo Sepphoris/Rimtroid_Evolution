@@ -1,0 +1,9 @@
+===============
+Credits:
+===============
+
+-DD (Dragon's Descent) Team for the framework, teaser images, and overall xml help; without them, this would be a MUCH different and less accurate mod.
+-Taranchuk for his amazing coding abilities that cover 90% of the mod, and dealing with my constant pestering about C#
+-Ogliss and Murmur for other areas of the C# coding, which helped bring the mod together
+-Kasmex Forever, for doing nearly all the graphics within the mod, and bringing up all the Metroids to a much higher quality than my own.
+-The general RW modding community for helping solve various issues that popped up, and troubleshooting oversights and errors.

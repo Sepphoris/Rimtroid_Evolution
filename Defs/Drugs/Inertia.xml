@@ -44,7 +44,7 @@
 			<ingestReportString>Injecting {0}.</ingestReportString>
 			<chairSearchRadius>0</chairSearchRadius>
       <outcomeDoers>
-				<li Class="RT_Rimtroid.Ingestion_MultipleHediffs">
+				<li Class="RT_Core.Ingestion_MultipleHediffs">
 					<hediffDef_Metroid>RT_StuntedGrowthBad</hediffDef_Metroid>
 					<hediffDef_LivingPawn>RT_InertiaPoisoning</hediffDef_LivingPawn>
 					<severity>0.8</severity>
