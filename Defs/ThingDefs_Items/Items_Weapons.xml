@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Cryo Launcher -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RT_Cryolauncher</defName>
+    <label>Cryo Launcher</label>
+    <description>A grenade launcher that has been modified to fire an explosive cryogenic shell. Designed to rapidly drop temperatures in a small radius, rather than inflicting damage.</description>
+    <graphicData>
+      <texPath>Things/Weapons/CryoLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+   <generateCommonality>0.01</generateCommonality>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>5</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <costList>
+      <Steel>250</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RT_CryoExplosive</defaultProjectile>
+        <forcedMissRadius>1</forcedMissRadius>
+        <warmupTime>2.5</warmupTime>
+        <range>26</range>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+	<!-- Cryo Rifle -->
+	<!-- Cryo Pistol (maybe...?) -->
+
+</Defs>

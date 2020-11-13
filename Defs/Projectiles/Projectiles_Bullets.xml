@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Projectile for the cryogenic weapons -->
+
+  <!--Cryogenic Damage-->
+	<!--<DamageDef>
+		<defName>RT_CryoDamage</defName>
+		<label>acid spit</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been corroded to death.</deathMessage>
+		<hediff>RT_AcidBurn</hediff>
+		<additionalHediffs>
+			<li>
+				<hediff>RT_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+		<isRanged>true</isRanged>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+    <defaultArmorPenetration>0.5</defaultArmorPenetration>
+	</DamageDef> -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RT_CryoExplosive</defName>
+    <label>Cryogenic Shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(68,150,215)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>40</speed>
+      <damageDef>RT_CryoDamage</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.2</explosionRadius>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+      <soundExplode>SoundAcid</soundExplode>
+    </projectile>
+  </ThingDef>
+
+</Defs>
