@@ -31,6 +31,7 @@ to be made to allow hediff effects from other mods.
 	      <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
 	      <restFallFactorOffset>0.8</restFallFactorOffset>
         <naturalHealingFactor>0.8</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
         <capMods>
 				  <li>
 				  	<capacity>Eating</capacity>
@@ -91,6 +92,7 @@ to be made to allow hediff effects from other mods.
 	      <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
 	      <restFallFactorOffset>0.3</restFallFactorOffset>
         <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
 	    <capMods>
 				<li>
 					<capacity>Eating</capacity>
@@ -151,6 +153,7 @@ to be made to allow hediff effects from other mods.
 	  <hungerRateFactorOffset>0.1</hungerRateFactorOffset>
 	  <restFallFactorOffset>0.2</restFallFactorOffset>
     <naturalHealingFactor>1.5</naturalHealingFactor>
+    <painFactor>0.5</painFactor>
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
@@ -215,6 +218,7 @@ to be made to allow hediff effects from other mods.
 	  <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
 	  <restFallFactorOffset>0</restFallFactorOffset>
     <naturalHealingFactor>2</naturalHealingFactor>
+    <painFactor>0.4</painFactor>
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
@@ -283,6 +287,7 @@ to be made to allow hediff effects from other mods.
 	  <hungerRateFactorOffset>0.4</hungerRateFactorOffset>
 	  <restFallFactorOffset>0.1</restFallFactorOffset>
     <naturalHealingFactor>2</naturalHealingFactor>
+    <painFactor>0.4</painFactor>
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
@@ -356,6 +361,7 @@ to be made to allow hediff effects from other mods.
 		<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
 		<restFallFactorOffset>0.2</restFallFactorOffset>
     <naturalHealingFactor>2</naturalHealingFactor>
+    <painFactor>0.2</painFactor>
 			<capMods>
 				<li>
 					<capacity>Moving</capacity>
@@ -404,9 +410,10 @@ to be made to allow hediff effects from other mods.
     <description>A creature of remarkable rarity, Queen Metroids are the heart of any swarm. Due to their mass, they have reverted back to their quadpedal stance. Several small chambers are located on the back of the shell, used for the care of metroid larvae. While Queens are never seen in combat, their towering height, thick armor, and devastating inferno attacks, their lethality is easily leagues above (almost) any other metroids in existance.</description>
     <stages>
       <li>
-		<hungerRateFactorOffset>0.8</hungerRateFactorOffset>
-		<restFallFactorOffset>0.8</restFallFactorOffset>
-    <naturalHealingFactor>2.5</naturalHealingFactor>
+		    <hungerRateFactorOffset>0.8</hungerRateFactorOffset>
+		    <restFallFactorOffset>0.8</restFallFactorOffset>
+        <naturalHealingFactor>2.5</naturalHealingFactor>
+        <painFactor>0.1</painFactor>
 			<capMods>
 				<li>
 					<capacity>Moving</capacity>

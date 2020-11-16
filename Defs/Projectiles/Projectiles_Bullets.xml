@@ -8,7 +8,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>RT_CryoExplosive</defName>
-    <label>Cryogenic Shell</label>
+    <label>cryogenic shell</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -33,7 +33,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>RT_CryoBullet</defName>
-    <label>Supercooled Bullet</label>
+    <label>bullet</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>

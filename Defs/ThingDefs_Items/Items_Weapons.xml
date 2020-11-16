@@ -43,7 +43,7 @@
         <range>28</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-        <soundCast>Sound_AssaultRifle</soundCast>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
       </li>
     </verbs>
@@ -116,6 +116,9 @@
         </targetParams>
       </li>
     </verbs>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.3</MoveSpeed>
+		</equippedStatOffsets>
     <tools>
       <li>
         <label>stock</label>

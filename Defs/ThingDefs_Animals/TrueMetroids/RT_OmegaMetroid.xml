@@ -23,7 +23,7 @@
 		  <ComfyTemperatureMin>0</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
 		  <MeatAmount>0</MeatAmount>
-		<PainShockThreshold>1</PainShockThreshold>
+		  <PainShockThreshold>5</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
 		
@@ -171,7 +171,7 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <manhunterOnDamageChance>5</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>1</manhunterOnTameFailChance>
 		  <wildness>10</wildness>
 		  <lifeExpectancy>1986</lifeExpectancy>

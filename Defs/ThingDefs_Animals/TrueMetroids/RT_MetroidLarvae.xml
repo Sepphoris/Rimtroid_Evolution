@@ -115,7 +115,7 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.80</manhunterOnDamageChance>
+		  <manhunterOnDamageChance>0.90</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 		  <wildness>0.9</wildness>
 		  <lifeExpectancy>200</lifeExpectancy>

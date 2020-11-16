@@ -10,28 +10,58 @@ namespace RT_Rimtroid
 {
     public class Ability_GammaBomb : RT_Core.Ability_Base
     {
-        public Ability_GammaBomb(Pawn pawn) : base(pawn)
-        {
-        }
+        private List<Thing> traps = new List<Thing>();
 
-        public Ability_GammaBomb(Pawn pawn, AbilityDef def) : base(pawn, def)
-        {
-        }
+        private int spawnMax = 6;
+
+        private IntRange spawnCount = new IntRange(1, 3);
+
+        public Ability_GammaBomb(Pawn pawn) : base(pawn) { }
+        public Ability_GammaBomb(Pawn pawn, AbilityDef def) : base(pawn, def) { }
 
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            MoteMaker.MakeStaticMote(pawn.Position, pawn.Map, ThingDefOf.Mote_LineEMP, 5);
-
-            foreach (Thing thing in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, def.verbProperties.range, true).Where(t => t != pawn && pawn.CanSee(t)))
+            ThingDef def = DefDatabase<ThingDef>.GetNamed("RT_GammaBomb");
+            int count = spawnCount.RandomInRange;
+            for (int c = 0; c < count; c++)
             {
-                thing.TakeDamage(new DamageInfo(def.verbProperties.meleeDamageDef, 6f, instigator: this.pawn));
-                if (thing is Pawn pawn && Rand.Chance(0.3f))
-                {
-                    pawn?.stances?.stunner?.StunFor_NewTmp(150, pawn);
-                }
+                SpawnTrap(def);
             }
 
             return base.Activate(target, dest);
+        }
+
+        private void SpawnTrap(ThingDef def)
+        {
+            traps.RemoveAll(t => t.DestroyedOrNull());
+
+            Thing pTrap = ThingMaker.MakeThing(def);
+            pTrap.SetFactionDirect(pawn.Faction);
+
+            GenPlace.TryPlaceThing(pTrap, pawn.Position, pawn.Map, ThingPlaceMode.Near);
+            traps.Add(pTrap);
+
+            while (traps.Count >= spawnMax)
+            {
+                traps[0].Destroy();
+                traps.RemoveAt(0);
+                Messages.Message("Oldest bomb replaced", MessageTypeDefOf.NeutralEvent);
+            }
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+
+            Scribe_Collections.Look(ref traps, "trapsSpawned", LookMode.Reference);
+
+            if (Scribe.mode == LoadSaveMode.LoadingVars)
+            {
+                if (traps == null)
+                {
+                    traps = new List<Thing>();
+                }
+            }
         }
     }
 }

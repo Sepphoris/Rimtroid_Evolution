@@ -22,7 +22,7 @@
 		  <MarketValue>160</MarketValue>
 		  <ComfyTemperatureMin>14</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
-		  <MeatAmount>8</MeatAmount>
+		  <MeatAmount>0</MeatAmount>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
 		
@@ -151,7 +151,7 @@
 			</points>
     </ageGenerationCurve>
 			<wildBiomes>
-			  <BorealForest>0.1</BorealForest>
+			  <BorealForest>0.05</BorealForest>
 			  <Tundra>0.01</Tundra>
 			  <ColdBog>0.01</ColdBog>
 			  <TemperateSwamp>0.25</TemperateSwamp>
