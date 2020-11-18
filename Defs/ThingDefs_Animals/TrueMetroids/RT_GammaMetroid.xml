@@ -102,13 +102,13 @@
 			  <abilities>
 			  	<li>
 					  <abilityDef>RT_GammaElectricBolt</abilityDef>
-         </li>
+          </li>
 			  	<li>
 					  <abilityDef>RT_GammaShockwave</abilityDef>
-         </li>
-         <!--<li>
-          <abilityDef>RT_GammaShockwave</abilityDef>
-            <li>-->
+          </li>
+          <li>
+            <abilityDef>RT_MetroidBomb</abilityDef>
+          </li>
 			  </abilities>
       </li>
       <li Class="RT_Core.CompProperties_AnimalProduct">

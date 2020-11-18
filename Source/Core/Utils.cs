@@ -21,6 +21,62 @@ namespace RT_Rimtroid
             }
             return false;
         }
+        public static bool IsBanteeMetroid(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_BanteeMetroid)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool IsMetroidLarvae(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_MetroidLarvae)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool IsAlphaMetroid(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_AlphaMetroid)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool IsGammaMetroid(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_GammaMetroid)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool IsZetaMetroid(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_ZetaMetroid)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool IsOmegaMetroid(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_OmegaMetroid)
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool IsQueenMetroid(this Pawn pawn)
+        {
+            if (pawn.def == RT_DefOf.RT_QueenMetroid)
+            {
+                return true;
+            }
+            return false;
+        }
         public static bool IsStuntableMetroid(this Pawn pawn)
         {
             if (pawn.def == RT_DefOf.RT_MetroidLarvae||

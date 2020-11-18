@@ -77,6 +77,7 @@ to be made to allow hediff effects from other mods.
     <defName>RT_BanteeStateWhitelist</defName>
       <whitelist>
 		    <!--li>RT_BanteeState</li-->
+        <li>RT_AcceleratedAgingBantee</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
@@ -136,9 +137,10 @@ to be made to allow hediff effects from other mods.
 
   <Metamorphosis.MetroidWhitelistDef>
     <defName>RT_LarvaeStateWhitelist</defName>
-        <whitelist>
-			<!--li>RT_LarvaeState</li-->
-        </whitelist>
+      <whitelist>
+			  <!--li>RT_LarvaeState</li-->
+        <li>RT_AcceleratedAgingLarvae</li>
+      </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
   
 <!--===============Alpha Metroid===============-->
@@ -201,9 +203,10 @@ to be made to allow hediff effects from other mods.
 
  <Metamorphosis.MetroidWhitelistDef>
     <defName>RT_AlphaStateWhitelist</defName>
-        <whitelist>
-			<!--li>RT_LarvaeState</li-->
-        </whitelist>
+      <whitelist>
+			  <!--li>RT_LarvaeState</li-->
+        <li>RT_AcceleratedAgingAlpha</li>
+      </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
 <!--===============Gamma Metroid===============-->
@@ -270,9 +273,10 @@ to be made to allow hediff effects from other mods.
 
  <Metamorphosis.MetroidWhitelistDef>
     <defName>RT_GammaStateWhitelist</defName>
-        <whitelist>
-			<!--li>RT_LarvaeState</li-->
-        </whitelist>
+      <whitelist>
+			  <!--li>RT_LarvaeState</li-->
+        <li>RT_AcceleratedAgingGamma</li>
+      </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
   <!--===============Zeta Metroid===============-->
@@ -343,9 +347,10 @@ to be made to allow hediff effects from other mods.
 
  <Metamorphosis.MetroidWhitelistDef>
     <defName>RT_ZetaStateWhitelist</defName>
-        <whitelist>
-			<!--li>RT_LarvaeState</li-->
-        </whitelist>
+      <whitelist>
+			  <!--li>RT_LarvaeState</li-->
+        <li>RT_AcceleratedAgingZeta</li>
+      </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
 

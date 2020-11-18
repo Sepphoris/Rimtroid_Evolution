@@ -141,4 +141,214 @@
 		</stages>
 	</HediffDef>
 
+    <!--===============Accelerated Aging: General===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAging</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated:</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
+			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<amountPerTick>0.000278</amountPerTick>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Bantee===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingBantee</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Bantee Stage):</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
+			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<amountPerTick>0.000278</amountPerTick>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Larvae===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingLarvae</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Larvae Stage):</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
+			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<amountPerTick>0.000278</amountPerTick>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Alpha===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingAlpha</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Alpha Stage):</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
+			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<amountPerTick>0.000278</amountPerTick>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Gamma===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingGamma</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Gamma Stage):</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
+			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<amountPerTick>0.000278</amountPerTick>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Zeta===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingZeta</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Zeta Stage):</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
+			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<amountPerTick>0.000278</amountPerTick>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Aeionic Poisoning Def===============-->
+
+	<HediffDef>
+    	<defName>RT_AeionicPoisoning</defName>
+    	<hediffClass>HediffWithComps</hediffClass>
+    	<label>Aeionic Poisoning</label>
+    	<description>Aeionic Poisoning is caused when a biologically normal pawn injects or consumes even the slightest amount of the Aeion material, used specifically in serums that targets the metroid's internal working. If used on any other life form, it's results in nothing but agony for the next several hours.</description>
+    	<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    	<scenarioCanAdd>false</scenarioCanAdd>
+    	<maxSeverity>1.0</maxSeverity>
+    	<isBad>true</isBad>
+    	<comps>
+      		<li Class="HediffCompProperties_SeverityPerDay">
+        		<severityPerDay>-1.20</severityPerDay>
+        		<showHoursToRecover>true</showHoursToRecover>
+      		</li>
+    	</comps>
+      <stages>
+        	<li>
+          	<painFactor>0.6</painFactor>
+          	<capMods>
+            	<li>
+              	<capacity>Consciousness</capacity>
+              	<offset>-0.40</offset>
+            	</li>
+            	<li>
+             		<capacity>BloodFiltration</capacity>
+             		<offset>-0.30</offset>
+           		</li>
+           		<li>
+                <capacity>BloodPumping</capacity>
+            		<offset>-0.45</offset>
+         			</li>
+         			<li>
+           			<capacity>Breathing</capacity>
+           			<offset>-0.20</offset>
+          		</li>
+          	</capMods>
+        </li>
+      </stages>
+  	</HediffDef>
+
 </Defs>

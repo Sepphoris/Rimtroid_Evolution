@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="RT_Core">
       <HintPath>..\..\Rimtroid_Core\Assemblies\RT_Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

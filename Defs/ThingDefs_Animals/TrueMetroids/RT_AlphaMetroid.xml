@@ -19,7 +19,7 @@
 			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 			<ArmorRating_Heat>1</ArmorRating_Heat>
 			<MoveSpeed>2</MoveSpeed>
-			<MarketValue>800</MarketValue>
+			<MarketValue>550</MarketValue>
 			<ComfyTemperatureMin>6</ComfyTemperatureMin>
 			<ComfyTemperatureMax>160</ComfyTemperatureMax>
 			<MeatAmount>0</MeatAmount>
@@ -71,15 +71,6 @@
 			</li>
 		</tools>
 		<comps>
-			<li Class="RT_Core.CompProperties_SpawnerAdv">
-				<thingToSpawn>RT_Alpha_ProximityTrap</thingToSpawn>
-				<spawnInPlace>true</spawnInPlace>
-				<spawnCount>1</spawnCount>
-				<spawnIntervalRange>2100~3000</spawnIntervalRange>
-				<maxThingCount>3</maxThingCount>
-				<saveKeysPrefix>larvae</saveKeysPrefix>
-				<inheritFaction>true</inheritFaction>
-			</li>
     	<li Class="RT_Core.CompProperties_HostileResponse">
 			<compClass>RT_Core.CompHostileResponse</compClass>
 			<initialHostility>Aggressive</initialHostility>
@@ -109,6 +100,14 @@
 				</li>
 			</options>
 		  </li>
+		  <li Class="RT_Core.CompProperties_AbilityDefinition">
+			  <compClass>RT_Core.CompAbilityDefinition</compClass>
+			  <abilities>
+          <li>
+            <abilityDef>RT_MetroidBomb</abilityDef>
+          </li>
+			  </abilities>
+      </li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -208,6 +207,9 @@
 			<li>AnimalInsectSpace</li>
 		</tradeTags>
 		<modExtensions>
+		  <li Class="RT_Core.LegacyModExtension">
+			  <hasAbilities>true</hasAbilities>
+      </li>
 			<!--<li Class="RT_Core.RT_DesiccatorExt"> </li> -->
 			<li Class="RT_Core.DisableTrainingDegredation"> </li>
 			<!--desicatedDef>huskdefnamehere</desicatedDef-->
@@ -275,6 +277,9 @@
 			</li>
 		</lifeStages>
 		<modExtensions>
+      <li Class="RT_Core.VerbSettingExtension">
+			  <useExtendedVerbs>true</useExtendedVerbs>
+      </li>
 			<li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->

@@ -8,20 +8,20 @@ using Verse.AI;
 
 namespace RT_Rimtroid
 {
-    public class Ability_GammaBomb : RT_Core.Ability_Base
+    public class Ability_MetroidBomb : RT_Core.Ability_Base
     {
         private List<Thing> traps = new List<Thing>();
 
         private int spawnMax = 6;
 
-        private IntRange spawnCount = new IntRange(1, 3);
+        private IntRange spawnCount = new IntRange(1, 1);
 
-        public Ability_GammaBomb(Pawn pawn) : base(pawn) { }
-        public Ability_GammaBomb(Pawn pawn, AbilityDef def) : base(pawn, def) { }
+        public Ability_MetroidBomb(Pawn pawn) : base(pawn) { }
+        public Ability_MetroidBomb(Pawn pawn, AbilityDef def) : base(pawn, def) { }
 
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            ThingDef def = DefDatabase<ThingDef>.GetNamed("RT_GammaBomb");
+            ThingDef def = DefDatabase<ThingDef>.GetNamed("RT_MetroidBomb");
             int count = spawnCount.RandomInRange;
             for (int c = 0; c < count; c++)
             {

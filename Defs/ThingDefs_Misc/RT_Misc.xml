@@ -60,6 +60,36 @@
 	</ThingDef>
 
 	<ThingDef ParentName="RT_Traps">
+		<defName>RT_MetroidBomb</defName>
+		<label>Energy Bomb</label>
+		<description>A sphere of concentrated energy, created by an Alpha or Gamma Metroid. Will explode once a creature comes into proximity, or after a small amount of time.</description>
+		<graphicData>
+			<texPath>Things/Misc/MetroidBomb</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>3</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+		</comps>
+		<specialDisplayRadius>3</specialDisplayRadius>
+		<modExtensions>
+			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
+				<explosionTimeout>40000</explosionTimeout>
+				<!-- ticks -->
+				<proximityRange>3</proximityRange> 
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="RT_Traps">
 		<defName>RT_Alpha_ProximityTrap</defName>
 		<label>Alpha trap</label>
 		<description>A bomb of contained energy, created by an Alpha Metroid. Animals can sense these when calm.</description>
@@ -68,7 +98,7 @@
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_Explosive">
-				<explosiveRadius>3</explosiveRadius>
+				<explosiveRadius>4</explosiveRadius>
 				<explosiveDamageType>Flame</explosiveDamageType>
 				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
 				<wickTicks>15</wickTicks>
