@@ -28,6 +28,22 @@
 		</plant>
 	</ThingDef>-->
 
+    <ThingDef>
+    <defName>RT_Electricity</defName>
+    <label>electric discharge</label>
+    <thingClass>RT_Rimtroid.ElectricDischarge</thingClass>
+    <category>Attachment</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Special/Electricity</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData> 
+    <altitudeLayer>PawnState</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+
 	<ThingDef Name="RT_Traps" ParentName="BuildingBase" Abstract="True">
 	    <thingClass>RT_Rimtroid.Alpha_ProximityTrap</thingClass>
 		<graphicData>
@@ -118,4 +134,38 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>RT_ExplosionTest</defName>
+    <label>explosion</label>
+    <thingClass>RT_Rimtroid.ElectricExplosion</thingClass>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+
+  <!--
+    !!!!!TO BE DELETED!!!!!
+    <ThingDef>
+		<defName>RT_GammaIgniteTest</defName>
+		<label>Electric Floor Test</label>
+		<description>A test item to make sure the electric floor works properly.</description>
+		<graphicData>
+			<texPath>Things/Misc/MetroidBomb</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>3</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+      <li Class="RT_Rimtroid.CompProperties_ElectricOverlay">
+      </li>
+		</comps>
+		<specialDisplayRadius>3</specialDisplayRadius>
+	</ThingDef>-->
 </Defs>

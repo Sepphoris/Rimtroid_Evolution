@@ -1,0 +1,20 @@
+So, a few things to keep in mind with the metroids:
+
+
+-This is only the 'true' metroids. That means only Bantee, Larvae, Alpha, Gamma, Zeta, Omega, and Queen exist. Others (both canon and new variants exclusive to the world) will come later.
+
+-Gamma, Zeta, and Omega Metroids have abilities the player can fire when they are tamed. These abilities are unique to different stages.
+
+-Metroids feed like they do in canon; they gain food by live targets. Attacks on live pawns refill their food bar, and they cannot eat any other types of food. Make sure you have things they can feed off of. Once they down a pawn, they will leave it alone and seek something else.
+
+-If their hunger gets too low, the have a chance at berserking. This is generally at 30% food or lower.
+
+-There are two drugs for metroids; Inertia, and Aetas.
+
+-Metroids 'evolve' to their next stage at a certain age. These ages are pretty wide apart, but they gain age whenever they feed. A dev tool exists that will age them by 1, 10, or 100 years.
+
+-They die extremely quickly in lower temperatures.  Desert, jungle, or shrubland biomes work best. Boreal, tundra, or any other colder biome is a death sentence for them.
+
+-Queens are not tamable in any way, including by devmode. This is intentional, as they have severe balancing issues when the player uses them.
+
+-Shadows are not accurate.

@@ -1,0 +1,124 @@
+====================
+NEXT UPDATE FEATURES
+====================
+(Top features are the most important; bottom feature are for later, or if they can be fit in)
+
+
+===============
+UI:
+===============
+	-Add mod options:
+		-Metroids can spawn in the wild
+		-Queens can be acquired
+		-Fire spreading
+		-Metroids can berserk
+		-Chance to untame when berserk
+		-Age gained when landing hits
+	-Add text that lets players know years until next stage
+	
+
+===============
+ITEMS:
+===============
+	-AEION EXTRACT: A rare item used in the creation of metroid serums. Sold by exotic traders. (Evolution)
+		
+
+===============
+GENETICS:
+===============
+	
+	-NUTRIENT SOLUTION: An injection that fills up the food of a pawn, and slows down hunger rate for a period of time. Ideal for downed metroids, or metroids incapable of eating themselves. Made at Neurobench.
+	
+	-BIOMETRIC INHIBITOR: An implant that completely eliminates berserking chance, in exchange for a high likelyhood of stunting and possibly decay later in time.
+
+	-THERMOGENIC IMPLANT: An implant that increases the overall body temperature of a metroid, and thus allows Metroids to survive 'normal' low temperatures. These temperatures are around what a human can endure.
+	
+	-SYSTEMIC STRENGTHENING: Increases the lowered stats of larvae and Bantees to 100%. Works especially well for stunted metroids. Done within a biotank or by serum.
+
+	-Dull Teeth/Claws: Unsharpens the teeth and claws of metroids, making them do only 1 damage. Does not transfer between stages due to growth patterns, and will need to be redone every so often. Does not prevent abilities from being used.
+
+
+
+===============
+WEAPONS:
+===============
+	-M14-SYRINGER: An extremely long-range rifle that is specially designed to pierce through metroid shells, delivering a variety of injections. Often used for downing wild metroids, pacifying berserk metroids, or feeding metroids from a distance. Unsure if this will be able to support an ammo system or not. 
+
+	-FROST DAMAGE: A damage type that inflicts frost damage, which is based on cold, and some ballistic damage. Frost damage depends on cold resistance; if targets don't have it defined, a protection rating of 0 is used. Forst damage does little physical damage, but does slow down targets, inflict hypothermia, and has a chance to give frostbite. It is particularly effective against metroids; while most other beings will generally be slowed and take a lot of hits before death, metroids can die quickly to the damage type. (RT_Core)
+	
+	
+
+
+===============
+GRAPHICS:
+===============
+
+	-Better laser graphics for fire beams.
+	
+===============
+MISC:
+===============
+
+	-CELLULAR DECAY: A permanent defect that specifically occurs in metroids that have been artificially modified. Metroids will slowly 'dissolve' when left untreated. Extremely low chance from stunting, and higher with more drastic changes. Some metroids have a chance at developing this every 100 years.
+
+	-CELLULAR BREAKDOWN: The same effect of Ceullular Decay, but is done when forcefully drained of energy.
+
+	-FERAL: A defect that permanently turns a metroid manhunter, eliminating the possiblity for any sort of taming.
+
+
+====================
+SECONDARY FEATURES
+====================
+All the features below would be nice to add in, but aren't top priority for the update.
+
+
+
+
+===============
+METROIDS:
+===============
+	-Tallon Metroid: The base for all Metroid mutations. while not powerful by itself, many metroids are locked behind the Tallon Metroid, and mutations (forced or natural) will need to occur in this stage to acquire them. Acquired by exposing a Metroid larvae to Tritium within a biotank.
+	-Infant Tallon Metroid: The stage before the Tallon metroid. Similar to it, except has a higher chance of mutating properly.
+	-Fission Metroid: A metroid that can divide itself into another type. While the original will remain the same, the 
+	-Hunter Metroid: A fast, hardy metroid that can attack extremely quickly at medium ranges. It's ranged ability does not do damage, but instead is capable of inflicting life drain at a frighteningly high rate, alongside drastically slowing a target down.
+	-Prime Metroid (?)
+
+
+===============
+ITEMS:
+===============
+	-AEION CORE: A rare item used as a fuel source for certain biotanks. Can be used in the creation of Aeion Extract, but is inneficient.
+
+	-TRITIUM: A stand-in for phazon, since Phazon no longer exists. Found through merchants and within ruins. Large amounts of uranium can also be spent to acquire some. Used for genetic processes and recipes.
+
+
+===============
+GENETICS:
+===============
+	-CYTOBENCH (?): A new workbench that is specially designed to create unique serums that alter metroid physiology. All serums and medical items have a chance at stunting the metroid, or inflicting another negative side effect.
+	
+	-XENOME CONTAINMENT UNIT (XCU): The standard containment unit for metroids. They are not very strong, but relatively easy to make. Comes in various sizes, with the biggest one able to support a Zeta Metroid. Can be unpowered, but metroids have a higher chance of breaking out.
+	
+	-SONIC BARRIER TANK (SBT): An expensive upgrade to the XCU. Relies on constant power to keep it up. Cannot be broken through, and is able to support up to a Zeta.
+	
+	
+	-Hunting Alteration: A medical procedure that eliminates berserking from a metroid, in exchange for stunting and some stat debuffs. Surgery material made at Neurobench.
+	
+	-Systemic Strengthening: Increases the lowered stats of larvae and Bantees to 100%. Works especially well for stunted metroids. Done within a biotank or by serum.
+	
+	-Cryo Habitation: A metroid alteration that allows metroids to survive in the cold much better. While they can survive colder temperatures, they still will be affected by hypothermia, and can not survive in subzero temperatures for long. Done within a Biotank. Chance of death for metroid to die during procedure.
+	
+	-Nutrient Manipulation: Allows certain metroids to eat meat, in exchange for a lowered metabolism and slightly faster hunger rate. Done within a Biotank. Change for metroid to die during procedure.
+	
+	-Stage Acceleration: Rapidly increases the age of a metroid, progressing the metroid to a desired stage. During this process the metroid is in stasis, and health conditions - and even death - can pop up if the acceleration is too long. Can take multiple days. Done within a Biotank.
+	
+	-Cloning: Player can kill a tamed metroid in exchange for a template that allows cloning. This template has infinite uses, but clones are likely to have genetic defects, ranging from drastically lower lifespans, to no abilities, to higher berserk rates. Genetic effects may also be positive, and a clone that has many positives and no negatives can be a truly powerful and expensive creature.
+
+===============
+WEAPONS:
+===============
+	-CRYO TURRET:  A turret that employs the new cold-based damage type.
+	
+===============
+ITEMS:
+===============

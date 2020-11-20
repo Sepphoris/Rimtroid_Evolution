@@ -301,8 +301,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evolution\ElectricExplosion.cs" />
+    <Compile Include="Evolution\ElectricGenExplosion.cs" />
+    <Compile Include="Evolution\ElectricDischarge.cs" />
+    <Compile Include="Evolution\Ability_GammaIgniteFloor.cs" />
     <Compile Include="Evolution\Ability_GammaBomb.cs" />
     <Compile Include="Core\Utils.cs" />
+    <Compile Include="Evolution\CompElectricOverlay.cs" />
+    <Compile Include="Evolution\CompProperties_ElectricOverlay.cs" />
+    <Compile Include="Evolution\ElectricUtility.cs" />
     <Compile Include="Evolution\Events\Event_LarvaePack.cs" />
     <Compile Include="Evolution\Events\Event_LoneBantee.cs" />
     <Compile Include="Evolution\AcidCompProperties.cs" />

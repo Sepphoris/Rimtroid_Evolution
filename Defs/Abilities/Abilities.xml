@@ -146,6 +146,42 @@
       </comps>
     </AbilityDef>
 
+      <AbilityDef>
+      <defName>RT_GammaFloor</defName>
+      <label>Electric Floor</label>
+      <description>Drops a proximity bomb that will detonate on hostiles</description>
+      <abilityClass>RT_Rimtroid.Ability_GammaIgnite</abilityClass>
+      <targetRequired>false</targetRequired>
+      <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+      <cooldownTicksRange>2000</cooldownTicksRange>
+      <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+      <iconPath>Things/Misc/MetroidBomb</iconPath>
+      <verbProperties>
+        <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+        <soundCast>RT_ShockwaveSound</soundCast>
+        <warmupTime>1</warmupTime>
+      </verbProperties>
+      <comps>
+        <li Class="RT_Core.AbilityCompProperties_AbilityControl">
+          <compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+          <autoUse>true</autoUse>
+          <gizmoOnText>Bombs Enabled</gizmoOnText>
+          <gizmoOffText>Bombs Disabled</gizmoOffText>
+          <gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
+          <gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+          <gizmoDesc>Toggle Bomb Usage</gizmoDesc>
+        </li>
+			  <li Class="RT_Core.AbilityCompProperties_Cooldown">
+          <compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				  <cooldownPool>GammaAbilityPool</cooldownPool>
+          <cooldownTicksRange>200</cooldownTicksRange>
+				  <independent>false</independent>
+				  <resetsTimer>false</resetsTimer>
+			  </li>
+      </comps>
+    </AbilityDef>
+
 <!--=============== Zeta Abilities ===============-->
 
       <AbilityDef>

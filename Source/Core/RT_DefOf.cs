@@ -21,5 +21,8 @@ namespace RT_Rimtroid
 		public static FactionDef RT_Metroids;
 
 		public static ThingDef RT_GammaShockwaveMote;
+
+		public static ThingDef RT_Electricity;
+		public static ThingDef RT_ExplosionTest;
 	}
 }
