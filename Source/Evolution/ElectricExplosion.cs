@@ -139,10 +139,12 @@ namespace RT_Rimtroid
 				Log.Error("Called StartExplosion() on unspawned thing.", false);
 				return;
 			}
+			
 			this.startTick = Find.TickManager.TicksGame;
 			this.cellsToAffect.Clear();
 			this.damagedThings.Clear();
 			this.addedCellsAffectedOnlyByDamage.Clear();
+			this.cellsToAffect = GenRadial.RadialCellsAround(this.Position, this.radius, true).ToList();
 			if (this.applyDamageToExplosionCellsNeighbors)
 			{
 				this.AddCellsNeighbors(this.cellsToAffect);
@@ -264,15 +266,7 @@ namespace RT_Rimtroid
 			{
 				this.TrySpawnExplosionThing(this.postExplosionSpawnThingDef, c, this.postExplosionSpawnThingCount);
 			}
-			float num = this.chanceToStartFire;
-			if (this.damageFalloff)
-			{
-				num *= Mathf.Lerp(1f, 0.2f, c.DistanceTo(base.Position) / this.radius);
-			}
-			if (Rand.Chance(num))
-			{
-				ElectricUtility.TryStartElectricIn(c, base.Map, Rand.Range(0.1f, 0.925f));
-			}
+			ElectricUtility.TryStartElectricIn(c, base.Map, Rand.Range(0.1f, 0.925f));
 		}
 
 		private void TrySpawnExplosionThing(ThingDef thingDef, IntVec3 c, int count)
