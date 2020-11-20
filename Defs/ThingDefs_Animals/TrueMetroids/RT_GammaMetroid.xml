@@ -109,6 +109,9 @@
           <li>
             <abilityDef>RT_MetroidBomb</abilityDef>
           </li>
+          <li>
+            <abilityDef>RT_GammaFloor</abilityDef>
+          </li>
 			  </abilities>
       </li>
       <li Class="RT_Core.CompProperties_AnimalProduct">
