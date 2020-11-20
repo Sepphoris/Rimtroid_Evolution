@@ -11,7 +11,7 @@ using RT_Core;
 
 namespace RT_Rimtroid
 {
-    class electricDischarge : AttachableThing, ISizeReporter
+    class ElectricDischarge : AttachableThing, ISizeReporter
 	{
 		private int ticksSinceSpawn;
 
@@ -80,10 +80,10 @@ namespace RT_Rimtroid
 		public override void Tick()
 		{
 			this.ticksSinceSpawn++;
-			if (electricDischarge.lastElectricCountUpdateTick != Find.TickManager.TicksGame)
+			if (ElectricDischarge.lastElectricCountUpdateTick != Find.TickManager.TicksGame)
 			{
-				electricDischarge.ElectricCount = base.Map.listerThings.ThingsOfDef(this.def).Count;
-				electricDischarge.lastElectricCountUpdateTick = Find.TickManager.TicksGame;
+				ElectricDischarge.ElectricCount = base.Map.listerThings.ThingsOfDef(this.def).Count;
+				ElectricDischarge.lastElectricCountUpdateTick = Find.TickManager.TicksGame;
 			}
 			if (this.sustainer != null)
 			{
@@ -94,7 +94,7 @@ namespace RT_Rimtroid
 				SoundInfo info = SoundInfo.InMap(new TargetInfo(base.Position, base.Map, false), MaintenanceType.PerTick);
 				this.sustainer = SustainerAggregatorUtility.AggregateOrSpawnSustainerFor(this, SoundDefOf.FireBurning, info);
 			}
-			if (electricDischarge.ElectricCount < 15 && this.ElectricSize > 0.7f && Rand.Value < this.ElectricSize * 0.01f)
+			if (ElectricDischarge.ElectricCount < 15 && this.ElectricSize > 0.7f && Rand.Value < this.ElectricSize * 0.01f)
 			{
 				MoteMaker.ThrowMicroSparks(this.DrawPos, base.Map);
 			}

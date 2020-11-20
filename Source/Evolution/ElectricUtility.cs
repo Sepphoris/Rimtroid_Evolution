@@ -55,7 +55,7 @@ namespace RT_Rimtroid
 				return false;
 			}
 			Log.Message("Making RT_Electricity in ElectricUtility.");
-			electricDischarge electricDischarge = (electricDischarge)ThingMaker.MakeThing(RT_DefOf.RT_Electricity, null);
+			ElectricDischarge electricDischarge = (ElectricDischarge)ThingMaker.MakeThing(RT_DefOf.RT_Electricity, null);
 			electricDischarge.ElectricSize = ElectricSize;
 			GenSpawn.Spawn(electricDischarge, c, map, Rot4.North, WipeMode.Vanish, false);
 			return true;
