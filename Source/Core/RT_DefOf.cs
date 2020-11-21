@@ -24,5 +24,7 @@ namespace RT_Rimtroid
 
 		public static ThingDef RT_Electricity;
 		public static ThingDef RT_ExplosionTest;
+
+		public static SoundDef RT_ElectricBurning;
 	}
 }

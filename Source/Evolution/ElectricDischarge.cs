@@ -11,7 +11,7 @@ using RT_Core;
 
 namespace RT_Rimtroid
 {
-    class ElectricDischarge : AttachableThing, ISizeReporter
+	class ElectricDischarge : AttachableThing, ISizeReporter
 	{
 		private int ticksSinceSpawn;
 
@@ -75,58 +75,54 @@ namespace RT_Rimtroid
 			}
 			Map map = base.Map;
 			base.DeSpawn(mode);
+			//Log.Message("base.DeSpawn (ElectricDischarge)", true);
 		}
 
 		public override void Tick()
 		{
-			this.ticksSinceSpawn++;
-			if (ElectricDischarge.lastElectricCountUpdateTick != Find.TickManager.TicksGame)
+			if (Find.TickManager.TicksGame % 30 == 0)
 			{
-				ElectricDischarge.ElectricCount = base.Map.listerThings.ThingsOfDef(this.def).Count;
-				ElectricDischarge.lastElectricCountUpdateTick = Find.TickManager.TicksGame;
-			}
-			if (this.sustainer != null)
-			{
-				this.sustainer.Maintain();
-			}
-			else if (!base.Position.Fogged(base.Map))
-			{
-				SoundInfo info = SoundInfo.InMap(new TargetInfo(base.Position, base.Map, false), MaintenanceType.PerTick);
-				this.sustainer = SustainerAggregatorUtility.AggregateOrSpawnSustainerFor(this, SoundDefOf.FireBurning, info);
-			}
-			if (ElectricDischarge.ElectricCount < 15 && this.ElectricSize > 0.7f && Rand.Value < this.ElectricSize * 0.01f)
-			{
-				MoteMaker.ThrowMicroSparks(this.DrawPos, base.Map);
-			}
-		}
-
-
-		private void DoFireDamage(Thing targ)
-		{
-			float num = 0.0125f + 0.0036f * this.ElectricSize;
-			num = Mathf.Clamp(num, 0.0125f, 0.05f);
-			int num2 = GenMath.RoundRandom(num * 150f);
-			if (num2 < 1)
-			{
-				num2 = 1;
-			}
-			Pawn pawn = targ as Pawn;
-			if (pawn != null)
-			{
-				BattleLogEntry_DamageTaken battleLogEntry_DamageTaken = new BattleLogEntry_DamageTaken(pawn, RulePackDefOf.DamageEvent_Fire, null);
-				Find.BattleLog.Add(battleLogEntry_DamageTaken);
-				DamageInfo dinfo = new DamageInfo(DamageDefOf.Flame, (float)num2, 0f, -1f, this, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null);
-				dinfo.SetBodyRegion(BodyPartHeight.Undefined, BodyPartDepth.Outside);
-				targ.TakeDamage(dinfo).AssociateWithLog(battleLogEntry_DamageTaken);
-				Apparel apparel;
-				if (pawn.apparel != null && pawn.apparel.WornApparel.TryRandomElement(out apparel))
+				//Log.Message(" Beginning public override void Tick ()", true);
+				this.ticksSinceSpawn++;
+				if (ElectricDischarge.lastElectricCountUpdateTick != Find.TickManager.TicksGame)
 				{
-					apparel.TakeDamage(new DamageInfo(DamageDefOf.Flame, (float)num2, 0f, -1f, this, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+					ElectricDischarge.ElectricCount = base.Map.listerThings.ThingsOfDef(this.def).Count;
+					ElectricDischarge.lastElectricCountUpdateTick = Find.TickManager.TicksGame;
+					//Log.Message("Find.TickManager.TicksGame completed", true);
 				}
-			}
-			else
-			{
-				targ.TakeDamage(new DamageInfo(DamageDefOf.Flame, (float)num2, 0f, -1f, this, null, null, DamageInfo.SourceCategory.ThingOrUnknown, null));
+				//if (this.sustainer != null)
+				//{
+					//sustainer.Maintain();
+					//Log.Message("sustainer.maintain", true);
+				//}
+				else if (!base.Position.Fogged(base.Map))
+				{
+					//Log.Message(" Attempting to play sound", true);
+					SoundInfo info = SoundInfo.InMap(new TargetInfo(base.Position, base.Map, false), MaintenanceType.PerTick);
+					this.sustainer = SustainerAggregatorUtility.AggregateOrSpawnSustainerFor(this, RT_DefOf.RT_ElectricBurning, info);
+				}
+				if (ElectricDischarge.ElectricCount < 15 && this.ElectricSize > 0.7f && Rand.Value < this.ElectricSize * 0.01f)
+				{
+					MoteMaker.ThrowMicroSparks(this.DrawPos, base.Map);
+				}
+				{
+					List<Thing> thingsInRange = this.Position.GetThingList(this.Map);
+					if (!thingsInRange.NullOrEmpty())
+						//Log.Message(" List<Thing> thingsInRange = this.Position.GetThingList", true);
+					{
+						//Log.Message(" Attempting to apply damage", true);
+						foreach (Thing thing in thingsInRange.Where(thing => thing != this).ToList())
+						{
+							thing.TakeDamage(new DamageInfo(DamageDefOf.Burn, 3f));
+							if (thing is Pawn pawn && Rand.Chance(0.08f))
+							{
+								pawn.stances.stunner.StunFor(120, this);
+								//Log.Message(" Applied damage", true);
+							}
+						}
+					}
+
+				}
 			}
 		}
 	}

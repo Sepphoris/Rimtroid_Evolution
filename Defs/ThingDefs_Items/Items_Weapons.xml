@@ -76,7 +76,9 @@
     <graphicData>
       <texPath>Things/Weapons/CryoLauncher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      		<drawSize>1</drawSize>
     </graphicData>
+    <uiIconScale>1.2</uiIconScale>
     <soundInteract>Interact_Rifle</soundInteract>
    <generateCommonality>0</generateCommonality>
     <statBases>
@@ -137,8 +139,74 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <equippedAngleOffset>45</equippedAngleOffset>
   </ThingDef>
 
-	<!-- Cryo Pistol (maybe...?) -->
+	<!-- Dart Rifle -->
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RT_DartRifle</defName>
+    <label>Hypodermic Rifle</label>
+    <description>A specialized long range rifle designed to fire chemical syringes at distant targets, generally ones that are too dangerous to be anywhere near. The inner working were designed specifically with the metroid body structure in mind, making this more of a scenario-specific tool, rather than a weapon. It can be used as a general wepaon, although the damage output it will do is far below of what even the smallest of firearms will do.\n\nThe syringe projectiles fired by this weapon were designed with metroids in mind; each contains a nutrient solution that will help satisfy the need for food, as well as an agent that will both calm and exaust the metroid. These effects will not work on any normal biological being.</description>
+    <graphicData>
+      <texPath>Things/Weapons/DartRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      		<drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0</generateCommonality>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.82</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SniperRifle</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <range>44.9</range>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <equippedAngleOffset>45</equippedAngleOffset>
+  </ThingDef>
 
 </Defs>

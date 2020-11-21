@@ -62,7 +62,7 @@ namespace RT_Rimtroid
 
 		private static List<IntVec3> adjWallCells = new List<IntVec3>();
 
-		public virtual IEnumerable<IntVec3> ExplosionCellsToHit(IntVec3 center, Map map, float radius, IntVec3? needLOSToCell1 = null, IntVec3? needLOSToCell2 = null)
+		public IEnumerable<IntVec3> ExplosionCellsToHit(IntVec3 center, Map map, float radius, IntVec3? needLOSToCell1 = null, IntVec3? needLOSToCell2 = null)
 		{
 			openCells.Clear();
 			adjWallCells.Clear();
@@ -139,12 +139,14 @@ namespace RT_Rimtroid
 				Log.Error("Called StartExplosion() on unspawned thing.", false);
 				return;
 			}
-			
+
 			this.startTick = Find.TickManager.TicksGame;
 			this.cellsToAffect.Clear();
 			this.damagedThings.Clear();
 			this.addedCellsAffectedOnlyByDamage.Clear();
-			this.cellsToAffect = GenRadial.RadialCellsAround(this.Position, this.radius, true).ToList();
+
+			this.cellsToAffect = ExplosionCellsToHit(this.Position, this.Map, this.radius).ToList();
+
 			if (this.applyDamageToExplosionCellsNeighbors)
 			{
 				this.AddCellsNeighbors(this.cellsToAffect);

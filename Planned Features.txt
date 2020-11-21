@@ -42,7 +42,8 @@ GENETICS:
 ===============
 WEAPONS:
 ===============
-	-M14-SYRINGER: An extremely long-range rifle that is specially designed to pierce through metroid shells, delivering a variety of injections. Often used for downing wild metroids, pacifying berserk metroids, or feeding metroids from a distance. Unsure if this will be able to support an ammo system or not. 
+	-HYPODERMIC RIFLE: An extremely long-range rifle that is specially designed to pierce through metroid shells, delivering a variety of injections. By default, it is used for downing wild metroids, pacifying berserk metroids, and feeding metroids from a distance.
+	
 
 	-FROST DAMAGE: A damage type that inflicts frost damage, which is based on cold, and some ballistic damage. Frost damage depends on cold resistance; if targets don't have it defined, a protection rating of 0 is used. Forst damage does little physical damage, but does slow down targets, inflict hypothermia, and has a chance to give frostbite. It is particularly effective against metroids; while most other beings will generally be slowed and take a lot of hits before death, metroids can die quickly to the damage type. (RT_Core)
 	

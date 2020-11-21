@@ -160,7 +160,8 @@
       <verbProperties>
         <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
         <soundCast>RT_ShockwaveSound</soundCast>
-        <warmupTime>1</warmupTime>
+        <warmupTime>2</warmupTime>
+        <range>4</range>
       </verbProperties>
       <comps>
         <li Class="RT_Core.AbilityCompProperties_AbilityControl">

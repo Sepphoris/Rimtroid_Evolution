@@ -39,7 +39,7 @@
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData> 
-    <altitudeLayer>PawnState</altitudeLayer>
+    <altitudeLayer>MoteLow</altitudeLayer>
     <useHitPoints>false</useHitPoints>
   </ThingDef>
 
