@@ -89,14 +89,14 @@ namespace RT_Rimtroid
 					ElectricDischarge.ElectricCount = base.Map.listerThings.ThingsOfDef(this.def).Count;
 					ElectricDischarge.lastElectricCountUpdateTick = Find.TickManager.TicksGame;
 					//Log.Message("Find.TickManager.TicksGame completed", true);
-				}
-				//if (this.sustainer != null)
-				//{
-					//sustainer.Maintain();
-					//Log.Message("sustainer.maintain", true);
-				//}
-				else if (!base.Position.Fogged(base.Map))
-				{
+					if (this.sustainer != null)
+					{
+						if (!sustainer.Ended)
+						{
+							sustainer.Maintain();
+							Log.Message("sustainer.maintain", true);
+						}
+					}
 					//Log.Message(" Attempting to play sound", true);
 					SoundInfo info = SoundInfo.InMap(new TargetInfo(base.Position, base.Map, false), MaintenanceType.PerTick);
 					this.sustainer = SustainerAggregatorUtility.AggregateOrSpawnSustainerFor(this, RT_DefOf.RT_ElectricBurning, info);
@@ -113,7 +113,7 @@ namespace RT_Rimtroid
 						//Log.Message(" Attempting to apply damage", true);
 						foreach (Thing thing in thingsInRange.Where(thing => thing != this).ToList())
 						{
-							thing.TakeDamage(new DamageInfo(DamageDefOf.Burn, 3f));
+							thing.TakeDamage(new DamageInfo(DamageDefOf.Burn, 4f));
 							if (thing is Pawn pawn && Rand.Chance(0.08f))
 							{
 								pawn.stances.stunner.StunFor(120, this);

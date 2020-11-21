@@ -35,7 +35,7 @@
     <category>Attachment</category>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Special/Electricity</texPath>
+      <texPath>Things/Special/ElectricityFiles</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData> 
