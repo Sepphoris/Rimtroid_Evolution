@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+ <!--Genetic Hediff coloring-->
+	<HediffDef Name="RT_MetroidAddition" Abstract="True">
+		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- =============== Cryoadapter =============== -->
+
+  	<HediffDef ParentName="ImplantHediffBase">
+		<defName>RT_CryoadapterHediff</defName>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <descriptionHyperlinks>
+      <ThingDef>RT_Cryoadapter</ThingDef>
+    </descriptionHyperlinks>
+		<label>Cryothermic Resistance</label>
+    <labelNoun>cryothermic resistance</labelNoun>
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>A genetically forced adaption that allows Metroids to survive colder temperatures.</description>
+    <initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+				<statOffsets>
+          <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+				</statOffsets>
+        <statFactors>
+    			<MarketValue>1.5</MarketValue>
+    	  </statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- =============== Nutrient Regulator =============== -->
+
+  	<HediffDef ParentName="ImplantHediffBase">
+		<defName>RT_NutrientRegulatorHediff</defName>
+    <hediffClass>Hediff_Implant</hediffClass>
+    <descriptionHyperlinks>
+      <ThingDef>RT_NutrientRegulator</ThingDef>
+    </descriptionHyperlinks>
+		<label>Nutrient Regulatation</label>
+    <labelNoun>nutrient regulation</labelNoun>
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>A genetically forced adaption that processes nutrition distribution more efficienty, slowing down hunger depletion.</description>
+    <initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+        <statFactors>
+    			<MarketValue>1.5</MarketValue>
+    	  </statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

@@ -9,13 +9,56 @@
 			<height>Middle</height>
 			<depth>Outside</depth>
 			<parts>
-        <!--Bantee head is not conceptual due to no exerior eyes-->
+        <!--Head is conceptual, but teeth are not-->
+        <li>
+          <def>RT_Head</def>
+          <customLabel>head</customLabel>
+          <coverage>0</coverage>
+          <groups>
+            <li>UpperHead</li>
+            <li>FullHead</li>
+            <li>HeadAttackTool</li>
+          </groups>
+        </li>
+        <!--Teeth-->
+        <li>
+					<def>AnimalJaw</def>
+					<customLabel>front left tooth</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>Teeth</li>
+					</groups>
+				</li>
 				<li>
-					<def>Head</def>
+					<def>AnimalJaw</def>
+					<customLabel>front right tooth</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>Teeth</li>
+					</groups>
+				</li>
+				<li>
+					<def>AnimalJaw</def>
+					<customLabel>back left tooth</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>Teeth</li>
+					</groups>
+				</li>
+				<li>
+					<def>AnimalJaw</def>
+					<customLabel>back right tooth</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>Teeth</li>
+					</groups>
+				</li>
+				<li>
+					<def>RT_Membrane</def>
 					<customLabel>membrane</customLabel>
 						<coverage>0.80</coverage>
 						<groups>
-							<li>HeadAttackTool</li>
+              <li>Torso</li>
 						</groups>
 					<parts>
 					<li>
@@ -81,38 +124,6 @@
 					</li>
 					</parts>
 				</li>
-					<li>
-						<def>AnimalJaw</def>
-						<customLabel>front left tooth</customLabel>
-						<coverage>0.04</coverage>
-						<groups>
-							<li>Teeth</li>
-						</groups>
-					</li>
-					<li>
-						<def>AnimalJaw</def>
-						<customLabel>front right tooth</customLabel>
-						<coverage>0.04</coverage>
-						<groups>
-							<li>Teeth</li>
-						</groups>
-					</li>
-					<li>
-						<def>AnimalJaw</def>
-						<customLabel>back left tooth</customLabel>
-						<coverage>0.04</coverage>
-						<groups>
-							<li>Teeth</li>
-						</groups>
-					</li>
-					<li>
-						<def>AnimalJaw</def>
-						<customLabel>back right tooth</customLabel>
-						<coverage>0.04</coverage>
-						<groups>
-							<li>Teeth</li>
-						</groups>
-					</li>
 			</parts>
 		</corePart>
 	</BodyDef>

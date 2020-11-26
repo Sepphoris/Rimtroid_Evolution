@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =============== Parent Modification classes =============== -->
+	<ThingDef Name="RT_MetroidModBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+  	<pathCost>10</pathCost>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.2</Mass>
+			<Flammability>0.2</Flammability>
+			<Beauty>-4</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+		<tradeTags>
+			<li>AnimalBionics</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+	</ThingDef>
+
+  <ThingDef Name ="RT_MetroidModification" ParentName="RT_MetroidModBase" Abstract="True">
+    <thingCategories>
+      <li>BodyPartsArchotech</li>
+    </thingCategories>
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Special/MechSerumHealer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(155,165,148)</color>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+
+	<!-- =============== Cryoadapter =============== -->
+
+ <ThingDef ParentName="RT_MetroidModification">
+    <defName>RT_Cryoadapter</defName>
+    <label>Metroid Cryoadapter</label>
+    <descriptionHyperlinks><HediffDef>RT_CryoadapterHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, exposing the nucleus to subtle, yet constant, lowering of internal temperatures. The body adapts by changing it's internal structure, thickening the membrane and altering the nuclei structure to better handle the new body temperature. This allows metroids to survive much lower temperatures, though the weakness isn't eliminated completely.
+    
+Due to it's intrusive nature, the immune system of older metroids will completely block out the changes; this requires it to be administered during the Bantee or larvae stage.
+      
+This is a permanent operation; any metroid with this alteration will retain it throughout their stage growths.</description>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin metroid cryoadaption</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>RT_CryoadapterHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<!-- =============== Nutrient Regulator =============== -->
+
+ <ThingDef ParentName="RT_MetroidModification">
+    <defName>RT_NutrientRegulator</defName>
+    <label>Metroid Nutrient Regulator</label>
+    <descriptionHyperlinks><HediffDef>RT_CryoadapterHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, altering the immune system's method of distributing energy. A (possibly intentional) genetic flaw directs a large amount of stored nutrition into cycles that quickly dissipate, making them more active hunters; by targetting this, the otherwise wasted energy is instead stored, allowing longer durations between feedings.
+    
+Due to it's intrusive nature, the immune system of older metroids will completely block out the changes; this requires it to be administered during the Bantee or larvae stage.
+      
+This is a permanent operation; any metroid with this alteration will retain it throughout their stage growths.</description>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin nutrient regulation</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>RT_NutrientRegulatorHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
