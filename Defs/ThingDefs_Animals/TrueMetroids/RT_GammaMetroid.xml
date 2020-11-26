@@ -110,7 +110,7 @@
             <abilityDef>RT_MetroidBomb</abilityDef>
           </li>
           <li>
-            <abilityDef>RT_GammaFloor</abilityDef>
+            <abilityDef>RT_GammaBurst</abilityDef>
           </li>
 			  </abilities>
       </li>
@@ -141,7 +141,7 @@
 		  <body>RT_GammaBody</body>
 		  <baseBodySize>1.5</baseBodySize>
 		  <baseHealthScale>6</baseHealthScale>
-		  <baseHungerRate>1</baseHungerRate>
+		  <baseHungerRate>0.8</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
 				<li>RT_Rimtroid_EvolutionGrowth</li>

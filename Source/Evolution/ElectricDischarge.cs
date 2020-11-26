@@ -23,6 +23,8 @@ namespace RT_Rimtroid
 
 		private static int lastElectricCountUpdateTick;
 
+		private const int ComplexCalcsInterval = 150;
+
 		public override string Label
 		{
 			get
@@ -75,7 +77,28 @@ namespace RT_Rimtroid
 			}
 			Map map = base.Map;
 			base.DeSpawn(mode);
+			RecalcPathsOnAndAroundMe(map);
 			//Log.Message("base.DeSpawn (ElectricDischarge)", true);
+		}
+
+		private void RecalcPathsOnAndAroundMe(Map map)
+		{
+			IntVec3[] adjacentCellsAndInside = GenAdj.AdjacentCellsAndInside;
+			for (int i = 0; i < adjacentCellsAndInside.Length; i++)
+			{
+				IntVec3 c = base.Position + adjacentCellsAndInside[i];
+				if (c.InBounds(map))
+				{
+					map.pathGrid.RecalculatePerceivedPathCostAt(c);
+				}
+			}
+		}
+
+		public override void SpawnSetup(Map map, bool respawningAfterLoad)
+		{
+			base.SpawnSetup(map, respawningAfterLoad);
+			RecalcPathsOnAndAroundMe(map);
+			LessonAutoActivator.TeachOpportunity(ConceptDefOf.HomeArea, this, OpportunityType.Important);
 		}
 
 		public override void Tick()
@@ -106,19 +129,17 @@ namespace RT_Rimtroid
 					MoteMaker.ThrowMicroSparks(this.DrawPos, base.Map);
 				}
 				{
-					List<Thing> thingsInRange = this.Position.GetThingList(this.Map);
-					if (!thingsInRange.NullOrEmpty())
-						//Log.Message(" List<Thing> thingsInRange = this.Position.GetThingList", true);
+					List<Pawn> thingsInRange = Position.GetThingList(Map).Where(t => t != this && !t.IsMetroid() && t is Pawn pawn).Cast<Pawn>().ToList();
+					for (int i = thingsInRange.Count - 1; i >= 0; i--)
 					{
-						//Log.Message(" Attempting to apply damage", true);
-						foreach (Thing thing in thingsInRange.Where(thing => thing != this).ToList())
+						Pawn pawn = thingsInRange[i];
+						Rand.PushState();
+						pawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, (float)Rand.RangeInclusive(1, 4)));
+						bool randomChance = Rand.Chance(0.1f);
+						Rand.PopState();
+						if (randomChance)
 						{
-							thing.TakeDamage(new DamageInfo(DamageDefOf.Burn, 4f));
-							if (thing is Pawn pawn && Rand.Chance(0.08f))
-							{
-								pawn.stances.stunner.StunFor(120, this);
-								//Log.Message(" Applied damage", true);
-							}
+							pawn.stances.stunner.StunFor_NewTmp(120, this);
 						}
 					}
 

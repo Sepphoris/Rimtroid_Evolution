@@ -93,7 +93,7 @@
 		  <body>RT_LarvaeBody</body>
 		  <baseBodySize>0.4</baseBodySize>
 		  <baseHealthScale>3</baseHealthScale>
-		  <baseHungerRate>1</baseHungerRate>
+		  <baseHungerRate>0.8</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>
 				<li>RT_Rimtroid_EvolutionGrowth</li>
@@ -101,7 +101,7 @@
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
 		  <foodType>Kibble</foodType>
-		  <leatherDef>RT_MetroidChitin</leatherDef>
+		  <!--<leatherDef>RT_MetroidChitin</leatherDef>-->
 		  <trainability>Advanced</trainability>
 		  <maxPreyBodySize>3.9</maxPreyBodySize>
 		  <gestationPeriodDays>30</gestationPeriodDays>

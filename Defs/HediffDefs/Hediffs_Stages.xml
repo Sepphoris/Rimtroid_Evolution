@@ -28,7 +28,7 @@ to be made to allow hediff effects from other mods.
     <description>A Metroid that has recently hatched from an untouched Metroid egg, also known as a 'Bantee Metroid'. Their affinity for attacking and draining life forms is still present, but Bantee Metroids are relatively much weaker, and much more impressionable.\n\nBantees are very fragile, as their body functions haven't had (relatively) much time to develop.</description>
     <stages>
       <li>
-	      <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
 	      <restFallFactorOffset>0.8</restFallFactorOffset>
         <naturalHealingFactor>0.8</naturalHealingFactor>
         <painFactor>0.7</painFactor>
@@ -90,7 +90,7 @@ to be made to allow hediff effects from other mods.
     <description>The third stage of a Metroid's growth. Many Metroids stagnate for a long time within this stage, making it the most common to see. Metroid Larvae are - by far - the most resource demanding, but also have the most mutation potential out of all other stages.\n\nLarvae are not fully grown, making some of their bodily functions slightly suffer.</description>
     <stages>
       <li>
-	      <hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
 	      <restFallFactorOffset>0.3</restFallFactorOffset>
         <naturalHealingFactor>1</naturalHealingFactor>
         <painFactor>0.7</painFactor>

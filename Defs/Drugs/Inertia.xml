@@ -10,7 +10,7 @@
 
 	<!-- Inertia; a drug that stunts metroid growth, and acts as a poison to everything else.-->
 	  <ThingDef ParentName="MakeableDrugBase">
-		<defName>RT_InertiaDrug</defName>
+		<defName>RT_StuntingDrug</defName>
 		<label>Inertia Serum</label>
 		<description>Inertia, known scientifically as as 'S070-H', is an injected drug specifically designed to interfere with the unique, cell-like body structure that all metroids possess. This drug halts the adaptive growth of metroids, and permanently supresses the mutation potential metroids are known for, isolating them into their current form. \n\nInertia is essentially a poison to anything else; non-lethal, but it will compromise immune systems for a short period of time.</description>
 		<descriptionHyperlinks>

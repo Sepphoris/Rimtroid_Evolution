@@ -32,10 +32,11 @@
     <defName>RT_Electricity</defName>
     <label>electric discharge</label>
     <thingClass>RT_Rimtroid.ElectricDischarge</thingClass>
+    <pathCost>50</pathCost>
     <category>Attachment</category>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Special/ElectricityFiles</texPath>
+      <texPath>Things/Special/Electricity</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData> 

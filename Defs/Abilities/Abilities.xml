@@ -147,16 +147,16 @@
     </AbilityDef>
 
       <AbilityDef>
-      <defName>RT_GammaFloor</defName>
-      <label>Electric Floor</label>
-      <description>Drops a proximity bomb that will detonate on hostiles</description>
+      <defName>RT_GammaBurst</defName>
+      <label>Electric Burst</label>
+      <description>Creates a burst of electricity that damages and stuns anything on top</description>
       <abilityClass>RT_Rimtroid.Ability_GammaIgnite</abilityClass>
       <targetRequired>false</targetRequired>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
       <cooldownTicksRange>2000</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-      <iconPath>Things/Misc/MetroidBomb</iconPath>
+      <iconPath>UI/Abilities/ElectricBurst</iconPath>
       <verbProperties>
         <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
         <soundCast>RT_ShockwaveSound</soundCast>
@@ -167,11 +167,11 @@
         <li Class="RT_Core.AbilityCompProperties_AbilityControl">
           <compClass>RT_Core.AbilityComp_AbilityControl</compClass>
           <autoUse>true</autoUse>
-          <gizmoOnText>Bombs Enabled</gizmoOnText>
-          <gizmoOffText>Bombs Disabled</gizmoOffText>
+          <gizmoOnText>Electric Burst Enabled</gizmoOnText>
+          <gizmoOffText>Electric Burst Disabled</gizmoOffText>
           <gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
           <gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
-          <gizmoDesc>Toggle Bomb Usage</gizmoDesc>
+          <gizmoDesc>Toggle Burst Usage</gizmoDesc>
         </li>
 			  <li Class="RT_Core.AbilityCompProperties_Cooldown">
           <compClass>RT_Core.AbilityComp_Cooldown</compClass>

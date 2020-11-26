@@ -129,7 +129,7 @@
 			<body>RT_AlphaBody</body>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>4</baseHealthScale>
-			<baseHungerRate>1</baseHungerRate>
+			<baseHungerRate>0.8</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
 				<li>RT_Rimtroid_EvolutionGrowth</li>

@@ -149,7 +149,7 @@
 		  <body>RT_OmegaBody</body>
 		  <baseBodySize>2.5</baseBodySize>
 		  <baseHealthScale>16</baseHealthScale>
-		  <baseHungerRate>1</baseHungerRate>
+		  <baseHungerRate>0.8</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
 				<li>RT_Rimtroid_EvolutionGrowth</li>

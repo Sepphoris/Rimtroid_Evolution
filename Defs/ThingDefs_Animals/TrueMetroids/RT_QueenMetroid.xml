@@ -160,7 +160,7 @@
 			<body>RT_QueenBody</body>
 			<baseBodySize>6</baseBodySize>
 			<baseHealthScale>150</baseHealthScale>
-			<baseHungerRate>1</baseHungerRate>
+			<baseHungerRate>0.8</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
 				<li>RT_Rimtroid_EvolutionGrowth</li>

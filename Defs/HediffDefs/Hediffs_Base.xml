@@ -87,9 +87,9 @@
 
   <HediffDef ParentName="RT_MetroidStagesBad">
     <defName>RT_AcceleratedAgingOverview</defName>
-    <label>Age Acceleration</label>
-    <labelNoun>age acceleration</labelNoun>
-    <description>A rapid systemic acceleration that matures Metroid subjects far faster than normal. This allows Metroid to reach their future stages faster, bypassing the feedings they naturally require to grow.\n\Years accelerated per stage:</description>
+    <label>Age Acceleration (injection)</label>
+    <labelNoun>age acceleration (injection)</labelNoun>
+    <description>A rapid systemic acceleration that matures Metroid subjects far faster than normal. This allows Metroid to reach their future stages faster, bypassing the feedings they naturally require to advance. However, the injection is quite slow to affect a metroid, and can take up to a few days to thoroughly complete.\n\nAge accelerated per stage:\n\nBantee Metroid: 3 years, 36 days (1.8 day process)\nMetroid Larvae: 16 years, 30 days (2 day process)\nAlpha Metroid: 33 years, 30 days (2.2 day process)\nGamma Metroid: 50 years (2.4 day process)\nZeta Metroid: 90 years (2.6 day process)\nOmega Metroid: 200 years (2.8 day process)</description>
     <stages>
       <li>
 	  	  <becomeVisible>true</becomeVisible>

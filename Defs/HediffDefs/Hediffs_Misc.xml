@@ -147,24 +147,26 @@
 		<defName>RT_AcceleratedAging</defName>
 		<label>accelerated aging</label>
 		<labelNoun>age acceleration</labelNoun>
-		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated:</description>
+		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal age accelerated: 200 years</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
 		<comps>
-			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
-			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
+			<!-- <ticks> * <disappearsAfterTicks> = <totalTicksAdded> -->
+			<!-- <totalTicksAdded> / <disappearsAfterTicks> = <ticks> -->
+			<!-- <totalTicksAdded> / <ticks> = <disappearsAfterTicks> -->
 			<li Class="RT_Core.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
-				<amountPerTick>0.000278</amountPerTick>
+				<ticks>4286</ticks>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+				<disappearsAfterTicks>168000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 			</li>
 		</stages>
 	</HediffDef>
@@ -175,24 +177,23 @@
 		<defName>RT_AcceleratedAgingBantee</defName>
 		<label>accelerated aging</label>
 		<labelNoun>age acceleration</labelNoun>
-		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Bantee Stage):</description>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Bantee Stage): 3 years, 36 days</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
 		<comps>
-			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
-			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
 			<li Class="RT_Core.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
-				<amountPerTick>0.000278</amountPerTick>
+				<ticks>120</ticks>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+				<disappearsAfterTicks>108000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 			</li>
 		</stages>
 	</HediffDef>
@@ -203,19 +204,17 @@
 		<defName>RT_AcceleratedAgingLarvae</defName>
 		<label>accelerated aging</label>
 		<labelNoun>age acceleration</labelNoun>
-		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Larvae Stage):</description>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Larvae Stage): 16 years, 30 days</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
 		<comps>
-			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
-			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
 			<li Class="RT_Core.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
-				<amountPerTick>0.000278</amountPerTick>
+				<ticks>150</ticks>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
@@ -231,24 +230,23 @@
 		<defName>RT_AcceleratedAgingAlpha</defName>
 		<label>accelerated aging</label>
 		<labelNoun>age acceleration</labelNoun>
-		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Alpha Stage):</description>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Alpha Stage): 33 years, 30 days</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
 		<comps>
-			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
-			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
 			<li Class="RT_Core.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
-				<amountPerTick>0.000278</amountPerTick>
+				<ticks>914</ticks>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+				<disappearsAfterTicks>132000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 			</li>
 		</stages>
 	</HediffDef>
@@ -259,24 +257,23 @@
 		<defName>RT_AcceleratedAgingGamma</defName>
 		<label>accelerated aging</label>
 		<labelNoun>age acceleration</labelNoun>
-		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Gamma Stage):</description>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Gamma Stage): 50 years</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
 		<comps>
-			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
-			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
 			<li Class="RT_Core.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
-				<amountPerTick>0.000278</amountPerTick>
+				<ticks>1250</ticks>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+				<disappearsAfterTicks>144000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 			</li>
 		</stages>
 	</HediffDef>
@@ -287,24 +284,23 @@
 		<defName>RT_AcceleratedAgingZeta</defName>
 		<label>accelerated aging</label>
 		<labelNoun>age acceleration</labelNoun>
-		<description>A metroid undergoing rapid aging that would otherwise take decades.\n\nTotal years accelerated (Zeta Stage):</description>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Zeta Stage): 90 years</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<isBad>false</isBad>
 		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
 		<comps>
-			<!-- 0.000278:amountPerTick, 10800~18000:disappearsAfterTicks is equivalent to 3~5 levels in 2 IRL minutes -->
-			<!-- 1:amountPerTick, 3~5:disappearsAfterTicks is equivalent to 3~5 levels in under 1 IRL second -->
 			<li Class="RT_Core.HediffCompProperties_ModifyAge">
 				<updateMethod>AddAge</updateMethod>
-				<amountPerTick>0.000278</amountPerTick>
+				<ticks>2077</ticks>
 			</li>
 			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>10800~18000</disappearsAfterTicks>
+				<disappearsAfterTicks>156000</disappearsAfterTicks>
 			</li>
 		</comps>
 		<stages>
 			<li>
 				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 			</li>
 		</stages>
 	</HediffDef>

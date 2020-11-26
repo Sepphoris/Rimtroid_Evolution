@@ -9,17 +9,13 @@ namespace RT_Rimtroid
 {
     public static class Utils
     {
-        public static bool IsMetroid(this Pawn pawn)
+        public static bool IsMetroid(this Thing t)
         {
-            if (pawn.def == RT_DefOf.RT_AlphaMetroid ||
-                pawn.def == RT_DefOf.RT_GammaMetroid || 
-                pawn.def == RT_DefOf.RT_ZetaMetroid ||
-                pawn.def == RT_DefOf.RT_OmegaMetroid ||
-                pawn.def == RT_DefOf.RT_QueenMetroid)
-            {
-                return true;
-            }
-            return false;
+            return (t.def == RT_DefOf.RT_AlphaMetroid ||
+                t.def == RT_DefOf.RT_GammaMetroid ||
+                t.def == RT_DefOf.RT_ZetaMetroid ||
+                t.def == RT_DefOf.RT_OmegaMetroid ||
+                t.def == RT_DefOf.RT_QueenMetroid);
         }
         public static bool IsBanteeMetroid(this Pawn pawn)
         {

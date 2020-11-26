@@ -21,6 +21,8 @@ UI:
 ITEMS:
 ===============
 	-AEION EXTRACT: A rare item used in the creation of metroid serums. Sold by exotic traders. (Evolution)
+	
+	-Lower Metroid chitin price
 		
 
 ===============
@@ -55,6 +57,7 @@ GRAPHICS:
 ===============
 
 	-Better laser graphics for fire beams.
+	-Better graphics for electric floor
 	
 ===============
 MISC:
@@ -67,6 +70,32 @@ MISC:
 	-FERAL: A defect that permanently turns a metroid manhunter, eliminating the possiblity for any sort of taming.
 
 
+===============
+CODING:
+===============
+
+	-Older metroids should not spawn on starting map.
+	
+	-Metroid food bar doesn't go down during combat, or during sleep.
+	
+	-Metroids have passive regeneration when outside of combat.
+	
+	-Metroids should not need much sleep.
+	
+	-Bantees and larvae should not drop chitin.
+
+	-Metroid food converts into age AFTER combat, with the food amount being tracked in a hediff during combat. Once combat has ended the metroid will temporarily stand still and 'process' the food, which will tick up the age rate. Similar to how metroids act in the Prime series, when they are detached from the player or another being.
+	
+	-Metroids will not hunt each other down for food, unless they are opposing factions. Alternatively, most Metroids are automatically added into a faction once they reach a certain age. There is a small chance rogue metroids will appear, which won't be a part of any faction.
+	
+	-Metroids have considerable slowdown in cold temperatures, if they don't have genetic modification that allows them to survive in cold temperatures.
+	
+	-Metroid body parts should regrow after a certain amount of time.
+	
+	-Metroids spawned by a queen should have automatic manhunter.
+	
+	-Metroids completely freeze up in cold temperatures they cannot stand, rather than complete hypothermia.
+
 ====================
 SECONDARY FEATURES
 ====================
@@ -78,11 +107,52 @@ All the features below would be nice to add in, but aren't top priority for the 
 ===============
 METROIDS:
 ===============
-	-Tallon Metroid: The base for all Metroid mutations. while not powerful by itself, many metroids are locked behind the Tallon Metroid, and mutations (forced or natural) will need to occur in this stage to acquire them. Acquired by exposing a Metroid larvae to Tritium within a biotank.
-	-Infant Tallon Metroid: The stage before the Tallon metroid. Similar to it, except has a higher chance of mutating properly.
-	-Fission Metroid: A metroid that can divide itself into another type. While the original will remain the same, the 
-	-Hunter Metroid: A fast, hardy metroid that can attack extremely quickly at medium ranges. It's ranged ability does not do damage, but instead is capable of inflicting life drain at a frighteningly high rate, alongside drastically slowing a target down.
-	-Prime Metroid (?)
+	-Tallon Metroid: The base for all Metroid mutations. while not powerful by itself, many metroids are locked behind the Tallon Metroid, and mutations (forced or natural) will need to occur in this stage to acquire them. Acquired by exposing a Metroid larvae to Aeion within a biotank. No abilities.
+	
+	-Infant Tallon Metroid: The stage before the Tallon metroid. Similar to it, except has a higher chance of mutating properly. No abilities.
+	
+	-Fission Metroid: A metroid that can divide itself into another type. While divided, both metroids will be one of four random sub-types:
+		-Fission Metroid (power): A metroid that is weak only to standard damage.
+		-Fission Metroid (fire): A metroid that is weak only to fire.
+		-Fission Metroid (cold): A metroid that is weak only to the cold.
+		-Fission Metroid (shock): A metroid that is weak only to electrical pulses (i.e. EMP)
+		-Fission Metroid (stunted): A normal fision metroid, without being able to seperate.
+	All above metroids can be harmed by explosives. Pre-division metroids have the ability to split at at will, but will also split once enough damage is taken. The post-division metroids have this ability, except with a cooldown that takes several days.
+	
+	-Hunter Metroid: A fast, hardy metroid that can attack extremely quickly at medium ranges. It's ranged ability does not do damage, but instead is capable of inflicting life drain at a frighteningly high rate, alongside drastically slowing a target down. Hunter metroids posess a tether ability, which is a mid-range attack that attaches and slows targets.
+
+
+===============
+PRIME METROID:
+===============
+
+	
+	-Prime Metroid (?): The penultimate Metroid in existence. Prime Metroids are not found in the wild, cannot be bought, and take extremely specific conditions and dedication to create. Quadrums can go by before one is completed, and that's not counting if any mistakes happen along the way. However the result is well worth the wait, and the additions you can add to it make it a practically unstoppable force.
+	
+	-Prime Metroids require a perfectly healthy Metroid Larvae, which is then contained within a sealed habitat. This sealed habitat requires power-heavy machines to force it down a specific evolution chain; if power is lost for too long, or they are exposed to the outside environment, the process with fail. It is advisable to start from a Bantee Metroid; the further into the lifestage the larvae is, the lower the chance it'll have to adapt.
+	
+	-Once the larvae has acquired the proper mutation, it needs to be moved into a genesis chamber, which needs to be kept within the environment. This genesis chamber requires vast amounts of power, fuel, nutrition, and cooling. A chance of failure is always present, but if any area of needs doesn't meet demand, the chances of a failure drastically increase.
+	
+	-The Prime Metroid takes a total of three quadrums to fully grow. During this time the environment will need to undergo changes; first subjected to high voltage, then to subzero temperatures, then to temperatures that would normally catch anything else on fire. Every so often a message will appear that updates the player on the progress. Once the Prime Metroid is done, it will be wild by default; the player will have to force docility onto it through the artificial environment.
+	
+	-Once the Prime Metroid is permanently tamed, it is ready for use. The player can decide to further enhance it with additional training, genetic modification, and adding mechanical equipment that gives it new abilities. Genetic modification carries the standard risk of defects.
+	
+	-Housing a Prime Metroid is seen as a global threat, and many factions will have issues with the player owning one. Entire extermination armies may be sent to get rid of - or even capture - the Prime Metroid.
+	
+	-Once a Prime Metroid is fully upgraded, it is immortal, can survive any environment, rapidly regenerates wounds, have resistances to nearly any damage types, and has only a single area that can be damaged. It's immune system prevents any sort of external changes, blocking any and all viruses and changes. Only the specialized genetic changes can bypass this effect.
+	
+		-Power Beam: A beam attack that does normal damage. It has no special properties, but also does more damage than the other breath attacks, and can knock back pawns. Fires up to 3 times.
+		-Wave Beam: A beam attack that does a relatively smaller amount of damage, but completely bypasses sheilds and stuns pawns for a long amount of time. Can fry nearby electronics, and EMPs any mechanical device it hits. Fires up to 3 times.
+		-Plasma Beam: A beam attack that inflicts severe burn damage. Fires up to 3 times.
+		-Ultrafrigid breath: A ranged attack that freezes and inflicts hypothermia on a single target. Can be lethal to pawns not resistant to cold. Fires up to 3 times.
+		-Frost Spikes: The metroid smashes the ground, creating a wall of icy spikes that freeze anything caught in it. Can be used regardless of state.
+		-Acid Barrage: Fires 3-5 projectiles that create a cloud of acid upon impact.
+		
+		
+		-Missile Barrage: Fires down 4 missiles that do small damage individually, but covers a large area. Must be added manually. Fires up to 3 times. Must be added manually.
+		-Snare Beams: A beam that does no damage, but stuns and pulls in a target it attaches to.
+		-Wave Projectors: Creates two slow-moving, but damaging, orbs that homing orbs that lock on to enemies. While they can path extremely accurately, they do explode after a set amount of time. Preferrably, these will try to path through solid objects, which dissipates them. These projectors change based on the current 'damage' state. Must be added manually.
+	
 
 
 ===============
