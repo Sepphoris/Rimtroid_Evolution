@@ -141,6 +141,32 @@
 		</stages>
 	</HediffDef>
 
+  <!--===============Metroid Food Injection (WIP)===============-->
+
+	<HediffDef>
+		<defName>RT_NutrientInjectionHediff</defName>
+		<label>nutrient injection</label>
+		<description>A nutrient solution that has given a small amount of nutrition, and has drastically impacted hunger rate. The effect will disappear after a small amount of time.</description>
+		<defaultLabelColor>(0.7,1,0.7)</defaultLabelColor>
+		<hediffClass>RT_Core.Hediff_MetroidFoodInjection</hediffClass>
+    <isBad>false</isBad>
+		<stages>
+      <li>
+        <hungerRateFactorOffset>-1.0</hungerRateFactorOffset>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>9000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<!--<modExtensions>
+			<li Class="">
+				<def></def>
+			</li>
+		</modExtensions>-->
+	</HediffDef>
+
   <!--===============Aeionic Poisoning Def===============-->
 
 	<HediffDef>
@@ -148,7 +174,7 @@
     	<hediffClass>HediffWithComps</hediffClass>
     	<label>Aeionic Poisoning</label>
     	<description>Aeionic Poisoning is caused when a biologically normal pawn injects or consumes even the slightest amount of the Aeion material, used specifically in serums that targets the metroid's internal working. If used on any other life form, it's results in nothing but agony for the next several hours.</description>
-    	<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    	<defaultLabelColor>(0.8,0,0)</defaultLabelColor>
     	<scenarioCanAdd>false</scenarioCanAdd>
     	<maxSeverity>1.0</maxSeverity>
     	<isBad>true</isBad>
@@ -183,4 +209,11 @@
       </stages>
   	</HediffDef>
 
+
+<!--Hediff notes:
+(233,129,69) - Orange label
+(0.8,0,0.8) - Purple label
+(0.8,0,0) - Dark red label
+(1,0,0.5) - Pink label
+(0.7,1,0.7) - Light green label-->
 </Defs>

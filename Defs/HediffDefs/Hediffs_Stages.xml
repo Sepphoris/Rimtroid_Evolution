@@ -51,7 +51,7 @@ to be made to allow hediff effects from other mods.
 				  </li>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.3</offset>
+            <offset>-0.2</offset>
           </li>
         </capMods>
       </li>
@@ -79,6 +79,7 @@ to be made to allow hediff effects from other mods.
         <li>RT_AcceleratedAgingBantee</li>
         <li>RT_CryoadapterHediff</li>
         <li>RT_NutrientRegulatorHediff</li>
+        <li>RT_ImmunityAcceleratorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
@@ -114,7 +115,7 @@ to be made to allow hediff effects from other mods.
 				</li>
           <li>
             <capacity>Moving</capacity>
-            <offset>0.4</offset>
+            <offset>-0.1</offset>
           </li>
 		</capMods>
       </li>

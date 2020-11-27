@@ -104,4 +104,30 @@ This is a permanent operation; any metroid with this alteration will retain it t
     </comps>
   </ThingDef>
 
+	<!-- =============== Immunity Accelerator =============== -->
+
+ <ThingDef ParentName="RT_MetroidModification">
+    <defName>RT_ImmunityAccelerator</defName>
+    <label>Metroid Immunity Accelerator</label>
+    <descriptionHyperlinks><HediffDef>RT_ImmunityAcceleratorHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, distributing mechanites that 'tricks' the metroid body into thinking it's under constant, lethal attack from a virus. This forces the entire body to go into high alert, causing above-average development in the strength of all areas.
+    
+Due to it's intrusive nature, the immune system of older metroids will completely block out the changes; this requires it to be administered during the Bantee or larvae stage.
+      
+The amount of mechanites administered is only enough to affect smaller, uniform bodies; once a metroids body begins developing other parts, the mechanites will be too dispersed to be effective.</description>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin nutrient regulation</useLabel>
+      </li>
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
+        <hediffDef>RT_NutrientRegulatorHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
 </Defs>
