@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =============== Parent Modification classes =============== -->
-	<ThingDef Name="RT_MetroidModBase" Abstract="True">
+	<ThingDef Name="RT_MetroidModBase" ParentName="ResourceBase" Abstract="True">
 		<thingClass>ThingWithComps</thingClass>
 		<category>Item</category>
 		<useHitPoints>true</useHitPoints>
@@ -12,6 +12,8 @@
 		<alwaysHaulable>true</alwaysHaulable>
 		<isTechHediff>true</isTechHediff>
   	<pathCost>10</pathCost>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <stackLimit>10</stackLimit>
 		<statBases>
 			<MaxHitPoints>50</MaxHitPoints>
       <Mass>0.2</Mass>
@@ -27,13 +29,13 @@
 		</thingSetMakerTags>
 		<comps>
 			<li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
 		</comps>
 	</ThingDef>
 
   <ThingDef Name ="RT_MetroidModification" ParentName="RT_MetroidModBase" Abstract="True">
-    <thingCategories>
-      <li>BodyPartsArchotech</li>
-    </thingCategories>
     <statBases>
       <MarketValue>2200</MarketValue>
       <DeteriorationRate>0</DeteriorationRate>
@@ -63,11 +65,11 @@ Due to it's intrusive nature, the immune system of older metroids will completel
 This is a permanent operation; any metroid with this alteration will retain it throughout their stage growths.</description>
     <comps>
       <li Class="CompProperties_Usable">
-        <compClass>CompUsableImplant</compClass>
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
         <useJob>UseItem</useJob>
-        <useLabel>Begin metroid cryoadaption</useLabel>
+        <useLabel>Begin endothermic adaption</useLabel>
       </li>
-      <li Class="CompProperties_UseEffectInstallImplant">
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
         <hediffDef>RT_CryoadapterHediff</hediffDef>
       </li>
       <li Class="CompProperties_UseEffect">
@@ -89,11 +91,11 @@ Due to it's intrusive nature, the immune system of older metroids will completel
 This is a permanent operation; any metroid with this alteration will retain it throughout their stage growths.</description>
     <comps>
       <li Class="CompProperties_Usable">
-        <compClass>CompUsableImplant</compClass>
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
         <useJob>UseItem</useJob>
         <useLabel>Begin nutrient regulation</useLabel>
       </li>
-      <li Class="CompProperties_UseEffectInstallImplant">
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
         <hediffDef>RT_NutrientRegulatorHediff</hediffDef>
       </li>
       <li Class="CompProperties_UseEffect">

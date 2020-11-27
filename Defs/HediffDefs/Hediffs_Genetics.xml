@@ -10,14 +10,14 @@
 
 	<!-- =============== Cryoadapter =============== -->
 
-  	<HediffDef ParentName="ImplantHediffBase">
+  	<HediffDef>
 		<defName>RT_CryoadapterHediff</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>Hediff</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>RT_Cryoadapter</ThingDef>
     </descriptionHyperlinks>
-		<label>Cryothermic Resistance</label>
-    <labelNoun>cryothermic resistance</labelNoun>
+		<label>Endothermic Adaption</label>
+    <labelNoun>endothermic adaption</labelNoun>
 		<defaultLabelColor>(233,129,69)</defaultLabelColor>
     <description>A genetically forced adaption that allows Metroids to survive colder temperatures.</description>
     <initialSeverity>1</initialSeverity>
@@ -35,22 +35,73 @@
 
 	<!-- =============== Nutrient Regulator =============== -->
 
-  	<HediffDef ParentName="ImplantHediffBase">
+  	<HediffDef>
 		<defName>RT_NutrientRegulatorHediff</defName>
-    <hediffClass>Hediff_Implant</hediffClass>
+    <hediffClass>Hediff</hediffClass>
     <descriptionHyperlinks>
       <ThingDef>RT_NutrientRegulator</ThingDef>
     </descriptionHyperlinks>
-		<label>Nutrient Regulatation</label>
+		<label>Nutrient Regulation</label>
     <labelNoun>nutrient regulation</labelNoun>
 		<defaultLabelColor>(233,129,69)</defaultLabelColor>
     <description>A genetically forced adaption that processes nutrition distribution more efficienty, slowing down hunger depletion.</description>
     <initialSeverity>1</initialSeverity>
 		<stages>
 			<li>
-        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+        <hungerRateFactorOffset>-0.5</hungerRateFactorOffset>
         <statFactors>
     			<MarketValue>1.5</MarketValue>
+    	  </statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- =============== Systemic Strengthening =============== -->
+
+  	<HediffDef>
+		<defName>RT_SystemicStrengtheningLarvaeHediff</defName>
+    <hediffClass>Hediff</hediffClass>
+    <descriptionHyperlinks>
+      <ThingDef>RT_SystemicStrengtheningLarvae</ThingDef>
+    </descriptionHyperlinks>
+		<label>Systemic Fortification</label>
+    <labelNoun>systemic fortification</labelNoun>
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>A genetically forced adaption that accelerates the growth of the metroid immune system, strengthening otherwise weakened vital functions.</description>
+    <initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+      	<!--<capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.1</offset>
+				</li>
+				  <li>
+					  <capacity>Eating</capacity>
+					  <offset>0.3</offset>
+				  </li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>0.1</offset>
+				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>0.3</offset>
+				</li>-->
+        <statFactors>
+    			<MarketValue>1.2</MarketValue>
     	  </statFactors>
 			</li>
 		</stages>

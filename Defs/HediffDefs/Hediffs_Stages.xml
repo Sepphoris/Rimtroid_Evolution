@@ -78,6 +78,7 @@ to be made to allow hediff effects from other mods.
       <whitelist>
         <li>RT_AcceleratedAgingBantee</li>
         <li>RT_CryoadapterHediff</li>
+        <li>RT_NutrientRegulatorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
@@ -140,6 +141,7 @@ to be made to allow hediff effects from other mods.
       <whitelist>
         <li>RT_AcceleratedAgingLarvae</li>
         <li>RT_CryoadapterHediff</li>
+        <li>RT_NutrientRegulatorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
   
@@ -206,6 +208,7 @@ to be made to allow hediff effects from other mods.
       <whitelist>
         <li>RT_AcceleratedAgingAlpha</li>
         <li>RT_CryoadapterHediff</li>
+        <li>RT_NutrientRegulatorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
@@ -276,6 +279,7 @@ to be made to allow hediff effects from other mods.
       <whitelist>
         <li>RT_AcceleratedAgingGamma</li>
         <li>RT_CryoadapterHediff</li>
+        <li>RT_NutrientRegulatorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
@@ -350,6 +354,7 @@ to be made to allow hediff effects from other mods.
       <whitelist>
         <li>RT_AcceleratedAgingZeta</li>
         <li>RT_CryoadapterHediff</li>
+        <li>RT_NutrientRegulatorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 

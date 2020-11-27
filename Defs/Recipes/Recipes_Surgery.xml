@@ -2,12 +2,14 @@
 <Defs>
 
 	<RecipeDef Name="RT_SurgeryMetroid" Abstract="True" >
-		<effectWorking>Surgery</effectWorking>
-		<soundWorking>Recipe_Surgery</soundWorking>
+		<!--<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>-->
 		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
 		<workSkill>Medicine</workSkill>
 		<workSkillLearnFactor>16</workSkillLearnFactor>
-    <workAmount>1200</workAmount>
+    <workAmount>800</workAmount>
+    <targetsBodyPart>false</targetsBodyPart>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
 		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
     <anesthetize>true</anesthetize>
 	</RecipeDef>
@@ -18,8 +20,8 @@
 		<defName>RT_InstallCryoadapter</defName>
 		<label>Force cryoadaption</label>
 		<description>Administer an injection that forces adaption to colder temperatures.</description>
-		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
-		<jobString>Forcing metroid cryoadaption.</jobString>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Forcing endothermic adaption.</jobString>
 		<skillRequirements>
 			<Medicine>8</Medicine>
 		</skillRequirements>
@@ -49,9 +51,9 @@
 				<li>RT_Cryoadapter</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<appliedOnFixedBodyParts>
+		<!--<appliedOnFixedBodyParts>
 			<li>RT_Membrane</li>
-		</appliedOnFixedBodyParts>
+		</appliedOnFixedBodyParts>-->
 		<addsHediff>RT_CryoadapterHediff</addsHediff>
 <recipeUsers>
       <li>RT_BanteeMetroid</li>
@@ -65,7 +67,7 @@
 		<defName>RT_InstallNutrientRegulator</defName>
 		<label>Force nutrient regulation</label>
 		<description>Administer an injection that allows better nutrient efficiency.</description>
-		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<workerClass>Recipe_InstallImplant</workerClass>
 		<jobString>Forcing nutrient regulation.</jobString>
 		<skillRequirements>
 			<Medicine>8</Medicine>
@@ -96,9 +98,9 @@
 				<li>RT_NutrientRegulator</li>
 			</thingDefs>
 		</fixedIngredientFilter>
-		<appliedOnFixedBodyParts>
+		<!--<appliedOnFixedBodyParts>
 			<li>RT_Membrane</li>
-		</appliedOnFixedBodyParts>
+		</appliedOnFixedBodyParts>-->
 		<addsHediff>RT_NutrientRegulatorHediff</addsHediff>
 <recipeUsers>
       <li>RT_BanteeMetroid</li>
