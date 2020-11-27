@@ -320,6 +320,7 @@
     <Compile Include="Evolution\Alpha_ProximityTrapProperties.cs" />
     <Compile Include="Evolution\Alpha_ProximityTrap.cs" />
     <Compile Include="Evolution\Ability_Shockwave.cs" />
+    <Compile Include="Evolution\MoteMaker.cs" />
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Core\RT_DefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

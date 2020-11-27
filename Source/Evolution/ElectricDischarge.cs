@@ -101,8 +101,19 @@ namespace RT_Rimtroid
 			LessonAutoActivator.TeachOpportunity(ConceptDefOf.HomeArea, this, OpportunityType.Important);
 		}
 
-		public override void Tick()
+        public override void Draw()
+        {
+			//RimtroidMoteMaker.MakeElectricFloor(this.DrawPos, this.Map);
+		}
+
+        public override void Tick()
 		{
+				if (Rand.Chance(1f) && Find.TickManager.TicksGame
+				% Rand.RangeInclusive(60, 100) == 0)
+				{ 
+				RimtroidMoteMaker.MakeElectricFloor(this.Position.ToVector3Shifted(), this.Map);
+				}
+
 			if (Find.TickManager.TicksGame % 30 == 0)
 			{
 				//Log.Message(" Beginning public override void Tick ()", true);
