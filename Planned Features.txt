@@ -58,16 +58,23 @@ GRAPHICS:
 
 	-Better laser graphics for fire beams.
 	-Better graphics for electric floor
+	-Atlas textures for gamma metroid webbing.
 	
 ===============
 MISC:
 ===============
+
+	-Metroids that make webbing should create a webbing tile that is harvested, instead of the raw resources. This webbing is thick and extremely slow to go through (except for metroids, which have a higher movement speed on it), but can be deconstructed to give the product. Once this is added, all metroids above Gamma will produce the webbing.
 
 	-CELLULAR DECAY: A permanent defect that specifically occurs in metroids that have been artificially modified. Metroids will slowly 'dissolve' when left untreated. Extremely low chance from stunting, and higher with more drastic changes. Some metroids have a chance at developing this every 100 years.
 
 	-CELLULAR BREAKDOWN: The same effect of Ceullular Decay, but is done when forcefully drained of energy.
 
 	-FERAL: A defect that permanently turns a metroid manhunter, eliminating the possiblity for any sort of taming.
+	
+	-ACCELERATED DIVISION: A double-edged condition that increases age speed and natural regen factors, at a cost of more food needed.
+	
+	
 
 
 ===============
@@ -82,7 +89,7 @@ CODING:
 	
 	-Metroids should not need much sleep.
 	
-	-Bantees and larvae should not drop chitin.
+	-Bantees and larvae should not drop chitin. (completed)
 
 	-Metroid food converts into age AFTER combat, with the food amount being tracked in a hediff during combat. Once combat has ended the metroid will temporarily stand still and 'process' the food, which will tick up the age rate. Similar to how metroids act in the Prime series, when they are detached from the player or another being.
 	

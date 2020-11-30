@@ -103,12 +103,12 @@ namespace RT_Rimtroid
 
         public override void Draw()
         {
-			//RimtroidMoteMaker.MakeElectricFloor(this.DrawPos, this.Map);
 		}
 
         public override void Tick()
 		{
-				if (Rand.Chance(1f) && Find.TickManager.TicksGame
+			//MoteMaker.MakeAttachedOverlay(this.parent, ThingDef.Named("Mote_PsycastPsychicEffect"), Vector3.zero, 1f, -1f);
+			if (Rand.Chance(1f) && Find.TickManager.TicksGame
 				% Rand.RangeInclusive(60, 100) == 0)
 				{ 
 				RimtroidMoteMaker.MakeElectricFloor(this.Position.ToVector3Shifted(), this.Map);
@@ -128,7 +128,7 @@ namespace RT_Rimtroid
 						if (!sustainer.Ended)
 						{
 							sustainer.Maintain();
-							Log.Message("sustainer.maintain", true);
+							//Log.Message("sustainer.maintain", true);
 						}
 					}
 					//Log.Message(" Attempting to play sound", true);

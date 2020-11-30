@@ -146,7 +146,7 @@
 	<HediffDef>
 		<defName>RT_NutrientInjectionHediff</defName>
 		<label>nutrient injection</label>
-		<description>A nutrient solution that has given a small amount of nutrition, and has drastically impacted hunger rate. The effect will disappear after a small amount of time.</description>
+		<description>A nutrient solution that has given a small amount of nutrition, and has drastically impacted hunger rate. The effect will disappear after a short amount of time.</description>
 		<defaultLabelColor>(0.7,1,0.7)</defaultLabelColor>
 		<hediffClass>RT_Core.Hediff_MetroidFoodInjection</hediffClass>
     <isBad>false</isBad>

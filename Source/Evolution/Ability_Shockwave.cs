@@ -20,7 +20,8 @@ namespace RT_Rimtroid
 
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            MoteMaker.MakeStaticMote(pawn.Position, pawn.Map, ThingDefOf.Mote_LineEMP, 5);
+            //MoteMaker.MakeStaticMote(pawn.Position, pawn.Map, ThingDefOf.Mote_LineEMP, 5);
+            MoteMaker.MakeStaticMote(pawn.Position, pawn.Map, ThingDef.Named("Mote_PsycastPsychicEffect"), 5);
 
             foreach (Thing thing in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, def.verbProperties.range, true).Where(t => t != pawn && pawn.CanSee(t)))
             {

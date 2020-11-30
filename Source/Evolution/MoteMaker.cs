@@ -13,7 +13,7 @@ namespace RT_Rimtroid
             {
                 return;
             }
-            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("Mote_BlastEMP"), null);
+            MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(ThingDef.Named("RT_ElectricFloorMote"), null);
             moteThrown.Scale = Rand.Range(0.5f, 1f);
             moteThrown.rotationRate = Rand.Range(-12f, 12f);
             moteThrown.exactPosition = loc;
