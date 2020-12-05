@@ -147,7 +147,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>RT_DartRifle</defName>
     <label>Hypodermic Rifle</label>
-    <description>A specialized long range rifle designed to fire chemical syringes at distant targets, generally ones that are too dangerous to be anywhere near. The inner working were designed specifically with the metroid body structure in mind, making this more of a scenario-specific tool, rather than a weapon. It can be used as a general wepaon, although the damage output it will do is far below of what even the smallest of firearms will do.\n\nThe syringe projectiles fired by this weapon were designed with metroids in mind; each contains a nutrient solution that will help satisfy the need for food, as well as an agent that will both calm and exaust the metroid. These effects will not work on any normal biological being.</description>
+    <description>A specialized long-range rifle designed to fire chemical syringes at distant metroids, which administer a solution that helps satisfy food needs and will eventually sedate it for a short amount of time. Darts have been designed to do minimal damage, making it a very ineffective weapon to use in combat, alongside the otherwise potent effect being no more that a slight agitation for any other type of being.\n\nCan safely be used on owned metroids, but a considerable distance (or multiple guns) is suggested, especially for larger metroids.</description>
     <graphicData>
       <texPath>Things/Weapons/DartRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -159,11 +159,11 @@
     <statBases>
       <WorkToMake>32000</WorkToMake>
       <Mass>4</Mass>
-      <AccuracyTouch>0.50</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.82</AccuracyMedium>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
       <AccuracyLong>0.90</AccuracyLong>
-      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Steel>60</Steel>
@@ -175,13 +175,24 @@
         <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
+    <!--<comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>5</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>-->
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_SniperRifle</defaultProjectile>
-        <warmupTime>2.8</warmupTime>
-        <range>44.9</range>
+        <defaultProjectile>RT_SedativeDart</defaultProjectile>
+        <warmupTime>2.4</warmupTime>
+        <range>39.9</range>
         <soundCast>Shot_SniperRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>

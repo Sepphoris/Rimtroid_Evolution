@@ -41,7 +41,7 @@ namespace RT_Rimtroid
             {
                 for (int num = queen.Map.mapPawns.AllPawns.Count - 1; num >= 0; num--)
                 {
-                    if (queen.Map.mapPawns.AllPawns[num].Faction != Faction.OfPlayer && !queen.Map.mapPawns.AllPawns[num].InAggroMentalState && queen.Map.mapPawns.AllPawns[num].IsMetroid())
+                    if (queen.Map.mapPawns.AllPawns[num].Faction != Faction.OfPlayer && !queen.Map.mapPawns.AllPawns[num].InAggroMentalState && queen.Map.mapPawns.AllPawns[num].IsAnyMetroid())
                     {
                         queen.Map.mapPawns.AllPawns[num].mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, otherPawn: otherPawn, forceWake: true);
                     }

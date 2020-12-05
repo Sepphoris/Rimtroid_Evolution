@@ -104,7 +104,7 @@
 			  <compClass>RT_Core.CompAbilityDefinition</compClass>
 			  <abilities>
           <li>
-            <abilityDef>RT_MetroidBomb</abilityDef>
+            <abilityDef>RT_AlphaBomb</abilityDef>
           </li>
 			  </abilities>
       </li>

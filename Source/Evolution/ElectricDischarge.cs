@@ -140,7 +140,7 @@ namespace RT_Rimtroid
 					MoteMaker.ThrowMicroSparks(this.DrawPos, base.Map);
 				}
 				{
-					List<Pawn> thingsInRange = Position.GetThingList(Map).Where(t => t != this && !t.IsMetroid() && t is Pawn pawn).Cast<Pawn>().ToList();
+					List<Pawn> thingsInRange = Position.GetThingList(Map).Where(t => t != this && !t.IsAnyMetroid() && t is Pawn pawn).Cast<Pawn>().ToList();
 					for (int i = thingsInRange.Count - 1; i >= 0; i--)
 					{
 						Pawn pawn = thingsInRange[i];

@@ -57,7 +57,7 @@ namespace RT_Rimtroid
 							for (int i = 0; i < thingList.Count; i++)
 							{
 								Pawn pawn = thingList[i] as Pawn;
-								if (pawn != null && (this.Faction != null && pawn.Faction != this.Faction || this.Faction == null) && !pawn.IsMetroid()
+								if (pawn != null && (this.Faction != null && pawn.Faction != this.Faction || this.Faction == null) && !pawn.IsAnyMetroid()
 									&& (pawn.HostileTo(Faction.OfPlayer) || pawn.Faction == null) && !touchingPawns.Contains(pawn))
 								{
 									touchingPawns.Add(pawn);

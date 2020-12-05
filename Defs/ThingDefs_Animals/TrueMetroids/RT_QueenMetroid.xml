@@ -252,7 +252,7 @@
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>10</drawSize>
+					<drawSize>12</drawSize>
 					<shadowData>
 						<volume>(0.2, 0.2, 0.2)</volume>
 						<offset>(0, 0, -0.55)</offset>
@@ -268,7 +268,7 @@
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>10</drawSize>
+					<drawSize>12</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
 						<offset>(0, 0, -0.6)</offset>
@@ -284,7 +284,7 @@
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
 					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
-					<drawSize>10</drawSize>
+					<drawSize>12</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
 						<offset>(0, 0, -0.6)</offset>

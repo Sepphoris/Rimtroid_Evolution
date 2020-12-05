@@ -9,7 +9,17 @@ namespace RT_Rimtroid
 {
     public static class Utils
     {
-        public static bool IsMetroid(this Thing t)
+        public static bool IsAnyMetroid(this Thing t)
+        {
+            return (t.def == RT_DefOf.RT_BanteeMetroid ||
+                t.def == RT_DefOf.RT_MetroidLarvae ||
+                t.def == RT_DefOf.RT_AlphaMetroid ||
+                t.def == RT_DefOf.RT_GammaMetroid ||
+                t.def == RT_DefOf.RT_ZetaMetroid ||
+                t.def == RT_DefOf.RT_OmegaMetroid ||
+                t.def == RT_DefOf.RT_QueenMetroid);
+        }
+        public static bool IsOlderMetroid(this Thing t)
         {
             return (t.def == RT_DefOf.RT_AlphaMetroid ||
                 t.def == RT_DefOf.RT_GammaMetroid ||

@@ -10,12 +10,47 @@ UI:
 	-Add mod options:
 		-Metroids can spawn in the wild
 		-Queens can be acquired
+		-Queen event can be enabled
 		-Fire spreading
 		-Metroids can berserk
 		-Chance to untame when berserk
 		-Age gained when landing hits
 	-Add text that lets players know years until next stage
+
+
+===============
+ABILITIES:
+	-LIFE DRAIN (Larva): Latches onto a target and applies the life drain sickness, alongside rapidly gaining food and age.
+
+	-ELECTRIC BEAM (Gamma): A beam attack that does extreme damage to a single target.
 	
+	-POUNCE (Zeta): An immediate jump to a designated location. Short range; does damage when used on a pawn. 
+	-FIRE BREATH (Zeta): A spew of fire that toasts anything in front of the Zeta. Short range, high damage.
+	-ACID VOLLEY (Zeta): An attack that fires electrically-charged acid in a cone shape.
+
+	-LEAP (Omega): A medium-ranged jump that does high damage, stun, and even knockback, to a selected target.
+	-FIRE BREATH (Omega): A spew of fire that does massive damage to a single target.
+	-FIRE VOLLEY: Launched 3 fireballs at a target. These fireballs explode, dealing massive damage.
+	-FIRE SWEEP: Omega sweeps the area in front of him with a powerful laser, in a cone-like pattern.
+	-TAIL SLAM (Omega): Consecutive slams against the ground, shaking and likely stunning anything nearby.
+	
+===============
+
+
+===============
+MECHANICS:
+
+	-LOCAL NESTING: Certain metroids will have a togglable gizmo that says "Nesting enabled" (which is disabled by default). When enabled metroids will attempt to find an ideal area, and begin covering the area in webbing. Once webbing reaches a certain point, it will be considered a 'nest', where faction metroids will reside unless directed otherwise. Metroids can be directed to return here at any point, and Gamma metroids may create natural tunnels that lead here. These tunnels can later be used for metroids to quickly return to the nest. Nests are beneficial for groups of metroids.
+		-Less chance of berserking (-10%)
+		-Increased healing rate
+		-Faster web growth
+		-Regulated temperature
+		-Wild metroids have a small chance at joining the colony willingly (which players can deny).
+		
+	The only downside is the nests will often be covered with thick webbing, which is slow for colonists to move through. Once a nest is established, A popup will appear on the screen, notifying the player and recommending them to enclose it. If needed, the player can designate an area named "Metroid Nest" that dictates where the nest can be made, otherwise it will be an area by rocky walls, or a cave area. Nests can be disabled through mod options. This will be a hidden feature, and will not be hinted at.
+===============
+
+
 
 ===============
 ITEMS:
@@ -64,6 +99,8 @@ GRAPHICS:
 MISC:
 ===============
 
+	-Most metroids have a 'mutated' state that changes their appearance, and gives their attacks an orange coloring. These attacks do more damage. The idea is to 'mutate' any metroids within a containment unit by exposing them to Aeion, giving them more lethal attacks in exchange for a 100% chance of stunting, and a small chance of cellular decay. Metroids that are mutated lose some - or all - of the abilities they had before. Evolved metroids also have a different appearance, including glowing eyes, a mossy overlay.
+
 	-Metroids that make webbing should create a webbing tile that is harvested, instead of the raw resources. This webbing is thick and extremely slow to go through (except for metroids, which have a higher movement speed on it), but can be deconstructed to give the product. Once this is added, all metroids above Gamma will produce the webbing.
 
 	-CELLULAR DECAY: A permanent defect that specifically occurs in metroids that have been artificially modified. Metroids will slowly 'dissolve' when left untreated. Extremely low chance from stunting, and higher with more drastic changes. Some metroids have a chance at developing this every 100 years.
@@ -74,7 +111,7 @@ MISC:
 	
 	-ACCELERATED DIVISION: A double-edged condition that increases age speed and natural regen factors, at a cost of more food needed.
 	
-	
+	-Add a use for the energy-draining purple liquid in Samus Returns. Can be used in biotanks.
 
 
 ===============

@@ -33,7 +33,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>RT_CryoBullet</defName>
-    <label>bullet</label>
+    <label>cryo bullet</label>
     <graphicData>
       <texPath>Things/Projectile/LauncherShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -47,6 +47,27 @@
       <armorPenetrationBase>0.2</armorPenetrationBase>
       <soundExplode>SoundAcid</soundExplode>
     </projectile>
+  </ThingDef>
+
+  <!--Hypodermic bullet-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RT_SedativeDart</defName>
+    <label>dart</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(68,150,215)</color>
+    </graphicData>
+    <projectile>
+      <speed>75</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <armorPenetrationBase>0.9</armorPenetrationBase>
+      <soundExplode>SoundAcid</soundExplode>
+    </projectile>
+    <thingClass>RT_Rimtroid.SedativeProjectile</thingClass>
   </ThingDef>
 
 </Defs>

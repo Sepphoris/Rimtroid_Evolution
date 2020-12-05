@@ -316,11 +316,14 @@
     <Compile Include="Evolution\AcidImmunityComp.cs" />
     <Compile Include="Evolution\AcidBuildup.cs" />
     <Compile Include="Evolution\CorpseDesiccation.cs" />
+    <Compile Include="Evolution\SedativeProjecileExt.cs" />
+    <Compile Include="Evolution\SedativeProjectile.cs" />
     <Compile Include="Evolution\Queen.cs" />
     <Compile Include="Evolution\Alpha_ProximityTrapProperties.cs" />
     <Compile Include="Evolution\Alpha_ProximityTrap.cs" />
     <Compile Include="Evolution\Ability_Shockwave.cs" />
     <Compile Include="Evolution\MoteMaker.cs" />
+    <Compile Include="Evolution\ThingDefSedativeProjectile.cs" />
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Core\RT_DefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

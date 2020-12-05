@@ -87,6 +87,29 @@
         <defaultArmorPenetration>0</defaultArmorPenetration>
         <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
     </DamageDef>
+
+
+<!--===============Sedative Dart Damage def===============-->
+
+	<DamageDef>
+		<defName>RT_SedativeDamageDart</defName>
+		<label>puncture</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>false</externalViolence>
+		<deathMessage>{0} was given too many injections.</deathMessage>
+		<hediff>RT_SedativeBuildup</hediff>
+		<isRanged>true</isRanged>
+    <defaultDamage>3</defaultDamage>
+    <armorCategory>Sharp</armorCategory>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<!--<armorCategory>Cold</armorCategory> -->
+    <defaultArmorPenetration>0.9</defaultArmorPenetration>
+		<buildingDamageFactor>0.01</buildingDamageFactor>
+		<plantDamageFactor>0.01</plantDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+
 	
 <!--===============Misc damage defs===============-->
 

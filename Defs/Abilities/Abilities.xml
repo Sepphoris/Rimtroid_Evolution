@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+<!--=============== Larvae Abilities ===============-->
+
+  <!--Larvae drain attack may be turned into an ability.
+  Larvae can still drain food through normal attacks,
+  but this ability sends the larvae to a designated target.
+  Larvae then attaches to the target and stuns them for a few seconds,
+  Rapidly gaining age and food. This will take some serious coding.-->
+
+<!--=============== Alpha Abilities ===============-->
+
+      <AbilityDef>
+      <defName>RT_AlphaBomb</defName>
+      <label>Electric Bomb</label>
+      <description>Drops a proximity bomb that will detonate on hostiles</description>
+      <abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
+      <targetRequired>false</targetRequired>
+      <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+      <cooldownTicksRange>2000</cooldownTicksRange>
+      <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+      <iconPath>Things/Misc/MetroidBomb</iconPath>
+      <verbProperties>
+        <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+        <soundCast>RT_ShockwaveSound</soundCast>
+        <warmupTime>1</warmupTime>
+      </verbProperties>
+      <comps>
+        <li Class="RT_Core.AbilityCompProperties_AbilityControl">
+          <compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+          <autoUse>true</autoUse>
+          <gizmoOnText>Bombs Enabled</gizmoOnText>
+          <gizmoOffText>Bombs Disabled</gizmoOffText>
+          <gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
+          <gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+          <gizmoDesc>Toggle Bomb Usage</gizmoDesc>
+        </li>
+			  <li Class="RT_Core.AbilityCompProperties_Cooldown">
+          <compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				  <cooldownPool>AlphaAbilityPool</cooldownPool>
+          <cooldownTicksRange>200</cooldownTicksRange>
+				  <independent>false</independent>
+				  <resetsTimer>false</resetsTimer>
+			  </li>
+      </comps>
+    </AbilityDef>
+
+    <!--Alpha has an evolved variant that drops bombs that electiry the floor.
+    Additionally, alphas that ignite the floor with fire exist as well.
+    The fire ignition does drastically more damage.
+    Ones that drop fire do not drop normal electric bombs.
+    Will be added later, once I add the heavy genetic manipulation stuff.-->
 
 <!--=============== Gamma Abilities ===============-->
 
-    <!--Gamma Electric Bolt -->
+    <!--Gamma Electric Bolt; change to beam later -->
      <AbilityDef>
       <defName>RT_GammaElectricBolt</defName>
       <label>Electric Bolt</label>
@@ -111,7 +162,7 @@
     </AbilityDef>
 
       <AbilityDef>
-      <defName>RT_MetroidBomb</defName>
+      <defName>RT_GammaBomb</defName>
       <label>Electric Bomb</label>
       <description>Drops a proximity bomb that will detonate on hostiles</description>
       <abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
@@ -183,6 +234,10 @@
       </comps>
     </AbilityDef>
 
+    <!--Gamma Metroids also have electric beam breath, which needs to be added.
+    Mutated ones can also drop the same massive fireball that mutated Alphas have.
+    Mutated ones don't have regular bombs, but do have all other abilities-->
+
 <!--=============== Zeta Abilities ===============-->
 
       <AbilityDef>
@@ -196,7 +251,6 @@
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <iconPath>AnimalProjectile/Firebolt</iconPath>
         <verbProperties>
-<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
             <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
             <range>28</range>
             <minRange>1</minRange>
@@ -302,6 +356,11 @@
         </comps>
       </AbilityDef>
 
+      <!--Zetas have a fire breath, which needs to be added.
+      Electrically-charged bouncing acid also exists, but unsure how to approach this. Fires 5
+      Zeta fires 6 acid and 6 fireballs when on ceiling, so burst may change
+      Apparently mutated ones have high defense and damage, but no new abilities-->
+
 <!--=============== Omega Abilities ===============-->
 
       <AbilityDef>
@@ -361,8 +420,16 @@
         </comps>
       </AbilityDef>
 
+      <!--Omegas can leap forward, do a breath sweep, and hit the ground with tail
+      Omega will have fireballs as well, from Metroid II.
+      Leap will likely be a medium range, massive damage, and a stun
+      Breath sweep is similar to beam, except it fires from left to right in a cone shape
+      Ability with tail will stun and damage anything around in one move
+      Evolved one has increased damage and defense-->
+
  <!--=============== Queen Abilities ===============-->
  
+  <!--Swap beam with a regular fire breath; beam is used elsewhere-->
       <AbilityDef>
         <defName>RT_QueenBeam</defName>
         <label>Queen Fire Beam</label>
@@ -419,4 +486,13 @@
 			      </li>
         </comps>
       </AbilityDef>
+
+      <!-- Abilities from Other M are also present here
+      Queen can charge targets, which will be incredibly lethal
+      Queen has a regular fire breath
+      Queen has a sweeping fire beam breath, similar to Omega.
+      Queen can also 'blow' hostiles away, knocking them back and stunning in the process
+      Queen can spawn larvae; unsure if this should be an ability or not.
+      If queen does spawn larvae as an ability, it will need to be heavily altered when
+      player controls one-->
 </Defs>

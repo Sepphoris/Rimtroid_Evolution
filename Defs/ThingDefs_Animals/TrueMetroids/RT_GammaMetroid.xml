@@ -107,7 +107,7 @@
 					  <abilityDef>RT_GammaShockwave</abilityDef>
           </li>
           <li>
-            <abilityDef>RT_MetroidBomb</abilityDef>
+            <abilityDef>RT_GammaBomb</abilityDef>
           </li>
           <li>
             <abilityDef>RT_GammaBurst</abilityDef>
