@@ -51,9 +51,8 @@
       </outcomeDoers>
 		</ingestible>
 		<costList>
-			<Steel>3</Steel>
-			<Uranium>1</Uranium>
-      <RT_MetroidGel>4</RT_MetroidGel>
+			<Steel>4</Steel>
+			<RT_AeionExtract>1</RT_AeionExtract>
 		</costList>
 		<recipeMaker>
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
