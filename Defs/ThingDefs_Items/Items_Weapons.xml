@@ -168,6 +168,7 @@
     <costList>
       <Steel>60</Steel>
       <ComponentIndustrial>8</ComponentIndustrial>
+      <RT_AeionExtract>5</RT_AeionExtract>
     </costList>
     <recipeMaker>
       <researchPrerequisite>PrecisionRifling</researchPrerequisite>
