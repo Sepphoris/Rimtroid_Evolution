@@ -17,8 +17,41 @@
 		</textures>
 	</ThingDef>
 
+	<ThingDef Abstract="True" Name="RT_Bullet_ElectricBeam" ParentName="RT_Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/ElectricBeam1</li>
+		</textures>
+	</ThingDef>
+
 
 	<!--Gamma Abilities-->
+
+	<ThingDef ParentName="RT_Bullet_ElectricBeam" Class="RT_Core.LaserBeamDef">
+		<defName>RT_GammaBeam</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Electric Beam</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/ElectricBeam1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>8</damageAmountBase>
+			<soundExplode>SoundBolt</soundExplode>
+		</projectile>
+        <beamWidth>3</beamWidth>
+		<fireWidth>0</fireWidth>
+		<spawnFire>false</spawnFire>
+		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>2</fireDistanceFromCaster>
+        <lifetime>150</lifetime>
+	</ThingDef>
 
 	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Core.LaserBeamDef">
 		<defName>RT_GammaBolt</defName>

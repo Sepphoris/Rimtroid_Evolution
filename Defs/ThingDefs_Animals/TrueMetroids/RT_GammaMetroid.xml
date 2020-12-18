@@ -98,22 +98,22 @@
 		  </li>
 <!-- Defines the conditions for when to give the pawn an ability -->
 		  <li Class="RT_Core.CompProperties_AbilityDefinition">
-			  <compClass>RT_Core.CompAbilityDefinition</compClass>
-			  <abilities>
-			  	<li>
-					  <abilityDef>RT_GammaElectricBolt</abilityDef>
-          </li>
-			  	<li>
-					  <abilityDef>RT_GammaShockwave</abilityDef>
-          </li>
-          <li>
-            <abilityDef>RT_GammaBomb</abilityDef>
-          </li>
-          <li>
-            <abilityDef>RT_GammaBurst</abilityDef>
-          </li>
-			  </abilities>
-      </li>
+				<compClass>RT_Core.CompAbilityDefinition</compClass>
+				<abilities>
+			  		<li>
+						<abilityDef>RT_GammaBeam</abilityDef>
+          		</li>
+			  		<li>
+						<abilityDef>RT_GammaShockwave</abilityDef>
+          		</li>
+          		<li>
+            		<abilityDef>RT_GammaBomb</abilityDef>
+          		</li>
+          		<li>
+            		<abilityDef>RT_GammaBurst</abilityDef>
+          		</li>
+				</abilities>
+      	</li>
       <li Class="RT_Core.CompProperties_AnimalProduct">
 				<resourceDef>RT_Bioresin</resourceDef>
 				<gatheringIntervalDays>8</gatheringIntervalDays>

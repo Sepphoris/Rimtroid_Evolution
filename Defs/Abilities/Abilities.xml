@@ -55,6 +55,64 @@
 
 <!--=============== Gamma Abilities ===============-->
 
+    <!--Gamma Electric Beam -->
+      <AbilityDef>
+        <defName>RT_GammaBeam</defName>
+        <label>Electric Beam</label>
+        <description>Fire a beam of concentrated energy.</description>
+        <abilityClass>RT_Core.Ability_Base</abilityClass>
+        <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+        <cooldownTicksRange>1600~1200</cooldownTicksRange>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <iconPath>AnimalProjectile/GammaBolt</iconPath>
+        <verbProperties>
+          <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+          <range>26</range>
+          <minRange>1</minRange>
+			    <defaultProjectile>RT_GammaBeam</defaultProjectile>
+			    <commonality>2</commonality>
+        </verbProperties>
+        <comps>
+          <li Class="RT_Core.AbilityCompProperties_AbilityControl">
+            <compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+            <autoUse>true</autoUse>
+            <gizmoOnText>Electric Beam Enabled</gizmoOnText>
+            <gizmoOffText>Electric Beam Disabled</gizmoOffText>
+            <gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
+            <gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
+            <gizmoDesc>Toggle Electric Beam Usage</gizmoDesc>
+          </li>
+          <li Class="RT_Core.AbilityCompProperties_CastVerb">
+            <compClass>RT_Core.AbilityComp_CastVerb</compClass>
+            <verbProperties>
+              <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <accuracyTouch>0.95</accuracyTouch>
+                <accuracyShort>0.60</accuracyShort>
+                <accuracyMedium>0.50</accuracyMedium>
+                <accuracyLong>0.30</accuracyLong>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>RT_GammaBeam</defaultProjectile>
+                <warmupTime>2.5</warmupTime>
+                <range>35</range>
+                <minRange>3</minRange>
+                <burstShotCount>1</burstShotCount>
+                <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+                <soundCast>RT_ElectricBeamSound</soundCast>
+                <muzzleFlashScale>1</muzzleFlashScale>
+              </li>
+            </verbProperties>
+          </li>
+			      <li Class="RT_Core.AbilityCompProperties_Cooldown">
+              <compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				      <cooldownPool>GammaAbilityPool</cooldownPool>
+				      <independent>false</independent>
+				      <resetsTimer>true</resetsTimer>
+			      </li>
+        </comps>
+      </AbilityDef>
+
     <!--Gamma Electric Bolt; change to beam later -->
      <AbilityDef>
       <defName>RT_GammaElectricBolt</defName>
