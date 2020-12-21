@@ -42,7 +42,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>12</damageAmountBase>
+			<damageAmountBase>16</damageAmountBase>
 			<soundExplode>RT_SoundElectricBolt</soundExplode>
 		</projectile>
         <beamWidth>2</beamWidth>
@@ -50,7 +50,7 @@
 		<spawnFire>false</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>2</fireDistanceFromCaster>
-        <lifetime>150</lifetime>
+        <lifetime>250</lifetime>
 	</ThingDef>
 
 	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Core.LaserBeamDef">
@@ -143,7 +143,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>16</damageAmountBase>
+			<damageAmountBase>24</damageAmountBase>
 			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
         <beamWidth>3</beamWidth>
@@ -172,7 +172,7 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>22</damageAmountBase>
+			<damageAmountBase>32</damageAmountBase>
 			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
         <beamWidth>4</beamWidth>

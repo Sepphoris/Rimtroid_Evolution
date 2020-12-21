@@ -30,6 +30,7 @@
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
+    <minRewardCount>5</minRewardCount>
     <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
   </ThingDef>
 

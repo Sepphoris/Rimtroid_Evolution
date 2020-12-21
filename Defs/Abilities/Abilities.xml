@@ -18,7 +18,7 @@
       <abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
       <targetRequired>false</targetRequired>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-      <cooldownTicksRange>2000</cooldownTicksRange>
+      <cooldownTicksRange>2100</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
       <iconPath>Things/Misc/MetroidBomb</iconPath>
@@ -62,7 +62,7 @@
         <description>Fire a beam of concentrated energy.</description>
         <abilityClass>RT_Core.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-        <cooldownTicksRange>1600~1200</cooldownTicksRange>
+        <cooldownTicksRange>1200~1600</cooldownTicksRange>
         <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
         <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
         <iconPath>AnimalProjectile/GammaBolt</iconPath>
@@ -88,10 +88,10 @@
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
-                <accuracyTouch>0.95</accuracyTouch>
-                <accuracyShort>0.60</accuracyShort>
-                <accuracyMedium>0.50</accuracyMedium>
-                <accuracyLong>0.30</accuracyLong>
+                <accuracyTouch>0.70</accuracyTouch>
+                <accuracyShort>0.80</accuracyShort>
+                <accuracyMedium>0.90</accuracyMedium>
+                <accuracyLong>0.85</accuracyLong>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_GammaBeam</defaultProjectile>
                 <warmupTime>2</warmupTime>
@@ -151,10 +151,10 @@
           <verbProperties>
             <li>
               <verbClass>Verb_Shoot</verbClass>
-              <accuracyTouch>0.95</accuracyTouch>
-              <accuracyShort>0.60</accuracyShort>
-              <accuracyMedium>0.50</accuracyMedium>
-              <accuracyLong>0.30</accuracyLong>
+                <accuracyTouch>0.70</accuracyTouch>
+                <accuracyShort>0.80</accuracyShort>
+                <accuracyMedium>0.90</accuracyMedium>
+                <accuracyLong>0.85</accuracyLong>
               <hasStandardCommand>true</hasStandardCommand>
               <defaultProjectile>RT_GammaBolt</defaultProjectile>
               <warmupTime>0.5</warmupTime>
@@ -188,7 +188,7 @@
       <abilityClass>RT_Rimtroid.Ability_Shockwave</abilityClass>
       <targetRequired>false</targetRequired>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-      <cooldownTicksRange>1200~1400</cooldownTicksRange>
+      <cooldownTicksRange>1800~2500</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
       <iconPath>UI/Abilities/Shockwave</iconPath>
@@ -226,7 +226,7 @@
       <abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
       <targetRequired>false</targetRequired>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-      <cooldownTicksRange>2000</cooldownTicksRange>
+      <cooldownTicksRange>2100</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
       <iconPath>Things/Misc/MetroidBomb</iconPath>
@@ -262,7 +262,7 @@
       <abilityClass>RT_Rimtroid.Ability_GammaIgnite</abilityClass>
       <targetRequired>false</targetRequired>
       <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-      <cooldownTicksRange>2000</cooldownTicksRange>
+      <cooldownTicksRange>2700</cooldownTicksRange>
       <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
       <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
       <iconPath>UI/Abilities/ElectricBurst</iconPath>
@@ -330,10 +330,10 @@
               <verbProperties>
                 <li>
                   <verbClass>Verb_Shoot</verbClass>
-                  <accuracyTouch>0.95</accuracyTouch>
-                  <accuracyShort>0.60</accuracyShort>
-                  <accuracyMedium>0.50</accuracyMedium>
-                  <accuracyLong>0.30</accuracyLong>
+                  <accuracyTouch>0.70</accuracyTouch>
+                  <accuracyShort>0.80</accuracyShort>
+                  <accuracyMedium>0.90</accuracyMedium>
+                  <accuracyLong>0.85</accuracyLong>
                   <hasStandardCommand>true</hasStandardCommand>
                   <defaultProjectile>RT_ZetaFirebolt</defaultProjectile>
                   <warmupTime>0.5</warmupTime>
@@ -388,10 +388,10 @@
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
-                <accuracyTouch>0.95</accuracyTouch>
-                <accuracyShort>0.60</accuracyShort>
-                <accuracyMedium>0.50</accuracyMedium>
-                <accuracyLong>0.30</accuracyLong>
+                <accuracyTouch>0.70</accuracyTouch>
+                <accuracyShort>0.80</accuracyShort>
+                <accuracyMedium>0.90</accuracyMedium>
+                <accuracyLong>0.85</accuracyLong>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_ZetaAcid</defaultProjectile>
                 <warmupTime>0.7</warmupTime>
@@ -453,10 +453,10 @@
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
-                <accuracyTouch>0.95</accuracyTouch>
-                <accuracyShort>0.60</accuracyShort>
-                <accuracyMedium>0.50</accuracyMedium>
-                <accuracyLong>0.30</accuracyLong>
+                <accuracyTouch>0.70</accuracyTouch>
+                <accuracyShort>0.80</accuracyShort>
+                <accuracyMedium>0.90</accuracyMedium>
+                <accuracyLong>0.85</accuracyLong>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_OmegaBeam</defaultProjectile>
                 <warmupTime>2.5</warmupTime>
@@ -520,10 +520,10 @@
             <verbProperties>
               <li>
                 <verbClass>Verb_Shoot</verbClass>
-                <accuracyTouch>0.95</accuracyTouch>
-                <accuracyShort>0.60</accuracyShort>
-                <accuracyMedium>0.50</accuracyMedium>
-                <accuracyLong>0.30</accuracyLong>
+                <accuracyTouch>0.70</accuracyTouch>
+                <accuracyShort>0.80</accuracyShort>
+                <accuracyMedium>0.90</accuracyMedium>
+                <accuracyLong>0.85</accuracyLong>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_QueenBeam</defaultProjectile>
                 <warmupTime>2.5</warmupTime>

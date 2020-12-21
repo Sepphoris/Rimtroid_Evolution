@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Rimtroid: Evolution (early preview)</name>
-	<packageId>Drazzii.Rimtroid.Evolution</packageId>
+	<name>Rimtroid: Evolution (private)</name>
+	<packageId>Drazzii.Rimtroid.Evolution.Private</packageId>
 	<author>Drazzii</author>
 	<supportedVersions>
 		<li>1.2</li>
@@ -19,7 +19,7 @@
 	</modDependenciesByVersion>
 	<loadAfter>
     <li>brrainz.harmony</li>
-    <li>Drazzii.Rimtroid.Core</li>
+    <li>Drazzii.Rimtroid.Core.Private</li>
 	</loadAfter>
 	<incompatibleWith>
       <li></li>

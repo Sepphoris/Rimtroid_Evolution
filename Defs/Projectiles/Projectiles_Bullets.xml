@@ -25,7 +25,7 @@
       <ai_IsIncendiary>true</ai_IsIncendiary>
       <arcHeightFactor>0.2</arcHeightFactor>
       <shadowSize>0.6</shadowSize>
-      <soundExplode>RT_SoundCryoExplosion</soundExplode>
+      <soundExplode>Explosion_Smoke</soundExplode>
     </projectile>
   </ThingDef>
 
@@ -45,7 +45,6 @@
       <damageDef>RT_CryoDamageBullet</damageDef>
       <damageAmountBase>20</damageAmountBase>
       <armorPenetrationBase>0.2</armorPenetrationBase>
-      <soundExplode>RT_SoundCryoBullet</soundExplode>
     </projectile>
   </ThingDef>
 
@@ -65,7 +64,6 @@
       <damageDef>Bullet</damageDef>
       <damageAmountBase>3</damageAmountBase>
       <armorPenetrationBase>0.9</armorPenetrationBase>
-      <soundExplode>RT_SoundDart</soundExplode>
     </projectile>
     <thingClass>RT_Rimtroid.SedativeProjectile</thingClass>
   </ThingDef>

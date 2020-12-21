@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- Aetas; a drug that accelerates the age of Metroids. Names comes from the latin word for 'epoch'-->
-	  <ThingDef ParentName="MakeableDrugBase">
+	  <ThingDef ParentName="MakeableDrugPillBase">
 		<defName>RT_AgingDrug</defName>
 		<label>Aetas Serum</label>
 		<description>The Aetas Serum (ADR-13), like the Inertia drug, is a specially engineered formula designed to modify the Metroid genome. However, instead of stopping the metroids from maturing, it actually accelerates the process; metroids injected with this serum will undergo rapid cellular growth, undergoing changes that would otherwise take decades. however, the process is slow, and may take a couple days to thoroughly complete. \n\nLike all other metroid-specific drugs, this is essentially a poison to anything else; non-lethal, but it will incapacitate other organisms for a significant amount of time.</description>
