@@ -301,6 +301,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evolution\CompEvolutionTime.cs" />
+    <Compile Include="Evolution\CompProperties_EvolutionTime.cs" />
     <Compile Include="Evolution\ElectricExplosion.cs" />
     <Compile Include="Evolution\ElectricGenExplosion.cs" />
     <Compile Include="Evolution\ElectricDischarge.cs" />

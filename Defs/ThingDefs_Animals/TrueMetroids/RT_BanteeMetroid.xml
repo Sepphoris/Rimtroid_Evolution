@@ -48,13 +48,13 @@
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>
 			<li>
-                <label>life drain</label>
-                <capacities>
-                    <li>RT_LifedrainBantee</li>
-                </capacities>
-                <power>7</power>
-                <cooldownTime>3</cooldownTime>
-                <chanceFactor>0.8</chanceFactor>
+        <label>life drain</label>
+      	<capacities>
+          <li>RT_LifedrainBantee</li>
+	      </capacities>
+          <power>7</power>
+          <cooldownTime>3</cooldownTime>
+          <chanceFactor>0.8</chanceFactor>
 				<surpriseAttack>
 					<extraMeleeDamages>
 					<li>
@@ -70,6 +70,9 @@
 
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
+			</li>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+				<timeInYears>0.4</timeInYears>
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
