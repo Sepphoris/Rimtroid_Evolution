@@ -200,15 +200,15 @@
 			</points>
       </ageGenerationCurve>
 			<wildBiomes>
-			<BorealForest>0.2</BorealForest>
-			<Tundra>0.02</Tundra>
-			<ColdBog>0.02</ColdBog>
-			<TemperateSwamp>0.5</TemperateSwamp>
-			<TropicalSwamp>0.4</TropicalSwamp>
-			<TemperateForest>0.5</TemperateForest>
-			<AridShrubland>0.25</AridShrubland>
-			<Desert>0.2</Desert>
-            <TropicalRainforest>0.3</TropicalRainforest>
+			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalSwamp>0.09</TropicalSwamp>
+				<TemperateSwamp>0.08</TemperateSwamp>
+				<TemperateForest>0.07</TemperateForest>
+				<AridShrubland>0.065</AridShrubland>
+				<Desert>0.06</Desert>
+				<BorealForest>0.025</BorealForest>
+				<Tundra>0.002</Tundra>
+				<ColdBog>0.001</ColdBog>
 			</wildBiomes>
 		</race>
     <butcherProducts>
@@ -233,7 +233,7 @@
 		<label>Gamma metroid</label>
 		<race>RT_GammaMetroid</race>
 		<combatPower>450</combatPower>
-		<ecoSystemWeight>2.6</ecoSystemWeight>
+		<ecoSystemWeight>2.2</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>
 			<max>4</max>

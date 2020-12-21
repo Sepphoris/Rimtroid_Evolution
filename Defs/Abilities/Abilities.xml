@@ -24,7 +24,7 @@
       <iconPath>Things/Misc/MetroidBomb</iconPath>
       <verbProperties>
         <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
-        <soundCast>RT_ShockwaveSound</soundCast>
+        <soundCast>RT_SoundShockwave</soundCast>
         <warmupTime>1</warmupTime>
       </verbProperties>
       <comps>
@@ -94,12 +94,12 @@
                 <accuracyLong>0.30</accuracyLong>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>RT_GammaBeam</defaultProjectile>
-                <warmupTime>2.5</warmupTime>
+                <warmupTime>2</warmupTime>
                 <range>35</range>
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <soundCast>RT_ElectricBeamSound</soundCast>
+                <soundCast>RT_SoundElectricBeam</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
@@ -113,7 +113,7 @@
         </comps>
       </AbilityDef>
 
-    <!--Gamma Electric Bolt; change to beam later -->
+    <!--Gamma Electric Bolt; now obselete, and serves as a template-->
      <AbilityDef>
       <defName>RT_GammaElectricBolt</defName>
       <label>Electric Bolt</label>
@@ -162,7 +162,7 @@
               <minRange>1</minRange>
               <burstShotCount>1</burstShotCount>
               <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-              <soundCast>RT_ElectricBoltSound</soundCast>
+              <soundCast>RT_SoundElectricBolt</soundCast>
                <muzzleFlashScale>1</muzzleFlashScale>
             </li>
           </verbProperties>
@@ -197,7 +197,7 @@
         <warmupTime>1</warmupTime>
         <range>5</range>
         <meleeDamageDef>Burn</meleeDamageDef>
-        <soundCast>RT_ShockwaveSound</soundCast>
+        <soundCast>RT_SoundShockwave</soundCast>
       </verbProperties>
       <comps>
         <li Class="RT_Core.AbilityCompProperties_AbilityControl">
@@ -232,7 +232,7 @@
       <iconPath>Things/Misc/MetroidBomb</iconPath>
       <verbProperties>
         <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
-        <soundCast>RT_ShockwaveSound</soundCast>
+        <soundCast>RT_SoundShockwave</soundCast>
         <warmupTime>1</warmupTime>
       </verbProperties>
       <comps>
@@ -268,7 +268,7 @@
       <iconPath>UI/Abilities/ElectricBurst</iconPath>
       <verbProperties>
         <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
-        <soundCast>RT_ShockwaveSound</soundCast>
+        <soundCast>RT_SoundShockwave</soundCast>
         <warmupTime>2</warmupTime>
         <range>4</range>
       </verbProperties>
@@ -278,8 +278,8 @@
           <autoUse>true</autoUse>
           <gizmoOnText>Electric Burst Enabled</gizmoOnText>
           <gizmoOffText>Electric Burst Disabled</gizmoOffText>
-          <gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
-          <gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+          <gizmoOnIconPath>UI/Abilities/ElectricBurst</gizmoOnIconPath>
+          <gizmoOffIconPath>UI/Abilities/ElectricBurst</gizmoOffIconPath>
           <gizmoDesc>Toggle Burst Usage</gizmoDesc>
         </li>
 			  <li Class="RT_Core.AbilityCompProperties_Cooldown">
@@ -299,9 +299,9 @@
 <!--=============== Zeta Abilities ===============-->
 
       <AbilityDef>
-        <defName>RT_ZetaFireball</defName>
-        <label>Fireball</label>
-        <description>Lob balls of fire at a target</description>
+        <defName>RT_ZetaFirebolt</defName>
+        <label>Firebolt</label>
+        <description>Lob bolts of fire at a target</description>
         <abilityClass>RT_Core.Ability_Base</abilityClass>
         <canUseAoeToGetTargets>true</canUseAoeToGetTargets>
         <cooldownTicksRange>1000~1200</cooldownTicksRange>
@@ -312,7 +312,7 @@
             <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
             <range>28</range>
             <minRange>1</minRange>
-			    <defaultProjectile>RT_ZetaFireball</defaultProjectile>
+			    <defaultProjectile>RT_ZetaFirebolt</defaultProjectile>
 			    <commonality>2</commonality>
         </verbProperties>
         <comps>
@@ -335,13 +335,13 @@
                   <accuracyMedium>0.50</accuracyMedium>
                   <accuracyLong>0.30</accuracyLong>
                   <hasStandardCommand>true</hasStandardCommand>
-                  <defaultProjectile>RT_ZetaFireball</defaultProjectile>
+                  <defaultProjectile>RT_ZetaFirebolt</defaultProjectile>
                   <warmupTime>0.5</warmupTime>
                   <range>28</range>
                   <minRange>1</minRange>
                   <burstShotCount>3</burstShotCount>
                   <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                  <soundCast>RT_FireboltSound</soundCast>
+                  <soundCast>RT_SoundFirebolt</soundCast>
                   <muzzleFlashScale>1</muzzleFlashScale>
                 </li>
               </verbProperties>
@@ -399,7 +399,7 @@
                 <minRange>1</minRange>
                 <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
-                <soundCast>RT_AcidboltSound</soundCast>
+                <soundCast>RT_SoundAcidbolt</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
@@ -464,7 +464,7 @@
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <soundCast>RT_FireBeamSound</soundCast>
+                <soundCast>RT_SoundFireBeam</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>
@@ -531,7 +531,7 @@
                 <minRange>3</minRange>
                 <burstShotCount>1</burstShotCount>
                 <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-                <soundCast>RT_FireBeamSound</soundCast>
+                <soundCast>RT_SoundFireBeam</soundCast>
                 <muzzleFlashScale>1</muzzleFlashScale>
               </li>
             </verbProperties>

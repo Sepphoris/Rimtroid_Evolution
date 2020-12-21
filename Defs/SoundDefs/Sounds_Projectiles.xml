@@ -4,7 +4,7 @@
 	<!-- ======================== Gamma Bolt ======================== -->
 
   <SoundDef>
-		<defName>RT_ElectricBoltSound</defName>
+		<defName>RT_SoundElectricBolt</defName>
 		<context>MapOnly</context>
 		<eventNames />
 		<subSounds>
@@ -31,7 +31,7 @@
 	<!-- ======================== Gamma Shockwave ======================== -->
 
   <SoundDef>
-		<defName>RT_ShockwaveSound</defName>
+		<defName>RT_SoundShockwave</defName>
 		<context>MapOnly</context>
 		<eventNames />
 		<subSounds>
@@ -58,14 +58,14 @@
 	<!-- ======================== Fire bolt ======================== -->
 
 	<SoundDef>
-		<defName>RT_FireboltSound</defName>
+		<defName>RT_SoundFirebolt</defName>
 		<context>MapOnly</context>
 		<eventNames />
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>Projectile/RT_FireBolt</clipFolderPath>
+						<clipFolderPath>Projectile/RT_Firebolt</clipFolderPath>
 					</li>
 				</grains>
 
@@ -85,14 +85,39 @@
 	<!-- ======================== Acid Spit ======================== -->
 
 	<SoundDef>
-		<defName>RT_AcidboltSound</defName>
+		<defName>RT_SoundAcidbolt</defName>
 		<context>MapOnly</context>
 		<eventNames />
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>Projectile/RT_AcidBolt</clipFolderPath>
+						<clipFolderPath>Projectile/AcidBolt</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RT_SoundAcidboltExplosion</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Explosions/AcidExplosion</clipFolderPath>
 					</li>
 				</grains>
 
@@ -112,14 +137,41 @@
 	<!-- ======================== Firebeam ======================== -->
 
 	<SoundDef>
-		<defName>RT_FireBeamSound</defName>
+		<defName>RT_SoundFireBeam</defName>
 		<context>MapOnly</context>
 		<eventNames />
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>Projectile/RT_FireBeam1</clipFolderPath>
+						<clipFolderPath>Projectile/Firebeam</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<!-- ======================== Electric Beam ======================== -->
+
+	<SoundDef>
+		<defName>RT_SoundElectricBeam</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Projectile/ElectricBeam</clipFolderPath>
 					</li>
 				</grains>
 

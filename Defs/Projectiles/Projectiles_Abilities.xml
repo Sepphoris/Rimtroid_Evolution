@@ -42,10 +42,10 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>8</damageAmountBase>
-			<soundExplode>SoundBolt</soundExplode>
+			<damageAmountBase>12</damageAmountBase>
+			<soundExplode>RT_SoundElectricBolt</soundExplode>
 		</projectile>
-        <beamWidth>3</beamWidth>
+        <beamWidth>2</beamWidth>
 		<fireWidth>0</fireWidth>
 		<spawnFire>false</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
@@ -77,9 +77,9 @@
 	<!-- Zeta Abilities -->
 
  	<ThingDef>
-		<defName>RT_ZetaFireball</defName>
+		<defName>RT_ZetaFirebolt</defName>
 		<thingClass>RT_Core.AnimalProjectile</thingClass>
-		<label>Fireball</label>
+		<label>Firebolt</label>
 		<category>Projectile</category>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>MoteOverhead</altitudeLayer>
@@ -96,7 +96,7 @@
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>6</damageAmountBase>
-			<soundExplode>SoundFireball</soundExplode>
+			<soundExplode>Explosion_Flame</soundExplode>
 		</projectile>
 	</ThingDef>
 
@@ -121,7 +121,7 @@
 			<damageDef>RT_AcidSpit</damageDef>
 			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>3</damageAmountBase>
-			<soundExplode>SoundAcid</soundExplode>
+			<soundExplode>RT_SoundAcidboltExplosion</soundExplode>
 		</projectile>
 	</ThingDef>
 
@@ -143,8 +143,8 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>12</damageAmountBase>
-			<soundExplode>SoundBolt</soundExplode>
+			<damageAmountBase>16</damageAmountBase>
+			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
         <beamWidth>3</beamWidth>
 		<fireWidth>0</fireWidth>
@@ -172,8 +172,8 @@
 			<speed>10000</speed>
 			<damageDef>Flame</damageDef>
 			<explosionRadius>1</explosionRadius>
-			<damageAmountBase>18</damageAmountBase>
-			<soundExplode>SoundBolt</soundExplode>
+			<damageAmountBase>22</damageAmountBase>
+			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
         <beamWidth>4</beamWidth>
 		<fireWidth>3</fireWidth>

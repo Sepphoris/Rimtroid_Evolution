@@ -241,7 +241,7 @@
 		<label>queen metroid</label>
 		<race>RT_QueenMetroid</race>
 		<combatPower>2400</combatPower>
-		<ecoSystemWeight>120</ecoSystemWeight>
+		<ecoSystemWeight>5</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>
 			<max>1</max>

@@ -6,4 +6,21 @@
     <driverClass>RT_Core.JobDriver_AnimalResource</driverClass>
     <reportString>gathering animal resource from TargetA.</reportString>
   </JobDef>  
+
+	<!-- JobDefs for Gamma Metroids to create web structures-->
+
+  <!--<JobDef>
+    <defName>RT_CreateWebSurface</defName>
+    <driverClass>RT_Evolution.JobDriver_CreateWebSurface</driverClass>
+    <reportString>secreting biofluid.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+  <JobDef>
+    <defName>RT_CreateWebObstacle</defName>
+    <driverClass>RT_Evolution.JobDriver_CreateWebObstacle</driverClass>
+    <reportString>spinning bioweb.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>-->
+
 </Defs>

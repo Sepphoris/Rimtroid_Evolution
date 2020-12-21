@@ -25,12 +25,13 @@ ABILITIES:
 	-ELECTRIC BEAM (Gamma): A beam attack that does extreme damage to a single target.
 	
 	-POUNCE (Zeta): An immediate jump to a designated location. Short range; does damage when used on a pawn. 
-	-FIRE BREATH (Zeta): A spew of fire that toasts anything in front of the Zeta. Short range, high damage.
+	-FIRE BREATH (Zeta): A spew of fire that toasts anything in front of the Zeta. Short range, high damage. Will be added later.
+	
 	-ACID VOLLEY (Zeta): An attack that fires electrically-charged acid in a cone shape.
 
 	-LEAP (Omega): A medium-ranged jump that does high damage, stun, and even knockback, to a selected target.
 	-FIRE BREATH (Omega): A spew of fire that does massive damage to a single target.
-	-FIRE VOLLEY: Launched 3 fireballs at a target. These fireballs explode, dealing massive damage.
+	-FIRE VOLLEY (Omega): Launches 3 fireballs at a target. These fireballs explode, dealing massive damage.
 	-FIRE SWEEP: Omega sweeps the area in front of him with a powerful laser, in a cone-like pattern.
 	-TAIL SLAM (Omega): Consecutive slams against the ground, shaking and likely stunning anything nearby.
 	

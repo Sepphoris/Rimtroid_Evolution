@@ -151,15 +151,15 @@
 			</points>
     </ageGenerationCurve>
 			<wildBiomes>
-			  <BorealForest>0.05</BorealForest>
-			  <Tundra>0.01</Tundra>
-			  <ColdBog>0.01</ColdBog>
-			  <TemperateSwamp>0.25</TemperateSwamp>
-			  <TropicalSwamp>0.2</TropicalSwamp>
-			  <TemperateForest>0.25</TemperateForest>
-			  <AridShrubland>0.1</AridShrubland>
-			  <Desert>0.1</Desert>
-        <TropicalRainforest>0.25</TropicalRainforest>
+			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalSwamp>0.09</TropicalSwamp>
+				<TemperateSwamp>0.08</TemperateSwamp>
+				<TemperateForest>0.07</TemperateForest>
+				<AridShrubland>0.065</AridShrubland>
+				<Desert>0.06</Desert>
+				<BorealForest>0.025</BorealForest>
+				<Tundra>0.002</Tundra>
+				<ColdBog>0.001</ColdBog>
 			</wildBiomes>
 		</race>
     <butcherProducts>

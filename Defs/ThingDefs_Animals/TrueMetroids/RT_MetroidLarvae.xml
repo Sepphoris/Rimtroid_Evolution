@@ -150,15 +150,15 @@
 			</points>
     </ageGenerationCurve>
 			<wildBiomes>
-			  <BorealForest>0.2</BorealForest>
-			  <Tundra>0.02</Tundra>
-			  <ColdBog>0.02</ColdBog>
-			  <TemperateSwamp>0.5</TemperateSwamp>
-			  <TropicalSwamp>0.4</TropicalSwamp>
-			  <TemperateForest>0.5</TemperateForest>
-			  <AridShrubland>0.2</AridShrubland>
-			  <Desert>0.2</Desert>
-        <TropicalRainforest>0.3</TropicalRainforest>
+			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalSwamp>0.09</TropicalSwamp>
+				<TemperateSwamp>0.08</TemperateSwamp>
+				<TemperateForest>0.07</TemperateForest>
+				<AridShrubland>0.065</AridShrubland>
+				<Desert>0.06</Desert>
+				<BorealForest>0.025</BorealForest>
+				<Tundra>0.002</Tundra>
+				<ColdBog>0.001</ColdBog>
 			</wildBiomes>
 		</race>
     <butcherProducts>
@@ -206,7 +206,7 @@
 		<label>metroid</label>
 		<race>RT_MetroidLarvae</race>
 		<combatPower>300</combatPower>
-		<ecoSystemWeight>2</ecoSystemWeight>
+		<ecoSystemWeight>1.4</ecoSystemWeight>
 		<wildGroupSize>
 			<min>3</min>
 			<max>6</max>
