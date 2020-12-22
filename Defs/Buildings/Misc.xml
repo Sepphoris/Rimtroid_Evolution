@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RT_FeedingStation</defName>
+    <label>metroid feeding station</label>
+    <description>A large, stationary column that expoits the metroid energy requirement, exchanging raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms./n/n
+Consumes a large amount of electricity, and requires more energy the larger the metroid. Will take damage over time due to metroid interaction.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+			<drawSize>(2.5,2.5)</drawSize>
+			<texPath>Things/Building/FeedingStation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+    </graphicData>
+	<uiIconPath>Things/Building/FeedingStation</uiIconPath>
+    <size>(2,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Beauty>-5</Beauty>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>false</shortCircuitInRain>
+			<basePowerConsumption>175</basePowerConsumption>
+		</li>
+    <li Class="CompProperties_Flickable"/>
+    </comps>
+	<pathCost>25</pathCost>
+	<passability>PassThroughOnly</passability>
+	<designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<holdsRoof>true</holdsRoof>
+	<canOverlapZones>true</canOverlapZones>
+	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+  
+</Defs>

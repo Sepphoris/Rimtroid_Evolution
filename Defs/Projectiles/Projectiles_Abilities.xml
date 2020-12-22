@@ -150,7 +150,7 @@
 			<damageAmountBase>18</damageAmountBase>
 			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
-        <beamWidth>1</beamWidth>
+      <beamWidth>1</beamWidth>
 		<fireWidth>2</fireWidth>
 		<spawnFire>false</spawnFire>
 		<dontSpawnFireOnCaster>false</dontSpawnFireOnCaster>
