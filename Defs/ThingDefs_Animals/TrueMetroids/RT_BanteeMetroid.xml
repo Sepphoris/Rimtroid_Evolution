@@ -72,7 +72,7 @@
 				<canCrossWater>true</canCrossWater>
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				<timeInYears>0.4</timeInYears>
+				<timeInYears>16</timeInYears>
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>

@@ -24,6 +24,13 @@
 		</textures>
 	</ThingDef>
 
+	<ThingDef Abstract="True" Name="RT_Bullet_FireBreath" ParentName="RT_Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/FireBreath</li>
+		</textures>
+	</ThingDef>
+
 
 	<!--Gamma Abilities-->
 
@@ -123,6 +130,32 @@
 			<damageAmountBase>3</damageAmountBase>
 			<soundExplode>RT_SoundAcidboltExplosion</soundExplode>
 		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="RT_Bullet_FireBreath" Class="RT_Core.LaserBeamDef">
+		<defName>RT_FireBreath</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Fire Breath</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/FireBreath</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>0</explosionRadius>
+			<damageAmountBase>18</damageAmountBase>
+			<soundExplode>Explosion_Bomb</soundExplode>
+		</projectile>
+        <beamWidth>1</beamWidth>
+		<fireWidth>2</fireWidth>
+		<spawnFire>false</spawnFire>
+		<dontSpawnFireOnCaster>false</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>1</fireDistanceFromCaster>
+        <lifetime>300</lifetime>
 	</ThingDef>
 
 

@@ -103,6 +103,9 @@
 		  <li Class="RT_Core.CompProperties_AbilityDefinition">
 			  <compClass>RT_Core.CompAbilityDefinition</compClass>
 			  <abilities>
+				  <li>
+					  <abilityDef>RT_FireBreath</abilityDef>
+				  </li>
 			  	<li>
 					  <abilityDef>RT_ZetaFirebolt</abilityDef>
           </li>
