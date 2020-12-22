@@ -156,7 +156,6 @@
 		<dontSpawnFireOnCaster>false</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>1</fireDistanceFromCaster>
         <lifetime>300</lifetime>
-	<disableFading>True</disableFading>
 	</ThingDef>
 
 
