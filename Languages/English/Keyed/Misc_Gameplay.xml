@@ -11,7 +11,7 @@
 	<RT_TimeToMetamorphosis>Time to next stage: {0}</RT_TimeToMetamorphosis>	
 	<RT_NotTameable>This creature is untameable</RT_NotTameable>
 
-	<RT_TimeToEvolution>Next evolution stage: {0}</RT_TimeToEvolution>
+	<RT_TimeToEvolution>Next stage at age {0}</RT_TimeToEvolution>
 
 	<!--Animal toggles -->
 

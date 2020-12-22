@@ -71,6 +71,9 @@
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
 			</li>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+				<timeInYears>80</timeInYears>
+			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
