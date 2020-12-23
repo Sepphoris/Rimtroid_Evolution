@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
@@ -129,7 +129,6 @@
 				</abilities>
 			</li>
 			
-			<li Class="RT_Core.RT_ExtraDescription"></li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>

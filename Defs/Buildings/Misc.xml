@@ -48,7 +48,7 @@ Consumes a large amount of electricity, and requires more energy the larger the 
     <li Class="CompProperties_Flickable"/>
     </comps>
 	<pathCost>25</pathCost>
-	<passability>PassThroughOnly</passability>
+	<passability>Standable</passability>
 	<designationCategory>Misc</designationCategory>
     <rotatable>false</rotatable>
 	<stealable>false</stealable>

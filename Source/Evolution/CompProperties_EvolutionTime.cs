@@ -13,7 +13,7 @@ namespace RT_Rimtroid
 		}
 
 		public float timeInYears;
-
+		
 		public string reportString = "RT_TimeToEvolution";
 	}
 }

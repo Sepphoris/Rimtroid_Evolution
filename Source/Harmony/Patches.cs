@@ -53,9 +53,9 @@ namespace RT_Rimtroid
     [HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     public static class SpawnSetup_Patch
     {
-        public static bool Prefix(Pawn __instance)
+        public static bool Prefix(Pawn __instance, Map map, bool respawningAfterLoad)
         {
-            if (GenDate.DaysPassed < 3)
+            if (!respawningAfterLoad && GenDate.DaysPassed < 3)
             {
                 if (__instance.def == RT_DefOf.RT_GammaMetroid || __instance.def == RT_DefOf.RT_ZetaMetroid || __instance.def == RT_DefOf.RT_OmegaMetroid)
                 {
