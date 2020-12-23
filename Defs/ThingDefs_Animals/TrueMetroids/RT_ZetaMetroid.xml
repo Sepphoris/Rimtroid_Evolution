@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
@@ -112,14 +112,6 @@
 				  <li>
 					  <abilityDef>RT_ZetaAcidSpit</abilityDef>
 				  </li>
-<<<<<<< Updated upstream
-=======
-				</abilities>
-			</li>
-				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-					<timeInYears>900</timeInYears>
-      	</li>
->>>>>>> Stashed changes
 			  <!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -128,14 +120,11 @@
 				<hediffname>RT_FasterRegen</hediffname>
 				<hediffseverity>1</hediffseverity>
 			  </li> -->
-<<<<<<< Updated upstream
   			</abilities>
       </li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
 				<timeInYears>900</timeInYears>
 			</li>
-=======
->>>>>>> Stashed changes
 		</comps>
 		
 	<!-- Race stats -->		
