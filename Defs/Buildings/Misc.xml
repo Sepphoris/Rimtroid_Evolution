@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="BuildingBase">
+  <!--<ThingDef ParentName="BuildingBase">
     <defName>RT_FeedingStation</defName>
     <label>metroid feeding station</label>
     <description>A large, stationary column that expoits the metroid energy requirement, exchanging raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms./n/n
@@ -59,6 +59,6 @@ Consumes a large amount of electricity, and requires more energy the larger the 
 	<holdsRoof>true</holdsRoof>
 	<canOverlapZones>true</canOverlapZones>
 	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-  </ThingDef>
+  </ThingDef>-->
   
 </Defs>

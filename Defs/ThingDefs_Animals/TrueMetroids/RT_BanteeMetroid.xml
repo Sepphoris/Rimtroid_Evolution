@@ -92,11 +92,11 @@
         <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 
 		  <bloodDef>Filth_BloodInsect</bloodDef>
-		  <herdAnimal>false</herdAnimal>
+		  <herdAnimal>true</herdAnimal>
 		  <body>RT_BanteeBody</body>
 		  <baseBodySize>0.3</baseBodySize>
 		  <baseHealthScale>1.5</baseHealthScale>
-		  <baseHungerRate>0.8</baseHungerRate>
+		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>
 				<li>RT_Rimtroid_EvolutionGrowth</li>

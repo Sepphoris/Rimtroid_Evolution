@@ -96,7 +96,7 @@
 		  <body>RT_LarvaeBody</body>
 		  <baseBodySize>0.4</baseBodySize>
 		  <baseHealthScale>3</baseHealthScale>
-		  <baseHungerRate>0.8</baseHungerRate>
+		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>
 				<li>RT_Rimtroid_EvolutionGrowth</li>
