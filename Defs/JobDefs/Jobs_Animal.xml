@@ -11,46 +11,52 @@
 	<JobDef>
 		<defName>RT_EatFromStation</defName>
 		<driverClass>RT_Core.JobDriver_EatFromStation</driverClass>
-		<reportString>consuming from TargetA.</reportString>
+		<reportString>feeding from power station.</reportString>
 		<modExtensions>
 			<li Class="RT_Core.MetroidFeedingStationOptions">
 				<options>
 					<li>
 						<defName>RT_MetroidLarvae</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>180</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
+						<powerConsumption>750</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>4</durabilityDamage>
 					</li>
 					<li>
 						<defName>RT_AlphaMetroid</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>180</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
+						<powerConsumption>1250</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>5</durabilityDamage>
 					</li>
 					<li>
 						<defName>RT_BanteeMetroid</defName>
 						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>180</ticksForConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
 						<durabilityDamage>3</durabilityDamage>
 					</li>
 					<li>
 						<defName>RT_GammaMetroid</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>180</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
+						<powerConsumption>1750</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>6</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_ZetaMetroid</defName>
+						<powerConsumption>2500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>7</durabilityDamage>
 					</li>
 					<li>
 						<defName>RT_OmegaMetroid</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>180</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
+						<powerConsumption>3500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>8</durabilityDamage>
 					</li>
-					<li>
+					<!--<li>
 						<defName>RT_QueenMetroid</defName>
 						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>180</ticksForConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
 						<durabilityDamage>3</durabilityDamage>
-					</li>
+					</li>-->
 				</options>
 			</li>
 		</modExtensions>

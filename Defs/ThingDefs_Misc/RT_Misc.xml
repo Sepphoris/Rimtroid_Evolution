@@ -126,7 +126,7 @@
 		<label>Alpha trap</label>
 		<description>A bomb of contained energy, created by an Alpha Metroid. Animals can sense these when calm.</description>
 		<graphicData>
-			<texPath>Things/Building/Security/AlphaBomb</texPath>
+			<texPath>Things/Buildings/Security/AlphaBomb</texPath>
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_Explosive">

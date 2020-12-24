@@ -50,21 +50,21 @@ namespace RT_Rimtroid
         }
     }
 
-    [HarmonyPatch(typeof(Pawn), "SpawnSetup")]
-    public static class SpawnSetup_Patch
-    {
-        public static bool Prefix(Pawn __instance, Map map, bool respawningAfterLoad)
-        {
-            if (!respawningAfterLoad && GenDate.DaysPassed < 3)
-            {
-                if (__instance.def == RT_DefOf.RT_GammaMetroid || __instance.def == RT_DefOf.RT_ZetaMetroid || __instance.def == RT_DefOf.RT_OmegaMetroid)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
-    }
+    //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
+    //public static class SpawnSetup_Patch
+   // {
+        //public static bool Prefix(Pawn __instance, Map map, bool respawningAfterLoad)
+        //{
+            //if (!respawningAfterLoad && GenDate.DaysPassed < 3)
+            //{
+                //if (__instance.def == RT_DefOf.RT_GammaMetroid || __instance.def == RT_DefOf.RT_ZetaMetroid || __instance.def == RT_DefOf.RT_OmegaMetroid)
+                //{
+                    //return false;
+                //}
+            //}
+            //return true;
+        //}
+    //}
 
     //[HarmonyPatch(typeof(Pawn), "Kill")]
     //public static class RT_Desiccator_Pawn_Kill_Patch
