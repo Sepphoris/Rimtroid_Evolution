@@ -3,9 +3,9 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>RT_FeedingStation</defName>
-    <label>metroid feeding station</label>
-    <description>A large, stationary column that expoits the metroid energy requirement, exchanging raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms./n/n
-Consumes a large amount of electricity, and requires more energy the larger the metroid. Will take damage over time due to metroid interaction.</description>
+    <label>energy lantern</label>
+    <description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
     <thingClass>Building</thingClass>
     <graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
@@ -19,7 +19,7 @@ Consumes a large amount of electricity, and requires more energy the larger the 
 			</damageData>
     </graphicData>
 	<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
-    <size>(1,1)</size>
+    <size>(1,2)</size>
     <fillPercent>0.5</fillPercent>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Building</altitudeLayer>
@@ -31,7 +31,7 @@ Consumes a large amount of electricity, and requires more energy the larger the 
       <WorkToBuild>3000</WorkToBuild>
       <MaxHitPoints>150</MaxHitPoints>
       <Flammability>0.2</Flammability>
-      <Beauty>-5</Beauty>
+      <Beauty>3</Beauty>
       <Mass>15</Mass>
     </statBases>
     <costList>
@@ -40,6 +40,10 @@ Consumes a large amount of electricity, and requires more energy the larger the 
       <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
     <comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
 		<li Class="CompProperties_Power">
 			<compClass>CompPowerTrader</compClass>
 			<shortCircuitInRain>false</shortCircuitInRain>
@@ -56,9 +60,8 @@ Consumes a large amount of electricity, and requires more energy the larger the 
       <li>MicroelectronicsBasics</li>
     </researchPrerequisites>
 	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-	<holdsRoof>true</holdsRoof>
 	<canOverlapZones>true</canOverlapZones>
-	<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
   </ThingDef>
   
 </Defs>
