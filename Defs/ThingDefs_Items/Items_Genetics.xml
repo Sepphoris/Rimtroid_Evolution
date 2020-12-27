@@ -21,6 +21,9 @@
 			<Beauty>-4</Beauty>
       <DeteriorationRate>0</DeteriorationRate>
 		</statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
 		<tradeTags>
 			<li>AnimalBionics</li>
 		</tradeTags>
@@ -119,10 +122,10 @@ The amount of mechanites administered is only enough to affect smaller, uniform 
       <li Class="CompProperties_Usable">
         <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
         <useJob>UseItem</useJob>
-        <useLabel>Begin nutrient regulation</useLabel>
+        <useLabel>Begin immunity acceleration</useLabel>
       </li>
       <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
-        <hediffDef>RT_NutrientRegulatorHediff</hediffDef>
+        <hediffDef>RT_ImmunityAcceleratorHediff</hediffDef>
       </li>
       <li Class="CompProperties_UseEffect">
         <compClass>CompUseEffect_DestroySelf</compClass>
