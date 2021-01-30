@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
+<!--=============== Bantee Abilities ===============-->
+
+  <!--
+    <AbilityDef>
+      <defName>RT_BanteeDrain</defName>
+      <label>Energy Drain</label>
+      <description>Drains energy from a designated, live target, rapidly gaining age in the process.</description>
+      <abilityClass>Fill In here</abilityClass>
+      <targetRequired>true</targetRequired>
+      <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+      <cooldownTicksRange>12000</cooldownTicksRange>
+      <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+      <iconPath>Things/Misc/MetroidBomb</iconPath>
+      <verbProperties>
+        <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+        <soundCast>RT_SoundShockwave</soundCast>
+        <warmupTime>0.5</warmupTime>
+      </verbProperties>
+      <comps>
+        <li Class="RT_Core.AbilityCompProperties_AbilityControl">
+          <compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+          <autoUse>true</autoUse>
+          <gizmoOnText>Energy Drain Enabled</gizmoOnText>
+          <gizmoOffText>Energy Drain Disabled</gizmoOffText>
+          <gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
+          <gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+          <gizmoDesc>Toggle automatic usage of energy draining</gizmoDesc>
+        </li>
+			  <li Class="RT_Core.AbilityCompProperties_Cooldown">
+          <compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				  <cooldownPool>BanteeAbilityPool</cooldownPool>
+          <cooldownTicksRange>3000</cooldownTicksRange>
+				  <independent>false</independent>
+				  <resetsTimer>false</resetsTimer>
+			  </li>
+      </comps>
+    </AbilityDef>
+  -->
+
 <!--=============== Larvae Abilities ===============-->
 
   <!--Larvae drain attack may be turned into an ability.
@@ -8,6 +48,44 @@
   but this ability sends the larvae to a designated target.
   Larvae then attaches to the target and stuns them for a few seconds,
   Rapidly gaining age and food. This will take some serious coding.-->
+
+  <!--
+    <AbilityDef>
+      <defName>RT_LarvaeDrain</defName>
+      <label>Energy Drain</label>
+      <description>Drains energy from a designated, live target, rapidly gaining age in the process.</description>
+      <abilityClass>Fill In here</abilityClass>
+      <targetRequired>true</targetRequired>
+      <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+      <cooldownTicksRange>12000</cooldownTicksRange>
+      <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+      <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+      <iconPath>Things/Misc/MetroidBomb</iconPath>
+      <verbProperties>
+        <verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+        <soundCast>RT_SoundShockwave</soundCast>
+        <warmupTime>0.5</warmupTime>
+      </verbProperties>
+      <comps>
+        <li Class="RT_Core.AbilityCompProperties_AbilityControl">
+          <compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+          <autoUse>true</autoUse>
+          <gizmoOnText>Energy Drain Enabled</gizmoOnText>
+          <gizmoOffText>Energy Drain Disabled</gizmoOffText>
+          <gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
+          <gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+          <gizmoDesc>Toggle automatic usage of energy draining</gizmoDesc>
+        </li>
+			  <li Class="RT_Core.AbilityCompProperties_Cooldown">
+          <compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				  <cooldownPool>LarvaeAbilityPool</cooldownPool>
+          <cooldownTicksRange>3000</cooldownTicksRange>
+				  <independent>false</independent>
+				  <resetsTimer>false</resetsTimer>
+			  </li>
+      </comps>
+    </AbilityDef>
+  -->
 
 <!--=============== Alpha Abilities ===============-->
 

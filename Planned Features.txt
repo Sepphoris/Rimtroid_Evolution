@@ -5,6 +5,26 @@ NEXT UPDATE FEATURES
 
 
 ===============
+IMMEDIATE ADDITIONS:
+===============
+	-ENERGY EXTRACT: An early-game gel that can be extracted from corpses. Used to make nutrient solutions, fill energy lanterns, and acts as an early game food source for metroids. Always expires after three days, regardless of temperature.
+	-ENERGY LANTERN: Rename current lantern to Energy Pylon. Energy Lanterns are similar, but they must be fueled and can only feed younger metroids.
+	-Food bar does not go down when a metroid is resting.
+	-Metroids heal from malnutrition 200% faster.
+	-Age comp must be removed and re-added after each evolution.
+	-Metroids that reach next evolution must be given 100% food.
+	-Metroids should not vomit or recieve the sand/gravel/dirt attack.
+	-Metroids should feed on prisoners without the prisoners getting angry.
+	-Wild metroids shouldn't attack other metroids.
+	
+	-Alpha Metroids bombs must be designated to be placed on a spot.
+
+
+
+
+
+
+===============
 UI:
 ===============
 	-Add mod options:

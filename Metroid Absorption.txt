@@ -1,0 +1,24 @@
+====================
+RIMTROID: METROID ABSORPTION
+====================
+
+A staple of the Metroid series is the metroid ability to absorb energy. As it is a core feature they are known from, this needs to be added and capitalized on. So, I'd like a new ability that is added to Larvae and Larvae: Absorb Energy. This ability allows metroids to latch onto targets, rapidly gaining age and food. I can take care of making the ability xml code. The rest is extremely intricate, and follows a process in order to match the source material. Here's what you need to add:
+
+	-The metroid absorb code. When called on, metroids will 'latch' onto targets. The metroids will need to be overlaid on top of the target, with the target stunned. During this, the metroid will rapidly gain age, and their food will jump up a considerable amount. The following floats should be definable in xml:
+		-Duration that the target is stunned, in ticks.
+		-Duration that the metroid is overlaid on the target.
+		-Amount of food gained (in percentage).
+		-Amound of age the metroid gains (in ticks).
+		-Hediff severity increased (the hediff that is applied can be defined in c#). This hediff needs to scale depending on the target body size; a target with a body size of 1 gets the 'normal' defined value for the hediff, while something with a smaller body size has the amount drained multiplied.
+		
+		These floats will differ between each creature def, since both bantees and larvae will have different values for all of these.
+		
+	It is preferred that all these are update real-time; after each long tick, the food bar jumps up for the metroid, while the hediff severity increases for the target. This way everything will be applied during the process, rather than after. The formula for the amount gained per long tick should be dependent on the amount of time the metroid is latched on. For example, if the metroid gains 50% of their food bar, is attached for 5 long ticks, and the prisoner gains 25% of the hediff of the hediff severity: each long tick will fill the metroid food bar by 10%, and the prisoner will gain 5% of the hediff per long tick. This is very important, and it is important that all the floats are defineable in xml.
+	
+	AFTER the metroid is done and detaches, it will gain the age defined in the public float. During this, the metroid will temporarily stay still and 'process' the energy it just absorbed for X amount of ticks (this can be defined in c#; 150 ticks is likely where it will be). During this process the age bar will process in real-time, rather than being added all at once. This allows the player to see the age quickly go up.
+	
+	This feature should be called on when the metroid is hungry; it will use this ability on a wild animal when hungry. The metroid must not also aggro on the target; it should simply attach, absorb, and continue on. Additionally, it will use this on specifically prisoners as well, and ONLY prisoners that are within the player faction. These prisoners must not get angry against metroids, or the colony, for this happening. That means no retaliation of any sort. Metroids must also not target prisoners that are downed. If the player has at least one metroid in their colony, a new gizmo will appear on prisoner bars, which toggled whether or not they can be fded on by by metroids. If they are, the prisoner gets a passive mood malus for being a food source, and an even bigger one when fed on. Make sure this gizmo only appears on colony prisoners, disappears when the prisoner is released or recruited, and only appears if the colony owns a bantee or a larva.
+	
+	If possible, metroids should also be able to attach to corpses that are both fresh and haven't been dead for more than 3 days (this is important to keep track of, in order to make sure the player doesn't freeze the body for infinite usage). They do the same thing, but give a reduced food return, and no age. Additionally there is a large chance that the body turns into the 'desiccated' stage, which can be defined in C#.
+	
+	Please leave comments to let me know what does what. I may need to change different areas, so I'd like each area to tell me thir operations. If anything here seems impractical, or would take a significant more amount of time to do, let me know.
