@@ -240,29 +240,14 @@
 				</hungerBerserkChanges>
 				<chanceToBecomeWildIfBerserkAndTamed>0.1</chanceToBecomeWildIfBerserkAndTamed>
 			</li>
-	<!--<li Class="RT_Core.RT_EnergyDrain">
-				<DrainStunDuration> - This will designate the time (in ticks) the target can be stunned
-					<li>
-						<DrainStunTicksMin>450</DrainStunTicksMin>
-						<DrainStunTicksMax>450</DrainStunTicksMax>
-					</li>
-				</DrainStunDuration>
-				<DrainOverlayDuration> - This will designate the time (in ticks) the metroid is overlaid on the target
-					<li>
-						<DrainOverlayTicksMin>450</DrainOverlayTicksMin>
-						<DrainOverlayTicksMax>450</DrainOverlayTicksMax>
-					</li>
-				</DrainOverlayDuration>
-				<DrainFoodGain> - This determines how much food the metroid gets from a drain, with 0 being 0% and 1 being 100% of the food bar.
-					<li>
-						<DrainFoodGainMin>0.3</DrainFoodGainMin>
-						<DrainFoodGainMax>0.4</DrainFoodGainMax>
-					</li>
-				</DrainFoodGain>
-				<DrainAgeFactor>7</DrainAgeFactor> - the amount of age (in days) gained per 0.1 of the DrainFoodGain
-				<DrainSicknessSeverity>0.3</DrainSicknessSeverity> - the severity of the hediff that gets inflicted per feeding. Hediff is RT_LifeDrainSickness.
+			<li Class="RT_Core.RT_EnergyDrain">
+				<drainStunDuration>450~450</drainStunDuration>
+				<drainOverlayDuration>450~450</drainOverlayDuration>
+				<drainFoodGain>0.3~0.4</drainFoodGain>
+				<drainAgeFactor>7</drainAgeFactor>
+				<drainSicknessSeverity>0.3</drainSicknessSeverity>
+				<drainEnergyProcessing>300~300</drainEnergyProcessing>
 			</li>
-			-->
 			<li Class="RT_Core.LegacyModExtension">
 				<hasAbilities>true</hasAbilities>
 			</li>
