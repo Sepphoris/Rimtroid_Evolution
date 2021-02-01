@@ -18,6 +18,9 @@
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
 			<warmupTime>0.5</warmupTime>
+			<targetParams>
+				<canTargetPawns>True</canTargetPawns>
+			</targetParams>
 		</verbProperties>
 		<comps>
 			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
@@ -63,6 +66,9 @@
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
 			<warmupTime>0.5</warmupTime>
+			<targetParams>
+				<canTargetPawns>True</canTargetPawns>
+			</targetParams>
 		</verbProperties>
 		<comps>
 			<li Class="RT_Core.AbilityCompProperties_AbilityControl">

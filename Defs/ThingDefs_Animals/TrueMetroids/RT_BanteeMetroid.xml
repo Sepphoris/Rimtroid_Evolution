@@ -247,6 +247,7 @@
 				<drainFoodGain>0.3~0.4</drainFoodGain>
 				<drainAgeFactor>7</drainAgeFactor>
 				<drainSicknessSeverity>0.3</drainSicknessSeverity>
+				<drainEnergyProcessing>300~300</drainEnergyProcessing>
 			</li>
 			<li Class="RT_Core.LegacyModExtension">
 				<hasAbilities>true</hasAbilities>
