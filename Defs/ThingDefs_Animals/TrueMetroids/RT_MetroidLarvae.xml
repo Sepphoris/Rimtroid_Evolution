@@ -244,7 +244,7 @@
 				<drainStunDuration>450~450</drainStunDuration>
 				<drainOverlayDuration>450~450</drainOverlayDuration>
 				<drainFoodGain>0.3~0.4</drainFoodGain>
-				<drainAgeFactor>7</drainAgeFactor>
+				<drainAgeFactor>14</drainAgeFactor>
 				<drainSicknessSeverity>0.3</drainSicknessSeverity>
 				<drainEnergyProcessing>300~300</drainEnergyProcessing>
 			</li>
