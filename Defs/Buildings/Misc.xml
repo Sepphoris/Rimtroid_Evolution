@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+<!-- Electric Metroid Lantern, meant for small metroids.-->
+
   <ThingDef ParentName="BuildingBase">
-    <defName>RT_FeedingStation</defName>
-    <label>energy lantern</label>
+    <defName>RT_FeedingStationSE</defName>
+    <label>metroid lantern</label>
     <description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
 The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
     <thingClass>Building</thingClass>
@@ -51,6 +53,228 @@ The design is based off the native environment that metroids initially grew up i
 		</li>
     <li Class="CompProperties_Flickable"/>
     </comps>
+	<pathCost>25</pathCost>
+	<passability>Standable</passability>
+	<designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <researchPrerequisites>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<canOverlapZones>true</canOverlapZones>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+<!-- Fueled Metroid Lantern, meant for small metroids. Requires fresh corpses-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RT_FeedingStationSF</defName>
+    <label>fueled metroid lantern</label>
+    <description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+			<drawSize>(1.5,1.5)</drawSize>
+			<texPath>Things/Buildings/FeedingStation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+    </graphicData>
+	<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+    <size>(1,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Beauty>3</Beauty>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>150.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    <li Class="CompProperties_Flickable"/>
+    </comps>
+	<pathCost>25</pathCost>
+	<passability>Standable</passability>
+	<designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <researchPrerequisites>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<canOverlapZones>true</canOverlapZones>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+<!-- Electric Metroid Pylon, meant for large metroids.-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RT_FeedingStationLE</defName>
+    <label>metroid pylon</label>
+    <description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+			<drawSize>(1.5,1.5)</drawSize>
+			<texPath>Things/Buildings/FeedingStation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+    </graphicData>
+	<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+    <size>(1,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Beauty>3</Beauty>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<shortCircuitInRain>false</shortCircuitInRain>
+			<basePowerConsumption>300</basePowerConsumption>
+		</li>
+    <li Class="CompProperties_Flickable"/>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+	<pathCost>25</pathCost>
+	<passability>Standable</passability>
+	<designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+	<stealable>false</stealable>
+    <researchPrerequisites>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<canOverlapZones>true</canOverlapZones>
+	<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+  </ThingDef>
+
+<!-- Fueled Metroid Pylon, meant for large metroids. Requires corpses-->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RT_FeedingStationLF</defName>
+    <label>metroid pylon</label>
+    <description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+			<drawSize>(1.5,1.5)</drawSize>
+			<texPath>Things/Buildings/FeedingStation</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+    </graphicData>
+	<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+    <size>(1,2)</size>
+    <fillPercent>0.5</fillPercent>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>3000</WorkToBuild>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+      <Beauty>3</Beauty>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+	  <Plasteel>5</Plasteel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+      <li Class="CompProperties_Refuelable">
+        <fuelCapacity>150.0</fuelCapacity>
+        <targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
+        <initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>1</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+        <drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
 	<pathCost>25</pathCost>
 	<passability>Standable</passability>
 	<designationCategory>Misc</designationCategory>
