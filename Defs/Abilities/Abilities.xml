@@ -35,8 +35,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Energy Drain Enabled</gizmoOnText>
 				<gizmoOffText>Energy Drain Disabled</gizmoOffText>
-				<gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
-				<gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/EnergyDrain</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/EnergyDrain</gizmoOffIconPath>
 				<gizmoDesc>Toggle automatic usage of energy draining</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
@@ -90,8 +90,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Energy Drain Enabled</gizmoOnText>
 				<gizmoOffText>Energy Drain Disabled</gizmoOffText>
-				<gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
-				<gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/EnergyDrain</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/EnergyDrain</gizmoOffIconPath>
 				<gizmoDesc>Toggle automatic usage of energy draining</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
