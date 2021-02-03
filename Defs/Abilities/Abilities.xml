@@ -10,14 +10,15 @@
 		<abilityClass>RT_Core.Ability_AbsorbEnergy</abilityClass>
 		<targetRequired>true</targetRequired>
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<cooldownTicksRange>12000</cooldownTicksRange>
+		<cooldownTicksRange>3300</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>Things/Misc/MetroidBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>50</range>
 			<soundCast>RT_SoundShockwave</soundCast>
-			<warmupTime>0.5</warmupTime>
+			<warmupTime>0</warmupTime>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
@@ -58,14 +59,15 @@
 		<abilityClass>RT_Core.Ability_AbsorbEnergy</abilityClass>
 		<targetRequired>true</targetRequired>
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<cooldownTicksRange>12000</cooldownTicksRange>
+		<cooldownTicksRange>3300</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>Things/Misc/MetroidBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>50</range>
 			<soundCast>RT_SoundShockwave</soundCast>
-			<warmupTime>0.5</warmupTime>
+			<warmupTime>0</warmupTime>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
