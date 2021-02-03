@@ -16,11 +16,17 @@
 		<iconPath>Things/Misc/MetroidBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
-			<range>50</range>
+			<range>150</range>
 			<soundCast>RT_SoundShockwave</soundCast>
 			<warmupTime>0</warmupTime>
+			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
+				<canTargetLocations>False</canTargetLocations>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetFires>False</canTargetFires>
+				<canTargetSelf>False</canTargetSelf>
 			</targetParams>
 		</verbProperties>
 		<comps>
@@ -65,11 +71,17 @@
 		<iconPath>Things/Misc/MetroidBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
-			<range>50</range>
+			<range>150</range>
 			<soundCast>RT_SoundShockwave</soundCast>
 			<warmupTime>0</warmupTime>
+			<requireLineOfSight>False</requireLineOfSight>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
+				<canTargetLocations>False</canTargetLocations>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetFires>False</canTargetFires>
+				<canTargetSelf>False</canTargetSelf>
 			</targetParams>
 		</verbProperties>
 		<comps>
