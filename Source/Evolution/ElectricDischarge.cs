@@ -117,7 +117,6 @@ namespace RT_Rimtroid
 			if (Find.TickManager.TicksGame % 30 == 0)
 			{
 				//Log.Message(" Beginning public override void Tick ()", true);
-				this.ticksSinceSpawn++;
 				if (ElectricDischarge.lastElectricCountUpdateTick != Find.TickManager.TicksGame)
 				{
 					ElectricDischarge.ElectricCount = base.Map.listerThings.ThingsOfDef(this.def).Count;
@@ -155,6 +154,11 @@ namespace RT_Rimtroid
 					}
 
 				}
+			}
+			this.ticksSinceSpawn++;
+			if (ticksSinceSpawn > 900)
+			{
+				this.Destroy();
 			}
 		}
 	}
