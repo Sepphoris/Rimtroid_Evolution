@@ -31,7 +31,7 @@
 	<BodyPartDef>
 		<defName>RT_Membrane</defName>
 		<label>membrane</label>
-		<hitPoints>80</hitPoints>
+		<hitPoints>60</hitPoints>
 		<bleedRate>0</bleedRate>
 		<frostbiteVulnerability>8</frostbiteVulnerability>
 		<skinCovered>false</skinCovered>

@@ -8,7 +8,7 @@
 		<defName>RT_ZetaMetroid</defName>
 		<label>Zeta Metroid</label>
 
-		<description>Due to it's many, MANY unique characteristics, the Gamma Metroid can be considered the "catch-all" Metroid. Their limbs have now grown into fast, spindly legs, allowing them to both walk and fly without issue. It's size, strength, and resilience has increased considerably, and it's plasma-based defenses have become even more flexible, able to be used more quickly and in more situations. However, the most appealing attribute of a Gamma Metroid is it's resource production; while all Metroids produce an organic, resin-like substance, the Gamma Metroid is the only one that produces it frequenty enough to be worth the trouble. This makes it a very dangerous - but profitable - farm animal, sometimes seen as a rare occurance amongst the farmers and traders of the rim.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
+		<description>Zeta metroids are the fastest, and arguably most lethal, creatures of the pure metroid evolution line. Their body has taken a sleek, aerodynamic shape, resembling more of a lizard than it's previous beetle-like form. Zetas glide across distances with ease, having little to no local competition. It's movement speed, combined with the additional higher limb speed, allow it to close in quickly, and shed it's target to pieces within seconds. Those crazy enough to keep Zetas often group these up into "Bloodhound" packs, which are specifically meant to chase down distant targets before they can flee - or in some cases, get closer. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		<statBases>
 		
 	<!-- Internal Stats -->
@@ -18,7 +18,7 @@
 		  <ArmorRating_Blunt>1</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
 		  <ArmorRating_Heat>1.5</ArmorRating_Heat>
-		  <MoveSpeed>2</MoveSpeed>
+		  <MoveSpeed>3</MoveSpeed>
 		  <MarketValue>800</MarketValue>
 		  <ComfyTemperatureMin>3</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
@@ -35,7 +35,7 @@
 					<li>Blunt</li>
 				</capacities>
 				<power>10</power>
-				<cooldownTime>2.5</cooldownTime>
+				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -45,7 +45,7 @@
 					<li>RT_LifedrainZeta</li>
 				</capacities>
 				<power>18</power>
-				<cooldownTime>1.5</cooldownTime>
+				<cooldownTime>1.2</cooldownTime>
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>
 			<li>

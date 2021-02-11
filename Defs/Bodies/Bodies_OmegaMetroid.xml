@@ -23,7 +23,7 @@
                     <parts>
                         <li>
                             <def>Skull</def>
-                            <coverage>0.10</coverage>
+                            <coverage>0.15</coverage>
                             <depth>Inside</depth>
                             <groups>
                                 <li>UpperHead</li>
@@ -33,7 +33,7 @@
                         <li>
                             <def>AnimalJaw</def>
                             <customLabel>mouth</customLabel>
-                            <coverage>0.10</coverage>
+                            <coverage>0.15</coverage>
                             <groups>
                                 <li>Teeth</li>
                                 <li>UpperHead</li>
@@ -98,20 +98,20 @@
                 <li>
                     <def>Leg</def>
                     <customLabel>left leg</customLabel>
-                    <coverage>0.03</coverage>
+                    <coverage>0.05</coverage>
                     <height>Bottom</height>
                 </li>
                 <li>
                     <def>Leg</def>
                     <customLabel>right leg</customLabel>
-                    <coverage>0.03</coverage>
+                    <coverage>0.05</coverage>
                     <height>Bottom</height>
                 </li>
 				<!-- Arms -->
 				<li>
 					<def>Arm</def>
 					<customLabel>left arm</customLabel>
-					<coverage>0.03</coverage>
+					<coverage>0.05</coverage>
 					<groups>
 						<li>HeadClaw</li>
 					</groups>
@@ -120,7 +120,7 @@
 				<li>
 					<def>Arm</def>
 					<customLabel>right arm</customLabel>
-					<coverage>0.03</coverage>
+					<coverage>0.05</coverage>
 					<groups>
 						<li>HeadClaw</li>
 					</groups>
@@ -174,8 +174,8 @@
         <!-- Misc Parts-->
         <li>
           <def>Shell</def>
-          <customLabel>shell</customLabel>
-          <coverage>0.55</coverage>
+          <customLabel>exoskeleton</customLabel>
+          <coverage>0.30</coverage>
           <groups>
             <li>Torso</li>
           </groups>

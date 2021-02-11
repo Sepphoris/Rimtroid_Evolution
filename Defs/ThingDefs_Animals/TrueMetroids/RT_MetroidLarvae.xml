@@ -18,7 +18,7 @@
 		  <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
 		  <ArmorRating_Heat>1</ArmorRating_Heat>
-		  <MoveSpeed>2</MoveSpeed>
+		  <MoveSpeed>3</MoveSpeed>
 		  <MarketValue>120</MarketValue>
 		  <ComfyTemperatureMin>12</ComfyTemperatureMin>
 		  <ComfyTemperatureMax>160</ComfyTemperatureMax>

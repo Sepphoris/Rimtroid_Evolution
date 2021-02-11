@@ -98,6 +98,10 @@ to be made to allow hediff effects from other mods.
         <painFactor>0.7</painFactor>
 	    <capMods>
 				<li>
+					<capacity>Moving</capacity>
+					<offset>0.2</offset>
+				</li>
+				<li>
 					<capacity>Eating</capacity>
 					<offset>-0.2</offset>
 				</li>
@@ -162,7 +166,7 @@ to be made to allow hediff effects from other mods.
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0</offset>
+					<offset>0.4</offset>
 				</li>
       	<li>
 					<capacity>Eating</capacity>
@@ -229,7 +233,7 @@ to be made to allow hediff effects from other mods.
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0.2</offset>
+					<offset>0.7</offset>
 				</li>
       	<li>
 					<capacity>Eating</capacity>
@@ -300,7 +304,7 @@ to be made to allow hediff effects from other mods.
 	    <capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0.8</offset>
+					<offset>1.2</offset>
 				</li>
       	<li>
 					<capacity>Eating</capacity>
@@ -376,7 +380,7 @@ to be made to allow hediff effects from other mods.
 			<capMods>
 				<li>
 					<capacity>Moving</capacity>
-					<offset>0.5</offset>
+					<offset>0.85</offset>
 				</li>
       	<li>
 					<capacity>Eating</capacity>
