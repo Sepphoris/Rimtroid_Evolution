@@ -7,7 +7,6 @@ NEXT UPDATE FEATURES
 ===============
 IMMEDIATE ADDITIONS:
 ===============
-	-FIX GAMMA ELECTRIC BURST: Doesn't disappear
 	-ENERGY EXTRACT: An early-game gel that can be extracted from corpses. Used to make nutrient solutions, fill energy lanterns, and acts as an early game food source for metroids. Always expires after three days, regardless of temperature.
 	-ENERGY LANTERN: Rename current lantern to Energy Pylon. Energy Lanterns are similar, but they must be fueled and can only feed younger metroids.
 	-Food bar does not go down when a metroid is resting.
