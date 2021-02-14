@@ -3,21 +3,23 @@
 
   <FactionDef ParentName="FactionBase">
 		<defName>RT_Metroids</defName>
-		<label>global metroid infestation</label>
-		<description>A world-spanning hivemind of wild metroids, consisting of many different types and stages. Metroids have been specifically designed as ravenous bioweapon, and will stop at nothing before they destroy the entire planetary ecology.</description>
+		<label>global metroid collective</label>
+		<description>A world-spanning hivemind consisting of wild metroids, deployed by Glitterworld scientists as a long-term study project. Metroids have been specifically designed as ravenous bioweapon, and will stop at nothing before they destroy the entire planetary ecology.\n
+This particular hivemind contains metroids of nearly every size, breed, and archetype.</description>
 		<pawnsPlural>metroids</pawnsPlural>
 		<pawnSingular>metroid</pawnSingular>
 		<!--Graphic Data-->
-		<factionIconPath>World/MetroidFactions/MixedNest</factionIconPath>
+		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<!--Settlement Data-->
-		<fixedName>Metroid Hive</fixedName>
-    <settlementGenerationWeight>0.5</settlementGenerationWeight>
+		<!--<fixedName>Metroid Hive</fixedName>-->
+    <settlementGenerationWeight>0.1</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<maxCountAtGameStart>6</maxCountAtGameStart>
 		<canMakeRandomly>true</canMakeRandomly>
-    <!--<factionNameMaker>RT_MainMetroidFactionNames</factionNameMaker>
-    <settlementNameMaker>RT_MainMetroidSettlementNames</settlementNameMaker>-->
+    <leaderTitle>Brood Mother</leaderTitle>
+    <factionNameMaker>RT_MainMetroidFactionNames</factionNameMaker>
+    <settlementNameMaker>RT_MainMetroidSettlementNames</settlementNameMaker>
 		<!--Raid Data-->
 		<permanentEnemy>true</permanentEnemy>
     <canSiege>false</canSiege>
