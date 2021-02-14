@@ -24,9 +24,10 @@ namespace RT_Rimtroid
             }
             PawnKindDef metroidlarvae = PawnKindDef.Named("RT_MetroidLarvae");
 
-            float num = StorytellerUtility.DefaultThreatPointsNow(map);
+            float num = StorytellerUtility.DefaultThreatPointsNow(map) / 4;
             int num2 = GenMath.RoundRandom(num / metroidlarvae.combatPower);
-            int max = Rand.RangeInclusive(2, 4);
+            int min = Rand.RangeInclusive(3, 4);
+            int max = Rand.RangeInclusive(4, 9);
             num2 = Mathf.Clamp(num2, 1, max);
             int num3 = Rand.RangeInclusive(150000, 210000);
             IntVec3 invalid = IntVec3.Invalid;

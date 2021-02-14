@@ -235,7 +235,7 @@
 		<defName>RT_GammaMetroid</defName>
 		<label>Gamma metroid</label>
 		<race>RT_GammaMetroid</race>
-		<combatPower>450</combatPower>
+		<combatPower>400</combatPower>
 		<ecoSystemWeight>2.2</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>

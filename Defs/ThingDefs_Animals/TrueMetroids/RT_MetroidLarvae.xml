@@ -258,7 +258,7 @@
 		<defName>RT_MetroidLarvae</defName>
 		<label>metroid</label>
 		<race>RT_MetroidLarvae</race>
-		<combatPower>300</combatPower>
+		<combatPower>200</combatPower>
 		<ecoSystemWeight>1.4</ecoSystemWeight>
 		<wildGroupSize>
 			<min>3</min>

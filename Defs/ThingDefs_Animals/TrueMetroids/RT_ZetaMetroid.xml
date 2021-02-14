@@ -228,7 +228,7 @@
 		<defName>RT_ZetaMetroid</defName>
 		<label>Zeta metroid</label>
 		<race>RT_ZetaMetroid</race>
-		<combatPower>100</combatPower>
+		<combatPower>500</combatPower>
 		<ecoSystemWeight>2.6</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>

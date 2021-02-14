@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--<RulePackDef>
+    <defName>RT_MainMetroidFactionName</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[groupname] Hive</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>groupname->Words/Metroids</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName></defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=12)->Infested [townname_wordgen] Settlement</li>
+        <li>r_name(p=6)->Infested [townname_fixed] Settlement</li>
+        <li>r_name(p=4)->Infested [townname_combo] Settlement</li>
+        <li>r_name->Infested [townname_near] Settlement</li>-->
+</Defs>

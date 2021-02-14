@@ -240,7 +240,7 @@
 		<defName>RT_OmegaMetroid</defName>
 		<label>omega metroid</label>
 		<race>RT_OmegaMetroid</race>
-		<combatPower>1200</combatPower>
+		<combatPower>1500</combatPower>
 		<ecoSystemWeight>3.2</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>

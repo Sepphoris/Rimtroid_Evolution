@@ -98,7 +98,7 @@
 
 		<stages>
 			<li>
-				<restFallFactor>0.3</restFallFactor>
+				<restFallFactor>0.2</restFallFactor>
 			</li>
 		</stages>
 	</HediffDef>

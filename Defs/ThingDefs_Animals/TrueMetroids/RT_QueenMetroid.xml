@@ -240,7 +240,7 @@
 		<defName>RT_QueenMetroid</defName>
 		<label>queen metroid</label>
 		<race>RT_QueenMetroid</race>
-		<combatPower>2400</combatPower>
+		<combatPower>3000</combatPower>
 		<ecoSystemWeight>5</ecoSystemWeight>
 		<wildGroupSize>
 			<min>1</min>

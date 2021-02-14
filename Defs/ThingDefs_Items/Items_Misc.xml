@@ -65,6 +65,11 @@ Despite being hermetically sealed, the green liquid within Protus Cells decays w
 			<Steel>4</Steel>
 			<RT_ProtusCell>3</RT_ProtusCell>
 		</costList>
+    <!--<comps>
+      <li Class="RT_ProtusDecay">
+        <daysUntilDecay>1.0</daysUntilDecay>
+      </li>
+    </comps>-->
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
