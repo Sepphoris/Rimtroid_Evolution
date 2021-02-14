@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+
 	<!-- Electric Metroid Lantern, meant for small metroids.-->
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>RT_FeedingStationSE</defName>
-		<label>metroid lantern</label>
-		<description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
-The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>small metroid pylon</label>
+		<description>A small station that exchanges massive amounts of energy for a metroid food source. Small metroids, generally ones still capable of flight, will "feed" from this, instead of hunting down living organisms. Will take damage over time due to metroid interaction.\n
+Due to being a free food source, and smaller metroids being impressionable, small pylons invite both tamed and wild metroids to feed from it, acting as a sort of beacon. This side feature allows the possibility of acquiring new metroids.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
@@ -31,15 +33,15 @@ The design is based off the native environment that metroids initially grew up i
 		</thingCategories>
 		<statBases>
 			<WorkToBuild>3000</WorkToBuild>
-			<MaxHitPoints>150</MaxHitPoints>
-			<Flammability>0.2</Flammability>
-			<Beauty>3</Beauty>
-			<Mass>15</Mass>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>2</Beauty>
+			<Mass>60</Mass>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
-			<Plasteel>5</Plasteel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -68,6 +70,12 @@ The design is based off the native environment that metroids initially grew up i
 			<li Class="RT_Core.MetroidFeedingStationOptions">
 				<options>
 					<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
+					<li>
 						<defName>RT_MetroidLarvae</defName>
 						<powerConsumption>750</powerConsumption>
 						<ticksForConsumption>450</ticksForConsumption>
@@ -79,13 +87,7 @@ The design is based off the native environment that metroids initially grew up i
 						<ticksForConsumption>600</ticksForConsumption>
 						<durabilityDamage>5</durabilityDamage>
 					</li>
-					<li>
-						<defName>RT_BanteeMetroid</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>450</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
-					</li>
-					<li>
+					<!--<li>
 						<defName>RT_GammaMetroid</defName>
 						<powerConsumption>1750</powerConsumption>
 						<ticksForConsumption>600</ticksForConsumption>
@@ -102,7 +104,7 @@ The design is based off the native environment that metroids initially grew up i
 						<powerConsumption>3500</powerConsumption>
 						<ticksForConsumption>600</ticksForConsumption>
 						<durabilityDamage>8</durabilityDamage>
-					</li>
+					</li>-->
 					<!--<li>
 						<defName>RT_QueenMetroid</defName>
 						<powerConsumption>500</powerConsumption>
@@ -118,9 +120,10 @@ The design is based off the native environment that metroids initially grew up i
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>RT_FeedingStationSF</defName>
-		<label>fueled metroid lantern</label>
-		<description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
-The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>small metroid pylon (refuelable)</label>
+		<description>A small pylon that uses Protus Cells and Aeion Extract in order to provide a metroid food source. Small metroids, generally ones still capable of flight, will "feed" from this, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+Due to being a free food source, and smaller metroid being impressionable, small pylons invite both tamed and wild metroids to feed from it, acting as a sort of beacon. This side feature allows the possibility of acquiring new metroids.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
@@ -144,15 +147,15 @@ The design is based off the native environment that metroids initially grew up i
 		</thingCategories>
 		<statBases>
 			<WorkToBuild>3000</WorkToBuild>
-			<MaxHitPoints>150</MaxHitPoints>
-			<Flammability>0.2</Flammability>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.1</Flammability>
 			<Beauty>3</Beauty>
-			<Mass>15</Mass>
+			<Mass>60</Mass>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
-			<Plasteel>5</Plasteel>
-			<ComponentIndustrial>5</ComponentIndustrial>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -160,22 +163,22 @@ The design is based off the native environment that metroids initially grew up i
 				<glowColor>(217,217,217,0)</glowColor>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelCapacity>150.0</fuelCapacity>
-				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+				<fuelCapacity>10</fuelCapacity>
+				<fuelConsumptionRate>10.0</fuelConsumptionRate>
+				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+				<initialFuelPercent>0</initialFuelPercent>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
 					</thingDefs>
 				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>1</autoRefuelPercent>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>20</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
-				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
-				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+				<drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 			</li>
-			<li Class="CompProperties_Flickable"/>
 		</comps>
 		<pathCost>25</pathCost>
 		<passability>Standable</passability>
@@ -192,6 +195,12 @@ The design is based off the native environment that metroids initially grew up i
 			<li Class="RT_Core.MetroidFeedingStationOptions">
 				<options>
 					<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
+					<li>
 						<defName>RT_MetroidLarvae</defName>
 						<powerConsumption>750</powerConsumption>
 						<ticksForConsumption>450</ticksForConsumption>
@@ -203,13 +212,7 @@ The design is based off the native environment that metroids initially grew up i
 						<ticksForConsumption>600</ticksForConsumption>
 						<durabilityDamage>5</durabilityDamage>
 					</li>
-					<li>
-						<defName>RT_BanteeMetroid</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>450</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
-					</li>
-					<li>
+					<!--<li>
 						<defName>RT_GammaMetroid</defName>
 						<powerConsumption>1750</powerConsumption>
 						<ticksForConsumption>600</ticksForConsumption>
@@ -226,7 +229,7 @@ The design is based off the native environment that metroids initially grew up i
 						<powerConsumption>3500</powerConsumption>
 						<ticksForConsumption>600</ticksForConsumption>
 						<durabilityDamage>8</durabilityDamage>
-					</li>
+					</li>-->
 					<!--<li>
 						<defName>RT_QueenMetroid</defName>
 						<powerConsumption>500</powerConsumption>
@@ -242,9 +245,10 @@ The design is based off the native environment that metroids initially grew up i
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>RT_FeedingStationLE</defName>
-		<label>metroid pylon</label>
-		<description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
-The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>large metroid pylon</label>
+		<description>A large, stationary pylon that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+		This particular pylon has been specifically designed for usage by larger metroid variants; smaller metroids (Bantees, Larvae, and Alphas) can not use this due to the sizing, and require a smaller pylon instead.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
@@ -267,15 +271,15 @@ The design is based off the native environment that metroids initially grew up i
 			<li>BuildingsMisc</li>
 		</thingCategories>
 		<statBases>
-			<WorkToBuild>3000</WorkToBuild>
-			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>0.2</Flammability>
 			<Beauty>3</Beauty>
-			<Mass>15</Mass>
+			<Mass>120</Mass>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
-			<Plasteel>5</Plasteel>
+			<Steel>300</Steel>
+			<Plasteel>100</Plasteel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<comps>
@@ -303,10 +307,16 @@ The design is based off the native environment that metroids initially grew up i
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<canOverlapZones>true</canOverlapZones>
-		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<modExtensions>
 			<li Class="RT_Core.MetroidFeedingStationOptions">
 				<options>
+					<!--<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
 					<li>
 						<defName>RT_MetroidLarvae</defName>
 						<powerConsumption>750</powerConsumption>
@@ -318,13 +328,7 @@ The design is based off the native environment that metroids initially grew up i
 						<powerConsumption>1250</powerConsumption>
 						<ticksForConsumption>600</ticksForConsumption>
 						<durabilityDamage>5</durabilityDamage>
-					</li>
-					<li>
-						<defName>RT_BanteeMetroid</defName>
-						<powerConsumption>500</powerConsumption>
-						<ticksForConsumption>450</ticksForConsumption>
-						<durabilityDamage>3</durabilityDamage>
-					</li>
+					</li>-->
 					<li>
 						<defName>RT_GammaMetroid</defName>
 						<powerConsumption>1750</powerConsumption>
@@ -358,9 +362,10 @@ The design is based off the native environment that metroids initially grew up i
 
 	<ThingDef ParentName="BuildingBase">
 		<defName>RT_FeedingStationLF</defName>
-		<label>metroid pylon</label>
-		<description>A large, stationary lantern that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
-The design is based off the native environment that metroids initially grew up in. This 'homey' appearance invites both wild and tamed metroids to feed from it, and is someone pleasuarable to look at.</description>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>Large metroid pylon (refuelable)</label>
+		<description>A large, stationary pylon that uses large amounts of Protus Cells and Aeion Extract in order to provide a metroid food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+		This particular pylon has been specifically designed for usage by larger metroid variants; smaller metroids (Bantees, Larvae, and Alphas) can not use this due to the sizing, and require a smaller pylon instead.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
@@ -383,15 +388,15 @@ The design is based off the native environment that metroids initially grew up i
 			<li>BuildingsMisc</li>
 		</thingCategories>
 		<statBases>
-			<WorkToBuild>3000</WorkToBuild>
-			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>3500</WorkToBuild>
+			<MaxHitPoints>400</MaxHitPoints>
 			<Flammability>0.2</Flammability>
 			<Beauty>3</Beauty>
-			<Mass>15</Mass>
+			<Mass>120</Mass>
 		</statBases>
 		<costList>
-			<Steel>150</Steel>
-			<Plasteel>5</Plasteel>
+			<Steel>300</Steel>
+			<Plasteel>100</Plasteel>
 			<ComponentIndustrial>5</ComponentIndustrial>
 		</costList>
 		<comps>
@@ -400,19 +405,20 @@ The design is based off the native environment that metroids initially grew up i
 				<glowColor>(217,217,217,0)</glowColor>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelCapacity>150.0</fuelCapacity>
-				<targetFuelLevelConfigurable>true</targetFuelLevelConfigurable>
-				<initialConfigurableTargetFuelLevel>75</initialConfigurableTargetFuelLevel>
+				<fuelCapacity>20</fuelCapacity>
+				<fuelConsumptionRate>10.0</fuelConsumptionRate>
+				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+				<initialFuelPercent>0</initialFuelPercent>
 				<fuelFilter>
 					<thingDefs>
 						<li>Chemfuel</li>
 					</thingDefs>
 				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>1</autoRefuelPercent>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>20</autoRefuelPercent>
 				<showFuelGizmo>true</showFuelGizmo>
-				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
-				<drawFuelGaugeInMap>true</drawFuelGaugeInMap>
+				<drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 			</li>
 		</comps>
@@ -429,21 +435,15 @@ The design is based off the native environment that metroids initially grew up i
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<canOverlapZones>true</canOverlapZones>
-		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<modExtensions>
 			<li Class="RT_Core.MetroidFeedingStationOptions">
 				<options>
-					<li>
+					<!--<li>
 						<defName>RT_MetroidLarvae</defName>
 						<powerConsumption>750</powerConsumption>
 						<ticksForConsumption>450</ticksForConsumption>
 						<durabilityDamage>4</durabilityDamage>
-					</li>
-					<li>
-						<defName>RT_AlphaMetroid</defName>
-						<powerConsumption>1250</powerConsumption>
-						<ticksForConsumption>600</ticksForConsumption>
-						<durabilityDamage>5</durabilityDamage>
 					</li>
 					<li>
 						<defName>RT_BanteeMetroid</defName>
@@ -451,6 +451,12 @@ The design is based off the native environment that metroids initially grew up i
 						<ticksForConsumption>450</ticksForConsumption>
 						<durabilityDamage>3</durabilityDamage>
 					</li>
+					<li>
+						<defName>RT_AlphaMetroid</defName>
+						<powerConsumption>1250</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>5</durabilityDamage>
+					</li>-->
 					<li>
 						<defName>RT_GammaMetroid</defName>
 						<powerConsumption>1750</powerConsumption>

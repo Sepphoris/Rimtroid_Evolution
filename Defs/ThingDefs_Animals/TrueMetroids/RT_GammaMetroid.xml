@@ -116,8 +116,8 @@
       	</li>
       <li Class="RT_Core.CompProperties_AnimalProduct">
 				<resourceDef>RT_Bioresin</resourceDef>
-				<gatheringIntervalDays>8</gatheringIntervalDays>
-				<resourceAmount>4</resourceAmount>
+				<gatheringIntervalDays>30</gatheringIntervalDays>
+				<resourceAmount>30</resourceAmount>
 				<customResourceString>RT_BioResinDesc</customResourceString>
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
