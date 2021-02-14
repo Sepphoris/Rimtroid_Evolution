@@ -38,4 +38,47 @@
     <workSkill>Crafting</workSkill>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>RT_ProtusCellRecipe</defName>
+    <label>make protus cells (temporary recipe)</label>
+    <description>Extract biojuice from corpses to make protus cells</description>
+    <jobString>Making protus cells.</jobString>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <workSkill>Intellectual</workSkill>		
+    <workAmount>1000</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Corpses</li>
+      </categories>
+      <disallowedCategories>
+        <li>CorpsesMechanoid</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+		<recipeUsers Inherit="false">
+			<li>DrugLab</li>
+		</recipeUsers>
+    <products>
+      <RT_ProtusCell>3</RT_ProtusCell>
+    </products>
+    <!--<researchPrerequisite>RT_MetroidKeeping</researchPrerequisite>-->
+  </RecipeDef>
+
 </Defs>

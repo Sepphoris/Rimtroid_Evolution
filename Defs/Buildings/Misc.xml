@@ -138,7 +138,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		</graphicData>
 		<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
 		<size>(1,2)</size>
-		<fillPercent>0.5</fillPercent>
+		<fillPercent>0</fillPercent>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<minifiedDef>MinifiedThing</minifiedDef>
@@ -163,18 +163,18 @@ Due to being a free food source, and smaller metroid being impressionable, small
 				<glowColor>(217,217,217,0)</glowColor>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelCapacity>10</fuelCapacity>
-				<fuelConsumptionRate>10.0</fuelConsumptionRate>
+				<fuelCapacity>15</fuelCapacity>
+				<fuelConsumptionRate>5</fuelConsumptionRate>
 				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
 				<initialFuelPercent>0</initialFuelPercent>
 				<fuelFilter>
 					<thingDefs>
-						<li>Chemfuel</li>
+						<li>RT_ProtusCell</li>
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
 				<autoRefuelPercent>20</autoRefuelPercent>
-				<showFuelGizmo>true</showFuelGizmo>
+				<showFuelGizmo>false</showFuelGizmo>
 				<drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
@@ -405,18 +405,18 @@ Due to being a free food source, and smaller metroid being impressionable, small
 				<glowColor>(217,217,217,0)</glowColor>
 			</li>
 			<li Class="CompProperties_Refuelable">
-				<fuelCapacity>20</fuelCapacity>
-				<fuelConsumptionRate>10.0</fuelConsumptionRate>
+				<fuelCapacity>15</fuelCapacity>
+				<fuelConsumptionRate>5</fuelConsumptionRate>
 				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
 				<initialFuelPercent>0</initialFuelPercent>
 				<fuelFilter>
 					<thingDefs>
-						<li>Chemfuel</li>
+						<li>RT_ProtusCell</li>
 					</thingDefs>
 				</fuelFilter>
 				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
 				<autoRefuelPercent>20</autoRefuelPercent>
-				<showFuelGizmo>true</showFuelGizmo>
+				<showFuelGizmo>false</showFuelGizmo>
 				<drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
