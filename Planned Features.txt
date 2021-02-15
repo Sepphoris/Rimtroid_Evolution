@@ -7,14 +7,11 @@ NEXT UPDATE FEATURES
 ===============
 IMMEDIATE ADDITIONS:
 ===============
-	-ENERGY EXTRACT: An early-game gel that can be extracted from corpses. Used to make nutrient solutions, fill energy lanterns, and acts as an early game food source for metroids. Always expires after three days, regardless of temperature.
-	-ENERGY LANTERN: Rename current lantern to Energy Pylon. Energy Lanterns are similar, but they must be fueled and can only feed younger metroids.
 	-Food bar does not go down when a metroid is resting.
 	-Metroids heal from malnutrition 200% faster.
 	-Age comp must be removed and re-added after each evolution.
 	-Metroids that reach next evolution must be given 100% food.
 	-Metroids should not vomit or recieve the sand/gravel/dirt attack.
-	-Metroids should feed on prisoners without the prisoners getting angry.
 	-Wild metroids shouldn't attack other metroids.
 	-Wild Omega metroids only appear through events.
 	-Metroids should not berserk in their sleep.
@@ -22,8 +19,24 @@ IMMEDIATE ADDITIONS:
 	-Alpha Metroids bombs must be designated to be placed on a spot.
 
 
-
-
+===============
+METROID QUEEN EVENTS:
+===============
+	-Event upon the Metroid Queen being slain: "The Metroid Queen, <IDNumber> has been slain! Wild metroids are now in disorder, and their activity has been drastically impacted. Settlements all over the world will be celebrating this momentous occasion."
+	
+	-Event where faction celebrates the Metroid Queen being slain: "<FriendlyFaction> has decided to throw a party in lieu of the Metroid Queen's defeat! They humbly ask the presentation of <Pawn>, being referred to as 'Queenslayer'. Multiple other factions will be there, allowing for fruitful trade deals and enormous opportunity for improving relations."
+	
+	-Event where metroids start reorganizing: "Metroids all over the globe have suddenly began becoming more active, spreading around at abnormal rates, conducting hunting parties far more often, and appearing to not only to resume their organized mentality, but has "improved" it in many ways, such as engaging smart tactics, having stronger kill squads, and bolstering location defenses. What this ultimately alludes to is yet unclear, but it would be wise to make sure you are prepared for the return of metroid activity."
+	
+	-Event where a new queen is sighted: "A new Metroid Queen has been sighted by <FriendlyFaction>! While the last one was 100% certainly killed, it appears that another one has taken it's place in due time. The location of the new queen has been globally identified as <NewMetroidSettlement>, but be wary; with the new mentality the metroid brood has adopted, slaying the new Queen will be a challenge on another level."
+	
+	-Event where second Queen is slain: "The newest Metroid Queen has been slain. Metroids are once again in dispersion, and their ability to coordinate groups together has been heavily impacted. Another Queen is bound to appear in time, but people will no doubt enjoy the downtime now available."
+	
+	-Player's own Omega is becoming a Queen: "<OmegaName> has fallen into an unshakable catatonic state for no apparent reason. The condition seems temporary, but <OmegaName> will need to be manually taken care of until it passes."
+	
+	-Player's Omega enters a massive shell: "<OmegaName> has weaved a massive "cocoon" of sorts around itself, preventing anyone from accessing it. Local and distant metroids have also taken notice, and are appearing to 'guard' the strange formation, only leaving to feed. You can leave the cocoon to it's natural course, or destroy it, but beware; any metroids around - including tamed ones - are likely to defend it."
+	
+	-Player's Omega turns into a Queen: "<OmegaName>'s cocoon has hatched, and has presented something truly awestriking; a brand new Metroid Queen. While no longer obedient, it seems to remember the colony, and doesn't seem to be hostile. The queen will stick near the colony until it has gained sufficient strength, and then leave. During this time, other metroids will enter the area and join up with it. You can either kill off the Queen Metroid before it leaves, or let it strengthen and let it go on to command the local hive. Either choice will have both negative and positive consequences."
 
 
 ===============
