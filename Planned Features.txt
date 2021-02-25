@@ -18,6 +18,14 @@ IMMEDIATE ADDITIONS:
 	
 	-Alpha Metroids bombs must be designated to be placed on a spot.
 
+	
+===============
+BUILDINGS:
+===============
+PROTUS EXTRACTOR - A 2x2 building that creates Protus-based items from corpses.
+METROID PULSER - A 1x2 building that may attract or surpess metroids from entering the area.
+METROID SYNTHESIZER - A 1x3 workstation that is used for crafting metroid implants and consumables.
+METROID VAT: A vat that metroids can be put in. Extracts energy from metroids, providing a power source.
 
 ===============
 METROID QUEEN EVENTS:
