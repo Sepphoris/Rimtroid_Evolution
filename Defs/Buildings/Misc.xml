@@ -13,7 +13,7 @@ Due to being a free food source, and smaller metroids being impressionable, smal
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
-			<texPath>Things/Buildings/FeedingStation</texPath>
+			<texPath>Things/Building/Stations/FeedingStation_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.6, 1, 0.6)</volume>
@@ -22,7 +22,7 @@ Due to being a free food source, and smaller metroids being impressionable, smal
 				<rect>(0.4,0.4,1.2,1.2)</rect>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Small</uiIconPath>
 		<size>(1,2)</size>
 		<fillPercent>0.5</fillPercent>
 		<tickerType>Normal</tickerType>
@@ -127,7 +127,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
-			<texPath>Things/Buildings/FeedingStation</texPath>
+			<texPath>Things/Building/Stations/FeedingStation_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.6, 1, 0.6)</volume>
@@ -136,7 +136,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 				<rect>(0.4,0.4,1.2,1.2)</rect>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Small</uiIconPath>
 		<size>(1,2)</size>
 		<fillPercent>0</fillPercent>
 		<tickerType>Normal</tickerType>
@@ -252,7 +252,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
-			<texPath>Things/Buildings/FeedingStation</texPath>
+			<texPath>Things/Building/Stations/FeedingStation_Large</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.6, 1, 0.6)</volume>
@@ -261,7 +261,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 				<rect>(0.4,0.4,1.2,1.2)</rect>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Large</uiIconPath>
 		<size>(1,2)</size>
 		<fillPercent>0.5</fillPercent>
 		<tickerType>Normal</tickerType>
@@ -369,7 +369,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
-			<texPath>Things/Buildings/FeedingStation</texPath>
+			<texPath>Things/Building/Stations/FeedingStation_Large</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.6, 1, 0.6)</volume>
@@ -378,7 +378,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 				<rect>(0.4,0.4,1.2,1.2)</rect>
 			</damageData>
 		</graphicData>
-		<uiIconPath>Things/Buildings/FeedingStation</uiIconPath>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Large</uiIconPath>
 		<size>(1,2)</size>
 		<fillPercent>0.5</fillPercent>
 		<tickerType>Normal</tickerType>
