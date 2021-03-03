@@ -60,6 +60,10 @@ namespace RT_Rimtroid
             {
                 return false;
             }
+            else if (p.IsAnyMetroid() && food.def != RT_DefOf.RT_ProtusSphere)
+            {
+                return false;
+            }
             return true;
         }
     }
@@ -70,6 +74,10 @@ namespace RT_Rimtroid
         private static bool Prefix(Pawn p, ThingDef food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
         {
             if (food == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
+            {
+                return false;
+            }
+            else if (p.IsAnyMetroid() && food != RT_DefOf.RT_ProtusSphere)
             {
                 return false;
             }
