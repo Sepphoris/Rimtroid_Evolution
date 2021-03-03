@@ -47,6 +47,7 @@
 			<Mass>0.03</Mass>
 			<MarketValue>8</MarketValue>
 		</statBases>
+		<tickerType>Rare</tickerType>
 		<ingestible>
       <foodType>Processed</foodType>
       <preferability>DesperateOnly</preferability>
