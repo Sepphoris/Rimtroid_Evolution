@@ -69,7 +69,6 @@ namespace RT_Rimtroid
             {
                 __result = true;
             }
-            Log.Message("Result: " + __result + " - " + p + " - " + food);
         }
     }
 
@@ -90,40 +89,53 @@ namespace RT_Rimtroid
             {
                 __result = true;
             }
-            Log.Message("Result: " + __result + " - " + p + " - " + food);
         }
     }
 
-    [HarmonyPatch(typeof(RaceProperties), "CanEverEat", new Type[] { typeof(ThingDef)})]
-    public static class CanEverEat_Patch3
+    //[HarmonyPatch(typeof(RaceProperties), "CanEverEat", new Type[] { typeof(ThingDef)})]
+    //public static class CanEverEat_Patch3
+    //{
+    //    private static void Postfix(ref bool __result, RaceProperties __instance, ThingDef t)
+    //    {
+    //        if (t == RT_DefOf.RT_ProtusSphere && !__instance.AnyPawnKind.IsAnyMetroid())
+    //        {
+    //            __result = false;
+    //        }
+    //        else if (__instance.AnyPawnKind.IsAnyMetroid() && t != RT_DefOf.RT_ProtusSphere)
+    //        {
+    //            __result = false;
+    //        }
+    //        else if (__instance.AnyPawnKind.IsAnyMetroid() && t == RT_DefOf.RT_ProtusSphere)
+    //        {
+    //            __result = true;
+    //        }
+    //    }
+    //}
+
+    [HarmonyPatch(typeof(FloatMenuMakerMap), "AddHumanlikeOrders")]
+    public static class AddHumanlikeOrders_Patch
     {
-        private static void Postfix(ref bool __result, RaceProperties __instance, ThingDef t)
+        public static void Postfix(Vector3 clickPos, Pawn pawn, ref List<FloatMenuOption> opts)
         {
-            if (t == RT_DefOf.RT_ProtusSphere && !__instance.AnyPawnKind.IsAnyMetroid())
+            IntVec3 c = IntVec3.FromVector3(clickPos);
+            List<Thing> thingList = c.GetThingList(pawn.Map);
+
+            for (int i = 0; i < thingList.Count; i++)
             {
-                __result = false;
+                var t = thingList[i];
+                if (t.def == RT_DefOf.RT_ProtusSphere && !pawn.IsAnyMetroid())
+                {
+                    string text = (!t.def.ingestible.ingestCommandString.NullOrEmpty()) ? string.Format(t.def.ingestible.ingestCommandString, t.LabelShort) : ((string)"ConsumeThing".Translate(t.LabelShort, t));
+                    FloatMenuOption floatMenuOption = opts.FirstOrDefault((FloatMenuOption x) => x.Label.Contains(text));
+                    if (floatMenuOption != null)
+                    {
+                        floatMenuOption.Label += " (" + "RT_Inedible".Translate() + ")";
+                        floatMenuOption.action = null;
+                    }
+                }
             }
-            else if (__instance.AnyPawnKind.IsAnyMetroid() && t != RT_DefOf.RT_ProtusSphere)
-            {
-                __result = false;
-            }
-            else if (__instance.AnyPawnKind.IsAnyMetroid() && t == RT_DefOf.RT_ProtusSphere)
-            {
-                __result = true;
-            }
-            Log.Message("Result: " + __result + " - " + __instance.AnyPawnKind + " - " + t);
         }
     }
-
-    [HarmonyPatch(typeof(WorkGiver_InteractAnimal), "TakeFoodForAnimalInteractJob")]
-    public static class TakeFoodForAnimalInteractJob
-    {
-        private static void Postfix(ref Job __result, Pawn pawn, Pawn tamee)
-        {
-            Log.Message("Got job: " + __result);
-        }
-    }
-
     //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     //public static class SpawnSetup_Patch
     // {

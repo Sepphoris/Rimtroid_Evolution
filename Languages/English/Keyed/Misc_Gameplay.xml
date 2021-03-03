@@ -12,6 +12,8 @@
 	<RT_NotTameable>This creature is untameable</RT_NotTameable>
 
 	<RT_TimeToEvolution>Years until next stage: {0}</RT_TimeToEvolution>
+	
+	<RT_Inedible>Inedible</RT_Inedible>
 
 	<!--Animal toggles -->
 
