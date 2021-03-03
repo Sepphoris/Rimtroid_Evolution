@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+
+	<!-- Events -->
+	<LetterLabelLostBantee>Lost Bantee Wanders In</LetterLabelLostBantee>
+	<LetterLostBantee>A lone Bantee Metroid has wandered into the area. You can try to tame it, or you can leave it be, but betware; without a maturnal figure, it will not survive for long.</LetterLostBantee>
+
+
+  <LetterLabelLarvaePack>Metroid Larvae Pack</LetterLabelLarvaePack>
+	<LetterLarvaePack>A pack of Metroid Larvae has wandered into the area, searching for food. You can hunt them down, tame them, or choose to let them be, but beware; they will only leave once the area is completely void of life.</LetterLarvaePack>
+
+	<LetterLabelMetroidBeacon>{x} attracted to beacon</LetterLabelMetroidBeacon>
+	<LetterMetroidBeacon>A {x} is investigating this area due to an active metroid beacon. You can attempt to tame it, hunt it down, or wait until it eventually leaves.</LetterMetroidBeacon>
+
+  <LetterLabelInvestigatingPylon>{x} attracted to area</LetterLabelInvestigatingPylon>
+	<LetterInvestigatingPylon>A {x} has moved into the local area, sensing the active metroid pylon. You can try to tame it (if possible), hunt it down, or prevent it from accessing the pylon to encourage it to leave. Additionally, if given time the metroid may grow accustom to the colony, and join willingly.</LetterInvestigatingPylon>
+
+  <LetterLabelAccustomedMetroidJoins>{x} joins</LetterLabelAccustomedMetroidJoins>
+	<LetterAccustomedMetroidJoins>A {x} has grown accustomed to the colony, and is joining the colony willingly.</LetterAccustomedMetroidJoins>
+
+	<LetterLabelAttractedMetroidJoins>{x} joins</LetterLabelAttractedMetroidJoins>
+	<LetterAttractedMetroidJoins>A {x} has recognized the value in the unlimited food potential here, and is joining the colony willingly.</LetterAttractedMetroidJoins>
+</LanguageData>
