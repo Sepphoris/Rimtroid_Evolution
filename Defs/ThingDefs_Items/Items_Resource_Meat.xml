@@ -31,4 +31,34 @@
 			</li>
 		</comps>
 	</ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RT_ProtusSphere</defName>
+		<label>protus sphere</label>
+		<description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
+		<graphicData>
+			<texPath>Things/Resource/RT_ProtusSphere</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+      <Nutrition>0.02</Nutrition>
+			<Flammability>1</Flammability>
+      <FoodPoisonChanceFixedHuman>0.8</FoodPoisonChanceFixedHuman>
+			<Mass>0.03</Mass>
+			<MarketValue>8</MarketValue>
+		</statBases>
+		<ingestible>
+      <foodType>Processed</foodType>
+      <preferability>DesperateOnly</preferability>
+		</ingestible>
+		<thingCategories>
+			<li>Processed</li>
+		</thingCategories>
+    <comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>3</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>

@@ -157,7 +157,7 @@
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
-			<foodType>Kibble</foodType>
+			<foodType>Processed</foodType>
 			<leatherDef>RT_MetroidChitin</leatherDef>
 			<trainability>Advanced</trainability>
 			<maxPreyBodySize>7</maxPreyBodySize>
