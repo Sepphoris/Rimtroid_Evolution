@@ -32,34 +32,64 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="ResourceBase">
-		<defName>RT_ProtusSphere</defName>
-		<label>protus sphere</label>
-		<description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
-		<graphicData>
+ <!--<ThingDef ParentName="ResourceBase">
+    <defName>RT_ProtusSphere</defName>
+    <label>protus sphere</label>
+    <description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
+    <graphicData>
 			<texPath>Things/Resource/RT_ProtusSphere</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<statBases>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>8</DeteriorationRate>
       <Nutrition>0.02</Nutrition>
-			<Flammability>1</Flammability>
       <FoodPoisonChanceFixedHuman>0.8</FoodPoisonChanceFixedHuman>
-			<Mass>0.03</Mass>
-			<MarketValue>8</MarketValue>
-		</statBases>
-		<tickerType>Rare</tickerType>
-		<ingestible>
-      <foodType>Processed</foodType>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
       <preferability>DesperateOnly</preferability>
-		</ingestible>
-		<thingCategories>
-			<li>Foods</li>
-		</thingCategories>
+      <foodType>Processed</foodType>
+    </ingestible>
+  </ThingDef>-->
+
+	  <ThingDef ParentName="OrganicProductBase">
+    <defName>RT_ProtusSphere</defName>
+    <label>protus sphere</label>
+    <description>Animal feed made from mixed meat and plant sources. Humans can eat it, but they really, really don't like it.</description>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Resource/Kibble</texPath>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.015</Mass>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <foodType>Kibble</foodType>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteKibble</tasteThought>
+      <optimalityOffsetHumanlikes>-30</optimalityOffsetHumanlikes>
+      <optimalityOffsetFeedingAnimals>15</optimalityOffsetFeedingAnimals>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
     <comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>3</daysToRotStart>
-				<rotDestroys>true</rotDestroys>
-			</li>
-		</comps>
-	</ThingDef>
+      <li Class="CompProperties_Ingredients" />
+    </comps>
+  </ThingDef>
 </Defs>
