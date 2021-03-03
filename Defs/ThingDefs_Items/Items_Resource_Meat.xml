@@ -62,34 +62,31 @@
     </ingestible>
   </ThingDef>-->
 
-	  <ThingDef ParentName="OrganicProductBase">
+  <ThingDef ParentName="OrganicProductBase">
     <defName>RT_ProtusSphere</defName>
     <label>protus sphere</label>
-    <description>Animal feed made from mixed meat and plant sources. Humans can eat it, but they really, really don't like it.</description>
+    <description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
     <thingCategories>
       <li>Foods</li>
     </thingCategories>
     <graphicData>
-      <texPath>Things/Item/Resource/Kibble</texPath>
+      <texPath>Things/Resource/RT_ProtusSphere</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.6</drawSize>
     </graphicData>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-      <MarketValue>1.1</MarketValue>
-      <Mass>0.015</Mass>
-      <Nutrition>0.05</Nutrition>
-      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.01</Mass>
+      <Nutrition>0.4</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.8</FoodPoisonChanceFixedHuman>
     </statBases>
     <ingestible>
-      <foodType>Kibble</foodType>
+      <foodType>Processed</foodType>
       <preferability>RawBad</preferability>
-      <tasteThought>AteKibble</tasteThought>
-      <optimalityOffsetHumanlikes>-30</optimalityOffsetHumanlikes>
-      <optimalityOffsetFeedingAnimals>15</optimalityOffsetFeedingAnimals>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>RawVegetable_Eat</ingestSound>
     </ingestible>
-    <comps>
-      <li Class="CompProperties_Ingredients" />
-    </comps>
   </ThingDef>
 </Defs>
