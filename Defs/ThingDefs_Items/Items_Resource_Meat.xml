@@ -32,7 +32,7 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="OrganicProductBase">
+	<ThingDef ParentName="ResourceBase">
 		<defName>RT_ProtusSphere</defName>
 		<label>protus sphere</label>
 		<description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
@@ -52,7 +52,7 @@
       <preferability>DesperateOnly</preferability>
 		</ingestible>
 		<thingCategories>
-			<li>Processed</li>
+			<li>Foods</li>
 		</thingCategories>
     <comps>
 			<li Class="CompProperties_Rottable">
