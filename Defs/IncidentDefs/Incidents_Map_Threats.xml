@@ -37,7 +37,7 @@
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
-				<letterDef>ThreatSmall</letterDef>
+				<letterDef>ThreatBig</letterDef>
 				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
 				<letterText>A swarm of metroid larvae has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
 			</li>
@@ -82,7 +82,7 @@
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
-				<letterDef>ThreatSmall</letterDef>
+				<letterDef>ThreatBig</letterDef>
 				<letterTitle>Raid: Metroid Pack</letterTitle>
 				<letterText>A pack of metroids has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
 			</li>
