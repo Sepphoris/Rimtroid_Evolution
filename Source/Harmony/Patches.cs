@@ -5,6 +5,7 @@ using HarmonyLib;
 using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace RT_Rimtroid
 {
@@ -50,20 +51,46 @@ namespace RT_Rimtroid
         }
     }
 
+    [HarmonyPatch(typeof(FoodUtility), "WillEat", new Type[] { typeof(Pawn), typeof(Thing), typeof(Pawn), typeof(bool) })]
+    public static class WillEat_Patch1
+    {
+        private static bool Prefix(Pawn p, Thing food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
+        {
+            if (food?.def == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
+            {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(FoodUtility), "WillEat", new Type[] { typeof(Pawn), typeof(ThingDef), typeof(Pawn), typeof(bool) })]
+    public static class WillEat_Patch2
+    {
+        private static bool Prefix(Pawn p, ThingDef food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
+        {
+            if (food == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
+            {
+                return false;
+            }
+            return true;
+        }
+    }
+
     //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     //public static class SpawnSetup_Patch
-   // {
-        //public static bool Prefix(Pawn __instance, Map map, bool respawningAfterLoad)
-        //{
-            //if (!respawningAfterLoad && GenDate.DaysPassed < 3)
-            //{
-                //if (__instance.def == RT_DefOf.RT_GammaMetroid || __instance.def == RT_DefOf.RT_ZetaMetroid || __instance.def == RT_DefOf.RT_OmegaMetroid)
-                //{
-                    //return false;
-                //}
-            //}
-            //return true;
-        //}
+    // {
+    //public static bool Prefix(Pawn __instance, Map map, bool respawningAfterLoad)
+    //{
+    //if (!respawningAfterLoad && GenDate.DaysPassed < 3)
+    //{
+    //if (__instance.def == RT_DefOf.RT_GammaMetroid || __instance.def == RT_DefOf.RT_ZetaMetroid || __instance.def == RT_DefOf.RT_OmegaMetroid)
+    //{
+    //return false;
+    //}
+    //}
+    //return true;
+    //}
     //}
 
     //[HarmonyPatch(typeof(Pawn), "Kill")]

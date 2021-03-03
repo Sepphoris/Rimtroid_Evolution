@@ -28,5 +28,8 @@ namespace RT_Rimtroid
 		public static SoundDef RT_ElectricBurning;
 
 		public static HediffDef RT_SedativeBuildup;
-		}
+
+		public static ThingDef RT_ProtusSphere;
+
+	}
 }
