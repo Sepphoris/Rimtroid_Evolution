@@ -9,6 +9,16 @@ namespace RT_Rimtroid
 {
     public static class Utils
     {
+        public static bool IsAnyMetroid(this PawnKindDef t)
+        {
+            return (t.race == RT_DefOf.RT_BanteeMetroid ||
+                t.race == RT_DefOf.RT_MetroidLarvae ||
+                t.race == RT_DefOf.RT_AlphaMetroid ||
+                t.race == RT_DefOf.RT_GammaMetroid ||
+                t.race == RT_DefOf.RT_ZetaMetroid ||
+                t.race == RT_DefOf.RT_OmegaMetroid ||
+                t.race == RT_DefOf.RT_QueenMetroid);
+        }
         public static bool IsAnyMetroid(this Thing t)
         {
             return (t.def == RT_DefOf.RT_BanteeMetroid ||

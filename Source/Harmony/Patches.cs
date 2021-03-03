@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using UnityEngine;
 
 namespace RT_Rimtroid
 {
@@ -54,34 +55,72 @@ namespace RT_Rimtroid
     [HarmonyPatch(typeof(FoodUtility), "WillEat", new Type[] { typeof(Pawn), typeof(Thing), typeof(Pawn), typeof(bool) })]
     public static class WillEat_Patch1
     {
-        private static bool Prefix(Pawn p, Thing food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
+        private static void Prefix(ref bool __result, Pawn p, Thing food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
         {
             if (food?.def == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
             {
-                return false;
+                __result = false;
             }
             else if (p.IsAnyMetroid() && food.def != RT_DefOf.RT_ProtusSphere)
             {
-                return false;
+                __result = false;
             }
-            return true;
+            else if (p.IsAnyMetroid() && food.def == RT_DefOf.RT_ProtusSphere)
+            {
+                __result = true;
+            }
+            Log.Message("Result: " + __result + " - " + p + " - " + food);
         }
     }
 
     [HarmonyPatch(typeof(FoodUtility), "WillEat", new Type[] { typeof(Pawn), typeof(ThingDef), typeof(Pawn), typeof(bool) })]
     public static class WillEat_Patch2
     {
-        private static bool Prefix(Pawn p, ThingDef food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
+        private static void Postfix(ref bool __result, Pawn p, ThingDef food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
         {
             if (food == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
             {
-                return false;
+                __result = false;
             }
             else if (p.IsAnyMetroid() && food != RT_DefOf.RT_ProtusSphere)
             {
-                return false;
+                __result = false;
             }
-            return true;
+            else if (p.IsAnyMetroid() && food == RT_DefOf.RT_ProtusSphere)
+            {
+                __result = true;
+            }
+            Log.Message("Result: " + __result + " - " + p + " - " + food);
+        }
+    }
+
+    [HarmonyPatch(typeof(RaceProperties), "CanEverEat", new Type[] { typeof(ThingDef)})]
+    public static class CanEverEat_Patch3
+    {
+        private static void Postfix(ref bool __result, RaceProperties __instance, ThingDef t)
+        {
+            if (t == RT_DefOf.RT_ProtusSphere && !__instance.AnyPawnKind.IsAnyMetroid())
+            {
+                __result = false;
+            }
+            else if (__instance.AnyPawnKind.IsAnyMetroid() && t != RT_DefOf.RT_ProtusSphere)
+            {
+                __result = false;
+            }
+            else if (__instance.AnyPawnKind.IsAnyMetroid() && t == RT_DefOf.RT_ProtusSphere)
+            {
+                __result = true;
+            }
+            Log.Message("Result: " + __result + " - " + __instance.AnyPawnKind + " - " + t);
+        }
+    }
+
+    [HarmonyPatch(typeof(WorkGiver_InteractAnimal), "TakeFoodForAnimalInteractJob")]
+    public static class TakeFoodForAnimalInteractJob
+    {
+        private static void Postfix(ref Job __result, Pawn pawn, Pawn tamee)
+        {
+            Log.Message("Got job: " + __result);
         }
     }
 
