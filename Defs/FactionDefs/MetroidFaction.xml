@@ -9,7 +9,7 @@ This particular hivemind contains metroids of nearly every size, breed, and arch
 		<pawnsPlural>metroids</pawnsPlural>
 		<pawnSingular>metroid</pawnSingular>
 		<!--Graphic Data-->
-		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<factionIconPath>World/WorldObjects/Expanding/MetroidTown</factionIconPath>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<!--Settlement Data-->
 		<!--<fixedName>Metroid Hive</fixedName>-->

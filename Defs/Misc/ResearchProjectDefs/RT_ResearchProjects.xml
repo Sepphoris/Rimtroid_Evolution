@@ -9,7 +9,7 @@
     <baseCost>600</baseCost>
     <techLevel>Medieval</techLevel>
     <researchViewX>0</researchViewX>
-    <researchViewY>0</researchViewY>
+    <researchViewY>3</researchViewY>
 	  <tab>RimtroidEvolution</tab>
   </ResearchProjectDef>
 
@@ -20,8 +20,8 @@
     <description>Learn how to produce and utilize Protus, a strange material that is almost essential in metroid-related items.</description>
     <baseCost>1200</baseCost>
     <techLevel>Medieval</techLevel>
-    <researchViewX>0</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewX>1</researchViewX>
+    <researchViewY>3</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
       <li>RT_MetroidBasics</li>
@@ -35,12 +35,12 @@
     <description>Build machines that can drive off metroids from entering the region... or attract them to it.</description>
     <baseCost>2000</baseCost>
     <techLevel>Industrial</techLevel>
-    <researchViewX>0</researchViewX>
-    <researchViewY>2</researchViewY>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
 	    <li>MicroelectronicsBasics</li>
-      <li>RT_ProtusManipulation</li>
+      <li>RT_MetroidBasics</li>
     </prerequisites>
   </ResearchProjectDef>
 
@@ -51,12 +51,12 @@
     <description>Create weaponry specialized to deal with metroids, whether they are hostile, or your own.</description>
     <baseCost>2400</baseCost>
     <techLevel>Industrial</techLevel>
-    <researchViewX>0</researchViewX>
+    <researchViewX>1</researchViewX>
     <researchViewY>2</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
 	    <li>MicroelectronicsBasics</li>
-      <li>RT_FieldControl</li>
+      <li>RT_MetroidBasics</li>
     </prerequisites>
   </ResearchProjectDef>
 
@@ -67,15 +67,14 @@
     <description>Build metroid pylons, specialized feeding machines that utilize Protus or electricity.</description>
     <baseCost>2400</baseCost>
     <techLevel>Industrial</techLevel>
-    <researchViewX>1</researchViewX>
-    <researchViewY>1</researchViewY>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
       <li>RT_ProtusManipulation</li>
 	    <li>MultiAnalyzer</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
   </ResearchProjectDef>
 
   <!--Metroid Genetics-->
@@ -85,15 +84,16 @@
     <description>Create the Cytobench, the primary station used for manipulating metroid genetics.</description>
     <baseCost>4000</baseCost>
     <techLevel>Industrial</techLevel>
-    <researchViewX>0</researchViewX>
-    <researchViewY>2</researchViewY>
+    <researchViewX>2</researchViewX>
+    <researchViewY>3</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
       <li>RT_ProtusManipulation</li>
-	    <li>Multianalyzer</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
   </ResearchProjectDef>
 
   <!--Starter Metroid Implants; use to create cryoadapters, nutrient regulators, immunity accelerators, and  chrono suspenders-->
@@ -103,18 +103,20 @@
     <description>Create basic injections that directly modifies the metroid system and applies useful effects.</description>
     <baseCost>2800</baseCost>
     <techLevel>Industrial</techLevel>
-    <researchViewX>0</researchViewX>
-    <researchViewY>2</researchViewY>
+    <researchViewX>3</researchViewX>
+    <researchViewY>3</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
 	    <li>RT_Cytobench</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
-    <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
   </ResearchProjectDef>
 
   <!--Basic metroid containment; allows the player to create XCUs of all sizes.-->
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RT_BasicMetroidContainment</defName>
     <label>basic metroid containment</label>
     <description>Learn to create Xenome Containment Units (XCUs), specialized tanks needed for metroid gene editing.</description>
@@ -129,10 +131,10 @@
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <!--Advanced metroid containment; allows the player to create Sonic Barrier Tanks.-->
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RT_AdvancedMetroidContainment</defName>
     <label>advanced metroid containment</label>
     <description>Learn to create Sonic Barrier Tanks, modular containment units that utilize sound to keep metroids docile.</description>
@@ -146,10 +148,10 @@
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <!--Metroid Extraction; allows the player to create tanks that extract energy, protus, and Aeion from metroids.-->
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RT_MetroidExtraction</defName>
     <label>metroid extraction tanks</label>
     <description>Create specialized tanks that extract from metroids, rather than adding.</description>
@@ -163,10 +165,10 @@
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <!--Metroid Fusion Theory; learn the foundation of infusing pawns with metroid DNA.-->
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RT_FusionTheory</defName>
     <label>metroid fusion theory</label>
     <description>Study the potential of fusing metroid DNA with human (or humanoid) DNA.</description>
@@ -182,6 +184,6 @@
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchBuilding>MultiAnalyzer</requiredResearchBuilding>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
   
 </Defs>
