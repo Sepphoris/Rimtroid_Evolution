@@ -31,5 +31,13 @@ namespace RT_Rimtroid
 
 		public static ThingDef RT_ProtusSphere;
 
+		public static JobDef RT_PlaceProximityBomb;
+		public static JobDef RT_PlaceTimedBomb;
+		public static JobDef RT_PlaceHostileOnlyBomb;
+
+		public static ThingDef RT_MetroidBombHostileOnly;
+		public static ThingDef RT_MetroidBombTimed;
+		public static ThingDef RT_MetroidBomb;
+
 	}
 }

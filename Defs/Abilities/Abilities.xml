@@ -111,10 +111,11 @@
 		<label>Electric Bomb</label>
 		<description>Drops a proximity bomb that will detonate on hostiles</description>
 		<abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
-		<targetRequired>false</targetRequired>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
 		<cooldownTicksRange>2100</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<gizmoClass>RT_Rimtroid.Command_MetroidBomb</gizmoClass>
+		<targetRequired>true</targetRequired>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>Things/Misc/MetroidBomb</iconPath>
 		<verbProperties>

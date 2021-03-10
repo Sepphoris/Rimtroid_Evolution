@@ -6,7 +6,7 @@ using Verse;
 
 namespace RT_Rimtroid
 {
-    public class Alpha_ProximityTrap : Building_Trap
+    public class Alpha_Bomb : Building_Trap
     {
 		protected override void SpringSub(Pawn p)
 		{
@@ -44,12 +44,12 @@ namespace RT_Rimtroid
 				var options = this.def.GetModExtension<Alpha_ProximityTrapProperties>();
 				if (options != null)
                 {
-					if (tickCount >= options.explosionTimeout)
+					if (options.explosionTimeout != -1 && tickCount >= options.explosionTimeout)
                     {
 						this.SpringSub(null);
 						tickCount = 0;
 					}
-					else
+					if (options.proximityRange != -1)
                     {
 						foreach (var cell in GenRadial.RadialCellsAround(this.Position, options.proximityRange, true))
 						{
@@ -72,6 +72,28 @@ namespace RT_Rimtroid
 							if (!pawn.Spawned || Find.TickManager.TicksGame % 60 == 0)
 							{
 								this.touchingPawns.Remove(pawn);
+							}
+						}
+					}
+
+					if (options.hostileOnly)
+					{
+						List<Thing> thingList = base.Position.GetThingList(base.Map);
+						for (int i = 0; i < thingList.Count; i++)
+						{
+							Pawn pawn = thingList[i] as Pawn;
+							if (pawn != null && !touchingPawns.Contains(pawn) && pawn.HostileTo(this.Faction))
+							{
+								touchingPawns.Add(pawn);
+								CheckSpring(pawn);
+							}
+						}
+						for (int j = 0; j < touchingPawns.Count; j++)
+						{
+							Pawn pawn2 = touchingPawns[j];
+							if (!pawn2.Spawned || pawn2.Position != base.Position)
+							{
+								touchingPawns.Remove(pawn2);
 							}
 						}
 					}

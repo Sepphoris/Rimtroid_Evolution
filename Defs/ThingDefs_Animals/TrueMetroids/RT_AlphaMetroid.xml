@@ -14,7 +14,7 @@
 			<!-- Internal Stats -->
 			<ToxicSensitivity>0</ToxicSensitivity>
 			<PsychicSensitivity>0</PsychicSensitivity>
-      <Flammability>0</Flammability>
+			<Flammability>0</Flammability>
 			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
 			<ArmorRating_Heat>1</ArmorRating_Heat>
@@ -36,7 +36,7 @@
 				</capacities>
 				<power>10</power>
 				<cooldownTime>2.5</cooldownTime>
-        <chanceFactor>0.8</chanceFactor>
+				<chanceFactor>0.8</chanceFactor>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -56,7 +56,7 @@
 				</capacities>
 				<power>10</power>
 				<cooldownTime>2</cooldownTime>
-        <chanceFactor>0.8</chanceFactor>
+				<chanceFactor>0.8</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -66,51 +66,52 @@
 				</capacities>
 				<power>10</power>
 				<cooldownTime>2</cooldownTime>
-        <chanceFactor>0.8</chanceFactor>
+				<chanceFactor>0.8</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 		</tools>
 		<comps>
-    	<li Class="RT_Core.CompProperties_HostileResponse">
-			<compClass>RT_Core.CompHostileResponse</compClass>
-			<initialHostility>Aggressive</initialHostility>
-      <controllableGizmo>false</controllableGizmo>
-      <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
-			<options>
-				<li>
-					<type>Aggressive</type>
-					<label>Aggressive</label>
-					<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
-					<iconPath>UI/AI/Attack</iconPath>
-					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
-				</li>
-				<li>
-					<type>Defensive</type>
-					<label>Defensive</label>
-					<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
-					<iconPath>UI/AI/Defense</iconPath>
-					<disableMessage>Defensive and disabled.</disableMessage>
-				</li>
-				<li>
-					<type>Passive</type>
-					<label>Pacifist</label>
-					<description>Flees from any hostile actions made against it, even by friendlies.</description>
-					<iconPath>UI/AI/Passive</iconPath>
-					<disableMessage>Passive and disabled.</disableMessage>
-				</li>
-			</options>
-		  </li>
-		  <li Class="RT_Core.CompProperties_AbilityDefinition">
-			  <compClass>RT_Core.CompAbilityDefinition</compClass>
-			  <abilities>
-          <li>
-            <abilityDef>RT_AlphaBomb</abilityDef>
-          </li>
-			  </abilities>
-      </li>
+			<li Class="RT_Core.CompProperties_HostileResponse">
+				<compClass>RT_Core.CompHostileResponse</compClass>
+				<initialHostility>Aggressive</initialHostility>
+				<controllableGizmo>false</controllableGizmo>
+				<friendlyFireMentalState>Manhunter</friendlyFireMentalState>
+				<options>
+					<li>
+						<type>Aggressive</type>
+						<label>Aggressive</label>
+						<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+						<iconPath>UI/AI/Attack</iconPath>
+						<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+					</li>
+					<li>
+						<type>Defensive</type>
+						<label>Defensive</label>
+						<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+						<iconPath>UI/AI/Defense</iconPath>
+						<disableMessage>Defensive and disabled.</disableMessage>
+					</li>
+					<li>
+						<type>Passive</type>
+						<label>Pacifist</label>
+						<description>Flees from any hostile actions made against it, even by friendlies.</description>
+						<iconPath>UI/AI/Passive</iconPath>
+						<disableMessage>Passive and disabled.</disableMessage>
+					</li>
+				</options>
+			</li>
+			<li Class="RT_Core.CompProperties_AbilityDefinition">
+				<compClass>RT_Core.CompAbilityDefinition</compClass>
+				<abilities>
+					<li>
+						<abilityDef>RT_AlphaBomb</abilityDef>
+					</li>
+				</abilities>
+			</li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
 				<timeInYears>200</timeInYears>
 			</li>
+			<li Class="RT_Rimtroid.CompProperties_AlphaBomb"></li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
@@ -124,9 +125,9 @@
 		<!-- Race stats -->
 
 		<race>
-      <!-- Overriding animal think tree -->
-      <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
-      <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+			<!-- Overriding animal think tree -->
+			<thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+			<thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 			<bloodDef>Filth_BloodInsect</bloodDef>
 			<herdAnimal>true</herdAnimal>
 			<body>RT_AlphaBody</body>
@@ -191,7 +192,7 @@
 				</points>
 			</ageGenerationCurve>
 			<wildBiomes>
-			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalRainforest>0.12</TropicalRainforest>
 				<TropicalSwamp>0.09</TropicalSwamp>
 				<TemperateSwamp>0.08</TemperateSwamp>
 				<TemperateForest>0.07</TemperateForest>
@@ -202,17 +203,17 @@
 				<ColdBog>0.001</ColdBog>
 			</wildBiomes>
 		</race>
-    <butcherProducts>
-			  <RT_MetroidGel>20</RT_MetroidGel>
-		  </butcherProducts>
+		<butcherProducts>
+			<RT_MetroidGel>20</RT_MetroidGel>
+		</butcherProducts>
 		<tradeTags>
 			<li>AnimalExotic</li>
 			<li>AnimalInsectSpace</li>
 		</tradeTags>
 		<modExtensions>
-		  <li Class="RT_Core.LegacyModExtension">
-			  <hasAbilities>true</hasAbilities>
-      </li>
+			<li Class="RT_Core.LegacyModExtension">
+				<hasAbilities>true</hasAbilities>
+			</li>
 			<!--<li Class="RT_Core.RT_DesiccatorExt"> </li> -->
 			<li Class="RT_Core.DisableTrainingDegredation"> </li>
 			<!--desicatedDef>huskdefnamehere</desicatedDef-->
@@ -280,9 +281,9 @@
 			</li>
 		</lifeStages>
 		<modExtensions>
-      <li Class="RT_Core.VerbSettingExtension">
-			  <useExtendedVerbs>true</useExtendedVerbs>
-      </li>
+			<li Class="RT_Core.VerbSettingExtension">
+				<useExtendedVerbs>true</useExtendedVerbs>
+			</li>
 			<li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->

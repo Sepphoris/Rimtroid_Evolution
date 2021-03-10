@@ -13,7 +13,23 @@
 		<driverClass>RT_Core.JobDriver_EatFromStation</driverClass>
 		<reportString>feeding from power station.</reportString>
 	</JobDef>  
-
+	
+	<JobDef>
+		<defName>RT_PlaceProximityBomb</defName>
+		<driverClass>RT_Rimtroid.JobDriver_PlaceProximityBomb</driverClass>
+		<reportString>placing a bomb to TargetA.</reportString>
+	</JobDef>  
+	<JobDef>
+		<defName>RT_PlaceTimedBomb</defName>
+		<driverClass>RT_Rimtroid.JobDriver_PlaceTimedBomb</driverClass>
+		<reportString>placing a bomb to TargetA.</reportString>
+	</JobDef>  
+		<JobDef>
+		<defName>RT_PlaceHostileOnlyBomb</defName>
+		<driverClass>RT_Rimtroid.JobDriver_PlaceHostileOnlyBomb</driverClass>
+		<reportString>placing a bomb to TargetA.</reportString>
+	</JobDef>
+	
 	<!-- JobDefs for Gamma Metroids to create web structures-->
 
 	<!--<JobDef>

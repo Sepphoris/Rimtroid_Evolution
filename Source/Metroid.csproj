@@ -301,7 +301,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evolution\Command_MetroidBomb.cs" />
     <Compile Include="Evolution\CompEvolutionTime.cs" />
+    <Compile Include="Evolution\CompAlphaBomb.cs" />
     <Compile Include="Evolution\CompProperties_EvolutionTime.cs" />
     <Compile Include="Evolution\ElectricExplosion.cs" />
     <Compile Include="Evolution\ElectricGenExplosion.cs" />
@@ -318,6 +320,7 @@
     <Compile Include="Evolution\AcidImmunityComp.cs" />
     <Compile Include="Evolution\AcidBuildup.cs" />
     <Compile Include="Evolution\CorpseDesiccation.cs" />
+    <Compile Include="Evolution\JobDriver_PlaceBomb.cs" />
     <Compile Include="Evolution\SedativeProjecileExt.cs" />
     <Compile Include="Evolution\SedativeProjectile.cs" />
     <Compile Include="Evolution\Queen.cs" />
