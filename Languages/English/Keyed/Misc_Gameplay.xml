@@ -23,7 +23,7 @@
 	<RT_DetonatesInPaused>Detonates in {0} (paused)</RT_DetonatesInPaused>
 	<RT_Dissipate>Dissipate</RT_Dissipate>
 	
-	<RT_DefectionHediff>Due to a genetic complication, {PAWN_nameDef} has gained the {0} defect.\n\nThis defect cannot be removed.</RT_DefectionHediff>
+	<RT_DefectionHediff>Due to a genetic complication, {PAWN_nameDef} has been inflicted with the "{0}" defect.\n\nThis defect cannot be removed.</RT_DefectionHediff>
 
 	<!--Animal toggles -->
 

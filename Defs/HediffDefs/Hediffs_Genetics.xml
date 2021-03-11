@@ -25,6 +25,20 @@
 				<hungerRateFactorOffset>1.5</hungerRateFactorOffset>
 			</li>
 		</stages>
+		<modExtensions>
+			<li Class="RT_Rimtroid.HediffDefections">
+				<hediffDefections>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.04</value>
+					</li>
+				</hediffDefections>
+			</li>
+		</modExtensions>
 	</HediffDef>
 
 	<!-- =============== Cryoadapter =============== -->
@@ -55,7 +69,15 @@
 				<hediffDefections>
 					<li>
 						<key>RT_StuntedDefect</key>
-						<value>0.05</value>
+						<value>0.08</value>
+					</li>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.02</value>
 					</li>
 				</hediffDefections>
 			</li>
@@ -91,8 +113,12 @@
 						<value>0.08</value>
 					</li>
 					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
 						<key>RT_CellularDecay</key>
-						<value>0.03</value>
+						<value>0.02</value>
 					</li>
 				</hediffDefections>
 			</li>
@@ -150,6 +176,24 @@
 				</statFactors>
 			</li>
 		</stages>
+		<modExtensions>
+			<li Class="RT_Rimtroid.HediffDefections">
+				<hediffDefections>
+					<li>
+						<key>RT_StuntedDefect</key>
+						<value>0.08</value>
+					</li>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.02</value>
+					</li>
+				</hediffDefections>
+			</li>
+		</modExtensions>
 	</HediffDef>
 
 </Defs>
