@@ -19,23 +19,8 @@ namespace RT_Rimtroid
             base.SpawnSetup(map, respawningAfterLoad);
 			if (!respawningAfterLoad)
             {
-				var options = this.def.GetModExtension<Alpha_ProximityTrapProperties>();
-				if (options != null)
-				{
-					if (options.explosionTimeout != -1)
-					{
-						timeOut = true;
-					}
-					if (options.proximityRange != -1)
-					{
-						proximity = true;
-					}
-
-					if (options.hostileOnly)
-					{
-						hostileOnly = true;
-					}
-				}
+				proximity = true;
+				hostileOnly = true;
 			}
         }
 
@@ -70,65 +55,99 @@ namespace RT_Rimtroid
             {
 				yield return g;
             }
+			if (this.Faction == Faction.OfPlayer)
+            {
+				Command_Toggle command_Toggle = new Command_Toggle();
+				command_Toggle.defaultLabel = "RT_EnableProximityBomb".Translate();
+				command_Toggle.defaultDesc = "RT_EnableProximityBomb".Translate();
+				command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+				command_Toggle.isActive = (() => this.proximity);
+				command_Toggle.toggleAction = delegate
+				{
+					this.proximity = !this.proximity;
+				};
 
-			Command_Toggle command_Toggle = new Command_Toggle();
-			command_Toggle.defaultLabel = "RT_EnableProximityBomb".Translate();
-			command_Toggle.defaultDesc = "RT_EnableProximityBomb".Translate();
-			command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
-			command_Toggle.isActive = (() => this.proximity);
-			command_Toggle.toggleAction = delegate
-			{
-				this.proximity = !this.proximity;
-			};
+				command_Toggle.hotKey = KeyBindingDefOf.Misc3;
+				command_Toggle.turnOffSound = null;
+				command_Toggle.turnOnSound = null;
+				yield return command_Toggle;
 
-			command_Toggle.hotKey = KeyBindingDefOf.Misc3;
-			command_Toggle.turnOffSound = null;
-			command_Toggle.turnOnSound = null;
-			yield return command_Toggle;
+				Command_Toggle command_Toggle2 = new Command_Toggle();
+				command_Toggle2.defaultLabel = "RT_EnableTimedBomb".Translate();
+				command_Toggle2.defaultDesc = "RT_EnableTimedBomb".Translate();
+				command_Toggle2.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+				command_Toggle2.isActive = (() => this.timeOut);
+				command_Toggle2.toggleAction = delegate
+				{
+					this.timeOut = !this.timeOut;
+				};
 
-			Command_Toggle command_Toggle2 = new Command_Toggle();
-			command_Toggle2.defaultLabel = "RT_EnableTimedBomb".Translate();
-			command_Toggle2.defaultDesc = "RT_EnableTimedBomb".Translate();
-			command_Toggle2.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
-			command_Toggle2.isActive = (() => this.timeOut);
-			command_Toggle2.toggleAction = delegate
-			{
-				this.timeOut = !this.timeOut;
-			};
+				command_Toggle2.hotKey = KeyBindingDefOf.Misc4;
+				command_Toggle2.turnOffSound = null;
+				command_Toggle2.turnOnSound = null;
+				yield return command_Toggle2;
 
-			command_Toggle2.hotKey = KeyBindingDefOf.Misc4;
-			command_Toggle2.turnOffSound = null;
-			command_Toggle2.turnOnSound = null;
-			yield return command_Toggle2;
+				Command_Toggle command_Toggle3 = new Command_Toggle();
+				command_Toggle3.defaultLabel = "RT_EnableHostileOnlyBomb".Translate();
+				command_Toggle3.defaultDesc = "RT_EnableHostileOnlyBomb".Translate();
+				command_Toggle3.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+				command_Toggle3.isActive = (() => this.hostileOnly);
+				command_Toggle3.toggleAction = delegate
+				{
+					this.hostileOnly = !this.hostileOnly;
+				};
 
-			Command_Toggle command_Toggle3 = new Command_Toggle();
-			command_Toggle3.defaultLabel = "RT_EnableHostileOnlyBomb".Translate();
-			command_Toggle3.defaultDesc = "RT_EnableHostileOnlyBomb".Translate();
-			command_Toggle3.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
-			command_Toggle3.isActive = (() => this.hostileOnly);
-			command_Toggle3.toggleAction = delegate
-			{
-				this.hostileOnly = !this.hostileOnly;
-			};
+				command_Toggle3.hotKey = KeyBindingDefOf.Misc5;
+				command_Toggle3.turnOffSound = null;
+				command_Toggle3.turnOnSound = null;
+				yield return command_Toggle3;
 
-			command_Toggle3.hotKey = KeyBindingDefOf.Misc5;
-			command_Toggle3.turnOffSound = null;
-			command_Toggle3.turnOnSound = null;
-			yield return command_Toggle3;
+				Command_Action command_Action = new Command_Action();
+				command_Action.icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate");
+				command_Action.defaultDesc = "CommandDetonateDesc".Translate();
+				command_Action.action = Command_Detonate;
+				if (GetComp<CompExplosive>().wickStarted)
+				{
+					command_Action.Disable();
+				}
+				command_Action.defaultLabel = "CommandDetonateLabel".Translate();
+				yield return command_Action;
+
+				Command_Action command_Action2 = new Command_Action();
+				command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate");
+				command_Action2.defaultDesc = "RT_Dissipate".Translate();
+				command_Action2.action = Command_Dissipate;
+				command_Action2.defaultLabel = "RT_Dissipate".Translate();
+				yield return command_Action2;
+			}
+
 		}
-        public override void Tick()
+		private void Command_Detonate()
 		{
-			tickCount++;
+			GetComp<CompExplosive>().StartWick();
+		}
+
+		private void Command_Dissipate()
+		{
+			this.Destroy();
+		}
+		public override void Tick()
+		{
 			if (base.Spawned)
 			{
 				var options = this.def.GetModExtension<Alpha_ProximityTrapProperties>();
 				if (options != null)
                 {
-					if (this.timeOut&& tickCount >= options.explosionTimeout)
+					if (this.timeOut) 
 					{
-						this.SpringSub(null);
-						tickCount = 0;
+						tickCount++;
+						if (tickCount >= options.explosionTimeout)
+                        {
+							this.SpringSub(null);
+							tickCount = 0;
+						}
 					}
+
 					if (this.proximity)
 					{
 						foreach (var cell in GenRadial.RadialCellsAround(this.Position, options.proximityRange, true))
@@ -137,11 +156,19 @@ namespace RT_Rimtroid
 							for (int i = 0; i < thingList.Count; i++)
 							{
 								Pawn pawn = thingList[i] as Pawn;
-								if (pawn != null && (this.Faction != null && pawn.Faction != this.Faction || this.Faction == null) && !pawn.IsAnyMetroid()
-									&& (pawn.HostileTo(Faction.OfPlayer) || pawn.Faction == null) && !touchingPawns.Contains(pawn))
+								if (pawn != null && !touchingPawns.Contains(pawn))
 								{
 									touchingPawns.Add(pawn);
-									CheckSpring(pawn);
+									if (hostileOnly && !pawn.HostileTo(Faction.OfPlayer))
+                                    {
+										continue;
+                                    }
+									if ((pawn.IsAlphaMetroid() || pawn.IsBanteeMetroid() || pawn.IsMetroidLarvae()) && !pawn.HostileTo(Faction.OfPlayer))
+                                    {
+										continue;
+                                    }
+									this.SpringSub(null);
+									//CheckSpring(pawn);
 								}
 							}
 						}
@@ -152,28 +179,6 @@ namespace RT_Rimtroid
 							if (!pawn.Spawned || Find.TickManager.TicksGame % 60 == 0)
 							{
 								this.touchingPawns.Remove(pawn);
-							}
-						}
-					}
-
-					if (this.hostileOnly)
-					{
-						List<Thing> thingList = base.Position.GetThingList(base.Map);
-						for (int i = 0; i < thingList.Count; i++)
-						{
-							Pawn pawn = thingList[i] as Pawn;
-							if (pawn != null && !touchingPawns.Contains(pawn) && pawn.HostileTo(this.Faction))
-							{
-								touchingPawns.Add(pawn);
-								CheckSpring(pawn);
-							}
-						}
-						for (int j = 0; j < touchingPawns.Count; j++)
-						{
-							Pawn pawn2 = touchingPawns[j];
-							if (!pawn2.Spawned || pawn2.Position != base.Position)
-							{
-								touchingPawns.Remove(pawn2);
 							}
 						}
 					}
@@ -190,7 +195,26 @@ namespace RT_Rimtroid
 			}
 		}
 
-		private void CheckSpring(Pawn p)
+        public override string GetInspectString()
+        {
+			string text = base.GetInspectString();
+			if (text.Length > 0)
+			{
+				text += "\n";
+			}
+			var options = this.def.GetModExtension<Alpha_ProximityTrapProperties>();
+			if (this.timeOut)
+			{
+				text += "RT_DetonatesIn".Translate((options.explosionTimeout - this.tickCount).ToStringSecondsFromTicks());
+			}
+			else if (this.tickCount > 0)
+            {
+				text += "RT_DetonatesInPaused".Translate((options.explosionTimeout - this.tickCount).ToStringSecondsFromTicks());
+			}
+			return text;
+		}
+
+        private void CheckSpring(Pawn p)
 		{
 			if (Rand.Chance(SpringChance(p)))
 			{

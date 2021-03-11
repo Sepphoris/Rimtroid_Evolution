@@ -119,7 +119,7 @@
 		<modExtensions>
 			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
 				<proximityRange>3</proximityRange> 
-				<explosionTimeout>40000</explosionTimeout>
+				<explosionTimeout>4000</explosionTimeout>
 				<hostileOnly>true</hostileOnly>
 			</li>
 		</modExtensions>
