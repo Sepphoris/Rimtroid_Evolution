@@ -7,7 +7,8 @@ namespace RT_Rimtroid
 {
 	public class CompProperties_AlphaBomb : CompProperties
 	{
-		public CompProperties_AlphaBomb()
+        public int spawnMax;
+        public CompProperties_AlphaBomb()
 		{
 			this.compClass = typeof(CompAlphaBomb);
 		}
@@ -16,29 +17,34 @@ namespace RT_Rimtroid
 	public class CompAlphaBomb : ThingComp
 	{
 		public Pawn Metroid => this.parent as Pawn;
-		public List<Thing> traps;
-        public static int spawnMax = 3;
-		public override string CompInspectStringExtra()
+		public List<Alpha_Bomb> traps;
+
+        public CompProperties_AlphaBomb Props => (CompProperties_AlphaBomb)props;
+
+        public override string CompInspectStringExtra()
 		{
-            return "RT_AvailableBombs".Translate(traps != null ? spawnMax - traps.Count : spawnMax);
+            var trapsCount = traps != null ? traps.Count : 0;
+            return "RT_AvailableBombs".Translate(Props.spawnMax - trapsCount, Props.spawnMax);
 		}
         public void SpawnTrap(ThingDef def)
         {
             if (traps is null)
-                traps = new List<Thing>();
+                traps = new List<Alpha_Bomb>();
 
             traps.RemoveAll(t => t.DestroyedOrNull());
 
-            Thing pTrap = ThingMaker.MakeThing(def);
+            Alpha_Bomb pTrap = ThingMaker.MakeThing(def) as Alpha_Bomb;
+            pTrap.parent = Metroid;
             pTrap.SetFactionDirect(Metroid.Faction);
 
             GenPlace.TryPlaceThing(pTrap, Metroid.Position, Metroid.Map, ThingPlaceMode.Direct);
             traps.Add(pTrap);
 
-            while (traps.Count > spawnMax)
+            while (traps.Count > Props.spawnMax)
             {
-                traps[0].Destroy();
-                traps.RemoveAt(0);
+                var trap = traps[0];
+                trap.Destroy();
+                traps.Remove(trap);
                 Messages.Message("Oldest bomb replaced", MessageTypeDefOf.NeutralEvent);
             }
         }
@@ -50,7 +56,7 @@ namespace RT_Rimtroid
             {
                 if (traps == null)
                 {
-                    traps = new List<Thing>();
+                    traps = new List<Alpha_Bomb>();
                 }
             }
         }

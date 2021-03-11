@@ -8,6 +8,7 @@ namespace RT_Rimtroid
 {
     public class Alpha_Bomb : Building_Trap
     {
+		public Pawn parent;
 		protected override void SpringSub(Pawn p)
 		{
 			Log.Message(p + " - SpringSub", true);
@@ -36,6 +37,7 @@ namespace RT_Rimtroid
 			Scribe_Values.Look(ref hostileOnly, "hostileOnly");
 			Scribe_Values.Look(ref proximity, "proximity");
 			Scribe_Values.Look(ref timeOut, "timeOut");
+			Scribe_References.Look(ref parent, "parent");
 		}
 
 		public override bool ClaimableBy(Faction by)
@@ -131,7 +133,18 @@ namespace RT_Rimtroid
 		{
 			this.Destroy();
 		}
-		public override void Tick()
+
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
+        {
+			var alphaComp = parent?.TryGetComp<CompAlphaBomb>();
+			if (alphaComp != null)
+            {
+				alphaComp.traps.Remove(this);
+            }
+            base.Destroy(mode);
+
+        }
+        public override void Tick()
 		{
 			if (base.Spawned)
 			{
@@ -168,18 +181,38 @@ namespace RT_Rimtroid
 										continue;
                                     }
 									this.SpringSub(null);
-									//CheckSpring(pawn);
 								}
 							}
 						}
-
-						for (int j = 0; j < this.touchingPawns.Count; j++)
+					}
+					else
+                    {
+						List<Thing> thingList = this.Position.GetThingList(base.Map);
+						for (int i = 0; i < thingList.Count; i++)
 						{
-							Pawn pawn = this.touchingPawns[j];
-							if (!pawn.Spawned || Find.TickManager.TicksGame % 60 == 0)
+							Pawn pawn = thingList[i] as Pawn;
+							if (pawn != null && !touchingPawns.Contains(pawn))
 							{
-								this.touchingPawns.Remove(pawn);
+								touchingPawns.Add(pawn);
+								if (hostileOnly && !pawn.HostileTo(Faction.OfPlayer))
+								{
+									continue;
+								}
+								if ((pawn.IsAlphaMetroid() || pawn.IsBanteeMetroid() || pawn.IsMetroidLarvae()) && !pawn.HostileTo(Faction.OfPlayer))
+								{
+									continue;
+								}
+								this.SpringSub(null);
 							}
+						}
+					}
+
+					for (int j = 0; j < this.touchingPawns.Count; j++)
+					{
+						Pawn pawn = this.touchingPawns[j];
+						if (!pawn.Spawned || Find.TickManager.TicksGame % 60 == 0)
+						{
+							this.touchingPawns.Remove(pawn);
 						}
 					}
 				}

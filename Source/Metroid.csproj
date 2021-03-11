@@ -329,7 +329,6 @@
     <Compile Include="Evolution\Ability_Shockwave.cs" />
     <Compile Include="Evolution\MoteMaker.cs" />
     <Compile Include="Evolution\ThingDefSedativeProjectile.cs" />
-    <Compile Include="Harmony\Patches - Copy.cs" />
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Core\RT_DefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

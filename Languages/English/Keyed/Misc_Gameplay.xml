@@ -18,7 +18,7 @@
 	<RT_EnableProximityBomb>Enable proximity bomb</RT_EnableProximityBomb>
 	<RT_EnableTimedBomb>Enable timed bomb</RT_EnableTimedBomb>
 	<RT_EnableHostileOnlyBomb>Enable hostile only bomb</RT_EnableHostileOnlyBomb>
-	<RT_AvailableBombs>Available bombs: {0}</RT_AvailableBombs>
+	<RT_AvailableBombs>Available bombs: {0}/{1}</RT_AvailableBombs>
 	<RT_DetonatesIn>Detonates in {0}</RT_DetonatesIn>
 	<RT_DetonatesInPaused>Detonates in {0} (paused)</RT_DetonatesInPaused>
 	<RT_Dissipate>Dissipate</RT_Dissipate>

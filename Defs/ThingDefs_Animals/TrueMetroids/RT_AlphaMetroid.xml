@@ -111,7 +111,9 @@
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
 				<timeInYears>200</timeInYears>
 			</li>
-			<li Class="RT_Rimtroid.CompProperties_AlphaBomb"></li>
+			<li Class="RT_Rimtroid.CompProperties_AlphaBomb">
+				<spawnMax>3</spawnMax>
+			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
