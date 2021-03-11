@@ -58,7 +58,8 @@ to be made to allow hediff effects from other mods.
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			    <li>
 				    <!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
@@ -126,7 +127,8 @@ to be made to allow hediff effects from other mods.
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
@@ -193,7 +195,8 @@ to be made to allow hediff effects from other mods.
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
@@ -264,7 +267,8 @@ to be made to allow hediff effects from other mods.
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
@@ -339,7 +343,8 @@ to be made to allow hediff effects from other mods.
     </stages>
     <comps>
       <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
         <PossibleEvolutionPaths>
 			<li>
 				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->

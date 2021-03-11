@@ -19,7 +19,7 @@
 	<RecipeDef ParentName="RT_SurgeryMetroid">
 		<defName>RT_InstallGrowthSuspender</defName>
 		<label>Force growth suspension</label>
-		<description>Administer an injection that permanently locks a metroid into it's current stage.</description>
+		<description>Administer an injection that locks a metroid into it's current stage.</description>
 		<workerClass>Recipe_InstallImplant</workerClass>
 		<jobString>Forcing growth suspension.</jobString>
 		<skillRequirements>

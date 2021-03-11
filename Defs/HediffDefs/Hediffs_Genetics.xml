@@ -15,9 +15,10 @@
     <descriptionHyperlinks>
       <ThingDef>RT_GrowthSuspender</ThingDef>
     </descriptionHyperlinks>
-    <label>Stunted</label>
+    <label>Growth Suspension</label>
     <labelNoun>biological growth suspension</labelNoun>
-    <description>A genetically forced adaption that permanently suspends the metroid's body from aging, permanently 'locking' the metroid in it's current stage.</description>
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>A genetically forced condition that permanently suspends the metroid's body from aging, permanently 'locking' the metroid in it's current stage.</description>
 		<initialSeverity>1</initialSeverity>
     <stages>
       <li>
