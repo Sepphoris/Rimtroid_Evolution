@@ -5,23 +5,9 @@ using Verse.AI;
 
 namespace RT_Rimtroid
 {
-	public class JobDriver_PlaceProximityBomb : JobDriver_PlaceBomb
-    {
-        protected override ThingDef BombToPlace => RT_DefOf.RT_MetroidBomb;
-    }
-	public class JobDriver_PlaceTimedBomb : JobDriver_PlaceBomb
-	{
-		protected override ThingDef BombToPlace => RT_DefOf.RT_MetroidBombTimed;
-	}
-	public class JobDriver_PlaceHostileOnlyBomb : JobDriver_PlaceBomb
-	{
-		protected override ThingDef BombToPlace => RT_DefOf.RT_MetroidBombHostileOnly;
-	}
-	public class JobDriver_PlaceBomb : JobDriver
+	public class JobDriver_PlaceAlphaBomb : JobDriver
 	{
 		private float placingWorkDone;
-
-		protected virtual ThingDef BombToPlace { get; }
 		public override bool TryMakePreToilReservations(bool errorOnFailed)
 		{
 			return pawn.Reserve(TargetA, job);
@@ -41,7 +27,7 @@ namespace RT_Rimtroid
 				if (placingWorkDone > 60)
 				{
 					var alphaBombComp = this.pawn.TryGetComp<CompAlphaBomb>();
-					alphaBombComp.SpawnTrap(BombToPlace);
+					alphaBombComp.SpawnTrap(RT_DefOf.RT_MetroidBomb);
 					ReadyForNextToil();
 				}
 			};

@@ -33,10 +33,7 @@ namespace RT_Rimtroid
 				{
 					Find.Targeter.BeginTargeting(ForLoc(ability.pawn), delegate (LocalTargetInfo x)
 					{
-						var list = GetFloatMenuOptions(ability.pawn, x.Cell).ToList();
-						FloatMenu floatMenu = new FloatMenu(list);
-						floatMenu.vanishIfMouseDistant = true;
-						Find.WindowStack.Add(floatMenu);
+						ability.pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, x.Cell));
 					}, null, null);
 					return;
 				}
@@ -45,26 +42,6 @@ namespace RT_Rimtroid
 			{
 				ability.QueueCastingJob(ability.pawn, LocalTargetInfo.Invalid);
 			}
-		}
-
-		public IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn pawn, IntVec3 cell)
-		{
-			Action placeProximityBomb = delegate
-			{
-				pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceProximityBomb, cell));
-			};
-			yield return new FloatMenuOption("RT_PlaceProximityBomb".Translate(), placeProximityBomb);
-			Action placeTimedBomb = delegate
-			{
-				pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceTimedBomb, cell));
-			};
-			yield return new FloatMenuOption("RT_PlaceTimedBomb".Translate(), placeTimedBomb);
-
-			Action placeHostileOnlyBomb = delegate
-			{
-				pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceHostileOnlyBomb, cell));
-			};
-			yield return new FloatMenuOption("RT_PlaceHostileOnlyBomb".Translate(), placeHostileOnlyBomb);
 		}
 	}
 }

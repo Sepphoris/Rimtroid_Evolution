@@ -32,7 +32,7 @@ namespace RT_Rimtroid
             Thing pTrap = ThingMaker.MakeThing(def);
             pTrap.SetFactionDirect(Metroid.Faction);
 
-            GenPlace.TryPlaceThing(pTrap, Metroid.Position, Metroid.Map, ThingPlaceMode.Near);
+            GenPlace.TryPlaceThing(pTrap, Metroid.Position, Metroid.Map, ThingPlaceMode.Direct);
             traps.Add(pTrap);
 
             while (traps.Count > spawnMax)

@@ -17,17 +17,43 @@ namespace RT_Rimtroid
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
+			if (!respawningAfterLoad)
+            {
+				var options = this.def.GetModExtension<Alpha_ProximityTrapProperties>();
+				if (options != null)
+				{
+					if (options.explosionTimeout != -1)
+					{
+						timeOut = true;
+					}
+					if (options.proximityRange != -1)
+					{
+						proximity = true;
+					}
+
+					if (options.hostileOnly)
+					{
+						hostileOnly = true;
+					}
+				}
+			}
         }
 
 		private List<Pawn> touchingPawns = new List<Pawn>();
 
+		private bool hostileOnly;
+		private bool proximity;
+		private bool timeOut;
         public override void ExposeData()
         {
             base.ExposeData();
 			Scribe_Values.Look(ref tickCount, "tickCount");
-        }
+			Scribe_Values.Look(ref hostileOnly, "hostileOnly");
+			Scribe_Values.Look(ref proximity, "proximity");
+			Scribe_Values.Look(ref timeOut, "timeOut");
+		}
 
-        public override bool ClaimableBy(Faction by)
+		public override bool ClaimableBy(Faction by)
         {
 			return false;
         }
@@ -36,6 +62,60 @@ namespace RT_Rimtroid
         {
 			return false;
         }
+
+
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach (var g in base.GetGizmos())
+            {
+				yield return g;
+            }
+
+			Command_Toggle command_Toggle = new Command_Toggle();
+			command_Toggle.defaultLabel = "RT_EnableProximityBomb".Translate();
+			command_Toggle.defaultDesc = "RT_EnableProximityBomb".Translate();
+			command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+			command_Toggle.isActive = (() => this.proximity);
+			command_Toggle.toggleAction = delegate
+			{
+				this.proximity = !this.proximity;
+			};
+
+			command_Toggle.hotKey = KeyBindingDefOf.Misc3;
+			command_Toggle.turnOffSound = null;
+			command_Toggle.turnOnSound = null;
+			yield return command_Toggle;
+
+			Command_Toggle command_Toggle2 = new Command_Toggle();
+			command_Toggle2.defaultLabel = "RT_EnableTimedBomb".Translate();
+			command_Toggle2.defaultDesc = "RT_EnableTimedBomb".Translate();
+			command_Toggle2.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+			command_Toggle2.isActive = (() => this.timeOut);
+			command_Toggle2.toggleAction = delegate
+			{
+				this.timeOut = !this.timeOut;
+			};
+
+			command_Toggle2.hotKey = KeyBindingDefOf.Misc4;
+			command_Toggle2.turnOffSound = null;
+			command_Toggle2.turnOnSound = null;
+			yield return command_Toggle2;
+
+			Command_Toggle command_Toggle3 = new Command_Toggle();
+			command_Toggle3.defaultLabel = "RT_EnableHostileOnlyBomb".Translate();
+			command_Toggle3.defaultDesc = "RT_EnableHostileOnlyBomb".Translate();
+			command_Toggle3.icon = ContentFinder<Texture2D>.Get("UI/Commands/ForPrisoners");
+			command_Toggle3.isActive = (() => this.hostileOnly);
+			command_Toggle3.toggleAction = delegate
+			{
+				this.hostileOnly = !this.hostileOnly;
+			};
+
+			command_Toggle3.hotKey = KeyBindingDefOf.Misc5;
+			command_Toggle3.turnOffSound = null;
+			command_Toggle3.turnOnSound = null;
+			yield return command_Toggle3;
+		}
         public override void Tick()
 		{
 			tickCount++;
@@ -44,13 +124,13 @@ namespace RT_Rimtroid
 				var options = this.def.GetModExtension<Alpha_ProximityTrapProperties>();
 				if (options != null)
                 {
-					if (options.explosionTimeout != -1 && tickCount >= options.explosionTimeout)
-                    {
+					if (this.timeOut&& tickCount >= options.explosionTimeout)
+					{
 						this.SpringSub(null);
 						tickCount = 0;
 					}
-					if (options.proximityRange != -1)
-                    {
+					if (this.proximity)
+					{
 						foreach (var cell in GenRadial.RadialCellsAround(this.Position, options.proximityRange, true))
 						{
 							List<Thing> thingList = cell.GetThingList(base.Map);
@@ -76,7 +156,7 @@ namespace RT_Rimtroid
 						}
 					}
 
-					if (options.hostileOnly)
+					if (this.hostileOnly)
 					{
 						List<Thing> thingList = base.Position.GetThingList(base.Map);
 						for (int i = 0; i < thingList.Count; i++)

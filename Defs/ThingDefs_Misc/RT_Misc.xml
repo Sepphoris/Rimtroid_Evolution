@@ -119,63 +119,7 @@
 		<modExtensions>
 			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
 				<proximityRange>3</proximityRange> 
-			</li>
-		</modExtensions>
-	</ThingDef>
-
-	<ThingDef ParentName="RT_Traps">
-		<defName>RT_MetroidBombTimed</defName>
-		<label>Energy Bomb</label>
-	    <thingClass>RT_Rimtroid.Alpha_Bomb</thingClass>
-		<description>A sphere of concentrated energy, created by an Alpha or Gamma Metroid. Will explode once a creature comes into proximity, or after a small amount of time.</description>
-		<graphicData>
-			<texPath>Things/Misc/MetroidBomb</texPath>
-		</graphicData>
-		<comps>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>3</explosiveRadius>
-				<explosiveDamageType>Flame</explosiveDamageType>
-				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
-				<wickTicks>3</wickTicks>
-				<startWickOnDamageTaken>
-					<li>Bullet</li>
-					<li>Arrow</li>
-					<li>ArrowHighVelocity</li>
-				</startWickOnDamageTaken>
-			</li>
-		</comps>
-		<specialDisplayRadius>3</specialDisplayRadius>
-		<modExtensions>
-			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
 				<explosionTimeout>40000</explosionTimeout>
-			</li>
-		</modExtensions>
-	</ThingDef>
-	
-	<ThingDef ParentName="RT_Traps">
-		<defName>RT_MetroidBombHostileOnly</defName>
-		<label>Energy Bomb</label>
-	    <thingClass>RT_Rimtroid.Alpha_Bomb</thingClass>
-		<description>A sphere of concentrated energy, created by an Alpha or Gamma Metroid. Will explode once a creature comes into proximity, or after a small amount of time.</description>
-		<graphicData>
-			<texPath>Things/Misc/MetroidBomb</texPath>
-		</graphicData>
-		<comps>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>3</explosiveRadius>
-				<explosiveDamageType>Flame</explosiveDamageType>
-				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
-				<wickTicks>3</wickTicks>
-				<startWickOnDamageTaken>
-					<li>Bullet</li>
-					<li>Arrow</li>
-					<li>ArrowHighVelocity</li>
-				</startWickOnDamageTaken>
-			</li>
-		</comps>
-		<specialDisplayRadius>3</specialDisplayRadius>
-		<modExtensions>
-			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
 				<hostileOnly>true</hostileOnly>
 			</li>
 		</modExtensions>

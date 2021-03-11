@@ -121,6 +121,7 @@
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
+			<range>-1</range>
 			<warmupTime>1</warmupTime>
 		</verbProperties>
 		<comps>

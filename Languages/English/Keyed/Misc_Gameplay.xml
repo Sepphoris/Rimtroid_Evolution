@@ -15,9 +15,9 @@
 	
 	<RT_Inedible>Inedible</RT_Inedible>
 	
-	<RT_PlaceProximityBomb>Place proximity bomb</RT_PlaceProximityBomb>
-	<RT_PlaceTimedBomb>Place timed bomb</RT_PlaceTimedBomb>
-	<RT_PlaceHostileOnlyBomb>Place hostile only bomb</RT_PlaceHostileOnlyBomb>
+	<RT_EnableProximityBomb>Enable proximity bomb</RT_EnableProximityBomb>
+	<RT_EnableTimedBomb>Enable timed bomb</RT_EnableTimedBomb>
+	<RT_EnableHostileOnlyBomb>Enable hostile only bomb</RT_EnableHostileOnlyBomb>
 	<RT_AvailableBombs>Available bombs: {0}</RT_AvailableBombs>
 
 	<!--Animal toggles -->
