@@ -92,6 +92,43 @@ namespace RT_Rimtroid
         }
     }
 
+    [HarmonyPatch(typeof(Pawn_HealthTracker), "AddHediff", new Type[]
+    {
+            typeof(Hediff), typeof(BodyPartRecord), typeof(DamageInfo?), typeof(DamageWorker.DamageResult)
+    })]
+    public static class AddHediff_Patch
+    {
+        private static HashSet<HediffDef> hediffDefs = new HashSet<HediffDef>
+        {
+            HediffDef.Named("SandInEyes"),
+            HediffDef.Named("DirtInEyes"),
+            HediffDef.Named("MudInEyes"),
+            HediffDef.Named("GravelInEyes"),
+            HediffDef.Named("WaterInEyes")
+        };
+        private static bool Prefix(Pawn_HealthTracker __instance, Pawn ___pawn, Hediff hediff, BodyPartRecord part = null, DamageInfo? dinfo = null, DamageWorker.DamageResult result = null)
+        {
+            if (hediffDefs.Contains(hediff.def) && ___pawn.IsAnyMetroid())
+            {
+                return false;
+            }
+            var options = hediff.def.GetModExtension<HediffDefections>();
+            if (options != null)
+            {
+                foreach (var hediffData in options.hediffDefections)
+                {
+                    if (Rand.Chance(hediffData.Value))
+                    {
+                        var newHediff = HediffMaker.MakeHediff(hediffData.Key, ___pawn);
+                        ___pawn.health.AddHediff(newHediff);
+                        Messages.Message("RT_DefectionHediff".Translate(hediffData.Key.label, ___pawn.Named("PAWN")), ___pawn, MessageTypeDefOf.NegativeHealthEvent);
+                    }
+                }
+            }
+            return true;
+        }
+    }
+
     //[HarmonyPatch(typeof(RaceProperties), "CanEverEat", new Type[] { typeof(ThingDef)})]
     //public static class CanEverEat_Patch3
     //{
