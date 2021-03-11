@@ -59,11 +59,11 @@
     <defName>RT_GrowthSuspender</defName>
     <label>Metroid Growth Suspender</label>
     <descriptionHyperlinks><HediffDef>RT_GrowthSuspenderHediff</HediffDef></descriptionHyperlinks>
-    <description>An injection that targets the metroid genetic code, "tricking" the body into thinking it has reached full maturity. This permanently interupts the metroid's natural life cycle, forever preventing it from naturally growing to any future stage it may have been able to reach. This can be helpful if you want a specific metroid, or harmful if you intend to evolve metroids further.
+    <description>An injection that targets the metroid genetic code, "tricking" the body into thinking it has reached full maturity. This interrupts the metroid's natural life cycle, preventing it from reaching to any future stage (natural or artificial) that it may have been able to reach. This can be helpful if you want a specific metroid, or harmful if you intend to evolve metroids further.
     
-Unlike most other implants, this can be used on any metroid stage due to it manipulating genetic code, rather than directly attacking it.
+Unlike most other implants, this can be used on any metroid stage due to metroids being suspect to naturally developing this condition. While their immune system may detect the mechanites, this flaw allows the condition to be inflicted with next to no resistance.
       
-This is a permanent operation; any metroid with this alteration will never evolve into another type of metroid, regardless of biological age, external factors, or other genetic changes.</description>
+The effects of this operation will last indefinitely, but can be eliminated with advanced machinery; however, keep in mind that reversing the process is risky, and can lead to severe defects occuring in the metroid.</description>
     <graphicData>
       <texPath>Things/Special/MetroidImplants/GrowthSuspender</texPath>
       <graphicClass>Graphic_Single</graphicClass>
