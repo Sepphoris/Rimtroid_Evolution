@@ -96,7 +96,7 @@
     </requiredResearchFacilities>
   </ResearchProjectDef>
 
-  <!--Starter Metroid Implants; use to create cryoadapters, nutrient regulators, immunity accelerators, and  chrono suspenders-->
+  <!--Starter Metroid Implants; use to create cryoadapters, nutrient regulators, immunity accelerators, and growth suspenders-->
   <ResearchProjectDef>
     <defName>RT_BasicGeneticImplants</defName>
     <label>basic metroid impants</label>

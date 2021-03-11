@@ -8,6 +8,24 @@
 		<isBad>false</isBad>
 	</HediffDef>
 
+		<!--===============Stunted Metroid - Chrono Suspender (a stand-in for all stunted metroids until values are implemented)===============-->
+
+  <HediffDef>
+    <defName>RT_GrowthSuspenderHediff</defName>
+    <descriptionHyperlinks>
+      <ThingDef>RT_GrowthSuspender</ThingDef>
+    </descriptionHyperlinks>
+    <label>Stunted</label>
+    <labelNoun>biological growth suspension</labelNoun>
+    <description>A genetically forced adaption that permanently suspends the metroid's body from aging, permanently 'locking' the metroid in it's current stage.</description>
+		<initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		  </li>
+    </stages>
+</HediffDef>
+
 	<!-- =============== Cryoadapter =============== -->
 
   	<HediffDef>

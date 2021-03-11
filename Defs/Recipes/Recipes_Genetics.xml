@@ -14,6 +14,57 @@
     <anesthetize>true</anesthetize>
 	</RecipeDef>
 
+		<!-- =============== Growth Suspender =============== -->
+
+	<RecipeDef ParentName="RT_SurgeryMetroid">
+		<defName>RT_InstallGrowthSuspender</defName>
+		<label>Force growth suspension</label>
+		<description>Administer an injection that permanently locks a metroid into it's current stage.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Forcing growth suspension.</jobString>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RT_GrowthSuspender</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RT_GrowthSuspender</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<!--<appliedOnFixedBodyParts>
+			<li>RT_Membrane</li>
+		</appliedOnFixedBodyParts>-->
+		<addsHediff>RT_GrowthSuspenderHediff</addsHediff>
+<recipeUsers>
+      <li>RT_BanteeMetroid</li>
+      <li>RT_MetroidLarvae</li>
+			<li>RT_AlphaMetroid</li>
+      <li>RT_GammaMetroid</li>
+      <li>RT_ZetaMetroid</li>
+      <li>RT_OmegaMetroid</li>
+    </recipeUsers>
+	</RecipeDef>
+
 	<!-- =============== Cryoadapter =============== -->
 
 	<RecipeDef ParentName="RT_SurgeryMetroid">
