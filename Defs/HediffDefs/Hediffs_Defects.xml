@@ -1,13 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
- 
- <!--Genetic Hediff coloring-->
-	<HediffDef Name="RT_MetroidAddition" Abstract="True">
-		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
-		<isBad>false</isBad>
-	</HediffDef>
-
 		<!--===============Stunted Metroid - natural defect===============-->
 
   <HediffDef>

@@ -13,6 +13,7 @@ Due to being a free food source, and smaller metroids being impressionable, smal
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
+			<drawOffset>(0,0,0.2)</drawOffset>
 			<texPath>Things/Building/Stations/FeedingStation_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -23,7 +24,6 @@ Due to being a free food source, and smaller metroids being impressionable, smal
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/Stations/FeedingStation_Small</uiIconPath>
-		<size>(1,2)</size>
 		<fillPercent>0.5</fillPercent>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
@@ -55,8 +55,8 @@ Due to being a free food source, and smaller metroids being impressionable, smal
 			</li>
 			<li Class="CompProperties_Flickable"/>
 		</comps>
-		<pathCost>25</pathCost>
-		<passability>Standable</passability>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
 		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
@@ -127,6 +127,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<thingClass>Building</thingClass>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
+			<drawOffset>(0,0,0.2)</drawOffset>
 			<texPath>Things/Building/Stations/FeedingStation_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -137,7 +138,6 @@ Due to being a free food source, and smaller metroid being impressionable, small
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/Stations/FeedingStation_Small</uiIconPath>
-		<size>(1,2)</size>
 		<fillPercent>0</fillPercent>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
@@ -180,8 +180,8 @@ Due to being a free food source, and smaller metroid being impressionable, small
 				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
 			</li>
 		</comps>
-		<pathCost>25</pathCost>
-		<passability>Standable</passability>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
 		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
@@ -251,7 +251,8 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		This particular pylon has been specifically designed for usage by larger metroid variants; smaller metroids (Bantees, Larvae, and Alphas) can not use this due to the sizing, and require a smaller pylon instead.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
-			<drawSize>(1.5,1.5)</drawSize>
+			<drawSize>(2.5,2.5)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
 			<texPath>Things/Building/Stations/FeedingStation_Large</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -262,7 +263,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/Stations/FeedingStation_Large</uiIconPath>
-		<size>(1,2)</size>
+		<size>(2,1)</size>
 		<fillPercent>0.5</fillPercent>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
@@ -297,8 +298,8 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<placeWorkers>
 			<li>PlaceWorker_NotUnderRoof</li>
 		</placeWorkers>
-		<pathCost>25</pathCost>
-		<passability>Standable</passability>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
 		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
@@ -368,7 +369,8 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		This particular pylon has been specifically designed for usage by larger metroid variants; smaller metroids (Bantees, Larvae, and Alphas) can not use this due to the sizing, and require a smaller pylon instead.</description>
 		<thingClass>Building</thingClass>
 		<graphicData>
-			<drawSize>(1.5,1.5)</drawSize>
+			<drawSize>(2.5,2.5)</drawSize>
+			<drawOffset>(0,0,1)</drawOffset>
 			<texPath>Things/Building/Stations/FeedingStation_Large</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
@@ -379,7 +381,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 			</damageData>
 		</graphicData>
 		<uiIconPath>Things/Building/Stations/FeedingStation_Large</uiIconPath>
-		<size>(1,2)</size>
+		<size>(2,1)</size>
 		<fillPercent>0.5</fillPercent>
 		<tickerType>Normal</tickerType>
 		<altitudeLayer>Building</altitudeLayer>
@@ -425,8 +427,8 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<placeWorkers>
 			<li>PlaceWorker_NotUnderRoof</li>
 		</placeWorkers>
-		<pathCost>25</pathCost>
-		<passability>Standable</passability>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
 		<designationCategory>Misc</designationCategory>
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
