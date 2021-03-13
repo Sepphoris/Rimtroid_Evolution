@@ -30,8 +30,8 @@
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
-    <minRewardCount>5</minRewardCount>
-    <thingSetMakerTags><li>RewardStandardHighFreq</li></thingSetMakerTags>
+    <minRewardCount>4</minRewardCount>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
   </ThingDef>
 
 	<!-- =============== Protus Cell =============== -->

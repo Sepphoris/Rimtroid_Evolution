@@ -52,7 +52,7 @@
 		</ingestible>
 		<costList>
 			<Steel>4</Steel>
-			<RT_AeionExtract>1</RT_AeionExtract>
+			<RT_ProtusCell>1</RT_ProtusCell>
 		</costList>
 		<recipeMaker>
       <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>

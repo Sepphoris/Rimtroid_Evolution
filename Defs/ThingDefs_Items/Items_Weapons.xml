@@ -32,7 +32,6 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
-      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
     </recipeMaker>
     <verbs>
       <li>
@@ -65,6 +64,9 @@
         <cooldownTime>2</cooldownTime>
       </li>
     </tools>
+    <researchPrerequisites>
+      <li>RT_MetroidDefenses</li>
+    </researchPrerequisites>
   </ThingDef>
 
 	<!-- Cryo Launcher -->
@@ -100,7 +102,7 @@
       <skillRequirements>
         <Crafting>6</Crafting>
       </skillRequirements>
-      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <researchPrerequisite>RT_MetroidDefenses</researchPrerequisite>
     </recipeMaker>
     <verbs>
       <li>
@@ -140,6 +142,10 @@
       </li>
     </tools>
     <equippedAngleOffset>45</equippedAngleOffset>
+    <researchPrerequisites>
+      <li>RT_MetroidDefenses</li>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
   </ThingDef>
 
 	<!-- Dart Rifle -->
@@ -171,7 +177,6 @@
       <RT_AeionExtract>5</RT_AeionExtract>
     </costList>
     <recipeMaker>
-      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
@@ -219,6 +224,9 @@
       </li>
     </tools>
     <equippedAngleOffset>45</equippedAngleOffset>
+    <researchPrerequisites>
+      <li>RT_MetroidDefenses</li>
+    </researchPrerequisites>
   </ThingDef>
 
 </Defs>

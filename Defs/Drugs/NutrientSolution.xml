@@ -29,6 +29,9 @@
 			<Mass>0.02</Mass>
 		</statBases>
 		<techLevel>Industrial</techLevel>
+		<researchPrerequisites>
+			<li>RT_MetroidBasics</li>
+		</researchPrerequisites>
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
       <foodType>Processed</foodType>

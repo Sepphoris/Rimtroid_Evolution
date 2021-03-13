@@ -61,7 +61,7 @@ Due to being a free food source, and smaller metroids being impressionable, smal
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<researchPrerequisites>
-			<li>MicroelectronicsBasics</li>
+			<li>RT_MetroidPylons</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<canOverlapZones>true</canOverlapZones>
@@ -186,7 +186,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<researchPrerequisites>
-			<li>MicroelectronicsBasics</li>
+			<li>RT_MetroidPylons</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<canOverlapZones>true</canOverlapZones>
@@ -304,7 +304,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<researchPrerequisites>
-			<li>MicroelectronicsBasics</li>
+			<li>RT_MetroidPylons</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<canOverlapZones>true</canOverlapZones>
@@ -433,7 +433,7 @@ Due to being a free food source, and smaller metroid being impressionable, small
 		<rotatable>false</rotatable>
 		<stealable>false</stealable>
 		<researchPrerequisites>
-			<li>MicroelectronicsBasics</li>
+			<li>RT_MetroidPylons</li>
 		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<canOverlapZones>true</canOverlapZones>

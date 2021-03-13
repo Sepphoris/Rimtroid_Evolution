@@ -14,6 +14,7 @@
 		<defName>RT_GrowthSuspenderHediff</defName>
 		<descriptionHyperlinks>
 			<ThingDef>RT_GrowthSuspender</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
 		</descriptionHyperlinks>
 		<label>Growth Suspension</label>
 		<labelNoun>biological growth suspension</labelNoun>
@@ -48,6 +49,7 @@
 		<hediffClass>Hediff</hediffClass>
 		<descriptionHyperlinks>
 			<ThingDef>RT_Cryoadapter</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
 		</descriptionHyperlinks>
 		<label>Endothermic Adaption</label>
 		<labelNoun>endothermic adaption</labelNoun>
@@ -91,6 +93,7 @@
 		<hediffClass>Hediff</hediffClass>
 		<descriptionHyperlinks>
 			<ThingDef>RT_NutrientRegulator</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
 		</descriptionHyperlinks>
 		<label>Nutrient Regulation</label>
 		<labelNoun>nutrient regulation</labelNoun>
@@ -132,6 +135,7 @@
 		<hediffClass>Hediff</hediffClass>
 		<descriptionHyperlinks>
 			<ThingDef>RT_ImmunityAccelerator</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
 		</descriptionHyperlinks>
 		<label>Systemic Fortification</label>
 		<labelNoun>systemic fortification</labelNoun>

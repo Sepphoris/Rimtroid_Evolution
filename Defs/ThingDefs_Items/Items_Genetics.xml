@@ -2,7 +2,7 @@
 <Defs>
 
 	<!-- =============== Parent Modification classes =============== -->
-	<ThingDef Name="RT_MetroidModBase" ParentName="ResourceBase" Abstract="True">
+	<ThingDef Name="RT_MetroidModificationBase" ParentName="ResourceBase" Abstract="True">
 		<thingClass>ThingWithComps</thingClass>
 		<category>Item</category>
 		<useHitPoints>true</useHitPoints>
@@ -24,21 +24,9 @@
     <thingCategories>
       <li>Items</li>
     </thingCategories>
-		<tradeTags>
-			<li>AnimalBionics</li>
-		</tradeTags>
-		<thingSetMakerTags>
-			<li>AnimalPart</li>
-		</thingSetMakerTags>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
-      <li Class="CompProperties_UseEffectPlaySound">
-        <soundOnUsed>MechSerumUsed</soundOnUsed>
-      </li>
-		</comps>
 	</ThingDef>
 
-  <ThingDef Name ="RT_MetroidModification" ParentName="RT_MetroidModBase" Abstract="True">
+  <ThingDef Name ="RT_MetroidInjectableBase" ParentName="RT_MetroidModificationBase" Abstract="True">
     <statBases>
       <MarketValue>2200</MarketValue>
       <DeteriorationRate>0</DeteriorationRate>
@@ -48,14 +36,65 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>0.80</drawSize>
     </graphicData>
+    <costList>
+      <RT_AeionExtract>2</RT_AeionExtract>
+      <RT_BlankInjector>1</RT_BlankInjector>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>RT_BasicGeneticImplants</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+		</comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+  </ThingDef>
+
+  	<!-- =============== Blank Injector =============== -->
+
+ <ThingDef ParentName="RT_MetroidModificationBase">
+    <defName>RT_BlankInjector</defName>
+    <label>Empty Metroid Injector</label>
+    <descriptionHyperlinks>
+      <ThingDef>RT_Cryoadapter</ThingDef>
+      <ThingDef>RT_GrowthSuspender</ThingDef>
+      <ThingDef>RT_ImmunityAccelerator</ThingDef>
+      <ThingDef>RT_NutrientRegulator</ThingDef>
+    </descriptionHyperlinks>
+    <description>An empty metroid injector. You can use this to craft various metroid injections.</description>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/BlankImplant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+    </statBases>
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
   </ThingDef>
 
-  	<!-- =============== Nutrient Regulator =============== -->
+  	<!-- =============== Growth Suspender =============== -->
 
- <ThingDef ParentName="RT_MetroidModification">
+ <ThingDef ParentName="RT_MetroidInjectableBase">
     <defName>RT_GrowthSuspender</defName>
     <label>Metroid Growth Suspender</label>
     <descriptionHyperlinks><HediffDef>RT_GrowthSuspenderHediff</HediffDef></descriptionHyperlinks>
@@ -87,7 +126,7 @@ The effects of this operation will last indefinitely, but can be eliminated with
 
 	<!-- =============== Cryoadapter =============== -->
 
- <ThingDef ParentName="RT_MetroidModification">
+ <ThingDef ParentName="RT_MetroidInjectableBase">
     <defName>RT_Cryoadapter</defName>
     <label>Metroid Cryoadapter</label>
     <descriptionHyperlinks><HediffDef>RT_CryoadapterHediff</HediffDef></descriptionHyperlinks>
@@ -118,7 +157,7 @@ This is a permanent operation; any metroid with this alteration will retain it t
 
 	<!-- =============== Nutrient Regulator =============== -->
 
- <ThingDef ParentName="RT_MetroidModification">
+ <ThingDef ParentName="RT_MetroidInjectableBase">
     <defName>RT_NutrientRegulator</defName>
     <label>Metroid Nutrient Regulator</label>
     <descriptionHyperlinks><HediffDef>RT_NutrientRegulatorHediff</HediffDef></descriptionHyperlinks>
@@ -149,7 +188,7 @@ This is a permanent operation; any metroid with this alteration will retain it t
 
 	<!-- =============== Immunity Accelerator =============== -->
 
- <ThingDef ParentName="RT_MetroidModification">
+ <ThingDef ParentName="RT_MetroidInjectableBase">
     <defName>RT_ImmunityAccelerator</defName>
     <label>Metroid Immunity Accelerator</label>
     <descriptionHyperlinks><HediffDef>RT_ImmunityAcceleratorHediff</HediffDef></descriptionHyperlinks>

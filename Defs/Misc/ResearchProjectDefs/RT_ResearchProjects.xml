@@ -29,7 +29,7 @@
   </ResearchProjectDef>
   
   <!--Metroid Field Control: used to create Metroid Beacons, and Metroid Suppression Fields-->
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RT_FieldControl</defName>
     <label>metroid field control</label>
     <description>Build machines that can drive off metroids from entering the region... or attract them to it.</description>
@@ -42,7 +42,7 @@
 	    <li>MicroelectronicsBasics</li>
       <li>RT_MetroidBasics</li>
     </prerequisites>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <!--Metroid Defenses: used to create the Metroid Tranqulizer, Cryorifles, and Cryolaunchers.-->
   <ResearchProjectDef>
@@ -108,6 +108,7 @@
     <tab>RimtroidEvolution</tab>
     <prerequisites>
 	    <li>RT_Cytobench</li>
+      <li>MedicineProduction</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>

@@ -1,12 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!--==============Genetic Defects Overview===============-->
+
+  <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_GeneticDefectsOverview</defName>
+    <label>Genetic Defects</label>
+    <labelNoun>genetic defects</labelNoun>
+		<descriptionHyperlinks>
+			<HediffDef>RT_AcceleratedDivision</HediffDef>
+			<HediffDef>RT_CellularDecay</HediffDef>
+			<HediffDef>RT_StuntedDefect</HediffDef>
+		</descriptionHyperlinks>
+    <description>Due to their origins as ancient bioweapons, metroids are quite suspectable to defects when they are tampered with. Only a few defects are possible, but every one of them can make a metroid sustantially harder to manage, severely impact their usability, and even result in death.</description>
+	</HediffDef>
+
 		<!--===============Stunted Metroid - natural defect===============-->
 
   <HediffDef>
     <defName>RT_StuntedDefect</defName>
     <label>stunted</label>
-    <labelNoun>Biologically stunted</labelNoun>
+    <labelNoun>biologically stunted</labelNoun>
 		<defaultLabelColor>(233,129,69)</defaultLabelColor>
     <description>A genetic defect that has permanently "locked" the metroid in it's current stage. Can be removed through advanced genetic procedures.</description>
 		<initialSeverity>1</initialSeverity>
