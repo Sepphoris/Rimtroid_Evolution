@@ -111,17 +111,16 @@
 		<label>Electric Bomb</label>
 		<description>Drops a proximity bomb that will detonate on hostiles</description>
 		<abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
-		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
 		<cooldownTicksRange>2100</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-		<targetRequired>true</targetRequired>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<targetRequired>False</targetRequired>
 		<iconPath>UI/Abilities/UI_EnergyBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
-			<range>-1</range>
 			<warmupTime>1</warmupTime>
+			<range>-1</range>
 		</verbProperties>
 		<comps>
 			<li Class="RT_Core.AbilityCompProperties_AbilityControl">

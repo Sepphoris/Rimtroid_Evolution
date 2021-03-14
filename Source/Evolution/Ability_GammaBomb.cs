@@ -12,10 +12,19 @@ namespace RT_Rimtroid
     {
         public Ability_MetroidBomb(Pawn pawn) : base(pawn) { }
         public Ability_MetroidBomb(Pawn pawn, AbilityDef def) : base(pawn, def) { }
-
+        public static TargetingParameters ForLoc(Pawn pawn = null)
+        {
+            TargetingParameters targetingParameters = new TargetingParameters();
+            targetingParameters.canTargetLocations = true;
+            //targetingParameters.validator = (TargetInfo target) => pawn.CanReserveAndReach(target.Cell, PathEndMode.OnCell, Danger.Deadly);
+            return targetingParameters;
+        }
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            this.pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, target.Cell));
+            Find.Targeter.BeginTargeting(ForLoc(pawn), delegate (LocalTargetInfo x)
+            {
+                this.pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, x.Cell));
+            }, null, null);
             return base.Activate(target, dest);
         }
     }
