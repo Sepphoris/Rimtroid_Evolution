@@ -19,13 +19,15 @@ namespace RT_Rimtroid
 			Toil initWarmup = new Toil();
 			initWarmup.initAction = delegate
 			{
-				pawn.stances.SetStance(new Stance_Warmup(60, null, job.ability.verb));
+				placingWorkDone = 0;
+				//pawn.stances.SetStance(new Stance_Warmup(60, null, job.ability.verb));
 			};
 			yield return initWarmup;
 			Toil placeBomb = new Toil();
 			placeBomb.tickAction = delegate
 			{
-				if (!(pawn.stances.curStance is Stance_Warmup))
+				placingWorkDone++;
+				if (placingWorkDone > 60) //!(pawn.stances.curStance is Stance_Warmup))
 				{
 					job.ability.StartCooldown(1000);
 					var alphaBombComp = this.pawn.TryGetComp<CompAlphaBomb>();
@@ -34,6 +36,7 @@ namespace RT_Rimtroid
 				}
 			};
 			placeBomb.defaultCompleteMode = ToilCompleteMode.Never;
+			placeBomb.WithProgressBar(TargetIndex.A, () => placingWorkDone / 60, interpolateBetweenActorAndTarget: true);
 			yield return placeBomb;
 		}
 

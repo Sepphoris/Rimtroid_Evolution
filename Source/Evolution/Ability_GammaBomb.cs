@@ -21,6 +21,7 @@ namespace RT_Rimtroid
         }
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            Log.Message("Activating");
             Find.Targeter.BeginTargeting(ForLoc(pawn), delegate (LocalTargetInfo x)
             {
                 var job = JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, x.Cell);
