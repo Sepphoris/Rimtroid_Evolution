@@ -20,7 +20,6 @@ namespace RT_Rimtroid
 			initWarmup.initAction = delegate
 			{
 				pawn.stances.SetStance(new Stance_Warmup(60, null, job.ability.verb));
-				Log.Message("ability.verb.WarmingUp: " + job.ability.verb.WarmingUp);
 			};
 			yield return initWarmup;
 			Toil placeBomb = new Toil();
@@ -28,8 +27,7 @@ namespace RT_Rimtroid
 			{
 				if (!(pawn.stances.curStance is Stance_Warmup))
 				{
-					var ability = pawn.abilities.GetAbility(DefDatabase<AbilityDef>.GetNamed("RT_AlphaBomb"));
-					ability.StartCooldown(1000);
+					job.ability.StartCooldown(1000);
 					var alphaBombComp = this.pawn.TryGetComp<CompAlphaBomb>();
 					alphaBombComp.SpawnTrap(RT_DefOf.RT_MetroidBomb);
 					ReadyForNextToil();
