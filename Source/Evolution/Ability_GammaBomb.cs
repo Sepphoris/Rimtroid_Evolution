@@ -16,14 +16,16 @@ namespace RT_Rimtroid
         {
             TargetingParameters targetingParameters = new TargetingParameters();
             targetingParameters.canTargetLocations = true;
-            //targetingParameters.validator = (TargetInfo target) => pawn.CanReserveAndReach(target.Cell, PathEndMode.OnCell, Danger.Deadly);
+            targetingParameters.validator = (TargetInfo target) => pawn.CanReserveAndReach(target.Cell, PathEndMode.OnCell, Danger.Deadly);
             return targetingParameters;
         }
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
             Find.Targeter.BeginTargeting(ForLoc(pawn), delegate (LocalTargetInfo x)
             {
-                this.pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, x.Cell));
+                var job = JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, x.Cell);
+                job.ability = this;
+                this.pawn.jobs.TryTakeOrderedJob(job);
             }, null, null);
             return base.Activate(target, dest);
         }

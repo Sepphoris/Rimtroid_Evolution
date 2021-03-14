@@ -111,7 +111,8 @@
 		<label>Electric Bomb</label>
 		<description>Drops a proximity bomb that will detonate on hostiles</description>
 		<abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
-		<cooldownTicksRange>2100</cooldownTicksRange>
+		<!--
+		<cooldownTicksRange>2100</cooldownTicksRange> -->
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<targetRequired>False</targetRequired>
@@ -119,7 +120,6 @@
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
-			<warmupTime>1</warmupTime>
 			<range>-1</range>
 		</verbProperties>
 		<comps>
@@ -132,13 +132,14 @@
 				<gizmoOffIconPath>UI/Abilities/UI_EnergyBomb</gizmoOffIconPath>
 				<gizmoDesc>Toggle Bomb Usage</gizmoDesc>
 			</li>
+			<!--
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
 				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
 				<cooldownPool>AlphaAbilityPool</cooldownPool>
 				<cooldownTicksRange>200</cooldownTicksRange>
 				<independent>false</independent>
 				<resetsTimer>false</resetsTimer>
-			</li>
+			</li> -->
 		</comps>
 	</AbilityDef>
 

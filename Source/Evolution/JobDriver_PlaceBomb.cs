@@ -16,23 +16,26 @@ namespace RT_Rimtroid
 		protected override IEnumerable<Toil> MakeNewToils()
 		{
 			yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.OnCell);
-			Toil placeBomb = new Toil();
-			placeBomb.initAction = delegate
+			Toil initWarmup = new Toil();
+			initWarmup.initAction = delegate
 			{
-				placingWorkDone = 0f;
+				pawn.stances.SetStance(new Stance_Warmup(1000, null, job.ability.verb));
+				Log.Message("ability.verb.WarmingUp: " + job.ability.verb.WarmingUp);
 			};
+			yield return initWarmup;
+			Toil placeBomb = new Toil();
 			placeBomb.tickAction = delegate
 			{
-				placingWorkDone += 1f;
-				if (placingWorkDone > 60)
+				if (!(pawn.stances.curStance is Stance_Warmup))
 				{
+					var ability = pawn.abilities.GetAbility(DefDatabase<AbilityDef>.GetNamed("RT_AlphaBomb"));
+					ability.StartCooldown(1000);
 					var alphaBombComp = this.pawn.TryGetComp<CompAlphaBomb>();
 					alphaBombComp.SpawnTrap(RT_DefOf.RT_MetroidBomb);
 					ReadyForNextToil();
 				}
 			};
 			placeBomb.defaultCompleteMode = ToilCompleteMode.Never;
-			placeBomb.WithProgressBar(TargetIndex.A, () => placingWorkDone / 60, interpolateBetweenActorAndTarget: true);
 			yield return placeBomb;
 		}
 
