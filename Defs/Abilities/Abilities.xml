@@ -117,7 +117,7 @@
 		<gizmoClass>RT_Rimtroid.Command_MetroidBomb</gizmoClass>
 		<targetRequired>true</targetRequired>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>Things/Misc/MetroidBomb</iconPath>
+		<iconPath>UI/Abilities/UI_EnergyBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
@@ -130,8 +130,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Bombs Enabled</gizmoOnText>
 				<gizmoOffText>Bombs Disabled</gizmoOffText>
-				<gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
-				<gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_EnergyBomb</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_EnergyBomb</gizmoOffIconPath>
 				<gizmoDesc>Toggle Bomb Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
@@ -162,7 +162,7 @@
 		<cooldownTicksRange>1200~1600</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/GammaBolt</iconPath>
+		<iconPath>UI/Abilities/UI_ElectricBeam</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<range>26</range>
@@ -176,8 +176,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Electric Beam Enabled</gizmoOnText>
 				<gizmoOffText>Electric Beam Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBeam</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBeam</gizmoOffIconPath>
 				<gizmoDesc>Toggle Electric Beam Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
@@ -220,7 +220,7 @@
 		<cooldownTicksRange>1000~1200</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/GammaBolt</iconPath>
+		<iconPath>UI/Abilities/UI_ElectricBolt</iconPath>
 		<verbProperties>
 			<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
@@ -238,8 +238,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Electric Bolt Enabled</gizmoOnText>
 				<gizmoOffText>Electric Bolt Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/GammaBolt</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/GammaBolt</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBolt</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBolt</gizmoOffIconPath>
 				<gizmoDesc>Toggle Electric Bolt Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
@@ -288,7 +288,7 @@
 		<cooldownTicksRange>1800~2500</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>UI/Abilities/Shockwave</iconPath>
+		<iconPath>UI/Abilities/UI_Shockwave</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<warmupTime>1</warmupTime>
@@ -302,8 +302,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Shockwave Enabled</gizmoOnText>
 				<gizmoOffText>Shockwave Disabled</gizmoOffText>
-				<gizmoOnIconPath>UI/Abilities/Shockwave</gizmoOnIconPath>
-				<gizmoOffIconPath>UI/Abilities/Shockwave</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_Shockwave</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Shockwave</gizmoOffIconPath>
 				<gizmoDesc>Toggle Shockwave Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
@@ -326,7 +326,7 @@
 		<cooldownTicksRange>2100</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>Things/Misc/MetroidBomb</iconPath>
+		<iconPath>UI/Abilities/UI_EnergyBomb</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
@@ -338,8 +338,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Bombs Enabled</gizmoOnText>
 				<gizmoOffText>Bombs Disabled</gizmoOffText>
-				<gizmoOnIconPath>Things/Misc/MetroidBomb</gizmoOnIconPath>
-				<gizmoOffIconPath>Things/Misc/MetroidBomb</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_EnergyBomb</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_EnergyBomb</gizmoOffIconPath>
 				<gizmoDesc>Toggle Bomb Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
@@ -362,7 +362,7 @@
 		<cooldownTicksRange>2700</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>UI/Abilities/ElectricBurst</iconPath>
+		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
@@ -375,8 +375,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Electric Burst Enabled</gizmoOnText>
 				<gizmoOffText>Electric Burst Disabled</gizmoOffText>
-				<gizmoOnIconPath>UI/Abilities/ElectricBurst</gizmoOnIconPath>
-				<gizmoOffIconPath>UI/Abilities/ElectricBurst</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBurst</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBurst</gizmoOffIconPath>
 				<gizmoDesc>Toggle Burst Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
@@ -404,7 +404,7 @@
 		<cooldownTicksRange>1000~1200</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/Firebolt</iconPath>
+		<iconPath>UI/Abilities/UI_FireBolt</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<range>28</range>
@@ -418,8 +418,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Firebolt Enabled</gizmoOnText>
 				<gizmoOffText>Firebolt Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/Firebolt</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/Firebolt</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBolt</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBolt</gizmoOffIconPath>
 				<gizmoDesc>Toggle Firebolt Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
@@ -462,7 +462,7 @@
 		<cooldownTicksRange>1200~1600</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/Acidbolt</iconPath>
+		<iconPath>UI/Abilities/UI_AcidBolt</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<range>28</range>
@@ -476,8 +476,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Acid Spit Enabled</gizmoOnText>
 				<gizmoOffText>Acid Spit Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/Acidbolt</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/Acidbolt</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_AcidBolt</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_AcidBolt</gizmoOffIconPath>
 				<gizmoDesc>Toggle Acid Spit Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
@@ -520,7 +520,7 @@
 		<cooldownTicksRange>1400~1600</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/FireBreath</iconPath>
+		<iconPath>UI/Abilities/UI_FireBreath</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<range>4</range>
@@ -534,8 +534,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Fire Breath Enabled</gizmoOnText>
 				<gizmoOffText>Fire Breath Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/FireBreath</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/FireBreath</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBreath</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBreath</gizmoOffIconPath>
 				<gizmoDesc>Toggle Fire Breath Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
@@ -583,7 +583,7 @@
 		<cooldownTicksRange>1600~1200</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/Firebeam1</iconPath>
+		<iconPath>UI/Abilities/UI_FireBeam2</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<range>30</range>
@@ -597,8 +597,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Firebeam Enabled</gizmoOnText>
 				<gizmoOffText>Firebeam Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/Firebeam1</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/Firebeam1</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBeam2</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBeam2</gizmoOffIconPath>
 				<gizmoDesc>Toggle Firebeam Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
@@ -650,7 +650,7 @@
 		<cooldownTicksRange>1600~2000</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>AnimalProjectile/Firebeam1</iconPath>
+		<iconPath>UI/Abilities/UI_FireBeam2</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<range>45</range>
@@ -664,8 +664,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Firebeam Enabled</gizmoOnText>
 				<gizmoOffText>Firebeam Disabled</gizmoOffText>
-				<gizmoOnIconPath>AnimalProjectile/Firebeam1</gizmoOnIconPath>
-				<gizmoOffIconPath>AnimalProjectile/Firebeam1</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBeam2</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBeam2</gizmoOffIconPath>
 				<gizmoDesc>Toggle Firebeam Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_CastVerb">
