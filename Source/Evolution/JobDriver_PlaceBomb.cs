@@ -19,7 +19,7 @@ namespace RT_Rimtroid
 			Toil initWarmup = new Toil();
 			initWarmup.initAction = delegate
 			{
-				pawn.stances.SetStance(new Stance_Warmup(1000, null, job.ability.verb));
+				pawn.stances.SetStance(new Stance_Warmup(60, null, job.ability.verb));
 				Log.Message("ability.verb.WarmingUp: " + job.ability.verb.WarmingUp);
 			};
 			yield return initWarmup;
