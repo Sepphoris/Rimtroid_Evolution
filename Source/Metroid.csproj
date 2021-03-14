@@ -302,7 +302,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Evolution\HediffDefections.cs" />
-    <Compile Include="Evolution\Command_MetroidBomb.cs" />
     <Compile Include="Evolution\CompEvolutionTime.cs" />
     <Compile Include="Evolution\CompAlphaBomb.cs" />
     <Compile Include="Evolution\CompProperties_EvolutionTime.cs" />

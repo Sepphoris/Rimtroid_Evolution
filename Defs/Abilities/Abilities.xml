@@ -114,7 +114,6 @@
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
 		<cooldownTicksRange>2100</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
-		<gizmoClass>RT_Rimtroid.Command_MetroidBomb</gizmoClass>
 		<targetRequired>true</targetRequired>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/UI_EnergyBomb</iconPath>
