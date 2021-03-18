@@ -78,7 +78,7 @@
   </ResearchProjectDef>
 
   <!--Metroid Genetics-->
-  <ResearchProjectDef>
+  <!--<ResearchProjectDef>
     <defName>RT_Cytobench</defName>
     <label>cytobench</label>
     <description>Create the Cytobench, the primary station used for manipulating metroid genetics.</description>
@@ -94,7 +94,7 @@
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
     </requiredResearchFacilities>
-  </ResearchProjectDef>
+  </ResearchProjectDef>-->
 
   <!--Starter Metroid Implants; use to create cryoadapters, nutrient regulators, immunity accelerators, and growth suspenders-->
   <ResearchProjectDef>
@@ -107,7 +107,7 @@
     <researchViewY>3</researchViewY>
     <tab>RimtroidEvolution</tab>
     <prerequisites>
-	    <li>RT_Cytobench</li>
+	    <!--<li>RT_Cytobench</li>-->
       <li>MedicineProduction</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>

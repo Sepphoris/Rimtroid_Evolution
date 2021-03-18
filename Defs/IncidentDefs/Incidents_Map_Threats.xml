@@ -56,7 +56,7 @@
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<tale>Raid</tale>
-		<earliestDay>30</earliestDay>
+		<earliestDay>45</earliestDay>
 		<minRefireDays>15</minRefireDays>
 		<modExtensions>
 			<li Class="RT_Core.RaidOptions">
@@ -100,7 +100,7 @@
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<tale>Raid</tale>
-		<earliestDay>45</earliestDay>
+		<earliestDay>60</earliestDay>
 		<minRefireDays>35</minRefireDays>
 		<modExtensions>
 			<li Class="RT_Core.RaidOptions">
@@ -143,8 +143,8 @@
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<tale>Raid</tale>
-		<earliestDay>60</earliestDay>
-		<minRefireDays>30</minRefireDays>
+		<earliestDay>75</earliestDay>
+		<minRefireDays>35</minRefireDays>
 		<modExtensions>
 			<li Class="RT_Core.RaidOptions">
 				<raidFaction>RT_Metroids</raidFaction>
@@ -182,7 +182,7 @@
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<tale>Raid</tale>
-		<earliestDay>60</earliestDay>
+		<earliestDay>90</earliestDay>
 		<minRefireDays>50</minRefireDays>
 		<modExtensions>
 			<li Class="RT_Core.RaidOptions">

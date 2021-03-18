@@ -42,7 +42,7 @@
   <RecipeDef>
     <defName>RT_ProtusCellRecipe</defName>
     <label>make protus cells (temporary recipe)</label>
-    <description>Extract biojuice from fresh corpses to make protus cells</description>
+    <description>Extract biofluids from fresh corpses to make protus cells</description>
     <jobString>Making protus cells.</jobString>
     <effectWorking>ButcherFlesh</effectWorking>
     <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>

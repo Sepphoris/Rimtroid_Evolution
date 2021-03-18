@@ -59,14 +59,15 @@ namespace RT_Rimtroid
             }
 			if (this.Faction == Faction.OfPlayer)
             {
+
 				Command_Toggle command_Toggle = new Command_Toggle();
-				command_Toggle.defaultLabel = "RT_EnableProximityBomb".Translate();
-				command_Toggle.defaultDesc = "RT_EnableProximityBomb".Translate();
-				command_Toggle.icon = ContentFinder<Texture2D>.Get("Things/Misc/MetroidBomb");
-				command_Toggle.isActive = (() => this.proximity);
+				command_Toggle.defaultLabel = "RT_EnableTimedBomb".Translate();
+				command_Toggle.defaultDesc = "RT_EnableTimedBomb".Translate();
+				command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombTimer");
+				command_Toggle.isActive = (() => this.timeOut);
 				command_Toggle.toggleAction = delegate
 				{
-					this.proximity = !this.proximity;
+					this.timeOut = !this.timeOut;
 				};
 
 				command_Toggle.hotKey = KeyBindingDefOf.Misc3;
@@ -75,13 +76,13 @@ namespace RT_Rimtroid
 				yield return command_Toggle;
 
 				Command_Toggle command_Toggle2 = new Command_Toggle();
-				command_Toggle2.defaultLabel = "RT_EnableTimedBomb".Translate();
-				command_Toggle2.defaultDesc = "RT_EnableTimedBomb".Translate();
-				command_Toggle2.icon = ContentFinder<Texture2D>.Get("Things/Misc/MetroidBomb");
-				command_Toggle2.isActive = (() => this.timeOut);
+				command_Toggle2.defaultLabel = "RT_EnableProximityBomb".Translate();
+				command_Toggle2.defaultDesc = "RT_EnableProximityBomb".Translate();
+				command_Toggle2.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombProximity");
+				command_Toggle2.isActive = (() => this.proximity);
 				command_Toggle2.toggleAction = delegate
 				{
-					this.timeOut = !this.timeOut;
+					this.proximity = !this.proximity;
 				};
 
 				command_Toggle2.hotKey = KeyBindingDefOf.Misc4;
@@ -92,7 +93,7 @@ namespace RT_Rimtroid
 				Command_Toggle command_Toggle3 = new Command_Toggle();
 				command_Toggle3.defaultLabel = "RT_EnableHostileOnlyBomb".Translate();
 				command_Toggle3.defaultDesc = "RT_EnableHostileOnlyBomb".Translate();
-				command_Toggle3.icon = ContentFinder<Texture2D>.Get("Things/Misc/MetroidBomb");
+				command_Toggle3.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombHostile");
 				command_Toggle3.isActive = (() => this.hostileOnly);
 				command_Toggle3.toggleAction = delegate
 				{
@@ -116,7 +117,7 @@ namespace RT_Rimtroid
 				yield return command_Action;
 
 				Command_Action command_Action2 = new Command_Action();
-				command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate");
+				command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombDissipate");
 				command_Action2.defaultDesc = "RT_Dissipate".Translate();
 				command_Action2.action = Command_Dissipate;
 				command_Action2.defaultLabel = "RT_Dissipate".Translate();
