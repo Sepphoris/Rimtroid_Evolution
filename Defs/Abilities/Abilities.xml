@@ -574,12 +574,73 @@
 	<!--=============== Omega Abilities ===============-->
 
 	<AbilityDef>
+		<defName>RT_Fireballs</defName>
+		<label>Fireballs</label>
+		<description>Lob three massive fireballs that explode on impact</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1000~1400</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_Fireball</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>30</range>
+			<minRange>4</minRange>
+			<defaultProjectile>RT_Fireball</defaultProjectile>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Fireballs Enabled</gizmoOnText>
+				<gizmoOffText>Fireballs Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_Fireball</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Fireball</gizmoOffIconPath>
+				<gizmoDesc>Toggle Fireball Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_Fireball</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>40</range>
+						<minRange>3</minRange>
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+						<soundCast>RT_SoundFireball</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>OmegaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
 		<defName>RT_OmegaBeam</defName>
 		<label>Omega Fire Beam</label>
 		<description>Create a beam of fire that ignites the ground below it.</description>
 		<abilityClass>RT_Core.Ability_Base</abilityClass>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-		<cooldownTicksRange>1600~1200</cooldownTicksRange>
+		<cooldownTicksRange>1200~1600</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/UI_FireBeam2</iconPath>

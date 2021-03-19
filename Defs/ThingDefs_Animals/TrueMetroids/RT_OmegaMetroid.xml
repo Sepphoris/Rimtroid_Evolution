@@ -124,6 +124,9 @@
 				<compClass>RT_Core.CompAbilityDefinition</compClass>
 				<abilities>
 					<li>
+						<abilityDef>RT_Fireballs</abilityDef>
+					</li>
+					<li>
 						<abilityDef>RT_OmegaBeam</abilityDef>
 					</li>
 				</abilities>

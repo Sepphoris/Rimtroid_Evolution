@@ -161,6 +161,33 @@
 
 
 	<!-- Omega Abilities -->
+
+	<ThingDef>
+		<defName>RT_Fireball</defName>
+		<label>Fireball</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Fireball</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>28</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>3</explosionRadius>
+			<damageAmountBase>6</damageAmountBase>
+			<soundExplode>Explosion_Flame</soundExplode>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>1</shadowSize>
+		</projectile>
+	</ThingDef>
 	
 	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Core.LaserBeamDef">
 		<defName>RT_OmegaBeam</defName>
