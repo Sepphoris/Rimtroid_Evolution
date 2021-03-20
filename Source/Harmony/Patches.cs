@@ -173,6 +173,7 @@ namespace RT_Rimtroid
             }
         }
     }
+
     //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     //public static class SpawnSetup_Patch
     // {
