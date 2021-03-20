@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_RimtroidLarvae</defName>
+		<label>Rimtroid Larva</label>
+		<description>A Rimtroid Larva</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_RimtroidLarvae</defName>
+		<label>rimtroid larva</label>
+		<race>RT_RimtroidLarvae</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>4</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>rimtroid larva</label>
+			<labelPlural>rimtroid larvae</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/LocalMetroids/RimtroidLarva/RT_RimtroidLarva</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/LocalMetroids/RimtroidLarva/RT_RimtroidLarva</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_TallonMetroid</defName>
+		<label>Tallon Metroid</label>
+		<description>The Tallon metroid - known as the starting point for the "substrain" metroid type - is a variant of a metroid larva that have been exposed to specific environmental conditions outside their own. Tallon Metroids are shaped slightly different, have absolutely no "mouth" of any sort (thus making it impossible to hand feed), and are much, much less resilient than their pure cousins. In addition to this, their genetic makeup has cut them off from evolving into further pure forms, such as Alphas or Zetas.\n\n
+Despite not being able to grow into the larger metroid forms, Tallong Metroids are extremely suspectable to mutations, making them a prime starting point for many different metroid abberations. These mutations can be just as drastic as the natural metroid stages, and extreme cases can result in metroids that are also far more powerful. This specific mutation potential is only found in Tallon Metroids, making them highly sought after for experimentation.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_TallonMetroid</defName>
+		<label>tallon metroid</label>
+		<race>RT_TallonMetroid</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>2</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>tallon metroid</label>
+			<labelPlural>tallon metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/TallonMetroid/RT_TallonMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/TallonMetroid/RT_Dessicated_TallonMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

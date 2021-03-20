@@ -6,7 +6,7 @@
 	
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_MetroidLarvae</defName>
-		<label>Metroid</label>
+		<label>Metroid Larva</label>
 
 		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		<statBases>
@@ -266,10 +266,10 @@
 		</wildGroupSize>
 		<lifeStages>
 		  <li>
-			<label>bantee metroid</label>
-			<labelPlural>bantee metroid</labelPlural>
+			<label>metroid larva</label>
+			<labelPlural>metroid larva</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_MetroidLarvae</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -277,13 +277,13 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_MetroidLarvae</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -291,13 +291,13 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_MetroidLarvae</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -305,7 +305,7 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>

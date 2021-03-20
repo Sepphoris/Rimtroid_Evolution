@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_RimtroidHatchling</defName>
+		<label>RimtroidHatchling</label>
+		<description>A Rimtroid Hatchling</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_RimtroidHatchling</defName>
+		<label>rimtroid hatchling</label>
+		<race>RT_RimtroidHatchling</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>4</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>rimtroid hatchling</label>
+			<labelPlural>rimtroid hatchling</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/LocalMetroids/RimtroidHatchling/RT_RimtroidHatchling</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/LocalMetroids/RimtroidHatchling/RT_RimtroidHatchling</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

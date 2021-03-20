@@ -251,7 +251,7 @@
 				<label>queen metroid</label>
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
-					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+					<texPath>Animals/PureMetroids/QueenMetroid/RT_QueenMetroid</texPath>
 					<drawSize>12</drawSize>
 					<shadowData>
 						<volume>(0.2, 0.2, 0.2)</volume>
@@ -259,7 +259,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Animals/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
+					<texPath>Animals/PureMetroids/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
 					<drawSize>10</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -267,7 +267,7 @@
 				<label>queen metroid</label>
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
-					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+					<texPath>Animals/PureMetroids/QueenMetroid/RT_QueenMetroid</texPath>
 					<drawSize>12</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
@@ -275,7 +275,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+					<texPath>Animals/PureMetroids/QueenMetroid/RT_QueenMetroid</texPath>
 					<drawSize>10</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -283,7 +283,7 @@
 				<label>queen metroid</label>
 				<labelPlural>queen metroid</labelPlural>
 				<bodyGraphicData>
-					<texPath>Animals/QueenMetroid/RT_QueenMetroid</texPath>
+					<texPath>Animals/PureMetroids/QueenMetroid/RT_QueenMetroid</texPath>
 					<drawSize>12</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
@@ -291,7 +291,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Animals/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
+					<texPath>Animals/PureMetroids/QueenMetroid/RT_Desiccated_QueenMetroid</texPath>
 					<drawSize>10</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>

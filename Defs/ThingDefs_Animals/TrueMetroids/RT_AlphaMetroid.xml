@@ -237,7 +237,7 @@
 				<label>alpha metroid</label>
 				<labelPlural>alpha metroid</labelPlural>
 				<bodyGraphicData>
-					<texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_AlphaMetroid</texPath>
 					<drawSize>1.2</drawSize>
 					<shadowData>
 						<volume>(0.2, 0.2, 0.2)</volume>
@@ -245,7 +245,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
 					<drawSize>1.1</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -253,7 +253,7 @@
 				<label>alpha metroid</label>
 				<labelPlural>alpha metroid</labelPlural>
 				<bodyGraphicData>
-					<texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_AlphaMetroid</texPath>
 					<drawSize>1.2</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
@@ -261,7 +261,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
 					<drawSize>1.2</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -269,7 +269,7 @@
 				<label>alpha metroid</label>
 				<labelPlural>alpha metroid</labelPlural>
 				<bodyGraphicData>
-					<texPath>Animals/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_AlphaMetroid</texPath>
 					<drawSize>1.2</drawSize>
 					<shadowData>
 						<volume>(0.3, 0.2, 0.2)</volume>
@@ -277,7 +277,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Animals/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
 					<drawSize>1.2</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>

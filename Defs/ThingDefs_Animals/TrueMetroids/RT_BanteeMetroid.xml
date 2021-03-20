@@ -270,7 +270,7 @@
 			<label>bantee metroid</label>
 			<labelPlural>bantee metroid</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Animals/BanteeMetroid/RT_BanteeMetroid</texPath>
+			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.2, 0.2, 0.2)</volume>
@@ -278,13 +278,13 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
+			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Animals/BanteeMetroid/RT_BanteeMetroid</texPath>
+			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -292,13 +292,13 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
+			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
-			  <texPath>Animals/BanteeMetroid/RT_BanteeMetroid</texPath>
+			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -306,7 +306,7 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
+			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
 			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>

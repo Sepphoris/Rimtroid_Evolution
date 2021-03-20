@@ -239,7 +239,7 @@
 			<label>zeta metroid</label>
 			<labelPlural>zeta metroid</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Animals/ZetaMetroid/RT_ZetaMetroid</texPath>
+			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
 			  <drawSize>3</drawSize>
 			  <shadowData>
 				<volume>(0.2, 0.2, 0.2)</volume>
@@ -247,7 +247,7 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
 			  <drawSize>3.5</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
@@ -255,7 +255,7 @@
 		  	<label>zeta metroid</label>
 			<labelPlural>zeta metroid</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Animals/ZetaMetroid/RT_ZetaMetroid</texPath>
+			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
 			  <drawSize>3.5</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -263,7 +263,7 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
 			  <drawSize>3.5</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
@@ -271,7 +271,7 @@
 			<label>zeta metroid</label>
 			<labelPlural>zeta metroid</labelPlural>
 			<bodyGraphicData>
-			  <texPath>Animals/ZetaMetroid/RT_ZetaMetroid</texPath>
+			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
 			  <drawSize>3.5</drawSize>
 			  <shadowData>
 				<volume>(0.3, 0.2, 0.2)</volume>
@@ -279,7 +279,7 @@
 			  </shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
-			  <texPath>Animals/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
 			  <drawSize>3.5</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
