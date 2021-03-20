@@ -19,6 +19,11 @@ namespace RT_Rimtroid
 
     public class Queen : Metroid
     {
+        public override void PostMake()
+        {
+            base.PostMake();
+            this.Name = new NameSingle(this.def.LabelCap);
+        }
         public override void SetFaction(Faction newFaction, Pawn recruiter = null)
         {
             base.SetFaction(null);
