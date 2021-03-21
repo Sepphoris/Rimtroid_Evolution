@@ -16,10 +16,10 @@
 
 
   <LetterLabelMetroidQueenKilled>Metroid Queen Slain!</LetterLabelMetroidQueenKilled>
-	<LetterMetroidQueenKilled>The local metroid queen has been killed! As incredible as it may seem, {0} has delivered a killing blow, disorganizing the whole metroid collective and disrupting their raids. News of this incredible feat will spread across the world.</LetterMetroidQueenKilled>
+	<LetterMetroidQueenKilled>The local metroid queen has been killed! As incredible as it may seem, {PAWN_nameDef} has delivered a killing blow, disorganizing the whole metroid collective and disrupting their raids. News of this incredible feat will spread across the world.</LetterMetroidQueenKilled>
 
-  <LetterLabelFactionKilledMetroidQueen>Metroid Queen Slain by {0}!</LetterLabelFactionKilledMetroidQueen>
-	<LetterFactionKilledMetroidQueen>{0} has successfully slain the metroid queen! As incredible as it may seem, the local metroid queen now lies dead. The whole metroid collective has been disorganized as a result, putting a halt to their raids.</LetterFactionKilledMetroidQueen>
+  <LetterLabelFactionKilledMetroidQueen>Metroid Queen Slain by {FACTION_name}!</LetterLabelFactionKilledMetroidQueen>
+	<LetterFactionKilledMetroidQueen>{FACTION_name} has successfully slain the metroid queen! As incredible as it may seem, the local metroid queen now lies dead. The whole metroid collective has been disorganized as a result, putting a halt to their raids.</LetterFactionKilledMetroidQueen>
 
   <LetterLabelQueenSpotted>New Metroid Queen Spotted!</LetterLabelQueenSpotted>
 	<LetterMetroidQueenSpotted>A new Metroid Queen has been spotted! Despite the last one clearly being killed, another Metroid Queen has risen up, and taken it's place. The whole collective has reorganized itself, and metroids raids will once again occur.</LetterMetroidQueenSpotted>

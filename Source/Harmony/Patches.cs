@@ -187,6 +187,20 @@ namespace RT_Rimtroid
             return true;
         }
     }
+
+    [HarmonyPatch(typeof(Faction), "TryGenerateNewLeader")]
+    public static class TryGenerateNewLeader_Patch
+    {
+        public static bool Prefix(ref bool __result)
+        {
+            if (Queen.preventFactionLeaderSpawn)
+            {
+                __result = false;
+                return false;
+            }
+            return true;
+        }
+    }
     //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     //public static class SpawnSetup_Patch
     // {

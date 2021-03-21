@@ -301,6 +301,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evolution\Events\GenStep_QueenLair.cs" />
+    <Compile Include="Evolution\Events\QuestNode_EnemyLeaderIsLiving.cs" />
+    <Compile Include="Evolution\Events\QuestNode_SetEnemyFaction.cs" />
+    <Compile Include="Evolution\Events\IncidentWorker_OtherFactionKilledQueen.cs" />
+    <Compile Include="Evolution\Events\IncidentWorker_QueenSpotted.cs" />
     <Compile Include="Evolution\HediffDefections.cs" />
     <Compile Include="Evolution\CompEvolutionTime.cs" />
     <Compile Include="Evolution\CompAlphaBomb.cs" />

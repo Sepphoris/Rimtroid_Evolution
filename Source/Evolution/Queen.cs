@@ -19,6 +19,17 @@ namespace RT_Rimtroid
 
     public class Queen : Metroid
     {
+        public static bool preventFactionLeaderSpawn;
+        public override void Kill(DamageInfo? dinfo, Hediff exactCulprit = null)
+        {
+            preventFactionLeaderSpawn = true;
+            base.Kill(dinfo, exactCulprit);
+            preventFactionLeaderSpawn = false;
+            Find.LetterStack.ReceiveLetter("LetterLabelMetroidQueenKilled".Translate(), "LetterMetroidQueenKilled".Translate(this.Named("PAWN")), LetterDefOf.PositiveEvent, this);
+            IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
+            parms.target = Find.World;
+            Find.Storyteller.incidentQueue.Add(RT_DefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
+        }
         public override void PostMake()
         {
             base.PostMake();
