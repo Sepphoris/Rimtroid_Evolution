@@ -174,6 +174,19 @@ namespace RT_Rimtroid
         }
     }
 
+    [HarmonyPatch(typeof(Faction), "CommFloatMenuOption")]
+    public static class CommFloatMenuOption_Patch
+    {
+        public static bool Prefix(ref FloatMenuOption __result, Faction __instance, Building_CommsConsole console, Pawn negotiator)
+        {
+            if (__instance.def == RT_DefOf.RT_Metroids)
+            {
+                __result = null;
+                return false;
+            }
+            return true;
+        }
+    }
     //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     //public static class SpawnSetup_Patch
     // {
