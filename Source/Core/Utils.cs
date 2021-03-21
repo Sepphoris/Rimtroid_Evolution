@@ -4,11 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using Verse.Grammar;
 
 namespace RT_Rimtroid
 {
     public static class Utils
     {
+        public static TaggedString GenerateTextFromRule(RulePackDef rule, string rootKeyword, int seed = -1)
+        {
+            if (seed != -1)
+            {
+                Rand.PushState();
+                Rand.Seed = seed;
+            }
+            GrammarRequest request = default(GrammarRequest);
+            request.Includes.Add(rule);
+            string str = GrammarResolver.Resolve(rootKeyword, request);
+            if (seed != -1)
+            {
+                Rand.PopState();
+            }
+            return str;
+        }
         public static bool IsAnyMetroid(this PawnKindDef t)
         {
             return (t.race == RT_DefOf.RT_BanteeMetroid ||

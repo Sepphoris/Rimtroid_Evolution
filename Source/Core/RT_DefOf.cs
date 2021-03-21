@@ -34,5 +34,6 @@ namespace RT_Rimtroid
 		public static JobDef RT_PlaceAlphaBomb;
 		public static ThingDef RT_MetroidBomb;
 
+		public static RulePackDef RT_QueenNames;
 	}
 }

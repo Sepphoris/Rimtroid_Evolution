@@ -22,7 +22,7 @@ namespace RT_Rimtroid
         public override void PostMake()
         {
             base.PostMake();
-            this.Name = new NameSingle(this.def.LabelCap);
+            this.Name = new NameSingle(Utils.GenerateTextFromRule(RT_DefOf.RT_QueenNames, "r_name", this.thingIDNumber));
         }
         public override void SetFaction(Faction newFaction, Pawn recruiter = null)
         {
