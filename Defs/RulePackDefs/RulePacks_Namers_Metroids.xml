@@ -88,6 +88,7 @@
     <defName>RT_QueenNames</defName>
     <rulePack>
       <rulesStrings>
+        <!--IDs based on non-prime games-->
         <li>r_name->[QueenID]</li>
         <li>QueenID->M-1986</li>
         <li>QueenID->RS-1991</li>
@@ -96,6 +97,7 @@
         <li>QueenID->ZM-2004</li>
         <li>QueenID->OM-2010</li>
         <li>QueenID->SR-2017</li>
+        <!--Non-Prime games with IDs scrambled-->
         <li>QueenID->M-8169</li>
         <li>QueenID->SR-1919</li>
         <li>QueenID->MS-4991</li>
@@ -103,6 +105,7 @@
         <li>QueenID->MZ-2040</li>
         <li>QueenID->MO-1200</li>
         <li>QueenID->RS-0271</li>
+        <!--IDs based on Prime games-->
         <li>QueenID->MP-2002</li>
         <li>QueenID->PE-2004</li>
         <li>QueenID->PP-2005</li>
@@ -110,6 +113,7 @@
         <li>QueenID->PC-2007</li>
         <li>QueenID->PT-2009</li>
         <li>QueenID->FF-2016</li>
+        <!--Prime games with IDs scrambled-->
         <li>QueenID->PM-0220</li>
         <li>QueenID->EP-4200</li>
         <li>QueenID->PP-0025</li>
@@ -123,7 +127,7 @@
       
 
 
-      IDs based on space pirate logs from MP1
+      <!--IDs based on space pirate logs from MP1
 
       IDs based on space pirate logs from MP2
         <li>BroodID->Specimen P0-468</li>

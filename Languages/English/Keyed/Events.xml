@@ -11,4 +11,11 @@
 	<LetterLarvaePack>A pack of Metroid Larvae has wandered into the area, searching for food. You can hunt them down, tame them, or choose to let them be, but beware; they will only leave once the area is completely void of life.</LetterLarvaePack>
 
 
+  <LetterLabelMetroidQueenMoving>Metroid Queen Spotted</LetterLabelMetroidQueenMoving>
+	<LetterMetroidQueenMoving>The local metroid queen has been spotted on the move.  An extremely durable and unique creature, the metroid queen single-handedly leads all the metroids on the planet. Defeating it will put a halt to metroid raids, but beware; next to none have ever been killed.</LetterMetroidQueenMoving>
+
+
+  <LetterLabelQueenSpotted>New Metroid Queen Spotted!</LetterLabelQueenSpotted>
+	<LetterMetroidQueenSpotted>A new Metroid Queen has been spotted! Despite the last one clearly being killed, another Metroid Queen has risen up, and taken it's place. The whole collective has reorganized itself, and metroids raids will once again occur.</LetterMetroidQueenSpotted>
+
 </LanguageData>
