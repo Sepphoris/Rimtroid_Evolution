@@ -797,7 +797,7 @@
 
 	<AbilityDef>
 		<defName>RT_QueenLarvaRecall</defName>
-		<label>Recall Larva</label>
+		<label>Recall Larvae</label>
 		<description>Recall all released larva on the field.</description>
 		<abilityClass>RT_Rimtroid.Ability_QueenRecallLarva</abilityClass>
 		<targetRequired>false</targetRequired>
