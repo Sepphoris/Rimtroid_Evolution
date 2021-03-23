@@ -758,6 +758,80 @@
 		</comps>
 	</AbilityDef>
 
+	<AbilityDef>
+		<defName>RT_QueenLarvaSpawn</defName>
+		<label>Release Larva</label>
+		<description>Releases one of the metroid larva that is residing on the Queen's shell (six maximum).</description>
+		<abilityClass>RT_Rimtroid.Ability_QueenReleaseLarva</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>300~600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>2</warmupTime>
+			<range>0</range>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Release Larva Enabled</gizmoOnText>
+				<gizmoOffText>Release Larva Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBurst</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBurst</gizmoOffIconPath>
+				<gizmoDesc>Toggle whether or not held larva can be released</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>QueenAbilityPool</cooldownPool>
+				<cooldownTicksRange>300~600</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_QueenLarvaRecall</defName>
+		<label>Recall Larva</label>
+		<description>Recall all released larva on the field.</description>
+		<abilityClass>RT_Rimtroid.Ability_QueenRecallLarva</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>300~600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>1</warmupTime>
+			<range>0</range>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Recall Larva Enabled</gizmoOnText>
+				<gizmoOffText>Recall Larva Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBurst</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBurst</gizmoOffIconPath>
+				<gizmoDesc>Toggle whether or not held larva can be recalled</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>QueenAbilityPool</cooldownPool>
+				<cooldownTicksRange>300~600</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
 	<!-- Abilities from Other M are also present here
       Queen can charge targets, which will be incredibly lethal
       Queen has a regular fire breath
