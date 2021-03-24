@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using Verse.AI;
 
 namespace RT_Rimtroid
 {
@@ -36,5 +37,7 @@ namespace RT_Rimtroid
 
 		public static RulePackDef RT_QueenNames;
 		public static IncidentDef RT_QueenSpotted;
+		public static DutyDef RT_FollowQueen;
+		public static JobDef RT_GoToQueenToDespawn;
 	}
 }

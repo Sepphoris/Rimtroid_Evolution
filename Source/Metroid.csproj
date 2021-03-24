@@ -326,7 +326,9 @@
     <Compile Include="Evolution\AcidBuildup.cs" />
     <Compile Include="Evolution\CorpseDesiccation.cs" />
     <Compile Include="Evolution\JobDriver_PlaceBomb.cs" />
+    <Compile Include="Evolution\Queen\Ability_QueenRecallPawn.cs" />
     <Compile Include="Evolution\Queen\Ability_QueenSpawnNewPawn.cs" />
+    <Compile Include="Evolution\Queen\JobDriver_GoToQueenToDespawn.cs" />
     <Compile Include="Evolution\Queen\QueenDroneComp.cs" />
     <Compile Include="Evolution\SedativeProjecileExt.cs" />
     <Compile Include="Evolution\SedativeProjectile.cs" />

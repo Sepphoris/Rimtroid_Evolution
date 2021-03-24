@@ -1,13 +1,65 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
 using Verse.AI;
+using Verse.AI.Group;
 
 namespace RT_Rimtroid
 {
+    internal class LordToil_DefendQueen : LordToil
+    {
+        public override bool AllowSatisfyLongNeeds => true;
+        public override float? CustomWakeThreshold => 0.5f;
+        private Queen queen;
+        public LordToil_DefendQueen()
+        {
+
+        }
+
+        public LordToil_DefendQueen(Queen queen)
+        {
+            this.queen = queen;
+        }
+        public override void UpdateAllDuties()
+        {
+            for (int i = 0; i < lord.ownedPawns.Count; i++)
+            {
+                Pawn pawn = lord.ownedPawns[i];
+                pawn.mindState.duty = new PawnDuty(RT_DefOf.RT_FollowQueen, queen, 12);
+            }
+        }
+
+    }
+
+    public class LordJob_DefendQueen : LordJob
+    {
+        private Queen queen;
+
+        public LordJob_DefendQueen()
+        {
+        }
+
+        public LordJob_DefendQueen(Queen queen)
+        {
+            this.queen = queen;
+        }
+
+        public override StateGraph CreateGraph()
+        {
+            StateGraph stateGraph = new StateGraph();
+            stateGraph.StartingToil = new LordToil_DefendQueen(queen);
+            return stateGraph;
+        }
+
+        public override void ExposeData()
+        {
+            Scribe_References.Look(ref queen, "queen");
+        }
+    }
     public class CompProperties_QueenDrone : CompProperties
     {
         public CompProperties_QueenDrone()
@@ -23,33 +75,36 @@ namespace RT_Rimtroid
         public override string CompInspectStringExtra()
         {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.AppendLine(base.CompInspectStringExtra());
+            var str = base.CompInspectStringExtra();
+            if (str != null)
+            {
+                stringBuilder.AppendLine(str.TrimEndNewlines());
+            }
             if (queen != null)
             {
                 stringBuilder.AppendLine("RT_GroupedwithQueen".Translate());
+                return stringBuilder.ToString().TrimEndNewlines();
             }
             return stringBuilder.ToString();
         }
         public void AssignToQueen(Queen queen)
         {
             this.queen = queen;
-            SetFocus();
+            SetDuty();
         }
 
         public override void CompTick()
         {
             if (!Metroid.Dead && Metroid.mindState?.duty?.focus == null && queen != null)
             {
-                this.SetFocus();
+                this.SetDuty();
             }
             base.CompTick();
         }
 
-        public void SetFocus()
+        public void SetDuty()
         {
-            PawnDuty duty = new PawnDuty(DutyDefOf.DefendHiveAggressively);
-            Metroid.mindState.duty = duty;
-            Metroid.mindState.duty.focus = queen;
+            queen.GetCustomLord().AddPawn(Metroid);
         }
         public void RemoveFromQueen()
         {

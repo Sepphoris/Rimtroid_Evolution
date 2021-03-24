@@ -769,6 +769,7 @@
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
+		<gizmoClass>RT_Rimtroid.Command_Ability_SpawnNewPawn</gizmoClass>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
@@ -799,7 +800,7 @@
 		<defName>RT_QueenLarvaRecall</defName>
 		<label>Recall Larvae</label>
 		<description>Recall all released larva on the field.</description>
-		<abilityClass>RT_Rimtroid.Ability_QueenRecallLarva</abilityClass>
+		<abilityClass>RT_Rimtroid.Ability_QueenRecallPawns</abilityClass>
 		<targetRequired>false</targetRequired>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
 		<cooldownTicksRange>300~600</cooldownTicksRange>

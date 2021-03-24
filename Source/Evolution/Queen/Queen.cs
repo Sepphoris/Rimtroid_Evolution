@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Verse;
+using Verse.AI.Group;
 
 namespace RT_Rimtroid
 {
@@ -35,26 +36,60 @@ namespace RT_Rimtroid
             despawnedPawns = new List<Pawn>();
         }
 
-        public bool CanSpawnNewPawn()
+        public List<Pawn> TotalPawns => spawnedPawns.Where(x => pawnKindDefs.Contains(x.kindDef) && !x.Dead).ToList();
+        public bool CanSpawnPawn(out string reason)
         {
-            if (Find.TickManager.TicksGame + (12 * GenDate.TicksPerHour) > generatedLastTick)
+            if (generatedLastTick + 100 > Find.TickManager.TicksGame)//(0 * GenDate.TicksPerHour) + 
             {
-                var totalPawns = spawnedPawns.Where(x => pawnKindDefs.Contains(x.kindDef) && !x.Dead).Concat(despawnedPawns);
-                if (totalPawns.Count() < 6)
-                {
-                    return true;
-                }
+                reason = "RT_GeneratingTimeout".Translate();
+                return false;
             }
-            return false;
+            if (!despawnedPawns.Any())
+            {
+                reason = "RT_CannotSpawnPawn".Translate();
+                return false;
+            }
+            reason = "";
+            return true;
         }
         public void SpawnPawn(Queen parent)
         {
-            var newPawn = PawnGenerator.GeneratePawn(pawnKindDefs.RandomElement(), parent.Faction);
-            GenSpawn.Spawn(newPawn, parent.Position, parent.Map);
-            var compDrone = newPawn.TryGetComp<QueenDroneComp>();
+            var oldPawn = despawnedPawns.First();
+            despawnedPawns.Remove(oldPawn);
+            GenSpawn.Spawn(oldPawn, parent.Position, parent.Map);
+            var compDrone = oldPawn.TryGetComp<QueenDroneComp>();
             compDrone.AssignToQueen(parent);
-            spawnedPawns.Add(newPawn);
-            this.generatedLastTick = Find.TickManager.TicksGame;
+            spawnedPawns.Add(oldPawn);
+        }
+
+        public void Restock(Queen parent)
+        {
+            var startingPawnCount = Rand.RangeInclusive(4, 6);
+            for (var i = 0; i < startingPawnCount; i++)
+            {
+                var newPawn = PawnGenerator.GeneratePawn(pawnKindDefs.RandomElement(), parent.Faction);
+                GenSpawn.Spawn(newPawn, parent.Position, parent.Map);
+                var compDrone = newPawn.TryGetComp<QueenDroneComp>();
+                compDrone.AssignToQueen(parent);
+                spawnedPawns.Add(newPawn);
+            }
+        }
+        public void RecallAll(Queen parent)
+        {
+            foreach (var pawn in spawnedPawns)
+            {
+                if (!pawn.Dead && !pawn.Downed && !pawn.IsPrisoner)
+                {
+                    pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_GoToQueenToDespawn, parent));
+                }
+            }
+        }
+
+        public void AbsorbPawn(Pawn pawn)
+        {
+            spawnedPawns.Remove(pawn);
+            despawnedPawns.Add(pawn);
+            pawn.DeSpawn();
         }
         public void ExposeData()
         {
@@ -84,12 +119,18 @@ namespace RT_Rimtroid
             if (!respawningAfterLoad)
             {
                 spawnPool = new SpawnPool();
-                var startingPawnCount = Rand.RangeInclusive(4, 6);
-                for (var i = 0; i < startingPawnCount; i++)
-                {
-                    spawnPool.SpawnPawn(this);
-                }
+                spawnPool.Restock(this);
             }
+        }
+
+        public Lord GetCustomLord()
+        {
+            var lord = this.spawnPool.spawnedPawns?.Select(x => x.GetLord()).Where(x => x.LordJob is LordJob_DefendQueen).FirstOrDefault();
+            if (lord is null)
+            {
+                lord = LordMaker.MakeNewLord(this.Faction, new LordJob_DefendQueen(this), this.Map);
+            }
+            return lord;
         }
         public override void PostMake()
         {

@@ -20,6 +20,11 @@
 		<reportString>placing a bomb to TargetA.</reportString>
 	</JobDef>
 	
+	<JobDef>
+		<defName>RT_GoToQueenToDespawn</defName>
+		<driverClass>RT_Rimtroid.JobDriver_GoToQueenToDespawn</driverClass>
+		<reportString>recalled from TargetA.</reportString>
+	</JobDef>
 	<!-- JobDefs for Gamma Metroids to create web structures-->
 
 	<!--<JobDef>
