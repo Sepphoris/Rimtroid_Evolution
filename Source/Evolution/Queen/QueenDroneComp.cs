@@ -90,14 +90,41 @@ namespace RT_Rimtroid
         public void AssignToQueen(Queen queen)
         {
             this.queen = queen;
+            Metroid.health.AddHediff(RT_DefOf.RT_HealingBonus);
             SetDuty();
         }
 
         public override void CompTick()
         {
-            if (!Metroid.Dead && Metroid.mindState?.duty?.focus == null && queen != null)
+            if (!Metroid.Dead && Metroid.ageTracker.AgeBiologicalYearsFloat < 75 && Metroid.mindState?.duty?.focus == null && queen != null)
             {
                 this.SetDuty();
+            }
+            else if (queen != null && (Metroid.Dead || Metroid.ageTracker.AgeBiologicalYearsFloat >= 75))
+            {
+                if (Metroid.ageTracker.AgeBiologicalYearsFloat >= 75)
+                {
+                    Messages.Message("RT_QueenHasGrownTooOld".Translate(Metroid.Named("PAWN"), queen.Named("QUEEN")), Metroid, MessageTypeDefOf.CautionInput);
+                }
+                this.RemoveFromQueen();
+            }
+            if (queen != null)
+            {
+                Metroid.ageTracker.AgeTick();
+                Metroid.ageTracker.AgeTick();
+            }
+            else if (Metroid.Faction is null && (Metroid.IsBanteeMetroid() || Metroid.IsMetroidLarvae()))
+            {
+                var chance = Metroid.IsBanteeMetroid() ? Rand.Chance(0.01f) : Rand.Chance(0.05f);
+                if (chance)
+                {
+                    var queens = Metroid.Map.mapPawns.AllPawns.Where(x => x.IsQueenMetroid() && x.Faction == Faction.OfPlayer);
+                    if (queens.Any())
+                    {
+                        AssignToQueen(queens.RandomElement() as Queen);
+                        Find.LetterStack.ReceiveLetter("LetterLabelMetroidLikesQueen".Translate(Metroid.Named("PAWN")), "LetterMetroidLikesQueen".Translate(Metroid.Named("PAWN")), LetterDefOf.PositiveEvent, Metroid);
+                    }
+                }
             }
             base.CompTick();
         }
@@ -111,6 +138,12 @@ namespace RT_Rimtroid
             if (this.queen != null && Metroid.mindState?.duty?.focus.Pawn == this.queen)
             {
                 Metroid.mindState.duty = null;
+                var healingBonus = Metroid.health.hediffSet.GetFirstHediffOfDef(RT_DefOf.RT_HealingBonus);
+                if (healingBonus != null)
+                {
+                    Metroid.health.RemoveHediff(healingBonus);
+                }
+                this.queen.spawnPool.spawnedPawns.Remove(Metroid);
                 this.queen = null;
             }
         }

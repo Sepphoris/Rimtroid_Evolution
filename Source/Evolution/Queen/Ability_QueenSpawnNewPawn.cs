@@ -22,7 +22,7 @@ namespace RT_Rimtroid
         {
             get
             {
-                return 6 - Queen.spawnPool.TotalPawns.Count + "/6";
+                return 6 - Queen.spawnPool.SpawnedPawns.Count + "/6";
             }
         }
     }

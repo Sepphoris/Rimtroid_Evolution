@@ -24,7 +24,7 @@
   <LetterLabelQueenSpotted>New Metroid Queen Spotted!</LetterLabelQueenSpotted>
 	<LetterMetroidQueenSpotted>A new Metroid Queen has been spotted! Despite the last one clearly being killed, another Metroid Queen has risen up, and taken it's place. The whole collective has reorganized itself, and metroids raids will once again occur.</LetterMetroidQueenSpotted>
 
-<LetterLabelMetroidLikesQueen>{0} joins the colony</LetterLabelMetroidLikesQueen>
-	<LetterMetroidLikesQueen>{0} has joined the colony due to the presence of a Metroid Queen.</LetterMetroidLikesQueen>
+<LetterLabelMetroidLikesQueen>{PAWN_kindDef} joins the colony</LetterLabelMetroidLikesQueen>
+	<LetterMetroidLikesQueen>{PAWN_kindDef} has joined the colony due to the presence of a Metroid Queen.</LetterMetroidLikesQueen>
 
 </LanguageData>

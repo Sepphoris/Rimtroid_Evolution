@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using UnityEngine;
+using RT_Core;
 
 namespace RT_Rimtroid
 {
@@ -188,6 +189,7 @@ namespace RT_Rimtroid
         }
     }
 
+
     [HarmonyPatch(typeof(Faction), "TryGenerateNewLeader")]
     public static class TryGenerateNewLeader_Patch
     {
@@ -201,6 +203,174 @@ namespace RT_Rimtroid
             return true;
         }
     }
+
+    [HarmonyPatch(typeof(FloatMenuMakerMap), "CanTakeOrder")]
+    public static class CanTakeOrder_Patch
+    {
+        public static void Postfix(ref bool __result, Pawn pawn)
+        {
+            if (!__result && (pawn.IsMetroidLarvae() || pawn.IsBanteeMetroid()))
+            {
+                __result = true;
+            }
+        }
+    }
+    [HarmonyPatch(typeof(FloatMenuMakerMap), "ChoicesAtFor")]
+    public static class ChoicesAtFor_Patch
+    {
+        public static void Postfix(ref List<FloatMenuOption> __result, Vector3 clickPos, Pawn pawn)
+        {
+
+            if (pawn.Faction == Faction.OfPlayer)
+            {
+                if (pawn.IsMetroidLarvae() || pawn.IsBanteeMetroid())
+                {
+                    IntVec3 c = IntVec3.FromVector3(clickPos);
+                    foreach (Thing thing in c.GetThingList(pawn.Map))
+                    {
+                        if (thing is Queen queen && queen.Faction == Faction.OfPlayer)
+                        {
+                            var comp = pawn.TryGetComp<QueenDroneComp>();
+                            if (comp.queen == queen)
+                            {
+                                Action action = delegate
+                                {
+                                    comp.RemoveFromQueen();
+                                };
+                                __result.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("RT_LeaveQueen".Translate(), action, MenuOptionPriority.High, null, queen), pawn, queen));
+                            }
+                            else if (queen.spawnPool.TotalPawns.Count() < 6)
+                            {
+                                if (pawn.ageTracker.AgeBiologicalYearsFloat >= 75)
+                                {
+                                    __result.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("RT_JoinQueenTooOld".Translate(), null, MenuOptionPriority.High, null, queen), pawn, queen));
+                                }
+                                else
+                                {
+                                    Action action = delegate
+                                    {
+                                        queen.spawnPool.spawnedPawns.Add(pawn);
+                                        comp.AssignToQueen(queen);
+                                    };
+                                    __result.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("RT_JoinQueen".Translate(), action, MenuOptionPriority.High, null, queen), pawn, queen));
+                                }
+                            }
+                            else
+                            {
+                                __result.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("RT_JoinQueenLimit".Translate(), null, MenuOptionPriority.High, null, queen), pawn, queen));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Need_Food), "NeedInterval")]
+    public static class RT_NeedInterval_Patch
+    {
+        public static float GetBerserkChance(float curFoodLevel, Dictionary<float, float> hungerValues)
+        {
+            var keys = hungerValues.Keys.OrderByDescending(x => x);
+            float result = 0;
+            foreach (var key in keys)
+            {
+                if (key >= curFoodLevel)
+                {
+                    result = hungerValues[key];
+                }
+            }
+            return result;
+        }
+
+        public static bool Prefix(Need_Food __instance, Pawn ___pawn)
+        {
+            if (___pawn.IsAnyMetroid() && ___pawn.CurJobDef == JobDefOf.LayDown)
+            {
+                return false;
+            }
+            var comp = ___pawn.TryGetComp<QueenDroneComp>();
+            if (comp?.queen != null && __instance.CurLevelPercentage <= 0.3f)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static void Postfix(Need_Food __instance, Pawn ___pawn)
+        {
+            if (RimtroidSettings.allowBerserkChanceMetroidHunger)
+            {
+                var options = ___pawn.kindDef.GetModExtension<HungerBerserkOptions>();
+                if (options != null)
+                {
+                    var comp = ___pawn.TryGetComp<QueenDroneComp>();
+                    if (comp?.queen != null)
+                    {
+                        return;
+                    }
+                    var berserkChance = GetBerserkChance(__instance.CurLevelPercentage, options.hungerBerserkChanges);
+                    //Log.Message(___pawn + " has " + berserkChance + " berserk chance, cur food level: " + __instance.CurLevelPercentage, true);
+                    if (berserkChance > 0)
+                    {
+                        if (!___pawn.InMentalState && Rand.Chance(berserkChance))
+                        {
+                            if (___pawn.CurJobDef != JobDefOf.LayDown && ___pawn.CurJobDef != RT_DefOf.RT_EatFromStation && ___pawn.CurJobDef != RT_DefOf.RT_AbsorbingEnergy && !InCombat(___pawn))
+                            {
+                                //Log.Message(___pawn + " gets berserk state", true);
+                                if (___pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forceWake: true))
+                                {
+                                    if (RimtroidSettings.allowWildChanceMetroidBerserk && ___pawn.Faction == Faction.OfPlayer && Rand.Chance(options.chanceToBecomeWildIfBerserkAndTamed))
+                                    {
+                                        ___pawn.SetFaction(null);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    else if (___pawn.mindState.mentalStateHandler.CurStateDef == MentalStateDefOf.Berserk)
+                    {
+                        //Log.Message(___pawn + " recovers from berserk state", true);
+                        ___pawn.MentalState.RecoverFromState();
+                    }
+                }
+            }
+        }
+
+        public static HashSet<JobDef> combatJobs = new HashSet<JobDef>
+                                                    {
+                                                        JobDefOf.AttackMelee,
+                                                        JobDefOf.AttackStatic,
+                                                        JobDefOf.FleeAndCower,
+                                                        JobDefOf.ManTurret,
+                                                        JobDefOf.Wait_Combat,
+                                                        JobDefOf.Flee
+                                                    };
+        private static bool InCombat(Pawn pawn)
+        {
+            if (combatJobs.Contains(pawn.CurJobDef))
+            {
+                return true;
+            }
+            else if (pawn.mindState.duty?.def.alwaysShowWeapon ?? false)
+            {
+                return true;
+            }
+            else if (pawn.CurJobDef?.alwaysShowWeapon ?? false)
+            {
+                return true;
+            }
+            else if (pawn.mindState.lastEngageTargetTick > Find.TickManager.TicksGame - 1000)
+            {
+                return true;
+            }
+            else if (pawn.mindState.lastAttackTargetTick > Find.TickManager.TicksGame - 1000)
+            {
+                return true;
+            }
+            return false;
+        }
+    }
+
     //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
     //public static class SpawnSetup_Patch
     // {

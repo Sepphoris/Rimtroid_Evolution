@@ -276,7 +276,16 @@
       </stages>
   	</HediffDef>
 
-
+	<HediffDef>
+		<defName>RT_HealingBonus</defName>
+		<label>healing bonus</label>
+		<labelNoun>healing bonus</labelNoun>
+		<description>healing bonus</description>
+		<stages>
+			<naturalHealingFactor>2</naturalHealingFactor>
+		</stages>
+	</HediffDef>
+	
 <!--Hediff notes:
 (233,129,69) - Orange label
 (0.8,0,0.8) - Purple label

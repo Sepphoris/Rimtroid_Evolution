@@ -39,5 +39,9 @@ namespace RT_Rimtroid
 		public static IncidentDef RT_QueenSpotted;
 		public static DutyDef RT_FollowQueen;
 		public static JobDef RT_GoToQueenToDespawn;
+		public static HediffDef RT_HealingBonus;
+
+		public static JobDef RT_EatFromStation;
+		public static JobDef RT_AbsorbingEnergy;
 	}
 }

@@ -36,14 +36,11 @@ namespace RT_Rimtroid
             despawnedPawns = new List<Pawn>();
         }
 
-        public List<Pawn> TotalPawns => spawnedPawns.Where(x => pawnKindDefs.Contains(x.kindDef) && !x.Dead).ToList();
+        public List<Pawn> SpawnedPawns => spawnedPawns.Where(x => pawnKindDefs.Contains(x.kindDef) && !x.Dead).ToList();
+
+        public List<Pawn> TotalPawns => SpawnedPawns.Concat(this.despawnedPawns).ToList();
         public bool CanSpawnPawn(out string reason)
         {
-            if (generatedLastTick + 100 > Find.TickManager.TicksGame)//(0 * GenDate.TicksPerHour) + 
-            {
-                reason = "RT_GeneratingTimeout".Translate();
-                return false;
-            }
             if (!despawnedPawns.Any())
             {
                 reason = "RT_CannotSpawnPawn".Translate();
@@ -76,8 +73,9 @@ namespace RT_Rimtroid
         }
         public void RecallAll(Queen parent)
         {
-            foreach (var pawn in spawnedPawns)
+            for (int num = spawnedPawns.Count - 1; num >= 0; num--)
             {
+                var pawn = spawnedPawns[num];
                 if (!pawn.Dead && !pawn.Downed && !pawn.IsPrisoner)
                 {
                     pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_GoToQueenToDespawn, parent));
@@ -104,6 +102,13 @@ namespace RT_Rimtroid
         public static bool preventFactionLeaderSpawn;
         public override void Kill(DamageInfo? dinfo, Hediff exactCulprit = null)
         {
+            if (spawnPool.despawnedPawns.Any())
+            {
+                foreach (var pawn in spawnPool.despawnedPawns)
+                {
+                    GenSpawn.Spawn(pawn, this.Position, this.Map);
+                }
+            }
             preventFactionLeaderSpawn = true;
             base.Kill(dinfo, exactCulprit);
             preventFactionLeaderSpawn = false;
@@ -125,7 +130,7 @@ namespace RT_Rimtroid
 
         public Lord GetCustomLord()
         {
-            var lord = this.spawnPool.spawnedPawns?.Select(x => x.GetLord()).Where(x => x.LordJob is LordJob_DefendQueen).FirstOrDefault();
+            var lord = this.spawnPool.spawnedPawns?.Select(x => x.GetLord()).Where(x => x?.LordJob is LordJob_DefendQueen).FirstOrDefault();
             if (lord is null)
             {
                 lord = LordMaker.MakeNewLord(this.Faction, new LordJob_DefendQueen(this), this.Map);
