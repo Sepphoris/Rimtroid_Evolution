@@ -134,6 +134,12 @@
 			  <compClass>RT_Core.CompAbilityDefinition</compClass>
 			  <abilities>
 			  	<li>
+					  <abilityDef>RT_QueenLarvaSpawn</abilityDef>
+         </li>
+			  	<li>
+					  <abilityDef>RT_QueenLarvaRecall</abilityDef>
+         </li>
+			  	<li>
 					  <abilityDef>RT_QueenBeam</abilityDef>
          </li>
 			  </abilities>
