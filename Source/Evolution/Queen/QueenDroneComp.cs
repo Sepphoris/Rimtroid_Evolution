@@ -91,6 +91,10 @@ namespace RT_Rimtroid
         {
             this.queen = queen;
             Metroid.health.AddHediff(RT_DefOf.RT_HealingBonus);
+            if (this.queen.Faction != Metroid.Faction)
+            {
+                Metroid.SetFaction(this.queen.Faction);
+            }
             SetDuty();
         }
 
