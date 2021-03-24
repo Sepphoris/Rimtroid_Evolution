@@ -3,35 +3,35 @@
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
 	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
-	
+
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_BanteeMetroid</defName>
 		<label>Bantee Metroid</label>
 
 		<description>Bantee Metroids, also known as Metroid Hatchlings, are freshly-hatched metroids that are still developing a majority of their body structure. Most Bantees stay near a Queen until the larvae stage; if lost in the wild, they have very little chance of surviving long enough to develop into a larvae.\n\nDue to significant underdevelopment, their natural, primal senses are almost entirely absent; they are very easy to tame and make bonds with, and Bantees will only berserk in the most dire of hunger situations. This, coupled with their minimal threat state, makes them quite valuable and affectionate house pets.</description>
 		<statBases>
-		
-	<!-- Internal Stats -->
-		  <ToxicSensitivity>0</ToxicSensitivity>
-		  <PsychicSensitivity>0</PsychicSensitivity>
-      <Flammability>0</Flammability>
-		  <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
-		  <ArmorRating_Heat>1</ArmorRating_Heat>
-		  <MoveSpeed>3</MoveSpeed>
-		  <MarketValue>160</MarketValue>
-		  <ComfyTemperatureMin>14</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
-		  <MeatAmount>0</MeatAmount>
+
+			<!-- Internal Stats -->
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<Flammability>0</Flammability>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<MoveSpeed>3</MoveSpeed>
+			<MarketValue>160</MarketValue>
+			<ComfyTemperatureMin>14</ComfyTemperatureMin>
+			<ComfyTemperatureMax>160</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
-		
-	<!-- Attacks -->
+
+		<!-- Attacks -->
 		<tools>
 			<li>
 				<label>ram</label>
 				<capacities>
-				  <li>Blunt</li>
+					<li>Blunt</li>
 				</capacities>
 				<power>2</power>
 				<cooldownTime>2</cooldownTime>
@@ -48,22 +48,22 @@
 				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
 			</li>
 			<li>
-        <label>life drain</label>
-      	<capacities>
-          <li>RT_LifedrainBantee</li>
-	      </capacities>
-          <power>7</power>
-          <cooldownTime>3</cooldownTime>
-          <chanceFactor>0.8</chanceFactor>
+				<label>life drain</label>
+				<capacities>
+					<li>RT_LifedrainBantee</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>3</cooldownTime>
+				<chanceFactor>0.8</chanceFactor>
 				<surpriseAttack>
 					<extraMeleeDamages>
-					<li>
-						<def>Stun</def>
-						<amount>6</amount>
-					</li>
+						<li>
+							<def>Stun</def>
+							<amount>6</amount>
+						</li>
 					</extraMeleeDamages>
 				</surpriseAttack>
-            </li>
+			</li>
 		</tools>
 		<comps>
 			<li Class="RT_Core.RT_FloatingComp">
@@ -71,6 +71,7 @@
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
 			</li>
+			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
 				<timeInYears>14</timeInYears>
 			</li>
@@ -122,33 +123,33 @@
 				</abilities>
 			</li>
 		</comps>
-		
-	<!-- Race stats -->
-		
-		<race>
-    <!-- Overriding animal think tree -->
-        <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
-        <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
 
-		  <bloodDef>Filth_BloodInsect</bloodDef>
-		  <herdAnimal>true</herdAnimal>
-		  <body>RT_BanteeBody</body>
-		  <baseBodySize>0.3</baseBodySize>
-		  <baseHealthScale>1.5</baseHealthScale>
-		  <baseHungerRate>0.35</baseHungerRate>
-		  <hasGenders>false</hasGenders>
+		<!-- Race stats -->
+
+		<race>
+			<!-- Overriding animal think tree -->
+			<thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+			<thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<herdAnimal>true</herdAnimal>
+			<body>RT_BanteeBody</body>
+			<baseBodySize>0.3</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
+			<baseHungerRate>0.35</baseHungerRate>
+			<hasGenders>false</hasGenders>
 			<hediffGiverSets>
 				<li>RT_Rimtroid_EvolutionGrowth</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
-		  <foodType>Processed</foodType>
-		  <!--<leatherDef>RT_MetroidChitin</leatherDef>-->
-		  <trainability>Advanced</trainability>
-		  <maxPreyBodySize>3.9</maxPreyBodySize>
-		  <gestationPeriodDays>30</gestationPeriodDays>
-		  <predator>false</predator>
-		  <!-- <litterSizeCurve>
+			<foodType>Processed</foodType>
+			<!--<leatherDef>RT_MetroidChitin</leatherDef>-->
+			<trainability>Advanced</trainability>
+			<maxPreyBodySize>3.9</maxPreyBodySize>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<predator>false</predator>
+			<!-- <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
@@ -157,43 +158,43 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-		  <manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
-		  <wildness>0.7</wildness>
-		  <lifeExpectancy>200</lifeExpectancy>
-		  <lifeStageAges>
-			<li>
-			  <def>AnimalBaby</def>
-			  <minAge>0</minAge>
-			</li>
-			<li>
-			  <def>AnimalJuvenile</def>
-			  <minAge>0.25</minAge>
-			</li>
-			<li>
-			  <def>AnimalAdult</def>
-			  <minAge>0.5</minAge>
-				<soundWounded>RT_Bantee_Wounded</soundWounded>
-				<soundDeath>RT_Bantee_Death</soundDeath>
-				<soundCall>RT_Bantee_Call</soundCall>
-				<soundAngry>RT_Bantee_Angry</soundAngry>
-			</li>
-		  </lifeStageAges>
-		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-		<ageGenerationCurve>
-			<points>
-				<li>(0,0)</li>
-				<li>(1,3)</li>
-				<li>(3,5)</li>
-				<li>(6,10)</li>
-				<li>(9,3)</li>
-				<li>(14,0)</li>
-			</points>
-    </ageGenerationCurve>
+			<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.05</manhunterOnTameFailChance>
+			<wildness>0.7</wildness>
+			<lifeExpectancy>200</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.5</minAge>
+					<soundWounded>RT_Bantee_Wounded</soundWounded>
+					<soundDeath>RT_Bantee_Death</soundDeath>
+					<soundCall>RT_Bantee_Call</soundCall>
+					<soundAngry>RT_Bantee_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<ageGenerationCurve>
+				<points>
+					<li>(0,0)</li>
+					<li>(1,3)</li>
+					<li>(3,5)</li>
+					<li>(6,10)</li>
+					<li>(9,3)</li>
+					<li>(14,0)</li>
+				</points>
+			</ageGenerationCurve>
 			<wildBiomes>
-			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalRainforest>0.12</TropicalRainforest>
 				<TropicalSwamp>0.09</TropicalSwamp>
 				<TemperateSwamp>0.08</TemperateSwamp>
 				<TemperateForest>0.07</TemperateForest>
@@ -204,18 +205,18 @@
 				<ColdBog>0.001</ColdBog>
 			</wildBiomes>
 		</race>
-    <butcherProducts>
+		<butcherProducts>
 			<RT_MetroidGel>8</RT_MetroidGel>
 		</butcherProducts>
 		<tradeTags>
-		  <li>AnimalExotic</li>
-		  <li>AnimalInsectSpace</li>
+			<li>AnimalExotic</li>
+			<li>AnimalInsectSpace</li>
 		</tradeTags>
-	<modExtensions>
-    <!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
-	  <li Class="RT_Core.DisableTrainingDegredation"> </li>
-        <!--desicatedDef>huskdefnamehere</desicatedDef-->
-		  <li Class="RT_Core.HungerBerserkOptions">
+		<modExtensions>
+			<!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
+			<li Class="RT_Core.DisableTrainingDegredation"> </li>
+			<!--desicatedDef>huskdefnamehere</desicatedDef-->
+			<li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
 					<li>
@@ -252,7 +253,7 @@
 			<li Class="RT_Core.LegacyModExtension">
 				<hasAbilities>true</hasAbilities>
 			</li>
-    </modExtensions>
+		</modExtensions>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">
@@ -266,50 +267,50 @@
 			<max>3</max>
 		</wildGroupSize>
 		<lifeStages>
-		  <li>
-			<label>bantee metroid</label>
-			<labelPlural>bantee metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
-			  <drawSize>0.8</drawSize>
-			  <shadowData>
-				<volume>(0.2, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.55)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
-			  <drawSize>0.8</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
-			  <drawSize>0.8</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
-			  <drawSize>0.8</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
-			  <drawSize>0.8</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
-			  <drawSize>0.8</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
+			<li>
+				<label>bantee metroid</label>
+				<labelPlural>bantee metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
+					<drawSize>0.8</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.55)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
+					<drawSize>0.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
+					<drawSize>0.8</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
+					<drawSize>0.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/BanteeMetroid/RT_BanteeMetroid</texPath>
+					<drawSize>0.8</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/BanteeMetroid/RT_Dessicated_BanteeMetroid</texPath>
+					<drawSize>0.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
 		</lifeStages>
 	</PawnKindDef>
 </Defs>

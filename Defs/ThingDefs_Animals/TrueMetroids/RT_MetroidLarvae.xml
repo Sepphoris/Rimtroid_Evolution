@@ -67,10 +67,10 @@
 		</tools>
 		<comps>
 			<li Class="RT_Core.RT_FloatingComp">
-
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
 			</li>
+			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
 				<timeInYears>80</timeInYears>
 			</li>

@@ -762,7 +762,7 @@
 		<defName>RT_QueenLarvaSpawn</defName>
 		<label>Release Larva</label>
 		<description>Releases one of the metroid larva that is residing on the Queen's shell (six maximum).</description>
-		<abilityClass>RT_Rimtroid.Ability_QueenReleaseLarva</abilityClass>
+		<abilityClass>RT_Rimtroid.Ability_QueenSpawnNewPawn</abilityClass>
 		<targetRequired>false</targetRequired>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
 		<cooldownTicksRange>300~600</cooldownTicksRange>

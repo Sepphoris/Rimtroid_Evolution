@@ -21,10 +21,6 @@ namespace RT_Rimtroid
 
         public override bool Activate(LocalTargetInfo target, LocalTargetInfo dest)
         {
-            //base.Effect(target);
-            MoteMaker.MakeStaticMote(pawn.Position, pawn.Map, ThingDef.Named("Mote_GrowingFlash"), 5);
-            ElectricGenExplosion.DoExplosion(this.pawn.Position, this.pawn.Map, 4f, DamageDefOf.Bomb, this.pawn, 100);
-            //Log.Message("Lightning floor ability has gone through.");
 
             return base.Activate(target, dest);
         }
