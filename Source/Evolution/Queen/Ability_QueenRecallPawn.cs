@@ -23,7 +23,7 @@ namespace RT_Rimtroid
             get
             {
                 var str = base.Tooltip + "\n";
-                str += "RT_RecallAbilityTooltip".Translate(Queen.spawnPool.SpawnedPawns.Count, SpawnPool.maxPawnCount);
+                str += "RT_RecallAbilityTooltip".Translate(Queen.spawnPool.SpawnedPawns.Count, Queen.spawnPool.TotalPawns.Count());
                 return str;
             }
         }
