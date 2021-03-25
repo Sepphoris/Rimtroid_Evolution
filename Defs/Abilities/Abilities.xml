@@ -773,7 +773,7 @@
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
-			<warmupTime>2</warmupTime>
+			<warmupTime>0</warmupTime>
 			<range>0</range>
 		</verbProperties>
 		<comps>
@@ -811,7 +811,7 @@
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
-			<warmupTime>1</warmupTime>
+			<warmupTime>0.5</warmupTime>
 			<range>0</range>
 		</verbProperties>
 		<comps>
