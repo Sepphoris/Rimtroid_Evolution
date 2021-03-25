@@ -18,11 +18,20 @@ namespace RT_Rimtroid
 
         public Queen Queen => this.Ability.pawn as Queen;
 
+        public override string Tooltip
+        {
+            get
+            {
+                var str = base.Tooltip + "\n";
+                str += "RT_RecallAbilityTooltip".Translate(Queen.spawnPool.SpawnedPawns.Count, SpawnPool.maxPawnCount);
+                return str;
+            }
+        }
         public override string TopRightLabel
         {
             get
             {
-                return Queen.spawnPool.SpawnedPawns.Count.ToString();
+                return Queen.spawnPool.SpawnedPawns.Count.ToString() + "/" + SpawnPool.maxPawnCount;
             }
         }
     }

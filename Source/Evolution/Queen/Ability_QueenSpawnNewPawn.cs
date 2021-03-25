@@ -18,6 +18,15 @@ namespace RT_Rimtroid
 
         public Queen Queen => this.Ability.pawn as Queen;
 
+        public override string Tooltip
+        {
+            get
+            {
+                var str = base.Tooltip + "\n";
+                str += "RT_ReleaseAbilityTooltip".Translate(Queen.spawnPool.despawnedPawns.Count, SpawnPool.maxPawnCount);
+                return str;
+            }
+        }
         public override string TopRightLabel
         {
             get
