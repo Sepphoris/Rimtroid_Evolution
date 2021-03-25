@@ -135,10 +135,16 @@ namespace RT_Rimtroid
 
         public void JoinQueenLord()
         {
-            var lord = queen.GetCustomLord();
-            if (lord != null && !lord.ownedPawns.Contains(Metroid))
+            var lord = Metroid.GetLord();
+            var queenLord = queen.GetCustomLord();
+            if (lord != null && lord != queenLord)
             {
-                lord.AddPawn(Metroid);
+                lord.ownedPawns.Remove(Metroid);
+                Metroid.mindState.duty = null;
+            }
+            if (queenLord != null && !queenLord.ownedPawns.Contains(Metroid))
+            {
+                queenLord.AddPawn(Metroid);
             }
         }
         public void RemoveFromQueen()
