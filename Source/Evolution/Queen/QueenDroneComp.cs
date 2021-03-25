@@ -135,7 +135,11 @@ namespace RT_Rimtroid
 
         public void JoinQueenLord()
         {
-            queen.GetCustomLord().AddPawn(Metroid);
+            var lord = queen.GetCustomLord();
+            if (lord != null && !lord.ownedPawns.Contains(Metroid))
+            {
+                lord.AddPawn(Metroid);
+            }
         }
         public void RemoveFromQueen()
         {
