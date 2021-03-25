@@ -765,7 +765,7 @@
 		<abilityClass>RT_Rimtroid.Ability_QueenSpawnNewPawn</abilityClass>
 		<targetRequired>false</targetRequired>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-		<cooldownTicksRange>300~600</cooldownTicksRange>
+		<cooldownTicksRange>90</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
@@ -789,7 +789,7 @@
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
 				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
 				<cooldownPool>QueenAbilityPool</cooldownPool>
-				<cooldownTicksRange>300~600</cooldownTicksRange>
+				<cooldownTicksRange>90</cooldownTicksRange>
 				<independent>false</independent>
 				<resetsTimer>false</resetsTimer>
 			</li>
@@ -803,7 +803,7 @@
 		<abilityClass>RT_Rimtroid.Ability_QueenRecallPawns</abilityClass>
 		<targetRequired>false</targetRequired>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
-		<cooldownTicksRange>300~600</cooldownTicksRange>
+		<cooldownTicksRange>120</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
@@ -827,7 +827,7 @@
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
 				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
 				<cooldownPool>QueenAbilityPool</cooldownPool>
-				<cooldownTicksRange>300~600</cooldownTicksRange>
+				<cooldownTicksRange>90</cooldownTicksRange>
 				<independent>false</independent>
 				<resetsTimer>false</resetsTimer>
 			</li>
