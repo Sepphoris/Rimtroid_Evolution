@@ -31,6 +31,10 @@
 	<RT_JoinQueenTooOld>Group with Queen: too old</RT_JoinQueenTooOld>
 	<RT_JoinQueenLimit>Group with Queen: already carrying maximum metroids</RT_JoinQueenLimit>
 	<RT_QueenHasGrownTooOld>{PAWN_nameDef} has grown too old for {QUEEN_nameDef} to nurture</RT_QueenHasGrownTooOld>
+	<RT_ReleaseAbilityTooltip>Releases one of the metroids that is residing on the Queen's shell (eight maximum).
+
+Carry occupancy is {0} out of {1}.</RT_ReleaseAbilityTooltip>
+	<RT_RecallAbilityTooltip>Recall all released metroids on the field. Queen can currently recall {0} out of {1} metroids.</RT_RecallAbilityTooltip>
 
 	<!--Animal toggles -->
 
