@@ -68,7 +68,7 @@
 		<cooldownTicksRange>3300</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>Things/Misc/MetroidBomb</iconPath>
+		<iconPath>UI/Abilities/EnergyDrain</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_EnergyAbsorb</verbClass>
 			<range>0</range>
