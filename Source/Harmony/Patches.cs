@@ -239,7 +239,7 @@ namespace RT_Rimtroid
                                 };
                                 __result.Add(FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("RT_LeaveQueen".Translate(), action, MenuOptionPriority.High, null, queen), pawn, queen));
                             }
-                            else if (queen.spawnPool.TotalPawns.Count() < 6)
+                            else if (queen.spawnPool.TotalPawns.Count() < SpawnPool.maxPawnCount)
                             {
                                 if (pawn.ageTracker.AgeBiologicalYearsFloat >= 75)
                                 {

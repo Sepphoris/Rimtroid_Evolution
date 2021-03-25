@@ -7,7 +7,7 @@
       <subNodes>
         <li Class="JobGiver_AIFollowEscortee" />
         <li Class="ThinkNode_ForbidOutsideFlagRadius">
-          <maxDistToSquadFlag>16</maxDistToSquadFlag>
+          <maxDistToSquadFlag>50</maxDistToSquadFlag>
           <subNodes>
             <li Class="ThinkNode_Subtree">
               <treeDef>RT_SatisfyBasicNeeds</treeDef>
@@ -15,7 +15,7 @@
           </subNodes>
         </li>
         <li Class="JobGiver_WanderNearDutyLocation">
-          <wanderRadius>5</wanderRadius>
+          <wanderRadius>50</wanderRadius>
         </li>
       </subNodes>
     </thinkNode>

@@ -95,14 +95,14 @@ namespace RT_Rimtroid
             {
                 Metroid.SetFaction(this.queen.Faction);
             }
-            SetDuty();
+            JoinQueenLord();
         }
 
         public override void CompTick()
         {
             if (!Metroid.Dead && Metroid.ageTracker.AgeBiologicalYearsFloat < 75 && Metroid.mindState?.duty?.focus == null && queen != null)
             {
-                this.SetDuty();
+                this.JoinQueenLord();
             }
             else if (queen != null && (Metroid.Dead || Metroid.ageTracker.AgeBiologicalYearsFloat >= 75))
             {
@@ -117,12 +117,12 @@ namespace RT_Rimtroid
                 Metroid.ageTracker.AgeTick();
                 Metroid.ageTracker.AgeTick();
             }
-            else if (Metroid.Faction is null && (Metroid.IsBanteeMetroid() || Metroid.IsMetroidLarvae()))
+            else if (Find.TickManager.TicksGame % (8 * GenDate.TicksPerHour) == 0 && Metroid.Faction is null && (Metroid.IsBanteeMetroid() || Metroid.IsMetroidLarvae()))
             {
                 var chance = Metroid.IsBanteeMetroid() ? Rand.Chance(0.01f) : Rand.Chance(0.05f);
                 if (chance)
                 {
-                    var queens = Metroid.Map.mapPawns.AllPawns.Where(x => x.IsQueenMetroid() && x.Faction == Faction.OfPlayer);
+                    var queens = Metroid.Map.mapPawns.AllPawns.Where(x => x is Queen queen && x.Faction == Faction.OfPlayer && queen.spawnPool.TotalPawns.Count() < SpawnPool.maxPawnCount);
                     if (queens.Any())
                     {
                         AssignToQueen(queens.RandomElement() as Queen);
@@ -133,7 +133,7 @@ namespace RT_Rimtroid
             base.CompTick();
         }
 
-        public void SetDuty()
+        public void JoinQueenLord()
         {
             queen.GetCustomLord().AddPawn(Metroid);
         }
@@ -141,6 +141,7 @@ namespace RT_Rimtroid
         {
             if (this.queen != null && Metroid.mindState?.duty?.focus.Pawn == this.queen)
             {
+                Metroid.GetLord()?.ownedPawns.Remove(Metroid);
                 Metroid.mindState.duty = null;
                 var healingBonus = Metroid.health.hediffSet.GetFirstHediffOfDef(RT_DefOf.RT_HealingBonus);
                 if (healingBonus != null)

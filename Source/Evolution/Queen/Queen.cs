@@ -26,6 +26,8 @@ namespace RT_Rimtroid
             PawnKindDef.Named("RT_MetroidLarvae"),
             PawnKindDef.Named("RT_BanteeMetroid")
         };
+
+        public const int maxPawnCount = 8;
         public List<Pawn> spawnedPawns;
         public List<Pawn> despawnedPawns;
 
@@ -37,7 +39,6 @@ namespace RT_Rimtroid
         }
 
         public List<Pawn> SpawnedPawns => spawnedPawns.Where(x => pawnKindDefs.Contains(x.kindDef) && !x.Dead).ToList();
-
         public List<Pawn> TotalPawns => SpawnedPawns.Concat(this.despawnedPawns).ToList();
         public bool CanSpawnPawn(out string reason)
         {
@@ -102,20 +103,44 @@ namespace RT_Rimtroid
         public static bool preventFactionLeaderSpawn;
         public override void Kill(DamageInfo? dinfo, Hediff exactCulprit = null)
         {
+            List<Pawn> freePawns = new List<Pawn>();
             if (spawnPool.despawnedPawns.Any())
             {
                 foreach (var pawn in spawnPool.despawnedPawns)
                 {
                     GenSpawn.Spawn(pawn, this.Position, this.Map);
+                    freePawns.Add(pawn);
                 }
             }
-            preventFactionLeaderSpawn = true;
+            freePawns.AddRange(spawnPool.spawnedPawns);
+            var queens = this.Map.mapPawns.AllPawns.Where(x => x is Queen otherQueen && otherQueen != this && otherQueen.Faction == this.Faction).Cast<Queen>().OrderBy(x => x.Position.DistanceTo(this.Position));
+            foreach (var pawn in freePawns)
+            {
+                var comp = pawn.TryGetComp<QueenDroneComp>();
+                comp.RemoveFromQueen();
+                var nextQueen = queens.Where(x => x.spawnPool.TotalPawns.Count() < SpawnPool.maxPawnCount).FirstOrDefault();
+                if (nextQueen != null)
+                {
+                    nextQueen.spawnPool.spawnedPawns.Add(pawn);
+                    comp.AssignToQueen(nextQueen);
+                }
+            }
+
+            var isFactionLeader = this.Faction.leader == this;
+            if (isFactionLeader)
+            {
+                preventFactionLeaderSpawn = true;
+            }
             base.Kill(dinfo, exactCulprit);
-            preventFactionLeaderSpawn = false;
-            Find.LetterStack.ReceiveLetter("LetterLabelMetroidQueenKilled".Translate(), "LetterMetroidQueenKilled".Translate(this.Named("PAWN")), LetterDefOf.PositiveEvent, this);
-            IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
-            parms.target = Find.World;
-            Find.Storyteller.incidentQueue.Add(RT_DefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
+            if (isFactionLeader)
+            {
+                preventFactionLeaderSpawn = false;
+                Find.LetterStack.ReceiveLetter("LetterLabelMetroidQueenKilled".Translate(), "LetterMetroidQueenKilled".Translate(this.Named("PAWN")), LetterDefOf.PositiveEvent, this);
+                IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
+                parms.target = Find.World;
+                Find.Storyteller.incidentQueue.Add(RT_DefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
+            }
+
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
