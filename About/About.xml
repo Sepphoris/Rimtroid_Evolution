@@ -19,6 +19,7 @@
 	</modDependenciesByVersion>
 	<loadAfter>
     <li>brrainz.harmony</li>
+		<li>unlimitedhugs.hugslib</li>
     <li>Drazzii.Rimtroid.Core.Private</li>
 	</loadAfter>
 	<incompatibleWith>

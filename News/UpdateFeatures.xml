@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HugsLib.UpdateFeatureDef>
+		<modNameReadable>Rimtroid: Evolution</modNameReadable>
+		<modIdentifier>Drazzii.Rimtroid.Evolution</modIdentifier>
+		<linkUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2422967135</linkUrl>
+		<defName>RimtroidEvolution_1_1</defName>
+		<assemblyVersion>1.1</assemblyVersion>
+		<content>Added mod menu (under Rimtroid: Core) | Update: Metroid Queen is now usable, which leads the local Metroid faction. | Queen can be assigned metroids that it will store, release, and recall. | New Ability: Fireballs (Omega Metroid). | Mod Menu: Berserking can now be toggled. | Mod Menu: All metroids can now be tamed. | Mod Menu: Squad raids can be enabled/disabled. | Numerous ability graphics added. | Various bug fixes.
+		</content>
+	</HugsLib.UpdateFeatureDef>
+
+</Defs>
