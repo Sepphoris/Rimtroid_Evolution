@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+
+	<!-- Events -->
+	<LetterLabelBanteeTutorial>Metroid Info: Bantee Metroid</LetterLabelBanteeTutorial>
+	<LetterBanteeTutorial>You've acquired a Bantee Metroid! These small guys are the friendliest of all metroids. They don't do much, but will keep your colony happy, can be tamed and trained, will not reject implants, and do not berserk if they go hungry.\n
+Even though Bantees do not berserk, they still require reliable sustainment. You can feed them with prisoners, a small metroid pylon, or nutrient solutions.
+Bantee Metroids evolve to Metroid Larvae upon reaching age 14. This age can be reached by the metroid feeding off of live subjects, or by Epoch Serums.</LetterBanteeTutorial>
+
+
+  <LetterLabelLarvaTutorial>Metroid Info: Metroid Larva</LetterLabelLarvTutorial>
+	<LetterLarvaTutorial>You've acquired a Metroid Larva! These metroids are the most common of all, and are highly sought after for genetic purposes. They are much more durable than Bantees, and are the last stage that will accept taming, training, and implants.\n
+Metroid Larvae may berserk when their food bars fall below 30%. Keep them fed with prisoners, a small metroid pylon, or nutrient solutions!\n
+Metroid Larvae evolve to Alpha Metroids upon reaching age 80. This age can be reached by the metroid feeding off of live subjects, or by Epoch Serums.<</LetterLarvaTutorial>
+
+
+  <LetterLabelAlphaTutorial>Metroid Info: Alpha Metroid</LetterLabelAlphaTutorial>
+	<LetterAlphaTutorial>You're acquired an Alpha Metroid! These metroids are the beginning of a drastic metamorphosis for metroids, and where the potential of metroids begin to show. Starting at this stage all metroids lose their "Energy Drain" ability, but gain new ones. Alpha Metroids are able to create up to three bombs, which you can direct. Additionally, how these bombs can be directly controlled; just select the bomb to see the options. This makes them ideal for securing locations or chokepoints.\n
+Alpha Metroids may berserk when their food bars fall below 30%. Keep them fed with a small metroid pylon, or nutrient solutions!\n
+Alpha Metroids evolve to Gamma Metroids upon reaching age 200. This age can be reached by the metroid feeding off of live subjects, or by Epoch Serums.<</LetterAlphaTutorial>
+
+
+  <LetterLabelGammaTutorial>Metroid Info: Gamma Metroid</LetterLabelGammaTutorial>
+	<LetterGammaTutorial>You're acquired a Gamma Metroid! These metroids are quite large, and are arguably the most valuable. Gamma Metroids posess a large amount of abilities; however, alongside this, Gamma Metroids are also able to rapidly create a substance called "Bioresin". This bioresin can be refined into a special kind of silk that is extremely valuable. If you like the idea of farming from metroids, Gamma Metroids are for you.\n
+Gamma Metroids may berserk when their food bars fall below 30%. Keep them fed with a large metroid pylon, or nutrient solutions!\n
+Gamma Metroids evolve to Zeta Metroids upon reaching age 450. This age can be reached by the metroid feeding off of live subjects, or by Epoch Serums.</LetterGammaTutorial>
+
+  <LetterLabelZetaTutorial>Metroid Info: Zeta Metroid</LetterLabelZetaTutorial>
+	<LetterZetaTutorial>You're acquired a Zeta Metroid! These metroids are fast and lethal, capable of chasing almost anything down. Instead of relying off of electricity, Zeta Metroids instead use acid and fire, allowing them to melt enemies alive, burn them to a crisp, or simply shred them to pieces with tooth and claw. Zeta metroids are the fastest of the pure metroids, making them great to chase down targets, or as extremely quick mounts (Giddy-Up! required).\n
+Zeta Metroids may berserk when their food bars fall below 40%. Keep them fed with a large metroid pylon, or nutrient solutions!\n
+Zeta Metroids evolve to Omega Metroids upon reaching age 900. This age can be reached by the metroid feeding off of live subjects, or by Epoch Serums.</LetterZetaTutorial>
+
+  <LetterLabelOmegaTutorial>Metroid Info: Omega Metroid</LetterLabelOmegaTutorial>
+	<LetterOmegaTutorial>You're acquired an Omega Metroid! These hulking beasts are capable of absorbing incredible amounts of damage, and inflicting even more. They have the same fiery abilities as Zeta Metroids, but also can use their raw strength to cause devastating damage. They are relatively slow, but their durability makes them excellent front-line tanks and siege engines. Even one can secure an entire battlefield.\n
+Omega Metroids may berserk when their food bars fall below 40%. Keep them fed with a large metroid pylon, or nutrient solutions!\n
+Omega Metroids have no known future stages.</LetterOmegaTutorial>
+
+  <LetterLabelQueenTutorial>Metroid Info: Queen Metroid</LetterLabelQueenTutorial>
+	<LetterQueenTutorial>You're acquired a Queen Metroid! These creatures are responsible for growing the metroid species on a galactic level, and are the highest known form of pure metroids. Alongside posessing the strongest of the metroid abilities, they are also fast to reproduce, and even the presence catches the attention of many metroids that may see it. This makes Queen both the deadliest of all stages, and able to create entire metroid armies.\n
+Rather than berserking, Queen Metroid stick where food is most abundant. If their food bar gets below 20%, Queens will leave the area and go where food is more abundant. Avoid this at all costs, as once a Queen leaves, you may never be able to get one again!
+The queen has no future stages.</LetterQueenTutorial>
+
+</LanguageData>

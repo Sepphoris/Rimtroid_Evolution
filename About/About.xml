@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Rimtroid: Evolution (private)</name>
-	<packageId>Rimtroid.Evolution</packageId>
+	<packageId>Rimtroid.Evolution.Private</packageId>
 	<author>Drazzii</author>
 	<supportedVersions>
 		<li>1.2</li>

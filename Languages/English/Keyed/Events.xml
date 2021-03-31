@@ -24,7 +24,13 @@
   <LetterLabelQueenSpotted>New Metroid Queen Spotted!</LetterLabelQueenSpotted>
 	<LetterMetroidQueenSpotted>A new Metroid Queen has been spotted! Despite the last one clearly being killed, another Metroid Queen has risen up, and taken it's place. The whole collective has reorganized itself, and metroids raids will once again occur.</LetterMetroidQueenSpotted>
 
-<LetterLabelMetroidLikesQueen>{PAWN_kindDef} joins the colony</LetterLabelMetroidLikesQueen>
+	<LetterLabelMetroidLikesQueen>{PAWN_kindDef} joins the colony</LetterLabelMetroidLikesQueen>
 	<LetterMetroidLikesQueen>{PAWN_kindDef} has joined the colony due to the presence of a Metroid Queen.</LetterMetroidLikesQueen>
+
+<!--==Queen Metroid Events - Player owns Queen==-->
+
+	<LetterLabelOmegaBecomesQueen>{PAWN_kindDef} has became a Queen!</LetterLabelOmegaBecomesQueen>
+	<LetterOmegaBecomesQueen>{PAWN_kindDef}, out of nowhere, has became a Metroid Queen! The transformation was extremely sudden, and it was concluded that this happened due to no Queen existing on the planet.\n
+The Queen seems friendly to the colony, but it is unknown how long until the Queen decides to leave. Until then, it is under your complete control. Word will get out of the colony having such a powerful beast, and will greatly impact how other civilizations see you.</LetterOmegaBecomesQueen>
 
 </LanguageData>
