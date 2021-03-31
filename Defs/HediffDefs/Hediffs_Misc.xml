@@ -281,9 +281,11 @@
 		<label>healing bonus</label>
 		<labelNoun>healing bonus</labelNoun>
 		<description>healing bonus</description>
-		<becomeVisible>true</becomeVisible>
 		<stages>
-			<naturalHealingFactor>2</naturalHealingFactor>
+			<li>
+				<becomeVisible>false</becomeVisible>
+				<naturalHealingFactor>2</naturalHealingFactor>
+			</li>
 		</stages>
 	</HediffDef>
 	

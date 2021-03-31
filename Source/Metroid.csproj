@@ -302,6 +302,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Evolution\Events\GenStep_QueenLair.cs" />
+    <Compile Include="Evolution\Events\IncidentWorker_OmegaBecomesQueen.cs" />
     <Compile Include="Evolution\Events\QuestNode_EnemyLeaderIsLiving.cs" />
     <Compile Include="Evolution\Events\QuestNode_SetEnemyFaction.cs" />
     <Compile Include="Evolution\Events\IncidentWorker_OtherFactionKilledQueen.cs" />
@@ -337,6 +338,7 @@
     <Compile Include="Evolution\Alpha_ProximityTrap.cs" />
     <Compile Include="Evolution\Ability_Shockwave.cs" />
     <Compile Include="Evolution\MoteMaker.cs" />
+    <Compile Include="Evolution\RimtroidEvolutionTracker.cs" />
     <Compile Include="Evolution\ThingDefSedativeProjectile.cs" />
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Core\RT_DefOf.cs" />

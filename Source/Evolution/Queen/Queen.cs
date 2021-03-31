@@ -139,8 +139,8 @@ namespace RT_Rimtroid
                 IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
                 parms.target = Find.World;
                 Find.Storyteller.incidentQueue.Add(RT_DefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
+                Current.Game.GetComponent<RimtroidEvolutionTracker>().lastQueenDeathTick = Find.TickManager.TicksGame;
             }
-
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
@@ -150,6 +150,10 @@ namespace RT_Rimtroid
             {
                 spawnPool = new SpawnPool();
                 spawnPool.Restock(this);
+                if (this.Faction?.def == RT_DefOf.RT_Metroids && this.Faction.leader == this)
+                {
+                    Current.Game.GetComponent<RimtroidEvolutionTracker>().currentQueen = this;
+                }
             }
         }
 

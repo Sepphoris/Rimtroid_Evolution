@@ -298,6 +298,10 @@ namespace RT_Rimtroid
         }
         public static void Postfix(Need_Food __instance, Pawn ___pawn)
         {
+            if (___pawn.IsQueenMetroid() && __instance.CurLevelPercentage <= 0.20 && ___pawn.Faction == Faction.OfPlayer)
+            {
+                ___pawn.SetFaction(null);
+            }
             if (RimtroidSettings.allowBerserkChanceMetroidHunger)
             {
                 var options = ___pawn.kindDef.GetModExtension<HungerBerserkOptions>();
@@ -371,21 +375,17 @@ namespace RT_Rimtroid
         }
     }
 
-    //[HarmonyPatch(typeof(Pawn), "SpawnSetup")]
-    //public static class SpawnSetup_Patch
-    // {
-    //public static bool Prefix(Pawn __instance, Map map, bool respawningAfterLoad)
-    //{
-    //if (!respawningAfterLoad && GenDate.DaysPassed < 3)
-    //{
-    //if (__instance.def == RT_DefOf.RT_GammaMetroid || __instance.def == RT_DefOf.RT_ZetaMetroid || __instance.def == RT_DefOf.RT_OmegaMetroid)
-    //{
-    //return false;
-    //}
-    //}
-    //return true;
-    //}
-    //}
+    [HarmonyPatch(typeof(Pawn), "SpawnSetup")]
+    public static class SpawnSetup_Patch
+    {
+        public static void Postfix(Pawn __instance, Map map, bool respawningAfterLoad)
+        {
+            if (__instance.IsAnyMetroid())
+            {
+                Current.Game.GetComponent<RimtroidEvolutionTracker>().TryNotifyAboutMetroid(__instance);
+            }
+        }
+    }
 
     //[HarmonyPatch(typeof(Pawn), "Kill")]
     //public static class RT_Desiccator_Pawn_Kill_Patch

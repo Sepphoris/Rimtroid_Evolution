@@ -2,6 +2,20 @@
 <Defs>
 
 	<IncidentDef>
+		<defName>RT_OmegaBecomesQueen</defName>
+		<label>Omega becomes queen</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Rimtroid.IncidentWorker_OmegaBecomesQueen</workerClass>
+		<baseChance>0.01</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>PositiveEvent</letterDef>
+	</IncidentDef>
+	
+	
+	<IncidentDef>
 		<defName>RT_QueenKilled</defName>
 		<label>Queen killed</label>
 		<category>Misc</category>
