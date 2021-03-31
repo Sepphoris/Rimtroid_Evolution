@@ -23,7 +23,9 @@ namespace RT_Rimtroid
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             var omegaToQueen = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_OfPlayerFaction.Where(x => x.IsOmegaMetroid()).RandomElement();
+            SpawnPool.doNotRestock = true;
             var queen = TransformPawn(DefDatabase<PawnKindDef>.GetNamed("RT_QueenMetroid"), omegaToQueen);
+            SpawnPool.doNotRestock = false;
             Find.LetterStack.ReceiveLetter("LetterLabelOmegaBecomesQueen".Translate(queen.Named("PAWN")), "LetterOmegaBecomesQueen".Translate(queen.Named("PAWN")), LetterDefOf.PositiveEvent, queen);
             var comp = Current.Game.GetComponent<RimtroidEvolutionTracker>();
             comp.currentQueen = queen;

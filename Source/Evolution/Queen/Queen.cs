@@ -31,6 +31,7 @@ namespace RT_Rimtroid
         public List<Pawn> spawnedPawns;
         public List<Pawn> despawnedPawns;
 
+        public static bool doNotRestock;
         public int generatedLastTick;
         public SpawnPool()
         {
@@ -62,14 +63,17 @@ namespace RT_Rimtroid
 
         public void Restock(Queen parent)
         {
-            var startingPawnCount = Rand.RangeInclusive(4, 6);
-            for (var i = 0; i < startingPawnCount; i++)
+            if (!doNotRestock)
             {
-                var newPawn = PawnGenerator.GeneratePawn(pawnKindDefs.RandomElement(), parent.Faction);
-                GenSpawn.Spawn(newPawn, parent.Position, parent.Map);
-                var compDrone = newPawn.TryGetComp<QueenDroneComp>();
-                compDrone.AssignToQueen(parent);
-                spawnedPawns.Add(newPawn);
+                var startingPawnCount = Rand.RangeInclusive(4, 6);
+                for (var i = 0; i < startingPawnCount; i++)
+                {
+                    var newPawn = PawnGenerator.GeneratePawn(pawnKindDefs.RandomElement(), parent.Faction);
+                    GenSpawn.Spawn(newPawn, parent.Position, parent.Map);
+                    var compDrone = newPawn.TryGetComp<QueenDroneComp>();
+                    compDrone.AssignToQueen(parent);
+                    spawnedPawns.Add(newPawn);
+                }
             }
         }
         public void RecallAll(Queen parent)
