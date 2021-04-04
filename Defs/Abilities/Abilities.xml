@@ -279,7 +279,7 @@
 
 	<AbilityDef>
 		<defName>RT_GammaShockwave</defName>
-		<label>Shockwave</label>
+		<label>Stun Pulse</label>
 		<description>Generates an electric pulse that damages anything nearby</description>
 		<abilityClass>RT_Rimtroid.Ability_Shockwave</abilityClass>
 		<targetRequired>false</targetRequired>
@@ -287,7 +287,7 @@
 		<cooldownTicksRange>1800~2500</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>UI/Abilities/UI_Shockwave</iconPath>
+		<iconPath>UI/Abilities/UI_StunPulse</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<warmupTime>1</warmupTime>
@@ -299,11 +299,11 @@
 			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
 				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
 				<autoUse>true</autoUse>
-				<gizmoOnText>Shockwave Enabled</gizmoOnText>
-				<gizmoOffText>Shockwave Disabled</gizmoOffText>
-				<gizmoOnIconPath>UI/Abilities/UI_Shockwave</gizmoOnIconPath>
-				<gizmoOffIconPath>UI/Abilities/UI_Shockwave</gizmoOffIconPath>
-				<gizmoDesc>Toggle Shockwave Usage</gizmoDesc>
+				<gizmoOnText>Stun Pulse Enabled</gizmoOnText>
+				<gizmoOffText>Stun Pulse Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_StunPulse</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_StunPulse</gizmoOffIconPath>
+				<gizmoDesc>Toggle Stun Pulse Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
 				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
@@ -353,15 +353,15 @@
 
 	<AbilityDef>
 		<defName>RT_GammaBurst</defName>
-		<label>Electric Burst</label>
-		<description>Creates a burst of electricity that damages and stuns anything on top</description>
+		<label>Energy Field</label>
+		<description>Creates a field of energy that damages and stuns anything on top</description>
 		<abilityClass>RT_Rimtroid.Ability_GammaIgnite</abilityClass>
 		<targetRequired>false</targetRequired>
 		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
 		<cooldownTicksRange>2700</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
+		<iconPath>UI/Abilities/UI_EnergyField</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
 			<soundCast>RT_SoundShockwave</soundCast>
@@ -372,11 +372,11 @@
 			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
 				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
 				<autoUse>true</autoUse>
-				<gizmoOnText>Electric Burst Enabled</gizmoOnText>
-				<gizmoOffText>Electric Burst Disabled</gizmoOffText>
-				<gizmoOnIconPath>UI/Abilities/UI_ElectricBurst</gizmoOnIconPath>
-				<gizmoOffIconPath>UI/Abilities/UI_ElectricBurst</gizmoOffIconPath>
-				<gizmoDesc>Toggle Burst Usage</gizmoDesc>
+				<gizmoOnText>Energy Field Enabled</gizmoOnText>
+				<gizmoOffText>Energy Field Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_EnergyField</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_EnergyField</gizmoOffIconPath>
+				<gizmoDesc>Toggle Field Usage</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
 				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
