@@ -33,13 +33,16 @@ namespace RT_Rimtroid
             return true;
         }
 
-        private Queen TransformPawn(PawnKindDef kindDef, Pawn pawn, bool changeDef = true, bool keep = false)
+        private Queen TransformPawn(PawnKindDef kindDef, Pawn pawn)
         {
+            var position = pawn.Position;
+            var map = pawn.Map;
             Faction faction = pawn.Faction;
+            pawn.Destroy(DestroyMode.Vanish);
             var queen = PawnGenerator.GeneratePawn(kindDef, faction);
             long ageB = pawn.ageTracker.AgeBiologicalTicks;
             long ageC = pawn.ageTracker.AgeChronologicalTicks;
-            queen.ageTracker = new Pawn_AgeTracker(pawn);
+            queen.ageTracker = new Pawn_AgeTracker(queen);
             queen.ageTracker.AgeBiologicalTicks = ageB;
             queen.ageTracker.AgeChronologicalTicks = ageC;
             queen.Name = pawn.Name;
@@ -58,9 +61,7 @@ namespace RT_Rimtroid
                     queen.training.SetWantedRecursive(td, true);
                 }
             }
-            var position = pawn.Position;
-            var map = pawn.Map;
-            pawn.Destroy(DestroyMode.Vanish);
+
             GenSpawn.Spawn(queen, position, map);
             return queen as Queen;
         }
