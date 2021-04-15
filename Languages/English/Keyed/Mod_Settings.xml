@@ -24,4 +24,6 @@
   <Setting_AllowQueenCapture_Description>A failsafe is coded to prevent Queens from falling into player control. This overrides that, allowing Queens to be forcibly tamed.</Setting_AllowQueenCapture_Description>
   <Setting_AllowQueenCapture_Warning>Warning: Queens are currently not intended for player use. This only exists for player freedom; fixing issues relating to tamed queens are a low priority.</Setting_AllowQueenCapture_Warning>
   
+  <RT.MetroidAgeGainRate>Metroid age gain rate</RT.MetroidAgeGainRate>
+  
 </LanguageData>

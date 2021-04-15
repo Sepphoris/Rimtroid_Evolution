@@ -386,7 +386,21 @@ namespace RT_Rimtroid
             }
         }
     }
-
+    [HarmonyPatch(typeof(Pawn), "Tick")]
+    public static class Pawn_Tick_Patch
+    {
+        public static void Postfix(Pawn __instance)
+        {
+            if (!__instance.Suspended && __instance.IsAnyMetroid())
+            {
+                var ageGainRate = RimtroidSettings.metroidAgeGainRate - 1;
+                for (var i = 0; i < ageGainRate; i++)
+                {
+                    __instance.ageTracker.AgeTick();
+                }
+            }
+        }
+    }
     //[HarmonyPatch(typeof(Pawn), "Kill")]
     //public static class RT_Desiccator_Pawn_Kill_Patch
     //{

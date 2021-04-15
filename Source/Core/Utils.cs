@@ -8,8 +8,23 @@ using Verse.Grammar;
 
 namespace RT_Rimtroid
 {
+    [StaticConstructorOnStartup]
     public static class Utils
     {
+        static Utils()
+        {
+            ApplySettings();
+        }
+        public static void ApplySettings()
+        {
+            if (RimtroidSettings.allowBiggerMetroidsToBeTamed)
+            {
+                RT_DefOf.RT_AlphaMetroid.race.wildness = 0.99f;
+                RT_DefOf.RT_GammaMetroid.race.wildness = 0.99f;
+                RT_DefOf.RT_ZetaMetroid.race.wildness = 0.99f;
+                RT_DefOf.RT_OmegaMetroid.race.wildness = 0.99f;
+            }
+        }
         public static TaggedString GenerateTextFromRule(RulePackDef rule, string rootKeyword, int seed = -1)
         {
             if (seed != -1)

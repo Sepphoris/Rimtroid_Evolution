@@ -351,6 +351,8 @@
     <Compile Include="RimLaser\LaserGunDef.cs" />
     <Compile Include="RimLaser\MeshMakerLaser.cs" />
     <Compile Include="RimLaser\MoteLaserDecoration.cs" />
+    <Compile Include="RimtroidMod.cs" />
+    <Compile Include="RimtroidSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
