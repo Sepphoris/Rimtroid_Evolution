@@ -258,7 +258,7 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>RT_BanteeMetroid</defName>
-		<label>bantee metroid</label>
+		<label>Bantee Metroid</label>
 		<race>RT_BanteeMetroid</race>
 		<combatPower>100</combatPower>
 		<ecoSystemWeight>1</ecoSystemWeight>

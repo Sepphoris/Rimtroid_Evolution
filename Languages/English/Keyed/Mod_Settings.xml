@@ -25,6 +25,6 @@
   <Setting_AllowQueenCapture_Warning>Warning: Queens are currently not intended for player use. This only exists for player freedom; fixing issues relating to tamed queens are a low priority.</Setting_AllowQueenCapture_Warning>
   
   <RT.MetroidAgeGainRate>Metroid age gain rate</RT.MetroidAgeGainRate>
-  <RT.DisableEnableSpawns>Disable Spawns</RT.DisableEnableSpawns>
+  <RT.DisableEnableSpawns>Wild Spawning:</RT.DisableEnableSpawns>
   
 </LanguageData>

@@ -16,15 +16,14 @@ namespace RT_Rimtroid
         public static bool allowWildChanceMetroidBerserk = true;
         public static bool allowBiggerMetroidsToBeTamed;
         public static int metroidAgeGainRate = 3;
-        public static Dictionary<string, bool> metroidsToDisable = new Dictionary<string, bool>
+        public static Dictionary<string, bool> wildMetroidSpawns = new Dictionary<string, bool>
         {
-            {"RT_BanteeMetroid", false},
-            {"RT_MetroidLarvae", false},
-            {"RT_AlphaMetroid", false},
-            {"RT_GammaMetroid", false},
-            {"RT_ZetaMetroid", false},
             {"RT_OmegaMetroid", false},
-            {"RT_QueenMetroid", false}
+            {"RT_ZetaMetroid", true},
+            {"RT_GammaMetroid", true},
+            {"RT_AlphaMetroid", true},
+            {"RT_MetroidLarvae", true},
+            {"RT_BanteeMetroid", true},
         };
         public override void ExposeData()
         {
@@ -33,18 +32,17 @@ namespace RT_Rimtroid
             Scribe_Values.Look(ref allowBerserkChanceMetroidHunger, "allowBerserkChanceMetroidHunger", true);
             Scribe_Values.Look(ref allowBiggerMetroidsToBeTamed, "allowBiggerMetroidsToBeTamed");
             Scribe_Values.Look(ref metroidAgeGainRate, "metroidAgeGainRate", 1);
-            Scribe_Collections.Look(ref metroidsToDisable, "metroidsToDisable", LookMode.Value, LookMode.Value, ref stringKeys, ref boolValues);
-            if (metroidsToDisable is null)
+            Scribe_Collections.Look(ref wildMetroidSpawns, "wildMetroidSpawns", LookMode.Value, LookMode.Value, ref stringKeys, ref boolValues);
+            if (wildMetroidSpawns is null)
             {
-                metroidsToDisable = new Dictionary<string, bool>
+                wildMetroidSpawns = new Dictionary<string, bool>
                 {
-                    {"RT_BanteeMetroid", false},
-                    {"RT_MetroidLarvae", false},
-                    {"RT_AlphaMetroid", false},
-                    {"RT_GammaMetroid", false},
-                    {"RT_ZetaMetroid", false},
-                    {"RT_OmegaMetroid", false},
-                    {"RT_QueenMetroid", false}
+            {"RT_OmegaMetroid", false},
+            {"RT_ZetaMetroid", true},
+            {"RT_GammaMetroid", true},
+            {"RT_AlphaMetroid", true},
+            {"RT_MetroidLarvae", true},
+            {"RT_BanteeMetroid", true},
                 };
             }
         }
@@ -62,13 +60,13 @@ namespace RT_Rimtroid
             ls_Evolution.Label("RT.MetroidAgeGainRate".Translate() + ": " + metroidAgeGainRate * 100 + "%");
             metroidAgeGainRate = (int)ls_Evolution.Slider(metroidAgeGainRate, 1, 100);
             ls_Evolution.Label("RT.DisableEnableSpawns".Translate());
-            var keys = metroidsToDisable.Keys.ToList();
+            var keys = wildMetroidSpawns.Keys.ToList();
             for (int num = keys.Count - 1; num >= 0; num--)
             {
-                var checkbox = metroidsToDisable[keys[num]];
+                var checkbox = wildMetroidSpawns[keys[num]];
                 var metroid = DefDatabase<PawnKindDef>.GetNamed(keys[num]);
                 ls_Evolution.CheckboxLabeled(metroid.label, ref checkbox);
-                metroidsToDisable[keys[num]] = checkbox;
+                wildMetroidSpawns[keys[num]] = checkbox;
             }
             ls_Evolution.End();
             base.Write();
