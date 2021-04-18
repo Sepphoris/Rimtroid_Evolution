@@ -407,7 +407,7 @@ namespace RT_Rimtroid
     {
         public static void Postfix(ref IEnumerable<PawnKindDef> __result)
         {
-            __result = __result.ToList().Where(x => !RimtroidSettings.wildMetroidSpawns.TryGetValue(x.defName, out bool value) || !value);
+            __result = __result.ToList().Where(x => !RimtroidSettings.wildMetroidSpawns.TryGetValue(x.defName, out bool value) || value);
         }
     }
     //[HarmonyPatch(typeof(Pawn), "Kill")]

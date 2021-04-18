@@ -768,7 +768,7 @@
 		<cooldownTicksRange>90</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
+		<iconPath>UI/Abilities/UI_Placeholder</iconPath>
 		<gizmoClass>RT_Rimtroid.Command_Ability_SpawnNewPawn</gizmoClass>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
@@ -782,8 +782,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Release Larva Enabled</gizmoOnText>
 				<gizmoOffText>Release Larva Disabled</gizmoOffText>
-				<gizmoOnIconPath>UI/Abilities/UI_ElectricBurst</gizmoOnIconPath>
-				<gizmoOffIconPath>UI/Abilities/UI_ElectricBurst</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_Placeholder</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Placeholder</gizmoOffIconPath>
 				<gizmoDesc>Toggle whether or not held larva can be released</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
