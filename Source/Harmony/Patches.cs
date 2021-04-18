@@ -401,6 +401,15 @@ namespace RT_Rimtroid
             }
         }
     }
+
+    [HarmonyPatch(typeof(BiomeDef), "AllWildAnimals", MethodType.Getter)]
+    public static class AnimalRemoval
+    {
+        public static void Postfix(ref IEnumerable<PawnKindDef> __result)
+        {
+            __result = __result.ToList().Where(x => !RimtroidSettings.metroidsToDisable.TryGetValue(x.defName, out bool value) || !value);
+        }
+    }
     //[HarmonyPatch(typeof(Pawn), "Kill")]
     //public static class RT_Desiccator_Pawn_Kill_Patch
     //{
