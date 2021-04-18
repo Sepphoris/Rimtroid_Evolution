@@ -256,7 +256,7 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>RT_MetroidLarvae</defName>
-		<label>metroid</label>
+		<label>Metroid Larva</label>
 		<race>RT_MetroidLarvae</race>
 		<combatPower>200</combatPower>
 		<ecoSystemWeight>1.4</ecoSystemWeight>

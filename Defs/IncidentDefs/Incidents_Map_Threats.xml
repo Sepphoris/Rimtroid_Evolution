@@ -72,6 +72,11 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>3000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Smithing</li>
+				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
@@ -117,6 +122,11 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>12000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Smithing</li>
+				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
@@ -160,6 +170,12 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>22000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Gunsmithing</li>
+					<li>PlateArmor</li>
+				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
@@ -181,8 +197,8 @@
 		<category>ThreatBig</category>
 		<pointsScaleable>true</pointsScaleable>
 		<tale>Raid</tale>
-		<earliestDay>75</earliestDay>
-		<minRefireDays>35</minRefireDays>
+		<earliestDay>90</earliestDay>
+		<minRefireDays>45</minRefireDays>
 		<modExtensions>
 			<li Class="RT_Core.RaidOptions">
 				<raidFaction>RT_Metroids</raidFaction>
@@ -199,6 +215,12 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>30000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Gunsmithing</li>
+					<li>GasOperation</li>
+				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
@@ -240,6 +262,12 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>33000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>FlakArmor</li>
+					<li>BlowbackOperation</li>
+				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>
@@ -284,6 +312,14 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>39000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>GasOperation</li>
+					<li>FlakArmor</li>
+					<li>MultiAnalyzer</li>
+					<li>Fabrication</li>
+				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
 				<raidArrival>EdgeWalkIn</raidArrival>

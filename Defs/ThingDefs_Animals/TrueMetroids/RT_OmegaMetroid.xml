@@ -241,7 +241,7 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>RT_OmegaMetroid</defName>
-		<label>omega metroid</label>
+		<label>Omega Metroid</label>
 		<race>RT_OmegaMetroid</race>
 		<combatPower>1500</combatPower>
 		<ecoSystemWeight>3.2</ecoSystemWeight>

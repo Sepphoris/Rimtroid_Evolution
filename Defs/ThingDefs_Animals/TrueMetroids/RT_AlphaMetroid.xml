@@ -224,7 +224,7 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>RT_AlphaMetroid</defName>
-		<label>alpha metroid</label>
+		<label>Alpha Metroid</label>
 		<race>RT_AlphaMetroid</race>
 		<combatPower>350</combatPower>
 		<ecoSystemWeight>1.8</ecoSystemWeight>

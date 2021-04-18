@@ -226,7 +226,7 @@
 
 	<PawnKindDef ParentName="AnimalKindBase">
 		<defName>RT_ZetaMetroid</defName>
-		<label>Zeta metroid</label>
+		<label>Zeta Metroid</label>
 		<race>RT_ZetaMetroid</race>
 		<combatPower>500</combatPower>
 		<ecoSystemWeight>2.6</ecoSystemWeight>
