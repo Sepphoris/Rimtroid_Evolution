@@ -620,7 +620,7 @@
 						<minRange>3</minRange>
 						<burstShotCount>3</burstShotCount>
 						<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
-						<soundCast>RT_SoundFireball</soundCast>
+						<soundCast>RT_SoundFirebolt</soundCast>
 						<muzzleFlashScale>1</muzzleFlashScale>
 					</li>
 				</verbProperties>
@@ -806,7 +806,7 @@
 		<cooldownTicksRange>120</cooldownTicksRange>
 		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
-		<iconPath>UI/Abilities/UI_ElectricBurst</iconPath>
+		<iconPath>UI/Abilities/UI_Placeholder</iconPath>
 		<gizmoClass>RT_Rimtroid.Command_Ability_RecallPawns</gizmoClass>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
@@ -820,8 +820,8 @@
 				<autoUse>true</autoUse>
 				<gizmoOnText>Recall Larva Enabled</gizmoOnText>
 				<gizmoOffText>Recall Larva Disabled</gizmoOffText>
-				<gizmoOnIconPath>UI/Abilities/UI_ElectricBurst</gizmoOnIconPath>
-				<gizmoOffIconPath>UI/Abilities/UI_ElectricBurst</gizmoOffIconPath>
+				<gizmoOnIconPath>UI/Abilities/UI_Placeholder</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Placeholder</gizmoOffIconPath>
 				<gizmoDesc>Toggle whether or not held larva can be recalled</gizmoDesc>
 			</li>
 			<li Class="RT_Core.AbilityCompProperties_Cooldown">
