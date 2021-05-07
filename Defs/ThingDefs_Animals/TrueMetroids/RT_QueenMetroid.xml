@@ -167,7 +167,7 @@
 			<herdAnimal>true</herdAnimal>
 			<body>RT_QueenBody</body>
 			<baseBodySize>6</baseBodySize>
-			<baseHealthScale>150</baseHealthScale>
+			<baseHealthScale>25</baseHealthScale>
 			<baseHungerRate>0.8</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">

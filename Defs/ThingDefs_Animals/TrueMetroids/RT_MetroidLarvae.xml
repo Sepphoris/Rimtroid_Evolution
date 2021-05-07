@@ -134,7 +134,7 @@
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_LarvaeBody</body>
 		  <baseBodySize>0.4</baseBodySize>
-		  <baseHealthScale>3</baseHealthScale>
+		  <baseHealthScale>2.2</baseHealthScale>
 		  <baseHungerRate>0.5</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>

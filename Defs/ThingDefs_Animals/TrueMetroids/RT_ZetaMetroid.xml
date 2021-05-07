@@ -136,7 +136,7 @@
 		  <herdAnimal>true</herdAnimal>
 		  <body>RT_ZetaBody</body>
 		  <baseBodySize>2</baseBodySize>
-		  <baseHealthScale>10</baseHealthScale>
+		  <baseHealthScale>4.6</baseHealthScale>
 		  <baseHungerRate>1</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
