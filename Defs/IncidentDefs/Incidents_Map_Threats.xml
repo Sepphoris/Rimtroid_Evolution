@@ -40,9 +40,55 @@
 	</IncidentDef>
 
 	<!-- ============================== Pure Metroid Raids ==============================-->
+	<IncidentDef>
+		<defName>RT_RaidPureSmall</defName>
+		<label>Raid: Small Metroid Pack</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>4</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_BanteeMetroid>5</RT_BanteeMetroid>
+						<RT_MetroidLarvae>20</RT_MetroidLarvae>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>2</RT_MetroidLarvae>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>3000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Smithing</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
+				<letterText>A small group of metroids have entered the region, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
 
 	<IncidentDef>
-		<defName>RT_RaidPureSwarm</defName>
+		<defName>RT_RaidPureSwarmSmall</defName>
 		<label>Raid: Metroid Larvae Swarm</label>
 		<targetTags>
 			<li>Map_PlayerHome</li>
@@ -72,10 +118,10 @@
 				</minimumPawnCountPerKind>
 				<!--<minimumPawnCount>5</minimumPawnCount>
 				<fixedRaidPoints>9999</fixedRaidPoints>-->
-				<minimumPlayerWealth>3000</minimumPlayerWealth>
+				<minimumPlayerWealth>6000</minimumPlayerWealth>
 				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
 				<requiredResearchProjectsUnlocked>
-					<li>Smithing</li>
+					<li>PlateArmor</li>
 				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
@@ -83,6 +129,54 @@
 				<letterDef>ThreatBig</letterDef>
 				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
 				<letterText>A swarm of metroid larvae has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_RaidPureSwarmBig</defName>
+		<label>Raid: Metroid Larvae Swarm</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>3.8</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_BanteeMetroid>5</RT_BanteeMetroid>
+						<RT_MetroidLarvae>20</RT_MetroidLarvae>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>12</RT_MetroidLarvae>
+						<RT_BanteeMetroid>3</RT_BanteeMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>20000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Gunsmithing</li>
+					<li>FlakArmor</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
+				<letterText>A massive swarm of metroid larvae has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
 			</li>
 		</modExtensions>
 	</IncidentDef>
@@ -125,7 +219,8 @@
 				<minimumPlayerWealth>12000</minimumPlayerWealth>
 				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
 				<requiredResearchProjectsUnlocked>
-					<li>Smithing</li>
+					<li>PlateArmor</li>
+					<li>Gunsmithing</li>
 				</requiredResearchProjectsUnlocked>
 				<raidPointsMultiplier>0.5</raidPointsMultiplier>
 				<raidStrategy>ImmediateAttack</raidStrategy>
