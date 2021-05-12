@@ -3,31 +3,31 @@
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
 	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
-	
+
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>RT_ZetaMetroid</defName>
 		<label>Zeta Metroid</label>
 
 		<description>Zeta metroids are the fastest, and arguably most lethal, creatures of the pure metroid evolution line. Their body has taken a sleek, aerodynamic shape, resembling more of a lizard than it's previous beetle-like form. Zetas glide across distances with ease, having little to no local competition. It's movement speed, combined with the additional higher limb speed, allow it to close in quickly, and shed it's target to pieces within seconds. Those crazy enough to keep Zetas often group these up into "Bloodhound" packs, which are specifically meant to chase down distant targets before they can flee - or in some cases, get closer. \n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
 		<statBases>
-		
-	<!-- Internal Stats -->
-		  <ToxicSensitivity>0</ToxicSensitivity>
-		  <PsychicSensitivity>0</PsychicSensitivity>
-      <Flammability>0</Flammability>
-		  <ArmorRating_Blunt>1</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
-		  <ArmorRating_Heat>1.5</ArmorRating_Heat>
-		  <MoveSpeed>3</MoveSpeed>
-		  <MarketValue>800</MarketValue>
-		  <ComfyTemperatureMin>3</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
-		  <MeatAmount>0</MeatAmount>
-		  <PainShockThreshold>10</PainShockThreshold>
+
+			<!-- Internal Stats -->
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<Flammability>0</Flammability>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.5</ArmorRating_Heat>
+			<MoveSpeed>3</MoveSpeed>
+			<MarketValue>800</MarketValue>
+			<ComfyTemperatureMin>3</ComfyTemperatureMin>
+			<ComfyTemperatureMax>160</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<PainShockThreshold>10</PainShockThreshold>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>
-		
-	<!-- Attacks -->
+
+		<!-- Attacks -->
 		<tools>
 			<li>
 				<label>ram</label>
@@ -55,7 +55,7 @@
 				</capacities>
 				<power>12</power>
 				<cooldownTime>1</cooldownTime>
-        <chanceFactor>1.3</chanceFactor>
+				<chanceFactor>1.3</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 			<li>
@@ -65,54 +65,57 @@
 				</capacities>
 				<power>12</power>
 				<cooldownTime>1</cooldownTime>
-        <chanceFactor>1.3</chanceFactor>
+				<chanceFactor>1.3</chanceFactor>
 				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
 			</li>
 		</tools>
 		<comps>
-    	<li Class="RT_Core.CompProperties_HostileResponse">
-			<compClass>RT_Core.CompHostileResponse</compClass>
-			<initialHostility>Aggressive</initialHostility>
-      <controllableGizmo>false</controllableGizmo>
-      <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
-			<options>
-				<li>
-					<type>Aggressive</type>
-					<label>Aggressive</label>
-					<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
-					<iconPath>UI/AI/Attack</iconPath>
-					<disableMessage>Aggressive, and you better get used to it.</disableMessage>
-				</li>
-				<li>
-					<type>Defensive</type>
-					<label>Defensive</label>
-					<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
-					<iconPath>UI/AI/Defense</iconPath>
-					<disableMessage>Defensive and disabled.</disableMessage>
-				</li>
-				<li>
-					<type>Passive</type>
-					<label>Pacifist</label>
-					<description>Flees from any hostile actions made against it, even by friendlies.</description>
-					<iconPath>UI/AI/Passive</iconPath>
-					<disableMessage>Passive and disabled.</disableMessage>
-				</li>
-			</options>
-		  </li>
-<!-- Defines the conditions for when to give the pawn an ability -->
-		  <li Class="RT_Core.CompProperties_AbilityDefinition">
-			  <compClass>RT_Core.CompAbilityDefinition</compClass>
-			  <abilities>
-				  <li>
-					  <abilityDef>RT_FireBreath</abilityDef>
-				  </li>
-			  	<li>
-					  <abilityDef>RT_ZetaFirebolt</abilityDef>
-          </li>
-				  <li>
-					  <abilityDef>RT_ZetaAcidSpit</abilityDef>
-				  </li>
-			  <!--<li Class="CompProperties_UseEffect.cs">
+			<li Class="RT_Core.CompProperties_HostileResponse">
+				<compClass>RT_Core.CompHostileResponse</compClass>
+				<initialHostility>Aggressive</initialHostility>
+				<controllableGizmo>false</controllableGizmo>
+				<friendlyFireMentalState>Manhunter</friendlyFireMentalState>
+				<options>
+					<li>
+						<type>Aggressive</type>
+						<label>Aggressive</label>
+						<description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
+						<iconPath>UI/AI/Attack</iconPath>
+						<disableMessage>Aggressive, and you better get used to it.</disableMessage>
+					</li>
+					<li>
+						<type>Defensive</type>
+						<label>Defensive</label>
+						<description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
+						<iconPath>UI/AI/Defense</iconPath>
+						<disableMessage>Defensive and disabled.</disableMessage>
+					</li>
+					<li>
+						<type>Passive</type>
+						<label>Pacifist</label>
+						<description>Flees from any hostile actions made against it, even by friendlies.</description>
+						<iconPath>UI/AI/Passive</iconPath>
+						<disableMessage>Passive and disabled.</disableMessage>
+					</li>
+				</options>
+			</li>
+			<!-- Defines the conditions for when to give the pawn an ability -->
+			<li Class="RT_Core.CompProperties_AbilityDefinition">
+				<compClass>RT_Core.CompAbilityDefinition</compClass>
+				<abilities>
+					<li>
+						<abilityDef>RT_FireBreath</abilityDef>
+					</li>
+					<li>
+						<abilityDef>RT_ZetaFirebolt</abilityDef>
+					</li>
+					<li>
+						<abilityDef>RT_ZetaAcidSpit</abilityDef>
+					</li>
+					<li>
+						<abilityDef>RT_ZetaFlame</abilityDef>
+					</li>
+					<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>
 			  </li>
@@ -120,37 +123,37 @@
 				<hediffname>RT_FasterRegen</hediffname>
 				<hediffseverity>1</hediffseverity>
 			  </li> -->
-  			</abilities>
-      </li>
+				</abilities>
+			</li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
 				<timeInYears>900</timeInYears>
 			</li>
 		</comps>
-		
-	<!-- Race stats -->		
+
+		<!-- Race stats -->		
 		<race>
-      <!-- Overriding animal think tree -->
-      <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
-      <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
-		  <bloodDef>Filth_BloodInsect</bloodDef>
-		  <herdAnimal>true</herdAnimal>
-		  <body>RT_ZetaBody</body>
-		  <baseBodySize>2</baseBodySize>
-		  <baseHealthScale>4.6</baseHealthScale>
-		  <baseHungerRate>1</baseHungerRate>
-		  <hasGenders>false</hasGenders>
+			<!-- Overriding animal think tree -->
+			<thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+			<thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<herdAnimal>true</herdAnimal>
+			<body>RT_ZetaBody</body>
+			<baseBodySize>2</baseBodySize>
+			<baseHealthScale>4.6</baseHealthScale>
+			<baseHungerRate>1</baseHungerRate>
+			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
 				<li>RT_Rimtroid_EvolutionGrowth</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
-		  <foodType>Processed</foodType>
-		  <leatherDef>RT_MetroidChitin</leatherDef>
-		  <trainability>Advanced</trainability>
-		  <maxPreyBodySize>4</maxPreyBodySize>
-		  <gestationPeriodDays>30</gestationPeriodDays>
-		  <predator>false</predator>
-		  <!-- <litterSizeCurve>
+			<foodType>Processed</foodType>
+			<leatherDef>RT_MetroidChitin</leatherDef>
+			<trainability>Advanced</trainability>
+			<maxPreyBodySize>4</maxPreyBodySize>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<predator>false</predator>
+			<!-- <litterSizeCurve>
 			<points>
 			  <li>(0.5, 0)</li>
 			  <li>(1, 1)</li>
@@ -159,44 +162,44 @@
 			  <li>(3, 0)</li>
 			</points>
 		  </litterSizeCurve> -->
-		  <manhunterOnDamageChance>5</manhunterOnDamageChance>
-		  <manhunterOnTameFailChance>0.80</manhunterOnTameFailChance>
-		  <wildness>10</wildness>
-		  <lifeExpectancy>1200</lifeExpectancy>
-		  <lifeStageAges>
-			<li>
-			  <def>AnimalBaby</def>
-			  <minAge>0</minAge>
-			</li>
-			<li>
-			  <def>AnimalJuvenile</def>
-			  <minAge>0.25</minAge>
-			</li>
-			<li>
-			  <def>AnimalAdult</def>
-			  <minAge>0.5</minAge>
-				<soundWounded>RT_Zeta_Wounded</soundWounded>
-				<soundDeath>RT_Zeta_Death</soundDeath>
-				<soundCall>RT_Zeta_Call</soundCall>
-				<soundAngry>RT_Zeta_Angry</soundAngry>
-			</li>
-		  </lifeStageAges>
-		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
-		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
-		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
-		<ageGenerationCurve>
-			<points>
-				<li>(450,0)</li>
-				<li>(465,1)</li>
-				<li>(480,10)</li>
-				<li>(520,15)</li>
-				<li>(600,5)</li>
-				<li>(690,2)</li>
-				<li>(750,0)</li>
-			</points>
-      </ageGenerationCurve>
+			<manhunterOnDamageChance>5</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.80</manhunterOnTameFailChance>
+			<wildness>10</wildness>
+			<lifeExpectancy>1200</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.5</minAge>
+					<soundWounded>RT_Zeta_Wounded</soundWounded>
+					<soundDeath>RT_Zeta_Death</soundDeath>
+					<soundCall>RT_Zeta_Call</soundCall>
+					<soundAngry>RT_Zeta_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<ageGenerationCurve>
+				<points>
+					<li>(450,0)</li>
+					<li>(465,1)</li>
+					<li>(480,10)</li>
+					<li>(520,15)</li>
+					<li>(600,5)</li>
+					<li>(690,2)</li>
+					<li>(750,0)</li>
+				</points>
+			</ageGenerationCurve>
 			<wildBiomes>
-			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalRainforest>0.12</TropicalRainforest>
 				<TropicalSwamp>0.09</TropicalSwamp>
 				<TemperateSwamp>0.08</TemperateSwamp>
 				<TemperateForest>0.07</TemperateForest>
@@ -207,21 +210,21 @@
 				<ColdBog>0.001</ColdBog>
 			</wildBiomes>
 		</race>
-      <butcherProducts>
-			  <RT_MetroidGel>65</RT_MetroidGel>
-		  </butcherProducts>
+		<butcherProducts>
+			<RT_MetroidGel>65</RT_MetroidGel>
+		</butcherProducts>
 		<tradeTags>
-		  <li>AnimalExotic</li>
-		  <li>AnimalInsectSpace</li>
+			<li>AnimalExotic</li>
+			<li>AnimalInsectSpace</li>
 		</tradeTags>
-	<modExtensions>
-		<li Class="RT_Core.LegacyModExtension">
-			<hasAbilities>true</hasAbilities>
-    </li>
-    <!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
-	  <li Class="RT_Core.DisableTrainingDegredation"> </li>
-        <!--desicatedDef>huskdefnamehere</desicatedDef-->
-    </modExtensions>
+		<modExtensions>
+			<li Class="RT_Core.LegacyModExtension">
+				<hasAbilities>true</hasAbilities>
+			</li>
+			<!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
+			<li Class="RT_Core.DisableTrainingDegredation"> </li>
+			<!--desicatedDef>huskdefnamehere</desicatedDef-->
+		</modExtensions>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">
@@ -235,59 +238,59 @@
 			<max>3</max>
 		</wildGroupSize>
 		<lifeStages>
-		  <li>
-			<label>zeta metroid</label>
-			<labelPlural>zeta metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
-			  <drawSize>3</drawSize>
-			  <shadowData>
-				<volume>(0.2, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.55)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-		  	<label>zeta metroid</label>
-			<labelPlural>zeta metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<label>zeta metroid</label>
-			<labelPlural>zeta metroid</labelPlural>
-			<bodyGraphicData>
-			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
-			  <shadowData>
-				<volume>(0.3, 0.2, 0.2)</volume>
-				<offset>(0, 0, -0.6)</offset>
-			  </shadowData>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
-			  <drawSize>3.5</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
+			<li>
+				<label>zeta metroid</label>
+				<labelPlural>zeta metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.55)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+					<drawSize>3.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>zeta metroid</label>
+				<labelPlural>zeta metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
+					<drawSize>3.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+					<drawSize>3.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>zeta metroid</label>
+				<labelPlural>zeta metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/ZetaMetroid/RT_ZetaMetroid</texPath>
+					<drawSize>3.5</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/ZetaMetroid/RT_Desiccated_ZetaMetroid</texPath>
+					<drawSize>3.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
 		</lifeStages>
 		<modExtensions>
-      <li Class="RT_Core.VerbSettingExtension">
-			  <useExtendedVerbs>true</useExtendedVerbs>
-		  </li>
+			<li Class="RT_Core.VerbSettingExtension">
+				<useExtendedVerbs>true</useExtendedVerbs>
+			</li>
 			<li Class="RT_Core.HungerBerserkOptions">
 				<hungerBerserkChanges>
 					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
