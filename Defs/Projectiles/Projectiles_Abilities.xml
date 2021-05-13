@@ -257,16 +257,15 @@
 			<damageDef>Flame</damageDef>
 			<speed>200</speed>
 			<damageAmountBase>2</damageAmountBase>
-		</projectile>
-		
+		</projectile>		
 		<drawOffscreen>true</drawOffscreen>
-		<lifeTimeDuration>180</lifeTimeDuration>
+		<lifeTimeDuration>30</lifeTimeDuration>
 		<widthScaleFactor>0.65</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
 		<totalSizeScale>1.15</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
-		<finalTickFrameRate>5</finalTickFrameRate>
+		<finalTickFrameRate>2</finalTickFrameRate>
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>2</minDistanceToAffect>
