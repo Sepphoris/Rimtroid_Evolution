@@ -2,6 +2,34 @@
 <Defs>
 
 	<IncidentDef>
+		<defName>RT_QueenLeavesPeacefully</defName>
+		<label>Metroid Queen departs colony</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass></workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>PositiveEvent</letterDef>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_QueenLeavesHungry</defName>
+		<label>Metroid Queen leaves colony</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass></workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+
+	<!-- ============================== Pure Metroid Raids ==============================-->
+
+	<IncidentDef>
 		<defName>RT_OmegaBecomesQueen</defName>
 		<label>Omega becomes queen</label>
 		<category>Misc</category>
