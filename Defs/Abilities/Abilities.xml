@@ -855,7 +855,7 @@
 		<iconPath>UI/Abilities/UI_ElectricBeam</iconPath>
 		<verbProperties>
 			<verbClass>RT_Core.Verb_CastAbility_FireBeam</verbClass>
-			<range>26</range>
+			<range>6</range>
 			<minRange>1</minRange>
 			<defaultProjectile>RT_ZetaFlame</defaultProjectile>
 			<commonality>2</commonality>
@@ -890,8 +890,8 @@
 						<hasStandardCommand>true</hasStandardCommand>
 						<defaultProjectile>RT_ZetaFlame</defaultProjectile>
 						<warmupTime>2</warmupTime>
-						<range>35</range>
-						<minRange>3</minRange>
+						<range>6</range>
+						<minRange>1</minRange>
 						<burstShotCount>1</burstShotCount>
 						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 						<soundCast>RT_SoundElectricBeam</soundCast>
