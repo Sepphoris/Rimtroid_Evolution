@@ -843,6 +843,7 @@
       If queen does spawn larvae as an ability, it will need to be heavily altered when
       player controls one-->
 
+<!--
 	<AbilityDef>
 		<defName>RT_ZetaFlame</defName>
 		<label>Zeta flame</label>
@@ -972,4 +973,5 @@
 			</li>
 		</comps>
 	</AbilityDef>
+	-->
 </Defs>
