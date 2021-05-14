@@ -33,4 +33,12 @@
 	<LetterOmegaBecomesQueen>{PAWN_kindDef}, out of nowhere, has became a Metroid Queen! The transformation was extremely sudden, and it was concluded that this happened due to no Queen existing on the planet.\n
 The Queen seems friendly to the colony, but it is unknown how long until the Queen decides to leave. Until then, it is under your complete control. Word will get out of the colony having such a powerful beast, and will greatly impact how other civilizations see you.</LetterOmegaBecomesQueen>
 
+	<LetterLabelQueenLeavesPeacefully>{PAWN_kindDef} leaving the colony</LetterLabelQueenLeavesPeacefully>
+	<LetterQueenLeavesPeacefully>{PAWN_kindDef} is peacefully leaving the colony, answering to the higher call of leading the metroids of the planet.\n
+While the queen will inevitably return to it's wild behavior for the sake of the species, it has not forgotten your service, and raids will occur much less frequently.</LetterQueenLeavesPeacefully>
+
+	<LetterLabelQueenLeavesHungry>{PAWN_kindDef} leaving the colony</LetterLabelQueenLeavesHungry>
+	<LetterQueenLeavesHungry>{PAWN_kindDef} is leaving the colony due to going hungry, and not having enough accessible sustenance around.\n
+The queen will inevitably return to it's wild behavior for the sake of the species, and soon begin coordinating raids against the global factions - including yours.</LetterQueenLeavesHungry>
+
 </LanguageData>

@@ -68,6 +68,9 @@
       <li>Textiles</li>
     </thingCategories>
     <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
       <color>(140,170,135)</color>
       <commonality>0.002</commonality>
       <statOffsets>

@@ -9,7 +9,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>RT_Rimtroid.IncidentWorker_OmegaBecomesQueen</workerClass>
-		<baseChance>0.01</baseChance>
+		<baseChance>0.1</baseChance>
 		<minRefireDays>0</minRefireDays>
 		<letterDef>PositiveEvent</letterDef>
 	</IncidentDef>
