@@ -302,11 +302,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Evolution\Events\GenStep_QueenLair.cs" />
+    <Compile Include="Evolution\Events\IncidentWorker_QueenLeavesHungry.cs" />
+    <Compile Include="Evolution\Events\IncidentWorker_QueenLeavesPeacefully.cs" />
     <Compile Include="Evolution\Events\IncidentWorker_OmegaBecomesQueen.cs" />
+    <Compile Include="Evolution\Events\IncidentWorker_RaidMetroid.cs" />
     <Compile Include="Evolution\Events\QuestNode_EnemyLeaderIsLiving.cs" />
     <Compile Include="Evolution\Events\QuestNode_SetEnemyFaction.cs" />
     <Compile Include="Evolution\Events\IncidentWorker_OtherFactionKilledQueen.cs" />
     <Compile Include="Evolution\Events\IncidentWorker_QueenSpotted.cs" />
+    <Compile Include="Evolution\Events\RaidOptions.cs" />
     <Compile Include="Evolution\HediffDefections.cs" />
     <Compile Include="Evolution\CompEvolutionTime.cs" />
     <Compile Include="Evolution\CompAlphaBomb.cs" />

@@ -375,17 +375,7 @@ namespace RT_Rimtroid
         }
     }
 
-    [HarmonyPatch(typeof(Pawn), "SpawnSetup")]
-    public static class SpawnSetup_Patch
-    {
-        public static void Postfix(Pawn __instance, Map map, bool respawningAfterLoad)
-        {
-            if (__instance.IsAnyMetroid())
-            {
-                Current.Game.GetComponent<RimtroidEvolutionTracker>().TryNotifyAboutMetroid(__instance);
-            }
-        }
-    }
+
     [HarmonyPatch(typeof(Pawn), "Tick")]
     public static class Pawn_Tick_Patch
     {
@@ -408,6 +398,18 @@ namespace RT_Rimtroid
         public static void Postfix(ref IEnumerable<PawnKindDef> __result)
         {
             __result = __result.ToList().Where(x => !RimtroidSettings.wildMetroidSpawns.TryGetValue(x.defName, out bool value) || value);
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn), "SetFaction")]
+    public static class Patch_SetFaction
+    {
+        private static void Postfix(Pawn __instance)
+        {
+            if (__instance?.Faction == Faction.OfPlayer && __instance.IsAnyMetroid())
+            {
+                Current.Game.GetComponent<RimtroidEvolutionTracker>().TryNotifyAboutMetroid(__instance);
+            }
         }
     }
     //[HarmonyPatch(typeof(Pawn), "Kill")]

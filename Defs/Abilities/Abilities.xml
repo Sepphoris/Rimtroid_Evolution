@@ -842,7 +842,7 @@
       Queen can spawn larvae; unsure if this should be an ability or not.
       If queen does spawn larvae as an ability, it will need to be heavily altered when
       player controls one-->
-	  
+
 	<AbilityDef>
 		<defName>RT_ZetaFlame</defName>
 		<label>Zeta flame</label>
@@ -854,11 +854,19 @@
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/UI_ElectricBeam</iconPath>
 		<verbProperties>
-			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<verbClass>RT_Core.Verb_CastAbility_FireBeam</verbClass>
 			<range>26</range>
 			<minRange>1</minRange>
 			<defaultProjectile>RT_ZetaFlame</defaultProjectile>
 			<commonality>2</commonality>
+			<targetParams>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetLocations>True</canTargetLocations>
+				<canTargetBuildings>True</canTargetBuildings>
+				<canTargetItems>True</canTargetItems>
+				<canTargetFires>True</canTargetFires>
+				<canTargetSelf>False</canTargetSelf>
+			</targetParams>
 		</verbProperties>
 		<comps>
 			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
@@ -888,6 +896,14 @@
 						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
 						<soundCast>RT_SoundElectricBeam</soundCast>
 						<muzzleFlashScale>1</muzzleFlashScale>
+						<targetParams>
+							<canTargetPawns>True</canTargetPawns>
+							<canTargetLocations>True</canTargetLocations>
+							<canTargetBuildings>True</canTargetBuildings>
+							<canTargetItems>True</canTargetItems>
+							<canTargetFires>True</canTargetFires>
+							<canTargetSelf>False</canTargetSelf>
+						</targetParams>
 					</li>
 				</verbProperties>
 			</li>
@@ -899,7 +915,7 @@
 			</li>
 		</comps>
 	</AbilityDef>
-	
+
 	<AbilityDef>
 		<defName>RT_OmegaSweep</defName>
 		<label>Omega sweep</label>

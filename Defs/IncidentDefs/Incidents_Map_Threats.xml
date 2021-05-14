@@ -8,7 +8,7 @@
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass></workerClass>
+		<workerClass>RT_Rimtroid.IncidentWorker_QueenLeavesPeacefully</workerClass>
 		<baseChance>0.1</baseChance>
 		<minRefireDays>0</minRefireDays>
 		<letterDef>PositiveEvent</letterDef>
@@ -21,7 +21,7 @@
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass></workerClass>
+		<workerClass>RT_Rimtroid.IncidentWorker_QueenLeavesHungry</workerClass>
 		<baseChance>0.1</baseChance>
 		<minRefireDays>0</minRefireDays>
 		<letterDef>NeutralEvent</letterDef>

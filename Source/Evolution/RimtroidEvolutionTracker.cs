@@ -18,12 +18,13 @@ namespace RT_Rimtroid
         public Dictionary<ThingDef, bool> spottedMetroids = new Dictionary<ThingDef, bool>();
 
         public int lastQueenDeathTick;
+        public int metroidRaidGracePeriod;
 
         public Pawn currentQueen;
 
         public static Dictionary<ThingDef, Tuple<string, string>> spottedLabels = new Dictionary<ThingDef, Tuple<string, string>>
         {
-            {RT_DefOf.RT_MetroidLarvae, new Tuple<string, string>("LetterLabelLarvaTutorial", "LetterLarvaTutorial".Translate())},
+            {RT_DefOf.RT_MetroidLarvae, new Tuple<string, string>("LetterLabelLarvaTutorial", "LetterLarvaTutorial")},
             {RT_DefOf.RT_BanteeMetroid, new Tuple<string, string>("LetterLabelBanteeTutorial", "LetterBanteeTutorial")},
             {RT_DefOf.RT_GammaMetroid, new Tuple<string, string>("LetterLabelGammaTutorial", "LetterGammaTutorial")},
             {RT_DefOf.RT_OmegaMetroid, new Tuple<string, string>("LetterLabelOmegaTutorial", "LetterOmegaTutorial")},
@@ -73,6 +74,7 @@ namespace RT_Rimtroid
             base.ExposeData();
             Scribe_Collections.Look(ref spottedMetroids, "spottedMetroids", LookMode.Def, LookMode.Value, ref thingDefKeys, ref boolValues);
             Scribe_Values.Look(ref lastQueenDeathTick, "lastQueenDeathTick");
+            Scribe_Values.Look(ref metroidRaidGracePeriod, "metroidRaidGracePeriod");
             Scribe_References.Look(ref currentQueen, "currentQueen");
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

@@ -10,7 +10,7 @@
 		</textures>
 	</ThingDef>
 
-		<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="RT_Bullet_LaserGeneric">
+	<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="RT_Bullet_LaserGeneric">
 		<seam>0.25</seam>
 		<textures>
 			<li>AnimalProjectile/Firebeam1</li>
@@ -52,12 +52,12 @@
 			<damageAmountBase>16</damageAmountBase>
 			<soundExplode>RT_SoundElectricBolt</soundExplode>
 		</projectile>
-        <beamWidth>2</beamWidth>
+		<beamWidth>2</beamWidth>
 		<fireWidth>0</fireWidth>
 		<spawnFire>false</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>2</fireDistanceFromCaster>
-        <lifetime>250</lifetime>
+		<lifetime>250</lifetime>
 	</ThingDef>
 
 	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Core.LaserBeamDef">
@@ -76,14 +76,14 @@
 			<explosionRadius>1</explosionRadius>
 			<damageAmountBase>4</damageAmountBase>
 		</projectile>
-        <beamWidth>4.5</beamWidth>
-        <lifetime>16</lifetime>
+		<beamWidth>4.5</beamWidth>
+		<lifetime>16</lifetime>
 	</ThingDef>
 
 
 	<!-- Zeta Abilities -->
 
- 	<ThingDef>
+	<ThingDef>
 		<defName>RT_ZetaFirebolt</defName>
 		<thingClass>RT_Core.AnimalProjectile</thingClass>
 		<label>Firebolt</label>
@@ -108,7 +108,7 @@
 	</ThingDef>
 
 
- 	<ThingDef>
+	<ThingDef>
 		<defName>RT_ZetaAcid</defName>
 		<thingClass>RT_Core.AnimalProjectile</thingClass>
 		<label>acidic spit</label>
@@ -131,7 +131,7 @@
 			<soundExplode>RT_SoundAcidboltExplosion</soundExplode>
 		</projectile>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RT_Bullet_FireBreath" Class="RT_Core.LaserBeamDef">
 		<defName>RT_FireBreath</defName>
 		<thingClass>RT_Core.LaserBeam</thingClass>
@@ -150,13 +150,13 @@
 			<damageAmountBase>18</damageAmountBase>
 			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
-      <beamWidth>1</beamWidth>
+		<beamWidth>1</beamWidth>
 		<fireWidth>2</fireWidth>
 		<spawnFire>false</spawnFire>
 		<dontSpawnFireOnCaster>false</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>1</fireDistanceFromCaster>
-        <lifetime>300</lifetime>
-	<disableFading>True</disableFading>
+		<lifetime>300</lifetime>
+		<disableFading>True</disableFading>
 	</ThingDef>
 
 
@@ -183,12 +183,12 @@
 			<explosionRadius>3</explosionRadius>
 			<damageAmountBase>6</damageAmountBase>
 			<soundExplode>Explosion_Flame</soundExplode>
-      <ai_IsIncendiary>true</ai_IsIncendiary>
-      <arcHeightFactor>0.2</arcHeightFactor>
-      <shadowSize>1</shadowSize>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<arcHeightFactor>0.2</arcHeightFactor>
+			<shadowSize>1</shadowSize>
 		</projectile>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Core.LaserBeamDef">
 		<defName>RT_OmegaBeam</defName>
 		<thingClass>RT_Core.LaserBeam</thingClass>
@@ -207,12 +207,12 @@
 			<damageAmountBase>24</damageAmountBase>
 			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
-        <beamWidth>3</beamWidth>
+		<beamWidth>3</beamWidth>
 		<fireWidth>0</fireWidth>
 		<spawnFire>true</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>2</fireDistanceFromCaster>
-        <lifetime>150</lifetime>
+		<lifetime>150</lifetime>
 	</ThingDef>
 
 
@@ -236,12 +236,12 @@
 			<damageAmountBase>32</damageAmountBase>
 			<soundExplode>Explosion_Bomb</soundExplode>
 		</projectile>
-        <beamWidth>4</beamWidth>
+		<beamWidth>4</beamWidth>
 		<fireWidth>3</fireWidth>
 		<spawnFire>true</spawnFire>
 		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
 		<fireDistanceFromCaster>2</fireDistanceFromCaster>
-        <lifetime>360</lifetime>
+		<lifetime>360</lifetime>
 	</ThingDef>
 
 	<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
@@ -260,16 +260,40 @@
 		</projectile>		
 		<drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>30</lifeTimeDuration>
-		<widthScaleFactor>0.65</widthScaleFactor>
+		<widthScaleFactor>2.65</widthScaleFactor>
 		<heightScaleFactor>1</heightScaleFactor>
 		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
-		<totalSizeScale>1.15</totalSizeScale>
 		<tickFrameRate>2</tickFrameRate>
 		<finalTickFrameRate>2</finalTickFrameRate>
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
-		<minDistanceToAffect>2</minDistanceToAffect>
+		<minDistanceToAffect>1</minDistanceToAffect>
+		<fixedShape>RT_ZetaFlameShape</fixedShape>
 	</RT_Rimtroid.ExpandableProjectileDef>
+
+	<RT_Rimtroid.ExpandableProjectileShapeDef>
+		<defName>RT_ZetaFlameShape</defName>
+		<widthCurve>
+			<points>
+				<li>0, 1</li>
+				<li>1, 3</li>
+				<li>2, 3</li>
+				<li>3, 5</li>
+				<li>4, 5</li>
+				<li>5, 3</li>
+				<li>6, 1</li>
+				<li>7, 0</li>
+			</points>
+		</widthCurve>
+		<shape>
+			<!-- E is entry, S is place, X is empty -->
+			<li>XXSSXXXX</li>
+			<li>XSSSSSXX</li>
+			<li>ESSSSSSX</li>
+			<li>XSSSSSXX</li>
+			<li>XXSSXXXX</li>
+		</shape>
+	</RT_Rimtroid.ExpandableProjectileShapeDef>
 
 	<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>RT_OmegaSweep</defName>
@@ -285,7 +309,7 @@
 			<speed>200</speed>
 			<damageAmountBase>2</damageAmountBase>
 		</projectile>
-		
+
 		<drawOffscreen>true</drawOffscreen>
 		<lifeTimeDuration>500</lifeTimeDuration>
 		<widthScaleFactor>0.65</widthScaleFactor>
