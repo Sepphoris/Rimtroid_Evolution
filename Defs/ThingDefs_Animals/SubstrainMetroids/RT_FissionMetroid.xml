@@ -147,7 +147,7 @@
 		  </litterSizeCurve> -->
 		  <manhunterOnDamageChance>0.90</manhunterOnDamageChance>
 		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
-		  <wildness>0.9</wildness>
+		  <wildness>10</wildness>
 		  <lifeExpectancy>200</lifeExpectancy>
 		  <lifeStageAges>
 			<li>
