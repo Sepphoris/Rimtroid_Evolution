@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--===============
+Quick notes:
+Under <PossibleEvolutionPaths>, make surethe <Age> tag is one year ABOVE the maximum
+age range defined in HediffGivers.xml. Also make sure that age ranges match in the
+proper race defs. If the ages cross over, a pawn will have wrong graphics, the
+wrong hediff/previous hediff, or both.
+
+The <whitelists> tag within <comps> allows certain hediffs to occur. Patches need
+to be made to allow hediff effects from other mods.
+===============-->
+
+<!--===============Infant Tallon Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_TallonInfantState</defName>
+    <label>Evolution (Tallon Infant)</label>
+    <labelNoun>an Infant Tallon Metroid</labelNoun>
+    <description>An Infant Tallon Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+<!--===============Tallon Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_TallonState</defName>
+    <label>Evolution (Tallon Larva)</label>
+    <labelNoun>a Tallon Metroid</labelNoun>
+    <description>A Tallon Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+  
+
+<!--===============Hunter Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_HunterState</defName>
+    <label>Evolution (Hunter)</label>
+    <labelNoun>a Hunter Metroid</labelNoun>
+    <description>A Hunter Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+      <!--<li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
+        <PossibleEvolutionPaths>
+			<li>
+				<triggerDef>AlternateEvolutionHediffDefName</triggerDef
+				<Age>80</Age>
+				<Kind>RT_MetroidHatcher</Kind>
+			</li>
+		</PossibleEvolutionPaths>
+        <whitelists>
+			<li>RT_HunterStateWhitelist</li>
+		</whitelists>
+      </li>
+
+      <li Class="SubstrainMetamorphosis.HediffCompProperties">
+	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
+        <PossibleEvolutionPaths>
+				<YearsUntilReroll>10</YearsUntilReroll>
+			<li>
+				<age>40</Age>
+				<kind>RT_MetroidHunter</Kind>
+				<weight>0.3</weight>
+			</li>
+			<li>
+				<age>40</Age>
+				<kind>RT_FissionMetroid</Kind>
+				<weight>0.1</weight>
+			</li>
+		</PossibleEvolutionPaths>
+        <whitelists>
+			<li>RT_HunterStateWhitelist</li>
+		</whitelists>
+      </li>-->
+    </comps>
+  </HediffDef>
+
+  <!--<Metamorphosis.MetroidWhitelistDef>
+    <defName>RT_HunterStateWhitelist</defName>
+      <whitelist>
+        <li>RT_AcceleratedAgingLarvae</li>
+        <li>RT_CryoadapterHediff</li>
+        <li>RT_NutrientRegulatorHediff</li>
+      </whitelist>
+  </Metamorphosis.MetroidWhitelistDef>-->
+ 
+
+<!--===============Base Fission Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_FissionStateBase</defName>
+    <label>Evolution (Fission Metroid)</label>
+    <labelNoun>a Fission Metroid</labelNoun>
+    <description>A Fission Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Power Fission Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_FissionStatePower</defName>
+    <label>Fission Metroid Variant (Power)</label>
+    <labelNoun>a Power Metroid</labelNoun>
+    <description>A Power Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Wave Fission Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_FissionStateWave</defName>
+    <label>Fission Metroid Variant (Wave)</label>
+    <labelNoun>a Wave Metroid</labelNoun>
+    <description>A Wave Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Ice Fission Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_FissionStateIce</defName>
+    <label>Fission Metroid Variant (Ice)</label>
+    <labelNoun>an Ice Metroid</labelNoun>
+    <description>An Ice Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Plasma Fission Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_FissionStatePlasma</defName>
+    <label>Fission Metroid Variant (Plasma)</label>
+    <labelNoun>a Plasma Metroid</labelNoun>
+    <description>A Plasma Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Fusion Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_FusionState</defName>
+    <label>Augmentation (Fusion Metroid)</label>
+    <labelNoun>a Fusion</labelNoun>
+    <description>A Fusion Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
+
+<HediffGiverSetDef>
+  <defName>RT_EvoGrowth_Local</defName>
+  <hediffGivers>
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_RimtroidHatchlingState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+		<!--<targetAgeRange>0.00001~6.99999</targetAgeRange>-->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_RimtroidState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_StalkerState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_CollosusState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_PsitroidState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_SeekerState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_BorealState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+  </hediffGivers>
+</HediffGiverSetDef>
+
+</Defs>

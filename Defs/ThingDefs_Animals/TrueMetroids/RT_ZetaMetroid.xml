@@ -112,9 +112,9 @@
 					<li>
 						<abilityDef>RT_ZetaAcidSpit</abilityDef>
 					</li>
-					<li>
+					<!--<li>
 						<abilityDef>RT_ZetaFlame</abilityDef>
-					</li>
+					</li>-->
 					<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
 				<hediffseverity>1</hediffseverity>

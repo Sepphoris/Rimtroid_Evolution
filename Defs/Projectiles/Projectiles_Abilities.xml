@@ -244,7 +244,7 @@
 		<lifetime>360</lifetime>
 	</ThingDef>
 
-	<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
+	<!--<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>RT_ZetaFlame</defName>
 		<label>zeta flame</label>
 		<thingClass>RT_Rimtroid.FlamethrowProjectile</thingClass>
@@ -269,10 +269,10 @@
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>1</minDistanceToAffect>
-		<!--<fixedShape>RT_ZetaFlameShape</fixedShape>-->
-	</RT_Rimtroid.ExpandableProjectileDef>
+		<fixedShape>RT_ZetaFlameShape</fixedShape>
+	</RT_Rimtroid.ExpandableProjectileDef>-->
 
-	<RT_Rimtroid.ExpandableProjectileShapeDef>
+	<!--<RT_Rimtroid.ExpandableProjectileShapeDef>
 		<defName>RT_ZetaFlameShape</defName>
 		<widthCurve>
 			<points>
@@ -287,16 +287,16 @@
 			</points>
 		</widthCurve>
 		<shape>
-			<!-- E is entry, S is place, X is empty -->
+			E is entry, S is place, X is empty
 			<li>XXSSXXXX</li>
 			<li>XSSSSSXX</li>
 			<li>ESSSSSSX</li>
 			<li>XSSSSSXX</li>
 			<li>XXSSXXXX</li>
 		</shape>
-	</RT_Rimtroid.ExpandableProjectileShapeDef>
+	</RT_Rimtroid.ExpandableProjectileShapeDef>-->
 
-	<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
+	<!--<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
 		<defName>RT_OmegaSweep</defName>
 		<label>omega sweep</label>
 		<thingClass>RT_Rimtroid.SweepProjectile</thingClass>
@@ -321,6 +321,6 @@
 		<tickDamageRate>20</tickDamageRate>
 		<dealsDamageOnce>true</dealsDamageOnce>
 		<minDistanceToAffect>2</minDistanceToAffect>
-	</RT_Rimtroid.ExpandableProjectileDef>
+	</RT_Rimtroid.ExpandableProjectileDef>-->
 </Defs>
 

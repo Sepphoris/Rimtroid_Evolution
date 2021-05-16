@@ -288,6 +288,16 @@
 			</li>
 		</stages>
 	</HediffDef>
+
+<li Class="HediffGiver_Birthday">
+	<hediff>RT_BanteeState</hediff>
+		<ageFractionChanceCurve>
+		<points>
+			<li>(0, 1)</li>
+			<li>(0.24, 0)</li>
+		</points>
+		</ageFractionChanceCurve>
+</li>
 	
 <!--Hediff notes:
 (233,129,69) - Orange label

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
+
+<HediffGiverSetDef>
+  <defName>RT_Rimtroid_EvolutionGrowth</defName>
+  <hediffGivers>
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_BanteeState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>0.00001~13.99999</targetAgeRange> <!-- in years -->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_LarvaeState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>14~79.99999</targetAgeRange> <!-- in years -->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_AlphaState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>80~199.99999</targetAgeRange> <!-- in years -->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_GammaState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>200~449.99999</targetAgeRange> <!-- in years -->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_ZetaState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>450~899.99999</targetAgeRange> <!-- in years -->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_OmegaState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>900~4999.99999</targetAgeRange> <!-- in years -->
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_QueenState</hediff>
+			<partsToAffect>
+              <li>RT_Mitosis</li>
+            </partsToAffect>
+		<targetAgeRange>5000~20000</targetAgeRange> <!-- in years -->
+    </li>
+
+  </hediffGivers>
+</HediffGiverSetDef>
+
+
+<!--Misc hediffs given-->
+
+  <!--Hediff to give abilities-->
+
+	<HediffGiverSetDef>
+    <defName>OrganicAgeless</defName>
+    <hediffGivers>
+      
+      <!-- Environmental -->
+      <li Class="HediffGiver_Bleeding">
+        <hediff>BloodLoss</hediff>
+      </li>
+      <li Class="HediffGiver_Hypothermia">
+        <hediff>Hypothermia</hediff>
+      </li>
+      <li Class="HediffGiver_Heat">
+        <hediff>Heatstroke</hediff>
+      </li>
+
+        <!-- Responsive and special -->
+      <li Class="HediffGiver_BrainInjury">
+        <hediff>TraumaSavant</hediff>
+        <partsToAffect>
+          <li>Brain</li>
+        </partsToAffect>
+        <chancePerDamagePct>0.12</chancePerDamagePct>
+        <letterLabel>Trauma savant</letterLabel>
+        <letter>[PAWN_nameDef]'s brain injury has caused [PAWN_pronoun] to develop strange savant-like abilities.</letter>
+      </li>
+      
+    </hediffGivers>
+  </HediffGiverSetDef>
+
+</Defs>

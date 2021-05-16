@@ -129,9 +129,9 @@
 					<li>
 						<abilityDef>RT_OmegaBeam</abilityDef>
 					</li>
-					<li>
+					<!--<li>
 						<abilityDef>RT_OmegaSweep</abilityDef>
-					</li>
+					</li>-->
 				</abilities>
 			</li>
 			
