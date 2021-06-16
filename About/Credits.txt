@@ -7,3 +7,8 @@ Credits:
 -Ogliss and Murmur for other areas of the C# coding, which helped bring the mod together
 -Kasmex Forever, for doing nearly all the graphics within the mod, and bringing up all the Metroids to a much higher quality than my own.
 -The general RW modding community for helping solve various issues that popped up, and troubleshooting oversights and errors.
+
+_______________
+PATREON:
+
+Joshua Curtis
