@@ -5,6 +5,174 @@
 <!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
 
 <HediffGiverSetDef>
+    <defName>RT_EvoGrowth_Pure</defName>
+    <hediffGivers>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+            <!--<maxReroll>1</maxReroll>--> <!-- determines how many times the chance field can fail before it's not attempted anymore. Leave out for infinite times-->
+            <chance>0.9</chance> <!-- the chance that evolution happens. 1=100%. If this fails, it will try again based on the number withing <yearsInterval>-->
+            <yearsInterval>1</yearsInterval> <!--how many years until the code tries for an evolution again. Can have a year range as well-->
+            <hediffsToPreventGrowth> <!--if any of the hediffs below are present, it will not evolve.-->
+                <li>RT_StuntedGrowthBad</li>
+                <li>RT_StuntedGrowthGood</li>
+                <li>RT_StuntedGrowthNeutral</li>
+            </hediffsToPreventGrowth >
+            <possibleEvolutionPaths> <!--What the metroid can turn into.-->
+                <li>
+                  <requiredAge>0</requiredAge>
+                  <hediff>RT_BanteeState</hediff>
+                  <partsToAffect>
+                    <li>RT_Mitosis</li>
+                  </partsToAffect>
+                    <weight>1</weight> <!--Weight is relative; a weight of 0.3 vs 0.1 means that 0.3 is 3x more likely to be chosen-->
+                </li>
+            </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1</yearsInterval>
+          <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>14</requiredAge>
+                <hediff>RT_LarvaeState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1~2</yearsInterval>
+          <hediffsToPreventGrowth>
+            <li>RT_StuntedGrowthBad</li>
+            <li>RT_StuntedGrowthGood</li>
+            <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+            <li>
+              <requiredAge>80</requiredAge>
+              <hediff>RT_AlphaState</hediff>
+              <partsToAffect>
+                  <li>RT_Mitosis</li>
+              </partsToAffect>
+              <weight>1</weight>
+            </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1~3</yearsInterval>
+          <hediffsToPreventGrowth>
+            <li>RT_StuntedGrowthBad</li>
+            <li>RT_StuntedGrowthGood</li>
+            <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+            <li>
+              <requiredAge>200</requiredAge>
+              <hediff>RT_GammaState</hediff>
+              <partsToAffect>
+                  <li>RT_Mitosis</li>
+              </partsToAffect>
+              <weight>1</weight>
+            </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1~4</yearsInterval>
+          <hediffsToPreventGrowth>
+            <li>RT_StuntedGrowthBad</li>
+            <li>RT_StuntedGrowthGood</li>
+            <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+            <li>
+              <requiredAge>500</requiredAge>
+              <hediff>RT_ZetaState</hediff>
+              <partsToAffect>
+                  <li>RT_Mitosis</li>
+              </partsToAffect>
+              <weight>1</weight>
+            </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1~5</yearsInterval>
+          <hediffsToPreventGrowth>
+            <li>RT_StuntedGrowthBad</li>
+            <li>RT_StuntedGrowthGood</li>
+            <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+            <li>
+              <requiredAge>900</requiredAge>
+              <hediff>RT_OmegaState</hediff>
+              <partsToAffect>
+                  <li>RT_Mitosis</li>
+              </partsToAffect>
+              <weight>1</weight>
+            </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1~10</yearsInterval>
+          <hediffsToPreventGrowth>
+            <li>RT_StuntedGrowthBad</li>
+            <li>RT_StuntedGrowthGood</li>
+            <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+            <li>
+              <requiredAge>5000</requiredAge>
+              <hediff>RT_QueenState</hediff>
+              <partsToAffect>
+                  <li>RT_Mitosis</li>
+              </partsToAffect>
+              <weight>1</weight>
+            </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+<!--Old code; only here in case of fatal errors from new code.
+<HediffGiverSetDef>
   <defName>RT_Rimtroid_EvolutionGrowth</defName>
   <hediffGivers>
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -13,7 +181,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>0.00001~13.99999</targetAgeRange> <!-- in years -->
+		<targetAgeRange>0.00001~13.99999</targetAgeRange>
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -22,7 +190,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>14~79.99999</targetAgeRange> <!-- in years -->
+		<targetAgeRange>14~79.99999</targetAgeRange>
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -31,7 +199,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>80~199.99999</targetAgeRange> <!-- in years -->
+		<targetAgeRange>80~199.99999</targetAgeRange>
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -40,7 +208,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>200~449.99999</targetAgeRange> <!-- in years -->
+		<targetAgeRange>200~449.99999</targetAgeRange>
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -49,7 +217,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>450~899.99999</targetAgeRange> <!-- in years -->
+		<targetAgeRange>450~899.99999</targetAgeRange>
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -58,7 +226,7 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>900~4999.99999</targetAgeRange> <!-- in years -->
+		<targetAgeRange>900~4999.99999</targetAgeRange>
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -67,8 +235,8 @@
 			<partsToAffect>
               <li>RT_Mitosis</li>
             </partsToAffect>
-		<targetAgeRange>5000~20000</targetAgeRange> <!-- in years -->
-    </li>
+		<targetAgeRange>5000~20000</targetAgeRange>
+    </li>-->
 
   </hediffGivers>
 </HediffGiverSetDef>
