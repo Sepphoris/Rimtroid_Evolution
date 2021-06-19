@@ -4,16 +4,125 @@
 
 <!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
 
+
 <HediffGiverSetDef>
   <defName>RT_EvoGrowth_Phazon</defName>
-  <hediffGivers>
-    <li Class="RT_Core.HediffGiver_AfterPeriod">
+    <hediffGivers>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1</yearsInterval>
+          <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>0</requiredAge>
+                <hediff>RT_MiniroidState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1</yearsInterval>
+          <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>14</requiredAge>
+                <hediff>RT_PhazonMetroidState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <maxReroll>3</maxReroll>
+          <chance>0.4</chance>
+          <yearsInterval>1~3</yearsInterval>
+          <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth>
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>40</requiredAge>
+                <hediff>RT_HopperState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1.5</weight>
+              </li>
+              <li>
+                <requiredAge>50</requiredAge>
+                <hediff>RT_RavagerState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+              </li>
+              <li>
+                <requiredAge>60</requiredAge>
+                <hediff>RT_HatcherState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
+
+
+
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+          <maxReroll>1</maxReroll>
+          <chance>0.2</chance>
+          <yearsInterval>25~50</yearsInterval>
+          <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_StuntedGrowthNeutral</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>1986</requiredAge>
+                <hediff>RT_PrimeState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
+
+    <!--<li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
       <hediff>RT_MiniroidState</hediff>
 			<partsToAffect>
         <li>RT_Mitosis</li>
       </partsToAffect>
-		<!--<targetAgeRange>0.00001~6.99999</targetAgeRange>-->
     </li>
 
     <li Class="RT_Core.HediffGiver_AfterPeriod">
@@ -38,7 +147,7 @@
 			<partsToAffect>
         <li>RT_Mitosis</li>
       </partsToAffect>
-    </li>
+    </li>-->
   </hediffGivers>
 </HediffGiverSetDef>
 
