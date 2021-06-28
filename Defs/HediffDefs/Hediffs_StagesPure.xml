@@ -56,33 +56,6 @@ to be made to allow hediff effects from other mods.
         </capMods>
       </li>
     </stages>
-    <comps>
-			<li Class="RT_Core.HediffGiver_AfterPeriod">
-          <!--<maxReroll>1</maxReroll>-->
-          <chance>0.9</chance>
-          <yearsInterval>1</yearsInterval>
-          <hediffsToPreventGrowth>
-            <li>RT_StuntedGrowthBad</li>
-            <li>RT_StuntedGrowthNeutral</li>
-            <li>RT_StuntedGrowthGood</li>
-            <li>RT_GrowthSuspenderHediff</li>
-            <li>RT_FrozenSolidHediff</li>
-          </hediffsToPreventGrowth >
-          <possibleEvolutionPaths>
-              <li>
-                <requiredAge>14</requiredAge>
-                <hediff>RT_LarvaeState</hediff>
-                <partsToAffect>
-                    <li>RT_Mitosis</li>
-                </partsToAffect>
-                <weight>1</weight>
-								<whitelists>
-									<li>RT_BanteeToLarvaeWhitelist</li>
-								</whitelists>
-              </li>
-          </possibleEvolutionPaths>
-        </li>
-    </comps>
   </HediffDef>
 
   <Metamorphosis.MetroidWhitelistDef>
@@ -131,10 +104,6 @@ to be made to allow hediff effects from other mods.
 		</capMods>
       </li>
     </stages>
-    <comps>
-				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				</li>
-    </comps>
   </HediffDef>
 
   <Metamorphosis.MetroidWhitelistDef>
@@ -187,10 +156,6 @@ to be made to allow hediff effects from other mods.
 		</capMods>
       </li>
     </stages>
-    <comps>
-				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				</li>
-    </comps>
   </HediffDef>
 
  <Metamorphosis.MetroidWhitelistDef>
@@ -247,10 +212,6 @@ to be made to allow hediff effects from other mods.
 		</capMods>
       </li>
     </stages>
-    <comps>
-				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				</li>
-    </comps>
   </HediffDef>
 
  <Metamorphosis.MetroidWhitelistDef>
@@ -311,10 +272,6 @@ to be made to allow hediff effects from other mods.
 		</capMods>
       </li>
     </stages>
-    <comps>
-				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				</li>
-    </comps>
   </HediffDef>
 
  <Metamorphosis.MetroidWhitelistDef>
