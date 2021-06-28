@@ -57,30 +57,40 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
-	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
-        <PossibleEvolutionPaths>
-			    <li>
-				    <!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				    <Age>14</Age>
-				    <Kind>RT_MetroidLarvae</Kind>
-			    </li>
-		    </PossibleEvolutionPaths>
-        <whitelists>
-			    <li>RT_BanteeStateWhitelist</li>
-		    </whitelists>
-      </li>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+          <!--<maxReroll>1</maxReroll>-->
+          <chance>0.9</chance>
+          <yearsInterval>1</yearsInterval>
+          <hediffsToPreventGrowth>
+            <li>RT_StuntedGrowthBad</li>
+            <li>RT_StuntedGrowthNeutral</li>
+            <li>RT_StuntedGrowthGood</li>
+            <li>RT_GrowthSuspenderHediff</li>
+            <li>RT_FrozenSolidHediff</li>
+          </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>14</requiredAge>
+                <hediff>RT_LarvaeState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+								<whitelists>
+									<li>RT_BanteeToLarvaeWhitelist</li>
+								</whitelists>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
     </comps>
   </HediffDef>
 
   <Metamorphosis.MetroidWhitelistDef>
-    <defName>RT_BanteeStateWhitelist</defName>
+    <defName>RT_BanteeToLarvaeWhitelist</defName>
       <whitelist>
         <li>RT_AcceleratedAgingBantee</li>
         <li>RT_CryoadapterHediff</li>
         <li>RT_NutrientRegulatorHediff</li>
-        <li>RT_ImmunityAcceleratorHediff</li>
       </whitelist>
   </Metamorphosis.MetroidWhitelistDef>
 
@@ -122,25 +132,13 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
-	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
-        <PossibleEvolutionPaths>
-			<li>
-				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>80</Age>
-				<Kind>RT_AlphaMetroid</Kind>
-			</li>
-		</PossibleEvolutionPaths>
-        <whitelists>
-			<li>RT_LarvaeStateWhitelist</li>
-		</whitelists>
-      </li>
+				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+				</li>
     </comps>
   </HediffDef>
 
   <Metamorphosis.MetroidWhitelistDef>
-    <defName>RT_LarvaeStateWhitelist</defName>
+    <defName>RT_LarvaeToAlphaWhitelist</defName>
       <whitelist>
         <li>RT_AcceleratedAgingLarvae</li>
         <li>RT_CryoadapterHediff</li>
@@ -190,25 +188,13 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
-	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
-        <PossibleEvolutionPaths>
-			<li>
-				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>200</Age> <!--Make sure age matches in HediffGivers and in Race defs-->
-				<Kind>RT_GammaMetroid</Kind>
-			</li>
-		</PossibleEvolutionPaths>
-        <whitelists>
-			<li>RT_AlphaStateWhitelist</li>
-		</whitelists>
-      </li>
+				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+				</li>
     </comps>
   </HediffDef>
 
  <Metamorphosis.MetroidWhitelistDef>
-    <defName>RT_AlphaStateWhitelist</defName>
+    <defName>RT_AlphatoGammaWhitelist</defName>
       <whitelist>
         <li>RT_AcceleratedAgingAlpha</li>
         <li>RT_CryoadapterHediff</li>
@@ -262,25 +248,13 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
-	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
-        <PossibleEvolutionPaths>
-			<li>
-				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>450</Age>
-				<Kind>RT_ZetaMetroid</Kind>
-			</li>
-		</PossibleEvolutionPaths>
-        <whitelists>
-			<li>RT_GammaStateWhitelist</li>
-		</whitelists>
-      </li>
+				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+				</li>
     </comps>
   </HediffDef>
 
  <Metamorphosis.MetroidWhitelistDef>
-    <defName>RT_GammaStateWhitelist</defName>
+    <defName>RT_GammaToZetaWhitelist</defName>
       <whitelist>
         <li>RT_AcceleratedAgingGamma</li>
         <li>RT_CryoadapterHediff</li>
@@ -338,25 +312,13 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="Metamorphosis.HediffCompProperties_RimtroidCore">
-	    <!--<stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>-->
-	    <stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
-        <PossibleEvolutionPaths>
-			<li>
-				<!--triggerDef>AlternateEvolutionHediffDefName</triggerDef-->
-				<Age>900</Age>
-				<Kind>RT_OmegaMetroid</Kind>
-			</li>
-		</PossibleEvolutionPaths>
-        <whitelists>
-			<li>RT_ZetaStateWhitelist</li>
-		</whitelists>
-      </li>
+				<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+				</li>
     </comps>
   </HediffDef>
 
  <Metamorphosis.MetroidWhitelistDef>
-    <defName>RT_ZetaStateWhitelist</defName>
+    <defName>RT_ZetaToOmegaWhitelist</defName>
       <whitelist>
         <li>RT_AcceleratedAgingZeta</li>
         <li>RT_CryoadapterHediff</li>

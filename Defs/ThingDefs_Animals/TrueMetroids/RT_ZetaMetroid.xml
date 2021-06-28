@@ -143,7 +143,7 @@
 			<baseHungerRate>1</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets Inherit="false">
-				<li>RT_Rimtroid_EvolutionGrowth</li>
+				<li>RT_EvoGrowth_Zeta</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>

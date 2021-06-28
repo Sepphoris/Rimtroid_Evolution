@@ -4,13 +4,13 @@
 
 <!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
 
-<HediffGiverSetDef>
+<!--<HediffGiverSetDef>
   <defName>RT_EvoGrowth_Misc</defName>
-  <hediffGivers>
+    <hediffGivers>-->
 
 
 
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
+         <!--<li Class="RT_Core.HediffGiver_AfterPeriod">
           <maxReroll>5</maxReroll>
           <chance>0.15</chance>
           <yearsInterval>2~5</yearsInterval>
@@ -18,6 +18,7 @@
               <li>RT_StuntedGrowthBad</li>
               <li>RT_StuntedGrowthGood</li>
               <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_GrowthSuspenderHediff</li>
           </hediffsToPreventGrowth >
           <possibleEvolutionPaths>
               <li>
@@ -29,18 +30,19 @@
                 <weight>1</weight>
               </li>
           </possibleEvolutionPaths>
-        </li>
+        </li>-->
 
 
 
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
+        <!--<li Class="RT_Core.HediffGiver_AfterPeriod">-->
           <!--<maxReroll>5</maxReroll>-->
-          <chance>1</chance>
+          <!--<chance>1</chance>
           <yearsInterval>1</yearsInterval>
           <hediffsToPreventGrowth>
               <li>RT_StuntedGrowthBad</li>
               <li>RT_StuntedGrowthGood</li>
               <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_GrowthSuspenderHediff</li>
           </hediffsToPreventGrowth >
           <possibleEvolutionPaths>
               <li>
@@ -52,18 +54,19 @@
                 <weight>1</weight>
               </li>
           </possibleEvolutionPaths>
-        </li>
+        </li>-->
 
 
 
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
+        <!--<li Class="RT_Core.HediffGiver_AfterPeriod">-->
           <!--<maxReroll>5</maxReroll>-->
-          <chance>1</chance>
+          <!--<chance>1</chance>
           <yearsInterval>1</yearsInterval>
           <hediffsToPreventGrowth>
               <li>RT_StuntedGrowthBad</li>
               <li>RT_StuntedGrowthGood</li>
               <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_GrowthSuspenderHediff</li>
           </hediffsToPreventGrowth >
           <possibleEvolutionPaths>
               <li>
@@ -75,18 +78,19 @@
                 <weight>1</weight>
               </li>
           </possibleEvolutionPaths>
-        </li>
+        </li>-->
 
 
 
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
+        <!--<li Class="RT_Core.HediffGiver_AfterPeriod">-->
           <!--<maxReroll>5</maxReroll>-->
-          <chance>1</chance>
+          <!--<chance>1</chance>
           <yearsInterval>1</yearsInterval>
           <hediffsToPreventGrowth>
               <li>RT_StuntedGrowthBad</li>
               <li>RT_StuntedGrowthGood</li>
               <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_GrowthSuspenderHediff</li>
           </hediffsToPreventGrowth >
           <possibleEvolutionPaths>
               <li>
@@ -98,18 +102,19 @@
                 <weight>1</weight>
               </li>
           </possibleEvolutionPaths>
-        </li>
+        </li>-->
 
 
 
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
+        <!--<li Class="RT_Core.HediffGiver_AfterPeriod">-->
           <!--<maxReroll>5</maxReroll>-->
-          <chance>1</chance>
+          <!--<chance>1</chance>
           <yearsInterval>1</yearsInterval>
           <hediffsToPreventGrowth>
               <li>RT_StuntedGrowthBad</li>
               <li>RT_StuntedGrowthGood</li>
               <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_GrowthSuspenderHediff</li>
           </hediffsToPreventGrowth >
           <possibleEvolutionPaths>
               <li>
@@ -121,7 +126,7 @@
                 <weight>1</weight>
               </li>
           </possibleEvolutionPaths>
-        </li>
+        </li>-->
 
     <!--<li Class="RT_Core.HediffGiver_AfterPeriod">
       <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
@@ -163,7 +168,47 @@
       </partsToAffect>
     </li>-->
 
-  </hediffGivers>
-</HediffGiverSetDef>
+    <!--<li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_ThetaState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_MochtroidState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_MegaroidState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_DarkTallonState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_ForsakenState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>-->
+
+  <!--</hediffGivers>
+</HediffGiverSetDef>-->
 
 </Defs>

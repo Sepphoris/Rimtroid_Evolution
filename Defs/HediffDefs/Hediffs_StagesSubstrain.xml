@@ -133,27 +133,6 @@ to be made to allow hediff effects from other mods.
       </li>
     </stages>
     <comps>
-      <li Class="RandomMetamorphosis.HediffCompProperties">
-	    	<stuntedHediffDef>RT_GrowthSuspenderHediff</stuntedHediffDef>
-				<yearsUntilReroll>10</yearsUntilReroll>
-				<unlimitedRerolls>false</unlimitedRerolls>
-				<maxRerolls>5</maxRerolls>
-				<possibleEvolutionPaths>
-					<li>
-						<age>40</age>
-						<kind>RT_MetroidHunter</kind>
-						<weight>0.3</weight>
-					</li>
-					<li>
-						<age>40</Age>
-						<kind>RT_FissionMetroid</kind>
-						<weight>0.1</weight>
-					</li>
-				</possibleEvolutionPaths>
-        <whitelists>
-					<li>RT_HunterStateWhitelist</li>
-				</whitelists>
-      </li>
     </comps>
   </HediffDef>
 

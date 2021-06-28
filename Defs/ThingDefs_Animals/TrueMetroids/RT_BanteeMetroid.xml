@@ -73,7 +73,6 @@
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				<timeInYears>14</timeInYears>
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
@@ -139,7 +138,7 @@
 			<baseHungerRate>0.35</baseHungerRate>
 			<hasGenders>false</hasGenders>
 			<hediffGiverSets>
-				<li>RT_Rimtroid_EvolutionGrowth</li>
+				<li>RT_EvoGrowth_Bantee</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
