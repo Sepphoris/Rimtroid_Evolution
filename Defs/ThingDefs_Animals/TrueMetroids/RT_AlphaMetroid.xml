@@ -108,7 +108,7 @@
 					</li>
 				</abilities>
 			</li>
-			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_AlphaBomb">
 				<spawnMax>3</spawnMax>

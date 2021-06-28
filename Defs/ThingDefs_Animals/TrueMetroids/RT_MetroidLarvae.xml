@@ -71,7 +71,7 @@
 				<canCrossWater>true</canCrossWater>
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
-			<li Class="RT_Rimtroid.CompProperties_EvolutionTime"> <!--needed so metroids recieve hediff upon spawning-->
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage"> <!--needed so metroids recieve hediff upon spawning-->
 				<!--<timeInYears>80</timeInYears>-->
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">

@@ -125,8 +125,7 @@
 			  </li> -->
 				</abilities>
 			</li>
-			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				<timeInYears>900</timeInYears>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
 			</li>
 		</comps>
 

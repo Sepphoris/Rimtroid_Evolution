@@ -120,8 +120,7 @@
 				<resourceAmount>30</resourceAmount>
 				<customResourceString>RT_BioResinDesc</customResourceString>
 			</li>
-			<li Class="RT_Rimtroid.CompProperties_EvolutionTime">
-				<timeInYears>450</timeInYears>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
