@@ -26,7 +26,7 @@
                   </partsToAffect>
                     <weight>1</weight> <!--Weight is relative; a weight of 0.3 vs 0.1 means that 0.3 is 3x more likely to be chosen-->
 								<hediffWhiteList> <!--Whitelist that tells what hediffs can pass-->
-									<li>RT_LarvaeWhitelist</li>
+									<li>RT_BanteeToLarvaeWhitelist</li>
 								</hediffWhiteList>                
                 </li>
             </possibleEvolutionPaths>
@@ -57,7 +57,7 @@
                   </partsToAffect>
                     <weight>1</weight>
 								<hediffWhiteList>
-									<li>RT_AlphaWhitelist</li>
+									<li>RT_LarvaeToAlphaWhitelist</li>
 								</hediffWhiteList>                
                 </li>
             </possibleEvolutionPaths>

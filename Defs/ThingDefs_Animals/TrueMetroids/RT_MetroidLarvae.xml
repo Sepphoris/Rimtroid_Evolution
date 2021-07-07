@@ -72,7 +72,7 @@
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionStage"> <!--needed so metroids recieve hediff upon spawning-->
-				<!--<timeInYears>80</timeInYears>-->
+				<spawnStage>RT_LarvaeState</spawnStage>
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
