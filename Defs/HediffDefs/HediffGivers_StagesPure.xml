@@ -1,202 +1,204 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
 
 	<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Bantee</defName>
-    <hediffGivers>
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
-            <!--<maxReroll>1</maxReroll>--> <!-- determines how many times the chance field can fail before it's not attempted anymore. Leave out for infinite times-->
-            <chance>1</chance> <!-- the chance that evolution happens. 1=100%. If this fails, it will try again based on the number withing <yearsInterval>-->
-            <yearsInterval>1</yearsInterval> <!--how many years until the code tries for an evolution again. Can have a year range as well-->
-            <hediffsToPreventGrowth> <!--if any of the hediffs below are present, it will not evolve.-->
-              <li>RT_StuntedGrowthBad</li>
-              <li>RT_StuntedGrowthNeutral</li>
-              <li>RT_StuntedGrowthGood</li>
-              <li>RT_GrowthSuspenderHediff</li>
-            </hediffsToPreventGrowth >
-            <possibleEvolutionPaths> <!--What the metroid can turn into.-->
-                <li>
-                  <requiredAge>14</requiredAge>
-                  <hediff>RT_LarvaeState</hediff>
-                  <partsToAffect>
-                    <li>RT_Mitosis</li>
-                  </partsToAffect>
-                    <weight>1</weight> <!--Weight is relative; a weight of 0.3 vs 0.1 means that 0.3 is 3x more likely to be chosen-->
-								<hediffWhiteList> <!--Whitelist that tells what hediffs can pass-->
-									<li>RT_BanteeToLarvaeWhitelist</li>
-								</hediffWhiteList>                
-                </li>
-            </possibleEvolutionPaths>
-        </li>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Bantee</defName>
+		<hediffGivers>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+				<!--<maxReroll>1</maxReroll>--><!-- determines how many times the chance field can fail before it's not attempted anymore. Leave out for infinite times-->
+				<chance>1</chance><!-- the chance that evolution happens. 1=100%. If this fails, it will try again based on the number withing <yearsInterval>-->
+				<yearsInterval>1</yearsInterval><!--how many years until the code tries for an evolution again. Can have a year range as well-->
+				<hediffsToPreventGrowth><!--if any of the hediffs below are present, it will not evolve.-->
+					<li>RT_StuntedGrowthBad</li>
+					<li>RT_StuntedGrowthNeutral</li>
+					<li>RT_StuntedGrowthGood</li>
+					<li>RT_GrowthSuspenderHediff</li>
+				</hediffsToPreventGrowth>
+				<possibleEvolutionPaths><!--What the metroid can turn into.-->
+					<li>
+						<requiredAge>14</requiredAge>
+						<hediff>RT_LarvaeState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>1</weight><!--Weight is relative; a weight of 0.3 vs 0.1 means that 0.3 is 3x more likely to be chosen-->
+						<hediffWhiteList><!--Whitelist that tells what hediffs can pass-->
+							<li>RT_BanteeToLarvaeWhitelist</li>
+						</hediffWhiteList>
+					</li>
+				</possibleEvolutionPaths>
+			</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Larvae</defName>
-    <hediffGivers>
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
-            <!--<maxReroll>1</maxReroll>-->
-            <chance>0.9</chance>
-            <yearsInterval>1</yearsInterval>
-            <hediffsToPreventGrowth>
-              <li>RT_StuntedGrowthBad</li>
-              <li>RT_StuntedGrowthNeutral</li>
-              <li>RT_StuntedGrowthGood</li>
-              <li>RT_GrowthSuspenderHediff</li>
-            </hediffsToPreventGrowth >
-            <possibleEvolutionPaths>
-                <li>
-                  <requiredAge>80</requiredAge>
-                  <hediff>RT_AlphaState</hediff>
-                  <partsToAffect>
-                    <li>RT_Mitosis</li>
-                  </partsToAffect>
-                    <weight>1</weight>
-								<hediffWhiteList>
-									<li>RT_LarvaeToAlphaWhitelist</li>
-								</hediffWhiteList>                
-                </li>
-            </possibleEvolutionPaths>
-        </li>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Larvae</defName>
+		<hediffGivers>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+				<!--<maxReroll>1</maxReroll>-->
+				<chance>0.9</chance>
+				<yearsInterval>1</yearsInterval>
+				<hediffsToPreventGrowth>
+					<li>RT_StuntedGrowthBad</li>
+					<li>RT_StuntedGrowthNeutral</li>
+					<li>RT_StuntedGrowthGood</li>
+					<li>RT_GrowthSuspenderHediff</li>
+				</hediffsToPreventGrowth>
+				<possibleEvolutionPaths>
+					<li>
+						<requiredAge>80</requiredAge>
+						<hediff>RT_AlphaState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>1</weight>
+						<hediffWhiteList>
+							<li>RT_LarvaeToAlphaWhitelist</li>
+						</hediffWhiteList>
+						<pawnKindDefToConvert>RT_AlphaMetroid</pawnKindDefToConvert>
+						<ticksToConvert>60~120</ticksToConvert>
+					</li>
+				</possibleEvolutionPaths>
+			</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Alpha</defName>
-    <hediffGivers>
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
-            <!--<maxReroll>1</maxReroll>-->
-            <chance>0.9</chance>
-            <yearsInterval>1~2</yearsInterval>
-            <hediffsToPreventGrowth>
-              <li>RT_StuntedGrowthBad</li>
-              <li>RT_StuntedGrowthNeutral</li>
-              <li>RT_StuntedGrowthGood</li>
-            <li>RT_GrowthSuspenderHediff</li>
-            </hediffsToPreventGrowth >
-            <possibleEvolutionPaths>
-                <li>
-                  <requiredAge>200</requiredAge>
-                  <hediff>RT_GammaState</hediff>
-                  <partsToAffect>
-                    <li>RT_Mitosis</li>
-                  </partsToAffect>
-                    <weight>1</weight>
-								<hediffWhiteList>
-									<li>RT_GammaWhitelist</li>
-								</hediffWhiteList>                
-                </li>
-            </possibleEvolutionPaths>
-        </li>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Alpha</defName>
+		<hediffGivers>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+				<!--<maxReroll>1</maxReroll>-->
+				<chance>0.9</chance>
+				<yearsInterval>1~2</yearsInterval>
+				<hediffsToPreventGrowth>
+					<li>RT_StuntedGrowthBad</li>
+					<li>RT_StuntedGrowthNeutral</li>
+					<li>RT_StuntedGrowthGood</li>
+					<li>RT_GrowthSuspenderHediff</li>
+				</hediffsToPreventGrowth>
+				<possibleEvolutionPaths>
+					<li>
+						<requiredAge>200</requiredAge>
+						<hediff>RT_GammaState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>1</weight>
+						<hediffWhiteList>
+							<li>RT_GammaWhitelist</li>
+						</hediffWhiteList>
+</li>
+				</possibleEvolutionPaths>
+</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Gamma</defName>
-    <hediffGivers>
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
-            <!--<maxReroll>1</maxReroll>-->
-            <chance>0.9</chance>
-            <yearsInterval>1~3</yearsInterval>
-            <hediffsToPreventGrowth>
-              <li>RT_StuntedGrowthBad</li>
-              <li>RT_StuntedGrowthNeutral</li>
-              <li>RT_StuntedGrowthGood</li>
-            <li>RT_GrowthSuspenderHediff</li>
-            </hediffsToPreventGrowth >
-            <possibleEvolutionPaths>
-                <li>
-                  <requiredAge>500</requiredAge>
-                  <hediff>RT_ZetaState</hediff>
-                  <partsToAffect>
-                    <li>RT_Mitosis</li>
-                  </partsToAffect>
-                    <weight>1</weight>
-								<hediffWhiteList>
-									<li>RT_ZetaWhitelist</li>
-								</hediffWhiteList>                
-                </li>
-            </possibleEvolutionPaths>
-        </li>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Gamma</defName>
+		<hediffGivers>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+				<!--<maxReroll>1</maxReroll>-->
+				<chance>0.9</chance>
+				<yearsInterval>1~3</yearsInterval>
+				<hediffsToPreventGrowth>
+					<li>RT_StuntedGrowthBad</li>
+					<li>RT_StuntedGrowthNeutral</li>
+					<li>RT_StuntedGrowthGood</li>
+					<li>RT_GrowthSuspenderHediff</li>
+				</hediffsToPreventGrowth>
+				<possibleEvolutionPaths>
+					<li>
+						<requiredAge>500</requiredAge>
+						<hediff>RT_ZetaState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>1</weight>
+						<hediffWhiteList>
+							<li>RT_ZetaWhitelist</li>
+						</hediffWhiteList>
+</li>
+				</possibleEvolutionPaths>
+</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Zeta</defName>
-    <hediffGivers>
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
-            <!--<maxReroll>1</maxReroll>-->
-            <chance>0.9</chance>
-            <yearsInterval>1~4</yearsInterval>
-            <hediffsToPreventGrowth>
-              <li>RT_StuntedGrowthBad</li>
-              <li>RT_StuntedGrowthNeutral</li>
-              <li>RT_StuntedGrowthGood</li>
-            <li>RT_GrowthSuspenderHediff</li>
-            </hediffsToPreventGrowth >
-            <possibleEvolutionPaths>
-                <li>
-                  <requiredAge>900</requiredAge>
-                  <hediff>RT_OmegaState</hediff>
-                  <partsToAffect>
-                    <li>RT_Mitosis</li>
-                  </partsToAffect>
-                    <weight>1</weight>
-								<hediffWhiteList>
-									<li>RT_OmegaWhitelist</li>
-								</hediffWhiteList>                
-                </li>
-            </possibleEvolutionPaths>
-        </li>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Zeta</defName>
+		<hediffGivers>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+				<!--<maxReroll>1</maxReroll>-->
+				<chance>0.9</chance>
+				<yearsInterval>1~4</yearsInterval>
+				<hediffsToPreventGrowth>
+					<li>RT_StuntedGrowthBad</li>
+					<li>RT_StuntedGrowthNeutral</li>
+					<li>RT_StuntedGrowthGood</li>
+					<li>RT_GrowthSuspenderHediff</li>
+				</hediffsToPreventGrowth>
+				<possibleEvolutionPaths>
+					<li>
+						<requiredAge>900</requiredAge>
+						<hediff>RT_OmegaState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>1</weight>
+						<hediffWhiteList>
+							<li>RT_OmegaWhitelist</li>
+						</hediffWhiteList>
+</li>
+				</possibleEvolutionPaths>
+</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Omega</defName>
-    <hediffGivers>
-        <li Class="RT_Core.HediffGiver_AfterPeriod">
-            <!--<maxReroll>1</maxReroll>-->
-            <chance>0.9</chance>
-            <yearsInterval>1~5</yearsInterval>
-            <hediffsToPreventGrowth>
-              <li>RT_StuntedGrowthBad</li>
-              <li>RT_StuntedGrowthNeutral</li>
-              <li>RT_StuntedGrowthGood</li>
-            <li>RT_GrowthSuspenderHediff</li>
-            </hediffsToPreventGrowth >
-            <possibleEvolutionPaths>
-                <li>
-                  <requiredAge>5000</requiredAge>
-                  <hediff>RT_QueenState</hediff>
-                  <partsToAffect>
-                    <li>RT_Mitosis</li>
-                  </partsToAffect>
-                    <weight>1</weight>
-								<hediffWhiteList>
-									<li>RT_QueenWhitelist</li>
-								</hediffWhiteList>                
-                </li>
-            </possibleEvolutionPaths>
-        </li>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Omega</defName>
+		<hediffGivers>
+			<li Class="RT_Core.HediffGiver_AfterPeriod">
+				<!--<maxReroll>1</maxReroll>-->
+				<chance>0.9</chance>
+				<yearsInterval>1~5</yearsInterval>
+				<hediffsToPreventGrowth>
+					<li>RT_StuntedGrowthBad</li>
+					<li>RT_StuntedGrowthNeutral</li>
+					<li>RT_StuntedGrowthGood</li>
+					<li>RT_GrowthSuspenderHediff</li>
+				</hediffsToPreventGrowth>
+				<possibleEvolutionPaths>
+					<li>
+						<requiredAge>5000</requiredAge>
+						<hediff>RT_QueenState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>1</weight>
+						<hediffWhiteList>
+							<li>RT_QueenWhitelist</li>
+						</hediffWhiteList>
+</li>
+				</possibleEvolutionPaths>
+</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
 
-  <HediffGiverSetDef>
-    <defName>RT_EvoGrowth_Queen</defName>
+	<HediffGiverSetDef>
+		<defName>RT_EvoGrowth_Queen</defName>
 	</HediffGiverSetDef>
 
 
 
-<!--Old code; only here in case of fatal errors from new code.
+	<!--Old code; only here in case of fatal errors from new code.
 
 	<HediffGiverSetDef>
 		<defName>RT_Rimtroid_EvolutionGrowth</defName>
