@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =============== Aeion items =============== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RT_AeionExtract</defName>
+    <label>aeion extract</label>
+    <description>A sealed canister, filled with a unique substance that originates from a distant asteroid belt. Studies have shown it is one of the only materials that can freely bypass the metroid immune system, making it essential in items that modify their genetic structure. Otherwise, it has next to no uses.\n\nCan be bought from traders, and sometimes given as rewards for quests.</description>
+    <graphicData>
+      <texPath>Things/Resource/RT_AeionExtract</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <uiIconScale>1.5</uiIconScale>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <minRewardCount>4</minRewardCount>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+  </ThingDef>
+
+	<!-- =============== Protus Cell =============== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RT_ProtusCell</defName>
+    <label>protus cell</label>
+    <description>A sealed canister, filled with a green - and slightly glowing - liquid substance. This curious material has little uses in general, but is a vital component in metroid handling, most often used for their sustainment. This, in conjuction with it only being acquirable through processing bodies via specialized machinery, has lead many to believe it is a sort of liquid "bioenergy".\n
+Despite being hermetically sealed, the green liquid within Protus Cells decays within 3 days of being produced, leaving no traces of it behind. Thus it is advised to produce these only when required.</description>
+    <graphicData>
+      <texPath>Things/Resource/RT_ProtusCell</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <uiIconScale>1.5</uiIconScale>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <MarketValue>20</MarketValue>
+      <Mass>0.2</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+		<costList>
+			<Steel>4</Steel>
+			<RT_ProtusCell>3</RT_ProtusCell>
+		</costList>
+    <!--<comps>
+      <li Class="RT_ProtusDecay">
+        <daysUntilDecay>1.0</daysUntilDecay>
+      </li>
+    </comps>-->
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

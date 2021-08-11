@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RT_Bioresin</defName>
+		<label>Bioresin</label>
+		<description>Thick, sticky material that is naturally secreted by most metroid stages. Bioresin is mostly comprised of bio-organic material, with just enough silk proteins to make it adhesive. While generally seen as useless on it's own, large amount of it can be refined into an exotic, silky-smooth cloth material. Those brave enough to own metroids often harvest metroid resin, and then refine it for profit.\n\nA large amount of the resin is wasted during refining, since only the miniscule amounts of silk present is used in the process. This makes a large income of the resin to be mandatory for any continuous profit.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RT_Biosilk</ThingDef>
+		</descriptionHyperlinks>
+    <graphicData>
+			<texPath>Things/AnimalProduct/RT_BioResin</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Mass>0.02</Mass>
+			<MarketValue>0.6</MarketValue>
+		</statBases>
+		<thingCategories>
+      <li>ResourcesRaw</li>
+		</thingCategories>
+    <stackLimit>300</stackLimit>
+    <smallVolume>true</smallVolume>
+	</ThingDef>
+</Defs>

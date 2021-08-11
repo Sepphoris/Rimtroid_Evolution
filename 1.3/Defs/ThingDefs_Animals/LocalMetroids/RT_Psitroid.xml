@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_Psitroid</defName>
+		<label>Psitroid</label>
+		<description>A Psitroid. Should be fun to work on, and hopefully fun to use.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_Psitroid</defName>
+		<label>psitroid</label>
+		<race>RT_Psitroid</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>4</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>psitroid</label>
+			<labelPlural>psitroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/LocalMetroids/Psitroid/RT_Psitroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/LocalMetroids/Psitroid/RT_Psitroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

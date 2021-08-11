@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+    <BodyDef>
+        <defName>RT_OmegaBody</defName>
+        <label>omega metroid</label>
+        <corePart>
+            <def>RT_OmegaMainBody</def>
+            <height>Middle</height>
+            <depth>Outside</depth>
+            <parts>
+                <!-- Head, and the corresponding parts -->
+                <!--Head is separate from the eyes and mouth parts, since it is conceptual-->
+                <li>
+                    <def>RT_Head</def>
+                    <customLabel>head</customLabel>
+                    <coverage>0</coverage>
+                    <groups>
+                        <li>UpperHead</li>
+                        <li>FullHead</li>
+                        <li>HeadAttackTool</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>Skull</def>
+                            <coverage>0.15</coverage>
+                            <depth>Inside</depth>
+                            <groups>
+                                <li>UpperHead</li>
+                                <li>FullHead</li>
+                            </groups>
+                        </li>
+                        <li>
+                            <def>AnimalJaw</def>
+                            <customLabel>mouth</customLabel>
+                            <coverage>0.15</coverage>
+                            <groups>
+                                <li>Teeth</li>
+                                <li>UpperHead</li>
+                                <li>FullHead</li>
+                            </groups>
+                        </li>
+                    </parts>
+                </li>
+                    <!-- Left eyes -->
+                <li>
+                    <def>Eye</def>
+                    <customLabel>left center eye</customLabel>
+                    <coverage>0.01</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>left second eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>left third eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>left fourth eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>left fifth eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <!-- Right eyes -->
+                <li>
+                    <def>Eye</def>
+                    <customLabel>right center eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>right second eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>right third eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>right fourth eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>right fifth eye</customLabel>
+                    <coverage>0.005</coverage>
+                </li>
+                <!-- Legs -->
+                <li>
+                    <def>Leg</def>
+                    <customLabel>left leg</customLabel>
+                    <coverage>0.05</coverage>
+                    <height>Bottom</height>
+                </li>
+                <li>
+                    <def>Leg</def>
+                    <customLabel>right leg</customLabel>
+                    <coverage>0.05</coverage>
+                    <height>Bottom</height>
+                </li>
+				<!-- Arms -->
+				<li>
+					<def>Arm</def>
+					<customLabel>left arm</customLabel>
+					<coverage>0.05</coverage>
+					<groups>
+						<li>HeadClaw</li>
+					</groups>
+					<height>Middle</height>
+				</li>
+				<li>
+					<def>Arm</def>
+					<customLabel>right arm</customLabel>
+					<coverage>0.05</coverage>
+					<groups>
+						<li>HeadClaw</li>
+					</groups>
+					<height>Middle</height>
+				</li>
+        <!-- Cell Structure -->
+        <li>
+          <def>RT_Membrane</def>
+          <customLabel>membrane</customLabel>
+          <coverage>0.03</coverage>
+          <groups>
+            <li>Torso</li>
+          </groups>
+          <parts>
+            <li>
+              <def>RT_Protoplasm</def>
+              <coverage>0.04</coverage>
+              <depth>Inside</depth>
+              <groups>
+								<li>Torso</li>
+              </groups>
+            </li>
+            <li>
+              <def>RT_Nucleus</def>
+              <coverage>0.005</coverage>
+              <depth>Inside</depth>
+              <groups>
+						    <li>Torso</li>
+              </groups>
+            </li>
+						<li>
+              <def>Heart</def>
+							<customLabel>nucleus core</customLabel>
+							<coverage>0.001</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>Torso</li>
+							</groups>
+						</li>
+            <li>
+              <def>RT_Mitosis</def>
+              <customLabel>Mitosis</customLabel>
+              <coverage>0.0000001</coverage>
+              <depth>Inside</depth>
+              <groups>
+								<li>Torso</li>
+              </groups>
+            </li>
+          </parts>
+        </li>
+        <!-- Misc Parts-->
+        <li>
+          <def>Shell</def>
+          <customLabel>exoskeleton</customLabel>
+          <coverage>0.30</coverage>
+          <groups>
+            <li>Torso</li>
+          </groups>
+        </li>
+				<li>
+          <def>Tail</def>
+          <customLabel>tail</customLabel>
+          <coverage>0.20</coverage>
+          <groups>
+						<li>Torso</li>
+						<li>Tail</li>							
+          </groups>
+					<height>Bottom</height>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+ 
+</Defs>

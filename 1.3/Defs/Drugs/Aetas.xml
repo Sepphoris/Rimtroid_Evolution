@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Aetas; a drug that accelerates the age of Metroids. Names comes from the latin word for 'epoch'-->
+	  <ThingDef ParentName="MakeableDrugPillBase">
+		<defName>RT_AgingDrug</defName>
+		<label>Aetas Serum</label>
+		<description>The Aetas Serum (ADR-13), like the Inertia drug, is a specially engineered formula designed to modify the Metroid genome. However, instead of stopping the metroids from maturing, it actually accelerates the process; metroids injected with this serum will undergo rapid cellular growth, undergoing changes that would otherwise take decades. however, the process is slow, and may take a couple days to thoroughly complete. \n\nLike all other metroid-specific drugs, this is essentially a poison to anything else; non-lethal, but it will incapacitate other organisms for a significant amount of time.</description>
+		<descriptionHyperlinks>
+      <HediffDef>RT_AcceleratedAgingOverview</HediffDef>
+			<HediffDef>RT_AeionicPoisoning</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Drugs/Aetas</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>350</WorkToMake>
+			<MarketValue>28</MarketValue>
+			<Mass>0.02</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+      <foodType>Processed</foodType>
+			<baseIngestTicks>300</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inject {0}</ingestCommandString>
+			<ingestReportString>Injecting {0}.</ingestReportString>
+			<chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+				<li Class="RT_Core.Ingestion_MultipleHediffs">
+					<hediffDef_BanteeMetroid>RT_AcceleratedAgingBantee</hediffDef_BanteeMetroid>
+          <hediffDef_MetroidLarvae>RT_AcceleratedAgingLarvae</hediffDef_MetroidLarvae>
+          <hediffDef_AlphaMetroid>RT_AcceleratedAgingAlpha</hediffDef_AlphaMetroid>
+          <hediffDef_GammaMetroid>RT_AcceleratedAgingGamma</hediffDef_GammaMetroid>
+          <hediffDef_ZetaMetroid>RT_AcceleratedAgingZeta</hediffDef_ZetaMetroid>
+          <hediffDef_OmegaMetroid>RT_AcceleratedAging</hediffDef_OmegaMetroid>
+          <hediffDef_QueenMetroid>RT_AcceleratedAging</hediffDef_QueenMetroid>
+					<hediffDef_LivingPawn>RT_AeionicPoisoning</hediffDef_LivingPawn>
+					<severity>0.8</severity>
+				</li>
+      </outcomeDoers>
+		</ingestible>
+		<costList>
+			<Steel>4</Steel>
+			<RT_ProtusCell>1</RT_ProtusCell>
+		</costList>
+		<recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <workAmount>350</workAmount>
+			<productCount>1</productCount>
+			<targetCountAdjustment>2</targetCountAdjustment>
+			<bulkRecipeCount>4</bulkRecipeCount>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_CookMeal</soundWorking>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Intellectual>8</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>40</listOrder>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+
+  <!--Notes on Aetas:
+  Name is not final. The formula on figuring out aging is a bit complicated.
+  First comes how long the hediff will be present. The older the metroid, the longer the hediff.
+  By default a bantee takes 1.8 days. This increases by .1 every stage.
+  Second comes the age amount. This will 20 or 25% of the age needed for the next stage
+  Then, you need to subtract the previous stage age requirement so the percentage is accurate.
+  Finally this needs to be calcuated so that each tick adds up to the desired age increase
+  Once genetic equipment is added, this will be done much faster, from 16~24 hours.
+
+  For 5 years, (3,600,000 * 5) / <disappearsAfterTicks> gives you the <ticks> value you need.
+  1 day = 60,000 ticks
+  1 year = 	3,600,000	
+  
+  Age durations are as follows:
+  Bantee: 1.8 days for 25% increase (3.6 years added; evolves 14 years later)
+  Larvae: 2 days for 25% increase (16.5 years added; evolves 66 years later)
+  Alpha: 2.2 days for 25% increase (33.5 years added; evolves 134 years)
+  Gamma: 2.4 days for 20% increase (50 years added; evolves 250 years later)
+  Zeta: 2.6 days for 20% increase (90 years added; evolved 450 years later)
+  Omega: 2.8 days for an additional 200 years
+  Queen: 3 days for an additional 550 years
+  
+  So the formula is (Bantee for example):
+  
+  60,000 (ticks per day) x 1.8 (hediff day duration) = 108000 (total ticks hediff lasts; goes in <disappearsAfterTicks>)
+  3,600,000 (ticks in year) x 3.6 (years added) = 12,960,000 (total given ticks)
+  12,960,000 (total given ticks) / 108000 (total ticks hediff lasts) = 120 (final tick amount)
+  So in the end, the <ticks> tag needs to have 120
+
+  Round values up or down; for example, Alpha <ticks> tag ends up at 913.63636363; that is pushed up to 914-->
+</Defs>

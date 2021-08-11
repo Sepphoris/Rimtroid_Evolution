@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--===============Gel Thought Defs===============-->
+
+	<ThoughtDef>
+		<defName>RT_AteRawGel</defName>
+    <showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate raw metroid gel</label>
+				<description>I ate some disgusting metroid innards. Not only was it raw, but I swear it was moving!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+  <ThoughtDef>
+		<defName>RT_AteGelMeal</defName>
+    <showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>meal included metroid gel</label>
+				<description>I ate a meal with metroid gel. The taste and texture wasn't all that great.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--Pawn thoughts when any metroid serum is taken-->
+	<ThoughtDeF>
+		<defName>RT_AeionicThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>RT_AeionicPoisoning</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Aeionic poisoning</label>
+				<description>My heart feels like it's pumping acid, and every vein in my body feels like it's on fire. Make it stop...</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDeF>
+  
+</Defs>

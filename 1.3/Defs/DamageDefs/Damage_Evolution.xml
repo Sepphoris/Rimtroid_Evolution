@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--===============Ability defs===============-->
+
+  <!--Zeta Acid Spit-->
+	<DamageDef>
+		<defName>RT_AcidSpit</defName>
+		<label>acid spit</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been corroded to death.</deathMessage>
+		<hediff>RT_AcidBurn</hediff>
+		<additionalHediffs>
+			<li>
+				<hediff>RT_AcidBuildup</hediff>
+				<severityPerDamageDealt>0.01</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+		<isRanged>true</isRanged>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+    <defaultArmorPenetration>0.5</defaultArmorPenetration>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>RT_SecondaryAcidBurn</defName>
+		<label>acid burn</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been corroded to death.</deathMessage>
+		<hediff>RT_AcidBurn</hediff>
+
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
+    <defaultArmorPenetration>0.5</defaultArmorPenetration>
+	</DamageDef>
+
+  <!--===============Life Draining; applies the damage, alongside the hediff===============-->
+	
+    <DamageDef>
+        <defName>RT_Lifedrain</defName>
+        <label>life drain</label>
+            <hediff>Bite</hediff>
+
+        <additionalHediffs>
+            <li>
+                <hediff>RT_LifeDrainSickness</hediff>
+                <severityPerDamageDealt>0.02</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>true</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} was drained of life.</deathMessage>
+        <armorCategory>Heat</armorCategory>
+        <minDamageToFragment>15</minDamageToFragment>
+        <defaultDamage>10</defaultDamage>
+        <defaultArmorPenetration>0</defaultArmorPenetration>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    </DamageDef>
+	
+<!--===============Life Draining; same as above, but for Bantee===============-->
+
+    <DamageDef>
+        <defName>RT_LifedrainBantee</defName>
+        <label>life drain</label>
+            <hediff>Bite</hediff>
+
+        <additionalHediffs>
+            <li>
+                <hediff>RT_LifeDrainSickness</hediff>
+                <severityPerDamageDealt>0.02</severityPerDamageDealt>
+            </li>
+        </additionalHediffs>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>true</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} was drained of life.</deathMessage>
+        <armorCategory>Heat</armorCategory>
+        <minDamageToFragment>15</minDamageToFragment>
+        <defaultDamage>7</defaultDamage>
+        <defaultArmorPenetration>0</defaultArmorPenetration>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    </DamageDef>
+
+
+<!--===============Sedative Dart Damage def===============-->
+
+	<DamageDef>
+		<defName>RT_SedativeDamageDart</defName>
+		<label>puncture</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>false</externalViolence>
+		<deathMessage>{0} was given too many injections.</deathMessage>
+		<hediff>RT_SedativeBuildup</hediff>
+		<isRanged>true</isRanged>
+    <defaultDamage>3</defaultDamage>
+    <armorCategory>Sharp</armorCategory>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<!--<armorCategory>Cold</armorCategory> -->
+    <defaultArmorPenetration>0.9</defaultArmorPenetration>
+		<buildingDamageFactor>0.01</buildingDamageFactor>
+		<plantDamageFactor>0.01</plantDamageFactor>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<makesBlood>false</makesBlood>
+	</DamageDef>
+
+	
+<!--===============Misc damage defs===============-->
+
+	<DamageDef Name="Scratch">
+		<defName>RT_BanteeScratch</defName>
+		<label>scratch</label>
+		<workerClass>DamageWorker_Scratch</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been scratched to death.</deathMessage>
+		<defaultDamage>2</defaultDamage>
+		<hediff>Scratch</hediff>
+		<hediffSkin>Shredded</hediffSkin>
+		<hediffSolid>Crack</hediffSolid>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+	</DamageDef>
+</Defs>

@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--==============Genetic Defects Overview===============-->
+
+  <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_GeneticDefectsOverview</defName>
+    <label>Genetic Defects</label>
+    <labelNoun>genetic defects</labelNoun>
+		<descriptionHyperlinks>
+			<HediffDef>RT_AcceleratedDivision</HediffDef>
+			<HediffDef>RT_CellularDecay</HediffDef>
+			<HediffDef>RT_StuntedDefect</HediffDef>
+		</descriptionHyperlinks>
+    <description>Due to their origins as ancient bioweapons, metroids are quite suspectable to defects when they are tampered with. Only a few defects are possible, but every one of them can make a metroid sustantially harder to manage, severely impact their usability, and even result in death.</description>
+	</HediffDef>
+
+		<!--===============Stunted Metroid - natural defect===============-->
+
+  <HediffDef>
+    <defName>RT_StuntedDefect</defName>
+    <label>stunted</label>
+    <labelNoun>biologically stunted</labelNoun>
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+    <description>A genetic defect that has permanently "locked" the metroid in it's current stage. Can be removed through advanced genetic procedures.</description>
+		<initialSeverity>1</initialSeverity>
+    <stages>
+      <li>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		  </li>
+    </stages>
+</HediffDef>
+
+	<!--===============Cellular Decay===============-->
+
+  <HediffDef ParentName="ChronicDiseaseBase">
+    <defName>RT_CellularDecay</defName>
+    <label>cellular decay</label>
+    <labelNoun>decaying cells</labelNoun>
+    <description>A severe condition that is causing cells to die faster than they can be produced, ultimately resulting in the metroid literally dissolving itself. This can occur during most genetic modifications, and can (very rarely) appear in aging metroids as well. Metroids with this condition progressively lose the ability to function until eventual death.
+    \nDue to the metroid body structure, this is akin to a high form of cancer, and will progress throughout stages. Cellular decay can be slowed or temporarily stopped with rigorous treatment, but it is currently impossible to cure.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <initialSeverity>0.01</initialSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <chanceToCauseNoPain>1</chanceToCauseNoPain>
+    <tendable>true</tendable>
+    <removeOnQuestLodgers>true</removeOnQuestLodgers>
+    <!--First stages: immune system is constantly trying to work against the decay, reducing effectiveness with normal healing-->
+    <stages>
+      <li>
+        <label>first stage</label>
+        <naturalHealingFactor>-0.1</naturalHealingFactor>
+        <capMods>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.01</offset>
+				  </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.1</minSeverity>
+        <label>first stage</label>
+        <naturalHealingFactor>-0.2</naturalHealingFactor>
+        <capMods>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.02</offset>
+				  </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.25</minSeverity>
+        <label>first stage</label>
+        <naturalHealingFactor>-0.3</naturalHealingFactor>
+        <capMods>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.03</offset>
+				  </li>
+        </capMods>
+      </li>
+      <!--Second stages: immune system is starting to be affected; pain begins to be experienced, internal functions begin to be affected-->
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>second stage</label>
+        <naturalHealingFactor>-0.5</naturalHealingFactor>
+        <painOffset>0.1</painOffset>
+        <capMods>
+				  <li>
+					  <capacity>BloodFiltration</capacity>
+					  <offset>-0.1</offset>
+				  </li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>-0.1</offset>
+				</li>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.05</offset>
+				  </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.55</minSeverity>
+        <label>second stage</label>
+        <naturalHealingFactor>-0.6</naturalHealingFactor>
+        <painOffset>0.1</painOffset>
+        <capMods>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>-0.1</offset>
+				</li>
+				  <li>
+					  <capacity>BloodFiltration</capacity>
+					  <offset>-0.15</offset>
+				  </li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>-0.15</offset>
+				</li>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.1</offset>
+				  </li>
+        </capMods>
+      </li>
+      <!--Third stages: Decay is beginning to take a real toll.-->
+      <li>
+        <minSeverity>0.65</minSeverity>
+        <label>third stage</label>
+        <naturalHealingFactor>-0.8</naturalHealingFactor>
+        <painOffset>0.15</painOffset>
+        <capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.1</offset>
+				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>-0.2</offset>
+				</li>
+				  <li>
+					  <capacity>BloodFiltration</capacity>
+					  <offset>-0.25</offset>
+				  </li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>-0.25</offset>
+				</li>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.2</offset>
+				  </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.75</minSeverity>
+        <label>third stage</label>
+        <naturalHealingFactor>-0.9</naturalHealingFactor>
+        <painOffset>0.2</painOffset>
+        <capMods>
+				<li>
+					<capacity>Consciousness</capacity>
+					<offset>-0.2</offset>
+				</li>
+      	<li>
+					<capacity>Breathing</capacity>
+					<offset>-0.3</offset>
+				</li>
+      	<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>-0.35</offset>
+				  </li>
+				<li>
+					<capacity>BloodPumping</capacity>
+					<offset>-0.35</offset>
+				</li>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.25</offset>
+				  </li>
+        </capMods>
+      </li>
+      <!--Fourth stages: Final days. Metroid can no longer do much, and at this point it's just waiting to die.-->
+        <li>
+          <minSeverity>0.85</minSeverity>
+          <label>fourth stage</label>
+          <naturalHealingFactor>-1</naturalHealingFactor>
+         <painOffset>0.35</painOffset>
+         <capMods>
+		  		<li>
+		  			<capacity>Consciousness</capacity>
+		  			<offset>-0.3</offset>
+	  			</li>
+        	<li>
+	  				<capacity>Breathing</capacity>
+	  				<offset>-0.4</offset>
+	  			</li>
+        	<li>
+	  				<capacity>Eating</capacity>
+	  				<offset>-0.5</offset>
+	  			</li>
+		  		<li>
+		  			<capacity>BloodFiltration</capacity>
+	  				<offset>-0.45</offset>
+		  		</li>
+		  		<li>
+		  			<capacity>BloodPumping</capacity>
+		  			<offset>-0.45</offset>
+			  	</li>
+				  <li>
+					  <capacity>Metabolism</capacity>
+					  <offset>-0.3</offset>
+				  </li>
+				  <li>
+					  <capacity>Moving</capacity>
+					  <offset>-0.25</offset>
+				  </li>
+        </capMods>
+      </li>
+
+      <li>
+        <minSeverity>0.95</minSeverity>
+        <label>fourth stage</label>
+        <naturalHealingFactor>-5</naturalHealingFactor>
+        <painOffset>0.5</painOffset>
+        <capMods>
+				  <li>
+					  <capacity>Consciousness</capacity>
+					  <offset>-0.5</offset>
+				  </li>
+      	  <li>
+					  <capacity>Breathing</capacity>
+				  	<offset>-0.5</offset>
+			  	</li>
+        	<li>
+		  			<capacity>Eating</capacity>
+			  		<offset>-0.8</offset>
+		  		</li>
+		  		<li>
+		  			<capacity>BloodFiltration</capacity>
+		  			<offset>-0.5</offset>
+		  		  </li>
+		  		<li>
+		  			<capacity>BloodPumping</capacity>
+		  			<offset>-0.5</offset>
+		  		</li>
+			  	  <li>
+		  			  <capacity>Metabolism</capacity>
+			  		  <offset>-0.5</offset>
+		  		  </li>
+		  		  <li>
+		  			  <capacity>Moving</capacity>
+		  			  <offset>-0.5</offset>
+		  		  </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>48</baseTendDurationHours>
+        <severityPerDayTended>0</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_GrowthMode">
+        <severityPerDayGrowing>0.003</severityPerDayGrowing>
+        <severityPerDayRemission>0</severityPerDayRemission>
+        <severityPerDayGrowingRandomFactor>0.5~1.5</severityPerDayGrowingRandomFactor>
+        <severityPerDayRemissionRandomFactor>0~0</severityPerDayRemissionRandomFactor>
+      </li>
+    </comps>
+  </HediffDef>
+
+    <!--===============Accelerated Division===============-->
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>RT_AcceleratedDivision</defName>
+    <label>accelerated division</label>
+    <description>A genetic hiccup that causes mitosis cycles to occur more frequently than usual. This condition is seen as a double-edged sword; metroids age roughly twice as fast and have an accelerated healing factor, but the amount of energy they burn per day is drastically higher than normal, making them even more demanding on food sources.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <naturalHealingFactor>2</naturalHealingFactor>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

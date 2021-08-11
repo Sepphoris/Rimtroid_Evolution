@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef Name="RT_SurgeryMetroid" Abstract="True" >
+		<!--<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>-->
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+    <workAmount>800</workAmount>
+    <targetsBodyPart>false</targetsBodyPart>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+    <anesthetize>true</anesthetize>
+	</RecipeDef>
+
+		<!-- =============== Growth Suspender =============== -->
+
+	  <RecipeDef>
+    <defName>RT_GrowthSuspenderRecipe</defName>
+    <label>make Growth Suspender</label>
+    <description>Use Protus Cells to create a Metroid Growth Suspender</description>
+    <jobString>Making metroid growth suspender.</jobString>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <workSkill>Intellectual</workSkill>		
+    <workAmount>1800</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Corpses</li>
+      </categories>
+      <disallowedCategories>
+        <li>CorpsesMechanoid</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+		<recipeUsers Inherit="false">
+			<li>DrugLab</li>
+		</recipeUsers>
+    <products>
+      <RT_ProtusCell>3</RT_ProtusCell>
+    </products>
+		<researchPrerequisite>RT_ProtusManipulation</researchPrerequisite>
+  </RecipeDef>
+
+	<RecipeDef ParentName="RT_SurgeryMetroid">
+		<defName>RT_InstallGrowthSuspender</defName>
+		<label>Force growth suspension</label>
+		<description>Administer an injection that locks a metroid into it's current stage.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Forcing growth suspension.</jobString>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RT_GrowthSuspender</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RT_GrowthSuspender</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<!--<appliedOnFixedBodyParts>
+			<li>RT_Membrane</li>
+		</appliedOnFixedBodyParts>-->
+		<addsHediff>RT_GrowthSuspenderHediff</addsHediff>
+<recipeUsers>
+      <li>RT_BanteeMetroid</li>
+      <li>RT_MetroidLarvae</li>
+			<li>RT_AlphaMetroid</li>
+      <li>RT_GammaMetroid</li>
+      <li>RT_ZetaMetroid</li>
+      <li>RT_OmegaMetroid</li>
+    </recipeUsers>
+	</RecipeDef>
+
+	<!-- =============== Cryoadapter =============== -->
+
+	<RecipeDef ParentName="RT_SurgeryMetroid">
+		<defName>RT_InstallCryoadapter</defName>
+		<label>Force cryoadaption</label>
+		<description>Administer an injection that forces adaption to colder temperatures.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Forcing endothermic adaption.</jobString>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RT_Cryoadapter</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RT_Cryoadapter</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<!--<appliedOnFixedBodyParts>
+			<li>RT_Membrane</li>
+		</appliedOnFixedBodyParts>-->
+		<addsHediff>RT_CryoadapterHediff</addsHediff>
+<recipeUsers>
+      <li>RT_BanteeMetroid</li>
+      <li>RT_MetroidLarvae</li>
+    </recipeUsers>
+	</RecipeDef>
+
+	<!-- =============== Nutrient Regulator =============== -->
+
+	<RecipeDef ParentName="RT_SurgeryMetroid">
+		<defName>RT_InstallNutrientRegulator</defName>
+		<label>Force nutrient regulation</label>
+		<description>Administer an injection that allows better nutrient efficiency.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Forcing nutrient regulation.</jobString>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RT_NutrientRegulator</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RT_NutrientRegulator</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<!--<appliedOnFixedBodyParts>
+			<li>RT_Membrane</li>
+		</appliedOnFixedBodyParts>-->
+		<addsHediff>RT_NutrientRegulatorHediff</addsHediff>
+<recipeUsers>
+      <li>RT_BanteeMetroid</li>
+      <li>RT_MetroidLarvae</li>
+    </recipeUsers>
+	</RecipeDef>
+
+	<!-- =============== Systemic Fortification =============== -->
+
+	<RecipeDef ParentName="RT_SurgeryMetroid">
+		<defName>RT_InstallImmunityAccelerator</defName>
+		<label>Force systemic fortification</label>
+		<description>Administer an injection that strengthens the metroid body.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Forcing systemic fortification.</jobString>
+		<skillRequirements>
+			<Medicine>8</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RT_ImmunityAccelerator</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RT_ImmunityAccelerator</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<!--<appliedOnFixedBodyParts>
+			<li>RT_Membrane</li>
+		</appliedOnFixedBodyParts>-->
+		<addsHediff>RT_ImmunityAcceleratorHediff</addsHediff>
+<recipeUsers>
+      <li>RT_BanteeMetroid</li>
+      <li>RT_MetroidLarvae</li>
+    </recipeUsers>
+	</RecipeDef>
+
+</Defs>

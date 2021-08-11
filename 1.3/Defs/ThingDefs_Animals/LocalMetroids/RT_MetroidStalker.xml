@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_MetroidStalker</defName>
+		<label>Metroid Stalker</label>
+		<description>A Metroid Stalker. May be renamed to sound less cliche and boring.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_MetroidStalker</defName>
+		<label>metroid stalker</label>
+		<race>RT_MetroidStalker</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>4</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>metroid stalker</label>
+			<labelPlural>metroid stalker</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/LocalMetroids/MetroidStalker/RT_MetroidStalker</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/LocalMetroids/MetroidStalker/RT_Dessicated_MetroidStalker</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

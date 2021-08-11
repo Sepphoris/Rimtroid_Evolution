@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<ToolCapacityDef>
+		<defName>RT_Lifedrain</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+
+	<ToolCapacityDef>
+		<defName>RT_LifedrainBantee</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+	
+	<ToolCapacityDef>
+		<defName>RT_LifedrainLarvae</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+
+	<ToolCapacityDef>
+		<defName>RT_LifedrainAlpha</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+	
+	<ToolCapacityDef>
+		<defName>RT_LifedrainGamma</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+
+	<ToolCapacityDef>
+		<defName>RT_LifedrainZeta</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+	
+	<ToolCapacityDef>
+		<defName>RT_LifedrainOmega</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
+	
+
+
+	<ToolCapacityDef>
+		<defName>RT_BanteeHeadbutt</defName>
+		<label>ram</label>
+	</ToolCapacityDef>
+	
+	<ToolCapacityDef>
+		<defName>RT_BanteeScratch</defName>
+		<label>scratch</label>
+	</ToolCapacityDef>
+
+</Defs>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--===============Killed a Metroid Queen===============-->
+
+	<ThoughtDef>
+		<defName>RT_KilledMetroidQueen</defName>
+    <showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>28</durationDays>
+		<stages>
+			<li>
+				<label>killed the metroid queen</label>
+				<description>I killed the one - and only - metroid queen on the planet!</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

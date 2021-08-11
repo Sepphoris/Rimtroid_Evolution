@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_FissionMetroidYellow</defName>
+		<label>Fission Metroid (Power)</label>
+		<description>A Fission Metroid (power).</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_FissionMetroidYellow</defName>
+		<label>fission metroid (power)</label>
+		<race>RT_FissionMetroidYellow</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>0</min>
+			<max>0</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>fission metroid (power)</label>
+			<labelPlural>fission metroid (power)</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_Dessicated_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_FissionMetroidPurple</defName>
+		<label>Fission Metroid (Wave)</label>
+		<description>A Fission Metroid (wave).</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_FissionMetroidPurple</defName>
+		<label>fission metroid (wave)</label>
+		<race>RT_FissionMetroidPurple</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>0</min>
+			<max>0</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>fission metroid (wave)</label>
+			<labelPlural>fission metroid (wave)</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_Dessicated_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_FissionMetroidWhite</defName>
+		<label>Fission Metroid (Ice)</label>
+		<description>A Fission Metroid (ice).</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_FissionMetroidWhite</defName>
+		<label>fission metroid (ice)</label>
+		<race>RT_FissionMetroidWhite</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>0</min>
+			<max>0</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>fission metroid (ice)</label>
+			<labelPlural>fission metroid (ice)</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_Dessicated_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
+
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_FissionMetroidRed</defName>
+		<label>Fission Metroid (Plasma)</label>
+		<description>A Fission Metroid (plasma).</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_FissionMetroidRed</defName>
+		<label>fission metroid (plasma)</label>
+		<race>RT_FissionMetroidRed</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>0</min>
+			<max>0</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>fission metroid (plasma)</label>
+			<labelPlural>fission metroid (plasma)</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FissionMetroid/RT_Dessicated_FissionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

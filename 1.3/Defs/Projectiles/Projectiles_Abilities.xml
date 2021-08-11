@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Parent classes for beam projectiles to work properly-->
+
+	<ThingDef Abstract="True" Name="RT_Bullet_LaserColored" ParentName="RT_Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/GammaBolt</li>
+		</textures>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="RT_Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/Firebeam1</li>
+		</textures>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="RT_Bullet_ElectricBeam" ParentName="RT_Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/ElectricBeam1</li>
+		</textures>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="RT_Bullet_FireBreath" ParentName="RT_Bullet_LaserGeneric">
+		<seam>0.25</seam>
+		<textures>
+			<li>AnimalProjectile/FireBreath</li>
+		</textures>
+	</ThingDef>
+
+
+	<!--Gamma Abilities-->
+
+	<ThingDef ParentName="RT_Bullet_ElectricBeam" Class="RT_Core.LaserBeamDef">
+		<defName>RT_GammaBeam</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Electric Beam</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/ElectricBeam1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>16</damageAmountBase>
+			<soundExplode>RT_SoundElectricBolt</soundExplode>
+		</projectile>
+		<beamWidth>2</beamWidth>
+		<fireWidth>0</fireWidth>
+		<spawnFire>false</spawnFire>
+		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>2</fireDistanceFromCaster>
+		<lifetime>250</lifetime>
+	</ThingDef>
+
+	<ThingDef ParentName="RT_Bullet_LaserColored" Class="RT_Core.LaserBeamDef">
+		<defName>RT_GammaBolt</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Electic Bolt</label>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/GammaBolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>4</damageAmountBase>
+		</projectile>
+		<beamWidth>4.5</beamWidth>
+		<lifetime>16</lifetime>
+	</ThingDef>
+
+
+	<!-- Zeta Abilities -->
+
+	<ThingDef>
+		<defName>RT_ZetaFirebolt</defName>
+		<thingClass>RT_Core.AnimalProjectile</thingClass>
+		<label>Firebolt</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Firebolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>28</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>6</damageAmountBase>
+			<soundExplode>Explosion_Flame</soundExplode>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef>
+		<defName>RT_ZetaAcid</defName>
+		<thingClass>RT_Core.AnimalProjectile</thingClass>
+		<label>acidic spit</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Acidbolt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>28</speed>
+			<damageDef>RT_AcidSpit</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>3</damageAmountBase>
+			<soundExplode>RT_SoundAcidboltExplosion</soundExplode>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RT_Bullet_FireBreath" Class="RT_Core.LaserBeamDef">
+		<defName>RT_FireBreath</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Fire Breath</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/FireBreath</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>0</explosionRadius>
+			<damageAmountBase>18</damageAmountBase>
+			<soundExplode>Explosion_Bomb</soundExplode>
+		</projectile>
+		<beamWidth>1</beamWidth>
+		<fireWidth>2</fireWidth>
+		<spawnFire>false</spawnFire>
+		<dontSpawnFireOnCaster>false</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>1</fireDistanceFromCaster>
+		<lifetime>300</lifetime>
+		<disableFading>True</disableFading>
+	</ThingDef>
+
+
+	<!-- Omega Abilities -->
+
+	<ThingDef>
+		<defName>RT_Fireball</defName>
+		<label>Fireball</label>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Fireball</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>28</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>3</explosionRadius>
+			<damageAmountBase>6</damageAmountBase>
+			<soundExplode>Explosion_Flame</soundExplode>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+			<arcHeightFactor>0.2</arcHeightFactor>
+			<shadowSize>1</shadowSize>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Core.LaserBeamDef">
+		<defName>RT_OmegaBeam</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Firebeam</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>24</damageAmountBase>
+			<soundExplode>Explosion_Bomb</soundExplode>
+		</projectile>
+		<beamWidth>3</beamWidth>
+		<fireWidth>0</fireWidth>
+		<spawnFire>true</spawnFire>
+		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>2</fireDistanceFromCaster>
+		<lifetime>150</lifetime>
+	</ThingDef>
+
+
+	<!-- Queen Abilities-->
+
+	<ThingDef ParentName="RT_Bullet_FireBeam" Class="RT_Core.LaserBeamDef">
+		<defName>RT_QueenBeam</defName>
+		<thingClass>RT_Core.LaserBeam</thingClass>
+		<label>Firebeam</label>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<graphicData>
+			<shaderType>TransparentPostLight</shaderType>
+			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<speed>10000</speed>
+			<damageDef>Flame</damageDef>
+			<explosionRadius>1</explosionRadius>
+			<damageAmountBase>32</damageAmountBase>
+			<soundExplode>Explosion_Bomb</soundExplode>
+		</projectile>
+		<beamWidth>4</beamWidth>
+		<fireWidth>3</fireWidth>
+		<spawnFire>true</spawnFire>
+		<dontSpawnFireOnCaster>true</dontSpawnFireOnCaster>
+		<fireDistanceFromCaster>2</fireDistanceFromCaster>
+		<lifetime>360</lifetime>
+	</ThingDef>
+
+	<!--<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>RT_ZetaFlame</defName>
+		<label>zeta flame</label>
+		<thingClass>RT_Rimtroid.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>AnimalProjectile/FireBreath</texPath>
+			<texPathFadeOut>AnimalProjectile/FireBreathFadeOut</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<speed>200</speed>
+			<damageAmountBase>2</damageAmountBase>
+		</projectile>		
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>30</lifeTimeDuration>
+		<widthScaleFactor>6.65</widthScaleFactor>
+		<minWidth>3</minWidth>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>2</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>1</minDistanceToAffect>
+		<fixedShape>RT_ZetaFlameShape</fixedShape>
+	</RT_Rimtroid.ExpandableProjectileDef>-->
+
+	<!--<RT_Rimtroid.ExpandableProjectileShapeDef>
+		<defName>RT_ZetaFlameShape</defName>
+		<widthCurve>
+			<points>
+				<li>0, 1</li>
+				<li>1, 3</li>
+				<li>2, 3</li>
+				<li>3, 10</li>
+				<li>4, 10</li>
+				<li>5, 3</li>
+				<li>6, 1</li>
+				<li>7, 0</li>
+			</points>
+		</widthCurve>
+		<shape>
+			E is entry, S is place, X is empty
+			<li>XXSSXXXX</li>
+			<li>XSSSSSXX</li>
+			<li>ESSSSSSX</li>
+			<li>XSSSSSXX</li>
+			<li>XXSSXXXX</li>
+		</shape>
+	</RT_Rimtroid.ExpandableProjectileShapeDef>-->
+
+	<!--<RT_Rimtroid.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>RT_OmegaSweep</defName>
+		<label>omega sweep</label>
+		<thingClass>RT_Rimtroid.SweepProjectile</thingClass>
+		<graphicData>
+			<texPath>AnimalProjectile/FireBreath</texPath>
+			<texPathFadeOut>AnimalProjectile/FireBreathFadeOut</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>Flame</damageDef>
+			<speed>200</speed>
+			<damageAmountBase>2</damageAmountBase>
+		</projectile>
+
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>500</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.15</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</RT_Rimtroid.ExpandableProjectileDef>-->
+</Defs>
+

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignatorDropdownGroupDef>
+		<defName>RT_EnergyPylonDesignatorDropdownDef</defName>
+	</DesignatorDropdownGroupDef>
+	<!--<ThingDef ParentName="PlantBase">
+		<defName>RT_Dummy_Grass</defName>
+		<label>grass</label>
+		<description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Flammability>1.3</Flammability>
+			<Nutrition>0.25</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/Grass</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<hideAtSnowDepth>0.5</hideAtSnowDepth>
+		<ingestible />
+		<plant>
+			<fertilityMin>0.05</fertilityMin>
+			<fertilitySensitivity>0.3</fertilitySensitivity>
+			<growDays>2.5</growDays>
+			<leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath>
+			<harvestWork>40</harvestWork>
+			<maxMeshCount>9</maxMeshCount>
+			<visualSizeRange>0~0</visualSizeRange>
+			<topWindExposure>0</topWindExposure>
+			<wildOrder>1</wildOrder>
+		</plant>
+	</ThingDef>-->
+
+    <ThingDef>
+    <defName>RT_Electricity</defName>
+    <label>electric discharge</label>
+    <thingClass>RT_Rimtroid.ElectricDischarge</thingClass>
+    <pathCost>50</pathCost>
+    <category>Attachment</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Special/Electricity</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData> 
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+  </ThingDef>
+
+    <ThingDef ParentName="MoteBase">
+    <defName>RT_ElectricFloorMote</defName>
+    <graphicData>
+      <texPath>Things/Mote/Electricity</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <flipExtraRotation>30</flipExtraRotation>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <mote>
+      <fadeInTime>0.04</fadeInTime>
+      <solidTime>0.08</solidTime>
+      <fadeOutTime>0.13</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+
+	<ThingDef Name="RT_Traps" ParentName="BuildingBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<damageData>
+				<rect>(0.1,0,0.8,0.3)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconOffset>(0,-0.14)</uiIconOffset>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawerType>RealtimeOnly</drawerType>
+		<rotatable>false</rotatable>
+		<tickerType>Normal</tickerType>
+		<stealable>false</stealable>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<statBases>
+			<Mass>2</Mass>
+			<MaxHitPoints>40</MaxHitPoints>
+			<WorkToBuild>1400</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Beauty>-4</Beauty>
+			<TrapSpringChance>1.0</TrapSpringChance>
+		</statBases>
+		<building>
+			<isTrap>true</isTrap>
+			<trapPeacefulWildAnimalsSpringChanceFactor>0.25</trapPeacefulWildAnimalsSpringChanceFactor>
+			<expandHomeArea>false</expandHomeArea>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RT_Traps">
+		<defName>RT_MetroidBomb</defName>
+		<label>Energy Bomb</label>
+	    <thingClass>RT_Rimtroid.Alpha_Bomb</thingClass>
+		<description>A sphere of concentrated energy, created by an Alpha or Gamma Metroid. Will explode once a creature comes into proximity, or after a small amount of time.</description>
+		<graphicData>
+			<texPath>Things/Misc/MetroidBomb</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>3</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+		</comps>
+		<specialDisplayRadius>3</specialDisplayRadius>
+		<modExtensions>
+			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
+				<proximityRange>3</proximityRange> 
+				<explosionTimeout>3600</explosionTimeout>
+				<hostileOnly>true</hostileOnly>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	
+	<!--<ThingDef ParentName="RT_Traps">
+		<defName>RT_Alpha_ProximityTrap</defName>
+		<label>Alpha trap</label>
+		<description>A bomb of contained energy, created by an Alpha Metroid. Animals can sense these when calm.</description>
+		<graphicData>
+			<texPath>Things/Buildings/Security/AlphaBomb</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>4</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>15</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+		</comps>
+		<specialDisplayRadius>3</specialDisplayRadius>
+		<modExtensions>
+			<li Class="RT_Rimtroid.Alpha_ProximityTrapProperties">
+				<explosionTimeout>120000</explosionTimeout>
+				<proximityRange>2</proximityRange> 
+			</li>
+		</modExtensions>
+	</ThingDef>-->
+
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>RT_ExplosionTest</defName>
+    <label>explosion</label>
+    <thingClass>RT_Rimtroid.ElectricExplosion</thingClass>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+
+  <!--
+    !!!!!TO BE DELETED!!!!!
+    <ThingDef>
+		<defName>RT_GammaIgniteTest</defName>
+		<label>Electric Floor Test</label>
+		<description>A test item to make sure the electric floor works properly.</description>
+		<graphicData>
+			<texPath>Things/Misc/MetroidBomb</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+				<wickTicks>3</wickTicks>
+				<startWickOnDamageTaken>
+					<li>Bullet</li>
+					<li>Arrow</li>
+					<li>ArrowHighVelocity</li>
+				</startWickOnDamageTaken>
+			</li>
+      <li Class="RT_Rimtroid.CompProperties_ElectricOverlay">
+      </li>
+		</comps>
+		<specialDisplayRadius>3</specialDisplayRadius>
+	</ThingDef>-->
+</Defs>

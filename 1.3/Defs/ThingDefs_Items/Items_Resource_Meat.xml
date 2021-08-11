@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RT_MetroidGel</defName>
+		<label>metroid gel</label>
+		<description>Slimy, disgusting, tasteless gel, harvested from the metroid nucleus. Despite it being an extremely unappetizing food source, the proteins within it allow it to be used as an alternative to meat.</description>
+		<graphicData>
+			<texPath>Things/AnimalProduct/RT_MetroidGel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+      <Nutrition>0.07</Nutrition>
+			<Flammability>0.5</Flammability>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+			<Mass>0.03</Mass>
+			<MarketValue>2</MarketValue>
+		</statBases>
+		<ingestible>
+      <foodType>Meat</foodType>
+      <preferability>DesperateOnly</preferability>
+	    <tasteThought>RT_AteRawGel</tasteThought>
+	    <specialThoughtAsIngredient>RT_AteGelMeal</specialThoughtAsIngredient>	
+		</ingestible>
+		<thingCategories>
+			<li>MeatRaw</li>
+		</thingCategories>
+    <comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>2</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+ <!--<ThingDef ParentName="ResourceBase">
+    <defName>RT_ProtusSphere</defName>
+    <label>protus sphere</label>
+    <description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
+    <graphicData>
+			<texPath>Things/Resource/RT_ProtusSphere</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.02</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>8</DeteriorationRate>
+      <Nutrition>0.02</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.8</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>Processed</foodType>
+    </ingestible>
+  </ThingDef>-->
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>RT_ProtusSphere</defName>
+    <label>protus sphere</label>
+    <description>A small, round membrane filled with extracted protus. Specifically designed for training metroids; to anything else, it's just an ill-tasting gas with no nutritional value.</description>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Resource/RT_ProtusSphere</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.6</drawSize>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>20</MaxHitPoints>
+      <MarketValue>6</MarketValue>
+      <Mass>0.01</Mass>
+      <Nutrition>0.4</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.8</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <preferability>RawBad</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+</Defs>

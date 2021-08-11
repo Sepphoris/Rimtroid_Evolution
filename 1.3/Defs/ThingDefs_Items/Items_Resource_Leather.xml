@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  	<ThingDef ParentName="ResourceBase">
+		<defName>RT_MetroidChitin</defName>
+		<label>metroid chitin</label>
+		<description>Plates of thick, durable, and exceptionally heavy chitin, used by most metroid stages. The sheer weight is believed to be the reason why all Metroids eventually stop flying. It performs exceptionally well when used in armor.</description>
+    <graphicData>
+      <texPath>Things/AnimalProduct/RT_MetroidChitin</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+		<statBases>
+			<MarketValue>12</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>0</Flammability>
+      <StuffPower_Armor_Sharp>0.48</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.08</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.8</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>0</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>90</StuffPower_Insulation_Heat>
+		</statBases>
+    <useHitPoints>false</useHitPoints>
+    <thingCategories>
+        <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>0</deepCommonality>
+    <deepCountPerPortion>0</deepCountPerPortion>
+		<stuffProps>
+      <stuffAdjective>chitinous</stuffAdjective>
+      <color>(70,80,80)</color>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+			<commonality>0.02</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<statFactors>
+				<MaxHitPoints>1.2</MaxHitPoints>
+        <Beauty>-0.5</Beauty>
+        <Flammability>0</Flammability>
+			</statFactors>
+		</stuffProps>
+	</ThingDef>
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>RT_Biosilk</defName>
+    <label>biosilk</label>
+    <description>Green, slightly transparent silk, made from refining the resinous substance that most metroids produce. It is provides exceptional heat insulation, but is more often used as a symbol of wealth than anything else. The refining process produces a faint hexagonal pattern, but isn't generally visible when weaved into objects.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RT_Bioresin</ThingDef>
+		</descriptionHyperlinks>
+    <graphicData>
+			<texPath>Things/Resource/RT_BioSilk</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <DeteriorationRate>4</DeteriorationRate>
+      <Mass>0.1</Mass>
+      <Flammability>0</Flammability>
+      <MarketValue>42.0</MarketValue>
+      <StuffPower_Armor_Heat>1.4</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Heat>180</StuffPower_Insulation_Heat>
+    </statBases>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <color>(140,170,135)</color>
+      <commonality>0.002</commonality>
+      <statOffsets>
+        <Beauty>12</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>2.5</MaxHitPoints>
+        <Beauty>8</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>

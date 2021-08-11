@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--=============== Bantee Abilities ===============-->
+
+	<AbilityDef>
+		<defName>RT_BanteeDrain</defName>
+		<label>Energy Drain</label>
+		<description>Drains energy from a designated, live target, rapidly gaining age in the process.</description>
+		<abilityClass>RT_Core.Ability_AbsorbEnergy</abilityClass>
+		<targetRequired>true</targetRequired>
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<cooldownTicksRange>3300</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/EnergyDrain</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_EnergyAbsorb</verbClass>
+			<range>0</range>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>0</warmupTime>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetLocations>False</canTargetLocations>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetFires>False</canTargetFires>
+				<canTargetSelf>False</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Energy Drain Enabled</gizmoOnText>
+				<gizmoOffText>Energy Drain Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/EnergyDrain</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/EnergyDrain</gizmoOffIconPath>
+				<gizmoDesc>Toggle automatic usage of energy draining</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>BanteeAbilityPool</cooldownPool>
+				<cooldownTicksRange>3000</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!--=============== Larvae Abilities ===============-->
+
+	<!--Larvae drain attack may be turned into an ability.
+  Larvae can still drain food through normal attacks,
+  but this ability sends the larvae to a designated target.
+  Larvae then attaches to the target and stuns them for a few seconds,
+  Rapidly gaining age and food. This will take some serious coding.-->
+
+
+	<AbilityDef>
+		<defName>RT_LarvaeDrain</defName>
+		<label>Energy Drain</label>
+		<description>Drains energy from a designated, live target, rapidly gaining age in the process.</description>
+		<abilityClass>RT_Core.Ability_AbsorbEnergy</abilityClass>
+		<targetRequired>true</targetRequired>
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<cooldownTicksRange>3300</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/EnergyDrain</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_EnergyAbsorb</verbClass>
+			<range>0</range>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>0</warmupTime>
+			<requireLineOfSight>False</requireLineOfSight>
+			<targetParams>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetLocations>False</canTargetLocations>
+				<canTargetBuildings>False</canTargetBuildings>
+				<canTargetItems>False</canTargetItems>
+				<canTargetFires>False</canTargetFires>
+				<canTargetSelf>False</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Energy Drain Enabled</gizmoOnText>
+				<gizmoOffText>Energy Drain Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/EnergyDrain</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/EnergyDrain</gizmoOffIconPath>
+				<gizmoDesc>Toggle automatic usage of energy draining</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>LarvaeAbilityPool</cooldownPool>
+				<cooldownTicksRange>3000</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!--=============== Alpha Abilities ===============-->
+
+	<AbilityDef>
+		<defName>RT_AlphaBomb</defName>
+		<label>Electric Bomb</label>
+		<description>Drops a proximity bomb that will detonate on hostiles</description>
+		<abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
+		<!--
+		<cooldownTicksRange>2100</cooldownTicksRange> -->
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<targetRequired>False</targetRequired>
+		<iconPath>UI/Abilities/UI_EnergyBomb</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<range>-1</range>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Bombs Enabled</gizmoOnText>
+				<gizmoOffText>Bombs Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_EnergyBomb</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_EnergyBomb</gizmoOffIconPath>
+				<gizmoDesc>Toggle Bomb Usage</gizmoDesc>
+			</li>
+			<!--
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>AlphaAbilityPool</cooldownPool>
+				<cooldownTicksRange>200</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li> -->
+		</comps>
+	</AbilityDef>
+
+	<!--Alpha has an evolved variant that drops bombs that electiry the floor.
+    Additionally, alphas that ignite the floor with fire exist as well.
+    The fire ignition does drastically more damage.
+    Ones that drop fire do not drop normal electric bombs.
+    Will be added later, once I add the heavy genetic manipulation stuff.-->
+
+	<!--=============== Gamma Abilities ===============-->
+
+	<!--Gamma Electric Beam -->
+	<AbilityDef>
+		<defName>RT_GammaBeam</defName>
+		<label>Electric Beam</label>
+		<description>Fire a beam of concentrated energy.</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1200~1600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_ElectricBeam</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>26</range>
+			<minRange>1</minRange>
+			<defaultProjectile>RT_GammaBeam</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Electric Beam Enabled</gizmoOnText>
+				<gizmoOffText>Electric Beam Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBeam</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBeam</gizmoOffIconPath>
+				<gizmoDesc>Toggle Electric Beam Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_GammaBeam</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>35</range>
+						<minRange>3</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundElectricBeam</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!--Gamma Electric Bolt; now obselete, and serves as a template-->
+	<AbilityDef>
+		<defName>RT_GammaElectricBolt</defName>
+		<label>Electric Bolt</label>
+		<description>Fire an arc of electricity at a target</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1000~1200</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_ElectricBolt</iconPath>
+		<verbProperties>
+			<!-- Make sure range and minRange matches the CastVerb's range and minRanges -->
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>35</range>
+			<minRange>1</minRange>
+			<!-- Projectile defined here just for the targeting when you click the gizmo, the CastVerb's projectile is the actual one that will cause damage -->
+			<defaultProjectile>RT_GammaBolt</defaultProjectile>
+			<!-- Controls how likely the ability will get picked. -->
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<!-- Allows the ability.verb to be picked up by Pawn.TryGetAttackVerb -->
+				<autoUse>true</autoUse>
+				<gizmoOnText>Electric Bolt Enabled</gizmoOnText>
+				<gizmoOffText>Electric Bolt Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBolt</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBolt</gizmoOffIconPath>
+				<gizmoDesc>Toggle Electric Bolt Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<!-- Verbs defined here will be actually triggered when the ability activates. -->
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_GammaBolt</defaultProjectile>
+						<warmupTime>0.5</warmupTime>
+						<range>35</range>
+						<minRange>1</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundElectricBolt</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<!-- Ability cooldown pool -->
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<!-- Cooldown ticks range (omit to use each verb's default <cooldownTicksRange>) -->
+				<!--<cooldownTicksRange>1200</cooldownTicksRange>-->
+				<!-- Unaffected by other abilities cooling down in the same pool -->
+				<independent>true</independent>
+				<!-- Resets the other cooldowns in the pool even if they're already cooling down -->
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_GammaShockwave</defName>
+		<label>Stun Pulse</label>
+		<description>Generates an electric pulse that damages anything nearby</description>
+		<abilityClass>RT_Rimtroid.Ability_Shockwave</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1800~2500</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_StunPulse</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<warmupTime>1</warmupTime>
+			<range>5</range>
+			<meleeDamageDef>Burn</meleeDamageDef>
+			<soundCast>RT_SoundShockwave</soundCast>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Stun Pulse Enabled</gizmoOnText>
+				<gizmoOffText>Stun Pulse Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_StunPulse</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_StunPulse</gizmoOffIconPath>
+				<gizmoDesc>Toggle Stun Pulse Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<cooldownTicksRange>200</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_GammaBomb</defName>
+		<label>Electric Bomb</label>
+		<description>Drops a proximity bomb that will detonate on hostiles</description>
+		<abilityClass>RT_Rimtroid.Ability_MetroidBomb</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>2100</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_EnergyBomb</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>1</warmupTime>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Bombs Enabled</gizmoOnText>
+				<gizmoOffText>Bombs Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_EnergyBomb</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_EnergyBomb</gizmoOffIconPath>
+				<gizmoDesc>Toggle Bomb Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<cooldownTicksRange>200</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_GammaBurst</defName>
+		<label>Energy Field</label>
+		<description>Creates a field of energy that damages and stuns anything on top</description>
+		<abilityClass>RT_Rimtroid.Ability_GammaIgnite</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>2700</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_EnergyField</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>2</warmupTime>
+			<range>4</range>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Energy Field Enabled</gizmoOnText>
+				<gizmoOffText>Energy Field Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_EnergyField</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_EnergyField</gizmoOffIconPath>
+				<gizmoDesc>Toggle Field Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<cooldownTicksRange>200</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!--Gamma Metroids also have electric beam breath, which needs to be added.
+    Mutated ones can also drop the same massive fireball that mutated Alphas have.
+    Mutated ones don't have regular bombs, but do have all other abilities-->
+
+	<!--=============== Zeta Abilities ===============-->
+
+	<AbilityDef>
+		<defName>RT_ZetaFirebolt</defName>
+		<label>Firebolt</label>
+		<description>Lob bolts of fire at a target</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1000~1200</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_FireBolt</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>28</range>
+			<minRange>1</minRange>
+			<defaultProjectile>RT_ZetaFirebolt</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Firebolt Enabled</gizmoOnText>
+				<gizmoOffText>Firebolt Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBolt</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBolt</gizmoOffIconPath>
+				<gizmoDesc>Toggle Firebolt Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_ZetaFirebolt</defaultProjectile>
+						<warmupTime>0.5</warmupTime>
+						<range>28</range>
+						<minRange>1</minRange>
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+						<soundCast>RT_SoundFirebolt</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>ZetaAbilityPool</cooldownPool>
+				<cooldownTicksRange>300</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_ZetaAcidSpit</defName>
+		<label>Acid Spit</label>
+		<description>Fire an acidic glob at a target</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1200~1600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_AcidBolt</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>28</range>
+			<minRange>1</minRange>
+			<defaultProjectile>RT_ZetaAcid</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Acid Spit Enabled</gizmoOnText>
+				<gizmoOffText>Acid Spit Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_AcidBolt</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_AcidBolt</gizmoOffIconPath>
+				<gizmoDesc>Toggle Acid Spit Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_ZetaAcid</defaultProjectile>
+						<warmupTime>0.7</warmupTime>
+						<range>28</range>
+						<minRange>1</minRange>
+						<burstShotCount>5</burstShotCount>
+						<ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+						<soundCast>RT_SoundAcidbolt</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>ZetaAbilityPool</cooldownPool>
+				<cooldownTicksRange>300</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_FireBreath</defName>
+		<label>Fire Breath</label>
+		<description>Unleash a sheet of fire on a close target</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1400~1600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_FireBreath</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>4</range>
+			<minRange>1</minRange>
+			<defaultProjectile>RT_FireBreath</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Fire Breath Enabled</gizmoOnText>
+				<gizmoOffText>Fire Breath Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBreath</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBreath</gizmoOffIconPath>
+				<gizmoDesc>Toggle Fire Breath Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_FireBreath</defaultProjectile>
+						<warmupTime>2.5</warmupTime>
+						<range>4</range>
+						<minRange>1</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundFireBreath</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>ZetaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!--Electrically-charged bouncing acid also exists, but unsure how to approach this. Fires 5
+      Zeta fires 6 acid and 6 fireballs when on ceiling, so burst may change
+      Apparently mutated ones have high defense and damage, but no new abilities-->
+
+	<!--=============== Omega Abilities ===============-->
+
+	<AbilityDef>
+		<defName>RT_Fireballs</defName>
+		<label>Fireballs</label>
+		<description>Lob three massive fireballs that explode on impact</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1000~1400</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_Fireball</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>30</range>
+			<minRange>4</minRange>
+			<defaultProjectile>RT_Fireball</defaultProjectile>
+			<targetParams>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Fireballs Enabled</gizmoOnText>
+				<gizmoOffText>Fireballs Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_Fireball</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Fireball</gizmoOffIconPath>
+				<gizmoDesc>Toggle Fireball Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_Fireball</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>40</range>
+						<minRange>3</minRange>
+						<burstShotCount>3</burstShotCount>
+						<ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+						<soundCast>RT_SoundFirebolt</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>OmegaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_OmegaBeam</defName>
+		<label>Omega Fire Beam</label>
+		<description>Create a beam of fire that ignites the ground below it.</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1200~1600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_FireBeam2</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>30</range>
+			<minRange>3</minRange>
+			<defaultProjectile>RT_OmegaBeam</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Firebeam Enabled</gizmoOnText>
+				<gizmoOffText>Firebeam Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBeam2</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBeam2</gizmoOffIconPath>
+				<gizmoDesc>Toggle Firebeam Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_OmegaBeam</defaultProjectile>
+						<warmupTime>2.5</warmupTime>
+						<range>35</range>
+						<minRange>3</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundFireBeam</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>OmegaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!--Omegas can leap forward, do a breath sweep, and hit the ground with tail
+      Omega will have fireballs as well, from Metroid II.
+      Leap will likely be a medium range, massive damage, and a stun
+      Breath sweep is similar to beam, except it fires from left to right in a cone shape
+      Ability with tail will stun and damage anything around in one move
+      Evolved one has increased damage and defense-->
+
+	<!--=============== Queen Abilities ===============-->
+
+	<!--Swap beam with a regular fire breath; beam is used elsewhere-->
+	<AbilityDef>
+		<defName>RT_QueenBeam</defName>
+		<label>Queen Fire Beam</label>
+		<description>Unleash a devastating beam of fire on a target</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1600~2000</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_FireBeam2</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>45</range>
+			<minRange>3</minRange>
+			<defaultProjectile>RT_QueenBeam</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Firebeam Enabled</gizmoOnText>
+				<gizmoOffText>Firebeam Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_FireBeam2</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_FireBeam2</gizmoOffIconPath>
+				<gizmoDesc>Toggle Firebeam Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_QueenBeam</defaultProjectile>
+						<warmupTime>2.5</warmupTime>
+						<range>50</range>
+						<minRange>3</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundFireBeam</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>QueenAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_QueenLarvaSpawn</defName>
+		<label>Release Larva</label>
+		<description>Releases one of the metroid larva that is residing on the Queen's shell (six maximum).</description>
+		<abilityClass>RT_Rimtroid.Ability_QueenSpawnNewPawn</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>90</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_Placeholder</iconPath>
+		<gizmoClass>RT_Rimtroid.Command_Ability_SpawnNewPawn</gizmoClass>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>0</warmupTime>
+			<range>0</range>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Release Larva Enabled</gizmoOnText>
+				<gizmoOffText>Release Larva Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_Placeholder</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Placeholder</gizmoOffIconPath>
+				<gizmoDesc>Toggle whether or not held larva can be released</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>QueenAbilityPool</cooldownPool>
+				<cooldownTicksRange>90</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_QueenLarvaRecall</defName>
+		<label>Recall Larvae</label>
+		<description>Recall all released larva on the field.</description>
+		<abilityClass>RT_Rimtroid.Ability_QueenRecallPawns</abilityClass>
+		<targetRequired>false</targetRequired>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>120</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_Placeholder</iconPath>
+		<gizmoClass>RT_Rimtroid.Command_Ability_RecallPawns</gizmoClass>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<soundCast>RT_SoundShockwave</soundCast>
+			<warmupTime>0.5</warmupTime>
+			<range>0</range>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Recall Larva Enabled</gizmoOnText>
+				<gizmoOffText>Recall Larva Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_Placeholder</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_Placeholder</gizmoOffIconPath>
+				<gizmoDesc>Toggle whether or not held larva can be recalled</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>QueenAbilityPool</cooldownPool>
+				<cooldownTicksRange>90</cooldownTicksRange>
+				<independent>false</independent>
+				<resetsTimer>false</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<!-- Abilities from Other M are also present here
+      Queen can charge targets, which will be incredibly lethal
+      Queen has a regular fire breath
+      Queen has a sweeping fire beam breath, similar to Omega.
+      Queen can also 'blow' hostiles away, knocking them back and stunning in the process
+      Queen can spawn larvae; unsure if this should be an ability or not.
+      If queen does spawn larvae as an ability, it will need to be heavily altered when
+      player controls one-->
+
+<!--
+	<AbilityDef>
+		<defName>RT_ZetaFlame</defName>
+		<label>Zeta flame</label>
+		<description>Fire a beam of concentrated energy.</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1200~1600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_ElectricBeam</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_FireBeam</verbClass>
+			<range>6</range>
+			<minRange>1</minRange>
+			<defaultProjectile>RT_ZetaFlame</defaultProjectile>
+			<commonality>2</commonality>
+			<targetParams>
+				<canTargetPawns>True</canTargetPawns>
+				<canTargetLocations>True</canTargetLocations>
+				<canTargetBuildings>True</canTargetBuildings>
+				<canTargetItems>True</canTargetItems>
+				<canTargetFires>True</canTargetFires>
+				<canTargetSelf>False</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Electric Beam Enabled</gizmoOnText>
+				<gizmoOffText>Electric Beam Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBeam</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBeam</gizmoOffIconPath>
+				<gizmoDesc>Toggle Electric Beam Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_ZetaFlame</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>6</range>
+						<minRange>1</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundElectricBeam</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+						<targetParams>
+							<canTargetPawns>True</canTargetPawns>
+							<canTargetLocations>True</canTargetLocations>
+							<canTargetBuildings>True</canTargetBuildings>
+							<canTargetItems>True</canTargetItems>
+							<canTargetFires>True</canTargetFires>
+							<canTargetSelf>False</canTargetSelf>
+						</targetParams>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>RT_OmegaSweep</defName>
+		<label>Omega sweep</label>
+		<description>Fire a beam of concentrated energy.</description>
+		<abilityClass>RT_Core.Ability_Base</abilityClass>
+		<canUseAoeToGetTargets>true</canUseAoeToGetTargets>
+		<cooldownTicksRange>1200~1600</cooldownTicksRange>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<iconPath>UI/Abilities/UI_ElectricBeam</iconPath>
+		<verbProperties>
+			<verbClass>RT_Core.Verb_CastAbility_Base</verbClass>
+			<range>26</range>
+			<minRange>1</minRange>
+			<defaultProjectile>RT_OmegaSweep</defaultProjectile>
+			<commonality>2</commonality>
+		</verbProperties>
+		<comps>
+			<li Class="RT_Core.AbilityCompProperties_AbilityControl">
+				<compClass>RT_Core.AbilityComp_AbilityControl</compClass>
+				<autoUse>true</autoUse>
+				<gizmoOnText>Electric Beam Enabled</gizmoOnText>
+				<gizmoOffText>Electric Beam Disabled</gizmoOffText>
+				<gizmoOnIconPath>UI/Abilities/UI_ElectricBeam</gizmoOnIconPath>
+				<gizmoOffIconPath>UI/Abilities/UI_ElectricBeam</gizmoOffIconPath>
+				<gizmoDesc>Toggle Electric Beam Usage</gizmoDesc>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_CastVerb">
+				<compClass>RT_Core.AbilityComp_CastVerb</compClass>
+				<verbProperties>
+					<li>
+						<verbClass>Verb_Shoot</verbClass>
+						<accuracyTouch>0.70</accuracyTouch>
+						<accuracyShort>0.80</accuracyShort>
+						<accuracyMedium>0.90</accuracyMedium>
+						<accuracyLong>0.85</accuracyLong>
+						<hasStandardCommand>true</hasStandardCommand>
+						<defaultProjectile>RT_OmegaSweep</defaultProjectile>
+						<warmupTime>2</warmupTime>
+						<range>35</range>
+						<minRange>3</minRange>
+						<burstShotCount>1</burstShotCount>
+						<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+						<soundCast>RT_SoundElectricBeam</soundCast>
+						<muzzleFlashScale>1</muzzleFlashScale>
+					</li>
+				</verbProperties>
+			</li>
+			<li Class="RT_Core.AbilityCompProperties_Cooldown">
+				<compClass>RT_Core.AbilityComp_Cooldown</compClass>
+				<cooldownPool>GammaAbilityPool</cooldownPool>
+				<independent>false</independent>
+				<resetsTimer>true</resetsTimer>
+			</li>
+		</comps>
+	</AbilityDef>
+	-->
+</Defs>

@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Most of the core hediffs that make the mod work properly, and give Metroids their proper effects. -->
+ 
+	<HediffDef Name="RT_GoodHediff" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+	<makesAlert>false</makesAlert>
+	<makesSickThought>false</makesSickThought>
+	</HediffDef>
+ 
+ 	<HediffDef Name="RT_BadHediff" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <isBad>true</isBad>
+	<makesAlert>false</makesAlert>
+	<makesSickThought>false</makesSickThought>
+	</HediffDef>
+
+  <!--===============Stunted Metroid Overview===============-->
+    <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_StuntedGrowthOverview</defName>
+    <label>Stunted</label>
+    <labelNoun>a stunted Metroid</labelNoun>
+    <description>Stunted metroids are metroids that are 'locked' into their current form, and prevented from growing into further stages. This is generally used for taking advantage of the unique properties a metroid stage may have, such as the ease of care for a Bantee, or the profitability of a Gamma. However, stunting can also occur as a health defect in the wild.\n\nA stunted metroid may have a significant increase in value - or vice versa - depending on the metroid stage.</description>
+    <stages>
+      <li>
+	  		<becomeVisible>true</becomeVisible>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		  </li>
+    </stages>
+</HediffDef>
+
+	<!--===============Stunted Devalued Metroid - Larvae and Alpha===============-->
+
+  <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_StuntedGrowthBad</defName>
+    <label>Stunted</label>
+    <labelNoun>a stunted Metroid</labelNoun>
+    <description>A Metroid that is incapable of evolving into further forms. While this is often done intentionally to 'lock' a metroid into a desired lifestage, stunting may also occur as a genetic defect. Stunted metroids have a decreased appetite (as they no longer need to grow), but eventual long-term genetic complications significantly decrease their overall life expectancy.\n\nThis metroid's value has decreased signiicantly, due to being locked out of more useful potential mutations.</description>
+    <stages>
+      <li>
+	  		<becomeVisible>true</becomeVisible>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			  <statFactors>
+      		<MarketValue>0.20</MarketValue>
+    		</statFactors>
+		  </li>
+    </stages>
+</HediffDef>
+
+	<!--===============Stunted Valuable Metroid - Bantee and Gamma Metroids===============-->
+
+  <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_StuntedGrowthGood</defName>
+    <label>Stunted</label>
+    <labelNoun>a stunted Metroid</labelNoun>
+    <description>A Metroid that is incapable of evolving into further forms. While this is often done intentionally to 'lock' a metroid into a desired lifestage, stunting may also occur as a genetic defect. Stunted metroids have a decreased appetite (as they no longer need to grow), but eventual long-term genetic complications significantly decrease their overall life expectancy.\n\nThis metroid's value has increased significantly, due to the demand in it's current form.</description>
+    <stages>
+      <li>
+	 		  <becomeVisible>true</becomeVisible>
+		    <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		    <statFactors>
+    			<MarketValue>2.5</MarketValue>
+    	  </statFactors>
+		  </li>
+    </stages>
+</HediffDef>
+
+	<!--===============Stunted Metroid - Zeta and Omega Metroids===============-->
+
+  <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_StuntedGrowthNeutral</defName>
+    <label>Stunted</label>
+    <labelNoun>a stunted Metroid</labelNoun>
+    <description>A Metroid that is incapable of evolving into further forms. While this is often done intentionally to 'lock' a metroid into a desired lifestage, stunting may also occur as a genetic defect. Stunted metroids have a decreased appetite (as they no longer need to grow), but eventual long-term genetic complications significantly decrease their overall life expectancy.\n\nDue to their long evolution spans and middle-ground desirability, this metroid's market value is unaltered.</description>
+    <stages>
+      <li>
+	  	  <becomeVisible>true</becomeVisible>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		  </li>
+    </stages>
+</HediffDef>
+
+	<!--===============Life Drain===============-->
+
+	<HediffDef>
+		<defName>RT_LifeDrainSickness</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<description>The very life energy of this being has been drained. A being becomes progressively less energetic and aware as more life is drained. Luckily, death is only guaranteed by full draining, and plenty of rest will reverse the effects.
+		\nBodies that have been drained of life turn into stone-colored husks, with their faces permanently frozen in the last seconds before death.</description>
+		<label>life drain</label>
+		<lethalSeverity>2</lethalSeverity>
+		<makesSickThought>true</makesSickThought>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<taleOnVisible>ToxicityRevealed</taleOnVisible>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-0.3</severityPerDayNotImmune>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>3000~180000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial</label>
+				<minSeverity>0.02</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.04</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.15</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.075</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>moderate</label>
+				<minSeverity>0.4</minSeverity>
+				<vomitMtbDays>5</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.1</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>serious</label>
+				<minSeverity>0.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>extreme</label>
+				<minSeverity>0.8</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.3</setMax>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.6</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.8</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>-0.4</offset>
+					</li>
+				</capMods>
+				<hediffGivers>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

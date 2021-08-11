@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- The attacks Metroids gain and lose during their lifetime, besides life-based attacks. -->
+ 
+	<!--<HediffDef Name="RT_GoodHediff" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+    <isBad>false</isBad>
+	<makesAlert>false</makesAlert>
+	<makesSickThought>false</makesSickThought>
+	</HediffDef>
+ 
+ 	<HediffDef Name="RT_BadHediff" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <isBad>true</isBad>
+	<makesAlert>false</makesAlert>
+	<makesSickThought>false</makesSickThought>
+	</HediffDef> -->
+
+<!--"Husk" Hediff: This is needed so targets killed by Metroids automatically rot-->
+
+	<HediffDef ParentName="InjuryBase">
+    <defName>RT_HuskTouch</defName>
+    <label>Draining</label>
+    <labelNoun>Draining</labelNoun>
+    <description>This ensures Metroids will create husks upon killing a target. Should not be seen.</description>
+	<stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>30000~180000</disappearsAfterTicks>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

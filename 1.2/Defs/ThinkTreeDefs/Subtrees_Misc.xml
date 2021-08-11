@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <ThinkTreeDef>
+    <defName>RT_MetroidConstant</defName>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+        <li Class="ThinkNode_Priority">
+          <subNodes>
+            <!-- Hostility response -->
+            <li Class="RT_Core.JobGiver_HostilityResponse" />
+          </subNodes>
+		</li>
+        <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+          <subNodes>
+            <!-- Flee explosion -->
+            <li Class="JobGiver_FleePotentialExplosion" />
+
+            <!-- Join auto joinable caravan -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>JoinAutoJoinableCaravan</treeDef>
+            </li>
+			
+            <!-- Lord directives -->
+            <li Class="ThinkNode_Subtree">
+              <treeDef>LordDutyConstant</treeDef>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+ <!--============= Satisfy basic needs ============-->
+  
+  <ThinkTreeDef>
+    <defName>RT_SatisfyBasicNeeds</defName>
+    <thinkRoot Class="ThinkNode_Tagger">
+      <tagToGive>SatisfyingNeeds</tagToGive>
+      <subNodes>
+        <li Class="ThinkNode_PrioritySorter">
+          <subNodes>
+            <li Class="RT_Core.JobGiver_GetLiveFood"/>
+            <li Class="JobGiver_GetRest"/>
+            <li Class="JobGiver_SatisfyChemicalNeed"/>
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef> 
+  
+  <ThinkTreeDef>
+    <defName>RT_SatisfyVeryUrgentNeeds</defName>
+    <thinkRoot Class="ThinkNode_Tagger">
+      <tagToGive>SatisfyingNeeds</tagToGive>
+      <subNodes>
+        <li Class="ThinkNode_PrioritySorter">
+          <subNodes>
+            <li Class="RT_Core.JobGiver_GetLiveFood">
+              <minCategory>UrgentlyHungry</minCategory>
+            </li>
+            <li Class="JobGiver_GetRest">
+              <minCategory>VeryTired</minCategory>
+            </li>
+            <li Class="JobGiver_SatisfyChemicalNeed" />
+          </subNodes>
+        </li>
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+
+  
+</Defs>

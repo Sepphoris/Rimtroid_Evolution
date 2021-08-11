@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <bodyPartGroupDef>
+    <defName>Tail</defName>
+    <label>tail</label>
+  </bodyPartGroupDef>
+  
+  <bodyPartGroupDef>
+    <defName>Claws</defName>
+    <label>claws</label>
+  </bodyPartGroupDef>
+
+  <bodyPartGroupDef>
+    <defName>RT_Ovipositor</defName>
+    <label>ovipositors</label>
+  </bodyPartGroupDef>
+
+</Defs>

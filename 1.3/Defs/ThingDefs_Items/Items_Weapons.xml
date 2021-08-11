@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Cryo Rifle -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RT_CryoRifle</defName>
+    <label>Cryo Rifle</label>
+    <description>A specialized cryotech assault rifle, infamous for it's cruelty. The supercooled, explosive projectiles it fires pierce flesh as easily as any other bullet, then detonate within the body as they lose their icy coating. The constant agony they cause is quite potent, and quite illegal in many societies.</description>
+    <graphicData>
+      <texPath>Things/Weapons/CryoRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+   <generateCommonality>0</generateCommonality>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.4</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <Steel>250</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RT_CryoBullet</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>28</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <researchPrerequisites>
+      <li>RT_MetroidDefenses</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+	<!-- Cryo Launcher -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RT_CryoLauncher</defName>
+    <label>Cryo Launcher</label>
+    <description>A grenade launcher that has been modified to fire an explosive cryogenic shell. Designed to rapidly drop temperatures in a small radius, rather than inflicting damage.</description>
+    <graphicData>
+      <texPath>Things/Weapons/CryoLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      		<drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+   <generateCommonality>0</generateCommonality>
+    <statBases>
+      <MarketValue>2800</MarketValue>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>5</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <costList>
+      <Steel>300</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>RT_MetroidDefenses</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RT_CryoExplosive</defaultProjectile>
+        <forcedMissRadius>1.3</forcedMissRadius>
+        <warmupTime>3</warmupTime>
+        <range>22</range>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.3</MoveSpeed>
+		</equippedStatOffsets>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <researchPrerequisites>
+      <li>RT_MetroidDefenses</li>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+	<!-- Dart Rifle -->
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>RT_DartRifle</defName>
+    <label>Hypodermic Rifle</label>
+    <description>A specialized long-range rifle designed to fire chemical syringes at distant metroids, which administer a solution that helps satisfy food needs and will eventually sedate it for a short amount of time. Darts have been designed to do minimal damage, making it a very ineffective weapon to use in combat, alongside the otherwise potent effect being no more that a slight agitation for any other type of being.\n\nCan safely be used on owned metroids, but a considerable distance (or multiple guns) is suggested, especially for larger metroids.</description>
+    <graphicData>
+      <texPath>Things/Weapons/DartRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      		<drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0</generateCommonality>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.90</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <RT_AeionExtract>5</RT_AeionExtract>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <!--<comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>5</maxCharges>
+        <ammoDef>Chemfuel</ammoDef>
+        <ammoCountPerCharge>5</ammoCountPerCharge>
+        <baseReloadTicks>60</baseReloadTicks>
+        <soundReload>Standard_Reload</soundReload>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+    </comps>-->
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>RT_SedativeDart</defaultProjectile>
+        <warmupTime>2.4</warmupTime>
+        <range>39.9</range>
+        <soundCast>RT_SoundDartRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <researchPrerequisites>
+      <li>RT_MetroidDefenses</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

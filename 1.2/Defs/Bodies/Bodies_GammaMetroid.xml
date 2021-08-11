@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+    <BodyDef>
+        <defName>RT_GammaBody</defName>
+        <label>gamma metroid</label>
+        <corePart>
+            <def>RT_GammaMainBody</def>
+            <height>Middle</height>
+            <depth>Outside</depth>
+            <parts>
+                <!-- Head, and the corresponding parts -->
+                <!--Head is separate from the eyes and mouth parts, since it is conceptual-->
+                <li>
+                    <def>RT_Head</def>
+                    <customLabel>head</customLabel>
+                    <coverage>0</coverage>
+                    <groups>
+                        <li>UpperHead</li>
+                        <li>FullHead</li>
+                        <li>HeadAttackTool</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>Skull</def>
+                            <coverage>0.15</coverage>
+                            <depth>Inside</depth>
+                            <groups>
+                                <li>UpperHead</li>
+                                <li>FullHead</li>
+                            </groups>
+                        </li>
+                        <li>
+                            <def>AnimalJaw</def>
+                            <customLabel>mouth</customLabel>
+                            <coverage>0.05</coverage>
+                            <groups>
+                                <li>Teeth</li>
+                                <li>UpperHead</li>
+                                <li>FullHead</li>
+                            </groups>
+                        </li>
+                    </parts>
+                </li>
+                    <!-- Left Eyes -->
+                <li>
+                    <def>Eye</def>
+                    <customLabel>upper left eye</customLabel>
+                    <coverage>0.03</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>middle left eye</customLabel>
+                    <coverage>0.03</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>lower left eye</customLabel>
+                    <coverage>0.03</coverage>
+                </li>
+                    <!-- Right Eyes-->
+                <li>
+                    <def>Eye</def>
+                    <customLabel>upper right eye</customLabel>
+                    <coverage>0.03</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>middle right eye</customLabel>
+                    <coverage>0.03</coverage>
+                </li>
+                <li>
+                    <def>Eye</def>
+                    <customLabel>lower right eye</customLabel>
+                    <coverage>0.03</coverage>
+                </li>
+				<!-- Legs -->
+				<li>
+					<def>Leg</def>
+					<customLabel>left front leg</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>HeadClaw</li>
+					</groups>
+					<height>Middle</height>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>right front leg</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>HeadClaw</li>
+					</groups>
+					<height>Middle</height>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>left back leg</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>HeadClaw</li>
+					</groups>
+					<height>Middle</height>
+				</li>
+				<li>
+					<def>Leg</def>
+					<customLabel>right back leg</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>HeadClaw</li>
+					</groups>
+					<height>Middle</height>
+				</li>
+                <!-- Cell Structure -->
+                <li>
+                    <def>RT_Membrane</def>
+                    <customLabel>membrane</customLabel>
+                    <coverage>0.10</coverage>
+                    <groups>
+                            <li>Torso</li>
+                    </groups>
+                    <parts>
+                        <li>
+                            <def>RT_Protoplasm</def>
+                            <coverage>0.05</coverage>
+                            <depth>Inside</depth>
+                            <groups>
+								<li>Torso</li>
+                            </groups>
+                        </li>
+                        <li>
+                            <def>RT_Nucleus</def>
+                            <coverage>0.005</coverage>
+                            <depth>Inside</depth>
+                            <groups>
+								<li>Torso</li>
+                            </groups>
+                        </li>
+						<li>
+                        <def>Heart</def>
+							<customLabel>nucleus core</customLabel>
+							<coverage>0.001</coverage>
+							<depth>Inside</depth>
+							<groups>
+								<li>Torso</li>
+							</groups>
+						</li>
+                        <li>
+                            <def>RT_Mitosis</def>
+                            <coverage>0.0000001</coverage>
+                            <depth>Inside</depth>
+                            <groups>
+								<li>Torso</li>
+                            </groups>
+                        </li>
+                    </parts>
+                </li>
+                <!-- Misc Parts-->
+                <li>
+                    <def>Shell</def>
+                    <customLabel>shell</customLabel>
+                    <coverage>0.35</coverage>
+                    <groups>
+                        <li>Torso</li>
+                    </groups>
+                </li>
+            </parts>
+        </corePart>
+    </BodyDef>
+ 
+</Defs>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_InfantTallonMetroid</defName>
+		<label>Infant Tallon Metroid</label>
+		<description>An Infant Tallon Metroid.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_InfantTallonMetroid</defName>
+		<label>infant tallon metroid</label>
+		<race>RT_InfantTallonMetroid</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>2</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>infant tallon metroid</label>
+			<labelPlural>infant tallon metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/InfantTallonMetroid/RT_InfantTallonMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/InfantTallonMetroid/RT_Dessicated_InfantTallonMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

@@ -1,0 +1,5 @@
+C:\Users\Muffin\source\repos\Rimtroid_Evolution\Rimtroid_Evolution\obj\Debug\Rimtroid_Evolution.csprojAssemblyReference.cache
+C:\Users\Muffin\source\repos\Rimtroid_Evolution\Rimtroid_Evolution\obj\Debug\Rimtroid_Evolution.dll
+C:\Users\Muffin\source\repos\Rimtroid_Evolution\Rimtroid_Evolution\obj\Debug\Rimtroid_Evolution.pdb
+C:\Users\Muffin\source\repos\Rimtroid_Evolution\Assemblies\Rimtroid_Evolution.dll
+C:\Users\Muffin\source\repos\Rimtroid_Evolution\Assemblies\Rimtroid_Evolution.pdb

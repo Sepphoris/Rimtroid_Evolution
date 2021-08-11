@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Bases ==============-->
+
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_GammaShockwaveMote</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <solidTime>0.05</solidTime>
+      <fadeOutTime>0.1</fadeOutTime>
+    </mote>
+    <graphicData>
+      <texPath>Things/Mote/ExplosionFlash</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+  </ThingDef>
+
+</Defs>
