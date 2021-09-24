@@ -132,7 +132,7 @@ namespace RT_Rimtroid
 					}
 					//Log.Message(" Attempting to play sound", true);
 					SoundInfo info = SoundInfo.InMap(new TargetInfo(base.Position, base.Map, false), MaintenanceType.PerTick);
-					this.sustainer = SustainerAggregatorUtility.AggregateOrSpawnSustainerFor(this, RT_DefOf.RT_ElectricBurning, info);
+					this.sustainer = SustainerAggregatorUtility.AggregateOrSpawnSustainerFor(this, RT_RimtroidDefOf.RT_ElectricBurning, info);
 				}
 				if (ElectricDischarge.ElectricCount < 15 && this.ElectricSize > 0.7f && Rand.Value < this.ElectricSize * 0.01f)
 				{

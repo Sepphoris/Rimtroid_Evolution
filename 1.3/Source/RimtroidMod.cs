@@ -29,7 +29,7 @@ namespace RT_Rimtroid
         public override void WriteSettings()
         {
             base.WriteSettings();
-            Utils.ApplySettings();
+            RT_Utils.ApplySettings();
         }
     }
 }

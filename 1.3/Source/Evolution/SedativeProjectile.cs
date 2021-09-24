@@ -6,7 +6,7 @@ namespace RT_Rimtroid
 {
     public class SedativeProjectile : Bullet
     {
-        public HediffDef HediffToAdd = RT_DefOf.RT_SedativeBuildup;
+        public HediffDef HediffToAdd = RT_RimtroidDefOf.RT_SedativeBuildup;
 
         protected override void Impact(Thing hitThing)
         {

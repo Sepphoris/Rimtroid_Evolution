@@ -23,7 +23,7 @@ namespace RT_Rimtroid
                 job.exitMapOnArrival = true;
                 if (comp.currentQueen.jobs.TryTakeOrderedJob(job))
                 {
-                    var metroidFaction = Find.FactionManager.FirstFactionOfDef(RT_DefOf.RT_Metroids);
+                    var metroidFaction = Find.FactionManager.FirstFactionOfDef(RT_RimtroidDefOf.RT_Metroids);
                     metroidFaction.leader = comp.currentQueen;
                     comp.metroidRaidGracePeriod = Find.TickManager.TicksGame + (Rand.RangeInclusive(30, 60) * GenDate.TicksPerDay);
                     Find.LetterStack.ReceiveLetter("LetterLabelQueenLeavesPeacefully".Translate(comp.currentQueen.Named("PAWN")), "LetterQueenLeavesPeacefully".Translate(comp.currentQueen.Named("PAWN"))

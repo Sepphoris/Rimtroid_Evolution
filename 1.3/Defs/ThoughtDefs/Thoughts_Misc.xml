@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!--===============Killed a Metroid Queen===============-->
+	<!--===============Killed a Metroid Queen===============-->
 
 	<ThoughtDef>
 		<defName>RT_KilledMetroidQueen</defName>
-    <showBubble>true</showBubble>
+		<showBubble>true</showBubble>
 		<icon>Things/Mote/ThoughtSymbol/Food</icon>
 		<durationDays>28</durationDays>
 		<stages>
@@ -13,6 +13,31 @@
 				<label>killed the metroid queen</label>
 				<description>I killed the one - and only - metroid queen on the planet!</description>
 				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RT_FeedOn</defName>
+		<durationDays>0.8</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>a metroid fed on me!</label>
+				<description>That flying... THING violated my very soul, and drained my will to live. I pray it does not happen again...</description>
+				<baseMoodEffect>-14</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RT_FoodTarget</defName>
+		<workerClass>RT_Core.ThoughtWorker_FoodTarget</workerClass>
+		<stages>
+			<li>
+				<label>metroid food source</label>
+				<description>Prisoners are generally kept for ransom or labor. But now, I am little more than cattle for the flying leeches they keep here.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
 			</li>
 		</stages>
 	</ThoughtDef>

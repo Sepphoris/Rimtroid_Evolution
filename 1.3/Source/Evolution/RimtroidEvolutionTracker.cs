@@ -24,13 +24,13 @@ namespace RT_Rimtroid
 
         public static Dictionary<ThingDef, Tuple<string, string>> spottedLabels = new Dictionary<ThingDef, Tuple<string, string>>
         {
-            {RT_DefOf.RT_MetroidLarvae, new Tuple<string, string>("LetterLabelLarvaTutorial", "LetterLarvaTutorial")},
-            {RT_DefOf.RT_BanteeMetroid, new Tuple<string, string>("LetterLabelBanteeTutorial", "LetterBanteeTutorial")},
-            {RT_DefOf.RT_GammaMetroid, new Tuple<string, string>("LetterLabelGammaTutorial", "LetterGammaTutorial")},
-            {RT_DefOf.RT_OmegaMetroid, new Tuple<string, string>("LetterLabelOmegaTutorial", "LetterOmegaTutorial")},
-            {RT_DefOf.RT_AlphaMetroid, new Tuple<string, string>("LetterLabelAlphaTutorial", "LetterAlphaTutorial")},
-            {RT_DefOf.RT_ZetaMetroid, new Tuple<string, string>("LetterLabelZetaTutorial", "LetterZetaTutorial")},
-            {RT_DefOf.RT_QueenMetroid, new Tuple<string, string>("LetterLabelQueenTutorial", "LetterQueenTutorial")},
+            {RT_RimtroidDefOf.RT_MetroidLarvae, new Tuple<string, string>("LetterLabelLarvaTutorial", "LetterLarvaTutorial")},
+            {RT_RimtroidDefOf.RT_BanteeMetroid, new Tuple<string, string>("LetterLabelBanteeTutorial", "LetterBanteeTutorial")},
+            {RT_RimtroidDefOf.RT_GammaMetroid, new Tuple<string, string>("LetterLabelGammaTutorial", "LetterGammaTutorial")},
+            {RT_RimtroidDefOf.RT_OmegaMetroid, new Tuple<string, string>("LetterLabelOmegaTutorial", "LetterOmegaTutorial")},
+            {RT_RimtroidDefOf.RT_AlphaMetroid, new Tuple<string, string>("LetterLabelAlphaTutorial", "LetterAlphaTutorial")},
+            {RT_RimtroidDefOf.RT_ZetaMetroid, new Tuple<string, string>("LetterLabelZetaTutorial", "LetterZetaTutorial")},
+            {RT_RimtroidDefOf.RT_QueenMetroid, new Tuple<string, string>("LetterLabelQueenTutorial", "LetterQueenTutorial")},
         };
         public RimtroidEvolutionTracker()
         {

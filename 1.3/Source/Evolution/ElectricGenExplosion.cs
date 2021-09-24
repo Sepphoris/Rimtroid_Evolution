@@ -34,7 +34,7 @@ namespace RT_Rimtroid
 			{
 				armorPenetration = (float)damAmount * 0.015f;
 			}
-			ElectricExplosion explosion = (ElectricExplosion)GenSpawn.Spawn(RT_DefOf.RT_ExplosionTest, center, map, WipeMode.Vanish);
+			ElectricExplosion explosion = (ElectricExplosion)GenSpawn.Spawn(RT_RimtroidDefOf.RT_ExplosionTest, center, map, WipeMode.Vanish);
 			Log.Message("Spawned RT_ExplosionTest item");
 			explosion.radius = radius;
 			explosion.damType = damType;

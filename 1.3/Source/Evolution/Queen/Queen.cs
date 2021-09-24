@@ -83,7 +83,7 @@ namespace RT_Rimtroid
                 var pawn = spawnedPawns[num];
                 if (!pawn.Dead && !pawn.Downed && !pawn.IsPrisoner)
                 {
-                    pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_GoToQueenToDespawn, parent));
+                    pawn.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_RimtroidDefOf.RT_GoToQueenToDespawn, parent));
                 }
             }
         }
@@ -142,7 +142,7 @@ namespace RT_Rimtroid
                 Find.LetterStack.ReceiveLetter("LetterLabelMetroidQueenKilled".Translate(), "LetterMetroidQueenKilled".Translate(this.Named("PAWN")), LetterDefOf.PositiveEvent, this);
                 IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
                 parms.target = Find.World;
-                Find.Storyteller.incidentQueue.Add(RT_DefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
+                Find.Storyteller.incidentQueue.Add(RT_RimtroidDefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
                 Current.Game.GetComponent<RimtroidEvolutionTracker>().lastQueenDeathTick = Find.TickManager.TicksGame;
             }
         }
@@ -154,7 +154,7 @@ namespace RT_Rimtroid
             {
                 spawnPool = new SpawnPool();
                 spawnPool.Restock(this);
-                if (this.Faction?.def == RT_DefOf.RT_Metroids && this.Faction.leader == this)
+                if (this.Faction?.def == RT_RimtroidDefOf.RT_Metroids && this.Faction.leader == this)
                 {
                     Current.Game.GetComponent<RimtroidEvolutionTracker>().currentQueen = this;
                 }
@@ -173,7 +173,7 @@ namespace RT_Rimtroid
         public override void PostMake()
         {
             base.PostMake();
-            this.Name = new NameSingle(Utils.GenerateTextFromRule(RT_DefOf.RT_QueenNames, "r_name", this.thingIDNumber));
+            this.Name = new NameSingle(RT_Utils.GenerateTextFromRule(RT_RimtroidDefOf.RT_QueenNames, "r_name", this.thingIDNumber));
         }
 
         public override void ExposeData()

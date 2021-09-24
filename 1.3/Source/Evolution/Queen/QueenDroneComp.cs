@@ -29,7 +29,7 @@ namespace RT_Rimtroid
             for (int i = 0; i < lord.ownedPawns.Count; i++)
             {
                 Pawn pawn = lord.ownedPawns[i];
-                pawn.mindState.duty = new PawnDuty(RT_DefOf.RT_FollowQueen, queen, 12);
+                pawn.mindState.duty = new PawnDuty(RT_RimtroidDefOf.RT_FollowQueen, queen, 12);
             }
         }
 
@@ -90,7 +90,7 @@ namespace RT_Rimtroid
         public void AssignToQueen(Queen queen)
         {
             this.queen = queen;
-            Metroid.health.AddHediff(RT_DefOf.RT_HealingBonus);
+            Metroid.health.AddHediff(RT_RimtroidDefOf.RT_HealingBonus);
             if (this.queen.Faction != Metroid.Faction)
             {
                 Metroid.SetFaction(this.queen.Faction);
@@ -153,7 +153,7 @@ namespace RT_Rimtroid
             {
                 Metroid.GetLord()?.ownedPawns.Remove(Metroid);
                 Metroid.mindState.duty = null;
-                var healingBonus = Metroid.health.hediffSet.GetFirstHediffOfDef(RT_DefOf.RT_HealingBonus);
+                var healingBonus = Metroid.health.hediffSet.GetFirstHediffOfDef(RT_RimtroidDefOf.RT_HealingBonus);
                 if (healingBonus != null)
                 {
                     Metroid.health.RemoveHediff(healingBonus);

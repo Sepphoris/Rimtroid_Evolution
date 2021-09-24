@@ -10,7 +10,7 @@ namespace RT_Rimtroid
     {
         protected override bool CanFireNowSub(IncidentParms parms)
         {
-            var metroidFaction = Find.FactionManager.FirstFactionOfDef(RT_DefOf.RT_Metroids);
+            var metroidFaction = Find.FactionManager.FirstFactionOfDef(RT_RimtroidDefOf.RT_Metroids);
             var comp = Current.Game.GetComponent<RimtroidEvolutionTracker>();
             Log.Message("metroidFaction.leader: " + metroidFaction.leader);
             Log.Message("comp.currentQueen is null || comp.currentQueen.Dead: " + (comp.currentQueen is null || comp.currentQueen.Dead));

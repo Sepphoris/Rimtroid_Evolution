@@ -58,15 +58,15 @@ namespace RT_Rimtroid
     {
         private static void Prefix(ref bool __result, Pawn p, Thing food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
         {
-            if (food?.def == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
+            if (food?.def == RT_RimtroidDefOf.RT_ProtusSphere && !p.IsAnyMetroid())
             {
                 __result = false;
             }
-            else if (p.IsAnyMetroid() && food.def != RT_DefOf.RT_ProtusSphere)
+            else if (p.IsAnyMetroid() && food.def != RT_RimtroidDefOf.RT_ProtusSphere)
             {
                 __result = false;
             }
-            else if (p.IsAnyMetroid() && food.def == RT_DefOf.RT_ProtusSphere)
+            else if (p.IsAnyMetroid() && food.def == RT_RimtroidDefOf.RT_ProtusSphere)
             {
                 __result = true;
             }
@@ -78,15 +78,15 @@ namespace RT_Rimtroid
     {
         private static void Postfix(ref bool __result, Pawn p, ThingDef food, Pawn getter = null, bool careIfNotAcceptableForTitle = true)
         {
-            if (food == RT_DefOf.RT_ProtusSphere && !p.IsAnyMetroid())
+            if (food == RT_RimtroidDefOf.RT_ProtusSphere && !p.IsAnyMetroid())
             {
                 __result = false;
             }
-            else if (p.IsAnyMetroid() && food != RT_DefOf.RT_ProtusSphere)
+            else if (p.IsAnyMetroid() && food != RT_RimtroidDefOf.RT_ProtusSphere)
             {
                 __result = false;
             }
-            else if (p.IsAnyMetroid() && food == RT_DefOf.RT_ProtusSphere)
+            else if (p.IsAnyMetroid() && food == RT_RimtroidDefOf.RT_ProtusSphere)
             {
                 __result = true;
             }
@@ -161,7 +161,7 @@ namespace RT_Rimtroid
             for (int i = 0; i < thingList.Count; i++)
             {
                 var t = thingList[i];
-                if (t.def == RT_DefOf.RT_ProtusSphere && !pawn.IsAnyMetroid())
+                if (t.def == RT_RimtroidDefOf.RT_ProtusSphere && !pawn.IsAnyMetroid())
                 {
                     string text = (!t.def.ingestible.ingestCommandString.NullOrEmpty()) ? string.Format(t.def.ingestible.ingestCommandString, t.LabelShort) : ((string)"ConsumeThing".Translate(t.LabelShort, t));
                     FloatMenuOption floatMenuOption = opts.FirstOrDefault((FloatMenuOption x) => x.Label.Contains(text));
@@ -180,7 +180,7 @@ namespace RT_Rimtroid
     {
         public static bool Prefix(ref FloatMenuOption __result, Faction __instance, Building_CommsConsole console, Pawn negotiator)
         {
-            if (__instance.def == RT_DefOf.RT_Metroids)
+            if (__instance.def == RT_RimtroidDefOf.RT_Metroids)
             {
                 __result = null;
                 return false;
@@ -318,7 +318,7 @@ namespace RT_Rimtroid
                     {
                         if (!___pawn.InMentalState && Rand.Chance(berserkChance))
                         {
-                            if (___pawn.CurJobDef != JobDefOf.LayDown && ___pawn.CurJobDef != RT_DefOf.RT_EatFromStation && ___pawn.CurJobDef != RT_DefOf.RT_AbsorbingEnergy && !InCombat(___pawn))
+                            if (___pawn.CurJobDef != JobDefOf.LayDown && ___pawn.CurJobDef != RT_RimtroidDefOf.RT_EatFromStation && ___pawn.CurJobDef != RT_RimtroidDefOf.RT_AbsorbingEnergy && !InCombat(___pawn))
                             {
                                 //Log.Message(___pawn + " gets berserk state", true);
                                 if (___pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, forceWake: true))
@@ -412,6 +412,61 @@ namespace RT_Rimtroid
             }
         }
     }
+
+
+    [HarmonyPatch(typeof(Pawn_JobTracker))]
+    [HarmonyPatch("StartJob")]
+    public static class StartJob_Patch
+    {
+        private static bool Prefix(Pawn ___pawn, Job newJob, JobCondition lastJobEndCondition)
+        {
+            if (newJob.def == JobDefOf.Vomit && ___pawn.IsAnyMetroid())
+            {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(Hediff), "Severity", MethodType.Setter)]
+    public static class Severity_Patch
+    {
+        private static void Prefix(Hediff __instance, ref float value)
+        {
+            if (__instance.def == HediffDefOf.Malnutrition && (__instance.pawn?.IsAnyMetroid() ?? false) && value < 0)
+            {
+                value *= 3;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Pawn), "GetGizmos")]
+    public class Pawn_GetGizmos_Patch
+    {
+        public static void Postfix(ref IEnumerable<Gizmo> __result, Pawn __instance)
+        {
+            if (__instance.IsPrisoner && __instance.Map.mapPawns.AllPawns.Any(x => x.IsAnyMetroid() && x.def.HasModExtension<RT_EnergyDrain>()))
+            {
+                List<Gizmo> list = __result.ToList<Gizmo>();
+                var comp = __instance.GetComp<CompPrisonerFeed>();
+                Command_Toggle command_Toggle = new Command_Toggle();
+                command_Toggle.defaultLabel = "RT.PrisonersForEatingLabel".Translate();
+                command_Toggle.defaultDesc = "RT.PrisonersForEatingDesc".Translate();
+                command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Commands/TogglePrisoners");
+                command_Toggle.isActive = (() => comp.canBeEaten);
+                command_Toggle.toggleAction = delegate
+                {
+                    comp.canBeEaten = !comp.canBeEaten;
+                };
+                command_Toggle.hotKey = KeyBindingDefOf.Misc3;
+                command_Toggle.turnOffSound = null;
+                command_Toggle.turnOnSound = null;
+                list.Add(command_Toggle);
+                __result = list;
+            }
+        }
+    }
+
     //[HarmonyPatch(typeof(Pawn), "Kill")]
     //public static class RT_Desiccator_Pawn_Kill_Patch
     //{

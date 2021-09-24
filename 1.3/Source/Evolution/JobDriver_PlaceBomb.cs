@@ -31,7 +31,7 @@ namespace RT_Rimtroid
 				{
 					job.ability.StartCooldown(1000);
 					var alphaBombComp = this.pawn.TryGetComp<CompAlphaBomb>();
-					alphaBombComp.SpawnTrap(RT_DefOf.RT_MetroidBomb);
+					alphaBombComp.SpawnTrap(RT_RimtroidDefOf.RT_MetroidBomb);
 					ReadyForNextToil();
 				}
 			};

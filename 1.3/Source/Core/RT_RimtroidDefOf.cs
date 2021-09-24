@@ -9,7 +9,7 @@ using Verse.AI;
 namespace RT_Rimtroid
 {
     [DefOf]
-    public static class RT_DefOf
+    public static class RT_RimtroidDefOf
     {
 		public static ThingDef RT_BanteeMetroid;
 		public static ThingDef RT_MetroidLarvae;
@@ -43,5 +43,13 @@ namespace RT_Rimtroid
 
 		public static JobDef RT_EatFromStation;
 		public static JobDef RT_AbsorbingEnergy;
+
+
+		public static ThingDef RT_FeedingStationSE;
+		public static ThingDef RT_FeedingStationSF;
+		public static ThingDef RT_FeedingStationLF;
+		public static ThingDef RT_FeedingStationLE;
+
+		public static HediffDef RT_LifeDrainSickness;
 	}
 }

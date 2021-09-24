@@ -5,6 +5,6 @@ namespace RT_Rimtroid
 {
     public class ThingDefTranquillizerBullet : ThingDef
     {
-        public HediffDef HediffToAdd = RT_DefOf.RT_SedativeBuildup;
+        public HediffDef HediffToAdd = RT_RimtroidDefOf.RT_SedativeBuildup;
     }
 }

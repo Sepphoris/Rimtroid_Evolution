@@ -24,7 +24,7 @@ namespace RT_Rimtroid
                 job.exitMapOnArrival = true;
                 if (comp.currentQueen.jobs.TryTakeOrderedJob(job))
                 {
-                    var metroidFaction = Find.FactionManager.FirstFactionOfDef(RT_DefOf.RT_Metroids);
+                    var metroidFaction = Find.FactionManager.FirstFactionOfDef(RT_RimtroidDefOf.RT_Metroids);
                     metroidFaction.leader = comp.currentQueen;
                     Find.LetterStack.ReceiveLetter("LetterLabelQueenLeavesHungry".Translate(comp.currentQueen.Named("PAWN")), "LetterQueenLeavesHungry".Translate(comp.currentQueen.Named("PAWN"))
                         , this.def.letterDef, comp.currentQueen);

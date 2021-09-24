@@ -298,7 +298,32 @@
 		</points>
 		</ageFractionChanceCurve>
 </li>
+
+	<HediffDef>
+		<defName>RT_LatchedMetroid</defName>
+		<hediffClass>RT_Core.Hediff_LatchedMetroid</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<label>latched metroid</label>
+		<description>GET THIS THING OFF OF ME</description>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
 	
+	<HediffDef>
+		<defName>RT_MetroidAbsorbEnergy</defName>
+		<hediffClass>RT_Core.Hediff_MetroidAbsorbEnergy</hediffClass>
+		<defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+		<label>processing energy</label>
+		<description>metroid is processing energy, sustaining it and rapidly increasing it's physical age.</description>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
 <!--Hediff notes:
 (233,129,69) - Orange label
 (0.8,0,0.8) - Purple label

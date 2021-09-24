@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--========= General ============-->
+
+  <JobDef>
+    <defName>RT_AbsorbingEnergy</defName>
+    <driverClass>RT_Core.JobDriver_AbsorbingEnergy</driverClass>
+    <reportString>absorbing energy from TargetA.</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>RT_AbsorbEnergyFinal</defName>
+    <driverClass>RT_Core.JobDriver_AbsorbEnergyFinal</driverClass>
+    <reportString>absorbing energy</reportString>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

@@ -24,7 +24,7 @@ namespace RT_Rimtroid
             Log.Message("Activating");
             Find.Targeter.BeginTargeting(ForLoc(pawn), delegate (LocalTargetInfo x)
             {
-                var job = JobMaker.MakeJob(RT_DefOf.RT_PlaceAlphaBomb, x.Cell);
+                var job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_PlaceAlphaBomb, x.Cell);
                 job.ability = this;
                 this.pawn.jobs.TryTakeOrderedJob(job);
             }, null, null);
