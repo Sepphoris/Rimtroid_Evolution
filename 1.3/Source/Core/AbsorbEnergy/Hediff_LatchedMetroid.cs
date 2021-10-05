@@ -91,17 +91,17 @@ namespace RT_Core
                 this.pawn.jobs.StopAll();
                 Utils.MakeFlee(this.pawn, latchedMetroid, 50, new List<Thing> { latchedMetroid });
             }
-            this.pawn.needs?.mood?.thoughts?.memories?.TryGainMemory(RT_DefOf.RT_FeedOn);
+            this.pawn.needs?.mood?.thoughts?.memories?.TryGainMemory(RT_RimtroidDefOf.RT_FeedOn);
             if (this.pawn.ParentHolder is Corpse corpse2 && Rand.Chance(0.7f))
             {
                 corpse2.GetComp<CompRottable>().RotProgress = corpse2.GetComp<CompRottable>().PropsRot.TicksToRotStart;
             }
-            var metroidAbsorbEnergy = HediffMaker.MakeHediff(RT_DefOf.RT_MetroidAbsorbEnergy, latchedMetroid) as Hediff_MetroidAbsorbEnergy;
+            var metroidAbsorbEnergy = HediffMaker.MakeHediff(RT_RimtroidDefOf.RT_MetroidAbsorbEnergy, latchedMetroid) as Hediff_MetroidAbsorbEnergy;
             metroidAbsorbEnergy.drainFoodGain = this.drainFoodGain;
             metroidAbsorbEnergy.drainAgeFactor = this.drainAgeFactor;
             metroidAbsorbEnergy.drainEnergyProcessing = this.drainEnergyProcessing;
             latchedMetroid.health.AddHediff(metroidAbsorbEnergy);
-            latchedMetroid.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_DefOf.RT_AbsorbEnergyFinal));
+            latchedMetroid.jobs.TryTakeOrderedJob(JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbEnergyFinal));
         }
 
 

@@ -8,7 +8,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace RT_Core
+namespace RT_Rimtroid
 {
 	public class JobDriver_AbsorbEnergyFinal : JobDriver
 	{

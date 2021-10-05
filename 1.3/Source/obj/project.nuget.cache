@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hoxonywFVxObCf1cZq+TihhJtXnvQEFQ/nDWkgFcCNaeniKvSUwwai6HH3OMsMgt5/Z4xWtBzMDbsxL4wc3ZjA==",
+  "dgSpecHash": "zo5rpZadpbpm7fwe+AUgtO6iDsG6atNTAPErGcUHbK2iYbF/f6wZmkeScVLWkkIfxQ46rNUrLdzYAVr1E0+Sbw==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Rimtroid_Evolution\\1.3\\Source\\Metroid.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3117\\krafs.rimworld.ref.1.3.3117.nupkg.sha512",
+    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3142-beta\\krafs.rimworld.ref.1.3.3142-beta.nupkg.sha512",
     "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
   ],
   "logs": []

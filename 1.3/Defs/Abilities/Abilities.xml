@@ -15,7 +15,7 @@
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/EnergyDrain</iconPath>
 		<verbProperties>
-			<verbClass>RT_Core.Verb_CastAbility_EnergyAbsorb</verbClass>
+			<verbClass>RT_Rimtroid.Verb_CastAbility_EnergyAbsorb</verbClass>
 			<range>0</range>
 			<soundCast>RT_SoundShockwave</soundCast>
 			<warmupTime>0</warmupTime>
@@ -70,7 +70,7 @@
 		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
 		<iconPath>UI/Abilities/EnergyDrain</iconPath>
 		<verbProperties>
-			<verbClass>RT_Core.Verb_CastAbility_EnergyAbsorb</verbClass>
+			<verbClass>RT_Rimtroid.Verb_CastAbility_EnergyAbsorb</verbClass>
 			<range>0</range>
 			<soundCast>RT_SoundShockwave</soundCast>
 			<warmupTime>0</warmupTime>

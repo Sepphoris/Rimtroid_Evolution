@@ -28,6 +28,7 @@
 						<hediffWhiteList><!--Whitelist that tells what hediffs can pass-->
 							<li>RT_BanteeToLarvaeWhitelist</li>
 						</hediffWhiteList>
+						<pawnKindDefToEvolve>RT_MetroidLarvae</pawnKindDefToEvolve>
 					</li>
 				</possibleEvolutionPaths>
 			</li>
@@ -59,7 +60,7 @@
 						<hediffWhiteList>
 							<li>RT_LarvaeToAlphaWhitelist</li>
 						</hediffWhiteList>
-						<pawnKindDefToConvert>RT_AlphaMetroid</pawnKindDefToConvert>
+						<pawnKindDefToEvolve>RT_AlphaMetroid</pawnKindDefToEvolve>
 						<ticksToConvert>60~120</ticksToConvert>
 					</li>
 				</possibleEvolutionPaths>

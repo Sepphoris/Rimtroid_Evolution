@@ -1,5 +1,6 @@
 ﻿using RimWorld;
 using RimWorld.Planet;
+using RT_Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace RT_Core
+namespace RT_Rimtroid
 {
     public class JobDriver_AbsorbingEnergy : JobDriver
     {
@@ -26,7 +27,7 @@ namespace RT_Core
             {
                 if (Target is Corpse corpse)
                 {
-                    var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_LatchedMetroid, corpse.InnerPawn) as Hediff_LatchedMetroid;
+                    var hediff = HediffMaker.MakeHediff(RT_RimtroidDefOf.RT_LatchedMetroid, corpse.InnerPawn) as Hediff_LatchedMetroid;
                     hediff.latchedMetroid = this.pawn;
                     hediff.drainAgeFactor = 0;
                     hediff.drainFoodGain = options.drainFoodGain.RandomInRange;
@@ -67,12 +68,12 @@ namespace RT_Core
                         Utils.MakeFlee(victim, this.pawn, 50, new List<Thing> { this.pawn });
                         Job stand = JobMaker.MakeJob(JobDefOf.Wait, 30);
                         pawn.jobs.jobQueue.EnqueueLast(stand);
-                        Job job = JobMaker.MakeJob(RT_DefOf.RT_AbsorbingEnergy, victim);
+                        Job job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbingEnergy, victim);
                         pawn.jobs.jobQueue.EnqueueLast(job);
                     }
                     else
                     {
-                        var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_LatchedMetroid, victim) as Hediff_LatchedMetroid;
+                        var hediff = HediffMaker.MakeHediff(RT_RimtroidDefOf.RT_LatchedMetroid, victim) as Hediff_LatchedMetroid;
                         hediff.latchedMetroid = this.pawn;
                         hediff.drainAgeFactor = options.drainAgeFactor;
                         hediff.drainFoodGain = options.drainFoodGain.RandomInRange;

@@ -25,9 +25,9 @@ namespace RT_Core
                 var comp = CompEvolutionStage.comps[num];
                 if (comp.parent.Spawned && comp.parent.Map == this.map)
                 {
-                    if (comp.pawnKindDefToConvert != null && Find.TickManager.TicksGame > comp.tickConversion)
+                    if (comp.pawnKindDefToEvolve != null && Find.TickManager.TicksGame > comp.tickConversion)
                     {
-                        comp.TransformPawn(comp.pawnKindDefToConvert);
+                        comp.TransformPawn(comp.pawnKindDefToEvolve);
                     }
                 }
             }

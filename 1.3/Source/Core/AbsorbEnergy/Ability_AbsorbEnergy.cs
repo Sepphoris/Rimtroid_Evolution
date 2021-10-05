@@ -11,7 +11,7 @@ using Verse.AI;
 
 namespace RT_Core
 {
-    public class Ability_AbsorbEnergy : RT_Core.Ability_Base
+    public class Ability_AbsorbEnergy : Ability_Base
     {
         public Ability_AbsorbEnergy(Pawn pawn) : base(pawn) { }
         public Ability_AbsorbEnergy(Pawn pawn, AbilityDef def) : base(pawn, def) { }
@@ -49,7 +49,7 @@ namespace RT_Core
             {
                 var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_MetroidHunting, pawn);
                 pawn.health.AddHediff(hediff);
-                var job = JobMaker.MakeJob(RT_DefOf.RT_AbsorbingEnergy, target);
+                var job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbingEnergy, target);
                 pawn.jobs.TryTakeOrderedJob(job);
             }
             else if (target.Pawn != null)
@@ -58,7 +58,7 @@ namespace RT_Core
                 {
                     var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_MetroidHunting, pawn);
                     pawn.health.AddHediff(hediff);
-                    var job = JobMaker.MakeJob(RT_DefOf.RT_AbsorbingEnergy, target);
+                    var job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbingEnergy, target);
                     pawn.jobs.TryTakeOrderedJob(job);
                 }
                 else

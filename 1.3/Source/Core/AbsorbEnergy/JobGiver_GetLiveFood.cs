@@ -103,7 +103,7 @@ namespace RT_Core
 					&& corpse.GetRotStage() == RotStage.Fresh && corpse.Age < GenDate.TicksPerDay * 3 && pawn.CanReserve(x), ThingRequestGroup.Corpse); 
 				if (freshCorpse != null)
                 {
-					Job job = JobMaker.MakeJob(RT_DefOf.RT_AbsorbingEnergy, freshCorpse);
+					Job job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbingEnergy, freshCorpse);
 					var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_MetroidHunting, pawn);
 					pawn.health.AddHediff(hediff);
 					return job;
@@ -112,7 +112,7 @@ namespace RT_Core
 					ThingRequestGroup.Pawn);
 				if (prisoner != null)
                 {
-					Job job = JobMaker.MakeJob(RT_DefOf.RT_AbsorbingEnergy, prisoner);
+					Job job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbingEnergy, prisoner);
 					var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_MetroidHunting, pawn);
 					pawn.health.AddHediff(hediff);
 					return job;
@@ -121,7 +121,7 @@ namespace RT_Core
 				&& pawn.CanReserve(x), ThingRequestGroup.Pawn);
 				if (wildAnimal != null)
                 {
-					Job job = JobMaker.MakeJob(RT_DefOf.RT_AbsorbingEnergy, wildAnimal);
+					Job job = JobMaker.MakeJob(RT_RimtroidDefOf.RT_AbsorbingEnergy, wildAnimal);
 					var hediff = HediffMaker.MakeHediff(RT_DefOf.RT_MetroidHunting, pawn);
 					pawn.health.AddHediff(hediff);
 					return job;
