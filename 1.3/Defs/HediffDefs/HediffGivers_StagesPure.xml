@@ -25,8 +25,8 @@
 							<li>RT_Mitosis</li>
 						</partsToAffect>
 						<weight>1</weight><!--Weight is relative; a weight of 0.3 vs 0.1 means that 0.3 is 3x more likely to be chosen-->
-						<hediffWhiteList><!--Whitelist that tells what hediffs can pass-->
-							<li>RT_BanteeToLarvaeWhitelist</li>
+						<hediffWhiteList><!--Whitelist that tells what hediffs can pass. THIS MAKES THE PREVIOUS WHITELIST FIELDS VOID AND USEULESS; all hediffs to be accepted go directly here-->
+							<li>RT_ImmunityAcceleratorHediff</li>
 						</hediffWhiteList>
 						<pawnKindDefToEvolve>RT_MetroidLarvae</pawnKindDefToEvolve>
 					</li>

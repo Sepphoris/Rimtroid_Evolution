@@ -73,6 +73,7 @@
 			</li>
 			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
+				<spawnStage>RT_BanteeState</spawnStage> <!--This field tells the game what hediff stage the metroid should have when spawned in-->
 			</li>
 			<!--<li Class="CompProperties_UseEffect.cs">
 				<hediffname>RT_LowRest</hediffname>
