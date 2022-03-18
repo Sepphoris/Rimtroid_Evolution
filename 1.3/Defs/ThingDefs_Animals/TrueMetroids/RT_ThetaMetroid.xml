@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_ThetaMetroid</defName>
+		<label>TehtaMetroid</label>
+		<description>Exceedingly rare, Theta Metroids are amongst the most relentless and viscious variants out there. They appear to be a "cross" between a Gamma and a larva, as if their Alpha form evolved certain features, and regressed other ones. Thetas retain the ability to fly quickly and are able to latch onto prety to feed, similar to Larvae. And, like Gammas, they have grown long, spindly legs they can use on land, are able to generate electricity, and have evolved teeth that allow them to drain energy from fresh bodies if need be./n/nThetas are extremely ill-tempered, and are one of the few species that will turn on their own kind - including their masters - if left unfed. That said, their speed, durability, and tendancy to shred targets to pieces makes them a valuable offensive bioweapon, and their rarity makes them quite valuable to the right people.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_FusionMetroid</defName>
+		<label>theta metroid</label>
+		<race>RT_ThetaMetroid</race>
+		<combatPower>400</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>0</min>
+			<max>2</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>fusion metroid</label>
+			<labelPlural>fusion metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FusionMetroid/RT_FusionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FusionMetroid/RT_Dessicated_FusionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

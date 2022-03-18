@@ -2,10 +2,9 @@
 <Defs>
 
 
-	<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
 
 	<HediffGiverSetDef>
-		<defName>RT_EvoGrowth_Bantee</defName>
+		<defName>RT_EvoGrowth_Bantee</defName> <!--The name of the def. The metroid name that appears here is the metroid that uses the logic here-->
 		<hediffGivers>
 			<li Class="RT_Core.HediffGiver_AfterPeriod">
 				<!--<maxReroll>1</maxReroll>--><!-- determines how many times the chance field can fail before it's not attempted anymore. Leave out for infinite times-->
@@ -20,8 +19,8 @@
 				<possibleEvolutionPaths><!--What the metroid can turn into.-->
 					<li>
 						<requiredAge>14</requiredAge> <!--the minimum age for the below pawn-->
-						<pawnKindDefToEvolve>RT_MetroidLarvae</pawnKindDefToEvolve> <!--This is the pawn type it will evolve to. Should match the hediff-->
-						<hediff>RT_LarvaeState</hediff> <!--this is the "state" hediff that the metroid should get upon evolving.-->
+						<pawnKindDefToEvolve>RT_MetroidLarva</pawnKindDefToEvolve> <!--This is the pawn type it will evolve to. Should match the hediff-->
+						<hediff>RT_LarvaState</hediff> <!--this is the "state" hediff that the metroid should get upon evolving.-->
 						<partsToAffect>
 							<li>RT_Mitosis</li>
 						</partsToAffect>
@@ -41,6 +40,7 @@
 	</HediffGiverSetDef>
 
 
+<!--Larva to Alpha-->
 	<HediffGiverSetDef>
 		<defName>RT_EvoGrowth_Larvae</defName>
 		<hediffGivers>
@@ -78,7 +78,7 @@
 		</hediffGivers>
 	</HediffGiverSetDef>
 
-
+<!--Alpha to Gamma and Theta-->
 	<HediffGiverSetDef>
 		<defName>RT_EvoGrowth_Alpha</defName>
 		<hediffGivers>
@@ -100,7 +100,7 @@
 						<partsToAffect>
 							<li>RT_Mitosis</li>
 						</partsToAffect>
-						<weight>1</weight>
+						<weight>0.95</weight>
 						<hediffWhiteList>
 							<li>RT_AcceleratedAgingAlpha</li>
 							<li>RT_ImmunityAcceleratorHediff</li>
@@ -110,12 +110,29 @@
 							<li>RT_CellularDecay</li>
 						</hediffWhiteList>
 					</li>
+					<!--<li>
+						<requiredAge>200</requiredAge>
+						<pawnKindDefToEvolve>RT_ThetaMetroid</pawnKindDefToEvolve>
+						<hediff>RT_ThetaState</hediff>
+						<partsToAffect>
+							<li>RT_Mitosis</li>
+						</partsToAffect>
+						<weight>0.05</weight>
+						<hediffWhiteList>
+							<li>RT_AcceleratedAgingAlpha</li>
+							<li>RT_ImmunityAcceleratorHediff</li>
+        			<li>RT_CryoadapterHediff</li>
+        			<li>RT_NutrientRegulatorHediff</li>
+							<li>RT_AcceleratedDivision</li>
+							<li>RT_CellularDecay</li>
+						</hediffWhiteList>
+					</li>-->
 				</possibleEvolutionPaths>
 			</li>
 		</hediffGivers>
 	</HediffGiverSetDef>
 
-
+<!--Gamma to Zeta-->
 	<HediffGiverSetDef>
 		<defName>RT_EvoGrowth_Gamma</defName>
 		<hediffGivers>
@@ -152,7 +169,7 @@
 		</hediffGivers>
 	</HediffGiverSetDef>
 
-
+<!--Zeta to Omega-->
 	<HediffGiverSetDef>
 		<defName>RT_EvoGrowth_Zeta</defName>
 		<hediffGivers>
@@ -189,7 +206,7 @@
 		</hediffGivers>
 	</HediffGiverSetDef>
 
-
+<!--Omega to Queen-->
 	<HediffGiverSetDef>
 		<defName>RT_EvoGrowth_Omega</defName>
 		<hediffGivers>

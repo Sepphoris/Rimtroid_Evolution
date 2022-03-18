@@ -1,7 +1,7 @@
 So, a few things to keep in mind with the metroids:
 
 
--This is only the 'true' metroids. That means only Bantee, Larvae, Alpha, Gamma, Zeta, Omega, and Queen exist. Others (both canon and new variants exclusive to the world) will come later.
+-Metroids are being added over time.
 
 -Gamma, Zeta, and Omega Metroids have abilities the player can fire when they are tamed. These abilities are unique to different stages.
 
