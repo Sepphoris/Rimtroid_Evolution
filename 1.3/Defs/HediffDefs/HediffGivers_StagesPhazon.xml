@@ -114,8 +114,8 @@ Phazon Metroid to Ravager: incomplete
 		    					<li>RT_AcceleratedDivision</li>
 			    				<li>RT_CellularDecay</li>
 								</hediffWhiteList>   
-              </li>
-            </possibleEvolutionPaths>-->
+              </li>-->
+            </possibleEvolutionPaths>
         </li>
 		</hediffGivers>
 	</HediffGiverSetDef>
