@@ -127,7 +127,7 @@ Despite not being able to grow into the larger metroid forms, Tallong Metroids a
 		  <baseHungerRate>0.5</baseHungerRate>
 		  <hasGenders>false</hasGenders>
 			<hediffGiverSets>
-				<li>RT_Rimtroid_EvolutionGrowth</li>
+				<li>RT_EvoGrowth_Tallon</li>
 				<li>OrganicAgeless</li>
 				<!-- <li>RT_FeralStage</li> -->
 			</hediffGiverSets>
