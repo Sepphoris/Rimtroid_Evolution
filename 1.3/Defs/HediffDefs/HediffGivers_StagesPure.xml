@@ -19,7 +19,7 @@
 				<possibleEvolutionPaths><!--What the metroid can turn into.-->
 					<li>
 						<requiredAge>14</requiredAge> <!--the minimum age for the below pawn-->
-						<pawnKindDefToEvolve>RT_MetroidLarva</pawnKindDefToEvolve> <!--This is the pawn type it will evolve to. Should match the hediff-->
+						<pawnKindDefToEvolve>RT_MetroidLarvae</pawnKindDefToEvolve> <!--This is the pawn type it will evolve to. Should match the hediff-->
 						<hediff>RT_LarvaState</hediff> <!--this is the "state" hediff that the metroid should get upon evolving.-->
 						<partsToAffect>
 							<li>RT_Mitosis</li>
@@ -64,14 +64,14 @@
 						</partsToAffect>
 						<weight>1</weight>
 						<hediffWhiteList>
-							<li>RT_AcceleratedAgingLarva</li>
+							<li>RT_AcceleratedAgingLarvae</li>
 							<li>RT_ImmunityAcceleratorHediff</li>
         			<li>RT_CryoadapterHediff</li>
         			<li>RT_NutrientRegulatorHediff</li>
 							<li>RT_AcceleratedDivision</li>
 							<li>RT_CellularDecay</li>
 						</hediffWhiteList>
-						<ticksToConvert>60~120</ticksToConvert>
+						<!--<ticksToConvert>3</ticksToConvert>-->
 					</li>
 				</possibleEvolutionPaths>
 			</li>

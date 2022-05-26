@@ -67,53 +67,6 @@
 			</li>
 		</tools>
 		<comps>
-    	<li Class="RT_Core.CompProperties_HostileResponse">
-			  <compClass>RT_Core.CompHostileResponse</compClass>
-			  <initialHostility>Aggressive</initialHostility>
-        <controllableGizmo>false</controllableGizmo>
-       <friendlyFireMentalState>Manhunter</friendlyFireMentalState>
-			  <options>
-				  <li>
-					  <type>Aggressive</type>
-					  <label>Aggressive</label>
-					  <description>Attacks any hostile targets within sight, even manhunter bunnies.</description>
-					  <iconPath>UI/AI/Attack</iconPath>
-					  <disableMessage>Aggressive, and you better get used to it.</disableMessage>
-				  </li>
-				  <li>
-					  <type>Defensive</type>
-					  <label>Defensive</label>
-					  <description>Retaliates against any attacks made towards it, even if they're just taking aim.</description>
-					  <iconPath>UI/AI/Defense</iconPath>
-					  <disableMessage>Defensive and disabled.</disableMessage>
-				  </li>
-				  <li>
-					  <type>Passive</type>
-					  <label>Pacifist</label>
-					  <description>Flees from any hostile actions made against it, even by friendlies.</description>
-					  <iconPath>UI/AI/Passive</iconPath>
-					  <disableMessage>Passive and disabled.</disableMessage>
-				  </li>
-			  </options>
-		  </li>
-<!-- Defines the conditions for when to give the pawn an ability -->
-		  <li Class="RT_Core.CompProperties_AbilityDefinition">
-				<compClass>RT_Core.CompAbilityDefinition</compClass>
-				<abilities>
-			  		<li>
-						<abilityDef>RT_GammaBeam</abilityDef>
-          		</li>
-			  		<li>
-						<abilityDef>RT_GammaShockwave</abilityDef>
-          		</li>
-          		<li>
-            		<abilityDef>RT_GammaBomb</abilityDef>
-          		</li>
-          		<li>
-            		<abilityDef>RT_GammaBurst</abilityDef>
-          		</li>
-				</abilities>
-      	</li>
       <li Class="RT_Core.CompProperties_AnimalProduct">
 				<resourceDef>RT_Bioresin</resourceDef>
 				<gatheringIntervalDays>30</gatheringIntervalDays>
@@ -222,9 +175,6 @@
 		  <li>AnimalInsectSpace</li>
 		</tradeTags>
 	  <modExtensions>
-		  <li Class="RT_Core.LegacyModExtension">
-			  <hasAbilities>true</hasAbilities>
-      </li>
       <!--<li Class="RT_Core.RT_DesiccatorExt"> </li> -->
 	    <li Class="RT_Core.DisableTrainingDegredation"> </li>
         <!--desicatedDef>huskdefnamehere</desicatedDef-->
