@@ -70,7 +70,7 @@ to be made to allow hediff effects from other mods.
 <!--===============Metroid Larvae===============-->
 
   <HediffDef ParentName="RT_MetroidStages">
-    <defName>RT_LarvaeState</defName>
+    <defName>RT_LarvaState</defName>
     <label>Evolution (Larva)</label>
     <labelNoun>a Metroid Larva</labelNoun>
     <description>The third stage of a Metroid's growth. Many Metroids stagnate for a long time within this stage, making it the most common to see. Metroid Larvae are - by far - the most resource demanding, but also have the most mutation potential out of all other stages.\n\nLarvae are not fully grown, making some of their bodily functions slightly suffer.</description>
