@@ -1,6 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<!--===============To-do===============
+		Cellular Slowing: Halts regerative factor
+		???: Pawn has a slight chance to berserk or go manhunter
+		Thermal Irregulation: Pawn is much more suseptable to heat
+		Cyothermal Irregulator: Pawn is much more suseptable to cold
+		???: Pawn's immunity system is weakened, making them more likely to catch genetic defects.
+		???: Panws hunger now goes down twice as fast.		
+		Flesh Hardening: Slows down the pawn, but makes the pawn immune to cuts
+		Cell Repurposing: saves the pawn from dying, in exchange for one or more health defects.
+		Toxic/Psychic resistance: increases the pawn's resistance. Can be tiered to 100%.
+		Cyrothermic Adaption: increases cold resistance. Should be tiered.
+
+(233,129,69) - Orange label
+(255,204,153) - lighter orange label
+(0.8,0,0.8) - Purple label
+(178,102,255) - Also purple label
+(0.8,0,0) - Dark red label
+(1,0,0.5) - Pink label
+(0.7,1,0.7) - Light green label
+(255,51,51) - vibrant red label
+(204,102,0) - brown label
+-->
+
 	<!--==============Genetic Defects Overview===============-->
 
   <HediffDef ParentName="RT_MetroidStagesBad">
@@ -21,7 +44,7 @@
     <defName>RT_StuntedDefect</defName>
     <label>stunted</label>
     <labelNoun>biologically stunted</labelNoun>
-		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+		<defaultLabelColor>(204,102,0)</defaultLabelColor>
     <description>A genetic defect that has permanently "locked" the metroid in it's current stage. Can be removed through advanced genetic procedures.</description>
 		<initialSeverity>1</initialSeverity>
     <stages>

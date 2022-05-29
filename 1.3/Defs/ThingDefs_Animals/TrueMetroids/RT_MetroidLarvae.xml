@@ -20,8 +20,8 @@
 		  <ArmorRating_Heat>1</ArmorRating_Heat>
 		  <MoveSpeed>3</MoveSpeed>
 		  <MarketValue>120</MarketValue>
-		  <ComfyTemperatureMin>12</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>160</ComfyTemperatureMax>
+		  <ComfyTemperatureMin>10</ComfyTemperatureMin> <!--50F: other was 15, which is 60F. Hoqwever since 60F is generally room temperature, it was made 50-->
+		  <ComfyTemperatureMax>760</ComfyTemperatureMax>
 		  <MeatAmount>10</MeatAmount>
 		</statBases>
 		<uiIconScale>1.35</uiIconScale>

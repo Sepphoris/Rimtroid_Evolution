@@ -146,7 +146,7 @@
 	<HediffDef>
 		<defName>RT_NutrientInjectionHediff</defName>
 		<label>nutrient injection</label>
-		<description>A nutrient solution that has given a small amount of nutrition, and has drastically impacted hunger rate. The effect will disappear after a short amount of time.</description>
+		<description>A harmless solution that has given a small amount of nutrition, and has drastically impacted hunger rate. The effect will disappear after a short amount of time.</description>
 		<defaultLabelColor>(0.7,1,0.7)</defaultLabelColor>
 		<hediffClass>RT_Core.Hediff_MetroidFoodInjection</hediffClass>
     <isBad>false</isBad>
@@ -240,7 +240,7 @@
     	<defName>RT_AeionicPoisoning</defName>
     	<hediffClass>HediffWithComps</hediffClass>
     	<label>Aeionic Poisoning</label>
-    	<description>Aeionic Poisoning is caused when a biologically normal pawn injects or consumes even the slightest amount of the Aeion material, used specifically in serums that targets the metroid's internal working. If used on any other life form, it's results in nothing but agony for the next several hours.</description>
+    	<description>Aeionic Poisoning is caused when a biologically normal pawn decided that injecting a serum specially designed for a living bioweapon was a good idea. While it isn't deadly on it's own, the pawn will be subject to constant internal agony for the next several hours, until the body cleans it out.</description>
     	<defaultLabelColor>(0.8,0,0)</defaultLabelColor>
     	<scenarioCanAdd>false</scenarioCanAdd>
     	<maxSeverity>1.0</maxSeverity>

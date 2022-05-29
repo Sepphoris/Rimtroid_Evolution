@@ -30,12 +30,38 @@
 	<RT_JoinQueen>Group with Queen</RT_JoinQueen>
 	<RT_JoinQueenTooOld>Group with Queen: too old</RT_JoinQueenTooOld>
 	<RT_JoinQueenLimit>Group with Queen: already carrying maximum metroids</RT_JoinQueenLimit>
-	<RT_QueenHasGrownTooOld>{PAWN_nameDef} has grown too old for {QUEEN_nameDef} to nurture</RT_QueenHasGrownTooOld>
+	<RT_QueenHasGrownTooOld>{PAWN_nameDef} has grown too old for {QUEEN_nameDef} to nurture, and has left their care.</RT_QueenHasGrownTooOld>
 	<RT_ReleaseAbilityTooltip>Releases one of the metroids that is residing on the Queen's shell (eight maximum).
 
-Carry occupancy is {0} out of {1}.</RT_ReleaseAbilityTooltip>
+		Carry occupancy is {0} out of {1}.</RT_ReleaseAbilityTooltip>
 	<RT_RecallAbilityTooltip>Recall all released metroids on the field. Queen can currently recall {0} out of {1} metroids.</RT_RecallAbilityTooltip>
 
-	<!--Animal toggles -->
+	<!--Roles -->
+
+	<RT_ExecutionerRole>Executioner</RT_ExecutionerRole>
+	<RT_MountRole>Fast Mount</RT_MountRole>
+	<RT_RangedRole>Ranged Attacker</RT_RangedRole>
+	<RT_MeleeRole>Melee Attacker</RT_MeleeRole>
+	<RT_SiegeRole>Siege Metroid</RT_SiegeRole>
+	<RT_SentinelRole>Sentinel Metroid</RT_SentinelRole>
+	<RT_ResourceRole>Resource Production</RT_ResourceRole>
+	<RTE_BreedingRole>Metroid Breeding</RT_BreedingRole>
+	<RT_PetRole>Exotic Pet</RT_PetRole>
+	<RT_GeneticBaseRole>Genetic Candidate</RT_GeneticBaseRole>
+	<RT_UtilityRole>Utility</RT_UtilityRole>
+	
+	<!-- Roles Descriptions -->
+	 
+	<RT_ExecutionerRole>"Executioner" Metroids excel in hunting down and eliminating targets. These metroids generally have the speed and damage to outpace and kill their target, allowing them to quickly move onto the next one.</RT_ExecutionerRoleDesc>
+	<RT_MountRoleDesc>This metroid can be mounted by colonists, providing a considerable speed boost, as well as being able to attack in melee along with its rider. Bear in mind that this whole interaction is only available if you have the Giddy Up! mod installed. And if you don't, what are you waiting for?</RT_MountRoleDesc>
+	<RT_RangedRoleDesc>This metroid excels in ranged attacks, and will perform efficiently when at a range from a target.</RT_RangedRoleDesc>
+	<RT_MeleeRoleDesc>This metroid excels in melee combat, and will perform well against any opponents it can close the distance on.</RT_MeleeRoleDesc>
+	<RT_SiegeRoleDesc>"Siege Metroids" are extremely effective in offensive combat against bases and enemy groups, able to take large amounts of punishment before being downed or critically injured.</RT_SiegeRoleDesc>
+	<RT_SentinelRoleDesc>"Sentinel Metroids" are very well suited to defensive combat, and are able to hold against enemy forces for a considerable amount of time before being downed or critically injured.</RT_SiegeRoleDesc>
+	<RT_ResourceRoleDesc>This metroid is one of the few that can provide profitable resources passively, making them an exotic - but still dangerous - farm animal.</RT_ResourceRoleDesc>
+	<RT_BreedingRoleDesc>This metroid is one of the *very* few types that can either reproduce or create other metroids. It is very valuable to metroid farmers, geneticists, or war trainers.</RT_BreedingRoleDesc>
+	<RT_PetRoleDesc>This metroid is oddly cute and passive, making it a very unique house pet. It will provide mood boosts for those that enjoy it's company.</RT_ExoticPetDesc>
+	<RT_GeneticBaseRoleDesc>Either due to adolesence or a genetic flaw, this metroid's body will not immediately reject or override systemic change. This makes it a prime candidate for most genetic alterations, and valuable to geneticists or war trainers.</RT_GeneticBaseRoleDesc>
+	<RT_UtilityRoleDesc>This metroid is able to provide some sort of passive utility to the colony.</RT_UtilityRoleDesc>
 
 </LanguageData>

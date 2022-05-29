@@ -4,9 +4,45 @@
 
 	<!--Genetic Hediff coloring-->
 	<HediffDef Name="RT_MetroidAddition" Abstract="True">
-		<defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+		<defaultLabelColor>(0,204,0)</defaultLabelColor>
 		<isBad>false</isBad>
 	</HediffDef>
+
+<!--(233,129,69) - Orange label
+(255,204,153) - lighter orange label
+(0.8,0,0.8) - Purple label
+(178,102,255) - Also purple label
+(0.8,0,0) - Dark red label
+(1,0,0.5) - Pink label
+(0.7,1,0.7) - Light green label
+(255,51,51) - vibrant red label
+(204,102,0) - brown label-->
+
+	<!--===============To-do===============
+		Until machinery makes it's way into the mod, injections will have to be found, bought, or crafted. Craftable ones require a bench, research, and one Aeion Extract
+		All injections result in a hediff that temporarily hinders the metroid while it's system adapts. You will need some nutrient injections for this process. The process is approx. 1 day.
+		Metroids sold by war merchants may already have various genetic changes.
+
+		Endothermic Hibernation: if it gets too cold, the pawn shouldn't freeze; instead it should go into a hibernation, like insectoids.
+		Muscle Strengthening: Allows the pawn to carry more. Craftable.
+		Speed Injection: Increases pawn speed. Tiered. Craftable.
+		Regeneration: should be a default passive.
+		Regeneration II: increases regen speed. 
+		Regeneration III: allows the pawn to regenerate limbs.
+		Exoskeleton Strengthening: enhances melee damage and armor.
+		Flesh Hardening: Slows down the pawn, but makes the pawn immune to cuts.
+		Cell Repurposing: saves the pawn from dying, in exchange for one or more health defects.
+		Cellular Vaulting: saves the pawn from dying, in exchange for  2x hunger rate.
+		Toxic Resistance I-IV: Increases toxic resistance by 25% each. Craftable
+		Sleep Injection: Reduces need for sleep. Tiered so sleep is no longer required
+		Endothermic Adaption: redone so it's -15 minimum confort temp. Craftable
+		Endothermic Adaption II: redone so it's -30 minimum confort temp
+		Nutrient Regulation: Redone so it's 30% slower hunger. Craftable.
+		Nutrient Regulation II: 60% slower hunger
+		Nutrient Regulation III: 90% slower hunger
+		Psychic Sensitivity: Increases psychic activity in the pawn. Used on offworld Metroids
+		Psychic Deafness: Makes the pawn psychically deaf. Used on on-world variants
+	-->
 
 	<!--===============Stunted Metroid - Chrono Suspender (a stand-in for all stunted metroids until values are implemented)===============-->
 
@@ -53,7 +89,7 @@
 		</descriptionHyperlinks>
 		<label>Endothermic Adaption</label>
 		<labelNoun>endothermic adaption</labelNoun>
-		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+		<defaultLabelColor>(178,102,255)</defaultLabelColor>
 		<description>A genetically forced adaption that allows Metroids to survive colder temperatures.</description>
 		<initialSeverity>1</initialSeverity>
 		<stages>
@@ -97,7 +133,7 @@
 		</descriptionHyperlinks>
 		<label>Nutrient Regulation</label>
 		<labelNoun>nutrient regulation</labelNoun>
-		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+		<defaultLabelColor>(178,102,255)</defaultLabelColor>
 		<description>A genetically forced adaption that processes nutrition distribution more efficienty, slowing down hunger depletion.</description>
 		<initialSeverity>1</initialSeverity>
 		<stages>
@@ -139,7 +175,7 @@
 		</descriptionHyperlinks>
 		<label>Systemic Fortification</label>
 		<labelNoun>systemic fortification</labelNoun>
-		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+		<defaultLabelColor>(178,102,255)</defaultLabelColor>
 		<description>A genetically forced adaption that accelerates the growth of the metroid immune system, strengthening otherwise weakened vital functions.\n\nThis will disappear upon evolving to the Alpha stage.</description>
 		<initialSeverity>1</initialSeverity>
 		<stages>

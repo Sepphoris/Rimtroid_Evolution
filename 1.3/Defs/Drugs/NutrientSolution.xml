@@ -12,7 +12,7 @@
 	  <ThingDef ParentName="MakeableDrugPillBase">
 		<defName>RT_NutrientInjection</defName>
 		<label>Metroid Nutrient Injection</label>
-		<description>A makeshift solution that, once injected, will supply a small amount of nutrition to any given metroid, and temporarily slow down or halt hunger rate. Using these is the only method of sustaining a metroid that is incapable of feeding itself, and a stockpile of these is recommended for any metroid owner.\n\nNote that too many consecutive injections can permanently harm the metroid development system, leading to lifelong complications.</description>
+		<description>A makeshift solution that, once injected, will supply a small amount of nutrition to any given metroid, and temporarily slow down or halt hunger rate. Using these is the only method of sustaining a metroid that is incapable of feeding itself, and a stockpile of these is recommended for any metroid owner.\n\nNot recommended for human injection. At all. Seriously, don't it.</description>
 		<descriptionHyperlinks>
 			<HediffDef>RT_AeionicPoisoning</HediffDef>
 		</descriptionHyperlinks>
