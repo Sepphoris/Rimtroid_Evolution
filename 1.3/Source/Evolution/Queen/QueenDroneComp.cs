@@ -100,7 +100,7 @@ namespace RT_Rimtroid
 
         public override void CompTick()
         {
-            if (!Metroid.Dead && Metroid.ageTracker.AgeBiologicalYearsFloat < 75 && Metroid.mindState?.duty?.focus == null && queen != null)
+            if (!Metroid.Dead && Metroid.ageTracker.AgeBiologicalYearsFloat < 80 && Metroid.mindState?.duty?.focus == null && queen != null)
             {
                 this.JoinQueenLord();
             }

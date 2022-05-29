@@ -49,6 +49,8 @@
 	<RT_PetRole>Exotic Pet</RT_PetRole>
 	<RT_GeneticBaseRole>Genetic Candidate</RT_GeneticBaseRole>
 	<RT_UtilityRole>Utility</RT_UtilityRole>
+	<RT_QueenRole>Cardinal Metroid</RT_QueenRole>
+	<RT_PrimeRole>Cardinal Metroid</Rt_PrimeRole>
 	
 	<!-- Roles Descriptions -->
 	 
@@ -63,5 +65,7 @@
 	<RT_PetRoleDesc>This metroid is oddly cute and passive, making it a very unique house pet. It will provide mood boosts for those that enjoy it's company.</RT_ExoticPetDesc>
 	<RT_GeneticBaseRoleDesc>Either due to adolesence or a genetic flaw, this metroid's body will not immediately reject or override systemic change. This makes it a prime candidate for most genetic alterations, and valuable to geneticists or war trainers.</RT_GeneticBaseRoleDesc>
 	<RT_UtilityRoleDesc>This metroid is able to provide some sort of passive utility to the colony.</RT_UtilityRoleDesc>
+	<RT_QueenRoleDesc>Cardinal Metroids are the superior metroids within the galaxy, being at the top of the heirarchy and commanding metroid hordes that can span entire galaxies. These metroids are extremely powerful, aggressive, and intelligent, making them practically a deathwish to most who attempt to keep one in captivity. That said, it is still possible with proper understanding... and a bit of luck.\n\nCardinal Metroids are HIGHLY competitive and territorial, and will always attempt to kill any other Cardinal Metroids on the planet. Thus it is only possible to have one at a time.\n\nQueen Metroids are the primary producers and caretakers of younger metroids, and will passively produce a pure larva every couple days, up to a maximum of six at a time. The larva are automatically tamed towards the owning colony, making a Metroid Queen THE best method of acquiring a constant flow of metroids.</RT_QueenRoleDesc>
+<RT_QueenRoleDesc>Cardinal Metroids are the superior metroids within the galaxy, being at the top of the heirarchy and commanding metroid hordes that can span entire galaxies. These metroids are extremely powerful, aggressive, and intelligent, making them practically a deathwish to most who attempt to keep one in captivity. That said, it is still possible with proper understanding... and a bit of luck.\n\nCardinal Metroids are HIGHLY competitive and territorial, and will always attempt to kill any other Cardinal Metroids on the planet. Thus it is only possible to have one at a time.\n\nWhile all Cardinal Metroids contain power beyond measurable levels, Prime Metroids take that beyond comprehension. On their own, Prime Metroids display physical power that is unrivalled; however, through enough research and time one can learn not only how to exploit their mutagenic properties, but also how to outfit this creature with firepower that rivals a battle-ready frigate.</RT_PrimeRoleDesc>
 
 </LanguageData>
