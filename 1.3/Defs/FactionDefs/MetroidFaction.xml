@@ -15,7 +15,7 @@
 	-->
 
 	<FactionDef ParentName="FactionBase">
-		<defName>RT_AllMetroidsFaction</defName>
+		<defName>RT_Metroids</defName>
 		<label>global metroid collective</label>
 		<description>A world-spanning hivemind consisting of wild metroids, deployed by Glitterworld scientists as a long-term study project. Metroids have been specifically designed as ravenous bioweapon, and will stop at nothing before they destroy the entire planetary ecology.\n
 This particular hivemind contains metroids of nearly every size, breed, and archetype.</description>
