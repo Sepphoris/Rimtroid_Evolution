@@ -133,6 +133,26 @@
 		<combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
 	</ManeuverDef>
 
+
+  <!--Megaroid-->
+
+	<ManeuverDef>
+		<defName>RT_LifedrainMegaroid</defName>
+		<requiredCapacity>RT_LifedrainMegaroid</requiredCapacity>
+			<verb Class="RT_Core.VerbProperties_AbsorbNeed">
+			<verbClass>RT_Core.Verb_AbsorbNeed</verbClass>
+			<meleeDamageDef>RT_Lifedrain</meleeDamageDef>
+				<ageDaysAmount>14</ageDaysAmount>
+  				<absorbAmount>0.16</absorbAmount>
+  				<stopFeedingAt>0.9</stopFeedingAt>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+
   <!--Misc-->
 
 	<ManeuverDef>

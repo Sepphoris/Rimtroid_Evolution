@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RT_Bioresin</defName>
+		<label>Bioresin</label>
+		<description>Thick, sticky material that is naturally secreted by most metroid stages. Bioresin is mostly comprised of bio-organic material, with just enough silk proteins to make it adhesive. While generally seen as useless on it's own, large amount of it can be refined into an exotic, silky-smooth cloth material. Those brave enough to own metroids often harvest metroid resin, and then refine it for profit.\n\nA large amount of the resin is wasted during refining, since only the miniscule amounts of silk present is used in the process. This makes a large income of the resin to be mandatory for any continuous profit.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RT_Biosilk</ThingDef>
+		</descriptionHyperlinks>
+    <graphicData>
+			<texPath>Things/AnimalProduct/RT_BioResin</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Flammability>0</Flammability>
+			<Mass>0.02</Mass>
+			<MarketValue>0.6</MarketValue>
+		</statBases>
+		<thingCategories>
+      <li>ResourcesRaw</li>
+		</thingCategories>
+    <smallVolume>true</smallVolume>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>RT_MegaroidShard</defName>
+		<label>megaroid shard</label>
+		<description>A synthetic, rather appealing crystal from the corpse of a megaroid. It's unique behaviour allows it to be used in the creation of specialized machinery, while it's appearance makes it quite a desirable decorative material.</description>
+		<graphicData>
+			<texPath>Things/AnimalProduct/RT_MegaroidShard</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+		<statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>42</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0</Flammability>
+      <!--<DeteriorationRate>1.0</DeteriorationRate>-->
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+		<smallVolume>true</smallVolume>
+    <comps>
+		</comps>
+	</ThingDef>
+
+  <!--Todo: megaroid shards can be repurposed into the following:
+	1: Metrite Capacitor: a 1x1 battery that stores a medium amount of power, with 100% efficiency.
+	2: Feeders: the megaroid shards are required to make feeders that can support larger metroids.
+	3: Beacons: megaroid shards are used in beacons which can attract metroids.
+	4: Art: megaroid shards can be used to create statues that are relatively fragile, but also quite pretty.
+	6: Biodrainer: A device that drains the energy out of creatures, converting it to a quick burst of electricity. Amount drained depends on body size.-->
+</Defs>

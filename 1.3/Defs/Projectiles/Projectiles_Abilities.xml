@@ -13,7 +13,7 @@
 	<ThingDef Abstract="True" Name="RT_Bullet_FireBeam" ParentName="RT_Bullet_LaserGeneric">
 		<seam>0.25</seam>
 		<textures>
-			<li>AnimalProjectile/Firebeam1</li>
+			<li>AnimalProjectile/FireBeam1</li>
 		</textures>
 	</ThingDef>
 
@@ -196,7 +196,7 @@
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
-			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<texPath>AnimalProjectile/FireBeam1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>
@@ -225,7 +225,7 @@
 		<altitudeLayer>MoteOverhead</altitudeLayer>
 		<graphicData>
 			<shaderType>TransparentPostLight</shaderType>
-			<texPath>AnimalProjectile/Firebeam1</texPath>
+			<texPath>AnimalProjectile/FireBeam1</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile>

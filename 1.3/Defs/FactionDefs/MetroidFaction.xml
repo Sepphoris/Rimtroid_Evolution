@@ -26,14 +26,14 @@ This particular hivemind contains metroids of nearly every size, breed, and arch
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<!--Settlement Data-->
 		<!--<fixedName>Metroid Hive</fixedName>-->
-		<settlementGenerationWeight>0.1</settlementGenerationWeight>
+		<!--<settlementGenerationWeight>0.1</settlementGenerationWeight>-->
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<maxCountAtGameStart>6</maxCountAtGameStart>
-		<canMakeRandomly>true</canMakeRandomly>
-		<fixedLeaderKinds>
+		<!--Behavior<maxCountAtGameStart>6</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>-->
+		<!--<fixedLeaderKinds>
 			<li>RT_QueenMetroid</li>
 		</fixedLeaderKinds>
-		<leaderTitle>Brood Mother</leaderTitle>
+		<leaderTitle>Brood Mother</leaderTitle>-->
 		<factionNameMaker>RT_MainMetroidFactionNames</factionNameMaker>
 		<settlementNameMaker>RT_MainMetroidSettlementNames</settlementNameMaker>
 		<!--Raid Data-->
@@ -87,9 +87,11 @@ This particular hivemind contains metroids of nearly every size, breed, and arch
 		</pawnGroupMakers>
 		<!--Behavior Data-->
 		<humanlikeFaction>false</humanlikeFaction>
-		<hidden>false</hidden>
+		<hidden>true</hidden>
 		<autoFlee>false</autoFlee>
 		<canUseAvoidGrid>true</canUseAvoidGrid>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>90</configurationListOrderPriority>
 		<!--Misc Data-->
 		<techLevel>Animal</techLevel>
 	</FactionDef> 

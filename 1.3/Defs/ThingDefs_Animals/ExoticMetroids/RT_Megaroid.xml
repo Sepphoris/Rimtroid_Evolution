@@ -9,9 +9,9 @@
 		<label>Megaroid</label>
 
 		<description>A crystalline metroid, synthesised directly from the corpse of it's pure counterpart. Initially an ancient experiment gone wrong, the process for creating a Megaroid was, until recently, lost to time.\n\n
-Rather than being intended as a singular bioweapon, Megaroids were instead designed to act as a living womb, with even one being capable of growing and spreading entire metroid armies. This process directly ties into it's massive hunger.\n\n
-Megaroids will compulsively feed off of both biological and electrical energy, growing larger as it does. If left unchecked, this hunger will eventually reach an apex, and it's purpose of a vessel will be reached.\n\n
-Upon feeding enough, a megaroid will explode into up to a dozen "hatchlings", which will eventually grow into it's adult form, and repeat the process. This cycle can result in a farmer's dream... or a planet's downfall.</description>
+Rather than being intended as a singular bioweapon, Megaroids were instead designed to act as a fortified living womb, with even one being capable of growing and spreading entire metroid armies. This process directly ties into it's massive hunger.\n\n
+Megaroids will compulsively feed off of both biological and electrical energy at a near constant rate. Once the feeding reaches an apex, it will "shatter" into several hatchlings, which exist only to repeat the process.\n\n
+While quite tanky, Megaroids are relatively slow and quite rare in the wild, making them a more of an uncommon, passive threat. Their unique, capacitor-like crystals allow the creation of powerful metroid-related machinery, ultimately allowing Megaroids to be a farmer's dream... or an ecology's downfall.</description>
 		<statBases>
 		
 	<!-- Internal Stats -->
@@ -79,7 +79,6 @@ Upon feeding enough, a megaroid will explode into up to a dozen "hatchlings", wh
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
 			</li>
-		<comps>
 			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
 				<spawnStage>RT_MegaroidState</spawnStage>
 			</li>
