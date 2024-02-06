@@ -6,7 +6,7 @@
 	<HediffGiverSetDef>
 		<defName>RT_EvoGrowth_Bantee</defName> <!--The name of the def. The metroid name that appears here is the metroid that uses the logic here-->
 		<hediffGivers>
-			<li Class="RT_Core.HediffGiver_AfterPeriod">
+			<li Class="RT_Core.HediffGiver_AfterPeriod"> <!--this is only needed if the pawn evolves. If it does not, the whole hediffGiver can be removed.-->
 				<!--<maxReroll>1</maxReroll>--><!-- determines how many times the chance field can fail before it's not attempted anymore. Leave out for infinite times-->
 				<chance>1</chance><!-- the chance that evolution happens. 1=100%. If this fails, it will try again based on the number withing <yearsInterval>-->
 				<yearsInterval>1</yearsInterval><!--how many years until the code tries for an evolution again. Can have a year range as well-->
@@ -25,7 +25,7 @@
 							<li>RT_Mitosis</li>
 						</partsToAffect>
 						<weight>1</weight><!--Weight is relative; a weight of 0.3 vs 0.1 means that 0.3 is 3x more likely to be chosen-->
-						<hediffWhiteList><!--Whitelist that tells what hediffs can pass. THIS MAKES THE PREVIOUS WHITELIST FIELDS VOID AND USEULESS; all hediffs to be accepted go directly here-->
+						<hediffWhiteList><!--Whitelist that tells what hediffs can pass. THIS MAKES THE PREVIOUS WHITELIST FIELDS VOID AND USELESS; all hediffs to be accepted go directly here-->
 							<li>RT_AcceleratedAgingBantee</li>
 							<li>RT_ImmunityAcceleratorHediff</li>
         			<li>RT_CryoadapterHediff</li>
@@ -212,8 +212,8 @@
 		<hediffGivers>
 			<li Class="RT_Core.HediffGiver_AfterPeriod">
 				<maxReroll>3</maxReroll>
-				<chance>0.15</chance>
-				<yearsInterval>1~6</yearsInterval>
+				<chance>0.1</chance>
+				<yearsInterval>5</yearsInterval>
 				<hediffsToPreventGrowth>
 					<li>RT_StuntedGrowthBad</li>
 					<li>RT_StuntedGrowthNeutral</li>

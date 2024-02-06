@@ -8,7 +8,9 @@
 		<defName>RT_OmegaMetroid</defName>
 		<label>Omega Metroid</label>
 
-		<description>The final stage for most of it's kind, the Omega Metroid is a masive brute of war, barely resembling the larvae that it once grew from. Their strength and durability is only matched by the largest of creatures on the rim, and the damage they can deal both physically and by their potent fire offenses rivals the power of mother nature. While being slower and rarer than it's previous forms, the presence of these is truly a sight to behold... and a very valid reason to use any warheads you have. \n\nThese specific Metroids are "true" Metroids; however, this is almost always the last stage, making an artifical habitat no longer required (one may still be helpful for containment, however...).</description>
+		<description>The final stage for most of it's kind, the Omega Metroid is a masive brute of war, barely resembling the larvae that it once grew from. Their strength and durability is only matched by the largest of creatures on the rim, and the damage they can deal rivals the power of mother nature. While being slower and rarer than it's previous forms, the presence of these is truly a sight to behold... and a very valid reason to use any warheads you have.\n\n
+Only a tiny amount of Omega Metroids have the genes required for their next "true" final stage, that being a Queen Metroid. The chances of reaching the age required, alongside having the genes needed, makes Queens extraordinarily rare, and a galactic prize.\n\n
+These specific Metroids are "Pure" Metroids, and as such share the same traits, advantages, and disadvantages of all other metroids within the "Pure" archetype.</description>
 		<statBases>
 
 			<!-- Internal Stats -->

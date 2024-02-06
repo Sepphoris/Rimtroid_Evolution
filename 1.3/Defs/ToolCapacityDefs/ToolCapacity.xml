@@ -36,6 +36,11 @@
 		<defName>RT_LifedrainOmega</defName>
 		<label>life drain</label>
 	</ToolCapacityDef>
+
+	<ToolCapacityDef>
+		<defName>RT_LifedrainMegaroid</defName>
+		<label>life drain</label>
+	</ToolCapacityDef>
 	
 
 

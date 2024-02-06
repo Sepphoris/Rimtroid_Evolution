@@ -57,7 +57,6 @@ The inherent features of the crystals used also allow it to produce a small cons
         <transmitsPower>true</transmitsPower>
       </li>
       <li Class="CompProperties_Breakdownable"/>
-    <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
         <basePowerConsumption>-100</basePowerConsumption>

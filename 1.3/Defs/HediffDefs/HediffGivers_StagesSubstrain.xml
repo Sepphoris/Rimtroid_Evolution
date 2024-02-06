@@ -2,7 +2,8 @@
 <Defs>
 
 
-<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
+<!--The following dictates which age changes the 'Mitosis' hediff to the next stage
+Any def named "EvoGrowth" are given to pawns matching their defName-->
 
   <HediffGiverSetDef>
     <defName>RT_EvoGrowth_TallonInfant</defName>
@@ -116,6 +117,11 @@
             </possibleEvolutionPaths>
         </li>
 		</hediffGivers>
+	</HediffGiverSetDef>
+
+
+  <HediffGiverSetDef>
+    <defName>RT_EvoGrowth_Fission</defName>
 	</HediffGiverSetDef>
 
 
