@@ -18,3 +18,6 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimtroid_Evolution\1
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimtroid_Evolution\1.3\Source\obj\Debug\Rimtroid_Evolution.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimtroid_Evolution\1.3\Assemblies\Rimtroid_Evolution.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimtroid_Evolution\1.3\Source\obj\Debug\Metroid.csproj.CopyComplete
+C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.3\Source\obj\Debug\Metroid.csproj.AssemblyReference.cache
+C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.3\Source\obj\Debug\Metroid.csproj.CoreCompileInputs.cache
+C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.3\Source\obj\Debug\Rimtroid_Evolution.dll

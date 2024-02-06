@@ -60,68 +60,78 @@ namespace RT_Rimtroid
 			if (this.Faction == Faction.OfPlayer)
             {
 
-				Command_Toggle command_Toggle = new Command_Toggle();
-				command_Toggle.defaultLabel = "RT_EnableTimedBomb".Translate();
-				command_Toggle.defaultDesc = "RT_EnableTimedBomb".Translate();
-				command_Toggle.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombTimer");
-				command_Toggle.isActive = (() => this.timeOut);
-				command_Toggle.toggleAction = delegate
-				{
-					this.timeOut = !this.timeOut;
-				};
+                Command_Toggle command_Toggle = new Command_Toggle
+                {
+                    defaultLabel = "RT_EnableTimedBomb".Translate(),
+                    defaultDesc = "RT_EnableTimedBomb".Translate(),
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/BombTimer"),
+                    isActive = (() => this.timeOut),
+                    toggleAction = delegate
+                    {
+                        this.timeOut = !this.timeOut;
+                    },
 
-				command_Toggle.hotKey = KeyBindingDefOf.Misc3;
-				command_Toggle.turnOffSound = null;
-				command_Toggle.turnOnSound = null;
-				yield return command_Toggle;
+                    hotKey = KeyBindingDefOf.Misc3,
+                    turnOffSound = null,
+                    turnOnSound = null
+                };
+                yield return command_Toggle;
 
-				Command_Toggle command_Toggle2 = new Command_Toggle();
-				command_Toggle2.defaultLabel = "RT_EnableProximityBomb".Translate();
-				command_Toggle2.defaultDesc = "RT_EnableProximityBomb".Translate();
-				command_Toggle2.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombProximity");
-				command_Toggle2.isActive = (() => this.proximity);
-				command_Toggle2.toggleAction = delegate
-				{
-					this.proximity = !this.proximity;
-				};
+                Command_Toggle command_Toggle2 = new Command_Toggle
+                {
+                    defaultLabel = "RT_EnableProximityBomb".Translate(),
+                    defaultDesc = "RT_EnableProximityBomb".Translate(),
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/BombProximity"),
+                    isActive = (() => this.proximity),
+                    toggleAction = delegate
+                    {
+                        this.proximity = !this.proximity;
+                    },
 
-				command_Toggle2.hotKey = KeyBindingDefOf.Misc4;
-				command_Toggle2.turnOffSound = null;
-				command_Toggle2.turnOnSound = null;
-				yield return command_Toggle2;
+                    hotKey = KeyBindingDefOf.Misc4,
+                    turnOffSound = null,
+                    turnOnSound = null
+                };
+                yield return command_Toggle2;
 
-				Command_Toggle command_Toggle3 = new Command_Toggle();
-				command_Toggle3.defaultLabel = "RT_EnableHostileOnlyBomb".Translate();
-				command_Toggle3.defaultDesc = "RT_EnableHostileOnlyBomb".Translate();
-				command_Toggle3.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombHostile");
-				command_Toggle3.isActive = (() => this.hostileOnly);
-				command_Toggle3.toggleAction = delegate
-				{
-					this.hostileOnly = !this.hostileOnly;
-				};
+                Command_Toggle command_Toggle3 = new Command_Toggle
+                {
+                    defaultLabel = "RT_EnableHostileOnlyBomb".Translate(),
+                    defaultDesc = "RT_EnableHostileOnlyBomb".Translate(),
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/BombHostile"),
+                    isActive = (() => this.hostileOnly),
+                    toggleAction = delegate
+                    {
+                        this.hostileOnly = !this.hostileOnly;
+                    },
 
-				command_Toggle3.hotKey = KeyBindingDefOf.Misc5;
-				command_Toggle3.turnOffSound = null;
-				command_Toggle3.turnOnSound = null;
-				yield return command_Toggle3;
+                    hotKey = KeyBindingDefOf.Misc5,
+                    turnOffSound = null,
+                    turnOnSound = null
+                };
+                yield return command_Toggle3;
 
-				Command_Action command_Action = new Command_Action();
-				command_Action.icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate");
-				command_Action.defaultDesc = "CommandDetonateDesc".Translate();
-				command_Action.action = Command_Detonate;
-				if (GetComp<CompExplosive>().wickStarted)
+                Command_Action command_Action = new Command_Action
+                {
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/Detonate"),
+                    defaultDesc = "CommandDetonateDesc".Translate(),
+                    action = Command_Detonate
+                };
+                if (GetComp<CompExplosive>().wickStarted)
 				{
 					command_Action.Disable();
 				}
 				command_Action.defaultLabel = "CommandDetonateLabel".Translate();
 				yield return command_Action;
 
-				Command_Action command_Action2 = new Command_Action();
-				command_Action2.icon = ContentFinder<Texture2D>.Get("UI/Commands/BombDissipate");
-				command_Action2.defaultDesc = "RT_Dissipate".Translate();
-				command_Action2.action = Command_Dissipate;
-				command_Action2.defaultLabel = "RT_Dissipate".Translate();
-				yield return command_Action2;
+                Command_Action command_Action2 = new Command_Action
+                {
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/BombDissipate"),
+                    defaultDesc = "RT_Dissipate".Translate(),
+                    action = Command_Dissipate,
+                    defaultLabel = "RT_Dissipate".Translate()
+                };
+                yield return command_Action2;
 			}
 
 		}
@@ -138,10 +148,7 @@ namespace RT_Rimtroid
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
 			var alphaComp = parent?.TryGetComp<CompAlphaBomb>();
-			if (alphaComp != null)
-            {
-				alphaComp.traps.Remove(this);
-            }
+			alphaComp?.traps.Remove(this);
             base.Destroy(mode);
 
         }
@@ -169,21 +176,20 @@ namespace RT_Rimtroid
 							List<Thing> thingList = cell.GetThingList(base.Map);
 							for (int i = 0; i < thingList.Count; i++)
 							{
-								Pawn pawn = thingList[i] as Pawn;
-								if (pawn != null && !touchingPawns.Contains(pawn))
-								{
-									touchingPawns.Add(pawn);
-									if (hostileOnly && !pawn.HostileTo(Faction.OfPlayer))
+                                if (thingList[i] is Pawn pawn && !touchingPawns.Contains(pawn))
+                                {
+                                    touchingPawns.Add(pawn);
+                                    if (hostileOnly && !pawn.HostileTo(Faction.OfPlayer))
                                     {
-										continue;
+                                        continue;
                                     }
-									if ((pawn.IsAlphaMetroid() || pawn.IsBanteeMetroid() || pawn.IsMetroidLarvae()) && !pawn.HostileTo(Faction.OfPlayer))
+                                    if ((pawn.IsAlphaMetroid() || pawn.IsBanteeMetroid() || pawn.IsMetroidLarvae()) && !pawn.HostileTo(Faction.OfPlayer))
                                     {
-										continue;
+                                        continue;
                                     }
-									this.SpringSub(null);
-								}
-							}
+                                    this.SpringSub(null);
+                                }
+                            }
 						}
 					}
 					else
@@ -191,21 +197,20 @@ namespace RT_Rimtroid
 						List<Thing> thingList = this.Position.GetThingList(base.Map);
 						for (int i = 0; i < thingList.Count; i++)
 						{
-							Pawn pawn = thingList[i] as Pawn;
-							if (pawn != null && !touchingPawns.Contains(pawn))
-							{
-								touchingPawns.Add(pawn);
-								if (hostileOnly && !pawn.HostileTo(Faction.OfPlayer))
-								{
-									continue;
-								}
-								if ((pawn.IsAlphaMetroid() || pawn.IsBanteeMetroid() || pawn.IsMetroidLarvae()) && !pawn.HostileTo(Faction.OfPlayer))
-								{
-									continue;
-								}
-								this.SpringSub(null);
-							}
-						}
+                            if (thingList[i] is Pawn pawn && !touchingPawns.Contains(pawn))
+                            {
+                                touchingPawns.Add(pawn);
+                                if (hostileOnly && !pawn.HostileTo(Faction.OfPlayer))
+                                {
+                                    continue;
+                                }
+                                if ((pawn.IsAlphaMetroid() || pawn.IsBanteeMetroid() || pawn.IsMetroidLarvae()) && !pawn.HostileTo(Faction.OfPlayer))
+                                {
+                                    continue;
+                                }
+                                this.SpringSub(null);
+                            }
+                        }
 					}
 
 					for (int j = 0; j < this.touchingPawns.Count; j++)

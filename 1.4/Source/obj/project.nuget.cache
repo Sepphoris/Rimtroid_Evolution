@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "lc+oxFL5XTSper0yAMS9LzAURCp21sX36bBozSBKTofr56Uybm5gDxTbp49LJaDoWwFAB8FkIoo39bAsSY3/WA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\WillabyPC\\Documents\\GitHub\\Rimtroid_Evolution\\1.4\\Source\\Metroid.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\WillabyPC\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3901\\krafs.rimworld.ref.1.4.3901.nupkg.sha512",
+    "C:\\Users\\WillabyPC\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}
