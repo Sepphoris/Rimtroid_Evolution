@@ -4,16 +4,57 @@
   <!--=============== Bases ==============-->
 
   <ThingDef ParentName="MoteBase">
-    <defName>RT_GammaShockwaveMote</defName>
+    <defName>RT_ProcessingEnergyMote</defName>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-    <mote>
-      <solidTime>0.05</solidTime>
-      <fadeOutTime>0.1</fadeOutTime>
-    </mote>
     <graphicData>
-      <texPath>Things/Mote/ExplosionFlash</texPath>
-      <shaderType>MoteGlow</shaderType>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
     </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
   </ThingDef>
 
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_Mote_SparkFlash</defName>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_Mote_AirPuff</defName>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_Mote_MicroSparksFast</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  
+  
 </Defs>
