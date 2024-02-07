@@ -15,7 +15,7 @@ While quite tanky, Megaroids are relatively slow and quite rare in the wild, mak
 		<statBases>
 		
 	<!-- Internal Stats -->
-		  <ToxicSensitivity>0</ToxicSensitivity>
+		  <ToxicEnvironmentResistance>0</ToxicEnvironmentResistance>
 		  <PsychicSensitivity>0</PsychicSensitivity>
       <Flammability>0</Flammability>
 		  <ArmorRating_Blunt>1</ArmorRating_Blunt>

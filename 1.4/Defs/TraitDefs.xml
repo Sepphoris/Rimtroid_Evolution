@@ -26,10 +26,10 @@
             <value>2</value></li>
         </skillGains> <!--Only needed if you want the pawn to have extra skill points with the trait-->
       </li>
-    </degreeDatas>
-    <conflictingTraits> <!--Any trait defs that you don't want to have with this trait, put the def name of each one within a <li></li> field below-->
+    </degreeDatas> 
+    <!-- <conflictingTraits> Any trait defs that you don't want to have with this trait, put the def name of each one within a <li></li> field below
       <li></li>
-    </conflictingTraits>
+    </conflictingTraits> -->
     <requiredWorkTags>
       <li>Caring</li>
       <li>Animals</li>

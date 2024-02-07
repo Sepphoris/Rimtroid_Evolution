@@ -14,7 +14,7 @@ These specific Metroids are "Pure" Metroids, and as such share the same traits, 
 		<statBases>
 
 			<!-- Internal Stats -->
-			<ToxicSensitivity>0</ToxicSensitivity>
+			<ToxicEnvironmentResistance>0</ToxicEnvironmentResistance>
 			<PsychicSensitivity>0</PsychicSensitivity>
 			<Flammability>0</Flammability>
 			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
