@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef>
+    <defName>RT_BiosilkRecipe</defName>
+    <label>refine bioresin</label>
+    <description>Refine metroid bioresin to create biosilk. 5 bioresin is needed per 1 biosilk.</description>
+    <jobString>Refining bioresin.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1600</workAmount>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+    <recipeUsers>
+      <li>ElectricTailoringBench</li>
+      <li>HandTailoringBench</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RT_Bioresin</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RT_Bioresin</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RT_Biosilk>6</RT_Biosilk>
+    </products>
+    <workSkill>Crafting</workSkill>
+		<researchPrerequisite>RT_MetroidBasics</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>RT_ProtusCellRecipe</defName>
+    <label>make protus cells (temporary recipe)</label>
+    <description>Extract biofluids from fresh corpses to make protus cells</description>
+    <jobString>Making protus cells.</jobString>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <workSkill>Intellectual</workSkill>		
+    <workAmount>1000</workAmount>
+    <workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Corpses</li>
+      </categories>
+      <disallowedCategories>
+        <li>CorpsesMechanoid</li>
+      </disallowedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+		<recipeUsers Inherit="false">
+			<li>DrugLab</li>
+		</recipeUsers>
+    <products>
+      <RT_ProtusCell>3</RT_ProtusCell>
+    </products>
+		<researchPrerequisite>RT_ProtusManipulation</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>RT_ProtusSphereRecipe</defName>
+    <label>make protus sphere x2 (temporary recipe)</label>
+    <description>Convert Protus Cells into Protus Spheres, processed fluidic spheres that are primarily used to train metroids.</description>
+    <jobString>Making protus cells.</jobString>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Intellectual</workSkill>		
+    <workAmount>600</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RT_ProtusCell</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RT_ProtusCell</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RT_ProtusSphere>2</RT_ProtusSphere>
+    </products>
+		<recipeUsers Inherit="false">
+			<li>DrugLab</li>
+		</recipeUsers>
+		<researchPrerequisite>RT_ProtusManipulation</researchPrerequisite>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>RT_ProtusSphereRecipeBulk</defName>
+    <label>make protus sphere x8 (temporary recipe)</label>
+    <description>Convert Protus Cells into Protus Spheres, processed fluidic spheres that are primarily used to train metroids.</description>
+    <jobString>Making protus cells.</jobString>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Intellectual</workSkill>		
+    <workAmount>1600</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RT_ProtusCell</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RT_ProtusCell</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <RT_ProtusSphere>8</RT_ProtusSphere>
+    </products>
+		<recipeUsers Inherit="false">
+			<li>DrugLab</li>
+		</recipeUsers>
+		<researchPrerequisite>RT_ProtusManipulation</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

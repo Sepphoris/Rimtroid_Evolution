@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>RT_MetroidRancherTrait</defName> <!--"Name" is the def name that the game uses as the ID for loading and finding this trait-->
+    <commonality>0.12</commonality> <!--How often this will spawn naturally on a pawn. this number is relatively to the commonality of all other traits. Set to 0 so it doesn't spawn-->
+    <degreeDatas>
+      <li>
+        <label>Metroid Rancher (WIP)</label> <!--this defines how it will appear in the traits menu. You can edit this to anything else. For a colored trait, you can use this line instead: <label>&lt;color=#FF6A00&gt;Weapon Maestro&lt;/color&gt;</label>. The color # is hex code for any color.-->
+        <description>[PAWN_nameDef] spent a considerable amount of time on Metroid ranches, and knows how to properly handle nearly any of them. [PAWN_pronoun] has a higher chance of training and taming metroids, and metroid operations done by them will never result in defects.</description>
+        <!--<statOffsets>
+          <ShootingAccuracyPawn>75</ShootingAccuracyPawn> 
+          <MeleeHitChance>75</MeleeHitChance>
+          <MentalBreakThreshold>-2</MentalBreakThreshold>
+          <PainShockThreshold>2</PainShockThreshold>
+        </statOffsets>-->
+        <statFactors> <!--any stat that is measured by an amount - sleep, hunger, pain, etc - is modified here-->
+          <!--<painFactor>0</painFactor>-->
+        </statFactors>
+        <skillGains>
+          <li>
+            <key>Medicine</key>
+            <value>2</value></li>
+          <li>
+            <key>Animals</key>
+            <value>2</value></li>
+        </skillGains> <!--Only needed if you want the pawn to have extra skill points with the trait-->
+      </li>
+    </degreeDatas>
+    <conflictingTraits> <!--Any trait defs that you don't want to have with this trait, put the def name of each one within a <li></li> field below-->
+      <li></li>
+    </conflictingTraits>
+    <requiredWorkTags>
+      <li>Caring</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+  </TraitDef>
+</Defs>
+
+
+<!--OTHER TRAITS
+
+    "Metroid Injection" - the pawn has taken an injection that supplied weak metroid cells. These cells do not provide large bonuses, but will also not require a dedicated suit, and avoid most of the downsides. Provides slightly higher heat resistance and regeneration, with slightly lower cold resistance. Injections fade after two years; new injections are optional, and not having another one has no future downsides.
+    "Metroid Infusion" - the pawn is half metroid, giving them the strengths and weaknesses of metroids to a very high degree. However they also require an undersuit to sustain them on the planet, which is integrated with their body.
+    "Metroid Lover" - loves having metroids around, and will gain a mood boost for ones being around.
+
+-->

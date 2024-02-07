@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--===============
+Quick notes:
+Under <PossibleEvolutionPaths>, make surethe <Age> tag is one year ABOVE the maximum
+age range defined in HediffGivers.xml. Also make sure that age ranges match in the
+proper race defs. If the ages cross over, a pawn will have wrong graphics, the
+wrong hediff/previous hediff, or both.
+
+The <whitelists> tag within <comps> allows certain hediffs to occur. Patches need
+to be made to allow hediff effects from other mods.
+===============-->
+
+<!--===============Miniroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_MiniroidState</defName>
+    <label>Evolution (Miniroid)</label>
+    <labelNoun>a Miniroid</labelNoun>
+    <description>A Miniroid</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+<!--===============Phazon Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_PhazonMetroidState</defName>
+    <label>Evolution (Phazon Metroid)</label>
+    <labelNoun>a Phazon Metroid</labelNoun>
+    <description>A Phazon Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+<!--===============Hopping Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_HoppingState</defName>
+    <label>Evolution (Hopping Metroid)</label>
+    <labelNoun>a Hopping Metroid</labelNoun>
+    <description>A Hopping Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+<!--===============Hopping Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_HatcherState</defName>
+    <label>Evolution (Metroid Hatcher)</label>
+    <labelNoun>a Metroid Matcher</labelNoun>
+    <description>A Metroid Hatcher.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Metroid Ravager===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_RavagerState</defName>
+    <label>Evolution (Metroid Ravager)</label>
+    <labelNoun>a Metroid Ravager</labelNoun>
+    <description>A Metroid Ravager.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+
+
+<!--===============Prime Metroid===============-->
+
+  <HediffDef ParentName="RT_MetroidStages">
+    <defName>RT_PrimeState</defName>
+    <label>Evolution (Prime Metroid)</label>
+    <labelNoun>a Prime Metroid</labelNoun>
+    <description>A Prime Metroid.</description>
+    <stages>
+      <li>
+	      <hungerRateFactorOffset>0.2</hungerRateFactorOffset>
+	      <restFallFactorOffset>0.3</restFallFactorOffset>
+        <naturalHealingFactor>1</naturalHealingFactor>
+        <painFactor>0.7</painFactor>
+	    <capMods>
+				<li>
+					<capacity>Moving</capacity>
+					<offset>0.4</offset>
+				</li>
+				<li>
+					<capacity>Eating</capacity>
+					<offset>-0.2</offset>
+				</li>
+				<li>
+					<capacity>Sight</capacity>
+					<offset>-0.05</offset>
+				</li>
+				<li>
+					<capacity>BloodFiltration</capacity>
+					<offset>0.1</offset>
+				</li>
+				<li>
+					<capacity>Metabolism</capacity>
+					<offset>-0.2</offset>
+				</li>
+		</capMods>
+      </li>
+    </stages>
+    <comps>
+    </comps>
+  </HediffDef>
+</Defs>

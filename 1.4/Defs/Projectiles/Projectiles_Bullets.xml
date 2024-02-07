@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Projectile for the cryogenic weapons -->
+
+  <!--Cryolauncher shell-->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RT_CryoExplosive</defName>
+    <label>cryogenic shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(68,150,215)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>40</speed>
+      <damageDef>RT_CryoDamageShell</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>3.2</explosionRadius>
+      <ai_IsIncendiary>true</ai_IsIncendiary>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+      <soundExplode>Explosion_Smoke</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <!--Cryorifle bullet-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RT_CryoBullet</defName>
+    <label>cryo bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(68,150,215)</color>
+    </graphicData>
+    <projectile>
+      <speed>90</speed>
+      <damageDef>RT_CryoDamageBullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <!--Hypodermic bullet-->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RT_SedativeDart</defName>
+    <label>dart</label>
+    <graphicData>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(68,150,215)</color>
+    </graphicData>
+    <projectile>
+      <speed>75</speed>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <armorPenetrationBase>0.9</armorPenetrationBase>
+    </projectile>
+    <thingClass>RT_Rimtroid.SedativeProjectile</thingClass>
+  </ThingDef>
+
+</Defs>

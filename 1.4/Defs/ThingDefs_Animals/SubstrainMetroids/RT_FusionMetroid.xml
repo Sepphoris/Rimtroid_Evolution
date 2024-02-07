@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--<ignoreConfigErrors>true</ignoreConfigErrors>
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_FusionMetroid</defName>
+		<label>Fusion Metroid</label>
+		<description>A Fusion Metroid.</description>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_FusionMetroid</defName>
+		<label>fusion metroid</label>
+		<race>RT_FusionMetroid</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.2</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>4</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>fusion metroid</label>
+			<labelPlural>fusion metroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FusionMetroid/RT_FusionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/SubstrainMetroids/FusionMetroid/RT_Dessicated_FusionMetroid</texPath>
+			  <drawSize>1</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>-->
+</Defs>

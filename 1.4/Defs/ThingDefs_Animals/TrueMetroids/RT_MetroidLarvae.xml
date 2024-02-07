@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+
+	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_MetroidLarvae</defName>
+		<label>Metroid Larva</label>
+
+		<description>Ancient, devastating bioweapons that originated from a distant galaxy, which have adapted to this world. Metroids are artifically created, requiring no sleep, water, or solid food; instead, they rely on the very life energy of others, allowing them to live hundreds of years if nourished properly. This also makes them a threat to the economy they survive in, as even one Metroid is prone to absorbing the life energy of every living thing around it, and then moving on once no suitable prey is around. Keep one around is both risky and demanding, but successfully controlling one grants access to a truly unique weapon of war.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
+		<statBases>
+		
+	<!-- Internal Stats -->
+		  <ToxicSensitivity>0</ToxicSensitivity>
+		  <PsychicSensitivity>0</PsychicSensitivity>
+      <Flammability>0</Flammability>
+		  <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+		  <ArmorRating_Heat>1</ArmorRating_Heat>
+		  <MoveSpeed>3</MoveSpeed>
+		  <MarketValue>120</MarketValue>
+		  <ComfyTemperatureMin>10</ComfyTemperatureMin> <!--50F: other was 15, which is 60F. Hoqwever since 60F is generally room temperature, it was made 50-->
+		  <ComfyTemperatureMax>760</ComfyTemperatureMax>
+		  <MeatAmount>10</MeatAmount>
+		</statBases>
+		<uiIconScale>1.35</uiIconScale>
+		
+	<!-- Attacks -->
+		<tools>
+			<li>
+				<label>ram</label>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>scratch</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>RT_LifedrainLarvae</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+                <label>life drain</label>
+                <capacities>
+                    <li>RT_LifedrainLarvae</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>3</cooldownTime>
+                <chanceFactor>0.8</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>8</amount>
+					</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+            </li>
+		</tools>
+		<comps>
+			<li Class="RT_Core.RT_FloatingComp">
+				<isFloater>true</isFloater>
+				<canCrossWater>true</canCrossWater>
+			</li>
+			<li Class="RT_Rimtroid.CompProperties_QueenDrone"></li>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage"> <!--needed so metroids recieve hediff upon spawning-->
+				<spawnStage>RT_LarvaState</spawnStage>
+			</li>
+			<!--<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_LowRest</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_FasterRegen</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li> -->
+	<!-- Race stats -->
+	</comps>
+		
+		<race>
+    <!-- Overriding animal think tree -->
+        <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+        <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+
+		  <bloodDef>Filth_BloodInsect</bloodDef>
+		  <herdAnimal>true</herdAnimal>
+		  <body>RT_LarvaeBody</body>
+		  <baseBodySize>0.4</baseBodySize>
+		  <baseHealthScale>2.2</baseHealthScale>
+		  <baseHungerRate>0.5</baseHungerRate>
+		  <hasGenders>false</hasGenders>
+			<hediffGiverSets>
+				<li>RT_EvoGrowth_Larvae</li>
+				<li>OrganicAgeless</li>
+				<!-- <li>RT_FeralStage</li> -->
+			</hediffGiverSets>
+		  <foodType>Processed</foodType>
+		  <!--<leatherDef>RT_MetroidChitin</leatherDef>-->
+		  <trainability>Advanced</trainability>
+		  <maxPreyBodySize>3.9</maxPreyBodySize>
+		  <gestationPeriodDays>30</gestationPeriodDays>
+		  <predator>false</predator>
+		  <!-- <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 1.7)</li>
+			  <li>(2.5, 0.7)</li>
+			  <li>(3, 0)</li>
+			</points>
+		  </litterSizeCurve> -->
+		  <manhunterOnDamageChance>0.90</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+		  <wildness>0.9</wildness>
+		  <lifeExpectancy>200</lifeExpectancy>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.25</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.5</minAge>
+				<soundWounded>RT_Larvae_Wounded</soundWounded>
+				<soundDeath>RT_Larvae_Death</soundDeath>
+				<soundCall>RT_Larvae_Call</soundCall>
+				<soundAngry>RT_Larvae_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<ageGenerationCurve>
+			<points>
+				<li>(15,0)</li>
+				<li>(20,3)</li>
+				<li>(30,10)</li>
+				<li>(50,5)</li>
+				<li>(70,0)</li>
+			</points>
+    </ageGenerationCurve>
+			<wildBiomes>
+			  <TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalSwamp>0.09</TropicalSwamp>
+				<TemperateSwamp>0.08</TemperateSwamp>
+				<TemperateForest>0.07</TemperateForest>
+				<AridShrubland>0.065</AridShrubland>
+				<Desert>0.06</Desert>
+				<BorealForest>0.025</BorealForest>
+				<Tundra>0.002</Tundra>
+				<ColdBog>0.001</ColdBog>
+			</wildBiomes>
+		</race>
+    <butcherProducts>
+			<RT_MetroidGel>10</RT_MetroidGel>
+		</butcherProducts>
+		<tradeTags>
+		  <li>AnimalExotic</li>
+		  <li>AnimalInsectSpace</li>
+		</tradeTags>
+	<modExtensions>
+    <!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
+	  <li Class="RT_Core.DisableTrainingDegredation"> </li>
+        <!--desicatedDef>huskdefnamehere</desicatedDef-->
+		  <li Class="RT_Core.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.0</key>
+						<value>0.25</value>
+					</li>
+					<li>
+						<key>0.05</key>
+						<value>0.15</value>
+					</li>
+					<li>
+						<key>0.1</key>
+						<value>0.06</value>
+					</li>
+					<li>
+						<key>0.2</key>
+						<value>0.03</value>
+					</li>
+					<li>
+						<key>0.3</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>0.1</chanceToBecomeWildIfBerserkAndTamed>
+			</li>
+			<li Class="RT_Core.RT_EnergyDrain">
+				<drainStunDuration>450~450</drainStunDuration>
+				<drainOverlayDuration>450~450</drainOverlayDuration>
+				<drainFoodGain>0.3~0.4</drainFoodGain>
+				<drainAgeFactor>14</drainAgeFactor>
+				<drainSicknessSeverity>0.3</drainSicknessSeverity>
+				<drainEnergyProcessing>300~300</drainEnergyProcessing>
+			</li>
+    </modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_MetroidLarvae</defName>
+		<label>Metroid Larva</label>
+		<race>RT_MetroidLarvae</race>
+		<combatPower>200</combatPower>
+		<ecoSystemWeight>1.4</ecoSystemWeight>
+		<wildGroupSize>
+			<min>3</min>
+			<max>6</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>metroid larva</label>
+			<labelPlural>metroid larva</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <drawSize>0.8</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <drawSize>0.8</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <drawSize>0.8</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <drawSize>0.8</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_MetroidLarvae</texPath>
+			  <drawSize>0.8</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/PureMetroids/MetroidLarvae/RT_Dessicated_MetroidLarvae</texPath>
+			  <drawSize>0.8</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

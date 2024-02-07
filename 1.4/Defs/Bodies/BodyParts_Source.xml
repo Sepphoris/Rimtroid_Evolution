@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--===================== Misc =====================-->
+
+
+	<!-- Shared Parts -->
+  <BodyPartDef>
+    <!--Head is conceptual since if it wasn't, decapitated metroids would exist-->
+    <conceptual>true</conceptual>
+    <defName>RT_Head</defName>
+    <label>head</label>
+    <hitPoints>120</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+
+	<BodyPartDef>
+    <!--<conceptual>true</conceptual> -->
+		<defName>RT_Mitosis</defName>
+		<label>Mitosis</label>
+		<hitPoints>15</hitPoints>
+		<bleedRate>0</bleedRate>
+		<skinCovered>true</skinCovered>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<tags>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RT_Membrane</defName>
+		<label>membrane</label>
+		<hitPoints>60</hitPoints>
+		<bleedRate>0</bleedRate>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RT_Protoplasm</defName>
+		<label>protoplasm</label>
+		<hitPoints>30</hitPoints>
+		<bleedRate>1</bleedRate>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<tags>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RT_Nucleus</defName>
+		<label>nucleus</label>
+		<hitPoints>15</hitPoints>
+		<bleedRate>0</bleedRate>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>ConsciousnessSource</li>
+			<li>BreathingSource</li>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+
+  <BodyPartDef>
+		<defName>Tail</defName>
+		<label>tail</label>
+		<hitPoints>60</hitPoints>
+		<frostbiteVulnerability>4</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+  </BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_Ovipositor</defName>
+		<label>ovipositor</label>
+		<hitPoints>40</hitPoints>
+		<skinCovered>false</skinCovered>
+		<bleedRate>0.5</bleedRate>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>Shell</defName>
+		<label>shell</label>
+		<hitPoints>180</hitPoints>
+		<skinCovered>false</skinCovered>
+		<bleedRate>0</bleedRate>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_FeedingTentacle</defName>
+		<label>tentacle</label>
+		<hitPoints>30</hitPoints>
+		<bleedRate>0</bleedRate>
+		<frostbiteVulnerability>1</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+
+
+  <!-- Bantee Metroid Parts-->
+
+	<BodyPartDef>
+		<defName>RT_BanteeMainBody</defName>
+		<label>body</label>
+		<hitPoints>60</hitPoints>
+		<frostbiteVulnerability>10</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RT_BanteeProtoplasm</defName>
+		<label>protoplasm</label>
+		<hitPoints>40</hitPoints>
+		<bleedRate>1</bleedRate>
+		<frostbiteVulnerability>6</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_BanteeNucleus</defName>
+		<label>nuclei</label>
+		<hitPoints>40</hitPoints>
+		<bleedRate>0</bleedRate>
+		<skinCovered>true</skinCovered>
+		<tags>
+      <li>SightSource</li>
+			<li>ConsciousnessSource</li>
+			<li>BreathingSource</li>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<!-- Metroid Larvae Parts; same as Bantee, but slightly stronger -->
+
+	<BodyPartDef>
+		<defName>RT_LarvaeMainBody</defName>
+		<label>body</label>
+		<hitPoints>80</hitPoints>
+		<frostbiteVulnerability>8</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+	
+	<BodyPartDef>
+		<defName>RT_LarvaeProtoplasm</defName>
+		<label>protoplasm</label>
+		<hitPoints>60</hitPoints>
+		<bleedRate>1</bleedRate>
+		<frostbiteVulnerability>5</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_LarvaeNucleus</defName>
+		<label>nuclei</label>
+		<hitPoints>60</hitPoints>
+		<bleedRate>0</bleedRate>
+		<skinCovered>true</skinCovered>
+		<tags>
+      <li>SightSource</li>
+			<li>ConsciousnessSource</li>
+			<li>BreathingSource</li>
+			<li>MetabolismSource</li>
+		</tags>
+	</BodyPartDef>
+
+  	<BodyPartDef>
+    <!--Exists so larvae cannot be blinded-->
+    <conceptual>true</conceptual>
+		<defName>RT_LarvaeSight</defName>
+		<label>nuclei</label>
+		<hitPoints>60</hitPoints>
+		<bleedRate>0</bleedRate>
+		<skinCovered>true</skinCovered>
+		<tags>
+			<li>SightSource</li>
+		</tags>
+	</BodyPartDef>
+		
+	<BodyPartDef>
+		<defName>RT_LarvaeTeeth</defName>
+		<label>mouth</label>
+		<hitPoints>65</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>EatingSource</li>
+		</tags>
+	</BodyPartDef>
+	
+		<!-- Matured Parts -->
+
+	<BodyPartDef>
+		<defName>RT_AlphaMainBody</defName>
+		<label>body</label>
+		<hitPoints>80</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_GammaMainBody</defName>
+		<label>body</label>
+		<hitPoints>80</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_ZetaMainBody</defName>
+		<label>body</label>
+		<hitPoints>80</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_OmegaMainBody</defName>
+		<label>body</label>
+		<hitPoints>100</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_QueenMainBody</defName>
+		<label>body</label>
+		<hitPoints>160</hitPoints>
+		<skinCovered>false</skinCovered>
+		<tags>
+			<li>MovingLimbCore</li>
+		</tags>
+	</BodyPartDef>
+
+	<!--Hunter Metroid Parts-->
+	<BodyPartDef>
+		<defName>RT_HunterMainBody</defName>
+		<label>body</label>
+		<hitPoints>90</hitPoints>
+		<frostbiteVulnerability>4</frostbiteVulnerability>
+		<skinCovered>false</skinCovered>
+	</BodyPartDef>
+
+	<BodyPartDef>
+		<defName>RT_HunterProtoplasm</defName>
+		<label>protoplasm</label>
+		<hitPoints>70</hitPoints>
+		<bleedRate>1</bleedRate>
+		<frostbiteVulnerability>1</frostbiteVulnerability>
+		<skinCovered>true</skinCovered>
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<tags>
+			<li>MovingLimbCore</li>
+			<li>BloodPumpingSource</li>
+			<li>BloodFiltrationSource</li>
+			<!--<li>EatingSource</li>-->
+		</tags>
+	</BodyPartDef>
+</Defs>

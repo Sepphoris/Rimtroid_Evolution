@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RT_QueenLeavesPeacefully</defName>
+		<label>Metroid Queen departs colony</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Rimtroid.IncidentWorker_QueenLeavesPeacefully</workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>PositiveEvent</letterDef>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_QueenLeavesHungry</defName>
+		<label>Metroid Queen leaves colony</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Rimtroid.IncidentWorker_QueenLeavesHungry</workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+
+	<!-- ============================== Pure Metroid Raids ==============================-->
+
+	<IncidentDef>
+		<defName>RT_OmegaBecomesQueen</defName>
+		<label>Omega becomes queen</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Rimtroid.IncidentWorker_OmegaBecomesQueen</workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>PositiveEvent</letterDef>
+	</IncidentDef>
+	
+	
+	<IncidentDef>
+		<defName>RT_QueenKilled</defName>
+		<label>Queen killed</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<workerClass>RT_Rimtroid.IncidentWorker_OtherFactionKilledQueen</workerClass>
+		<baseChance>0.01</baseChance>
+		<minRefireDays>0</minRefireDays>
+		<letterDef>PositiveEvent</letterDef>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_QueenSpotted</defName>
+		<label>QueenSpotted</label>
+		<workerClass>RT_Rimtroid.IncidentWorker_QueenSpotted</workerClass>
+		<targetTags>
+			<li>World</li>
+		</targetTags>
+		<baseChance>0</baseChance>
+		<category>ThreatBig</category>
+	</IncidentDef>
+
+	<!-- ============================== Pure Metroid Raids ==============================-->
+	<IncidentDef>
+		<defName>RT_RaidPureSmall</defName>
+		<label>Raid: Small Metroid Pack</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>4</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_BanteeMetroid>5</RT_BanteeMetroid>
+						<RT_MetroidLarvae>20</RT_MetroidLarvae>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>2</RT_MetroidLarvae>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>3000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Smithing</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
+				<letterText>A small group of metroids have entered the region, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+
+	<IncidentDef>
+		<defName>RT_RaidPureSwarmSmall</defName>
+		<label>Raid: Metroid Larvae Swarm</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>4</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_BanteeMetroid>5</RT_BanteeMetroid>
+						<RT_MetroidLarvae>20</RT_MetroidLarvae>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>5</RT_MetroidLarvae>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>6000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>PlateArmor</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
+				<letterText>A swarm of metroid larvae has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_RaidPureSwarmBig</defName>
+		<label>Raid: Metroid Larvae Swarm</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>3.8</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>15</earliestDay>
+		<minRefireDays>30</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_BanteeMetroid>5</RT_BanteeMetroid>
+						<RT_MetroidLarvae>20</RT_MetroidLarvae>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>12</RT_MetroidLarvae>
+						<RT_BanteeMetroid>3</RT_BanteeMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>20000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Gunsmithing</li>
+					<li>FlakArmor</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Larvae Swarm</letterTitle>
+				<letterText>A massive swarm of metroid larvae has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+
+	<IncidentDef>
+		<defName>RT_RaidPureBasic</defName>
+		<label>Raid: Metroid Pack</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>4.5</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>45</earliestDay>
+		<minRefireDays>15</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>15</RT_MetroidLarvae>
+						<RT_AlphaMetroid>15</RT_AlphaMetroid>
+						<RT_GammaMetroid>10</RT_GammaMetroid>
+						<RT_ZetaMetroid>5</RT_ZetaMetroid>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_MetroidLarvae>3</RT_MetroidLarvae>
+						<RT_GammaMetroid>1</RT_GammaMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>12000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Neolithic</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>PlateArmor</li>
+					<li>Gunsmithing</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Pack</letterTitle>
+				<letterText>A pack of metroids has entered the area, in desperate search for food.\n\nThey have targetted the colony, and are attacking immediately.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_RaidPureHeavy</defName>
+		<label>Raid: Metroid Assault Pack</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>2</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>60</earliestDay>
+		<minRefireDays>35</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_GammaMetroid>10</RT_GammaMetroid>
+						<RT_ZetaMetroid>10</RT_ZetaMetroid>
+						<RT_OmegaMetroid>2</RT_OmegaMetroid>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_GammaMetroid>3</RT_GammaMetroid>
+						<RT_ZetaMetroid>1</RT_ZetaMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>22000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Gunsmithing</li>
+					<li>PlateArmor</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Assault Pack</letterTitle>
+				<letterText>A pack of large metroids has entered the area, in search of either food or territory.\n\nThey have targetted the colony, and are attacking immediately.\n\nWatch out; these metroids are large and quite armored. They will inflict large amounts of damage if not dealt with carefully.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_RaidOmegas</defName>
+		<label>Omega Metroid Siege</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>0.8</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>90</earliestDay>
+		<minRefireDays>45</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_OmegaMetroid>2</RT_OmegaMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>30000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>Gunsmithing</li>
+					<li>GasOperation</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Omega Metroid Siege</letterTitle>
+				<letterText>Two hostile Omega metroids have entered the map, and are heading straight for the colony.\n\nOmegas are massive, powerful, and can withstand extreme amounts of punishment. Unleash everything you can on them before they get too close.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_RaidPureKillSquad</defName>
+		<label>Raid: Metroid Kill Squad</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>1.2</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>90</earliestDay>
+		<minRefireDays>50</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_ZetaMetroid>15</RT_ZetaMetroid>
+						<RT_OmegaMetroid>5</RT_OmegaMetroid>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_ZetaMetroid>4</RT_ZetaMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>33000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>FlakArmor</li>
+					<li>BlowbackOperation</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Kill Squad</letterTitle>
+				<letterText>A pack of metroids, consisting of numerous Zetas, is making a beeline towards the colony! Their intention doesn't seem to be for territory or food, but rather to directly assault the colony.\n\nThese metroids are extremely quick and well armored. Extreme caution is advised.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>RT_RaidPureExterminationForce</defName>
+		<label>Raid: Metroid Extermination Force</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>RT_Core.IncidentWorker_RaidMetroid</workerClass>
+		<baseChance>0.6</baseChance>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<tale>Raid</tale>
+		<earliestDay>90</earliestDay>
+		<minRefireDays>60</minRefireDays>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<raidFaction>RT_Metroids</raidFaction>
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_GammaMetroid>5</RT_GammaMetroid>
+						<RT_ZetaMetroid>15</RT_ZetaMetroid>
+						<RT_OmegaMetroid>10</RT_OmegaMetroid>
+					</options>
+				</pawnGroup>
+				<minimumPawnCountPerKind>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_GammaMetroid>2</RT_GammaMetroid>
+						<RT_ZetaMetroid>3</RT_ZetaMetroid>
+						<RT_OmegaMetroid>2</RT_OmegaMetroid>
+					</options>
+				</minimumPawnCountPerKind>
+				<!--<minimumPawnCount>5</minimumPawnCount>
+				<fixedRaidPoints>9999</fixedRaidPoints>-->
+				<minimumPlayerWealth>39000</minimumPlayerWealth>
+				<minimumPlayerTechLevel>Industrial</minimumPlayerTechLevel>
+				<requiredResearchProjectsUnlocked>
+					<li>GasOperation</li>
+					<li>FlakArmor</li>
+					<li>MultiAnalyzer</li>
+					<li>Fabrication</li>
+				</requiredResearchProjectsUnlocked>
+				<raidPointsMultiplier>0.5</raidPointsMultiplier>
+				<raidStrategy>ImmediateAttack</raidStrategy>
+				<raidArrival>EdgeWalkIn</raidArrival>
+				<letterDef>ThreatBig</letterDef>
+				<letterTitle>Raid: Metroid Extermination Force</letterTitle>
+				<letterText>A huge pack of metroids, consiting of Gammas, Zetas and the behemoth Omegas, is heading straight towards the colony. This raid is clearly not about food, or about expanding territory; the local hive has designated the colony as a threat, and is fully intent on wiping it out. \n\nThe incoming force is massive, and will take all the firepower you have to stop it. Bunker down, and pray none of them break through your defenses.</letterText>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+</Defs>

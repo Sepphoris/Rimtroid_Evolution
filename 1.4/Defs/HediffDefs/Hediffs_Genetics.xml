@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<!--Genetic Hediff coloring-->
+	<HediffDef Name="RT_MetroidAddition" Abstract="True">
+		<defaultLabelColor>(0,204,0)</defaultLabelColor>
+		<isBad>false</isBad>
+	</HediffDef>
+
+<!--(233,129,69) - Orange label
+(255,204,153) - lighter orange label
+(0.8,0,0.8) - Purple label
+(178,102,255) - Also purple label
+(0.8,0,0) - Dark red label
+(1,0,0.5) - Pink label
+(0.7,1,0.7) - Light green label
+(255,51,51) - vibrant red label
+(204,102,0) - brown label-->
+
+	<!--===============To-do===============
+		Until machinery makes it's way into the mod, injections will have to be found, bought, or crafted. Craftable ones require a bench, research, and one Aeion Extract
+		All injections result in a hediff that temporarily hinders the metroid while it's system adapts. You will need some nutrient injections for this process. The process is approx. 1 day.
+		Metroids sold by war merchants may already have various genetic changes.
+
+		Endothermic Hibernation: if it gets too cold, the pawn shouldn't freeze; instead it should go into a hibernation, like insectoids.
+		Muscle Strengthening: Allows the pawn to carry more. Craftable.
+		Speed Injection: Increases pawn speed. Tiered. Craftable.
+		Regeneration: should be a default passive.
+		Regeneration II: increases regen speed. 
+		Regeneration III: allows the pawn to regenerate limbs.
+		Exoskeleton Strengthening: enhances melee damage and armor.
+		Flesh Hardening: Slows down the pawn, but makes the pawn immune to cuts.
+		Cell Repurposing: saves the pawn from dying, in exchange for one or more health defects.
+		Cellular Vaulting: saves the pawn from dying, in exchange for  2x hunger rate.
+		Toxic Resistance I-IV: Increases toxic resistance by 25% each. Craftable
+		Sleep Injection: Reduces need for sleep. Tiered so sleep is no longer required
+		Endothermic Adaption: redone so it's -15 minimum confort temp. Craftable
+		Endothermic Adaption II: redone so it's -30 minimum confort temp
+		Nutrient Regulation: Redone so it's 30% slower hunger. Craftable.
+		Nutrient Regulation II: 60% slower hunger
+		Nutrient Regulation III: 90% slower hunger
+		Psychic Sensitivity: Increases psychic activity in the pawn. Used on offworld Metroids
+		Psychic Deafness: Makes the pawn psychically deaf. Used on on-world variants
+	-->
+
+	<!--===============Stunted Metroid - Chrono Suspender (a stand-in for all stunted metroids until values are implemented)===============-->
+
+	<HediffDef>
+		<defName>RT_GrowthSuspenderHediff</defName>
+		<descriptionHyperlinks>
+			<ThingDef>RT_GrowthSuspender</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
+		</descriptionHyperlinks>
+		<label>Growth Suspension</label>
+		<labelNoun>biological growth suspension</labelNoun>
+		<defaultLabelColor>(233,129,69)</defaultLabelColor>
+		<description>A genetically forced condition that permanently suspends the metroid's body from aging, permanently 'locking' the metroid in it's current stage.</description>
+		<initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+				<hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="RT_Rimtroid.HediffDefections">
+				<hediffDefections>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.04</value>
+					</li>
+				</hediffDefections>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+	<!-- =============== Cryoadapter =============== -->
+
+	<HediffDef>
+		<defName>RT_CryoadapterHediff</defName>
+		<hediffClass>Hediff</hediffClass>
+		<descriptionHyperlinks>
+			<ThingDef>RT_Cryoadapter</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
+		</descriptionHyperlinks>
+		<label>Endothermic Adaption</label>
+		<labelNoun>endothermic adaption</labelNoun>
+		<defaultLabelColor>(178,102,255)</defaultLabelColor>
+		<description>A genetically forced adaption that allows Metroids to survive colder temperatures.</description>
+		<initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+				<statOffsets>
+					<ComfyTemperatureMin>-15</ComfyTemperatureMin>
+				</statOffsets>
+				<statFactors>
+					<MarketValue>1.5</MarketValue>
+				</statFactors>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="RT_Rimtroid.HediffDefections">
+				<hediffDefections>
+					<li>
+						<key>RT_StuntedDefect</key>
+						<value>0.08</value>
+					</li>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.02</value>
+					</li>
+				</hediffDefections>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+	<!-- =============== Nutrient Regulator =============== -->
+
+	<HediffDef>
+		<defName>RT_NutrientRegulatorHediff</defName>
+		<hediffClass>Hediff</hediffClass>
+		<descriptionHyperlinks>
+			<ThingDef>RT_NutrientRegulator</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
+		</descriptionHyperlinks>
+		<label>Nutrient Regulation</label>
+		<labelNoun>nutrient regulation</labelNoun>
+		<defaultLabelColor>(178,102,255)</defaultLabelColor>
+		<description>A genetically forced adaption that processes nutrition distribution more efficienty, slowing down hunger depletion.</description>
+		<initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+				<hungerRateFactorOffset>-0.5</hungerRateFactorOffset>
+				<statFactors>
+					<MarketValue>1.5</MarketValue>
+				</statFactors>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="RT_Rimtroid.HediffDefections">
+				<hediffDefections>
+					<li>
+						<key>RT_StuntedDefect</key>
+						<value>0.08</value>
+					</li>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.02</value>
+					</li>
+				</hediffDefections>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+	<!-- =============== Systemic Fortification =============== -->
+
+	<HediffDef>
+		<defName>RT_ImmunityAcceleratorHediff</defName>
+		<hediffClass>Hediff</hediffClass>
+		<descriptionHyperlinks>
+			<ThingDef>RT_ImmunityAccelerator</ThingDef>
+			<HediffDef>RT_GeneticDefectsOverview</HediffDef>
+		</descriptionHyperlinks>
+		<label>Systemic Fortification</label>
+		<labelNoun>systemic fortification</labelNoun>
+		<defaultLabelColor>(178,102,255)</defaultLabelColor>
+		<description>A genetically forced adaption that accelerates the growth of the metroid immune system, strengthening otherwise weakened vital functions.\n\nThis will disappear upon evolving to the Alpha stage.</description>
+		<initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+				<naturalHealingFactor>1.5</naturalHealingFactor>
+				<capMods>
+					<li>
+						<capacity>Eating</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.3</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+				<statFactors>
+					<MarketValue>1.5</MarketValue>
+				</statFactors>
+			</li>
+		</stages>
+		<modExtensions>
+			<li Class="RT_Rimtroid.HediffDefections">
+				<hediffDefections>
+					<li>
+						<key>RT_StuntedDefect</key>
+						<value>0.08</value>
+					</li>
+					<li>
+						<key>RT_AcceleratedDivision</key>
+						<value>0.04</value>
+					</li>
+					<li>
+						<key>RT_CellularDecay</key>
+						<value>0.02</value>
+					</li>
+				</hediffDefections>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+</Defs>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>RT_MainMetroidFactionNames</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=2)->Metroid [GroupType] [BroodID]</li>
+        <li>r_name(p=2)->Metroid [GroupType] [BroodID]</li>
+        <li>r_name(p=2)->Metroid [GroupType] [BroodID]</li>
+
+        <li>GroupType->Brood</li>
+        <li>GroupType->Cluster</li>
+        <li>GroupType->Collective</li>
+        <li>GroupType->Gestalt</li>
+        <li>GroupType->Hive</li>
+        <li>GroupType->Horde</li>
+        <li>GroupType->Swarm</li>
+  
+        <li>BroodID->MP-156</li>
+        <li>BroodID->PM-402</li>
+        <li>BroodID->PB-377</li>
+        <li>BroodID->CA-452</li>
+        <li>BroodID->FZ-992</li>
+        <li>BroodID->TH-023</li>
+        <li>BroodID->C-229</li>
+        <li>BroodID->AS-308</li>
+        <li>BroodID->PA-344</li>
+        <li>BroodID->PP-401</li>
+        <li>BroodID->MS-444</li>
+        <li>BroodID->PL-515</li>
+        <li>BroodID->MS-587</li>
+        <li>BroodID->GW-664</li>
+        <li>BroodID->SB-712</li>
+        <li>BroodID->MR-891</li>
+        <li>BroodID->PI-957</li>
+        <li>BroodID->EP-001</li>
+        <li>BroodID->IC-156</li>
+        <li>BroodID->HW-222</li>
+        <li>BroodID->OP-232</li>
+        <li>BroodID->SF-369</li>
+        <li>BroodID->GS-377</li>
+        <li>BroodID->A-402</li>
+        <li>BroodID->MM-420</li>
+        <li>BroodID->CS-440</li>
+        <li>BroodID->TK-452</li>
+        <li>BroodID->MF-550</li>
+        <li>BroodID->CG-664</li>
+        <li>BroodID->AE-042</li>
+        <li>BroodID->MO-242</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>RT_MainMetroidSettlementNames</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->Infested [TownType]</li>
+        <li>r_name(p=2)->[NestActivity] [GroundType]</li>
+        <li>r_name->Infested [TownType]</li>
+        <li>r_name-> [NestActivity] Infested [TownType]</li>
+
+        <li>GroundType->Feeding Grounds</li>
+        <li>GroundType->Hatching Grounds</li>
+        <li>GroundType->Hunting Grounds</li>
+        <li>GroundType->Metroid Nest</li>
+        <li>GroundType->Metroid Caverns</li>
+
+        <li>TownType->Settlement</li>
+        <li>TownType->Village</li>
+        <li>TownType->Outpost</li>
+        <li>TownType->City</li>
+
+        <!--<li>NestSize->Tiny</li>
+        <li>NestSize->Small</li>
+        <li>NestSize->Large</li>
+        <li>NestSize->Massive</li>-->
+
+        <li>NestActivity->Ancient</li>
+        <li>NestActivity->Abandoned</li>
+        <li>NestActivity->Inactive</li>
+        <li>NestActivity->Active</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>RT_QueenNames</defName>
+    <rulePack>
+      <rulesStrings>
+        <!--IDs based on non-prime games-->
+        <li>r_name->[QueenID]</li>
+        <li>QueenID->M-1986</li>
+        <li>QueenID->RS-1991</li>
+        <li>QueenID->SM-1994</li>
+        <li>QueenID->MF-2002</li>
+        <li>QueenID->ZM-2004</li>
+        <li>QueenID->OM-2010</li>
+        <li>QueenID->SR-2017</li>
+        <!--Non-Prime games with IDs scrambled-->
+        <li>QueenID->M-8169</li>
+        <li>QueenID->SR-1919</li>
+        <li>QueenID->MS-4991</li>
+        <li>QueenID->FM-0022</li>
+        <li>QueenID->MZ-2040</li>
+        <li>QueenID->MO-1200</li>
+        <li>QueenID->RS-0271</li>
+        <!--IDs based on Prime games-->
+        <li>QueenID->MP-2002</li>
+        <li>QueenID->PE-2004</li>
+        <li>QueenID->PP-2005</li>
+        <li>QueenID->PH-2006</li>
+        <li>QueenID->PC-2007</li>
+        <li>QueenID->PT-2009</li>
+        <li>QueenID->FF-2016</li>
+        <!--Prime games with IDs scrambled-->
+        <li>QueenID->PM-0220</li>
+        <li>QueenID->EP-4200</li>
+        <li>QueenID->PP-0025</li>
+        <li>QueenID->HP-6020</li>
+        <li>QueenID->CP-7002</li>
+        <li>QueenID->TP-2090</li>
+        <li>QueenID->FF-6210</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+      
+
+
+      <!--IDs based on space pirate logs from MP1
+
+      IDs based on space pirate logs from MP2
+        <li>BroodID->Specimen P0-468</li>
+        <li>BroodID->Specimen LC-885</li>
+        <li>BroodID->Specimen GD-008</li>
+        <li>BroodID->Specimen RP-442</li>
+        <li>BroodID->Specimen PR-221</li>
+        <li>BroodID->Specimen TH-362</li>
+        <li>BroodID->Specimen SB-713</li>
+        <li>BroodID->Specimen SW-989</li>
+        <li>BroodID->Specimen FA-013</li>
+        <li>BroodID->Specimen TH-159</li>
+        
+      Other metroid content; use for queen names
+        <li>BroodID->Specimen CC-468</li>
+        <li>BroodID->Specimen CC-885</li>
+        <li>BroodID->Specimen CC-008</li>
+        <li>BroodID->Specimen CC-442</li>
+        <li>BroodID->Specimen CC-221</li>
+        <li>BroodID->Specimen BS-362</li>
+        <li>BroodID->Specimen SS-713</li>
+        <li>BroodID->Specimen SD-989</li>
+        <li>BroodID->Specimen SSB-013</li>
+        <li>BroodID->Specimen CMS-159</li>
+      IDs based on Federation Force missions; may be too obvious
+        <li>BroodID->Specimen M01-O</li>
+        <li>BroodID->Specimen M02-H</li>
+        <li>BroodID->Specimen M04-C</li>
+        <li>BroodID->Specimen M05-E</li>
+        <li>BroodID->Specimen M06-I</li>
+        <li>BroodID->Specimen M07-C</li>
+        <li>BroodID->Specimen M08-D</li>
+        <li>BroodID->Specimen M09-B</li>
+        <li>BroodID->Specimen M10-BH</li>
+        <li>BroodID->Specimen M11-U</li>
+        <li>BroodID->Specimen M12-LS</li>
+        <li>BroodID->Specimen M13-P</li>
+        <li>BroodID->Specimen M14-T</li>
+        <li>BroodID->Specimen M15-ML</li>
+        <li>BroodID->Specimen M16-S</li>
+        <li>BroodID->Specimen M17-I</li>
+        <li>BroodID->Specimen M19-I</li>
+        <li>BroodID->Specimen M18-H</li>
+        <li>BroodID->Specimen M20-I</li>
+        <li>BroodID->Specimen M21-TC</li>
+        <li>BroodID->Specimen M22-C</li>-->
+</Defs>

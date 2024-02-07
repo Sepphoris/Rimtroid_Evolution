@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <SitePartDef ParentName="Outpost">
+    <defName>RT_QueenLair</defName>
+    <label>queen lair</label>
+    <description>queen lair.</description>
+    <tags Inherit="False">
+      <li>RT_QueenLair</li>
+    </tags>
+  </SitePartDef>
+
+  <GenStepDef>
+    <defName>RT_QueenLair</defName>
+    <linkWithSite>RT_QueenLair</linkWithSite>
+    <order>450</order>
+    <genStep Class="RT_Rimtroid.GenStep_QueenLair"/>
+		<modExtensions>
+			<li Class="RT_Core.RaidOptions">
+				<pawnGroup>
+					<kindDef>Combat</kindDef>
+					<options>
+						<RT_BanteeMetroid>5</RT_BanteeMetroid>
+						<RT_MetroidLarvae>20</RT_MetroidLarvae>
+					</options>
+				</pawnGroup>
+				<raidPoints>1000~2000</raidPoints>
+			</li>
+		</modExtensions>
+  </GenStepDef>
+
+</Defs>

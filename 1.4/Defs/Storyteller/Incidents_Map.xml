@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <IncidentDef>
+    <defName>RT_Incident_LoneBantee</defName>
+    <label>Lost Bantee Wanders In</label>
+	<category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>RT_Rimtroid.Event_LoneBantee</workerClass>
+    <baseChance>0.3</baseChance>
+    <minRefireDays>16</minRefireDays>
+  </IncidentDef>
+  
+  <IncidentDef>
+    <defName>RT_Incident_LarvaePack</defName>
+    <label>Metroid Larvae Pack</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+	  <category>Misc</category>
+    <workerClass>RT_Rimtroid.Event_LarvaePack</workerClass>
+    <baseChance>0.4</baseChance>
+    <minRefireDays>30</minRefireDays>
+    <pointsScaleable>true</pointsScaleable> 
+		<earliestDay>15</earliestDay>
+
+  </IncidentDef>
+</Defs>

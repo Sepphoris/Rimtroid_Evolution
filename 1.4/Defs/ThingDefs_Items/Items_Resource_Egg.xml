@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=====================================================================-->
+  <!--=============================== Eggs ================================-->
+  <!--=====================================================================-->
+
+
+<!-- Egg Base-->
+	<ThingDef Abstract="True" Name="RT_EggFertBase" ParentName="OrganicProductBase">
+		<tickerType>Normal</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<graphicData>
+			<texPath>Things/AnimalProduct/RT_MetroidEgg</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>1</drawSize>
+		</graphicData>
+		<statBases>
+			<Mass>0.3</Mass>
+			<MaxHitPoints>20</MaxHitPoints>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Flammability>0</Flammability>
+			<FoodPoisonChanceFixedHuman>100</FoodPoisonChanceFixedHuman>
+		</statBases>
+	  <stuffProps>
+		  <commonality>0</commonality>
+	  </stuffProps>
+		<thingCategories>
+			<li>EggsFertilized</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>15</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+				<disableIfHatcher>true</disableIfHatcher>
+			</li>
+			<li Class="CompProperties_TemperatureRuinable">
+				<minSafeTemperature>8</minSafeTemperature>
+				<maxSafeTemperature>180</maxSafeTemperature>
+				<progressPerDegreePerTick>0.00006</progressPerDegreePerTick>
+			</li>
+		</comps>
+		<stackLimit>1</stackLimit>
+	</ThingDef>
+
+  <!--Unfertilized Egg-->
+  
+    <ThingDef ParentName="EggUnfertBase">
+    <defName>RT_MetroidEggUnfertilized</defName>
+    <label>metroid egg (unfert.)</label>
+    <description>A metroid that was lain unfertilized. Not advised for consumption.</description>
+    <graphicData>
+      <texPath>Things/AnimalProduct/RT_MetroidEgg</texPath>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<statBases>
+		<Beauty>-2</Beauty>
+		<Mass>0.3</Mass>
+    <DeteriorationRate>0</DeteriorationRate>
+		<Flammability>0</Flammability>
+		<MarketValue>25</MarketValue>
+    <FoodPoisonChanceFixedHuman>100</FoodPoisonChanceFixedHuman>
+	</statBases>
+  </ThingDef>
+
+  <!-- Bantee Egg -->
+  
+    <ThingDef ParentName="RT_EggFertBase">
+      <defName>RT_MetroidEggFertilized</defName>
+      <label>metroid egg (fert.)</label>
+      <description>A green, slimey, pulsating egg, containing a unmodified metroid. Very rare and valuable, as it is the crown jewel when it comes to mutation candidates. You can sell it, or choose to let it hatch, but be prepared if you do the latter; metroids are not easy to maintain.</description>
+      <graphicData>
+        <texPath>Things/AnimalProduct/RT_MetroidEgg</texPath>
+        <drawSize>1</drawSize>
+	    </graphicData>
+	    <statBases>
+		    <Beauty>0</Beauty>
+		    <Mass>0.3</Mass>
+		    <Flammability>0</Flammability>
+		    <MarketValue>2000</MarketValue>
+	    </statBases>
+	    <stuffProps>
+		    <commonality>0</commonality>
+	    </stuffProps>
+      <comps>
+        <li Class="CompProperties_Hatcher">
+          <hatcherDaystoHatch>14</hatcherDaystoHatch>
+          <hatcherPawn>RT_BanteeMetroid</hatcherPawn>
+        </li>
+      </comps>
+      <thingSetMakerTags>
+        <li>RewardStandardLowFreq</li>
+      </thingSetMakerTags>
+    </ThingDef>
+
+</Defs>

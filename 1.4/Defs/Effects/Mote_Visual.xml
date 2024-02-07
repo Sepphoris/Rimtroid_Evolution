@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============== Bases ==============-->
+
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_ProcessingEnergyMote</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_Mote_SparkFlash</defName>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_Mote_AirPuff</defName>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>RT_Mote_MicroSparksFast</defName>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <graphicData>
+      <texPath>Things/Mote/BlastEMP</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <mote>
+      <solidTime>0</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  
+  
+</Defs>

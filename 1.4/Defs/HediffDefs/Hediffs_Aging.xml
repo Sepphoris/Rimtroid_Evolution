@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--===============Aetas - Age Acceleration Overview===============-->
+
+  <HediffDef ParentName="RT_MetroidStagesBad">
+    <defName>RT_AcceleratedAgingOverview</defName>
+    <label>Age Acceleration (injection)</label>
+    <labelNoun>age acceleration (injection)</labelNoun>
+    <description>A rapid systemic acceleration that matures Metroid subjects far faster than normal. This allows Metroid to reach their future stages faster, bypassing the feedings they naturally require to advance. However, the injection is quite slow to affect a metroid, and can take up to a few days to thoroughly complete.\n\nAge accelerated per stage:\n\nBantee Metroid: 3 years, 36 days (1.8 day process)\nMetroid Larvae: 16 years, 30 days (2 day process)\nAlpha Metroid: 33 years, 30 days (2.2 day process)\nGamma Metroid: 50 years (2.4 day process)\nZeta Metroid: 90 years (2.6 day process)\nOmega Metroid: 200 years (2.8 day process)</description>
+    <stages>
+      <li>
+	  	  <becomeVisible>true</becomeVisible>
+			  <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+		  </li>
+    </stages>
+</HediffDef>
+
+    <!--===============Accelerated Aging: General===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAging</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated: 200 years</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<!-- <ticks> * <disappearsAfterTicks> = <totalTicksAdded> -->
+			<!-- <totalTicksAdded> / <disappearsAfterTicks> = <ticks> -->
+			<!-- <totalTicksAdded> / <ticks> = <disappearsAfterTicks> -->
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ticks>4286</ticks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>168000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Bantee===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingBantee</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Bantee Stage): 3 years, 36 days</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ticks>120</ticks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>108000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Larvae===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingLarvae</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Larvae Stage): 16 years, 30 days</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ticks>150</ticks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>120000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Alpha===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingAlpha</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Alpha Stage): 33 years, 30 days</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ticks>914</ticks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>132000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Gamma===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingGamma</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Gamma Stage): 50 years</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ticks>1250</ticks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>144000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+  <!--===============Accelerated Aging: Zeta===============-->
+
+	<HediffDef>
+		<defName>RT_AcceleratedAgingZeta</defName>
+		<label>accelerated aging</label>
+		<labelNoun>age acceleration</labelNoun>
+		<description>A metroid undergoing rapid aging that would otherwise take up to decades.\n\nTotal age accelerated (Zeta Stage): 90 years</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<defaultLabelColor>(0.95, 0.9, 0.3)</defaultLabelColor>
+		<comps>
+			<li Class="RT_Core.HediffCompProperties_ModifyAge">
+				<updateMethod>AddAge</updateMethod>
+				<ticks>2077</ticks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>156000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+        <hungerRateFactorOffset>1.5</hungerRateFactorOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

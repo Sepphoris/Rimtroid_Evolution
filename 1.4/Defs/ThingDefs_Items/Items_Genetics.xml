@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =============== Parent Modification classes =============== -->
+	<ThingDef Name="RT_MetroidModificationBase" ParentName="ResourceBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+  	<pathCost>10</pathCost>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <stackLimit>10</stackLimit>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.2</Mass>
+			<Flammability>0.2</Flammability>
+			<Beauty>-4</Beauty>
+      <DeteriorationRate>0</DeteriorationRate>
+		</statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+	</ThingDef>
+
+  <ThingDef Name ="RT_MetroidInjectableBase" ParentName="RT_MetroidModificationBase" Abstract="True">
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/BlankImplant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <costList>
+      <RT_AeionExtract>2</RT_AeionExtract>
+      <RT_BlankInjector>1</RT_BlankInjector>
+      <Neutroamine>2</Neutroamine>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <researchPrerequisite>RT_BasicGeneticImplants</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+        <Intellectual>4</Intellectual>
+      </skillRequirements>
+    </recipeMaker>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+		</comps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+		<thingSetMakerTags>
+			<li>AnimalPart</li>
+		</thingSetMakerTags>
+  </ThingDef>
+
+  	<!-- =============== Blank Injector =============== -->
+
+ <ThingDef ParentName="RT_MetroidModificationBase">
+    <defName>RT_BlankInjector</defName>
+    <label>Empty Metroid Injector</label>
+    <descriptionHyperlinks>
+      <ThingDef>RT_Cryoadapter</ThingDef>
+      <ThingDef>RT_GrowthSuspender</ThingDef>
+      <ThingDef>RT_ImmunityAccelerator</ThingDef>
+      <ThingDef>RT_NutrientRegulator</ThingDef>
+    </descriptionHyperlinks>
+    <description>An empty metroid injector. You can use this to craft various metroid injections.</description>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/BlankImplant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>1400</MarketValue>
+    </statBases>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  	<!-- =============== Growth Suspender =============== -->
+
+ <ThingDef ParentName="RT_MetroidInjectableBase">
+    <defName>RT_GrowthSuspender</defName>
+    <label>Metroid Growth Suspender</label>
+    <descriptionHyperlinks><HediffDef>RT_GrowthSuspenderHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, "tricking" the body into thinking it has reached full maturity. This interrupts the metroid's natural life cycle, preventing it from reaching to any future stage (natural or artificial) that it may have been able to reach. This can be helpful if you want a specific metroid, or harmful if you intend to evolve metroids further.
+    
+Unlike most other implants, this can be used on any metroid stage due to metroids being suspect to naturally developing this condition. While their immune system may detect the mechanites, this flaw allows the condition to be inflicted with next to no resistance.
+      
+The effects of this operation will last indefinitely, but can be eliminated with advanced machinery; however, keep in mind that reversing the process is risky, and can lead to severe defects occuring in the metroid.</description>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/GrowthSuspender</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin biological growth suspension</useLabel>
+      </li>
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
+        <hediffDef>RT_GrowthSuspenderHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+	<!-- =============== Cryoadapter =============== -->
+
+ <ThingDef ParentName="RT_MetroidInjectableBase">
+    <defName>RT_Cryoadapter</defName>
+    <label>Metroid Cryoadapter</label>
+    <descriptionHyperlinks><HediffDef>RT_CryoadapterHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, exposing the nucleus to subtle, yet constant, lowering of internal temperatures. The body adapts by changing it's internal structure, thickening the membrane and altering the nuclei structure to better handle the new body temperature. This allows metroids to survive much lower temperatures, though the weakness isn't eliminated completely.
+    
+Due to it's intrusive nature, the immune system of older metroids will completely block out the changes; this requires it to be administered during the Bantee or larvae stage.
+      
+This is a permanent operation; any metroid with this alteration will retain it throughout their stage growths.</description>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/Cryoadapter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin endothermic adaption</useLabel>
+      </li>
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
+        <hediffDef>RT_CryoadapterHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<!-- =============== Nutrient Regulator =============== -->
+
+ <ThingDef ParentName="RT_MetroidInjectableBase">
+    <defName>RT_NutrientRegulator</defName>
+    <label>Metroid Nutrient Regulator</label>
+    <descriptionHyperlinks><HediffDef>RT_NutrientRegulatorHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, altering the immune system's method of distributing energy. A (possibly intentional) genetic flaw directs a large amount of stored nutrition into cycles that quickly dissipate, making them more active hunters; by targetting this, the otherwise wasted energy is instead stored, allowing longer durations between feedings.
+    
+Due to it's intrusive nature, the immune system of older metroids will completely block out the changes; this requires it to be administered during the Bantee or larvae stage.
+      
+This is a permanent operation; any metroid with this alteration will retain it throughout their stage growths.</description>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/NutrientRegulator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin nutrient regulation</useLabel>
+      </li>
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
+        <hediffDef>RT_NutrientRegulatorHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<!-- =============== Immunity Accelerator =============== -->
+
+ <ThingDef ParentName="RT_MetroidInjectableBase">
+    <defName>RT_ImmunityAccelerator</defName>
+    <label>Metroid Immunity Accelerator</label>
+    <descriptionHyperlinks><HediffDef>RT_ImmunityAcceleratorHediff</HediffDef></descriptionHyperlinks>
+    <description>An injection that targets the metroid genetic code, distributing mechanites that 'tricks' the metroid body into thinking it's under constant, lethal attack from a virus. This forces the entire body to go into high alert, causing above-average development in the strength of all areas.
+    
+Due to it's intrusive nature, the immune system of older metroids will completely block out the changes; this requires it to be administered during the Bantee or larvae stage.
+      
+The amount of mechanites administered is only enough to affect smaller, uniform bodies; once a metroids body begins developing other parts, the mechanites will be too dispersed to be effective.</description>
+    <graphicData>
+      <texPath>Things/Special/MetroidImplants/ImmunityAccelerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>RT_Core.CompApplyHediff_InstallImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Begin immunity acceleration</useLabel>
+      </li>
+      <li Class="RT_Core.CompProperties_ApplyHediff_UseEffect">
+        <hediffDef>RT_ImmunityAcceleratorHediff</hediffDef>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_DestroySelf</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

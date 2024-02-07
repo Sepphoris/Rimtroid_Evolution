@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--
+		Def notes:
+		RT_InertiaDrug: The main in-game item.
+		RT_InertiaPoisoning: The hediff given when a pawn uses Inertia. Contains the effects and description that is immediately given.
+		RT_InertiaThought: The def that defines what the pawn thinks upon taking Inertia, and the mood debuff.
+	-->
+
+	<!-- Inertia; a drug that stunts metroid growth, and acts as a poison to everything else.-->
+	  <!--<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>RT_StuntingDrug</defName>
+		<label>Inertia Serum</label>
+		<description>Inertia, known scientifically as as 'S070-H', is an injected drug specifically designed to interfere with the unique, cell-like body structure that all metroids possess. This drug halts the adaptive growth of metroids, and permanently supresses the mutation potential metroids are known for, isolating them into their current form. \n\nInertia is essentially a poison to anything else; non-lethal, but it will compromise immune systems for a short period of time.</description>
+		<descriptionHyperlinks>
+      <HediffDef>RT_StuntedGrowthOverview</HediffDef>
+			<HediffDef>RT_AeionicPoisoning</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Drugs/Inertia</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>350</WorkToMake>
+			<MarketValue>28</MarketValue>
+			<Mass>0.02</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+      <foodType>Processed</foodType>
+			<baseIngestTicks>300</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inject {0}</ingestCommandString>
+			<ingestReportString>Injecting {0}.</ingestReportString>
+			<chairSearchRadius>0</chairSearchRadius>
+      <outcomeDoers>
+				<li Class="RT_Core.Ingestion_MultipleHediffs">
+					<hediffDef_BanteeMetroid>RT_StuntedGrowthGood</hediffDef_BanteeMetroid>
+          <hediffDef_MetroidLarvae>RT_StuntedGrowthBad</hediffDef_MetroidLarvae>
+          <hediffDef_AlphaMetroid>RT_StuntedGrowthBad</hediffDef_AlphaMetroid>
+          <hediffDef_GammaMetroid>RT_StuntedGrowthGood</hediffDef_GammaMetroid>
+          <hediffDef_ZetaMetroid>RT_StuntedGrowthNeutral</hediffDef_ZetaMetroid>
+          <hediffDef_OmegaMetroid>RT_StuntedGrowthNeutral</hediffDef_OmegaMetroid>
+          <hediffDef_QueenMetroid>RT_StuntedGrowthNeutral</hediffDef_QueenMetroid>
+					<hediffDef_LivingPawn>RT_AeionicPoisoning</hediffDef_LivingPawn>
+					<severity>0.8</severity>
+				</li>
+      </outcomeDoers>
+		</ingestible>
+		<costList>
+			<Steel>4</Steel>
+			<RT_AeionExtract>1</RT_AeionExtract>
+		</costList>
+		<recipeMaker>
+      <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <workAmount>350</workAmount>
+			<productCount>1</productCount>
+			<targetCountAdjustment>2</targetCountAdjustment>
+			<bulkRecipeCount>4</bulkRecipeCount>
+			<effectWorking>Cook</effectWorking>
+			<soundWorking>Recipe_CookMeal</soundWorking>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Intellectual>8</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>40</listOrder>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>-->
+
+</Defs>

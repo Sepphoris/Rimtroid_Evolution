@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<!-- Electric Metroid Lantern, meant for small metroids.-->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RT_FeedingStationSE</defName>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>small metroid pylon</label>
+		<description>A small station that exchanges massive amounts of energy for a metroid food source. Small metroids, generally ones still capable of flight, will "feed" from this, instead of hunting down living organisms. Will take damage over time due to metroid interaction.\n
+Due to being a free food source, and smaller metroids being impressionable, small pylons invite both tamed and wild metroids to feed from it, acting as a sort of beacon. This side feature allows the possibility of acquiring new metroids.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<drawSize>(1.5,1.5)</drawSize>
+			<drawOffset>(0,0,0.2)</drawOffset>
+			<texPath>Things/Building/Stations/FeedingStation_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Small</uiIconPath>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>3000</WorkToBuild>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>2</Beauty>
+			<Mass>60</Mass>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<stealable>false</stealable>
+		<researchPrerequisites>
+			<li>RT_MetroidPylons</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RT_Core.MetroidFeedingStationOptions">
+				<options>
+					<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_MetroidLarvae</defName>
+						<powerConsumption>750</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>4</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_AlphaMetroid</defName>
+						<powerConsumption>1250</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>5</durabilityDamage>
+					</li>
+					<!--<li>
+						<defName>RT_GammaMetroid</defName>
+						<powerConsumption>1750</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>6</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_ZetaMetroid</defName>
+						<powerConsumption>2500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>7</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_OmegaMetroid</defName>
+						<powerConsumption>3500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>8</durabilityDamage>
+					</li>-->
+					<!--<li>
+						<defName>RT_QueenMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>-->
+				</options>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!-- Fueled Metroid Lantern, meant for small metroids. Requires fresh corpses-->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RT_FeedingStationSF</defName>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>small metroid pylon (refuelable)</label>
+		<description>A small pylon that uses Protus Cells and Aeion Extract in order to provide a metroid food source. Small metroids, generally ones still capable of flight, will "feed" from this, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+Due to being a free food source, and smaller metroid being impressionable, small pylons invite both tamed and wild metroids to feed from it, acting as a sort of beacon. This side feature allows the possibility of acquiring new metroids.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<drawSize>(1.5,1.5)</drawSize>
+			<drawOffset>(0,0,0.2)</drawOffset>
+			<texPath>Things/Building/Stations/FeedingStation_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Small</uiIconPath>
+		<fillPercent>0</fillPercent>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>3000</WorkToBuild>
+			<MaxHitPoints>200</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<Beauty>3</Beauty>
+			<Mass>60</Mass>
+		</statBases>
+		<costList>
+			<Steel>200</Steel>
+			<Plasteel>50</Plasteel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>15</fuelCapacity>
+				<fuelConsumptionRate>5</fuelConsumptionRate>
+				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+				<initialFuelPercent>0</initialFuelPercent>
+				<fuelFilter>
+					<thingDefs>
+						<li>RT_ProtusCell</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>20</autoRefuelPercent>
+				<showFuelGizmo>false</showFuelGizmo>
+				<drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<stealable>false</stealable>
+		<researchPrerequisites>
+			<li>RT_MetroidPylons</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RT_Core.MetroidFeedingStationOptions">
+				<options>
+					<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_MetroidLarvae</defName>
+						<powerConsumption>750</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>4</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_AlphaMetroid</defName>
+						<powerConsumption>1250</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>5</durabilityDamage>
+					</li>
+					<!--<li>
+						<defName>RT_GammaMetroid</defName>
+						<powerConsumption>1750</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>6</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_ZetaMetroid</defName>
+						<powerConsumption>2500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>7</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_OmegaMetroid</defName>
+						<powerConsumption>3500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>8</durabilityDamage>
+					</li>-->
+					<!--<li>
+						<defName>RT_QueenMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>-->
+				</options>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!-- Electric Metroid Pylon, meant for large metroids.-->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RT_FeedingStationLE</defName>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>large metroid pylon</label>
+		<description>A large, stationary pylon that expoits the metroid energy requirement, exchanging massive amounts of raw electricity for a food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+		This particular pylon has been specifically designed for usage by larger metroid variants; smaller metroids (Bantees, Larvae, and Alphas) can not use this due to the sizing, and require a smaller pylon instead.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<drawSize>(2.5,2.5)</drawSize>
+			<drawOffset>(0,0,0.5)</drawOffset>
+			<texPath>Things/Building/Stations/FeedingStation_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Large</uiIconPath>
+		<size>(2,1)</size>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>3500</WorkToBuild>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>3</Beauty>
+			<Mass>120</Mass>
+		</statBases>
+		<costList>
+			<Steel>300</Steel>
+			<Plasteel>100</Plasteel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<shortCircuitInRain>false</shortCircuitInRain>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<stealable>false</stealable>
+		<researchPrerequisites>
+			<li>RT_MetroidPylons</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RT_Core.MetroidFeedingStationOptions">
+				<options>
+					<!--<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_MetroidLarvae</defName>
+						<powerConsumption>750</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>4</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_AlphaMetroid</defName>
+						<powerConsumption>1250</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>5</durabilityDamage>
+					</li>-->
+					<li>
+						<defName>RT_GammaMetroid</defName>
+						<powerConsumption>1750</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>6</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_ZetaMetroid</defName>
+						<powerConsumption>2500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>7</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_OmegaMetroid</defName>
+						<powerConsumption>3500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>8</durabilityDamage>
+					</li>
+					<!--<li>
+						<defName>RT_QueenMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>-->
+				</options>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!-- Fueled Metroid Pylon, meant for large metroids. Requires corpses-->
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RT_FeedingStationLF</defName>
+		<designatorDropdown>RT_EnergyPylonDesignatorDropdownDef</designatorDropdown>
+		<label>Large metroid pylon (refuelable)</label>
+		<description>A large, stationary pylon that uses large amounts of Protus Cells and Aeion Extract in order to provide a metroid food source. Metroids will draw power from these when possible, instead of hunting down living organisms. Will take damage over time due to metroid interaction./n/n
+		This particular pylon has been specifically designed for usage by larger metroid variants; smaller metroids (Bantees, Larvae, and Alphas) can not use this due to the sizing, and require a smaller pylon instead.</description>
+		<thingClass>Building</thingClass>
+		<graphicData>
+			<drawSize>(2.5,2.5)</drawSize>
+			<drawOffset>(0,0,1)</drawOffset>
+			<texPath>Things/Building/Stations/FeedingStation_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.6, 1, 0.6)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.4,0.4,1.2,1.2)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconPath>Things/Building/Stations/FeedingStation_Large</uiIconPath>
+		<size>(2,1)</size>
+		<fillPercent>0.5</fillPercent>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsMisc</li>
+		</thingCategories>
+		<statBases>
+			<WorkToBuild>3500</WorkToBuild>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<Beauty>3</Beauty>
+			<Mass>120</Mass>
+		</statBases>
+		<costList>
+			<Steel>300</Steel>
+			<Plasteel>100</Plasteel>
+			<ComponentIndustrial>5</ComponentIndustrial>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelCapacity>15</fuelCapacity>
+				<fuelConsumptionRate>5</fuelConsumptionRate>
+				<targetFuelLevelConfigurable>false</targetFuelLevelConfigurable>
+				<initialFuelPercent>0</initialFuelPercent>
+				<fuelFilter>
+					<thingDefs>
+						<li>RT_ProtusCell</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+				<autoRefuelPercent>20</autoRefuelPercent>
+				<showFuelGizmo>false</showFuelGizmo>
+				<drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<stealable>false</stealable>
+		<researchPrerequisites>
+			<li>RT_MetroidPylons</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<canOverlapZones>true</canOverlapZones>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<modExtensions>
+			<li Class="RT_Core.MetroidFeedingStationOptions">
+				<options>
+					<!--<li>
+						<defName>RT_MetroidLarvae</defName>
+						<powerConsumption>750</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>4</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_BanteeMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>450</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_AlphaMetroid</defName>
+						<powerConsumption>1250</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>5</durabilityDamage>
+					</li>-->
+					<li>
+						<defName>RT_GammaMetroid</defName>
+						<powerConsumption>1750</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>6</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_ZetaMetroid</defName>
+						<powerConsumption>2500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>7</durabilityDamage>
+					</li>
+					<li>
+						<defName>RT_OmegaMetroid</defName>
+						<powerConsumption>3500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>8</durabilityDamage>
+					</li>
+					<!--<li>
+						<defName>RT_QueenMetroid</defName>
+						<powerConsumption>500</powerConsumption>
+						<ticksForConsumption>600</ticksForConsumption>
+						<durabilityDamage>3</durabilityDamage>
+					</li>-->
+				</options>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

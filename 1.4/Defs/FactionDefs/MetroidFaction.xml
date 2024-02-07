@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--===============To-do===============
+		Once more metroid types are in, look into making different kinds of hives for each archetype, with some being exclusive to one another.
+			-The Global Metroid Collective contains all metroids, and is lead by a metroid queen.
+			-Phazon Hives contain all Phazon-oriented metroids, and are extremely agggressive. Lead by a Prime Metroid.
+			-Pure Hives only have Pure Metroids. Lead by a metroid queen, but mutually exclusive to the Global Metroid Collective.
+			-Rimtroid Hives contain only Rimtroids. They are not aggressively active, and only raid the player due to events. No leader.
+
+
+		Three events can also occur, which changes the faction presence:
+			-Metroids invade another faction base. If the player helps deter the metroids, the faction keeps the base. If not, the base may fall, and create a new hive spot.
+			-Metroids expand a bit, and decide to create another hive. If nearby, the player can eliminate all the metroids to cancel the establishment before it happens.
+			-A ship has ended up arriving, and has formed a single metroid faction base, which will expand in X amount of days if the4 player can't get to it.
+	-->
+
+	<FactionDef ParentName="FactionBase">
+		<defName>RT_Metroids</defName>
+		<label>global metroid collective</label>
+		<description>A world-spanning hivemind consisting of wild metroids, deployed by Glitterworld scientists as a long-term study project. Metroids have been specifically designed as ravenous bioweapon, and will stop at nothing before they destroy the entire planetary ecology.\n
+This particular hivemind contains metroids of nearly every size, breed, and archetype.</description>
+		<pawnsPlural>metroids</pawnsPlural>
+		<pawnSingular>metroid</pawnSingular>
+		<!--Graphic Data-->
+		<factionIconPath>World/WorldObjects/Expanding/MetroidTown</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<!--Settlement Data-->
+		<!--<fixedName>Metroid Hive</fixedName>-->
+		<!--<settlementGenerationWeight>0.1</settlementGenerationWeight>-->
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<!--Behavior<maxCountAtGameStart>6</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>-->
+		<!--<fixedLeaderKinds>
+			<li>RT_QueenMetroid</li>
+		</fixedLeaderKinds>
+		<leaderTitle>Brood Mother</leaderTitle>-->
+		<factionNameMaker>RT_MainMetroidFactionNames</factionNameMaker>
+		<settlementNameMaker>RT_MainMetroidSettlementNames</settlementNameMaker>
+		<!--Raid Data-->
+		<permanentEnemy>true</permanentEnemy>
+		<canSiege>false</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<earliestRaidDays>30</earliestRaidDays>
+		<allowedArrivalTemperatureRange>14~300</allowedArrivalTemperatureRange>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(0, 1)</li>
+				<!--<li>(700, 0.1)</li>
+        <li>(900, 0.2)</li>
+        <li>(1200, 1)</li>
+        <li>(4000, 1.5)</li>-->
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(4000, 100)</li> 
+				<li>(8000, 150)</li>
+				<li>(16000, 250)</li>
+				<li>(32000, 400)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<!--Pawn Spawning Data-->
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<RT_MetroidLarvae>10</RT_MetroidLarvae>
+					<RT_AlphaMetroid>20</RT_AlphaMetroid>
+					<RT_GammaMetroid>20</RT_GammaMetroid>
+					<RT_ZetaMetroid>15</RT_ZetaMetroid>
+					<RT_OmegaMetroid>5</RT_OmegaMetroid>
+				</options>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<RT_BanteeMetroid>10</RT_BanteeMetroid>
+					<RT_MetroidLarvae>30</RT_MetroidLarvae>
+					<RT_AlphaMetroid>25</RT_AlphaMetroid>
+					<RT_GammaMetroid>25</RT_GammaMetroid>
+					<RT_ZetaMetroid>15</RT_ZetaMetroid>
+					<RT_OmegaMetroid>10</RT_OmegaMetroid>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<!--Behavior Data-->
+		<humanlikeFaction>false</humanlikeFaction>
+		<hidden>true</hidden>
+		<autoFlee>false</autoFlee>
+		<canUseAvoidGrid>true</canUseAvoidGrid>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>90</configurationListOrderPriority>
+		<!--Misc Data-->
+		<techLevel>Animal</techLevel>
+	</FactionDef> 
+</Defs>

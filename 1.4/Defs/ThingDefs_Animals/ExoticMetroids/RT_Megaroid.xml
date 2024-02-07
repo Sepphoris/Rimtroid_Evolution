@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+
+	<!-- The Megaroid, a synthetic metroid made from the corpse of a pure metroid.-->
+	
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_Megaroid</defName>
+		<label>Megaroid</label>
+
+		<description>A crystalline metroid, synthesised directly from the corpse of it's pure counterpart. Initially an ancient experiment gone wrong, the process for creating a Megaroid was, until recently, lost to time.\n\n
+Rather than being intended as a singular bioweapon, Megaroids were instead designed to act as a fortified living womb, with even one being capable of growing and spreading entire metroid armies. This process directly ties into it's massive hunger.\n\n
+Megaroids will compulsively feed off of both biological and electrical energy at a near constant rate. Once the feeding reaches an apex, it will "shatter" into several hatchlings, which exist only to repeat the process.\n\n
+While quite tanky, Megaroids are relatively slow and quite rare in the wild, making them a more of an uncommon, passive threat. Their unique, capacitor-like crystals allow the creation of powerful metroid-related machinery, ultimately allowing Megaroids to be a farmer's dream... or an ecology's downfall.</description>
+		<statBases>
+		
+	<!-- Internal Stats -->
+		  <ToxicSensitivity>0</ToxicSensitivity>
+		  <PsychicSensitivity>0</PsychicSensitivity>
+      <Flammability>0</Flammability>
+		  <ArmorRating_Blunt>1</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+		  <ArmorRating_Heat>1</ArmorRating_Heat>
+		  <MoveSpeed>2.4</MoveSpeed>
+		  <MarketValue>550</MarketValue>
+		  <ComfyTemperatureMin>-90</ComfyTemperatureMin>
+		  <ComfyTemperatureMax>180</ComfyTemperatureMax>
+		  <MeatAmount>0</MeatAmount>
+		</statBases>
+		<uiIconScale>1.35</uiIconScale>
+		
+	<!-- Attacks -->
+		<tools>
+			<li>
+				<label>ram</label>
+				<capacities>
+				  <li>Blunt</li>
+					<li>Scratch</li>
+					<li>RT_LifedrainLarvae</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+
+			<li>
+				<label>scratch</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>RT_LifedrainMegaroid</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.2</cooldownTime>
+				<linkedBodyPartsGroup>Claws</linkedBodyPartsGroup>
+			</li>
+
+			<li>
+				<label>scratch</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>RT_LifedrainMegaroid</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>8</amount>
+					</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+
+		</tools>
+		<comps>
+			<li Class="RT_Core.RT_FloatingComp">
+				<isFloater>true</isFloater>
+				<canCrossWater>true</canCrossWater>
+			</li>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
+				<spawnStage>RT_MegaroidState</spawnStage>
+			</li>
+			<!--<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_LowRest</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_FasterRegen</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li> -->
+		</comps>
+		
+	<!-- Race stats -->
+		
+		<race>
+    <!-- Overriding animal think tree -->
+        <thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+        <thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+
+		  <bloodDef>Filth_BloodInsect</bloodDef>
+		  <herdAnimal>true</herdAnimal>
+		  <body>RT_MegaroidBody</body>
+		  <baseBodySize>1</baseBodySize>
+		  <baseHealthScale>2.8</baseHealthScale>
+		  <baseHungerRate>1</baseHungerRate>
+		  <hasGenders>false</hasGenders>
+			<hediffGiverSets>
+				<li>RT_EvoGrowth_Megaroid</li>
+				<li>OrganicAgeless</li>
+				<!-- <li>RT_FeralStage</li> -->
+			</hediffGiverSets>
+		  <foodType>Processed</foodType>
+		  <!--<leatherDef>RT_MetroidChitin</leatherDef>-->
+		  <trainability>Advanced</trainability>
+		  <maxPreyBodySize>7</maxPreyBodySize>
+		  <gestationPeriodDays>30</gestationPeriodDays>
+		  <predator>false</predator>
+		  <!-- <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 1.7)</li>
+			  <li>(2.5, 0.7)</li>
+			  <li>(3, 0)</li>
+			</points>
+		  </litterSizeCurve> -->
+		  <manhunterOnDamageChance>1</manhunterOnDamageChance>
+		  <manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+		  <wildness>1000</wildness>
+		  <lifeExpectancy>1986</lifeExpectancy>
+		  <lifeStageAges>
+			<li>
+			  <def>AnimalBaby</def>
+			  <minAge>0</minAge>
+			</li>
+			<li>
+			  <def>AnimalJuvenile</def>
+			  <minAge>0.01</minAge>
+			</li>
+			<li>
+			  <def>AnimalAdult</def>
+			  <minAge>0.02</minAge>
+				<soundWounded>RT_Larvae_Wounded</soundWounded>
+				<soundDeath>RT_Larvae_Death</soundDeath>
+				<soundCall>RT_Larvae_Call</soundCall>
+				<soundAngry>RT_Larvae_Angry</soundAngry>
+			</li>
+		  </lifeStageAges>
+		  <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+		  <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+		  <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		<ageGenerationCurve>
+				<points>
+					<li>(0.05,0)</li>
+					<li>(0.1,1)</li>
+					<li>(0.3,5)</li>
+					<li>(0.5,5)</li>
+					<li>(0.7,10)</li>
+					<li>(0.9,5)</li>
+					<li>(1,5)</li>
+					<li>(1.5,2)</li>
+					<li>(3,0)</li>
+				</points>
+    </ageGenerationCurve>
+			<wildBiomes>
+			  <TropicalRainforest>0.003</TropicalRainforest>
+				<TropicalSwamp>0.003</TropicalSwamp>
+				<TemperateSwamp>0.003</TemperateSwamp>
+				<TemperateForest>0.003</TemperateForest>
+				<AridShrubland>0.003</AridShrubland>
+				<Desert>0.003</Desert>
+				<BorealForest>0.003</BorealForest>
+				<Tundra>0.003</Tundra>
+				<ColdBog>0.003</ColdBog>
+			</wildBiomes>
+		</race>
+    <butcherProducts>
+			<RT_MetroidGel>12</RT_MetroidGel>
+			<RT_MegaroidShard>4</RT_MegaroidShard>
+		</butcherProducts>
+		<tradeTags>
+		  <li>AnimalExotic</li>
+		  <li>AnimalInsectSpace</li>
+		</tradeTags>
+	<modExtensions>
+    <!--<li Class="RT_Core.RT_DesiccatorExt"> </li>-->
+	  <li Class="RT_Core.DisableTrainingDegredation"> </li>
+        <!--desicatedDef>huskdefnamehere</desicatedDef-->
+		  <li Class="RT_Core.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.0</key>
+						<value>0.1</value>
+					</li>
+					<li>
+						<key>0.05</key>
+						<value>0.05</value>
+					</li>
+					<li>
+						<key>0.1</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>0.2</key>
+						<value>0</value>
+					</li>
+					<li>
+						<key>0.4</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>1</chanceToBecomeWildIfBerserkAndTamed>
+				<!-- for lore reasons, a Megaroid will always become wild if too hungry-->
+			</li>
+			<li Class="RT_Core.RT_EnergyDrain">
+				<drainStunDuration>500~500</drainStunDuration>
+				<drainOverlayDuration>500~500</drainOverlayDuration>
+				<drainFoodGain>0.2~0.3</drainFoodGain>
+				<drainAgeFactor>28</drainAgeFactor>
+				<drainSicknessSeverity>0.45</drainSicknessSeverity>
+				<drainEnergyProcessing>120~120</drainEnergyProcessing>
+			</li>
+    </modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_Megaroid</defName>
+		<label>Megaroid</label>
+		<race>RT_Megaroid</race>
+		<combatPower>600</combatPower>
+		<ecoSystemWeight>3</ecoSystemWeight>
+		<wildGroupSize>
+			<min>1</min>
+			<max>1</max>
+		</wildGroupSize>
+		<lifeStages>
+		  <li>
+			<label>megaroid</label>
+			<labelPlural>megaroid</labelPlural>
+			<bodyGraphicData>
+			  <texPath>Animals/ExoticMetroids/Megaroid/RT_Megaroid</texPath>
+			  <drawSize>1.2</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/ExoticMetroids/Megaroid/RT_Desiccated_Megaroid</texPath>
+			  <drawSize>1.2</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Animals/ExoticMetroids/Megaroid/RT_Megaroid</texPath>
+			  <drawSize>1.2</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/ExoticMetroids/Megaroid/RT_Desiccated_Megaroid</texPath>
+			  <drawSize>1.2</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+			  <texPath>Animals/ExoticMetroids/Megaroid/RT_Megaroid</texPath>
+			  <drawSize>1.2</drawSize>
+			  <shadowData>
+				<volume>(0.3, 0.2, 0.2)</volume>
+				<offset>(0, 0, -0.6)</offset>
+			  </shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Animals/ExoticMetroids/Megaroid/RT_Desiccated_Megaroid</texPath>
+			  <drawSize>1.2</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

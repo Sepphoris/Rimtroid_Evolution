@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+	<!-- ======================== Bantee Metroid ======================== -->
+
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Bantee_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Bantee/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Bantee_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Bantee/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Bantee_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Bantee/Wounded</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Bantee_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Bantee/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+	<!-- ======================== Metroid Larvae ======================== -->
+
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Larvae_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Larvae/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Larvae_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Larvae/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Larvae_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Larvae/Wounded</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Larvae_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Larvae/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+	<!-- ======================== Alpha Metroid ======================== -->
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Alpha_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Alpha/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Alpha_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Alpha/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Alpha_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Alpha/Wounded</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Alpha_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Alpha/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+  <!-- ======================== Gamma Metroid ======================== -->
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Gamma_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Gamma/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Gamma_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Gamma/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Gamma_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Gamma/Wounded</clipFolderPath>
+					</li>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Gamma/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Gamma_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Gamma/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- ======================== Zeta Metroid ======================== -->
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Zeta_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Zeta/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Zeta_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Zeta/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Zeta_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Zeta/Wounded</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Zeta_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Zeta/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- ======================== Omega Metroid ======================== -->
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Omega_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Omega/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Omega_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Omega/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Omega_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Omega/Wounded</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Omega_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Omega/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- ======================== Queen Metroid ======================== -->
+
+  <!-- General sounds it makes while being passive -->
+
+	<SoundDef>
+		<defName>RT_Queen_Call</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Queen/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15.42672</min>
+					<max>14.7734</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Angry noises, when it is aggressive -->
+
+	<SoundDef>
+		<defName>RT_Queen_Angry</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Queen/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>25</min>
+					<max>25</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9541176</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+				<repeatMode>NeverTwice</repeatMode>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when injured -->
+
+	<SoundDef>
+		<defName>RT_Queen_Wounded</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Queen/Wounded</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>15</min>
+					<max>15</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9311765</min>
+					<max>1.091765</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>70</max>
+				</distRange>
+				<repeatMode>NeverTwice</repeatMode>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+  <!-- Noises it makes when killed -->
+
+	<SoundDef>
+		<defName>RT_Queen_Death</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Pawns/Queen/Death</clipFolderPath>
+					</li>
+				</grains>
+
+				<pitchRange>
+					<min>0.9770588</min>
+					<max>1.137647</max>
+				</pitchRange>
+				<distRange>
+					<min>0</min>
+					<max>50.40025</max>
+				</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

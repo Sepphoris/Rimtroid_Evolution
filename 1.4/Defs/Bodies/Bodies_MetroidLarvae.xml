@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyDef>
+		<defName>RT_LarvaeBody</defName>
+		<label>metroid larvae</label>
+		<corePart>
+			<def>RT_LarvaeMainBody</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<parts>
+        <!--Head is conceptual, but teeth are not-->
+        <li>
+          <def>RT_Head</def>
+          <customLabel>head</customLabel>
+          <coverage>0</coverage>
+          <groups>
+            <li>UpperHead</li>
+            <li>FullHead</li>
+            <li>HeadAttackTool</li>
+          </groups>
+        </li>
+
+				<li>
+					<def>RT_Membrane</def>
+					<customLabel>membrane</customLabel>
+						<coverage>0.80</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+						</groups>
+					<parts>
+					<li>
+						<def>RT_Mitosis</def>
+						<customLabel>Mitosis</customLabel>
+						<coverage>0.0000001</coverage>
+						<depth>Inside</depth>
+					</li>
+					<li>
+						<def>RT_LarvaeNucleus</def>
+						<customLabel>front nucleus</customLabel>
+						<coverage>0.03</coverage>
+						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
+          </li>
+					<li>
+						<def>RT_LarvaeNucleus</def>
+						<customLabel>back nucleus</customLabel>
+						<coverage>0.03</coverage>
+						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
+					</li>
+					<li>
+						<def>RT_LarvaeNucleus</def>
+						<customLabel>left nucleus</customLabel>
+						<coverage>0.03</coverage>
+						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
+					</li>
+					<li>
+						<def>RT_LarvaeNucleus</def>
+						<customLabel>right nucleus</customLabel>
+						<coverage>0.03</coverage>
+						<depth>Inside</depth>
+            <groups>
+							<li>Torso</li>
+            </groups>
+					</li>
+          <!--Nucleus that are used for sight-->
+          <!-- <li>
+						<def>RT_LarvaeSight</def>
+						<customLabel>Echolocation</customLabel>
+						<coverage>0</coverage>
+						<depth>Inside</depth>
+					</li> -->
+					<li>
+						<def>RT_LarvaeProtoplasm</def>
+						<customLabel>Protoplasm</customLabel>
+						<coverage>0.05</coverage>
+						<depth>Inside</depth>
+					</li>
+					<li>
+						<def>Heart</def>
+						<customLabel>nucleus core</customLabel>
+						<coverage>0.001</coverage>
+						<depth>Inside</depth>
+					</li>
+					</parts>
+				</li>
+					<li>
+						<def>AnimalJaw</def>
+						<customLabel>front left tooth</customLabel>
+						<coverage>0.04</coverage>
+						<groups>
+							<li>Teeth</li>
+						</groups>
+					</li>
+					<li>
+						<def>AnimalJaw</def>
+						<customLabel>front right tooth</customLabel>
+						<coverage>0.04</coverage>
+						<groups>
+							<li>Teeth</li>
+						</groups>
+					</li>
+					<li>
+						<def>AnimalJaw</def>
+						<customLabel>back left tooth</customLabel>
+						<coverage>0.04</coverage>
+						<groups>
+							<li>Teeth</li>
+						</groups>
+					</li>
+					<li>
+						<def>AnimalJaw</def>
+						<customLabel>back right tooth</customLabel>
+						<coverage>0.04</coverage>
+						<groups>
+							<li>Teeth</li>
+						</groups>
+					</li>
+			</parts>
+		</corePart>
+	</BodyDef>
+
+</Defs>
+

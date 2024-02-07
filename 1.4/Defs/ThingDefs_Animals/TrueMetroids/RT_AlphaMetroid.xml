@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+
+	<!-- Rimworld Metroid, which is a breed of Metroid that are local to the rimworld -->
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>RT_AlphaMetroid</defName>
+		<label>Alpha Metroid</label>
+
+		<description>The Alpha Metroid, although being inferior to nearly any other stage (including the larvae stage), is considerably the most drastic step in a Metroid's lifespan. The extreme changes now have it resemble an arthropod, rather than the jellyfish-like form it appeared as in previous stages. Alpha Metroids are quite frail and slow, making them relatively easy to deal with; however their weakness for colder temperatures has decreased significantly; and, rather than only physical attacks, it is now capable of plasma-based offenses that can prove to be life-threatening. Furthermore, any chance of domestication has long passed, making this - and all future stages - simply too wild to tame.\n\nThese specific Metroids are "true" Metroids; it will survive normally on the planet, but an artificial habitat is required to further evolve it.</description>
+		<statBases>
+
+			<!-- Internal Stats -->
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<PsychicSensitivity>0</PsychicSensitivity>
+			<Flammability>0</Flammability>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+			<ArmorRating_Heat>1</ArmorRating_Heat>
+			<MoveSpeed>3</MoveSpeed>
+			<MarketValue>550</MarketValue>
+			<ComfyTemperatureMin>6</ComfyTemperatureMin>
+			<ComfyTemperatureMax>160</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<PainShockThreshold>0.85</PainShockThreshold>
+		</statBases>
+		<uiIconScale>1.35</uiIconScale>
+
+		<!-- Attacks -->
+		<tools>
+			<li>
+				<label>ram</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2.5</cooldownTime>
+				<chanceFactor>0.8</chanceFactor>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>bite</label>
+				<capacities>
+					<li>Stab</li>
+					<li>RT_LifedrainAlpha</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<chanceFactor>0.8</chanceFactor>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<chanceFactor>0.8</chanceFactor>
+				<linkedBodyPartsGroup>HeadClaw</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<comps>
+			<li Class="RT_Rimtroid.CompProperties_EvolutionStage">
+				<spawnStage>RT_AlphaState</spawnStage>
+			</li>
+			<!--<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_LowRest</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li Class="CompProperties_UseEffect.cs">
+				<hediffname>RT_FasterRegen</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li> -->
+		</comps>
+
+		<!-- Race stats -->
+
+		<race>
+			<!-- Overriding animal think tree -->
+			<thinkTreeMain>RT_LarvaeTree</thinkTreeMain>
+			<thinkTreeConstant>RT_MetroidConstant</thinkTreeConstant>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<herdAnimal>true</herdAnimal>
+			<body>RT_AlphaBody</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>2.6</baseHealthScale>
+			<baseHungerRate>0.8</baseHungerRate>
+			<hasGenders>false</hasGenders>
+			<hediffGiverSets Inherit="false">
+				<li>RT_EvoGrowth_Alpha</li>
+				<li>OrganicAgeless</li>
+				<!-- <li>RT_FeralStage</li> -->
+			</hediffGiverSets>
+			<foodType>Processed</foodType>
+			<leatherDef>RT_MetroidChitin</leatherDef>
+			<trainability>Advanced</trainability>
+			<maxPreyBodySize>3.9</maxPreyBodySize>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<predator>false</predator>
+			<!-- <litterSizeCurve>
+			<points>
+			  <li>(0.5, 0)</li>
+			  <li>(1, 1)</li>
+			  <li>(2, 1.7)</li>
+			  <li>(2.5, 0.7)</li>
+			  <li>(3, 0)</li>
+			</points>
+		  </litterSizeCurve> -->
+			<manhunterOnDamageChance>5</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+			<wildness>10</wildness>
+			<lifeExpectancy>450</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.5</minAge>
+					<soundWounded>RT_Alpha_Wounded</soundWounded>
+					<soundDeath>RT_Alpha_Death</soundDeath>
+					<soundCall>RT_Alpha_Call</soundCall>
+					<soundAngry>RT_Alpha_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<ageGenerationCurve>
+				<points>
+					<li>(80,0)</li>
+					<li>(81,5)</li>
+					<li>(105,10)</li>
+					<li>(130,15)</li>
+					<li>(155,5)</li>
+					<li>(160,1)</li>
+					<li>(169,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<wildBiomes>
+				<TropicalRainforest>0.12</TropicalRainforest>
+				<TropicalSwamp>0.09</TropicalSwamp>
+				<TemperateSwamp>0.08</TemperateSwamp>
+				<TemperateForest>0.07</TemperateForest>
+				<AridShrubland>0.065</AridShrubland>
+				<Desert>0.06</Desert>
+				<BorealForest>0.025</BorealForest>
+				<Tundra>0.002</Tundra>
+				<ColdBog>0.001</ColdBog>
+			</wildBiomes>
+		</race>
+		<butcherProducts>
+			<RT_MetroidGel>20</RT_MetroidGel>
+		</butcherProducts>
+		<tradeTags>
+			<li>AnimalExotic</li>
+			<li>AnimalInsectSpace</li>
+		</tradeTags>
+		<modExtensions>
+			<!--<li Class="RT_Core.RT_DesiccatorExt"> </li> -->
+			<li Class="RT_Core.DisableTrainingDegredation"> </li>
+			<!--desicatedDef>huskdefnamehere</desicatedDef-->
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>RT_AlphaMetroid</defName>
+		<label>Alpha Metroid</label>
+		<race>RT_AlphaMetroid</race>
+		<combatPower>350</combatPower>
+		<ecoSystemWeight>1.8</ecoSystemWeight>
+		<wildGroupSize>
+			<min>2</min>
+			<max>4</max>
+		</wildGroupSize>
+		<lifeStages>
+			<li>
+				<label>alpha metroid</label>
+				<labelPlural>alpha metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.2, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.55)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<drawSize>1.1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>alpha metroid</label>
+				<labelPlural>alpha metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<label>alpha metroid</label>
+				<labelPlural>alpha metroid</labelPlural>
+				<bodyGraphicData>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_AlphaMetroid</texPath>
+					<drawSize>1.2</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.2, 0.2)</volume>
+						<offset>(0, 0, -0.6)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Animals/PureMetroids/AlphaMetroid/RT_Desiccated_AlphaMetroid</texPath>
+					<drawSize>1.2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<modExtensions>
+			<li Class="RT_Core.HungerBerserkOptions">
+				<hungerBerserkChanges>
+					<!-- key: hunger level, value: berserk change, if the value is 0, the berserk state will stop -->
+					<li>
+						<key>0.0</key>
+						<value>0.15</value>
+					</li>
+					<li>
+						<key>0.05</key>
+						<value>0.1</value>
+					</li>
+					<li>
+						<key>0.1</key>
+						<value>0.05</value>
+					</li>
+					<li>
+						<key>0.2</key>
+						<value>0.02</value>
+					</li>
+					<li>
+						<key>0.3</key>
+						<value>0</value>
+					</li>
+				</hungerBerserkChanges>
+				<chanceToBecomeWildIfBerserkAndTamed>0.2</chanceToBecomeWildIfBerserkAndTamed>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!--The following dictates which age changes the 'Mitosis' hediff to the next stage-->
+
+  <HediffGiverSetDef>
+    <defName>RT_EvoGrowth_Hatchling</defName>
+    <hediffGivers>
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+            <!--<maxReroll>1</maxReroll>-->
+            <chance>1</chance>
+            <yearsInterval>1</yearsInterval>
+            <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_GrowthSuspenderHediff</li>
+            </hediffsToPreventGrowth >
+            <possibleEvolutionPaths>
+                <li>
+                  <requiredAge>14</requiredAge>
+                  <hediff>RT_RimtroidState</hediff>
+                  <partsToAffect>
+                    <li>RT_Mitosis</li>
+                  </partsToAffect>
+                    <weight>1</weight>
+								<hediffWhiteList>
+									<li>RT_RimtroidWhitelist</li>
+								</hediffWhiteList>                
+                </li>
+            </possibleEvolutionPaths>
+        </li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+
+  <HediffGiverSetDef>
+    <defName>RT_EvoGrowth_Rimtroid</defName>
+    <hediffGivers>
+        <li Class="RT_Core.HediffGiver_AfterPeriod">
+            <!--<maxReroll>15</maxReroll>-->
+            <chance>0.10</chance>
+            <yearsInterval>2~10</yearsInterval>
+            <hediffsToPreventGrowth>
+              <li>RT_StuntedGrowthBad</li>
+              <li>RT_StuntedGrowthNeutral</li>
+              <li>RT_StuntedGrowthGood</li>
+              <li>RT_GrowthSuspenderHediff</li>
+            </hediffsToPreventGrowth >
+          <possibleEvolutionPaths>
+              <li>
+                <requiredAge>24</requiredAge>
+                <hediff>RT_StalkerState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+								<hediffWhiteList>
+									<li>RT_StalkerWhitelist</li>
+								</hediffWhiteList>  
+              </li>
+              <li>
+                <requiredAge>32</requiredAge>
+                <hediff>RT_CollosusState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+								<hediffWhiteList>
+									<li>RT_CollosusWhitelist</li>
+								</hediffWhiteList>  
+              </li>
+              <li>
+                <requiredAge>40</requiredAge>
+                <hediff>RT_SeekerState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+								<hediffWhiteList>
+									<li>RT_SeekerWhitelist</li>
+								</hediffWhiteList>  
+              </li>
+              <li>
+                <requiredAge>48</requiredAge>
+                <hediff>RT_BorealState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+								<hediffWhiteList>
+									<li>RT_BorealWhitelist</li>
+								</hediffWhiteList>  
+              </li>
+              <li>
+                <requiredAge>56</requiredAge>
+                <hediff>RT_PsitroidState</hediff>
+                <partsToAffect>
+                    <li>RT_Mitosis</li>
+                </partsToAffect>
+                <weight>1</weight>
+								<hediffWhiteList>
+									<li>RT_PsitroidWhitelist</li>
+								</hediffWhiteList>
+              </li>
+          </possibleEvolutionPaths>
+        </li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+
+
+
+
+  <!--
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_RimtroidHatchlingState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_RimtroidState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_StalkerState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_CollosusState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_PsitroidState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_SeekerState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>
+
+    <li Class="RT_Core.HediffGiver_AfterPeriod">
+      <stuntedHediffDef>RT_StuntedGrowthBad</stuntedHediffDef>
+      <hediff>RT_BorealState</hediff>
+			<partsToAffect>
+        <li>RT_Mitosis</li>
+      </partsToAffect>
+    </li>-->
+
+</Defs>
