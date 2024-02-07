@@ -73,22 +73,8 @@ namespace RT_Rimtroid
                         parms.faction,
                         PawnGenerationContext.NonPlayer,
                         parms.tile,
-                        forceGenerateNewPawn: false,
-                        newborn: false,
-                        allowDead: false,
-                        allowDowned: false,
-                        canGeneratePawnRelations: true,
-                        mustBeCapableOfViolence: true,
-                        1f,
-                        forceAddFreeWarmLayerIfNeeded: false,
-                        allowGay: true,
                         allowFood,
-                        allowAddictions: true,
                         parms.inhabitants,
-                        certainlyBeenInCryptosleep: false,
-                        forceRedressWorldPawnIfFormerColonist: false,
-                        worldPawnFactionDoesntMatter: false,
-                        0f,
                         validatorPostGear: validatorPostGear));
 					if (parms.forceOneDowned && !flag)
 					{

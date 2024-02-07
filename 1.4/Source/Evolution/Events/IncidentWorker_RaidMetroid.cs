@@ -47,22 +47,8 @@ namespace RT_Core
                         parms.faction,
                         PawnGenerationContext.NonPlayer,
                         parms.tile,
-                        forceGenerateNewPawn: false,
-                        newborn: false,
-                        allowDead: false,
-                        allowDowned: false,
-                        canGeneratePawnRelations: true,
-                        mustBeCapableOfViolence: true,
-                        1f,
-                        forceAddFreeWarmLayerIfNeeded: false,
-                        allowGay: true,
                         allowFood,
-                        allowAddictions: true,
                         parms.inhabitants,
-                        certainlyBeenInCryptosleep: false,
-                        forceRedressWorldPawnIfFormerColonist: false,
-                        worldPawnFactionDoesntMatter: false,
-                        0f,
                         validatorPostGear: validatorPostGear));
 					if (parms.forceOneDowned && !flag)
 					{
@@ -83,9 +69,11 @@ namespace RT_Core
 			{
 				if (options.pawnGroup.options.TryRandomElementByWeight(x => x.selectionWeight, out var result))
                 {
-                    PawnGenerationRequest request = new PawnGenerationRequest(result.kind, parms.faction, PawnGenerationContext.NonPlayer, -1,
-                        forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f,
-                        forceAddFreeWarmLayerIfNeeded: false, allowGay: true, biocodeWeaponChance: parms.biocodeWeaponsChance, allowFood: true)
+                    PawnGenerationRequest request = new PawnGenerationRequest(
+                        result.kind,
+                        parms.faction,
+                        PawnGenerationContext.NonPlayer,
+                        biocodeWeaponChance: parms.biocodeWeaponsChance)
                     {
                         BiocodeApparelChance = 1f
                     };
@@ -115,9 +103,13 @@ namespace RT_Core
 				int minimumPawnCount = (int)pawnCount.selectionWeight;
 				while (num < minimumPawnCount && attempts < minimumPawnCount + 100)
 				{
-                    PawnGenerationRequest request = new PawnGenerationRequest(pawnCount.kind, parms.faction, PawnGenerationContext.NonPlayer, -1,
-                        forceGenerateNewPawn: false, newborn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: true, 1f,
-                        forceAddFreeWarmLayerIfNeeded: false, allowGay: true, biocodeWeaponChance: parms.biocodeWeaponsChance, allowFood: true)
+                    PawnGenerationRequest request = new PawnGenerationRequest(
+                        pawnCount.kind,
+                        parms.faction,
+                        PawnGenerationContext.NonPlayer,
+                        canGeneratePawnRelations: true,
+                        mustBeCapableOfViolence: true,
+                        biocodeWeaponChance: parms.biocodeWeaponsChance)
                     {
                         BiocodeApparelChance = 1f
                     };

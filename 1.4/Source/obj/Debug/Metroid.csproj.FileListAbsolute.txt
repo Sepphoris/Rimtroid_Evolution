@@ -24,3 +24,5 @@ C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.3\Source\obj\Debug\Rimt
 C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.4\Source\obj\Debug\Metroid.csproj.AssemblyReference.cache
 C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.4\Source\obj\Debug\Metroid.csproj.CoreCompileInputs.cache
 C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.4\Source\obj\Debug\Rimtroid_Evolution.dll
+C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.4\Assemblies\Rimtroid_Evolution.dll
+C:\Users\WillabyPC\Documents\GitHub\Rimtroid_Evolution\1.4\Source\obj\Debug\Metroid.csproj.CopyComplete

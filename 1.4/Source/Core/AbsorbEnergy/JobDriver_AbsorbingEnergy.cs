@@ -13,7 +13,7 @@ namespace RT_Rimtroid
 {
     public class JobDriver_AbsorbingEnergy : JobDriver
     {
-        public RT_EnergyDrain options => pawn.def.GetModExtension<RT_EnergyDrain>();
+        public RT_EnergyDrain Options => pawn.def.GetModExtension<RT_EnergyDrain>();
         public Thing Target => this.TargetA.Thing;
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -22,19 +22,20 @@ namespace RT_Rimtroid
         protected override IEnumerable<Toil> MakeNewToils()
         {
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.OnCell);
-            Toil doWork = new Toil();
-            doWork.initAction = delegate ()
+            Toil doWork = new Toil
+            {
+                initAction = delegate ()
             {
                 if (Target is Corpse corpse)
                 {
                     var hediff = HediffMaker.MakeHediff(RT_RimtroidDefOf.RT_LatchedMetroid, corpse.InnerPawn) as Hediff_LatchedMetroid;
                     hediff.latchedMetroid = this.pawn;
                     hediff.drainAgeFactor = 0;
-                    hediff.drainFoodGain = options.drainFoodGain.RandomInRange;
-                    hediff.drainOverlayDuration = options.drainOverlayDuration.RandomInRange;
-                    hediff.drainStunDuration = options.drainStunDuration.RandomInRange;
-                    hediff.drainSicknessSeverity = options.drainSicknessSeverity;
-                    hediff.drainEnergyProcessing = options.drainEnergyProcessing.RandomInRange;
+                    hediff.drainFoodGain = Options.drainFoodGain.RandomInRange;
+                    hediff.drainOverlayDuration = Options.drainOverlayDuration.RandomInRange;
+                    hediff.drainStunDuration = Options.drainStunDuration.RandomInRange;
+                    hediff.drainSicknessSeverity = Options.drainSicknessSeverity;
+                    hediff.drainEnergyProcessing = Options.drainEnergyProcessing.RandomInRange;
                     corpse.InnerPawn.health.AddHediff(hediff);
                     var hunting = this.pawn.health.hediffSet.GetFirstHediffOfDef(RT_DefOf.RT_MetroidHunting);
                     if (hunting != null)
@@ -75,12 +76,12 @@ namespace RT_Rimtroid
                     {
                         var hediff = HediffMaker.MakeHediff(RT_RimtroidDefOf.RT_LatchedMetroid, victim) as Hediff_LatchedMetroid;
                         hediff.latchedMetroid = this.pawn;
-                        hediff.drainAgeFactor = options.drainAgeFactor;
-                        hediff.drainFoodGain = options.drainFoodGain.RandomInRange;
-                        hediff.drainOverlayDuration = options.drainOverlayDuration.RandomInRange;
-                        hediff.drainStunDuration = options.drainStunDuration.RandomInRange;
-                        hediff.drainSicknessSeverity = options.drainSicknessSeverity;
-                        hediff.drainEnergyProcessing = options.drainEnergyProcessing.RandomInRange;
+                        hediff.drainAgeFactor = Options.drainAgeFactor;
+                        hediff.drainFoodGain = Options.drainFoodGain.RandomInRange;
+                        hediff.drainOverlayDuration = Options.drainOverlayDuration.RandomInRange;
+                        hediff.drainStunDuration = Options.drainStunDuration.RandomInRange;
+                        hediff.drainSicknessSeverity = Options.drainSicknessSeverity;
+                        hediff.drainEnergyProcessing = Options.drainEnergyProcessing.RandomInRange;
                         victim.health.AddHediff(hediff);
                         var hunting = this.pawn.health.hediffSet.GetFirstHediffOfDef(RT_DefOf.RT_MetroidHunting);
                         if (hunting != null)
@@ -90,9 +91,10 @@ namespace RT_Rimtroid
                         this.pawn.DeSpawn();
                     }
                 }
-            };
+            },
 
-            doWork.defaultCompleteMode = ToilCompleteMode.Instant;
+                defaultCompleteMode = ToilCompleteMode.Instant
+            };
             doWork.FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch);
             yield return doWork;
         }
