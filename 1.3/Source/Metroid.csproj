@@ -32,17 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RT_Core">
-      <HintPath>..\..\..\Rimtroid_Core\1.3\Assemblies\RT_Core.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Rimtroid_Core_Private\1.3\Assemblies\RT_Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\AbsorbEnergy\Ability_AbsorbEnergy.cs" />
@@ -59,15 +55,8 @@
     <Compile Include="Core\AbsorbEnergy\RT_EnergyDrain.cs" />
     <Compile Include="Core\AbsorbEnergy\ThoughtWorker_FoodTarget.cs" />
     <Compile Include="Evolution\Ability_Shockwave - Copy.cs" />
-    <Compile Include="Evolution\Events\GenStep_QueenLair.cs" />
-    <Compile Include="Evolution\Events\IncidentWorker_QueenLeavesHungry.cs" />
-    <Compile Include="Evolution\Events\IncidentWorker_QueenLeavesPeacefully.cs" />
-    <Compile Include="Evolution\Events\IncidentWorker_OmegaBecomesQueen.cs" />
-    <Compile Include="Evolution\Events\IncidentWorker_RaidMetroid.cs" />
     <Compile Include="Evolution\Events\QuestNode_EnemyLeaderIsLiving.cs" />
     <Compile Include="Evolution\Events\QuestNode_SetEnemyFaction.cs" />
-    <Compile Include="Evolution\Events\IncidentWorker_OtherFactionKilledQueen.cs" />
-    <Compile Include="Evolution\Events\IncidentWorker_QueenSpotted.cs" />
     <Compile Include="Evolution\Events\RaidOptions.cs" />
     <Compile Include="Evolution\HediffDefections.cs" />
     <Compile Include="Evolution\CompAlphaBomb.cs" />
@@ -103,23 +92,15 @@
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Core\RT_RimtroidDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RimLaser\IBeamColorThing.cs" />
-    <Compile Include="RimLaser\IDrawnWeaponWithRotation.cs" />
-    <Compile Include="RimLaser\LaserBeam.cs" />
-    <Compile Include="RimLaser\LaserBeamDef.cs" />
-    <Compile Include="RimLaser\LaserBeamGraphic.cs" />
-    <Compile Include="RimLaser\LaserGunDef.cs" />
-    <Compile Include="RimLaser\MeshMakerLaser.cs" />
-    <Compile Include="RimLaser\MoteLaserDecoration.cs" />
     <Compile Include="RimtroidMod.cs" />
     <Compile Include="RimtroidSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.3.3142-beta</Version>
+      <Version>1.4.3901</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-      <Version>2.1.1</Version>
+      <Version>2.2.2</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

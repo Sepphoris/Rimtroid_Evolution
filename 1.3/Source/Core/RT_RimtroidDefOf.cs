@@ -52,7 +52,7 @@ namespace RT_Rimtroid
 
 		public static FactionDef RT_Metroids;
 
-		public static ThingDef RT_GammaShockwaveMote;
+		//public static ThingDef RT_GammaShockwaveMote;
 
 		public static ThingDef RT_Electricity;
 		public static ThingDef RT_ExplosionTest;
@@ -67,7 +67,7 @@ namespace RT_Rimtroid
 		public static ThingDef RT_MetroidBomb;
 
 		public static RulePackDef RT_QueenNames;
-		public static IncidentDef RT_QueenSpotted;
+		//public static IncidentDef RT_QueenSpotted;
 		public static DutyDef RT_FollowQueen;
 		public static JobDef RT_GoToQueenToDespawn;
 		public static HediffDef RT_HealingBonus;

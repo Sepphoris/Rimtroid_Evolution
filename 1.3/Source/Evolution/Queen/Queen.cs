@@ -135,16 +135,16 @@ namespace RT_Rimtroid
             {
                 preventFactionLeaderSpawn = true;
             }
-            base.Kill(dinfo, exactCulprit);
-            if (isFactionLeader)
-            {
-                preventFactionLeaderSpawn = false;
-                Find.LetterStack.ReceiveLetter("LetterLabelMetroidQueenKilled".Translate(), "LetterMetroidQueenKilled".Translate(this.Named("PAWN")), LetterDefOf.PositiveEvent, this);
-                IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
-                parms.target = Find.World;
-                Find.Storyteller.incidentQueue.Add(RT_RimtroidDefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
-                Current.Game.GetComponent<RimtroidEvolutionTracker>().lastQueenDeathTick = Find.TickManager.TicksGame;
-            }
+            //base.Kill(dinfo, exactCulprit);
+            //if (isFactionLeader)
+            //{
+                //preventFactionLeaderSpawn = false;
+                //Find.LetterStack.ReceiveLetter("LetterLabelMetroidQueenKilled".Translate(), "LetterMetroidQueenKilled".Translate(this.Named("PAWN")), LetterDefOf.PositiveEvent, this);
+                //IncidentParms parms = StorytellerUtility.DefaultParmsNow(IncidentCategoryDefOf.ThreatBig, Find.World);
+                //parms.target = Find.World;
+                //Find.Storyteller.incidentQueue.Add(RT_RimtroidDefOf.RT_QueenSpotted, (int)(GenDate.TicksPerDay * Rand.Range(45f, 60f)), parms);
+                //Current.Game.GetComponent<RimtroidEvolutionTracker>().lastQueenDeathTick = Find.TickManager.TicksGame;
+            //}
         }
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)

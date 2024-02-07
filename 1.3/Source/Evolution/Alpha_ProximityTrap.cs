@@ -40,10 +40,10 @@ namespace RT_Rimtroid
 			Scribe_References.Look(ref parent, "parent");
 		}
 
-		public override bool ClaimableBy(Faction by)
-        {
-			return false;
-        }
+		//public override bool ClaimableBy(Faction by)
+        //{
+			//return false;
+        //}
 
         public override bool DeconstructibleBy(Faction faction)
         {
